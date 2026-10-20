@@ -3,6 +3,7 @@
   "short_name": "Família em Missão",
   "description": "Tarefas, pontos e recompensas para a família.",
   "lang": "pt-BR",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
