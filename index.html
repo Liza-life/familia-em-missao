@@ -6,6 +6,11 @@
 <meta name="google" content="notranslate">
 <meta name="theme-color" content="#302b63">
 <title>Família em Missão — Tarefas e Recompensas</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Família em Missão">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%9F%3C/text%3E%3C/svg%3E">
 <style>
 :root{
@@ -265,12 +270,15 @@ body:not(.child-mode) .child-only{display:none!important}
   .card{box-shadow:none;border:1px solid #ddd}
 }
 
+.cloud-chip{border:0;cursor:pointer;font-size:12.5px;padding:7px 11px}
+.cloud-chip.ok{background:#e7f8ef;color:var(--success)}
+
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v70 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v71 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -486,13 +494,102 @@ I18N.es = {
   rewardChooseMovie: 'Elegir la película de la noche', rewardIceCream: 'Helado', rewardSleepLater: 'Dormir 30 minutos más tarde', rewardPark: 'Paseo por el parque', rewardSpecialToy: 'Juguete especial'
 };
 
+/* Traduções da sincronização */
+Object.assign(I18N.pt, {
+  navCloud: 'Sincronização', title_nuvem: 'Sincronização', sub_nuvem: 'Use o app em vários aparelhos com os mesmos dados.',
+  cs_off: 'Só neste aparelho', cs_connecting: 'Conectando…', cs_login: 'Entre na conta', cs_nofamily: 'Escolha a família', cs_syncing: 'Sincronizando…', cs_pending: 'Mudanças a enviar', cs_synced: 'Sincronizado', cs_offline: 'Sem internet', cs_error: 'Erro na sincronização', cs_recovery: 'Nova senha',
+  cConnectTitle: 'Conectar ao servidor', cConnectHint: 'Informe os dados do seu projeto no Supabase. Você só faz isso uma vez em cada aparelho (ou abre o link de convite, que já vem preenchido).',
+  cUrl: 'Endereço do projeto (Project URL)', cKey: 'Chave publicável (Publishable key)', cKeyHint: 'Use a chave que começa com sb_publishable_ (ou a antiga "anon"). Nunca use a chave secreta.', cConnect: 'Conectar',
+  cGuideTitle: 'Como criar o servidor (uma vez só)',
+  cGuide_g1: 'Crie uma conta gratuita em <strong>supabase.com</strong> e clique em <strong>New project</strong>. Escolha a região <strong>South America (São Paulo)</strong> e anote a senha do banco.',
+  cGuide_g2: 'No menu do projeto, abra <strong>SQL Editor</strong>, cole todo o conteúdo do arquivo <strong>supabase.sql</strong> e clique em <strong>Run</strong>.',
+  cGuide_g3: 'Abra <strong>Authentication → URL Configuration</strong> e coloque em <strong>Site URL</strong> o endereço onde o app está publicado.',
+  cGuide_g4: 'Abra <strong>Settings → API Keys</strong> e copie a <strong>Publishable key</strong>. O <strong>Project URL</strong> fica no botão <strong>Connect</strong> no topo do projeto.',
+  cGuide_g5: 'Cole os dois aqui em cima e toque em <strong>Conectar</strong>. Depois crie sua conta e a família.',
+  cGuide_g6: 'Em <strong>Convite</strong>, copie o link e mande para o outro responsável. Ele abre o link, cria a conta dele e entra na família.',
+  cGuideNote: 'Plano gratuito do Supabase: o projeto pausa se ficar 7 dias sem nenhum uso; basta reativar no painel.',
+  cNewPassTitle: 'Criar nova senha', cNewPass: 'Nova senha (mínimo 6 caracteres)',
+  cLoginTitle: 'Conta do responsável', cLoginHint: 'Cada responsável tem a própria conta. As crianças usam o app no aparelho de um responsável, no modo Criança.',
+  cEmail: 'E-mail', cPass: 'Senha', cSignIn: 'Entrar', cSignUp: 'Criar conta', cForgot: 'Esqueci a senha', cSignUpHint: 'Ao criar a conta, pode chegar um e-mail de confirmação. Confirme e depois toque em Entrar.', cChangeServer: 'Trocar servidor',
+  cLoggedAs: 'Conectado como {email}', cYourFamilies: 'Suas famílias', cMembers: '{n} responsável(is)', cUseFamily: 'Usar esta família', cUseFamilyHint: 'Os dados deste aparelho serão trocados pelos dados da família.',
+  cCreateTitle: 'Criar a família', cCreateHint: 'Envia os dados deste aparelho (crianças, tarefas, histórico, fotos) para o servidor. Faça isso no aparelho principal.', cCreate: 'Criar família com estes dados',
+  cJoinTitle: 'Entrar com código', cJoinHint: 'Use o código que o outro responsável te passou.', cCode: 'Código de convite', cJoin: 'Entrar na família', cSignOut: 'Sair da conta',
+  cStatusHint_synced: 'Tudo certo: este aparelho está com os dados mais recentes da família.', cStatusHint_pending: 'Há mudanças deste aparelho esperando para ir ao servidor.', cStatusHint_syncing: 'Enviando e recebendo mudanças…', cStatusHint_offline: 'Sem internet. Pode continuar usando: as mudanças serão enviadas quando a conexão voltar.', cStatusHint_error: 'Não foi possível sincronizar agora. Suas mudanças continuam salvas neste aparelho.',
+  cLastSync: 'Última sincronização', cMembersLabel: 'Responsáveis na família', cSyncNow: 'Sincronizar agora',
+  cInviteTitle: 'Convidar outro responsável', cInviteHint: 'Mande o link (ou o código) para o outro responsável. Ele cria a própria conta e entra na família.', cCopy: 'Copiar', cInviteLink: 'Link de convite', cCopyLink: 'Copiar link', cInviteLinkLater: 'O link de convite aparece quando o app estiver publicado em um endereço da internet. Por enquanto, use o código.', cNewInvite: 'Gerar novo código', cNewInviteConfirm: 'Gerar um novo código? O código atual deixa de funcionar.', cNewInviteDone: 'Novo código gerado.',
+  cAdvanced: 'Avançado', cAdvancedHint: '"Sair da família" remove este acesso; se ninguém mais estiver na família, os dados dela são apagados do servidor. "Desconectar servidor" volta a usar o app só neste aparelho.', cLeave: 'Sair da família', cDisconnect: 'Desconectar servidor',
+  cErrLib: 'Não foi possível carregar a conexão. Verifique a internet.', cErrOffline: 'Sem internet no momento.', cErrLogin: 'E-mail ou senha incorretos.', cErrConfirm: 'Confirme o e-mail (veja sua caixa de entrada) e tente entrar de novo.', cErrExists: 'Este e-mail já tem conta. Toque em Entrar.', cErrWeak: 'A senha precisa ter pelo menos 6 caracteres.', cErrRate: 'Muitas tentativas. Espere alguns minutos.', cErrCode: 'Código de convite inválido.', cErrNotMember: 'Você não faz mais parte desta família.', cErrNotOwner: 'Só quem criou a família pode fazer isso.', cErrTooLarge: 'Os dados ficaram grandes demais (fotos muito pesadas?).', cErrKey: 'Chave do projeto inválida. Confira a Publishable key.', cErrSql: 'O banco ainda não foi preparado. Rode o arquivo supabase.sql no SQL Editor.', cErrGeneric: 'Não foi possível concluir. Tente de novo.', cErrUrl: 'Endereço inválido. Ele começa com https:// e termina em .supabase.co', cErrSecret: 'Essa é a chave SECRETA. Use a Publishable key, nunca a secreta.', cErrKeyShort: 'A chave parece incompleta.',
+  cConnected: 'Servidor conectado.', cFillLogin: 'Preencha e-mail e senha.', cSignedIn: 'Conta conectada.', cConfirmEmail: 'Conta criada! Confirme pelo e-mail que enviamos e depois toque em Entrar.', cTypeEmail: 'Digite seu e-mail primeiro.', cResetSent: 'Enviamos um link para criar uma nova senha.', cPassChanged: 'Senha alterada.',
+  cCreated: 'Família criada no servidor! Agora convide o outro responsável.', cTypeCode: 'Digite o código de convite.', cJoinConfirm: 'Os dados deste aparelho serão substituídos pelos dados da família. Se quiser guardar algo, exporte um backup antes. Continuar?', cJoined: 'Pronto! Este aparelho está ligado à família.', cCopied: 'Copiado.',
+  cSignOutConfirm: 'Sair da conta neste aparelho? Os dados continuam aqui, mas param de sincronizar.', cLeaveConfirm: 'Sair desta família? Este aparelho para de receber os dados dela.', cDisconnectConfirm: 'Desconectar o servidor? O app volta a funcionar só neste aparelho.',
+  cSyncWarn: 'Atenção: este aparelho está sincronizado, então isso vale para todos os aparelhos da família.'
+});
+Object.assign(I18N.en, {
+  navCloud: 'Sync', title_nuvem: 'Sync', sub_nuvem: 'Use the app on several devices with the same data.',
+  cs_off: 'This device only', cs_connecting: 'Connecting…', cs_login: 'Sign in', cs_nofamily: 'Choose the family', cs_syncing: 'Syncing…', cs_pending: 'Changes to send', cs_synced: 'Synced', cs_offline: 'Offline', cs_error: 'Sync error', cs_recovery: 'New password',
+  cConnectTitle: 'Connect to the server', cConnectHint: 'Enter your Supabase project details. You only do this once per device (or open the invite link, which fills it in).',
+  cUrl: 'Project URL', cKey: 'Publishable key', cKeyHint: 'Use the key that starts with sb_publishable_ (or the legacy "anon" key). Never use the secret key.', cConnect: 'Connect',
+  cGuideTitle: 'How to create the server (once)',
+  cGuide_g1: 'Create a free account at <strong>supabase.com</strong> and click <strong>New project</strong>. Pick the region closest to you and write down the database password.',
+  cGuide_g2: 'In the project menu, open <strong>SQL Editor</strong>, paste the whole <strong>supabase.sql</strong> file and click <strong>Run</strong>.',
+  cGuide_g3: 'Open <strong>Authentication → URL Configuration</strong> and set <strong>Site URL</strong> to the address where the app is published.',
+  cGuide_g4: 'Open <strong>Settings → API Keys</strong> and copy the <strong>Publishable key</strong>. The <strong>Project URL</strong> is under the <strong>Connect</strong> button at the top of the project.',
+  cGuide_g5: 'Paste both above and tap <strong>Connect</strong>. Then create your account and the family.',
+  cGuide_g6: 'Under <strong>Invite</strong>, copy the link and send it to the other parent. They open it, create their account and join the family.',
+  cGuideNote: 'Supabase free plan: the project pauses after 7 days without any use; just restore it from the dashboard.',
+  cNewPassTitle: 'Create a new password', cNewPass: 'New password (at least 6 characters)',
+  cLoginTitle: 'Parent account', cLoginHint: 'Each parent has their own account. Children use the app on a parent\'s device, in Child mode.',
+  cEmail: 'E-mail', cPass: 'Password', cSignIn: 'Sign in', cSignUp: 'Create account', cForgot: 'Forgot password', cSignUpHint: 'After creating the account you may get a confirmation e-mail. Confirm it, then tap Sign in.', cChangeServer: 'Change server',
+  cLoggedAs: 'Signed in as {email}', cYourFamilies: 'Your families', cMembers: '{n} parent(s)', cUseFamily: 'Use this family', cUseFamilyHint: 'The data on this device will be replaced by the family data.',
+  cCreateTitle: 'Create the family', cCreateHint: 'Uploads the data on this device (children, tasks, history, photos) to the server. Do this on the main device.', cCreate: 'Create family with this data',
+  cJoinTitle: 'Join with a code', cJoinHint: 'Use the code the other parent gave you.', cCode: 'Invite code', cJoin: 'Join the family', cSignOut: 'Sign out',
+  cStatusHint_synced: 'All good: this device has the latest family data.', cStatusHint_pending: 'Changes from this device are waiting to go to the server.', cStatusHint_syncing: 'Sending and receiving changes…', cStatusHint_offline: 'No internet. Keep using the app: changes will be sent when the connection is back.', cStatusHint_error: 'Could not sync right now. Your changes are still saved on this device.',
+  cLastSync: 'Last sync', cMembersLabel: 'Parents in the family', cSyncNow: 'Sync now',
+  cInviteTitle: 'Invite the other parent', cInviteHint: 'Send the link (or the code) to the other parent. They create their own account and join the family.', cCopy: 'Copy', cInviteLink: 'Invite link', cCopyLink: 'Copy link', cInviteLinkLater: 'The invite link shows up once the app is published at a web address. For now, use the code.', cNewInvite: 'Generate new code', cNewInviteConfirm: 'Generate a new code? The current code will stop working.', cNewInviteDone: 'New code generated.',
+  cAdvanced: 'Advanced', cAdvancedHint: '"Leave family" removes this access; if nobody else is in the family, its data is deleted from the server. "Disconnect server" goes back to using the app on this device only.', cLeave: 'Leave family', cDisconnect: 'Disconnect server',
+  cErrLib: 'Could not load the connection. Check the internet.', cErrOffline: 'No internet right now.', cErrLogin: 'Wrong e-mail or password.', cErrConfirm: 'Confirm your e-mail (check your inbox) and try signing in again.', cErrExists: 'This e-mail already has an account. Tap Sign in.', cErrWeak: 'The password must have at least 6 characters.', cErrRate: 'Too many attempts. Wait a few minutes.', cErrCode: 'Invalid invite code.', cErrNotMember: 'You are no longer part of this family.', cErrNotOwner: 'Only the person who created the family can do this.', cErrTooLarge: 'The data got too large (very heavy photos?).', cErrKey: 'Invalid project key. Check the Publishable key.', cErrSql: 'The database is not ready yet. Run the supabase.sql file in the SQL Editor.', cErrGeneric: 'Could not finish. Try again.', cErrUrl: 'Invalid address. It starts with https:// and ends with .supabase.co', cErrSecret: 'That is the SECRET key. Use the Publishable key, never the secret one.', cErrKeyShort: 'The key looks incomplete.',
+  cConnected: 'Server connected.', cFillLogin: 'Fill in e-mail and password.', cSignedIn: 'Account connected.', cConfirmEmail: 'Account created! Confirm it through the e-mail we sent, then tap Sign in.', cTypeEmail: 'Type your e-mail first.', cResetSent: 'We sent a link to create a new password.', cPassChanged: 'Password changed.',
+  cCreated: 'Family created on the server! Now invite the other parent.', cTypeCode: 'Type the invite code.', cJoinConfirm: 'The data on this device will be replaced by the family data. If you want to keep something, export a backup first. Continue?', cJoined: 'Done! This device is linked to the family.', cCopied: 'Copied.',
+  cSignOutConfirm: 'Sign out on this device? The data stays here but stops syncing.', cLeaveConfirm: 'Leave this family? This device will stop receiving its data.', cDisconnectConfirm: 'Disconnect the server? The app goes back to working on this device only.',
+  cSyncWarn: 'Note: this device is synced, so this applies to every device in the family.'
+});
+Object.assign(I18N.es, {
+  navCloud: 'Sincronización', title_nuvem: 'Sincronización', sub_nuvem: 'Usa la aplicación en varios dispositivos con los mismos datos.',
+  cs_off: 'Solo en este dispositivo', cs_connecting: 'Conectando…', cs_login: 'Inicia sesión', cs_nofamily: 'Elige la familia', cs_syncing: 'Sincronizando…', cs_pending: 'Cambios por enviar', cs_synced: 'Sincronizado', cs_offline: 'Sin internet', cs_error: 'Error de sincronización', cs_recovery: 'Nueva contraseña',
+  cConnectTitle: 'Conectar al servidor', cConnectHint: 'Indica los datos de tu proyecto de Supabase. Solo lo haces una vez en cada dispositivo (o abres el enlace de invitación, que ya viene completo).',
+  cUrl: 'Dirección del proyecto (Project URL)', cKey: 'Clave publicable (Publishable key)', cKeyHint: 'Usa la clave que empieza con sb_publishable_ (o la antigua "anon"). Nunca uses la clave secreta.', cConnect: 'Conectar',
+  cGuideTitle: 'Cómo crear el servidor (una sola vez)',
+  cGuide_g1: 'Crea una cuenta gratuita en <strong>supabase.com</strong> y haz clic en <strong>New project</strong>. Elige la región más cercana y anota la contraseña de la base de datos.',
+  cGuide_g2: 'En el menú del proyecto, abre <strong>SQL Editor</strong>, pega todo el archivo <strong>supabase.sql</strong> y haz clic en <strong>Run</strong>.',
+  cGuide_g3: 'Abre <strong>Authentication → URL Configuration</strong> y pon en <strong>Site URL</strong> la dirección donde está publicada la aplicación.',
+  cGuide_g4: 'Abre <strong>Settings → API Keys</strong> y copia la <strong>Publishable key</strong>. La <strong>Project URL</strong> está en el botón <strong>Connect</strong> arriba del proyecto.',
+  cGuide_g5: 'Pega las dos aquí arriba y toca <strong>Conectar</strong>. Después crea tu cuenta y la familia.',
+  cGuide_g6: 'En <strong>Invitación</strong>, copia el enlace y envíalo al otro responsable. Él lo abre, crea su cuenta y entra en la familia.',
+  cGuideNote: 'Plan gratuito de Supabase: el proyecto se pausa si pasa 7 días sin uso; basta con reactivarlo en el panel.',
+  cNewPassTitle: 'Crear nueva contraseña', cNewPass: 'Nueva contraseña (mínimo 6 caracteres)',
+  cLoginTitle: 'Cuenta del responsable', cLoginHint: 'Cada responsable tiene su propia cuenta. Los niños usan la aplicación en el dispositivo de un responsable, en modo Niño.',
+  cEmail: 'Correo', cPass: 'Contraseña', cSignIn: 'Entrar', cSignUp: 'Crear cuenta', cForgot: 'Olvidé la contraseña', cSignUpHint: 'Al crear la cuenta puede llegar un correo de confirmación. Confírmalo y luego toca Entrar.', cChangeServer: 'Cambiar servidor',
+  cLoggedAs: 'Conectado como {email}', cYourFamilies: 'Tus familias', cMembers: '{n} responsable(s)', cUseFamily: 'Usar esta familia', cUseFamilyHint: 'Los datos de este dispositivo se reemplazarán por los de la familia.',
+  cCreateTitle: 'Crear la familia', cCreateHint: 'Envía los datos de este dispositivo (niños, tareas, historial, fotos) al servidor. Hazlo en el dispositivo principal.', cCreate: 'Crear familia con estos datos',
+  cJoinTitle: 'Entrar con código', cJoinHint: 'Usa el código que te pasó el otro responsable.', cCode: 'Código de invitación', cJoin: 'Entrar en la familia', cSignOut: 'Cerrar sesión',
+  cStatusHint_synced: 'Todo bien: este dispositivo tiene los datos más recientes de la familia.', cStatusHint_pending: 'Hay cambios de este dispositivo esperando para ir al servidor.', cStatusHint_syncing: 'Enviando y recibiendo cambios…', cStatusHint_offline: 'Sin internet. Puedes seguir usando la aplicación: los cambios se enviarán cuando vuelva la conexión.', cStatusHint_error: 'No se pudo sincronizar ahora. Tus cambios siguen guardados en este dispositivo.',
+  cLastSync: 'Última sincronización', cMembersLabel: 'Responsables en la familia', cSyncNow: 'Sincronizar ahora',
+  cInviteTitle: 'Invitar a otro responsable', cInviteHint: 'Envía el enlace (o el código) al otro responsable. Él crea su propia cuenta y entra en la familia.', cCopy: 'Copiar', cInviteLink: 'Enlace de invitación', cCopyLink: 'Copiar enlace', cInviteLinkLater: 'El enlace de invitación aparece cuando la aplicación esté publicada en una dirección de internet. Por ahora, usa el código.', cNewInvite: 'Generar nuevo código', cNewInviteConfirm: '¿Generar un nuevo código? El código actual dejará de funcionar.', cNewInviteDone: 'Nuevo código generado.',
+  cAdvanced: 'Avanzado', cAdvancedHint: '"Salir de la familia" quita este acceso; si nadie más está en la familia, sus datos se borran del servidor. "Desconectar servidor" vuelve a usar la aplicación solo en este dispositivo.', cLeave: 'Salir de la familia', cDisconnect: 'Desconectar servidor',
+  cErrLib: 'No se pudo cargar la conexión. Revisa internet.', cErrOffline: 'Sin internet en este momento.', cErrLogin: 'Correo o contraseña incorrectos.', cErrConfirm: 'Confirma el correo (revisa tu bandeja) e intenta entrar de nuevo.', cErrExists: 'Este correo ya tiene cuenta. Toca Entrar.', cErrWeak: 'La contraseña debe tener al menos 6 caracteres.', cErrRate: 'Demasiados intentos. Espera unos minutos.', cErrCode: 'Código de invitación inválido.', cErrNotMember: 'Ya no formas parte de esta familia.', cErrNotOwner: 'Solo quien creó la familia puede hacer esto.', cErrTooLarge: 'Los datos quedaron demasiado grandes (¿fotos muy pesadas?).', cErrKey: 'Clave del proyecto inválida. Revisa la Publishable key.', cErrSql: 'La base de datos aún no está preparada. Ejecuta el archivo supabase.sql en el SQL Editor.', cErrGeneric: 'No se pudo completar. Inténtalo de nuevo.', cErrUrl: 'Dirección inválida. Empieza con https:// y termina en .supabase.co', cErrSecret: 'Esa es la clave SECRETA. Usa la Publishable key, nunca la secreta.', cErrKeyShort: 'La clave parece incompleta.',
+  cConnected: 'Servidor conectado.', cFillLogin: 'Completa correo y contraseña.', cSignedIn: 'Cuenta conectada.', cConfirmEmail: '¡Cuenta creada! Confírmala con el correo que enviamos y luego toca Entrar.', cTypeEmail: 'Escribe tu correo primero.', cResetSent: 'Enviamos un enlace para crear una nueva contraseña.', cPassChanged: 'Contraseña cambiada.',
+  cCreated: '¡Familia creada en el servidor! Ahora invita al otro responsable.', cTypeCode: 'Escribe el código de invitación.', cJoinConfirm: 'Los datos de este dispositivo se reemplazarán por los de la familia. Si quieres guardar algo, exporta una copia antes. ¿Continuar?', cJoined: '¡Listo! Este dispositivo está vinculado a la familia.', cCopied: 'Copiado.',
+  cSignOutConfirm: '¿Cerrar sesión en este dispositivo? Los datos siguen aquí, pero dejan de sincronizarse.', cLeaveConfirm: '¿Salir de esta familia? Este dispositivo dejará de recibir sus datos.', cDisconnectConfirm: '¿Desconectar el servidor? La aplicación vuelve a funcionar solo en este dispositivo.',
+  cSyncWarn: 'Atención: este dispositivo está sincronizado, así que esto vale para todos los dispositivos de la familia.'
+});
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 70;
+const APP_VERSION = 71;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -830,6 +927,97 @@ async function migrateLegacy(defaultKeys) {
   d.migratedFrom = 'v67';
   return d;
 }
+
+/* =====================================================================
+   Combinação de mudanças entre aparelhos (merge de 3 vias).
+   base   = última versão que os dois aparelhos tinham em comum
+   local  = o que este aparelho tem agora
+   remote = o que está no servidor agora
+   ===================================================================== */
+
+const DELTA_FIELDS = new Set(['points', 'piggy', 'xp']); // somam as diferenças dos dois lados
+
+function stable(v) {
+  if (Array.isArray(v)) return '[' + v.map(stable).join(',') + ']';
+  if (v && typeof v === 'object') return '{' + Object.keys(v).sort().filter(k => v[k] !== undefined).map(k => JSON.stringify(k) + ':' + stable(v[k])).join(',') + '}';
+  return JSON.stringify(v === undefined ? null : v);
+}
+function same(a, b) { return stable(a) === stable(b); }
+function isPlainObj(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }
+function isIdArray(...arrs) {
+  const present = arrs.filter(a => a !== undefined && a !== null);
+  return present.length > 0 && present.every(a => Array.isArray(a) && a.every(x => isPlainObj(x) && x.id !== undefined))
+    && present.some(a => a.length > 0);
+}
+
+function merge3(base, local, remote, key) {
+  if (same(local, base)) return remote;
+  if (same(remote, base)) return local;
+  // Pontos, cofrinho e XP: as mudanças dos dois lados são acontecimentos diferentes, então somam
+  // (mesmo quando os dois lados chegaram ao mesmo número).
+  if (DELTA_FIELDS.has(key) && typeof local === 'number' && typeof remote === 'number') {
+    const b = typeof base === 'number' ? base : 0;
+    const v = remote + (local - b);
+    return key === 'piggy' ? Math.max(0, Math.round(v * 100) / 100) : Math.max(0, Math.round(v));
+  }
+  if ((local === null || typeof local !== 'object') && same(local, remote)) return local;
+  if (isIdArray(base, local, remote)) return mergeIdArray(base || [], local || [], remote || []);
+  if (isPlainObj(local) && isPlainObj(remote)) {
+    const out = {};
+    const b = isPlainObj(base) ? base : {};
+    const keys = new Set([...Object.keys(remote), ...Object.keys(local)]);
+    keys.forEach(k => {
+      const inL = k in local, inR = k in remote, inB = k in b;
+      if (inB && (!inL || !inR)) {            // apagado de um lado
+        const other = inL ? local[k] : remote[k];
+        if (same(other, b[k])) return;        // o outro lado não mexeu: apaga
+        out[k] = other; return;               // o outro lado mexeu: mantém a mudança
+      }
+      const v = merge3(b[k], local[k], remote[k], k);
+      if (v !== undefined) out[k] = v;
+    });
+    return out;
+  }
+  return local; // os dois mudaram o mesmo valor: vale o deste aparelho
+}
+
+function mergeIdArray(base, local, remote) {
+  const B = new Map(base.map(x => [String(x.id), x]));
+  const L = new Map(local.map(x => [String(x.id), x]));
+  const R = new Map(remote.map(x => [String(x.id), x]));
+  const order = [...remote.map(x => String(x.id)), ...local.map(x => String(x.id)).filter(id => !R.has(id))];
+  const out = [];
+  order.forEach(id => {
+    const b = B.get(id), l = L.get(id), r = R.get(id);
+    if (b && (!l || !r)) return;              // apagado de um lado: some
+    if (l && r) out.push(merge3(b, l, r)); else out.push(l || r);
+  });
+  return out;
+}
+
+/** Corrige casos raros depois de combinar (ex.: a mesma aprovação feita nos dois aparelhos). */
+function reconcileState(d) {
+  const seen = new Set();
+  d.history = d.history.filter(h => {
+    if (!h.approvalId) return true;
+    if (!seen.has(h.approvalId)) { seen.add(h.approvalId); return true; }
+    const c = d.children.find(x => x.id === h.childId);
+    if (c) {
+      c.points = Math.max(0, c.points - h.points);
+      if (h.type === 'task') c.xp = Math.max(0, c.xp - Math.max(0, h.points));
+      d.piggyHistory.filter(p => p.historyId === h.id).forEach(p => { c.piggy = Math.max(0, Math.round((c.piggy - p.amount) * 100) / 100); });
+    }
+    d.piggyHistory = d.piggyHistory.filter(p => p.historyId !== h.id);
+    return false;
+  });
+  d.approvals.forEach(a => {
+    const h = d.history.find(x => x.approvalId === a.id);
+    if (h && a.status !== 'approved') { a.status = 'approved'; a.historyId = h.id; }
+  });
+  return d;
+}
+
+if (typeof module !== 'undefined') module.exports = { merge3, mergeIdArray, same, reconcileState };
 
 /* =====================================================================
    Regras do aplicativo. Todas as mudanças de dados passam por aqui.
@@ -1693,6 +1881,239 @@ function valuesPreview() {
 }
 
 /* =====================================================================
+   Sincronização entre aparelhos (Supabase).
+   O app continua funcionando sem internet: as mudanças ficam guardadas
+   neste aparelho e são enviadas quando a conexão voltar.
+   ===================================================================== */
+
+const CLOUD_KEY = 'familiaMissao.cloud';
+const CLOUD_BASE_KEY = 'familiaMissao.cloudBase';
+const SUPABASE_LIB = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js';
+
+/* ---------- adaptador para o Supabase ---------- */
+function loadScriptOnce(src) {
+  if (window.supabase && window.supabase.createClient) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script'); s.src = src; s.async = true;
+    s.onload = () => resolve(); s.onerror = () => reject(Object.assign(new Error('lib_load'), { code: 'lib_load' }));
+    document.head.appendChild(s);
+  });
+}
+async function createSupabaseAdapter(url, key) {
+  await loadScriptOnce(SUPABASE_LIB);
+  const sb = window.supabase.createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, storageKey: 'familiaMissao.auth' } });
+  const unwrap = ({ data, error }) => { if (error) throw error; return data; };
+  const who = s => (s && s.user ? { email: s.user.email, userId: s.user.id } : null);
+  return {
+    async session() { const { data } = await sb.auth.getSession(); return who(data.session); },
+    onAuth(cb) { sb.auth.onAuthStateChange((event, s) => cb(event, who(s))); },
+    async signUp(email, password, redirect) { const d = unwrap(await sb.auth.signUp({ email, password, options: { emailRedirectTo: redirect } })); return { needsConfirm: !d.session }; },
+    async signIn(email, password) { unwrap(await sb.auth.signInWithPassword({ email, password })); },
+    async signOut() { await sb.auth.signOut(); },
+    async resetPassword(email, redirect) { unwrap(await sb.auth.resetPasswordForEmail(email, { redirectTo: redirect })); },
+    async updatePassword(password) { unwrap(await sb.auth.updateUser({ password })); },
+    async myFamilies() { return unwrap(await sb.rpc('my_families')) || []; },
+    async createFamily(name, data) { const rows = unwrap(await sb.rpc('create_family', { p_name: name, p_data: data })); return rows[0]; },
+    async joinFamily(code) { return unwrap(await sb.rpc('join_family', { p_code: code })); },
+    async getVersion(fid) { const d = unwrap(await sb.from('family_sync').select('version').eq('family_id', fid).maybeSingle()); if (!d) throw Object.assign(new Error('not_member'), { code: 'not_member' }); return Number(d.version); },
+    async getState(fid) { const d = unwrap(await sb.from('family_state').select('data,version').eq('family_id', fid).maybeSingle()); if (!d) throw Object.assign(new Error('not_member'), { code: 'not_member' }); return { data: d.data, version: Number(d.version) }; },
+    async saveState(fid, version, data) { return Number(unwrap(await sb.rpc('save_state', { p_family: fid, p_expected: version, p_data: data }))); },
+    async regenerateInvite(fid) { return unwrap(await sb.rpc('regenerate_invite', { p_family: fid })); },
+    async leaveFamily(fid) { unwrap(await sb.rpc('leave_family', { p_family: fid })); },
+    subscribe(fid, cb) {
+      const ch = sb.channel('familia-' + fid).on('postgres_changes', { event: '*', schema: 'public', table: 'family_sync', filter: 'family_id=eq.' + fid }, () => cb()).subscribe();
+      return () => { try { sb.removeChannel(ch); } catch (_) {} };
+    }
+  };
+}
+
+/* ---------- traduz erros para mensagens simples ---------- */
+function cloudErrorKey(e) {
+  const code = String((e && (e.code || e.error_code)) || ''), msg = String((e && e.message) || e || '').toLowerCase();
+  if (code === 'lib_load') return 'cErrLib';
+  if (code === 'bad_url') return 'cErrUrl';
+  if (/failed to fetch|network|load failed|networkerror|fetch/.test(msg) || e instanceof TypeError) return 'cErrOffline';
+  if (code === 'invalid_credentials' || /invalid login credentials/.test(msg)) return 'cErrLogin';
+  if (code === 'email_not_confirmed' || /email not confirmed/.test(msg)) return 'cErrConfirm';
+  if (code === 'user_already_exists' || /already registered|already exists/.test(msg)) return 'cErrExists';
+  if (code === 'weak_password' || /password should be/.test(msg)) return 'cErrWeak';
+  if (/rate limit|too many/.test(msg) || code.includes('rate_limit')) return 'cErrRate';
+  if (/invalid_code/.test(msg)) return 'cErrCode';
+  if (/not_member/.test(msg) || code === 'not_member') return 'cErrNotMember';
+  if (/not_owner/.test(msg)) return 'cErrNotOwner';
+  if (/data_too_large/.test(msg)) return 'cErrTooLarge';
+  if (/invalid api key|no api key|jwt|apikey/.test(msg)) return 'cErrKey';
+  if (/could not find the function|schema cache|does not exist/.test(msg)) return 'cErrSql';
+  return 'cErrGeneric';
+}
+
+/* ---------- controle da sincronização ---------- */
+const Cloud = {
+  cfg: {}, adapter: null, status: 'off', errorKey: '', email: '', pushing: false, again: false, timer: null, unsub: null, poll: null, recovery: false,
+
+  loadCfg() { try { this.cfg = JSON.parse(localStorage.getItem(CLOUD_KEY) || '{}') || {}; } catch (_) { this.cfg = {}; } },
+  saveCfg() { try { localStorage.setItem(CLOUD_KEY, JSON.stringify(this.cfg)); } catch (_) {} },
+  getBase() { try { const b = localStorage.getItem(CLOUD_BASE_KEY); return b ? JSON.parse(b) : null; } catch (_) { return null; } },
+  setBase(obj) { try { localStorage.setItem(CLOUD_BASE_KEY, JSON.stringify(obj)); } catch (_) { localStorage.removeItem(CLOUD_BASE_KEY); } },
+  linked() { return !!(this.adapter && this.cfg.familyId); },
+  setStatus(st, errKey) { this.status = st; this.errorKey = errKey || ''; if (typeof renderCloudStatus === 'function') renderCloudStatus(); },
+  redirectUrl() { return location.protocol.startsWith('http') ? location.origin + location.pathname : undefined; },
+
+  /** dados enviados ao servidor: tudo, menos o modo atual (que é de cada aparelho) */
+  payload() { const d = JSON.parse(JSON.stringify(S)); delete d.mode; return d; },
+  applyRemoteData(data) {
+    const mode = S.mode;
+    const next = normalize({ ...data, mode }, defaultKeys);
+    next.onboardingComplete = true;
+    S = next; Store.save(S); render();
+  },
+
+  async init() {
+    this.loadCfg();
+    if (!this.cfg.url || !this.cfg.key) { this.setStatus('off'); return; }
+    this.setStatus('connecting');
+    try {
+      const factory = window.__CLOUD_ADAPTER_FACTORY || createSupabaseAdapter;
+      this.adapter = await factory(this.cfg.url, this.cfg.key);
+    } catch (e) { this.adapter = null; this.setStatus('error', cloudErrorKey(e)); return; }
+    this.adapter.onAuth((event, who) => {
+      if (event === 'PASSWORD_RECOVERY') { this.recovery = true; this.setStatus('recovery'); if (typeof openCloudSection === 'function') openCloudSection(); }
+      if (event === 'SIGNED_OUT') { this.stopLive(); this.email = ''; if (this.status !== 'off') this.setStatus('login'); }
+    });
+    let who = null;
+    try { who = await this.adapter.session(); } catch (e) { this.setStatus('error', cloudErrorKey(e)); return; }
+    if (this.recovery) return;
+    if (!who) { this.setStatus('login'); return; }
+    this.email = who.email || '';
+    if (!this.cfg.familyId) { try { this.families = await this.adapter.myFamilies(); } catch (_) { this.families = []; } this.setStatus('nofamily'); return; }
+    await this.startLive();
+  },
+
+  async startLive() {
+    this.stopLive();
+    try { this.unsub = this.adapter.subscribe(this.cfg.familyId, () => this.pull()); } catch (_) {}
+    this.poll = setInterval(() => { if (document.visibilityState !== 'hidden') this.pull(); }, 30000);
+    await this.pull();
+    if (this.cfg.dirty) this.schedulePush(0);
+  },
+  stopLive() { if (this.unsub) { this.unsub(); this.unsub = null; } if (this.poll) { clearInterval(this.poll); this.poll = null; } clearTimeout(this.timer); },
+
+  /** chamado a cada mudança feita neste aparelho */
+  onLocalChange() {
+    if (!this.cfg.familyId) return;
+    this.cfg.dirty = true; this.saveCfg();
+    if (!this.adapter) return;
+    this.setStatus('pending'); this.schedulePush();
+  },
+  schedulePush(ms = 1200) { clearTimeout(this.timer); this.timer = setTimeout(() => this.push(), ms); },
+
+  async push() {
+    if (!this.linked()) return;
+    if (this.pushing) { this.again = true; return; }
+    this.pushing = true; this.setStatus('syncing');
+    try {
+      for (let attempt = 0; attempt < 4; attempt++) {
+        const data = this.payload();
+        const v = await this.adapter.saveState(this.cfg.familyId, this.cfg.version || 0, data);
+        if (v > 0) { this.cfg.version = v; this.cfg.dirty = false; this.cfg.lastSync = isoNow(); this.setBase(data); this.saveCfg(); this.setStatus('synced'); break; }
+        const remote = await this.adapter.getState(this.cfg.familyId);   // conflito: combina e tenta de novo
+        this.mergeRemote(remote);
+      }
+    } catch (e) { this.fail(e); }
+    finally { this.pushing = false; if (this.again) { this.again = false; this.schedulePush(300); } }
+  },
+
+  mergeRemote(remote) {
+    const base = this.getBase();
+    const local = this.payload();
+    let merged = base ? merge3(base, local, remote.data) : remote.data;
+    merged = reconcileState(normalize({ ...merged, mode: S.mode }, defaultKeys));
+    this.cfg.version = remote.version; this.setBase(remote.data); this.saveCfg();
+    S = merged; S.onboardingComplete = true; Store.save(S); render();
+  },
+
+  async pull() {
+    if (!this.linked() || this.pushing) return;
+    try {
+      const v = await this.adapter.getVersion(this.cfg.familyId);
+      if (v === this.cfg.version) { if (this.cfg.dirty) this.schedulePush(0); else this.setStatus('synced'); return; }
+      const remote = await this.adapter.getState(this.cfg.familyId);
+      if (this.cfg.dirty) { this.mergeRemote(remote); this.schedulePush(0); return; }
+      this.cfg.version = remote.version; this.cfg.lastSync = isoNow(); this.setBase(remote.data); this.saveCfg();
+      this.applyRemoteData(remote.data); this.setStatus('synced');
+    } catch (e) { this.fail(e); }
+  },
+
+  fail(e) {
+    const k = cloudErrorKey(e);
+    if (k === 'cErrNotMember') { this.stopLive(); this.cfg.familyId = null; this.saveCfg(); this.setStatus('nofamily', k); return; }
+    this.setStatus(k === 'cErrOffline' ? 'offline' : 'error', k);
+  },
+
+  /* ---------- ações da tela de sincronização ---------- */
+  async connect(url, key) {
+    this.stopLive(); this.adapter = null;
+    this.cfg = { url, key }; this.saveCfg(); localStorage.removeItem(CLOUD_BASE_KEY);
+    await this.init();
+    return this.status !== 'error';
+  },
+  async signIn(email, password) { await this.adapter.signIn(email, password); this.email = email; await this.afterLogin(); },
+  async signUp(email, password) {
+    const r = await this.adapter.signUp(email, password, this.redirectUrl());
+    if (r.needsConfirm) return { needsConfirm: true };
+    this.email = email; await this.afterLogin(); return { needsConfirm: false };
+  },
+  async afterLogin() {
+    this.families = await this.adapter.myFamilies();
+    if (this.cfg.familyId && this.families.some(f => f.family_id === this.cfg.familyId)) { await this.startLive(); return; }
+    this.cfg.familyId = null; this.saveCfg(); this.setStatus('nofamily');
+  },
+  inviteLink() {
+    const base = location.protocol.startsWith('http') ? location.origin + location.pathname : '';
+    const token = btoa(unescape(encodeURIComponent(JSON.stringify({ u: this.cfg.url, k: this.cfg.key, c: this.cfg.inviteCode }))));
+    return base ? `${base}#convite=${token}` : '';
+  },
+  /** link de convite: já traz o servidor e o código preenchidos */
+  readInviteFromUrl() {
+    const m = location.hash.match(/convite=([A-Za-z0-9+/=_-]+)/); if (!m) return;
+    try {
+      const inv = JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, '+').replace(/_/g, '/')))));
+      this.loadCfg();
+      if (inv.u && inv.k && !this.cfg.familyId) { if (this.cfg.url !== inv.u || this.cfg.key !== inv.k) this.cfg = { url: inv.u, key: inv.k }; this.cfg.pendingCode = inv.c || ''; this.saveCfg(); }
+    } catch (_) {}
+    history.replaceState(null, '', location.pathname + location.search);
+  },
+  async createFamily() {
+    const data = this.payload();
+    const r = await this.adapter.createFamily(S.familyName, data);
+    Object.assign(this.cfg, { familyId: r.family_id, inviteCode: r.invite_code, role: 'owner', members: 1, version: Number(r.version), dirty: false, lastSync: isoNow() });
+    this.setBase(data); this.saveCfg(); await this.startLive(); this.setStatus('synced');
+  },
+  async useFamily(fid) {
+    const remote = await this.adapter.getState(fid);
+    const fams = await this.adapter.myFamilies(); const f = fams.find(x => x.family_id === fid) || {};
+    Object.assign(this.cfg, { familyId: fid, inviteCode: f.invite_code, role: f.role, members: f.members, version: remote.version, dirty: false, lastSync: isoNow() });
+    this.setBase(remote.data); this.saveCfg();
+    this.applyRemoteData(remote.data);
+    S.mode = { current: 'parent', childId: S.children[0].id }; Store.save(S);
+    await this.startLive(); this.setStatus('synced');
+  },
+  async joinFamily(code) { const fid = await this.adapter.joinFamily(code); this.cfg.pendingCode = ''; await this.useFamily(fid); },
+  async refreshInfo() {
+    if (!this.linked()) return;
+    try { const f = (await this.adapter.myFamilies()).find(x => x.family_id === this.cfg.familyId); if (f) { Object.assign(this.cfg, { inviteCode: f.invite_code, role: f.role, members: f.members }); this.saveCfg(); } } catch (_) {}
+  },
+  async newInvite() { this.cfg.inviteCode = await this.adapter.regenerateInvite(this.cfg.familyId); this.saveCfg(); },
+  async signOut() { this.stopLive(); try { await this.adapter.signOut(); } catch (_) {} Object.assign(this.cfg, { familyId: null, version: 0, dirty: false }); localStorage.removeItem(CLOUD_BASE_KEY); this.saveCfg(); this.email = ''; this.setStatus('login'); },
+  async leave() { await this.adapter.leaveFamily(this.cfg.familyId); this.stopLive(); Object.assign(this.cfg, { familyId: null, version: 0, dirty: false }); localStorage.removeItem(CLOUD_BASE_KEY); this.saveCfg(); this.setStatus('nofamily'); },
+  disconnect() { this.stopLive(); try { this.adapter && this.adapter.signOut(); } catch (_) {} this.adapter = null; this.cfg = {}; localStorage.removeItem(CLOUD_KEY); localStorage.removeItem(CLOUD_BASE_KEY); this.setStatus('off'); }
+};
+
+window.addEventListener('online', () => { if (Cloud.linked()) { Cloud.pull(); if (Cloud.cfg.dirty) Cloud.schedulePush(0); } });
+window.addEventListener('focus', () => { if (Cloud.linked()) Cloud.pull(); });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && Cloud.linked()) Cloud.pull(); });
+
+/* =====================================================================
    Aplicação: estrutura da página, navegação, ações e inicialização.
    ===================================================================== */
 
@@ -1701,6 +2122,7 @@ function currentSection() { return SECTIONS.find(s => s.id === ui.section) || SE
 function commit() {
   S.updatedAt = isoNow();
   if (!Store.save(S)) toast(t('saveError'), 'error');
+  else if (typeof Cloud !== 'undefined') Cloud.onLocalChange();
   render();
 }
 
@@ -1740,6 +2162,7 @@ function render() {
   const kid = activeChild();
   $('#topActions').innerHTML = `
     ${kid ? `<span class="mode-chip">${avatar(kid, 'sm')}${esc(kid.name)}</span>` : ''}
+    <button type="button" id="cloudChip" class="pill cloud-chip" data-act="cloud-open" hidden></button>
     <select class="select-lang" data-change="lang" aria-label="${esc(t('language'))}">${[['pt', '🇧🇷 Português'], ['en', '🇺🇸 English'], ['es', '🇪🇸 Español']].map(([v, l]) => `<option value="${v}" ${S.language === v ? 'selected' : ''}>${l}</option>`).join('')}</select>
     <button type="button" class="btn btn-soft" data-act="print">🖨️ ${t('print')}</button>
     <button type="button" class="btn btn-primary" data-act="quick">⚡ ${t('quickTask')}</button>
@@ -1750,6 +2173,7 @@ function render() {
   const el = $('#sec-' + sec.id);
   if (!ui.built[sec.id]) { el.innerHTML = sec.build(); ui.built[sec.id] = true; }
   sec.update();
+  renderCloudStatus();
   if ($('#profileModal') && ui.profileId) renderProfileView();
 }
 
@@ -1917,6 +2341,7 @@ function onPhotoChosen(e) {
       const prev = c.photo; c.photo = cv.toDataURL('image/jpeg', 0.82);
       S.updatedAt = isoNow();
       if (!Store.save(S)) { c.photo = prev; toast(t('saveError'), 'error'); return; }
+      Cloud.onLocalChange();
       render(); if ($('#childModal')) openChildEditor(c.id); toast(t('photoUpdated'), 'success');
     };
     img.onerror = () => toast(t('invalidImage'), 'error');
@@ -1976,7 +2401,7 @@ function importData(input) {
     let parsed;
     try { const raw = JSON.parse(reader.result); parsed = normalize(raw && raw.data && Array.isArray(raw.data.children) ? raw.data : raw, defaultKeys); }
     catch (e) { return toast(t('invalidBackup'), 'error'); }
-    if (!(await askConfirm(t('importConfirm'), { danger: true, okLabel: t('importBackup') }))) return;
+    if (!(await askConfirm(t('importConfirm') + (Cloud.linked() ? ' ' + t('cSyncWarn') : ''), { danger: true, okLabel: t('importBackup') }))) return;
     parsed.onboardingComplete = true; S = parsed; ui.built = {}; commit(); toast(t('imported'), 'success');
   };
   reader.readAsText(file);
@@ -2069,7 +2494,7 @@ const ACTIONS = {
     $('#aPoints').value = ''; $('#aReason').value = ''; commit(); toast(t('adjustSaved'), 'success');
   },
   reset: async () => {
-    if (!(await askConfirm(t('resetConfirm'), { danger: true, okLabel: t('resetData') }))) return;
+    if (!(await askConfirm(t('resetConfirm') + (Cloud.linked() ? ' ' + t('cSyncWarn') : ''), { danger: true, okLabel: t('resetData') }))) return;
     const keep = { pinHash: S.pinHash, language: S.language }; S = normalize(initialData(), defaultKeys); Object.assign(S, keep); S.onboardingComplete = true; ui.built = {}; commit(); toast(t('resetDone'));
   },
   'settings-save': () => {
@@ -2121,6 +2546,7 @@ function bindEvents() {
     if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('[role=button][data-act]')) { e.preventDefault(); e.target.click(); }
   });
   window.addEventListener('storage', e => {
+    if (e.key === CLOUD_KEY) { Cloud.loadCfg(); renderCloudStatus(); return; }
     if (e.key !== STORE_KEY || !e.newValue) return;
     try { S = normalize(JSON.parse(e.newValue), defaultKeys); render(); } catch (_) {}
   });
@@ -2133,6 +2559,7 @@ function bindEvents() {
 /* ---------- inicialização ---------- */
 async function boot() {
   let data = null, migrated = false;
+  Cloud.readInviteFromUrl();
   const saved = Store.load();
   if (saved) { try { data = normalize(saved, defaultKeys); } catch (e) { console.warn('Dados salvos inválidos', e); } }
   if (!data) {
@@ -2141,12 +2568,156 @@ async function boot() {
   if (!data) data = normalize(initialData(), defaultKeys);
   S = data; ui.today = dayKey();
   if (migrated) Store.save(S);
+  const invited = !!Cloud.cfg.pendingCode;
+  if (invited && !saved && !migrated) { S.onboardingComplete = true; ui.unlockedUntil = Date.now() + UNLOCK_MS; ui.section = 'nuvem'; }
   buildShell(); bindEvents(); render();
   if (migrated) toast(t('migratedMsg'), 'success');
   else if (!S.onboardingComplete) openOnboarding(0);
+  Cloud.init().then(() => render());
 }
 document.addEventListener('DOMContentLoaded', boot);
 
+/* =====================================================================
+   Tela de sincronização e indicador no topo.
+   ===================================================================== */
+
+const CLOUD_STATUS_ICON = { off: '☁️', connecting: '⏳', login: '🔑', nofamily: '👨‍👩‍👧', syncing: '🔄', pending: '⏳', synced: '✅', offline: '📴', error: '⚠️', recovery: '🔑' };
+
+function renderCloudStatus() {
+  const chip = $('#cloudChip');
+  if (chip) {
+    const on = !!Cloud.cfg.url;
+    chip.hidden = !on;
+    if (on) {
+      const st = Cloud.cfg.familyId ? Cloud.status : (Cloud.status === 'error' ? 'error' : 'login');
+      chip.textContent = `${CLOUD_STATUS_ICON[st] || '☁️'} ${t('cs_' + st)}`;
+      chip.className = 'pill cloud-chip ' + ({ synced: 'ok', pending: 'wait', syncing: 'wait', offline: 'bad', error: 'bad' }[st] || '');
+      chip.title = Cloud.errorKey ? t(Cloud.errorKey) : '';
+    }
+  }
+  if (ui.section === 'nuvem' && ui.cloudRendered !== cloudScreenKey()) currentSection().update();
+}
+function cloudScreenKey() { return [Cloud.status, Cloud.errorKey, !!Cloud.cfg.familyId, Cloud.email, (Cloud.families || []).length, Cloud.cfg.inviteCode, Cloud.cfg.members, Cloud.cfg.lastSync, S.language].join('|'); }
+function openCloudSection() { if (!isChildMode()) showSection('nuvem'); }
+
+const CLOUD_SECTION = {
+  id: 'nuvem', icon: '☁️', nav: 'navCloud', child: false, guarded: true,
+  build: () => '<div id="cloudBody"></div>',
+  update() {
+    ui.cloudRendered = cloudScreenKey();
+    const st = Cloud.status, c = Cloud.cfg;
+    const err = Cloud.errorKey ? `<div class="notice warn mt">⚠️ ${esc(t(Cloud.errorKey))}</div>` : '';
+    let html = '';
+    if (!c.url || (!Cloud.adapter && st !== 'connecting')) {
+      html = card('☁️ ' + t('cConnectTitle'), `<p class="hint" style="margin-top:-6px">${t('cConnectHint')}</p>
+        <div class="field"><label for="cUrl">${t('cUrl')}</label><input id="cUrl" inputmode="url" autocomplete="off" placeholder="https://xxxx.supabase.co" value="${esc(c.url || '')}"></div>
+        <div class="field"><label for="cKey">${t('cKey')}</label><input id="cKey" autocomplete="off" placeholder="sb_publishable_..." value="${esc(c.key || '')}"></div>
+        <p class="hint">${t('cKeyHint')}</p>${err}
+        <button type="button" class="btn btn-primary mt" data-act="cloud-connect">${t('cConnect')}</button>`)
+        + card('📘 ' + t('cGuideTitle'), cloudGuideHtml(), { cls: 'mt' });
+    } else if (st === 'connecting') {
+      html = card('☁️ ' + t('cConnectTitle'), `<p>⏳ ${t('cs_connecting')}</p>`);
+    } else if (st === 'recovery') {
+      html = card('🔑 ' + t('cNewPassTitle'), `<div class="field"><label for="cNewPass">${t('cNewPass')}</label><input id="cNewPass" type="password" autocomplete="new-password" minlength="6"></div><button type="button" class="btn btn-primary mt" data-act="cloud-newpass">${t('save')}</button>`);
+    } else if (st === 'login' || (!c.familyId && !Cloud.email)) {
+      html = card('🔑 ' + t('cLoginTitle'), `<p class="hint" style="margin-top:-6px">${t('cLoginHint')}</p>
+        <div class="row2"><div><label for="cEmail">${t('cEmail')}</label><input id="cEmail" type="email" autocomplete="email" maxlength="120"></div><div><label for="cPass">${t('cPass')}</label><input id="cPass" type="password" autocomplete="current-password" minlength="6"></div></div>${err}
+        <div class="actions mt"><button type="button" class="btn btn-primary" data-act="cloud-signin">${t('cSignIn')}</button><button type="button" class="btn btn-soft" data-act="cloud-signup">${t('cSignUp')}</button><button type="button" class="btn btn-ghost" data-act="cloud-forgot">${t('cForgot')}</button></div>
+        <p class="hint mt">${t('cSignUpHint')}</p>`)
+        + `<div class="mt"><button type="button" class="btn btn-ghost btn-sm" data-act="cloud-disconnect">${t('cChangeServer')}</button></div>`;
+    } else if (!c.familyId) {
+      const fams = Cloud.families || [];
+      html = `<div class="notice">👤 ${t('cLoggedAs', { email: esc(Cloud.email) })}</div>${err}
+        ${fams.length ? card('👨‍👩‍👧 ' + t('cYourFamilies'), `<div class="list">${fams.map(f => `<div class="item"><div class="meta"><span class="ico">🏠</span><div><strong>${esc(f.name)}</strong><div class="sub">${t('cMembers', { n: f.members })}</div></div></div><button type="button" class="btn btn-primary btn-sm" data-act="cloud-use" data-id="${esc(f.family_id)}">${t('cUseFamily')}</button></div>`).join('')}</div><p class="hint">${t('cUseFamilyHint')}</p>`, { cls: 'mt' }) : ''}
+        <div class="grid g2 mt">
+          ${card('🏠 ' + t('cCreateTitle'), `<p class="hint" style="margin-top:-6px">${t('cCreateHint')}</p><button type="button" class="btn btn-primary btn-block mt" data-act="cloud-create">${t('cCreate')}</button>`)}
+          ${card('🔗 ' + t('cJoinTitle'), `<p class="hint" style="margin-top:-6px">${t('cJoinHint')}</p><label for="cCode">${t('cCode')}</label><input id="cCode" maxlength="20" autocomplete="off" style="text-transform:uppercase" value="${esc(c.pendingCode || '')}"><button type="button" class="btn btn-primary btn-block mt" data-act="cloud-join">${t('cJoin')}</button>`)}
+        </div><div class="mt"><button type="button" class="btn btn-ghost btn-sm" data-act="cloud-signout">${t('cSignOut')}</button></div>`;
+    } else {
+      const link = Cloud.inviteLink();
+      html = `<div class="grid g2">
+        ${card(`${CLOUD_STATUS_ICON[st] || '☁️'} ${t('cs_' + st)}`, `<p class="hint" style="margin-top:-6px">${t('cStatusHint_' + (['synced', 'pending', 'syncing', 'offline'].includes(st) ? st : 'error'))}</p>${err}
+          <div class="grid g2 mt"><div class="mini-kpi"><span>${t('cLastSync')}</span><strong style="font-size:16px">${c.lastSync ? fmtDateTime(c.lastSync) : '—'}</strong></div><div class="mini-kpi"><span>${t('cMembersLabel')}</span><strong style="font-size:16px">${c.members || 1}</strong></div></div>
+          <p class="hint mt">👤 ${t('cLoggedAs', { email: esc(Cloud.email || '—') })}</p>
+          <div class="actions mt"><button type="button" class="btn btn-primary" data-act="cloud-sync">🔄 ${t('cSyncNow')}</button><button type="button" class="btn btn-ghost" data-act="cloud-signout">${t('cSignOut')}</button></div>`)}
+        ${card('🔗 ' + t('cInviteTitle'), `<p class="hint" style="margin-top:-6px">${t('cInviteHint')}</p>
+          <div class="field"><label>${t('cCode')}</label><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><strong style="font-size:24px;letter-spacing:2px" id="cInviteCode">${esc(c.inviteCode || '—')}</strong><button type="button" class="icon-btn" data-act="cloud-copy" data-id="code">📋 ${t('cCopy')}</button></div></div>
+          ${link ? `<div class="field"><label>${t('cInviteLink')}</label><input readonly value="${esc(link)}" onclick="this.select()"><button type="button" class="btn btn-soft btn-sm mt" data-act="cloud-copy" data-id="link">📋 ${t('cCopyLink')}</button></div>` : `<p class="hint">${t('cInviteLinkLater')}</p>`}
+          ${c.role === 'owner' ? `<button type="button" class="btn btn-ghost btn-sm mt" data-act="cloud-new-invite">♻️ ${t('cNewInvite')}</button>` : ''}`)}
+      </div>
+      ${card('⚙️ ' + t('cAdvanced'), `<p class="hint" style="margin-top:-6px">${t('cAdvancedHint')}</p><div class="actions"><button type="button" class="btn btn-danger" data-act="cloud-leave">${t('cLeave')}</button><button type="button" class="btn btn-ghost" data-act="cloud-disconnect">${t('cDisconnect')}</button></div>`, { cls: 'mt' })}`;
+    }
+    // mantém o que a pessoa já tinha digitado quando a tela se atualiza
+    const typed = {}; $$('#cloudBody input').forEach(i => { if (i.id && !i.readOnly) typed[i.id] = i.value; });
+    $('#cloudBody').innerHTML = html;
+    Object.entries(typed).forEach(([id, v]) => { const el = document.getElementById(id); if (el && v && !el.value) el.value = v; });
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'pais'), 0, CLOUD_SECTION);
+
+function cloudGuideHtml() {
+  const steps = ['g1', 'g2', 'g3', 'g4', 'g5', 'g6'].map(k => `<li style="margin-bottom:8px">${t('cGuide_' + k)}</li>`).join('');
+  return `<ol style="padding-left:20px;margin:0">${steps}</ol><p class="hint">${t('cGuideNote')}</p>`;
+}
+
+/* ---------- ações ---------- */
+async function cloudRun(el, fn) {
+  if (el) el.disabled = true;
+  try { await fn(); } catch (e) { const k = cloudErrorKey(e); Cloud.errorKey = k; toast(t(k), 'error'); }
+  finally { if (el) el.disabled = false; ui.cloudRendered = null; render(); }
+}
+Object.assign(ACTIONS, {
+  'cloud-connect': el => cloudRun(el, async () => {
+    const url = text($('#cUrl').value, 200).replace(/\/+$/, ''), key = text($('#cKey').value, 400);
+    if (!/^https:\/\/[a-z0-9.-]+$/i.test(url)) throw Object.assign(new Error('bad url'), { code: 'bad_url' });
+    if (/^sb_secret_/i.test(key) || key.includes('service_role')) { toast(t('cErrSecret'), 'error'); return; }
+    if (key.length < 20) { toast(t('cErrKeyShort'), 'warn'); return; }
+    const ok = await Cloud.connect(url, key);
+    if (ok) toast(t('cConnected'), 'success');
+  }),
+  'cloud-signin': el => cloudRun(el, async () => {
+    const email = text($('#cEmail').value, 120), pass = $('#cPass').value;
+    if (!email || !pass) { toast(t('cFillLogin'), 'warn'); return; }
+    await Cloud.signIn(email, pass); Cloud.errorKey = ''; toast(t('cSignedIn'), 'success');
+  }),
+  'cloud-signup': el => cloudRun(el, async () => {
+    const email = text($('#cEmail').value, 120), pass = $('#cPass').value;
+    if (!/^\S+@\S+\.\S+$/.test(email)) { toast(t('cFillLogin'), 'warn'); return; }
+    if (pass.length < 6) { toast(t('cErrWeak'), 'warn'); return; }
+    const r = await Cloud.signUp(email, pass); Cloud.errorKey = '';
+    if (r.needsConfirm) toast(t('cConfirmEmail'), 'success'); else toast(t('cSignedIn'), 'success');
+  }),
+  'cloud-forgot': el => cloudRun(el, async () => {
+    const email = text($('#cEmail').value, 120); if (!email) { toast(t('cTypeEmail'), 'warn'); return; }
+    await Cloud.adapter.resetPassword(email, Cloud.redirectUrl()); toast(t('cResetSent'), 'success');
+  }),
+  'cloud-newpass': el => cloudRun(el, async () => {
+    const p = $('#cNewPass').value; if (p.length < 6) { toast(t('cErrWeak'), 'warn'); return; }
+    await Cloud.adapter.updatePassword(p); Cloud.recovery = false; toast(t('cPassChanged'), 'success'); await Cloud.init();
+  }),
+  'cloud-create': el => cloudRun(el, async () => { await Cloud.createFamily(); toast(t('cCreated'), 'success'); }),
+  'cloud-join': el => cloudRun(el, async () => {
+    const code = text($('#cCode').value, 20); if (!code) { toast(t('cTypeCode'), 'warn'); return; }
+    if (!(await askConfirm(t('cJoinConfirm'), { danger: true, okLabel: t('cJoin') }))) return;
+    await Cloud.joinFamily(code); toast(t('cJoined'), 'success');
+  }),
+  'cloud-use': el => cloudRun(el, async () => {
+    if (!(await askConfirm(t('cJoinConfirm'), { danger: true, okLabel: t('cUseFamily') }))) return;
+    await Cloud.useFamily(el.dataset.id); toast(t('cJoined'), 'success');
+  }),
+  'cloud-sync': el => cloudRun(el, async () => { await Cloud.refreshInfo(); await Cloud.pull(); if (Cloud.cfg.dirty) await Cloud.push(); }),
+  'cloud-copy': async el => {
+    const value = el.dataset.id === 'link' ? Cloud.inviteLink() : Cloud.cfg.inviteCode;
+    try { await navigator.clipboard.writeText(value); toast(t('cCopied'), 'success'); } catch (_) { toast(value); }
+  },
+  'cloud-new-invite': el => cloudRun(el, async () => { if (!(await askConfirm(t('cNewInviteConfirm')))) return; await Cloud.newInvite(); toast(t('cNewInviteDone'), 'success'); }),
+  'cloud-signout': el => cloudRun(el, async () => { if (!(await askConfirm(t('cSignOutConfirm')))) return; await Cloud.signOut(); }),
+  'cloud-leave': el => cloudRun(el, async () => { if (!(await askConfirm(t('cLeaveConfirm'), { danger: true, okLabel: t('cLeave') }))) return; await Cloud.leave(); }),
+  'cloud-disconnect': async () => { if (!(await askConfirm(t('cDisconnectConfirm')))) return; Cloud.disconnect(); ui.cloudRendered = null; render(); },
+  'cloud-open': () => openCloudSection()
+});
+
 </script>
+<script>if('serviceWorker' in navigator && location.protocol.startsWith('http')) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
 </body>
 </html>
