@@ -6,6 +6,19 @@
 <meta name="google" content="notranslate">
 <meta name="theme-color" content="#302b63">
 <title>Família em Missão — Tarefas e Recompensas</title>
+<link rel="canonical" href="https://familia-em-missao.vercel.app/">
+<meta name="description" content="Tarefas, pontos, recompensas e cofrinho para a família.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Família em Missão">
+<meta property="og:title" content="Família em Missão">
+<meta property="og:description" content="Tarefas, pontos, recompensas e cofrinho para a família.">
+<meta property="og:url" content="https://familia-em-missao.vercel.app/">
+<meta property="og:image" content="https://familia-em-missao.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://familia-em-missao.vercel.app/og-image.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -278,7 +291,7 @@ body:not(.child-mode) .child-only{display:none!important}
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v71 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v72 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -583,13 +596,209 @@ Object.assign(I18N.es, {
   cSyncWarn: 'Atención: este dispositivo está sincronizado, así que esto vale para todos los dispositivos de la familia.'
 });
 
+/* Traduzione italiana */
+I18N.it = {
+  appTitle: 'Famiglia in Missione — Compiti e Ricompense', tagline: 'Compiti, punti e ricompense', savedLocally: 'Dati salvati in questo browser.',
+  language: 'Lingua', print: 'Stampa', quickTask: 'Compito rapido', mode: 'Modalità', modeParent: 'Genitore', modeChild: 'Bambino', lockNow: 'Blocca ora', locked: 'Area protetta bloccata.',
+  navHome: 'Inizio', navTasks: 'Compiti', navRewards: 'Ricompense', navPiggy: 'Salvadanaio', navValues: 'Valori', navFinance: 'Resoconto finanziario', navCalculator: 'Calcolatrice', navCalendar: 'Calendario', navNotes: 'Messaggio privato', navAnalysis: 'Analisi della famiglia', navBehavior: 'Comportamento', navPremium: 'Centro Premium', navParents: 'Area genitori', navSettings: 'Impostazioni',
+  title_dashboard: 'Pannello della famiglia', sub_dashboard: 'Segui i progressi di ogni bambino.',
+  title_tarefas: 'Compiti', sub_tarefas: 'Crea e registra le missioni del giorno.',
+  title_recompensas: 'Ricompense', sub_recompensas: 'Scambia i punti con momenti speciali.',
+  title_cofrinho: 'Salvadanaio', sub_cofrinho: 'Insegna organizzazione e responsabilità finanziaria.',
+  title_valores: 'Valore dei punti e dei compiti', sub_valores: 'Stabilisci quanto vale in denaro ogni punto e ogni compito.',
+  title_financeiro: 'Resoconto finanziario', sub_financeiro: 'Totali individuali per bambino e per compito.',
+  title_calculadora: 'Calcolatrice dei punti', sub_calculadora: 'Converti i punti in denaro e simula i compiti.',
+  title_calendario: 'Calendario', sub_calendario: 'Guarda lo storico delle attività giorno per giorno.',
+  title_recados: 'Messaggio privato', sub_recados: 'Messaggi riservati inviati dai bambini.', subNotesChild: 'Scrivi qualcosa che solo i genitori potranno leggere.',
+  title_analise: 'Analisi della famiglia', sub_analise: "Segui l'evoluzione, le abitudini e i progressi di ogni bambino.",
+  title_comportamento: 'Comportamento', sub_comportamento: 'Registra osservazioni, bonus e conseguenze.',
+  title_premium: 'Centro Premium', sub_premium: 'Approvazioni, obiettivi, livelli, agenda e sincronizzazione.',
+  title_pais: 'Area genitori', sub_pais: 'Regolazioni importanti, backup e storico completo.',
+  title_configuracoes: 'Impostazioni', sub_configuracoes: "Personalizza l'app per la tua famiglia.",
+  pts: 'pt', points: 'Punti', year: 'anno', years: 'anni', levelShort: 'Livello', goalLabel: 'Obiettivo', today: 'Oggi', of: 'di', daysN: '{n} giorni', optional: 'Facoltativo',
+  kpiToday: 'compiti completati oggi', kpiPoints: 'punti accumulati', kpiWeekRate: 'tasso di completamento settimanale',
+  todayMissions: 'Missioni di oggi', latestAchievements: 'Ultime conquiste', missionsToday: 'missioni di oggi', moreMissions: 'missioni in più', allDone: 'Tutto fatto! Nessuna missione in sospeso. 🎉', noAchievements: 'Le conquiste appariranno qui.',
+  pendingBanner: '{n} richiesta/e in attesa della tua approvazione.', reviewNow: 'Rivedi ora', nextReward: 'Prossima ricompensa', canRedeem: 'Può già riscattarla!', missingPts: 'Mancano {n} pt',
+  profileOf: 'Profilo di {name}', dailyMissions: 'Missioni del giorno', registeredTasks: 'Compiti registrati', newTask: 'Nuovo compito', editTask: 'Modifica compito', child: 'Bambino', note: 'Nota', notePlaceholder: 'Es.: fatto senza doverlo ricordare',
+  frequencyHint: 'Giornaliero: 1 volta al giorno · Settimanale: 1 volta a settimana · Singolo: senza limite.', noTasksForChild: 'Nessun compito per questo bambino.', noTasks: 'Nessun compito registrato.',
+  markDone: 'Completa', awaitingApproval: 'In attesa di approvazione', doneToday: 'Fatto oggi', doneWeek: 'Fatto questa settimana', notToday: 'Non oggi', approve: 'Approva', reject: 'Rifiuta', undo: 'Annulla', edit: 'Modifica', delete: 'Elimina', save: 'Salva', cancel: 'Annulla', confirm: 'Conferma', close: 'Chiudi', back: 'Indietro', next: 'Avanti', finish: 'Fine', enter: 'Entra',
+  freqDaily: 'Giornaliero', freqWeekly: 'Settimanale', freqOneOff: 'Singolo', everyDay: 'Tutti i giorni', forLabel: 'Per', allChildren: 'Tutti i bambini', needsApproval: 'Con approvazione', taskValue: 'Valore del compito', taskRemoved: 'Compito rimosso',
+  name: 'Nome', icon: 'Icona', frequency: 'Frequenza', time: 'Orario', weekDays: 'Giorni della settimana', weekDaysHint: 'Nessuno selezionato = tutti i giorni.', assignTo: 'Per chi è questo compito?', assignHint: 'Nessuno selezionato = tutti i bambini.',
+  cashPerPoint: 'R$ per punto', fixedExtra: 'Importo fisso extra (R$)', taskValuePreview: 'Ogni completamento aggiunge {value} al salvadanaio.', requireApproval: "Richiedi l'approvazione del genitore", requireApprovalHint: 'In modalità bambino, il compito conta solo dopo la tua approvazione.', taskNamePh: 'Es.: mettere a posto i giocattoli',
+  rewardStore: 'Negozio delle ricompense', newReward: 'Nuova ricompensa', editReward: 'Modifica ricompensa', redeemReward: 'Riscatta ricompensa', reward: 'Ricompensa', redeemNow: 'Riscatta ora', myRequests: 'Le mie richieste', askReward: 'Chiedi', requested: 'Richiesta inviata', noRequests: 'Ancora nessuna richiesta.', noRewards: 'Nessuna ricompensa registrata.', costPoints: 'Costo in punti', rewardNamePh: 'Es.: scegliere il film',
+  chooseChildReward: 'Scegli un bambino e una ricompensa.', redeemConfirm: 'Riscattare "{reward}" per {name} con {n} pt?', redeemed: 'Ricompensa riscattata!', requestSent: 'Richiesta inviata al genitore.', alreadyRequested: 'Hai già chiesto questa ricompensa.', notEnoughPoints: 'Punti insufficienti.', notEnoughPointsName: '{name} non ha ancora abbastanza punti.', rewardRequest: 'Richiesta di ricompensa', redeemedX: 'Riscattato: {name}',
+  movePiggy: 'Movimento del salvadanaio', type: 'Tipo', add: 'Aggiungi', withdraw: 'Preleva', amountBRL: 'Importo (R$)', description: 'Descrizione', piggyNotePh: 'Es.: regalo della nonna', saveMovement: 'Salva movimento', piggyGoals: 'Obiettivi del salvadanaio', piggyHistory: 'Storico del salvadanaio', currentPiggy: 'Salvadanaio attuale', noPiggyHistory: 'Nessun movimento registrato.', movementSaved: 'Movimento registrato.', insufficientPiggy: 'Saldo insufficiente nel salvadanaio.', validValue: 'Inserisci un importo valido.',
+  piggySource_manual: 'Movimento manuale', piggySource_task: 'Compito completato', piggySource_behavior: 'Comportamento',
+  noGoals: 'Nessun obiettivo creato.', goalDone: 'Obiettivo raggiunto!', goalValue: "Importo dell'obiettivo (R$)", goalName: "Nome dell'obiettivo", goalNamePh: 'Es.: bicicletta', addGoal: 'Aggiungi obiettivo', goalInvalid: "Compila il bambino, il nome e l'importo dell'obiettivo.", deleteGoalConfirm: 'Eliminare questo obiettivo?',
+  valuesHero: "Trasforma l'impegno in apprendimento", valuesHeroSub: 'Stabilisci quanto vale nel salvadanaio ogni punto e ogni compito.', defaultPointValue: 'Valore predefinito di ogni punto (R$)', defaultPointHint: 'Il denaro viene aggiunto automaticamente al salvadanaio quando il compito è completato.', valuesPerTask: 'Valori per compito', valuesPerTaskHint: 'Lascia vuoto "R$ per punto" per usare il valore predefinito.', saveValues: 'Salva valori', valuesSaved: 'Valori salvati.',
+  lastActivity: 'Ultima attività', tasksDone: 'Compiti svolti', pointsEarned: 'Punti guadagnati', earnedTasks: 'Guadagnato con i compiti', piggyBalance: 'Saldo del salvadanaio', approvedRejected: 'Approvati / Rifiutati', pending: 'In sospeso', earned7: 'Guadagnato in 7 giorni', lostTotal: 'Perdite', task: 'Compito', times: 'Volte', pointsPerTime: 'Punti per volta', valuePerTime: 'Valore per volta', totalPoints: 'Punti totali', totalValue: 'Valore totale', lastTime: 'Ultima volta', noTasksYet: 'Ancora nessun compito completato.',
+  calcTitle: 'Calcolatrice dei punti', calcHint: 'Guarda quanto valgono i punti in denaro.', pointsQty: 'Quantità di punti', taskOptional: 'Compito (facoltativo)', noTask: 'nessun compito', estimatedValue: 'Valore stimato', calcDetail: 'Valore predefinito: {ppp} per punto.', calcDetailTask: '{ppp} per punto + {fixed} fisso.', reverseCalc: 'Quanto manca per mettere da parte un importo?', reverseResult: 'Servono circa {n} punti per mettere da parte {value}.',
+  calMonthTasks: 'Compiti del mese', calActiveDays: 'Giorni attivi', calTop: 'Il più bravo', calPoints: 'Punti guadagnati', myProfile: 'Il mio profilo', calMsgTitle: 'Piccoli gesti, grandi conquiste!', calMsgText: 'Ogni compito completato rende il calendario più colorato.', activity: 'attività', activities: 'attività', dayActivities: 'Attività del {date}', noActivityDay: 'Nessuna attività in questo giorno.',
+  myNote: 'Il mio messaggio privato', myNoteHint: 'Questo spazio è per raccontare qualcosa con tranquillità. Solo il genitore potrà leggerlo.', myNoteLabel: 'Che cosa vorresti raccontare?', myNotePh: 'Scrivi qui cosa è successo o come ti sei sentito...', sendNote: 'Invia il messaggio al genitore', noteSent: 'Messaggio inviato con affetto. 💌', notesSentCount: 'Hai già inviato {n} messaggio/i.', writeFirst: 'Scrivi qualcosa prima.',
+  childNotes: 'Messaggi dei bambini', childNotesHint: 'Solo la modalità Genitore mostra il contenuto di questi messaggi.', markAllRead: 'Segna tutti come letti', markRead: 'Letto', unread: 'Nuovo', noNotes: 'Ancora nessun messaggio inviato.', deleteNoteConfirm: 'Eliminare questo messaggio?',
+  overallScore: 'Voto generale', scoreExcellent: 'Eccellente', scoreGood: 'Molto bene', scoreGrowing: 'In crescita', scoreNeeds: 'Richiede attenzione', frequency30: 'Frequenza (30 giorni)', completed: 'Completati', rejected: 'Rifiutati', streak: 'Serie', notesSent: 'Messaggi inviati', last30: 'Ultimi 30 giorni', completionRate: 'Completamento dei compiti', topTasks: 'Compiti più svolti', notEnoughData: 'Dati non ancora sufficienti.', medals: 'Medaglie', growing: 'In crescita', bestWeek: 'Settimana migliore', timeline: 'Cronologia', noRecords: 'Nessun registro.', smartAnalysis: 'Analisi intelligente',
+  smart1: '{name} ha un voto di {score}/10 ({label}). La frequenza degli ultimi 30 giorni è {rate}%.', smart2: 'L\'abitudine più forte è "{task}".', smartNoData: 'Non ci sono ancora abbastanza dati sulle abitudini.', smart3bad: 'I compiti rifiutati meritano una chiacchierata.', smart3good: 'Conviene rinforzare i progressi con lodi costanti e obiettivi raggiungibili.',
+  newObservation: 'Nuova osservazione', positive: 'Buon comportamento / bonus', negative: 'Attenzione / conseguenza', observation: 'Osservazione', observationPh: 'Descrivi il comportamento osservato', pointsAdjust: 'Correzione dei punti', moneyAdjust: 'Correzione in denaro (R$)', saveObservation: 'Salva osservazione', observationSaved: 'Osservazione registrata.', observations: 'Osservazioni sul comportamento', noObservations: 'Nessuna osservazione registrata.', behaviorNote: 'Osservazione sul comportamento',
+  lossTitle: 'Perdita di punti e denaro', lossReason: 'Motivo della perdita', lossReasonPh: 'Es.: non ha obbedito', applyLoss: 'Applica perdita', lossApplied: 'Perdita applicata.', lossNoReason: 'Indica il motivo della perdita.', lossNothing: 'Indica i punti o il denaro da togliere.', lossConfirm: 'Togliere {pts} pt e {money} a {name}?', summary7: 'Riepilogo finanziario degli ultimi 7 giorni', days7: '7 giorni', gained: 'Guadagnato', lost: 'Perso',
+  approvals: 'Approvazioni in sospeso', noApprovals: 'Nessuna richiesta in attesa di approvazione.', noNote: 'Senza nota', rejectReason: 'Motivo del rifiuto', approved: 'Approvato!', duplicateApproval: 'Questo compito era già stato completato in questo periodo. La richiesta è stata rifiutata automaticamente.',
+  levelsTitle: 'Serie, livelli e medaglie', noMedals: 'Ancora nessuna medaglia', agenda: 'Agenda dei compiti', approval: 'Approvazione', automatic: 'Automatico', report7: 'Compiti negli ultimi 7 giorni',
+  accountSync: 'Account di famiglia e sincronizzazione', familyEmail: 'E-mail della famiglia', localPassword: 'Password locale', createPassword: 'Crea una password', saveAccount: 'Salva account locale', exportSync: 'Esporta sincronizzazione', importSync: 'Importa sincronizzazione', accountInvalid: 'Inserisci un e-mail valido e una password di almeno 4 caratteri.', accountSaved: 'Account locale salvato.',
+  syncNote: "Per portare i dati su un altro dispositivo, esporta qui e importa sull'altro. La sincronizzazione automatica tra dispositivi richiede un server online.",
+  status_pending: 'In sospeso', status_approved: 'Approvato', status_rejected: 'Rifiutato', status_reverted: 'Annullato',
+  adjustPoints: 'Correggi i punti', reason: 'Motivo', reasonPh: 'Es.: bonus per buon comportamento', applyAdjust: 'Applica correzione', adjustSaved: 'Correzione applicata.', enterPoints: 'Inserisci i punti (positivi o negativi).', manualAdjustment: 'Correzione manuale',
+  dataSecurity: 'Dati e sicurezza', exportBackup: 'Esporta backup', importBackup: 'Importa backup', resetData: 'Ripristina dati iniziali', backupTip: 'Consiglio: esporta un backup ogni settimana e conservalo su Drive o WhatsApp.', fullHistory: 'Storico completo', date: 'Data', money: 'Denaro', noHistory: 'Nessuno storico.',
+  typeTask: 'Compito', typeReward: 'Ricompensa', typeAdjust: 'Correzione', typeBehavior: 'Comportamento',
+  exported: 'Backup esportato.', imported: 'Backup importato.', invalidBackup: 'File di backup non valido.', importConfirm: 'Importare questo file sostituirà tutti i dati attuali. Continuare?', resetConfirm: 'Questo cancellerà tutti i dati attuali (password e lingua vengono mantenute). Continuare?', resetDone: 'Dati iniziali ripristinati.',
+  generalSettings: 'Impostazioni generali', familyName: 'Nome della famiglia', defaultGoal: 'Obiettivo di punti predefinito', newPin: 'Nuova password dei genitori', confirmPin: 'Conferma la nuova password', pinRule: 'Lascia vuoto per mantenere la password attuale. Usa da 4 a 6 cifre.', saveSettings: 'Salva impostazioni', settingsSaved: 'Impostazioni salvate.', reviewWelcome: 'Rivedi il benvenuto',
+  childrenProfiles: 'Profili dei bambini', addChild: 'Aggiungi bambino', editProfile: 'Modifica profilo', childName: 'Nome del bambino', childNamePh: 'Es.: Sofia', age: 'Età', goal: 'Obiettivo di punti', emoji: 'Icona / emoji', accentColor: 'Colore del profilo', progressColor: 'Colore della barra', photo: 'Foto', choosePhoto: 'Scegli foto', removePhoto: 'Rimuovi foto', changePhoto: 'Cambia foto', removePhotoConfirm: "Rimuovere la foto e tornare all'emoji?", photoUpdated: 'Foto aggiornata.', invalidImage: 'Scegli un file immagine.', largeImage: "L'immagine è troppo grande (massimo 15 MB).",
+  childAdded: 'Profilo aggiunto.', minOneChild: 'Deve restare almeno un profilo.', deleteChildConfirm: 'Eliminare il profilo di {name} e tutto il suo storico?', deleted: 'Eliminato.', saved: 'Salvato.', enterName: 'Scrivi un nome.', invalidPoints: 'Inserisci un numero di punti valido.',
+  palette: 'Tavolozza di colori del sistema', paletteHint: 'Cambia la barra laterale e i pulsanti principali.', applyColors: 'Applica i miei colori', restorePalette: 'Ripristina tavolozza originale', paletteApplied: 'Tavolozza applicata.',
+  color_sidebar1: 'Barra laterale — colore iniziale', color_sidebar2: 'Barra laterale — colore finale', color_btn1: 'Pulsante — colore iniziale', color_btn2: 'Pulsante — colore finale',
+  theme_purple: 'Viola classico', theme_ocean: 'Blu oceano', theme_forest: 'Verde natura', theme_sunset: 'Tramonto', theme_rose: 'Rosa allegro', theme_dark: 'Notte moderna',
+  useChildColor: 'Usa il colore di questo bambino nel sistema', useChildColorHint: 'Applica il colore alla barra laterale e ai pulsanti.', childThemeApplied: 'Colore del profilo applicato.', currentPoints: 'Punti attuali', recentActivity: 'Attività recenti', noActivity: 'Nessuna attività registrata.',
+  pinTitle: 'Password dei genitori', parentModeTitle: 'Entra in modalità Genitore', pinLabel: 'Inserisci la password dei genitori', pinPlaceholder: 'Da 4 a 6 cifre', pinWrong: 'Password errata.', pinDefaultHint: 'Password iniziale: 1234. Cambiala nelle Impostazioni.', pinInvalid: 'La password deve avere da 4 a 6 cifre.', pinMismatch: 'Le password non coincidono.', parentModeOn: 'Modalità Genitore attivata.',
+  chooseChildTitle: 'Entra come bambino', chooseChildHint: "Tocca chi userà l'app.", usingNow: 'In uso ora',
+  confirmTitle: 'Conferma', undoConfirm: 'Annullare questa registrazione e restituire punti e denaro?', undone: 'Registrazione annullata.', deleteTaskConfirm: 'Eliminare il compito "{name}"?', deleteRewardConfirm: 'Eliminare la ricompensa "{name}"?',
+  earned: '{name} ha guadagnato {n} punti!', sentForApproval: "Inviato per l'approvazione del genitore.", alreadyToday: 'Questo compito è già stato completato oggi.', alreadyWeek: 'Questo compito è già stato completato questa settimana.', alreadyPending: 'Questo compito è già in attesa di approvazione.', notTodayMsg: 'Questo compito non è previsto per oggi.', genericError: "Non è stato possibile completare l'azione.", goalReached: "{name} ha raggiunto l'obiettivo di punti!",
+  achFirstTask: 'Prima missione', achStreak7: '7 giorni di fila', achLevel5: 'Livello 5', achPiggy50: 'R$ 50 risparmiati',
+  saveError: 'Impossibile salvare. La memoria del browser potrebbe essere piena; prova con una foto più piccola.', migratedMsg: 'I dati della versione precedente sono stati portati nella nuova versione.', welcomeDone: 'Tutto pronto! Buon divertimento. 🌟',
+  onbTitle: 'Benvenuti in Famiglia in Missione', onbStep1: 'Famiglia', onbStep2: 'Bambini', onbStep3: 'Regole', onbStep4: 'Fine', onbKids: 'Questi sono i profili attuali:', onbKidsHint: 'Puoi aggiungere, modificare o rimuovere bambini nelle Impostazioni.', onbPinHint: 'Lascia vuoto per mantenere la password 1234 (consigliamo di cambiarla).', onbDone: "Tutto pronto! L'app include:", onbF1: 'Modalità Genitore protetta da password e modalità Bambino', onbF2: 'Compiti con approvazione, denaro nel salvadanaio e obiettivi', onbF3: 'Livelli, serie, medaglie e resoconti', onbF4: 'Backup per conservare i dati e portarli su un altro dispositivo',
+  reward_: '', taskMakeBed: 'Rifare il letto', taskPutToysAway: 'Mettere a posto i giocattoli', taskBrushTeeth: 'Lavarsi i denti', taskLaundryBasket: 'Mettere i vestiti nel cesto', taskSetTable: 'Aiutare ad apparecchiare', taskRead15: 'Leggere per 15 minuti',
+  rewardChooseMovie: 'Scegliere il film della sera', rewardIceCream: 'Gelato', rewardSleepLater: 'Andare a letto 30 minuti più tardi', rewardPark: 'Passeggiata al parco', rewardSpecialToy: 'Giocattolo speciale',
+  navCloud: 'Sincronizzazione', title_nuvem: 'Sincronizzazione', sub_nuvem: "Usa l'app su più dispositivi con gli stessi dati.",
+  cs_off: 'Solo su questo dispositivo', cs_connecting: 'Connessione…', cs_login: "Accedi all'account", cs_nofamily: 'Scegli la famiglia', cs_syncing: 'Sincronizzazione…', cs_pending: 'Modifiche da inviare', cs_synced: 'Sincronizzato', cs_offline: 'Senza internet', cs_error: 'Errore di sincronizzazione', cs_recovery: 'Nuova password',
+  cConnectTitle: 'Connetti al server', cConnectHint: 'Inserisci i dati del tuo progetto Supabase. Lo fai una sola volta su ogni dispositivo (oppure apri il link di invito, che è già compilato).',
+  cUrl: 'Indirizzo del progetto (Project URL)', cKey: 'Chiave pubblicabile (Publishable key)', cKeyHint: 'Usa la chiave che inizia con sb_publishable_ (o la vecchia "anon"). Non usare mai la chiave segreta.', cConnect: 'Connetti',
+  cGuideTitle: 'Come creare il server (una sola volta)',
+  cGuide_g1: 'Crea un account gratuito su <strong>supabase.com</strong> e clicca su <strong>New project</strong>. Scegli la regione più vicina e annota la password del database.',
+  cGuide_g2: 'Nel menu del progetto apri <strong>SQL Editor</strong>, incolla tutto il file <strong>supabase.sql</strong> e clicca su <strong>Run</strong>.',
+  cGuide_g3: "Apri <strong>Authentication → URL Configuration</strong> e inserisci in <strong>Site URL</strong> l'indirizzo dove è pubblicata l'app.",
+  cGuide_g4: 'Apri <strong>Settings → API Keys</strong> e copia la <strong>Publishable key</strong>. Il <strong>Project URL</strong> si trova nel pulsante <strong>Connect</strong> in alto nel progetto.',
+  cGuide_g5: "Incolla entrambi qui sopra e tocca <strong>Connetti</strong>. Poi crea il tuo account e la famiglia.",
+  cGuide_g6: "In <strong>Invito</strong>, copia il link e invialo all'altro genitore. Lui apre il link, crea il suo account ed entra nella famiglia.",
+  cGuideNote: 'Piano gratuito di Supabase: il progetto va in pausa dopo 7 giorni senza alcun utilizzo; basta riattivarlo dal pannello.',
+  cNewPassTitle: 'Crea una nuova password', cNewPass: 'Nuova password (almeno 6 caratteri)',
+  cLoginTitle: 'Account del genitore', cLoginHint: "Ogni genitore ha il proprio account. I bambini usano l'app sul dispositivo di un genitore, in modalità Bambino.",
+  cEmail: 'E-mail', cPass: 'Password', cSignIn: 'Accedi', cSignUp: 'Crea account', cForgot: 'Password dimenticata', cSignUpHint: "Dopo aver creato l'account potrebbe arrivare un'e-mail di conferma. Confermala e poi tocca Accedi.", cChangeServer: 'Cambia server',
+  cLoggedAs: 'Connesso come {email}', cYourFamilies: 'Le tue famiglie', cMembers: '{n} genitore/i', cUseFamily: 'Usa questa famiglia', cUseFamilyHint: 'I dati di questo dispositivo saranno sostituiti da quelli della famiglia.',
+  cCreateTitle: 'Crea la famiglia', cCreateHint: 'Invia al server i dati di questo dispositivo (bambini, compiti, storico, foto). Fallo sul dispositivo principale.', cCreate: 'Crea la famiglia con questi dati',
+  cJoinTitle: 'Entra con un codice', cJoinHint: "Usa il codice che ti ha dato l'altro genitore.", cCode: 'Codice di invito', cJoin: 'Entra nella famiglia', cSignOut: "Esci dall'account",
+  cStatusHint_synced: 'Tutto a posto: questo dispositivo ha i dati più recenti della famiglia.', cStatusHint_pending: 'Ci sono modifiche di questo dispositivo in attesa di essere inviate al server.', cStatusHint_syncing: 'Invio e ricezione delle modifiche…', cStatusHint_offline: "Senza internet. Puoi continuare a usare l'app: le modifiche saranno inviate quando torna la connessione.", cStatusHint_error: 'Impossibile sincronizzare ora. Le tue modifiche restano salvate su questo dispositivo.',
+  cLastSync: 'Ultima sincronizzazione', cMembersLabel: 'Genitori nella famiglia', cSyncNow: 'Sincronizza ora',
+  cInviteTitle: 'Invita un altro genitore', cInviteHint: "Invia il link (o il codice) all'altro genitore. Crea il proprio account ed entra nella famiglia.", cCopy: 'Copia', cInviteLink: 'Link di invito', cCopyLink: 'Copia link', cInviteLinkLater: "Il link di invito appare quando l'app è pubblicata su un indirizzo internet. Per ora, usa il codice.", cNewInvite: 'Genera un nuovo codice', cNewInviteConfirm: 'Generare un nuovo codice? Il codice attuale smetterà di funzionare.', cNewInviteDone: 'Nuovo codice generato.',
+  cAdvanced: 'Avanzate', cAdvancedHint: '"Esci dalla famiglia" rimuove questo accesso; se nessun altro è nella famiglia, i suoi dati vengono cancellati dal server. "Disconnetti server" torna a usare l\'app solo su questo dispositivo.', cLeave: 'Esci dalla famiglia', cDisconnect: 'Disconnetti server',
+  cErrLib: 'Impossibile caricare la connessione. Controlla internet.', cErrOffline: 'Nessuna connessione internet al momento.', cErrLogin: 'E-mail o password errati.', cErrConfirm: "Conferma l'e-mail (guarda nella posta in arrivo) e prova di nuovo ad accedere.", cErrExists: 'Questa e-mail ha già un account. Tocca Accedi.', cErrWeak: 'La password deve avere almeno 6 caratteri.', cErrRate: 'Troppi tentativi. Aspetta qualche minuto.', cErrCode: 'Codice di invito non valido.', cErrNotMember: 'Non fai più parte di questa famiglia.', cErrNotOwner: 'Solo chi ha creato la famiglia può farlo.', cErrTooLarge: 'I dati sono diventati troppo grandi (foto molto pesanti?).', cErrKey: 'Chiave del progetto non valida. Controlla la Publishable key.', cErrSql: 'Il database non è ancora pronto. Esegui il file supabase.sql nello SQL Editor.', cErrGeneric: 'Impossibile completare. Riprova.', cErrUrl: 'Indirizzo non valido. Inizia con https:// e finisce con .supabase.co', cErrSecret: 'Questa è la chiave SEGRETA. Usa la Publishable key, mai quella segreta.', cErrKeyShort: 'La chiave sembra incompleta.',
+  cConnected: 'Server connesso.', cFillLogin: 'Compila e-mail e password.', cSignedIn: 'Account connesso.', cConfirmEmail: "Account creato! Confermalo con l'e-mail che abbiamo inviato e poi tocca Accedi.", cTypeEmail: 'Scrivi prima la tua e-mail.', cResetSent: 'Abbiamo inviato un link per creare una nuova password.', cPassChanged: 'Password cambiata.',
+  cCreated: "Famiglia creata sul server! Ora invita l'altro genitore.", cTypeCode: 'Scrivi il codice di invito.', cJoinConfirm: 'I dati di questo dispositivo saranno sostituiti da quelli della famiglia. Se vuoi conservare qualcosa, esporta prima un backup. Continuare?', cJoined: 'Fatto! Questo dispositivo è collegato alla famiglia.', cCopied: 'Copiato.',
+  cSignOutConfirm: "Uscire dall'account su questo dispositivo? I dati restano qui, ma smettono di sincronizzarsi.", cLeaveConfirm: 'Uscire da questa famiglia? Questo dispositivo smetterà di riceverne i dati.', cDisconnectConfirm: "Disconnettere il server? L'app torna a funzionare solo su questo dispositivo.",
+  cSyncWarn: 'Attenzione: questo dispositivo è sincronizzato, quindi questo vale per tutti i dispositivi della famiglia.'
+};
+
+/* 简体中文翻译 */
+I18N.zh = {
+  appTitle: '家庭任务 — 任务与奖励', tagline: '任务、积分和奖励', savedLocally: '数据保存在此浏览器中。',
+  language: '语言', print: '打印', quickTask: '快速任务', mode: '模式', modeParent: '家长', modeChild: '孩子', lockNow: '立即锁定', locked: '受保护区域已锁定。',
+  navHome: '首页', navTasks: '任务', navRewards: '奖励', navPiggy: '存钱罐', navValues: '价值设置', navFinance: '财务报告', navCalculator: '计算器', navCalendar: '日历', navNotes: '悄悄话', navAnalysis: '家庭分析', navBehavior: '行为记录', navPremium: '高级中心', navParents: '家长专区', navSettings: '设置',
+  title_dashboard: '家庭面板', sub_dashboard: '跟踪每个孩子的进步。',
+  title_tarefas: '任务', sub_tarefas: '创建并记录今天的任务。',
+  title_recompensas: '奖励', sub_recompensas: '用积分兑换特别的时光。',
+  title_cofrinho: '存钱罐', sub_cofrinho: '培养条理性和理财责任感。',
+  title_valores: '积分与任务的价值', sub_valores: '设置每个积分和每项任务值多少钱。',
+  title_financeiro: '财务报告', sub_financeiro: '按孩子和任务统计的个人总额。',
+  title_calculadora: '积分计算器', sub_calculadora: '把积分换算成金额，并模拟任务。',
+  title_calendario: '日历', sub_calendario: '按天查看活动记录。',
+  title_recados: '悄悄话', sub_recados: '孩子们发送的私密留言。', subNotesChild: '写一些只有家长才能看到的话。',
+  title_analise: '家庭分析', sub_analise: '了解每个孩子的成长、习惯和进步。',
+  title_comportamento: '行为记录', sub_comportamento: '记录观察、奖励和后果。',
+  title_premium: '高级中心', sub_premium: '审批、目标、等级、日程和同步。',
+  title_pais: '家长专区', sub_pais: '重要调整、备份和完整记录。',
+  title_configuracoes: '设置', sub_configuracoes: '为你的家庭定制应用。',
+  pts: '分', points: '积分', year: '岁', years: '岁', levelShort: '等级', goalLabel: '目标', today: '今天', of: '/', daysN: '{n} 天', optional: '可选',
+  kpiToday: '今天完成的任务', kpiPoints: '累计积分', kpiWeekRate: '本周完成率',
+  todayMissions: '今日任务', latestAchievements: '最新成就', missionsToday: '今日任务', moreMissions: '项更多任务', allDone: '全部完成！没有待办任务。🎉', noAchievements: '成就会显示在这里。',
+  pendingBanner: '有 {n} 个请求等待你审批。', reviewNow: '立即查看', nextReward: '下一个奖励', canRedeem: '现在可以兑换了！', missingPts: '还差 {n} 分',
+  profileOf: '{name} 的资料', dailyMissions: '今日任务', registeredTasks: '已登记的任务', newTask: '新任务', editTask: '编辑任务', child: '孩子', note: '备注', notePlaceholder: '例如：不用提醒就做好了',
+  frequencyHint: '每天：每天 1 次 · 每周：每周 1 次 · 单次：不限次数。', noTasksForChild: '这个孩子还没有任务。', noTasks: '还没有登记任务。',
+  markDone: '完成', awaitingApproval: '等待审批', doneToday: '今天已完成', doneWeek: '本周已完成', notToday: '今天不做', approve: '批准', reject: '拒绝', undo: '撤销', edit: '编辑', delete: '删除', save: '保存', cancel: '取消', confirm: '确认', close: '关闭', back: '返回', next: '下一步', finish: '完成', enter: '进入',
+  freqDaily: '每天', freqWeekly: '每周', freqOneOff: '单次', everyDay: '每天', forLabel: '给', allChildren: '所有孩子', needsApproval: '需审批', taskValue: '任务价值', taskRemoved: '任务已删除',
+  name: '名称', icon: '图标', frequency: '频率', time: '时间', weekDays: '星期', weekDaysHint: '不勾选 = 每天。', assignTo: '这个任务给谁？', assignHint: '不勾选 = 所有孩子。',
+  cashPerPoint: '每分 R$', fixedExtra: '固定额外金额 (R$)', taskValuePreview: '每完成一次，存钱罐增加 {value}。', requireApproval: '需要家长审批', requireApprovalHint: '在孩子模式下，任务要经你批准后才计入。', taskNamePh: '例如：收拾玩具',
+  rewardStore: '奖励商店', newReward: '新奖励', editReward: '编辑奖励', redeemReward: '兑换奖励', reward: '奖励', redeemNow: '立即兑换', myRequests: '我的请求', askReward: '申请', requested: '已申请', noRequests: '还没有请求。', noRewards: '还没有登记奖励。', costPoints: '所需积分', rewardNamePh: '例如：选今晚的电影',
+  chooseChildReward: '请选择孩子和奖励。', redeemConfirm: '用 {n} 分为 {name} 兑换"{reward}"？', redeemed: '奖励已兑换！', requestSent: '请求已发送给家长。', alreadyRequested: '你已经申请过这个奖励了。', notEnoughPoints: '积分不足。', notEnoughPointsName: '{name} 的积分还不够。', rewardRequest: '奖励申请', redeemedX: '已兑换：{name}',
+  movePiggy: '存钱罐收支', type: '类型', add: '存入', withdraw: '取出', amountBRL: '金额 (R$)', description: '说明', piggyNotePh: '例如：奶奶的礼物', saveMovement: '保存收支', piggyGoals: '存钱目标', piggyHistory: '存钱罐记录', currentPiggy: '当前存钱罐', noPiggyHistory: '还没有收支记录。', movementSaved: '收支已记录。', insufficientPiggy: '存钱罐余额不足。', validValue: '请输入有效金额。',
+  piggySource_manual: '手动收支', piggySource_task: '完成任务', piggySource_behavior: '行为记录',
+  noGoals: '还没有创建目标。', goalDone: '目标达成！', goalValue: '目标金额 (R$)', goalName: '目标名称', goalNamePh: '例如：自行车', addGoal: '添加目标', goalInvalid: '请填写孩子、名称和目标金额。', deleteGoalConfirm: '删除这个目标？',
+  valuesHero: '把努力变成学习', valuesHeroSub: '设置每个积分和每项任务在存钱罐里值多少钱。', defaultPointValue: '每分默认价值 (R$)', defaultPointHint: '完成任务后，钱会自动存入存钱罐。', valuesPerTask: '每项任务的价值', valuesPerTaskHint: '"每分 R$"留空则使用默认价值。', saveValues: '保存价值', valuesSaved: '价值已保存。',
+  lastActivity: '最近活动', tasksDone: '已完成任务', pointsEarned: '获得的积分', earnedTasks: '任务所得', piggyBalance: '存钱罐余额', approvedRejected: '批准 / 拒绝', pending: '待处理', earned7: '7 天所得', lostTotal: '扣除', task: '任务', times: '次数', pointsPerTime: '每次积分', valuePerTime: '每次金额', totalPoints: '总积分', totalValue: '总金额', lastTime: '最近一次', noTasksYet: '还没有完成的任务。',
+  calcTitle: '积分计算器', calcHint: '看看积分值多少钱。', pointsQty: '积分数量', taskOptional: '任务（可选）', noTask: '不选任务', estimatedValue: '估算金额', calcDetail: '默认价值：每分 {ppp}。', calcDetailTask: '每分 {ppp} + 固定 {fixed}。', reverseCalc: '攒够某个金额还需要多少？', reverseResult: '大约需要 {n} 分才能攒够 {value}。',
+  calMonthTasks: '本月任务', calActiveDays: '活跃天数', calTop: '本月之星', calPoints: '获得的积分', myProfile: '我的资料', calMsgTitle: '小行动，大成就！', calMsgText: '每完成一项任务，日历就更多彩一点。', activity: '项活动', activities: '项活动', dayActivities: '{date} 的活动', noActivityDay: '这一天没有活动。',
+  myNote: '我的悄悄话', myNoteHint: '这里可以安心地说出你的心里话。只有家长能看到。', myNoteLabel: '你想说些什么？', myNotePh: '在这里写下发生了什么，或者你的感受……', sendNote: '发送给家长', noteSent: '悄悄话已发送。💌', notesSentCount: '你已经发送了 {n} 条悄悄话。', writeFirst: '请先写点内容。',
+  childNotes: '孩子们的悄悄话', childNotesHint: '只有家长模式才能看到这些留言的内容。', markAllRead: '全部标为已读', markRead: '已读', unread: '新', noNotes: '还没有收到留言。', deleteNoteConfirm: '删除这条留言？',
+  overallScore: '综合评分', scoreExcellent: '优秀', scoreGood: '很好', scoreGrowing: '进步中', scoreNeeds: '需要关注', frequency30: '频率（30 天）', completed: '已完成', rejected: '已拒绝', streak: '连续天数', notesSent: '已发悄悄话', last30: '最近 30 天', completionRate: '任务完成率', topTasks: '完成最多的任务', notEnoughData: '数据还不够。', medals: '奖章', growing: '进步中', bestWeek: '最佳一周', timeline: '时间线', noRecords: '没有记录。', smartAnalysis: '智能分析',
+  smart1: '{name} 的评分是 {score}/10（{label}）。最近 30 天的频率为 {rate}%。', smart2: '最稳定的习惯是"{task}"。', smartNoData: '关于习惯的数据还不够。', smart3bad: '被拒绝的任务值得好好聊一聊。', smart3good: '继续用持续的鼓励和可以达成的目标来巩固进步。',
+  newObservation: '新记录', positive: '表现好 / 奖励', negative: '需注意 / 后果', observation: '观察', observationPh: '描述你观察到的行为', pointsAdjust: '积分调整', moneyAdjust: '金额调整 (R$)', saveObservation: '保存记录', observationSaved: '记录已保存。', observations: '行为记录', noObservations: '还没有记录。', behaviorNote: '行为记录',
+  lossTitle: '扣除积分和金额', lossReason: '扣除原因', lossReasonPh: '例如：不听话', applyLoss: '执行扣除', lossApplied: '已扣除。', lossNoReason: '请填写扣除原因。', lossNothing: '请填写要扣除的积分或金额。', lossConfirm: '从 {name} 扣除 {pts} 分和 {money}？', summary7: '最近 7 天财务小结', days7: '7 天', gained: '获得', lost: '扣除',
+  approvals: '待审批', noApprovals: '没有等待审批的请求。', noNote: '无备注', rejectReason: '拒绝原因', approved: '已批准！', duplicateApproval: '这个任务在本周期内已经完成过，请求已自动拒绝。',
+  levelsTitle: '连续天数、等级和奖章', noMedals: '还没有奖章', agenda: '任务日程', approval: '审批', automatic: '自动', report7: '最近 7 天的任务',
+  accountSync: '家庭账户和同步', familyEmail: '家庭邮箱', localPassword: '本地密码', createPassword: '创建密码', saveAccount: '保存本地账户', exportSync: '导出同步文件', importSync: '导入同步文件', accountInvalid: '请输入有效邮箱和至少 4 位的密码。', accountSaved: '本地账户已保存。',
+  syncNote: '要把数据带到另一台设备，请在这里导出，再在另一台设备上导入。设备之间的自动同步需要在线服务器。',
+  status_pending: '待处理', status_approved: '已批准', status_rejected: '已拒绝', status_reverted: '已撤销',
+  adjustPoints: '调整积分', reason: '原因', reasonPh: '例如：表现好的奖励', applyAdjust: '应用调整', adjustSaved: '调整已应用。', enterPoints: '请输入积分（正数或负数）。', manualAdjustment: '手动调整',
+  dataSecurity: '数据与安全', exportBackup: '导出备份', importBackup: '导入备份', resetData: '恢复初始数据', backupTip: '提示：每周导出一次备份，保存在网盘或聊天软件里。', fullHistory: '完整记录', date: '日期', money: '金额', noHistory: '没有记录。',
+  typeTask: '任务', typeReward: '奖励', typeAdjust: '调整', typeBehavior: '行为',
+  exported: '备份已导出。', imported: '备份已导入。', invalidBackup: '备份文件无效。', importConfirm: '导入此文件将替换当前所有数据。继续吗？', resetConfirm: '这会清除当前所有数据（保留密码和语言）。继续吗？', resetDone: '已恢复初始数据。',
+  generalSettings: '常规设置', familyName: '家庭名称', defaultGoal: '默认积分目标', newPin: '新的家长密码', confirmPin: '确认新密码', pinRule: '留空则保留当前密码。请使用 4 到 6 位数字。', saveSettings: '保存设置', settingsSaved: '设置已保存。', reviewWelcome: '重新查看欢迎页',
+  childrenProfiles: '孩子资料', addChild: '添加孩子', editProfile: '编辑资料', childName: '孩子姓名', childNamePh: '例如：小美', age: '年龄', goal: '积分目标', emoji: '图标 / 表情', accentColor: '资料颜色', progressColor: '进度条颜色', photo: '照片', choosePhoto: '选择照片', removePhoto: '移除照片', changePhoto: '更换照片', removePhotoConfirm: '移除照片并改回表情？', photoUpdated: '照片已更新。', invalidImage: '请选择图片文件。', largeImage: '图片太大了（最大 15 MB）。',
+  childAdded: '资料已添加。', minOneChild: '至少要保留一个资料。', deleteChildConfirm: '删除 {name} 的资料及其全部记录？', deleted: '已删除。', saved: '已保存。', enterName: '请输入名称。', invalidPoints: '请输入有效的积分数。',
+  palette: '系统配色', paletteHint: '更改侧边栏和主要按钮的颜色。', applyColors: '应用我的配色', restorePalette: '恢复原始配色', paletteApplied: '配色已应用。',
+  color_sidebar1: '侧边栏 — 起始色', color_sidebar2: '侧边栏 — 结束色', color_btn1: '按钮 — 起始色', color_btn2: '按钮 — 结束色',
+  theme_purple: '经典紫', theme_ocean: '海洋蓝', theme_forest: '自然绿', theme_sunset: '日落', theme_rose: '欢乐粉', theme_dark: '现代夜色',
+  useChildColor: '在系统中使用这个孩子的颜色', useChildColorHint: '把颜色应用到侧边栏和按钮。', childThemeApplied: '资料颜色已应用。', currentPoints: '当前积分', recentActivity: '最近活动', noActivity: '还没有活动记录。',
+  pinTitle: '家长密码', parentModeTitle: '进入家长模式', pinLabel: '请输入家长密码', pinPlaceholder: '4 到 6 位数字', pinWrong: '密码错误。', pinDefaultHint: '初始密码：1234。请在设置中修改。', pinInvalid: '密码必须是 4 到 6 位数字。', pinMismatch: '两次输入的密码不一致。', parentModeOn: '已进入家长模式。',
+  chooseChildTitle: '以孩子身份进入', chooseChildHint: '点一下谁要使用应用。', usingNow: '正在使用',
+  confirmTitle: '确认', undoConfirm: '撤销这条记录并退回积分和金额？', undone: '记录已撤销。', deleteTaskConfirm: '删除任务"{name}"？', deleteRewardConfirm: '删除奖励"{name}"？',
+  earned: '{name} 获得了 {n} 分！', sentForApproval: '已发送给家长审批。', alreadyToday: '这个任务今天已经完成了。', alreadyWeek: '这个任务本周已经完成了。', alreadyPending: '这个任务已经在等待审批了。', notTodayMsg: '这个任务今天不在计划内。', genericError: '操作未能完成。', goalReached: '{name} 达成了积分目标！',
+  achFirstTask: '第一个任务', achStreak7: '连续 7 天', achLevel5: '5 级', achPiggy50: '存下 R$ 50',
+  saveError: '无法保存。浏览器存储空间可能已满，请换一张小一点的照片。', migratedMsg: '上一版本的数据已转移到新版本。', welcomeDone: '一切就绪！祝使用愉快。🌟',
+  onbTitle: '欢迎使用家庭任务', onbStep1: '家庭', onbStep2: '孩子', onbStep3: '规则', onbStep4: '完成', onbKids: '这些是当前的资料：', onbKidsHint: '你可以在设置中添加、编辑或删除孩子。', onbPinHint: '留空则保留密码 1234（建议修改）。', onbDone: '一切就绪！应用包括：', onbF1: '密码保护的家长模式和孩子模式', onbF2: '需审批的任务、存钱罐和目标', onbF3: '等级、连续天数、奖章和报告', onbF4: '备份功能，可保存数据并带到其他设备',
+  reward_: '', taskMakeBed: '整理床铺', taskPutToysAway: '收拾玩具', taskBrushTeeth: '刷牙', taskLaundryBasket: '把衣服放进洗衣篮', taskSetTable: '帮忙摆餐桌', taskRead15: '阅读 15 分钟',
+  rewardChooseMovie: '选今晚的电影', rewardIceCream: '冰淇淋', rewardSleepLater: '晚睡 30 分钟', rewardPark: '去公园玩', rewardSpecialToy: '特别的玩具',
+  navCloud: '同步', title_nuvem: '同步', sub_nuvem: '在多台设备上使用同一份数据。',
+  cs_off: '仅此设备', cs_connecting: '正在连接…', cs_login: '请登录', cs_nofamily: '选择家庭', cs_syncing: '正在同步…', cs_pending: '有待发送的更改', cs_synced: '已同步', cs_offline: '没有网络', cs_error: '同步出错', cs_recovery: '新密码',
+  cConnectTitle: '连接服务器', cConnectHint: '填写你的 Supabase 项目信息。每台设备只需填写一次（或打开邀请链接，信息已自动填好）。',
+  cUrl: '项目地址 (Project URL)', cKey: '可公开密钥 (Publishable key)', cKeyHint: '请使用以 sb_publishable_ 开头的密钥（或旧版"anon"密钥）。切勿使用秘密密钥。', cConnect: '连接',
+  cGuideTitle: '如何创建服务器（只需一次）',
+  cGuide_g1: '在 <strong>supabase.com</strong> 免费注册，点击 <strong>New project</strong>。选择离你最近的地区，并记下数据库密码。',
+  cGuide_g2: '在项目菜单中打开 <strong>SQL Editor</strong>，粘贴整个 <strong>supabase.sql</strong> 文件，然后点击 <strong>Run</strong>。',
+  cGuide_g3: '打开 <strong>Authentication → URL Configuration</strong>，在 <strong>Site URL</strong> 中填写应用的发布地址。',
+  cGuide_g4: '打开 <strong>Settings → API Keys</strong>，复制 <strong>Publishable key</strong>。<strong>Project URL</strong> 在项目顶部的 <strong>Connect</strong> 按钮里。',
+  cGuide_g5: '把两项粘贴到上面，点击<strong>连接</strong>。然后创建你的账户和家庭。',
+  cGuide_g6: '在<strong>邀请</strong>中复制链接，发给另一位家长。对方打开链接、创建自己的账户，然后加入家庭。',
+  cGuideNote: 'Supabase 免费版：项目连续 7 天没有使用就会暂停，在控制台重新启用即可。',
+  cNewPassTitle: '设置新密码', cNewPass: '新密码（至少 6 个字符）',
+  cLoginTitle: '家长账户', cLoginHint: '每位家长都有自己的账户。孩子在家长的设备上以孩子模式使用应用。',
+  cEmail: '邮箱', cPass: '密码', cSignIn: '登录', cSignUp: '创建账户', cForgot: '忘记密码', cSignUpHint: '创建账户后可能会收到确认邮件。确认后再点击登录。', cChangeServer: '更换服务器',
+  cLoggedAs: '已登录：{email}', cYourFamilies: '你的家庭', cMembers: '{n} 位家长', cUseFamily: '使用这个家庭', cUseFamilyHint: '此设备上的数据将被家庭数据替换。',
+  cCreateTitle: '创建家庭', cCreateHint: '把此设备上的数据（孩子、任务、记录、照片）上传到服务器。请在主设备上操作。', cCreate: '用这些数据创建家庭',
+  cJoinTitle: '用邀请码加入', cJoinHint: '使用另一位家长给你的邀请码。', cCode: '邀请码', cJoin: '加入家庭', cSignOut: '退出账户',
+  cStatusHint_synced: '一切正常：此设备已有家庭的最新数据。', cStatusHint_pending: '此设备有更改正在等待发送到服务器。', cStatusHint_syncing: '正在发送和接收更改…', cStatusHint_offline: '没有网络。可以继续使用：网络恢复后会自动发送更改。', cStatusHint_error: '暂时无法同步。你的更改仍保存在此设备上。',
+  cLastSync: '上次同步', cMembersLabel: '家庭中的家长', cSyncNow: '立即同步',
+  cInviteTitle: '邀请另一位家长', cInviteHint: '把链接（或邀请码）发给另一位家长。对方创建自己的账户后加入家庭。', cCopy: '复制', cInviteLink: '邀请链接', cCopyLink: '复制链接', cInviteLinkLater: '应用发布到网址后才会显示邀请链接。现在请先使用邀请码。', cNewInvite: '生成新邀请码', cNewInviteConfirm: '生成新邀请码？当前邀请码将失效。', cNewInviteDone: '已生成新邀请码。',
+  cAdvanced: '高级', cAdvancedHint: '"退出家庭"会移除此访问权限；如果家庭中没有其他人，服务器上的家庭数据将被删除。"断开服务器"会恢复为仅在此设备上使用。', cLeave: '退出家庭', cDisconnect: '断开服务器',
+  cErrLib: '无法加载连接，请检查网络。', cErrOffline: '目前没有网络。', cErrLogin: '邮箱或密码错误。', cErrConfirm: '请先确认邮箱（查看收件箱），然后再登录。', cErrExists: '这个邮箱已有账户，请点击登录。', cErrWeak: '密码至少需要 6 个字符。', cErrRate: '尝试次数过多，请稍等几分钟。', cErrCode: '邀请码无效。', cErrNotMember: '你已不在这个家庭中。', cErrNotOwner: '只有创建家庭的人才能这样做。', cErrTooLarge: '数据太大了（照片太大？）。', cErrKey: '项目密钥无效，请检查 Publishable key。', cErrSql: '数据库还没准备好。请在 SQL Editor 中运行 supabase.sql 文件。', cErrGeneric: '未能完成，请重试。', cErrUrl: '地址无效。应以 https:// 开头、以 .supabase.co 结尾。', cErrSecret: '这是秘密密钥。请使用 Publishable key，切勿使用秘密密钥。', cErrKeyShort: '密钥似乎不完整。',
+  cConnected: '服务器已连接。', cFillLogin: '请填写邮箱和密码。', cSignedIn: '账户已连接。', cConfirmEmail: '账户已创建！请通过我们发送的邮件确认，然后点击登录。', cTypeEmail: '请先输入你的邮箱。', cResetSent: '我们已发送设置新密码的链接。', cPassChanged: '密码已修改。',
+  cCreated: '家庭已在服务器上创建！现在邀请另一位家长吧。', cTypeCode: '请输入邀请码。', cJoinConfirm: '此设备上的数据将被家庭数据替换。如需保留，请先导出备份。继续吗？', cJoined: '完成！此设备已连接到家庭。', cCopied: '已复制。',
+  cSignOutConfirm: '在此设备上退出账户？数据会保留，但不再同步。', cLeaveConfirm: '退出这个家庭？此设备将不再接收家庭数据。', cDisconnectConfirm: '断开服务器？应用将恢复为仅在此设备上使用。',
+  cSyncWarn: '注意：此设备已同步，所以这会影响家庭中的所有设备。'
+};
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 71;
+const APP_VERSION = 72;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -727,7 +936,7 @@ function normalize(raw, defaultKeys) {
   d.familyName = text(raw.familyName, 60) || d.familyName;
   d.defaultGoal = Math.max(1, int(raw.defaultGoal, 200));
   d.defaultPointValue = Math.max(0, round2(num(raw.defaultPointValue, 0.10)));
-  d.language = ['pt', 'en', 'es'].includes(raw.language) ? raw.language : 'pt';
+  d.language = ['pt', 'en', 'es', 'it', 'zh'].includes(raw.language) ? raw.language : 'pt';
   d.pinHash = typeof raw.pinHash === 'string' && raw.pinHash.startsWith('h1:') ? raw.pinHash
     : hashPin(String(raw.pin ?? '').trim() || DEFAULT_PIN);
   d.onboardingComplete = raw.onboardingComplete !== undefined ? !!raw.onboardingComplete : true;
@@ -1284,7 +1493,9 @@ function t(key, vars) {
   return s;
 }
 const defaultKeys = { has: k => k in I18N.pt, ptName: k => I18N.pt[k] };
-function locale() { return { pt: 'pt-BR', en: 'en-US', es: 'es-ES' }[S.language] || 'pt-BR'; }
+const LANGS = [['pt', '🇧🇷 Português', 'pt-BR'], ['en', '🇺🇸 English', 'en-US'], ['es', '🇪🇸 Español', 'es-ES'], ['it', '🇮🇹 Italiano', 'it-IT'], ['zh', '🇨🇳 中文', 'zh-CN']];
+function locale() { const l = LANGS.find(x => x[0] === S.language); return l ? l[2] : 'pt-BR'; }
+function langOptions(sel) { return LANGS.map(([v, l]) => `<option value="${v}" ${sel === v ? 'selected' : ''}>${l}</option>`).join(''); }
 function money(v) { return new Intl.NumberFormat(locale(), { style: 'currency', currency: 'BRL' }).format(Number(v) || 0); }
 function fmtDateTime(iso) { return new Date(iso).toLocaleString(locale(), { dateStyle: 'short', timeStyle: 'short' }); }
 function fmtDate(iso) { return new Date(iso).toLocaleDateString(locale(), { day: '2-digit', month: 'short' }); }
@@ -1957,7 +2168,8 @@ const Cloud = {
   setBase(obj) { try { localStorage.setItem(CLOUD_BASE_KEY, JSON.stringify(obj)); } catch (_) { localStorage.removeItem(CLOUD_BASE_KEY); } },
   linked() { return !!(this.adapter && this.cfg.familyId); },
   setStatus(st, errKey) { this.status = st; this.errorKey = errKey || ''; if (typeof renderCloudStatus === 'function') renderCloudStatus(); },
-  redirectUrl() { return location.protocol.startsWith('http') ? location.origin + location.pathname : undefined; },
+  appUrl() { const c = document.querySelector('link[rel=canonical]'); if (c && c.href) return c.href; return location.protocol.startsWith('http') ? location.origin + location.pathname : ''; },
+  redirectUrl() { return this.appUrl() || undefined; },
 
   /** dados enviados ao servidor: tudo, menos o modo atual (que é de cada aparelho) */
   payload() { const d = JSON.parse(JSON.stringify(S)); delete d.mode; return d; },
@@ -2069,7 +2281,7 @@ const Cloud = {
     this.cfg.familyId = null; this.saveCfg(); this.setStatus('nofamily');
   },
   inviteLink() {
-    const base = location.protocol.startsWith('http') ? location.origin + location.pathname : '';
+    const base = this.appUrl();
     const token = btoa(unescape(encodeURIComponent(JSON.stringify({ u: this.cfg.url, k: this.cfg.key, c: this.cfg.inviteCode }))));
     return base ? `${base}#convite=${token}` : '';
   },
@@ -2141,7 +2353,7 @@ function buildShell() {
 function render() {
   if (ui.lang !== S.language) {
     ui.built = {}; ui.lang = S.language;
-    document.documentElement.lang = S.language === 'pt' ? 'pt-BR' : S.language;
+    document.documentElement.lang = locale();
     document.title = t('appTitle');
   }
   if (isChildMode() && !currentSection().child) ui.section = 'dashboard';
@@ -2163,7 +2375,7 @@ function render() {
   $('#topActions').innerHTML = `
     ${kid ? `<span class="mode-chip">${avatar(kid, 'sm')}${esc(kid.name)}</span>` : ''}
     <button type="button" id="cloudChip" class="pill cloud-chip" data-act="cloud-open" hidden></button>
-    <select class="select-lang" data-change="lang" aria-label="${esc(t('language'))}">${[['pt', '🇧🇷 Português'], ['en', '🇺🇸 English'], ['es', '🇪🇸 Español']].map(([v, l]) => `<option value="${v}" ${S.language === v ? 'selected' : ''}>${l}</option>`).join('')}</select>
+    <select class="select-lang" data-change="lang" aria-label="${esc(t('language'))}">${langOptions(S.language)}</select>
     <button type="button" class="btn btn-soft" data-act="print">🖨️ ${t('print')}</button>
     <button type="button" class="btn btn-primary" data-act="quick">⚡ ${t('quickTask')}</button>
     ${!kid && isUnlocked() ? `<button type="button" class="btn btn-soft" data-act="lock" title="${esc(t('lockNow'))}">🔒</button>` : ''}
@@ -2361,7 +2573,7 @@ function openOnboarding(step = 0) {
   ui.onb = step;
   const steps = [t('onbStep1'), t('onbStep2'), t('onbStep3'), t('onbStep4')];
   const panes = [
-    `<label for="obFamily">${t('familyName')}</label><input id="obFamily" maxlength="60" value="${esc(S.familyName)}"><div class="field"><label for="obLang">${t('language')}</label><select id="obLang"><option value="pt">🇧🇷 Português</option><option value="en">🇺🇸 English</option><option value="es">🇪🇸 Español</option></select></div>`,
+    `<label for="obFamily">${t('familyName')}</label><input id="obFamily" maxlength="60" value="${esc(S.familyName)}"><div class="field"><label for="obLang">${t('language')}</label><select id="obLang">${langOptions(S.language)}</select></div>`,
     `<p>${t('onbKids')}</p><div class="chips">${S.children.map(c => `<span class="chip on" style="cursor:default">${esc(c.avatar)} ${esc(c.name)}</span>`).join('')}</div><p class="hint">${t('onbKidsHint')}</p>`,
     `<label for="obValue">${t('defaultPointValue')}</label><input id="obValue" type="number" min="0" step="0.01" value="${S.defaultPointValue}"><div class="row2 field"><div><label for="obPin1">${t('newPin')}</label><input id="obPin1" type="password" inputmode="numeric" maxlength="6"></div><div><label for="obPin2">${t('confirmPin')}</label><input id="obPin2" type="password" inputmode="numeric" maxlength="6"></div></div><p class="hint">${t('onbPinHint')}</p>`,
     `<p>🎉 ${t('onbDone')}</p><ul class="hint">${['onbF1', 'onbF2', 'onbF3', 'onbF4'].map(k => `<li>${t(k)}</li>`).join('')}</ul>`
