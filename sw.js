@@ -1,5 +1,5 @@
 /* Família em Missão — funciona sem internet depois da primeira abertura. */
-const CACHE = 'familia-em-missao-v72';
+const CACHE = 'familia-em-missao-v73';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png', './og-image.png'];
 const LIB = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js';
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
