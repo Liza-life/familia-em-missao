@@ -357,12 +357,117 @@ html{-webkit-tap-highlight-color:transparent}
 @media print{.mobilebar,.tabbar,.drawer-backdrop{display:none!important}}
 @media(max-width:820px){body:has(.modal) .toasts{top:calc(10px + env(safe-area-inset-top));bottom:auto}}
 
+/* ===== Inglês ===== */
+.en-bars{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:120px;margin-top:10px}
+.en-bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.en-bar span{width:100%;max-width:28px;border-radius:7px 7px 3px 3px;display:block}
+.en-bar small{font-size:10px;color:var(--muted);white-space:nowrap}
+.chip.on{border-color:var(--primary);background:var(--accent-soft);color:var(--primary)}
+.pr-opt{width:100%;text-align:left;cursor:pointer;font:inherit}
+.pr-opt:hover{border-color:var(--primary)}
+/* ===== Impressão ===== */
+#printArea{display:none}
+@media print{
+  @page{size:A4;margin:11mm}
+  body.print-mode{padding:0!important;background:#fff!important}
+  body.print-mode>*:not(#printArea){display:none!important}
+  body.print-mode #printArea{display:block!important}
+  .ps-page{break-after:page;page-break-after:always}
+  .ps-page:last-child{break-after:auto;page-break-after:auto}
+}
+#printArea{font-family:Inter,"Segoe UI",system-ui,Arial,sans-serif;color:#1d1d2b;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#printArea h3{font-size:15px;margin:14px 0 6px}
+/* relatório */
+.pr-head{display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--c,#6c63ff);padding-bottom:10px;margin-bottom:12px}
+.pr-av{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#6c63ff);display:grid;place-items:center;font-size:34px;flex:0 0 auto}
+.pr-title{font-size:26px;font-weight:900}
+.pr-sub{font-size:13px;color:#555}
+.pr-star{margin-left:auto;text-align:center;font-size:22px;font-weight:900}
+.pr-star small{display:block;font-size:10px;font-weight:600;color:#666}
+.pr-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.pr-kpi{border:1.5px solid #ddd;border-radius:10px;padding:7px 6px;text-align:center}
+.pr-kpi b{display:block;font-size:17px}
+.pr-kpi span{font-size:10.5px;color:#555}
+.pr-kpi.pos b,.pr-table .pos,.pr-events .pos em{color:#0f7a4c}
+.pr-kpi.neg b,.pr-table .neg,.pr-events .neg em{color:#b42318}
+.pr-days{width:100%;border-collapse:collapse;table-layout:fixed}
+.pr-days th,.pr-days td{border:1px solid #ccc;padding:4px;font-size:10.5px;vertical-align:top;text-align:center}
+.pr-days th{background:#f2f0ff}
+.pr-days td{height:70px;text-align:left}
+.pr-days .pr-pts td{height:auto;text-align:center;font-weight:800}
+.pr-chip{display:block;margin-bottom:2px;line-height:1.25}
+.pr-empty{color:#aaa}
+.pr-events{margin:0;padding-left:0;list-style:none;font-size:12px}
+.pr-events li{padding:4px 8px;border-left:4px solid #0f7a4c;margin-bottom:4px;background:#fafafa}
+.pr-events li.neg{border-left-color:#b42318}
+.pr-events li.rw{border-left-color:#c27c0e}
+.pr-events em{font-style:normal;font-weight:800;float:right}
+.pr-extra{font-size:12.5px;font-weight:700}
+.pr-talk{margin-top:12px;border:1.5px dashed #bbb;border-radius:12px;padding:8px 12px}
+.pr-talk h3{margin-top:4px}
+.pr-lines span,.pr-goal span,.pr-sign span{display:block;border-bottom:1px solid #999;height:24px}
+.pr-goal{display:flex;gap:8px;align-items:flex-end;margin-top:8px;font-size:12.5px}
+.pr-goal span{flex:1}
+.pr-sign{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px;font-size:11px;text-align:center;color:#555}
+.pr-sign span{margin-bottom:3px}
+.pr-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.pr-table th,.pr-table td{border:1px solid #ccc;padding:7px;text-align:center}
+.pr-table th{background:#f2f0ff;font-size:11px}
+.pr-table td:first-child{text-align:left}
+.pr-foot{font-size:10px;color:#888;margin-top:14px}
+/* provinha */
+.ws-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:3px solid #1d1d2b;padding-bottom:8px;margin-bottom:8px}
+.ws-title{font-size:28px;font-weight:900}
+.ws-sub{font-size:13px;color:#444}
+.ws-name{font-size:14px;line-height:1.7;text-align:right}
+.ws-score{border:2px solid #1d1d2b;border-radius:8px;padding:2px 8px;display:inline-block;margin-top:2px}
+.ws-sec{border:1.5px solid #ccc;border-radius:12px;padding:8px 12px;margin-top:9px;break-inside:avoid;page-break-inside:avoid}
+.ws-sec h3{margin:0 0 2px;font-size:17px!important}
+.ws-num{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#1d1d2b;color:#fff;font-size:13px;margin-right:4px}
+.ws-help{font-size:11px;color:#666;margin:0 0 6px;font-style:italic}
+.ws-row{display:flex;align-items:center;gap:14px;padding:5px 0;border-bottom:1px dotted #ddd}
+.ws-row:last-child{border-bottom:0}
+.ws-idx{font-weight:800;width:22px}
+.ws-pic{font-size:40px;line-height:1.1}
+.ws-picsm{font-size:30px}
+.ws-say{font-size:11px;color:#777;margin-left:auto}
+.ws-count{font-size:26px;letter-spacing:2px;flex:1}
+.ws-opts{display:flex;gap:10px;margin-left:auto}
+.ws-opt{display:inline-grid;place-items:center;min-width:40px;height:40px;border:2px solid #1d1d2b;border-radius:50%;font-size:20px;font-weight:800;padding:0 8px}
+.ws-optw{border-radius:20px;font-size:17px}
+.ws-box{width:70px;height:46px;border:2px solid #1d1d2b;border-radius:8px;margin-left:auto}
+.ws-grid2,.ws-grid3,.ws-grid4{display:grid;gap:10px}
+.ws-grid2{grid-template-columns:1fr 1fr}.ws-grid3{grid-template-columns:repeat(3,1fr)}.ws-grid4{grid-template-columns:repeat(4,1fr)}
+.ws-cell{display:flex;flex-direction:column;align-items:center;gap:6px;padding:6px}
+.ws-circle{width:74px;height:74px;border:3px solid #1d1d2b;border-radius:50%}
+.ws-square{width:74px;height:60px;border:3px solid #1d1d2b;border-radius:8px}
+.ws-word{font-size:18px;letter-spacing:1px}
+.ws-tick{font-size:22px}
+.ws-hint{font-size:22px;letter-spacing:3px;font-weight:700}
+.ws-big{font-size:28px;width:44px;text-align:center}
+.ws-line{flex:1;border-bottom:2px solid #1d1d2b;height:30px;min-width:120px}
+.ws-inline{display:inline-block;flex:none;width:130px;height:20px;vertical-align:bottom}
+.ws-scr{font-size:22px;letter-spacing:4px;min-width:120px}
+.ws-sent{font-size:19px;flex:1}
+.ws-match{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:4px 20px}
+.ws-mw,.ws-mp{display:flex;align-items:center;justify-content:space-between;height:50px}
+.ws-mw b{font-size:20px}
+.ws-dot{font-size:14px}
+.ws-drawcell{align-items:stretch}
+.ws-drawcell b{font-size:17px}
+.ws-drawbox{height:150px;border:2px dashed #999;border-radius:10px}
+.ws-foot{text-align:center;font-size:16px;font-weight:800;margin-top:10px}
+.ws-keylist{margin:0;padding-left:22px;font-size:14px;columns:2}
+.ws-key .ws-sec{border-color:#9b94ff}
+/* prévia na tela (usada pelos testes e se a impressão abrir em outra aba) */
+@media screen{body.print-mode #printArea{display:none}}
+
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v75 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v76 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -1436,13 +1541,371 @@ I18N.zht = {
   menu: "選單", more: "更多", installTitle: "安裝到手機", installBtn: "安裝應用", installHint: "把應用安裝到主螢幕：像普通應用一樣全屏開啟，沒有網路也能用。", installIos: "在 iPhone 上，請通過 Safari 安裝：", installIos1: "在 <strong>Safari</strong> 中開啟這個網址。", installIos2: "點選<strong>分享</strong>按鈕（帶向上箭頭的方框）。", installIos3: "選擇<strong>新增到主螢幕</strong>，然後點選<strong>新增</strong>。", installAndroid1: "在手機的 <strong>Chrome</strong> 中開啟這個網址。", installAndroid2: "點選 <strong>⋮</strong> 選單，選擇<strong>安裝應用</strong>（或<strong>新增到主螢幕</strong>）。", installUrl: "網址：", installed: "應用已安裝！請從主螢幕上的圖示開啟。", installedHint: "此裝置上已經安裝了應用。", updateAvailable: "應用有新版本。", updateNow: "更新"
 };
 
+/* Textos das novidades: inglês, sugestões por idade e relatório da semana */
+const FEATURE_TEXT = {};
+FEATURE_TEXT.pt = {
+  navEnglish: 'Inglês', title_ingles: 'Inglês', sub_ingles: 'Tempo de estudo, metas e a provinha do mês.', typeEnglish: 'Inglês',
+  enStudyLabel: 'Inglês: {n} min', enLogTitle: 'Registrar estudo', enMinutes: 'Quanto tempo estudou?', enMinutesPh: 'Minutos', enActivity: 'Como estudou', enNotePh: 'Ex.: aprendeu as cores', enSave: 'Salvar estudo',
+  enAct_app: 'Aplicativo / jogo', enAct_video: 'Vídeo / desenho', enAct_class: 'Aula', enAct_book: 'Livro', enAct_music: 'Música', enAct_talk: 'Conversa', enAct_homework: 'Lição de casa', enAct_other: 'Outro',
+  enPointsHint: 'Cada 15 minutos valem {n} pontos.', enChildHint: 'O responsável vai confirmar o seu tempo de estudo.', enPending: '{n} min aguardando a confirmação do responsável.', enNeedMinutes: 'Informe quantos minutos.', enSaved: '{name} estudou {n} min de inglês!',
+  enProgress: 'Progresso', enThisWeek: 'Nesta semana', enThisMonth: 'Neste mês', enGoalDone: 'Meta da semana alcançada!', enGoalLeft: 'Faltam {n} min para a meta da semana.', enLast8: 'Últimas 8 semanas',
+  enTestTitle: 'Provinha do mês', enLevelIs: 'Nível {level} — {name} (indicado para {ages} anos).', enNoTestYet: 'Ainda é cedo para a provinha. Nesta idade, o melhor é ouvir músicas e desenhos em inglês.', enTestDone: 'Provinha deste mês feita: {score} de {total} ({pct}%).', enTestToday: 'Chegou o dia da provinha deste mês!', enTestOn: 'A provinha deste mês é no dia {day}.',
+  enPrintTest: 'Imprimir provinha', enAddResult: 'Registrar resultado', enNewTest: 'Outra provinha', enPrintHint: 'Sai uma folha para a criança e outra com as respostas para o responsável. Reimprimir no mesmo mês gera a mesma provinha; "Outra provinha" gera uma nova.',
+  enCanDoTitle: 'O que já consegue fazer', enCanDoFrom: 'Segundo a provinha de {date}.', enCanDoEmpty: 'Marque na hora de registrar o resultado da provinha.', enCanDoHint: 'Marque o que a criança mostrou que já sabe.',
+  enHistory: 'Histórico de estudo', enNoSessions: 'Nenhum estudo registrado ainda.', enTests: 'Provinhas', enNoTests: 'Nenhuma provinha registrada ainda.',
+  enDelConfirm: 'Excluir este registro de estudo? Os pontos dele serão retirados.', enTestDelConfirm: 'Excluir esta provinha?',
+  enRules: 'Regras do inglês', enRulePoints: 'Pontos a cada 15 minutos', enRuleDay: 'Dia do mês da provinha (1 a 28)', enRuleGoal: 'Meta semanal de {name} (minutos)', enRuleGoalHint: 'Sugestão para a idade: {n} min por semana.',
+  enLevel: 'Nível', enScore: 'Acertos', enTotal: 'Total de itens', enBonus: 'Pontos de bônus (opcional)', enBonusReason: 'Bônus da provinha de inglês', enResultNotePh: 'Ex.: ótima pronúncia; ainda confunde blue e green', enScoreInvalid: 'Confira os acertos e o total.', enResultSaved: 'Resultado da provinha de {name} salvo.',
+  enDueBanner: 'Dia da provinha de inglês: {names}.', enDueOpen: 'Ver provinha',
+  cando_c1_colors: 'Reconhece 4 cores', cando_c1_count5: 'Conta até 5', cando_c1_animals: 'Fala o nome de 5 animais', cando_c1_hello: 'Diz "hello", "bye" e "thank you"', cando_c1_song: 'Canta uma música em inglês', cando_c1_point: 'Aponta a figura quando ouve a palavra',
+  cando_c2_colors: 'Fala 8 cores', cando_c2_count10: 'Conta até 10', cando_c2_animals: 'Fala o nome de 10 animais', cando_c2_food: 'Fala 6 comidas', cando_c2_name: 'Responde "What\'s your name?"', cando_c2_letters: 'Reconhece as letras do alfabeto',
+  cando_c3_count20: 'Conta até 20', cando_c3_write: 'Escreve palavras simples', cando_c3_read: 'Lê frases curtas', cando_c3_questions: 'Responde perguntas simples', cando_c3_sentence: 'Monta uma frase sozinho', cando_c3_spell: 'Soletra o próprio nome',
+  wsSay: 'diga', wsKeyTitle: 'Gabarito — para o responsável', wsKeyTotal: '{n} itens', wsKeyHint: 'Dê 1 ponto para cada item certo. Nas partes faladas, marque o que a criança conseguiu dizer.',
+  wsH_listenCircle: 'O adulto fala a palavra em inglês; a criança circula a figura.', wsH_colorCircles: 'O adulto lê a cor; a criança pinta o círculo com essa cor.', wsH_countCircle: 'A criança conta as figuras e circula o número certo.', wsH_oralWords: 'O adulto aponta a figura e a criança fala o nome em inglês. Marque as que acertar.',
+  wsH_match: 'Ligue cada palavra à figura certa.', wsH_countWrite: 'Conte e escreva o número no quadrado.', wsH_circleWord: 'Circule a palavra que combina com a figura.', wsH_colorBoxes: 'Pinte cada quadrado com a cor escrita.',
+  wsH_write: 'Escreva o nome da figura. A primeira letra já está lá.', wsH_numbers: 'Escreva o número por extenso em inglês.', wsH_unscramble: 'Coloque as letras na ordem certa.', wsH_complete: 'Complete a frase com o nome da figura.', wsH_draw: 'Leia e desenhe no quadro.', wsH_talk: 'O adulto pergunta e a criança responde em inglês. Marque as que responder.',
+  libButton: 'Sugestões por idade', libTitle: 'Sugestões de tarefas por idade', libHas: 'Já tem', libAdd: 'Adicionar', libAddChild: 'Incluir', libRecommended: 'recomendada', libAddRec: 'Adicionar as {n} recomendadas', libHint: 'As tarefas entram como diárias, só para esta criança e com aprovação. Depois você pode editar pontos, dias e horário.', libAdded: '"{task}" adicionada para {name}.', libAddedN: '{n} tarefa(s) adicionada(s) para {name}.',
+  libBand_b1: '1 a 2 anos', libBand_b2: '3 a 4 anos', libBand_b3: '5 a 6 anos', libBand_b4: '7 a 9 anos', libBand_b5: '10 anos ou mais',
+  libTip_b1: 'tarefas curtinhas, sempre junto com um adulto. O ponto é a rotina e o elogio, não o resultado.', libTip_b2: 'já dá para cuidar das próprias coisas e ajudar em tarefas simples da casa.', libTip_b3: 'boa idade para começar responsabilidades fixas, como cama e mochila.', libTip_b4: 'consegue fazer sozinho e cuidar da própria rotina de estudos.', libTip_b5: 'pode assumir tarefas da casa de verdade e ajudar os irmãos menores.',
+  lib_toysBox: 'Guardar os brinquedos na caixa (com ajuda)', lib_diaperBin: 'Levar a fralda ao lixo', lib_shoesPlace: 'Colocar os sapatos no lugar', lib_brushHelp: 'Escovar os dentes com ajuda', lib_waterCup: 'Beber água no copo', lib_englishSong: 'Ouvir uma música em inglês',
+  lib_washHands: 'Lavar as mãos antes de comer', lib_napkins: 'Pôr os guardanapos na mesa', lib_waterPlant: 'Regar a planta', lib_dressHelp: 'Vestir-se (com pouca ajuda)', lib_booksShelf: 'Guardar os livros', lib_english10: 'Inglês: 10 minutos',
+  lib_clearPlate: 'Levar o prato até a pia', lib_feedPet: 'Dar comida ao bichinho', lib_backpack: 'Arrumar a mochila', lib_chooseClothes: 'Escolher a roupa do dia', lib_sortSocks: 'Juntar as meias em pares', lib_read10: 'Ler (ou folhear) um livro por 10 minutos', lib_english15: 'Inglês: 15 minutos',
+  lib_tidyRoom: 'Arrumar o quarto', lib_homework: 'Fazer a lição de casa', lib_english20: 'Inglês: 20 minutos', lib_foldClothes: 'Dobrar as próprias roupas', lib_dryDishes: 'Secar a louça', lib_showerAlone: 'Tomar banho sozinho', lib_trashSmall: 'Levar o lixo do banheiro', lib_simpleSnack: 'Preparar um lanche simples',
+  lib_washDishes: 'Lavar a louça', lib_vacuum: 'Varrer ou aspirar um cômodo', lib_study30: 'Estudar 30 minutos', lib_english30: 'Inglês: 30 minutos', lib_wardrobe: 'Organizar o armário', lib_cookSimple: 'Fazer uma receita simples (com um adulto)', lib_helpSibling: 'Ajudar um irmão menor',
+  prChooseTitle: 'O que você quer imprimir?', prWeek: 'Semana', prThisWeek: 'Esta semana', prLastWeek: 'Semana passada', prOptFamily: 'Relatório da semana — família inteira', prOptFamilyHint: 'Resumo da família e uma página para cada criança.', prOptChild: 'Relatório da semana — {name}', prOptChildHint: 'Uma página para deixar marcada e conversar.', prOptTest: 'Provinha de inglês — {name}', prOptScreen: 'Imprimir esta tela',
+  prWeekOf: 'Semana de', prEarned: 'Pontos ganhos', prLost: 'Pontos perdidos', prTasks: 'Tarefas feitas', prSpent: 'Gastos em recompensas', prEnglish: 'Inglês (meta {goal} min)', prPiggy: 'Cofrinho', prBalance: 'Saldo', prDays: 'Tarefas de cada dia', prEvents: 'O que aconteceu na semana', prNoEvents: 'Nada além das tarefas nesta semana.', prTest: 'Provinha de inglês: {score} de {total}',
+  prTalk: 'Nossa conversa da semana', prNextGoal: 'Meta para a próxima semana:', prSignParent: 'Responsável', prFamilyTitle: 'Resumo da semana', prHighlights: 'Destaques da semana', prHiTasks: 'Mais tarefas', prHiEnglish: 'Mais tempo de inglês', prHiPoints: 'Mais pontos ganhos', prFamilyNotes: 'Recados da família', prPrintedOn: 'Impresso em {date}'
+};
+FEATURE_TEXT.en = {
+  navEnglish: 'English', title_ingles: 'English', sub_ingles: 'Study time, goals and the monthly quiz.', typeEnglish: 'English',
+  enStudyLabel: 'English: {n} min', enLogTitle: 'Log study time', enMinutes: 'How long did they study?', enMinutesPh: 'Minutes', enActivity: 'How they studied', enNotePh: 'E.g. learned the colors', enSave: 'Save study time',
+  enAct_app: 'App / game', enAct_video: 'Video / cartoon', enAct_class: 'Class', enAct_book: 'Book', enAct_music: 'Music', enAct_talk: 'Conversation', enAct_homework: 'Homework', enAct_other: 'Other',
+  enPointsHint: 'Every 15 minutes is worth {n} points.', enChildHint: 'A parent will confirm your study time.', enPending: '{n} min waiting for a parent to confirm.', enNeedMinutes: 'Enter how many minutes.', enSaved: '{name} studied English for {n} min!',
+  enProgress: 'Progress', enThisWeek: 'This week', enThisMonth: 'This month', enGoalDone: 'Weekly goal reached!', enGoalLeft: '{n} min to reach the weekly goal.', enLast8: 'Last 8 weeks',
+  enTestTitle: 'Monthly quiz', enLevelIs: 'Level {level} — {name} (for ages {ages}).', enNoTestYet: "It's still early for a quiz. At this age, songs and cartoons in English are best.", enTestDone: "This month's quiz is done: {score} of {total} ({pct}%).", enTestToday: "It's quiz day this month!", enTestOn: "This month's quiz is on day {day}.",
+  enPrintTest: 'Print quiz', enAddResult: 'Record result', enNewTest: 'Another quiz', enPrintHint: 'Prints a sheet for the child and an answer key for the parent. Reprinting in the same month gives the same quiz; "Another quiz" makes a new one.',
+  enCanDoTitle: 'What they can already do', enCanDoFrom: 'According to the quiz on {date}.', enCanDoEmpty: 'Tick these when you record the quiz result.', enCanDoHint: 'Tick what the child showed they already know.',
+  enHistory: 'Study history', enNoSessions: 'No study time recorded yet.', enTests: 'Quizzes', enNoTests: 'No quiz recorded yet.',
+  enDelConfirm: 'Delete this study entry? Its points will be removed.', enTestDelConfirm: 'Delete this quiz?',
+  enRules: 'English rules', enRulePoints: 'Points every 15 minutes', enRuleDay: 'Day of the month for the quiz (1 to 28)', enRuleGoal: "{name}'s weekly goal (minutes)", enRuleGoalHint: 'Suggested for this age: {n} min per week.',
+  enLevel: 'Level', enScore: 'Correct answers', enTotal: 'Total items', enBonus: 'Bonus points (optional)', enBonusReason: 'English quiz bonus', enResultNotePh: 'E.g. great pronunciation; still mixes up blue and green', enScoreInvalid: 'Check the score and the total.', enResultSaved: "{name}'s quiz result saved.",
+  enDueBanner: 'English quiz day: {names}.', enDueOpen: 'See quiz',
+  cando_c1_colors: 'Recognizes 4 colors', cando_c1_count5: 'Counts to 5', cando_c1_animals: 'Names 5 animals', cando_c1_hello: 'Says "hello", "bye" and "thank you"', cando_c1_song: 'Sings a song in English', cando_c1_point: 'Points to the picture when hearing the word',
+  cando_c2_colors: 'Names 8 colors', cando_c2_count10: 'Counts to 10', cando_c2_animals: 'Names 10 animals', cando_c2_food: 'Names 6 foods', cando_c2_name: 'Answers "What\'s your name?"', cando_c2_letters: 'Recognizes the letters of the alphabet',
+  cando_c3_count20: 'Counts to 20', cando_c3_write: 'Writes simple words', cando_c3_read: 'Reads short sentences', cando_c3_questions: 'Answers simple questions', cando_c3_sentence: 'Makes a sentence on their own', cando_c3_spell: 'Spells their own name',
+  wsSay: 'say', wsKeyTitle: 'Answer key — for the parent', wsKeyTotal: '{n} items', wsKeyHint: 'Give 1 point for each correct item. In the speaking parts, tick what the child managed to say.',
+  wsH_listenCircle: 'The adult says the word in English; the child circles the picture.', wsH_colorCircles: 'The adult reads the color; the child colors the circle.', wsH_countCircle: 'The child counts the pictures and circles the right number.', wsH_oralWords: 'The adult points to a picture and the child says its name in English. Tick the correct ones.',
+  wsH_match: 'Draw a line from each word to its picture.', wsH_countWrite: 'Count and write the number in the box.', wsH_circleWord: 'Circle the word that matches the picture.', wsH_colorBoxes: 'Color each box with the color written below.',
+  wsH_write: 'Write the name of the picture. The first letter is there.', wsH_numbers: 'Write the number in words in English.', wsH_unscramble: 'Put the letters in the right order.', wsH_complete: 'Complete the sentence with the name of the picture.', wsH_draw: 'Read and draw in the box.', wsH_talk: 'The adult asks and the child answers in English. Tick the ones answered.',
+  libButton: 'Ideas by age', libTitle: 'Task ideas by age', libHas: 'Already added', libAdd: 'Add', libAddChild: 'Include', libRecommended: 'recommended', libAddRec: 'Add the {n} recommended', libHint: 'Tasks are added as daily, for this child only and with approval. You can edit points, days and time later.', libAdded: '"{task}" added for {name}.', libAddedN: '{n} task(s) added for {name}.',
+  libBand_b1: 'Ages 1 to 2', libBand_b2: 'Ages 3 to 4', libBand_b3: 'Ages 5 to 6', libBand_b4: 'Ages 7 to 9', libBand_b5: 'Age 10 and up',
+  libTip_b1: 'very short tasks, always with an adult. The point is the routine and the praise, not the result.', libTip_b2: 'they can look after their own things and help with simple chores.', libTip_b3: 'a good age to start fixed responsibilities, like the bed and the backpack.', libTip_b4: 'they can do things alone and take care of their study routine.', libTip_b5: 'they can take on real household chores and help younger siblings.',
+  lib_toysBox: 'Put toys in the box (with help)', lib_diaperBin: 'Take the diaper to the bin', lib_shoesPlace: 'Put shoes in their place', lib_brushHelp: 'Brush teeth with help', lib_waterCup: 'Drink water from a cup', lib_englishSong: 'Listen to a song in English',
+  lib_washHands: 'Wash hands before eating', lib_napkins: 'Put napkins on the table', lib_waterPlant: 'Water the plant', lib_dressHelp: 'Get dressed (with a little help)', lib_booksShelf: 'Put books away', lib_english10: 'English: 10 minutes',
+  lib_clearPlate: 'Take the plate to the sink', lib_feedPet: 'Feed the pet', lib_backpack: 'Pack the backpack', lib_chooseClothes: "Choose the day's clothes", lib_sortSocks: 'Match socks into pairs', lib_read10: 'Read (or look at) a book for 10 minutes', lib_english15: 'English: 15 minutes',
+  lib_tidyRoom: 'Tidy the bedroom', lib_homework: 'Do homework', lib_english20: 'English: 20 minutes', lib_foldClothes: 'Fold their own clothes', lib_dryDishes: 'Dry the dishes', lib_showerAlone: 'Shower alone', lib_trashSmall: 'Take out the bathroom trash', lib_simpleSnack: 'Make a simple snack',
+  lib_washDishes: 'Wash the dishes', lib_vacuum: 'Sweep or vacuum a room', lib_study30: 'Study for 30 minutes', lib_english30: 'English: 30 minutes', lib_wardrobe: 'Organize the wardrobe', lib_cookSimple: 'Cook a simple recipe (with an adult)', lib_helpSibling: 'Help a younger sibling',
+  prChooseTitle: 'What would you like to print?', prWeek: 'Week', prThisWeek: 'This week', prLastWeek: 'Last week', prOptFamily: 'Weekly report — whole family', prOptFamilyHint: 'Family summary and one page per child.', prOptChild: 'Weekly report — {name}', prOptChildHint: 'One page to keep and talk about.', prOptTest: 'English quiz — {name}', prOptScreen: 'Print this screen',
+  prWeekOf: 'Week of', prEarned: 'Points earned', prLost: 'Points lost', prTasks: 'Tasks done', prSpent: 'Spent on rewards', prEnglish: 'English (goal {goal} min)', prPiggy: 'Piggy bank', prBalance: 'Balance', prDays: 'Tasks each day', prEvents: 'What happened this week', prNoEvents: 'Nothing besides tasks this week.', prTest: 'English quiz: {score} of {total}',
+  prTalk: 'Our weekly talk', prNextGoal: 'Goal for next week:', prSignParent: 'Parent', prFamilyTitle: 'Weekly summary', prHighlights: 'Highlights of the week', prHiTasks: 'Most tasks', prHiEnglish: 'Most English time', prHiPoints: 'Most points earned', prFamilyNotes: 'Family notes', prPrintedOn: 'Printed on {date}'
+};
+FEATURE_TEXT.es = {
+  navEnglish: 'Inglés', title_ingles: 'Inglés', sub_ingles: 'Tiempo de estudio, metas y la pequeña prueba del mes.', typeEnglish: 'Inglés',
+  enStudyLabel: 'Inglés: {n} min', enLogTitle: 'Registrar estudio', enMinutes: '¿Cuánto tiempo estudió?', enMinutesPh: 'Minutos', enActivity: 'Cómo estudió', enNotePh: 'Ej.: aprendió los colores', enSave: 'Guardar estudio',
+  enAct_app: 'Aplicación / juego', enAct_video: 'Video / dibujos', enAct_class: 'Clase', enAct_book: 'Libro', enAct_music: 'Música', enAct_talk: 'Conversación', enAct_homework: 'Tarea escolar', enAct_other: 'Otro',
+  enPointsHint: 'Cada 15 minutos valen {n} puntos.', enChildHint: 'El responsable va a confirmar tu tiempo de estudio.', enPending: '{n} min esperando la confirmación del responsable.', enNeedMinutes: 'Indica cuántos minutos.', enSaved: '¡{name} estudió {n} min de inglés!',
+  enProgress: 'Progreso', enThisWeek: 'Esta semana', enThisMonth: 'Este mes', enGoalDone: '¡Meta de la semana alcanzada!', enGoalLeft: 'Faltan {n} min para la meta de la semana.', enLast8: 'Últimas 8 semanas',
+  enTestTitle: 'Pequeña prueba del mes', enLevelIs: 'Nivel {level} — {name} (para {ages} años).', enNoTestYet: 'Todavía es pronto para la prueba. A esta edad, lo mejor son canciones y dibujos en inglés.', enTestDone: 'Prueba de este mes hecha: {score} de {total} ({pct}%).', enTestToday: '¡Llegó el día de la prueba de este mes!', enTestOn: 'La prueba de este mes es el día {day}.',
+  enPrintTest: 'Imprimir prueba', enAddResult: 'Registrar resultado', enNewTest: 'Otra prueba', enPrintHint: 'Sale una hoja para el niño y otra con las respuestas para el responsable. Reimprimir en el mismo mes da la misma prueba; "Otra prueba" genera una nueva.',
+  enCanDoTitle: 'Lo que ya sabe hacer', enCanDoFrom: 'Según la prueba del {date}.', enCanDoEmpty: 'Márcalo al registrar el resultado de la prueba.', enCanDoHint: 'Marca lo que el niño mostró que ya sabe.',
+  enHistory: 'Historial de estudio', enNoSessions: 'Todavía no hay estudio registrado.', enTests: 'Pruebas', enNoTests: 'Todavía no hay pruebas registradas.',
+  enDelConfirm: '¿Eliminar este registro de estudio? Se quitarán sus puntos.', enTestDelConfirm: '¿Eliminar esta prueba?',
+  enRules: 'Reglas del inglés', enRulePoints: 'Puntos cada 15 minutos', enRuleDay: 'Día del mes de la prueba (1 a 28)', enRuleGoal: 'Meta semanal de {name} (minutos)', enRuleGoalHint: 'Sugerencia para la edad: {n} min por semana.',
+  enLevel: 'Nivel', enScore: 'Aciertos', enTotal: 'Total de ítems', enBonus: 'Puntos de bono (opcional)', enBonusReason: 'Bono de la prueba de inglés', enResultNotePh: 'Ej.: muy buena pronunciación; todavía confunde blue y green', enScoreInvalid: 'Revisa los aciertos y el total.', enResultSaved: 'Resultado de la prueba de {name} guardado.',
+  enDueBanner: 'Día de la prueba de inglés: {names}.', enDueOpen: 'Ver prueba',
+  cando_c1_colors: 'Reconoce 4 colores', cando_c1_count5: 'Cuenta hasta 5', cando_c1_animals: 'Dice el nombre de 5 animales', cando_c1_hello: 'Dice "hello", "bye" y "thank you"', cando_c1_song: 'Canta una canción en inglés', cando_c1_point: 'Señala el dibujo cuando oye la palabra',
+  cando_c2_colors: 'Dice 8 colores', cando_c2_count10: 'Cuenta hasta 10', cando_c2_animals: 'Dice el nombre de 10 animales', cando_c2_food: 'Dice 6 comidas', cando_c2_name: 'Responde "What\'s your name?"', cando_c2_letters: 'Reconoce las letras del alfabeto',
+  cando_c3_count20: 'Cuenta hasta 20', cando_c3_write: 'Escribe palabras simples', cando_c3_read: 'Lee frases cortas', cando_c3_questions: 'Responde preguntas simples', cando_c3_sentence: 'Arma una frase solo', cando_c3_spell: 'Deletrea su propio nombre',
+  wsSay: 'di', wsKeyTitle: 'Respuestas — para el responsable', wsKeyTotal: '{n} ítems', wsKeyHint: 'Da 1 punto por cada ítem correcto. En las partes orales, marca lo que el niño consiguió decir.',
+  wsH_listenCircle: 'El adulto dice la palabra en inglés; el niño encierra el dibujo.', wsH_colorCircles: 'El adulto lee el color; el niño pinta el círculo con ese color.', wsH_countCircle: 'El niño cuenta los dibujos y encierra el número correcto.', wsH_oralWords: 'El adulto señala el dibujo y el niño dice su nombre en inglés. Marca los aciertos.',
+  wsH_match: 'Une cada palabra con su dibujo.', wsH_countWrite: 'Cuenta y escribe el número en el cuadro.', wsH_circleWord: 'Encierra la palabra que corresponde al dibujo.', wsH_colorBoxes: 'Pinta cada cuadro con el color escrito.',
+  wsH_write: 'Escribe el nombre del dibujo. La primera letra ya está.', wsH_numbers: 'Escribe el número en letras en inglés.', wsH_unscramble: 'Ordena las letras.', wsH_complete: 'Completa la frase con el nombre del dibujo.', wsH_draw: 'Lee y dibuja en el cuadro.', wsH_talk: 'El adulto pregunta y el niño responde en inglés. Marca las que responda.',
+  libButton: 'Sugerencias por edad', libTitle: 'Sugerencias de tareas por edad', libHas: 'Ya la tiene', libAdd: 'Agregar', libAddChild: 'Incluir', libRecommended: 'recomendada', libAddRec: 'Agregar las {n} recomendadas', libHint: 'Las tareas se agregan como diarias, solo para este niño y con aprobación. Después puedes editar puntos, días y horario.', libAdded: '"{task}" agregada para {name}.', libAddedN: '{n} tarea(s) agregada(s) para {name}.',
+  libBand_b1: '1 a 2 años', libBand_b2: '3 a 4 años', libBand_b3: '5 a 6 años', libBand_b4: '7 a 9 años', libBand_b5: '10 años o más',
+  libTip_b1: 'tareas muy cortas, siempre junto a un adulto. Lo importante es la rutina y el elogio, no el resultado.', libTip_b2: 'ya pueden cuidar sus cosas y ayudar en tareas simples de la casa.', libTip_b3: 'buena edad para empezar responsabilidades fijas, como la cama y la mochila.', libTip_b4: 'pueden hacer cosas solos y cuidar su rutina de estudio.', libTip_b5: 'pueden asumir tareas reales de la casa y ayudar a los hermanos menores.',
+  lib_toysBox: 'Guardar los juguetes en la caja (con ayuda)', lib_diaperBin: 'Llevar el pañal a la basura', lib_shoesPlace: 'Poner los zapatos en su lugar', lib_brushHelp: 'Cepillarse los dientes con ayuda', lib_waterCup: 'Tomar agua en vaso', lib_englishSong: 'Escuchar una canción en inglés',
+  lib_washHands: 'Lavarse las manos antes de comer', lib_napkins: 'Poner las servilletas en la mesa', lib_waterPlant: 'Regar la planta', lib_dressHelp: 'Vestirse (con poca ayuda)', lib_booksShelf: 'Guardar los libros', lib_english10: 'Inglés: 10 minutos',
+  lib_clearPlate: 'Llevar el plato al fregadero', lib_feedPet: 'Dar de comer a la mascota', lib_backpack: 'Preparar la mochila', lib_chooseClothes: 'Elegir la ropa del día', lib_sortSocks: 'Juntar los calcetines en pares', lib_read10: 'Leer (u hojear) un libro 10 minutos', lib_english15: 'Inglés: 15 minutos',
+  lib_tidyRoom: 'Ordenar el cuarto', lib_homework: 'Hacer la tarea escolar', lib_english20: 'Inglés: 20 minutos', lib_foldClothes: 'Doblar su propia ropa', lib_dryDishes: 'Secar los platos', lib_showerAlone: 'Bañarse solo', lib_trashSmall: 'Sacar la basura del baño', lib_simpleSnack: 'Preparar una merienda sencilla',
+  lib_washDishes: 'Lavar los platos', lib_vacuum: 'Barrer o aspirar un cuarto', lib_study30: 'Estudiar 30 minutos', lib_english30: 'Inglés: 30 minutos', lib_wardrobe: 'Ordenar el armario', lib_cookSimple: 'Hacer una receta sencilla (con un adulto)', lib_helpSibling: 'Ayudar a un hermano menor',
+  prChooseTitle: '¿Qué quieres imprimir?', prWeek: 'Semana', prThisWeek: 'Esta semana', prLastWeek: 'La semana pasada', prOptFamily: 'Informe de la semana — toda la familia', prOptFamilyHint: 'Resumen familiar y una página por niño.', prOptChild: 'Informe de la semana — {name}', prOptChildHint: 'Una página para dejar a la vista y conversar.', prOptTest: 'Prueba de inglés — {name}', prOptScreen: 'Imprimir esta pantalla',
+  prWeekOf: 'Semana del', prEarned: 'Puntos ganados', prLost: 'Puntos perdidos', prTasks: 'Tareas hechas', prSpent: 'Gastado en recompensas', prEnglish: 'Inglés (meta {goal} min)', prPiggy: 'Alcancía', prBalance: 'Saldo', prDays: 'Tareas de cada día', prEvents: 'Lo que pasó en la semana', prNoEvents: 'Nada además de las tareas esta semana.', prTest: 'Prueba de inglés: {score} de {total}',
+  prTalk: 'Nuestra charla de la semana', prNextGoal: 'Meta para la próxima semana:', prSignParent: 'Responsable', prFamilyTitle: 'Resumen de la semana', prHighlights: 'Lo mejor de la semana', prHiTasks: 'Más tareas', prHiEnglish: 'Más tiempo de inglés', prHiPoints: 'Más puntos ganados', prFamilyNotes: 'Notas de la familia', prPrintedOn: 'Impreso el {date}'
+};
+FEATURE_TEXT.it = {
+  navEnglish: 'Inglese', title_ingles: 'Inglese', sub_ingles: 'Tempo di studio, obiettivi e la verifica del mese.', typeEnglish: 'Inglese',
+  enStudyLabel: 'Inglese: {n} min', enLogTitle: 'Registra lo studio', enMinutes: 'Quanto tempo ha studiato?', enMinutesPh: 'Minuti', enActivity: 'Come ha studiato', enNotePh: 'Es.: ha imparato i colori', enSave: 'Salva lo studio',
+  enAct_app: 'App / gioco', enAct_video: 'Video / cartone', enAct_class: 'Lezione', enAct_book: 'Libro', enAct_music: 'Musica', enAct_talk: 'Conversazione', enAct_homework: 'Compiti di scuola', enAct_other: 'Altro',
+  enPointsHint: 'Ogni 15 minuti valgono {n} punti.', enChildHint: 'Il genitore confermerà il tuo tempo di studio.', enPending: '{n} min in attesa della conferma del genitore.', enNeedMinutes: 'Indica quanti minuti.', enSaved: '{name} ha studiato inglese per {n} min!',
+  enProgress: 'Progressi', enThisWeek: 'Questa settimana', enThisMonth: 'Questo mese', enGoalDone: 'Obiettivo settimanale raggiunto!', enGoalLeft: "Mancano {n} min all'obiettivo della settimana.", enLast8: 'Ultime 8 settimane',
+  enTestTitle: 'Verifica del mese', enLevelIs: 'Livello {level} — {name} (per {ages} anni).', enNoTestYet: "È ancora presto per la verifica. A questa età, meglio canzoni e cartoni in inglese.", enTestDone: 'Verifica di questo mese fatta: {score} su {total} ({pct}%).', enTestToday: 'È arrivato il giorno della verifica di questo mese!', enTestOn: 'La verifica di questo mese è il giorno {day}.',
+  enPrintTest: 'Stampa la verifica', enAddResult: 'Registra il risultato', enNewTest: 'Un’altra verifica', enPrintHint: 'Esce un foglio per il bambino e uno con le risposte per il genitore. Ristampando nello stesso mese esce la stessa verifica; "Un’altra verifica" ne crea una nuova.',
+  enCanDoTitle: 'Cosa sa già fare', enCanDoFrom: 'Secondo la verifica del {date}.', enCanDoEmpty: 'Segnalo quando registri il risultato della verifica.', enCanDoHint: 'Segna cosa il bambino ha dimostrato di sapere.',
+  enHistory: 'Storico dello studio', enNoSessions: 'Ancora nessuno studio registrato.', enTests: 'Verifiche', enNoTests: 'Ancora nessuna verifica registrata.',
+  enDelConfirm: 'Eliminare questa registrazione? I suoi punti saranno tolti.', enTestDelConfirm: 'Eliminare questa verifica?',
+  enRules: "Regole dell'inglese", enRulePoints: 'Punti ogni 15 minuti', enRuleDay: 'Giorno del mese della verifica (da 1 a 28)', enRuleGoal: 'Obiettivo settimanale di {name} (minuti)', enRuleGoalHint: "Consigliato per l'età: {n} min a settimana.",
+  enLevel: 'Livello', enScore: 'Risposte giuste', enTotal: 'Totale degli esercizi', enBonus: 'Punti bonus (facoltativo)', enBonusReason: 'Bonus della verifica di inglese', enResultNotePh: 'Es.: ottima pronuncia; confonde ancora blue e green', enScoreInvalid: 'Controlla le risposte giuste e il totale.', enResultSaved: 'Risultato della verifica di {name} salvato.',
+  enDueBanner: 'Giorno della verifica di inglese: {names}.', enDueOpen: 'Vedi la verifica',
+  cando_c1_colors: 'Riconosce 4 colori', cando_c1_count5: 'Conta fino a 5', cando_c1_animals: 'Dice il nome di 5 animali', cando_c1_hello: 'Dice "hello", "bye" e "thank you"', cando_c1_song: 'Canta una canzone in inglese', cando_c1_point: "Indica la figura quando sente la parola",
+  cando_c2_colors: 'Dice 8 colori', cando_c2_count10: 'Conta fino a 10', cando_c2_animals: 'Dice il nome di 10 animali', cando_c2_food: 'Dice 6 cibi', cando_c2_name: 'Risponde a "What\'s your name?"', cando_c2_letters: "Riconosce le lettere dell'alfabeto",
+  cando_c3_count20: 'Conta fino a 20', cando_c3_write: 'Scrive parole semplici', cando_c3_read: 'Legge frasi brevi', cando_c3_questions: 'Risponde a domande semplici', cando_c3_sentence: 'Costruisce una frase da solo', cando_c3_spell: 'Fa lo spelling del proprio nome',
+  wsSay: 'di’', wsKeyTitle: 'Soluzioni — per il genitore', wsKeyTotal: '{n} esercizi', wsKeyHint: 'Dai 1 punto per ogni risposta giusta. Nelle parti orali, segna cosa il bambino è riuscito a dire.',
+  wsH_listenCircle: "L'adulto dice la parola in inglese; il bambino cerchia la figura.", wsH_colorCircles: "L'adulto legge il colore; il bambino colora il cerchio.", wsH_countCircle: 'Il bambino conta le figure e cerchia il numero giusto.', wsH_oralWords: "L'adulto indica la figura e il bambino dice il nome in inglese. Segna quelle giuste.",
+  wsH_match: 'Collega ogni parola alla figura giusta.', wsH_countWrite: 'Conta e scrivi il numero nel quadrato.', wsH_circleWord: 'Cerchia la parola giusta per la figura.', wsH_colorBoxes: 'Colora ogni quadrato con il colore scritto.',
+  wsH_write: 'Scrivi il nome della figura. La prima lettera c’è già.', wsH_numbers: 'Scrivi il numero in lettere in inglese.', wsH_unscramble: 'Rimetti le lettere in ordine.', wsH_complete: 'Completa la frase con il nome della figura.', wsH_draw: 'Leggi e disegna nel riquadro.', wsH_talk: "L'adulto chiede e il bambino risponde in inglese. Segna quelle a cui risponde.",
+  libButton: 'Idee per età', libTitle: 'Idee di compiti per età', libHas: 'Già presente', libAdd: 'Aggiungi', libAddChild: 'Includi', libRecommended: 'consigliato', libAddRec: 'Aggiungi i {n} consigliati', libHint: 'I compiti vengono aggiunti come giornalieri, solo per questo bambino e con approvazione. Poi puoi modificare punti, giorni e orario.', libAdded: '"{task}" aggiunto per {name}.', libAddedN: '{n} compito/i aggiunto/i per {name}.',
+  libBand_b1: 'Da 1 a 2 anni', libBand_b2: 'Da 3 a 4 anni', libBand_b3: 'Da 5 a 6 anni', libBand_b4: 'Da 7 a 9 anni', libBand_b5: '10 anni o più',
+  libTip_b1: "compiti brevissimi, sempre insieme a un adulto. Conta la routine e la lode, non il risultato.", libTip_b2: 'possono già occuparsi delle proprie cose e aiutare in piccole faccende.', libTip_b3: 'una buona età per iniziare responsabilità fisse, come il letto e lo zaino.', libTip_b4: 'riescono a fare da soli e a curare la propria routine di studio.', libTip_b5: 'possono occuparsi di vere faccende di casa e aiutare i fratelli più piccoli.',
+  lib_toysBox: 'Mettere i giocattoli nella scatola (con aiuto)', lib_diaperBin: 'Buttare il pannolino', lib_shoesPlace: 'Mettere a posto le scarpe', lib_brushHelp: 'Lavarsi i denti con aiuto', lib_waterCup: "Bere l'acqua dal bicchiere", lib_englishSong: 'Ascoltare una canzone in inglese',
+  lib_washHands: 'Lavarsi le mani prima di mangiare', lib_napkins: 'Mettere i tovaglioli in tavola', lib_waterPlant: 'Annaffiare la pianta', lib_dressHelp: 'Vestirsi (con poco aiuto)', lib_booksShelf: 'Mettere a posto i libri', lib_english10: 'Inglese: 10 minuti',
+  lib_clearPlate: 'Portare il piatto al lavandino', lib_feedPet: "Dare da mangiare all'animale", lib_backpack: 'Preparare lo zaino', lib_chooseClothes: 'Scegliere i vestiti del giorno', lib_sortSocks: 'Accoppiare i calzini', lib_read10: 'Leggere (o sfogliare) un libro per 10 minuti', lib_english15: 'Inglese: 15 minuti',
+  lib_tidyRoom: 'Riordinare la camera', lib_homework: 'Fare i compiti di scuola', lib_english20: 'Inglese: 20 minuti', lib_foldClothes: 'Piegare i propri vestiti', lib_dryDishes: 'Asciugare i piatti', lib_showerAlone: 'Fare la doccia da solo', lib_trashSmall: 'Portare via la spazzatura del bagno', lib_simpleSnack: 'Preparare una merenda semplice',
+  lib_washDishes: 'Lavare i piatti', lib_vacuum: "Spazzare o passare l'aspirapolvere in una stanza", lib_study30: 'Studiare 30 minuti', lib_english30: 'Inglese: 30 minuti', lib_wardrobe: "Riordinare l'armadio", lib_cookSimple: 'Fare una ricetta semplice (con un adulto)', lib_helpSibling: 'Aiutare un fratello più piccolo',
+  prChooseTitle: 'Cosa vuoi stampare?', prWeek: 'Settimana', prThisWeek: 'Questa settimana', prLastWeek: 'La settimana scorsa', prOptFamily: 'Resoconto della settimana — tutta la famiglia', prOptFamilyHint: 'Riepilogo della famiglia e una pagina per ogni bambino.', prOptChild: 'Resoconto della settimana — {name}', prOptChildHint: 'Una pagina da tenere in vista e di cui parlare.', prOptTest: 'Verifica di inglese — {name}', prOptScreen: 'Stampa questa schermata',
+  prWeekOf: 'Settimana del', prEarned: 'Punti guadagnati', prLost: 'Punti persi', prTasks: 'Compiti fatti', prSpent: 'Spesi in ricompense', prEnglish: 'Inglese (obiettivo {goal} min)', prPiggy: 'Salvadanaio', prBalance: 'Saldo', prDays: 'Compiti di ogni giorno', prEvents: 'Cosa è successo in settimana', prNoEvents: 'Niente oltre ai compiti questa settimana.', prTest: 'Verifica di inglese: {score} su {total}',
+  prTalk: 'La nostra chiacchierata della settimana', prNextGoal: 'Obiettivo per la prossima settimana:', prSignParent: 'Genitore', prFamilyTitle: 'Riepilogo della settimana', prHighlights: 'I momenti migliori della settimana', prHiTasks: 'Più compiti', prHiEnglish: 'Più tempo di inglese', prHiPoints: 'Più punti guadagnati', prFamilyNotes: 'Note della famiglia', prPrintedOn: 'Stampato il {date}'
+};
+FEATURE_TEXT.zh = {
+  navEnglish: '英语', title_ingles: '英语', sub_ingles: '学习时间、目标和每月小测验。', typeEnglish: '英语',
+  enStudyLabel: '英语：{n} 分钟', enLogTitle: '记录学习', enMinutes: '学习了多久？', enMinutesPh: '分钟', enActivity: '学习方式', enNotePh: '例如：学会了颜色', enSave: '保存学习记录',
+  enAct_app: '应用 / 游戏', enAct_video: '视频 / 动画', enAct_class: '上课', enAct_book: '读书', enAct_music: '音乐', enAct_talk: '对话', enAct_homework: '作业', enAct_other: '其他',
+  enPointsHint: '每 15 分钟得 {n} 分。', enChildHint: '家长会确认你的学习时间。', enPending: '{n} 分钟等待家长确认。', enNeedMinutes: '请填写分钟数。', enSaved: '{name} 学习了 {n} 分钟英语！',
+  enProgress: '进度', enThisWeek: '本周', enThisMonth: '本月', enGoalDone: '本周目标已达成！', enGoalLeft: '距离本周目标还差 {n} 分钟。', enLast8: '最近 8 周',
+  enTestTitle: '每月小测验', enLevelIs: '等级 {level} — {name}（适合 {ages} 岁）。', enNoTestYet: '现在做测验还太早。这个年龄最适合听英文儿歌、看英文动画。', enTestDone: '本月测验已完成：{total} 题对 {score} 题（{pct}%）。', enTestToday: '本月的测验日到了！', enTestOn: '本月测验在 {day} 日。',
+  enPrintTest: '打印测验', enAddResult: '记录结果', enNewTest: '换一份测验', enPrintHint: '会打印一张给孩子的测验纸和一张给家长的答案。同一个月重新打印是同一份测验；点"换一份测验"会生成新的。',
+  enCanDoTitle: '已经会做的事', enCanDoFrom: '根据 {date} 的测验。', enCanDoEmpty: '记录测验结果时勾选。', enCanDoHint: '勾选孩子已经表现出会的内容。',
+  enHistory: '学习记录', enNoSessions: '还没有学习记录。', enTests: '测验', enNoTests: '还没有测验记录。',
+  enDelConfirm: '删除这条学习记录？对应的积分会被扣除。', enTestDelConfirm: '删除这次测验？',
+  enRules: '英语规则', enRulePoints: '每 15 分钟的积分', enRuleDay: '每月测验日（1 到 28）', enRuleGoal: '{name} 的每周目标（分钟）', enRuleGoalHint: '这个年龄建议：每周 {n} 分钟。',
+  enLevel: '等级', enScore: '答对数', enTotal: '总题数', enBonus: '奖励积分（可选）', enBonusReason: '英语测验奖励', enResultNotePh: '例如：发音很好；还会把 blue 和 green 搞混', enScoreInvalid: '请检查答对数和总题数。', enResultSaved: '{name} 的测验结果已保存。',
+  enDueBanner: '英语测验日：{names}。', enDueOpen: '查看测验',
+  cando_c1_colors: '认识 4 种颜色', cando_c1_count5: '能数到 5', cando_c1_animals: '能说出 5 种动物', cando_c1_hello: '会说 "hello"、"bye" 和 "thank you"', cando_c1_song: '会唱一首英文歌', cando_c1_point: '听到单词能指出图片',
+  cando_c2_colors: '能说出 8 种颜色', cando_c2_count10: '能数到 10', cando_c2_animals: '能说出 10 种动物', cando_c2_food: '能说出 6 种食物', cando_c2_name: '能回答 "What\'s your name?"', cando_c2_letters: '认识字母表',
+  cando_c3_count20: '能数到 20', cando_c3_write: '会写简单的单词', cando_c3_read: '能读短句', cando_c3_questions: '能回答简单的问题', cando_c3_sentence: '能自己说出一个句子', cando_c3_spell: '能拼出自己的名字',
+  wsSay: '说', wsKeyTitle: '答案 — 给家长', wsKeyTotal: '共 {n} 题', wsKeyHint: '每答对一题得 1 分。口语部分请勾选孩子说出来的。',
+  wsH_listenCircle: '大人用英语说出单词，孩子圈出对应的图片。', wsH_colorCircles: '大人读出颜色，孩子用这个颜色涂圆圈。', wsH_countCircle: '孩子数一数图片，圈出正确的数字。', wsH_oralWords: '大人指着图片，孩子用英语说出名称。勾选答对的。',
+  wsH_match: '把每个单词和对应的图片连起来。', wsH_countWrite: '数一数，把数字写在方框里。', wsH_circleWord: '圈出和图片对应的单词。', wsH_colorBoxes: '用写着的颜色给每个方框涂色。',
+  wsH_write: '写出图片的名称，第一个字母已经写好了。', wsH_numbers: '用英语单词写出数字。', wsH_unscramble: '把字母排成正确的顺序。', wsH_complete: '用图片的名称把句子补充完整。', wsH_draw: '读一读，在框里画出来。', wsH_talk: '大人提问，孩子用英语回答。勾选回答出来的。',
+  libButton: '按年龄推荐', libTitle: '按年龄推荐的任务', libHas: '已添加', libAdd: '添加', libAddChild: '加入', libRecommended: '推荐', libAddRec: '添加 {n} 个推荐任务', libHint: '任务会以"每天"添加，只给这个孩子，并且需要审批。之后可以修改积分、日期和时间。', libAdded: '已为 {name} 添加"{task}"。', libAddedN: '已为 {name} 添加 {n} 个任务。',
+  libBand_b1: '1 到 2 岁', libBand_b2: '3 到 4 岁', libBand_b3: '5 到 6 岁', libBand_b4: '7 到 9 岁', libBand_b5: '10 岁及以上',
+  libTip_b1: '非常简短的任务，总要有大人陪着。重点是养成习惯和多鼓励，而不是结果。', libTip_b2: '已经可以照顾自己的东西，帮忙做简单的家务。', libTip_b3: '适合开始固定的责任，比如整理床铺和书包。', libTip_b4: '能独立完成，并管理自己的学习安排。', libTip_b5: '可以承担真正的家务，并帮助弟弟妹妹。',
+  lib_toysBox: '把玩具放进箱子（有人帮忙）', lib_diaperBin: '把尿布扔进垃圾桶', lib_shoesPlace: '把鞋子放好', lib_brushHelp: '在帮助下刷牙', lib_waterCup: '用杯子喝水', lib_englishSong: '听一首英文歌',
+  lib_washHands: '饭前洗手', lib_napkins: '在餐桌上摆餐巾', lib_waterPlant: '给植物浇水', lib_dressHelp: '自己穿衣服（稍微帮忙）', lib_booksShelf: '把书放回书架', lib_english10: '英语：10 分钟',
+  lib_clearPlate: '把盘子拿到水槽', lib_feedPet: '喂宠物', lib_backpack: '整理书包', lib_chooseClothes: '挑选当天的衣服', lib_sortSocks: '把袜子配成对', lib_read10: '读（或翻看）书 10 分钟', lib_english15: '英语：15 分钟',
+  lib_tidyRoom: '整理房间', lib_homework: '做作业', lib_english20: '英语：20 分钟', lib_foldClothes: '叠自己的衣服', lib_dryDishes: '擦干碗盘', lib_showerAlone: '自己洗澡', lib_trashSmall: '倒浴室的垃圾', lib_simpleSnack: '准备简单的点心',
+  lib_washDishes: '洗碗', lib_vacuum: '扫地或吸尘一个房间', lib_study30: '学习 30 分钟', lib_english30: '英语：30 分钟', lib_wardrobe: '整理衣柜', lib_cookSimple: '做一道简单的菜（大人陪同）', lib_helpSibling: '帮助弟弟或妹妹',
+  prChooseTitle: '你想打印什么？', prWeek: '周', prThisWeek: '本周', prLastWeek: '上周', prOptFamily: '每周报告 — 全家', prOptFamilyHint: '家庭汇总，每个孩子一页。', prOptChild: '每周报告 — {name}', prOptChildHint: '一页纸，贴起来一起聊聊。', prOptTest: '英语测验 — {name}', prOptScreen: '打印当前页面',
+  prWeekOf: '周：', prEarned: '获得积分', prLost: '扣除积分', prTasks: '完成任务', prSpent: '兑换奖励花费', prEnglish: '英语（目标 {goal} 分钟）', prPiggy: '存钱罐', prBalance: '净积分', prDays: '每天的任务', prEvents: '本周发生的事', prNoEvents: '本周除了任务没有其他记录。', prTest: '英语测验：{total} 题对 {score} 题',
+  prTalk: '我们的每周谈话', prNextGoal: '下周目标：', prSignParent: '家长', prFamilyTitle: '每周汇总', prHighlights: '本周亮点', prHiTasks: '完成任务最多', prHiEnglish: '英语学习时间最长', prHiPoints: '获得积分最多', prFamilyNotes: '家庭留言', prPrintedOn: '打印于 {date}'
+};
+FEATURE_TEXT.zht = {
+  navEnglish: "英語",
+  title_ingles: "英語",
+  sub_ingles: "學習時間、目標和每月小測驗。",
+  typeEnglish: "英語",
+  enStudyLabel: "英語：{n} 分鐘",
+  enLogTitle: "記錄學習",
+  enMinutes: "學習了多久？",
+  enMinutesPh: "分鐘",
+  enActivity: "學習方式",
+  enNotePh: "例如：學會了顏色",
+  enSave: "儲存學習記錄",
+  enAct_app: "應用 / 遊戲",
+  enAct_video: "影片 / 動畫",
+  enAct_class: "上課",
+  enAct_book: "讀書",
+  enAct_music: "音樂",
+  enAct_talk: "對話",
+  enAct_homework: "作業",
+  enAct_other: "其他",
+  enPointsHint: "每 15 分鐘得 {n} 分。",
+  enChildHint: "家長會確認你的學習時間。",
+  enPending: "{n} 分鐘等待家長確認。",
+  enNeedMinutes: "請填寫分鐘數。",
+  enSaved: "{name} 學習了 {n} 分鐘英語！",
+  enProgress: "進度",
+  enThisWeek: "本週",
+  enThisMonth: "本月",
+  enGoalDone: "本週目標已達成！",
+  enGoalLeft: "距離本週目標還差 {n} 分鐘。",
+  enLast8: "最近 8 周",
+  enTestTitle: "每月小測驗",
+  enLevelIs: "等級 {level} — {name}（適合 {ages} 歲）。",
+  enNoTestYet: "現在做測驗還太早。這個年齡最適合聽英文兒歌、看英文動畫。",
+  enTestDone: "本月測驗已完成：{total} 題對 {score} 題（{pct}%）。",
+  enTestToday: "本月的測驗日到了！",
+  enTestOn: "本月測驗在 {day} 日。",
+  enPrintTest: "列印測驗",
+  enAddResult: "記錄結果",
+  enNewTest: "換一份測驗",
+  enPrintHint: "會列印一張給孩子的測驗紙和一張給家長的答案。同一個月重新列印是同一份測驗；點\"換一份測驗\"會生成新的。",
+  enCanDoTitle: "已經會做的事",
+  enCanDoFrom: "根據 {date} 的測驗。",
+  enCanDoEmpty: "記錄測驗結果時勾選。",
+  enCanDoHint: "勾選孩子已經表現出會的內容。",
+  enHistory: "學習記錄",
+  enNoSessions: "還沒有學習記錄。",
+  enTests: "測驗",
+  enNoTests: "還沒有測驗記錄。",
+  enDelConfirm: "刪除這條學習記錄？對應的積分會被扣除。",
+  enTestDelConfirm: "刪除這次測驗？",
+  enRules: "英語規則",
+  enRulePoints: "每 15 分鐘的積分",
+  enRuleDay: "每月測驗日（1 到 28）",
+  enRuleGoal: "{name} 的每週目標（分鐘）",
+  enRuleGoalHint: "這個年齡建議：每週 {n} 分鐘。",
+  enLevel: "等級",
+  enScore: "答對數",
+  enTotal: "總題數",
+  enBonus: "獎勵積分（可選）",
+  enBonusReason: "英語測驗獎勵",
+  enResultNotePh: "例如：發音很好；還會把 blue 和 green 搞混",
+  enScoreInvalid: "請檢查答對數和總題數。",
+  enResultSaved: "{name} 的測驗結果已儲存。",
+  enDueBanner: "英語測驗日：{names}。",
+  enDueOpen: "檢視測驗",
+  cando_c1_colors: "認識 4 種顏色",
+  cando_c1_count5: "能數到 5",
+  cando_c1_animals: "能說出 5 種動物",
+  cando_c1_hello: "會說 \"hello\"、\"bye\" 和 \"thank you\"",
+  cando_c1_song: "會唱一首英文歌",
+  cando_c1_point: "聽到單詞能指出圖片",
+  cando_c2_colors: "能說出 8 種顏色",
+  cando_c2_count10: "能數到 10",
+  cando_c2_animals: "能說出 10 種動物",
+  cando_c2_food: "能說出 6 種食物",
+  cando_c2_name: "能回答 \"What's your name?\"",
+  cando_c2_letters: "認識字母表",
+  cando_c3_count20: "能數到 20",
+  cando_c3_write: "會寫簡單的單詞",
+  cando_c3_read: "能讀短句",
+  cando_c3_questions: "能回答簡單的問題",
+  cando_c3_sentence: "能自己說出一個句子",
+  cando_c3_spell: "能拼出自己的名字",
+  wsSay: "說",
+  wsKeyTitle: "答案 — 給家長",
+  wsKeyTotal: "共 {n} 題",
+  wsKeyHint: "每答對一題得 1 分。口語部分請勾選孩子說出來的。",
+  wsH_listenCircle: "大人用英語說出單詞，孩子圈出對應的圖片。",
+  wsH_colorCircles: "大人讀出顏色，孩子用這個顏色塗圓圈。",
+  wsH_countCircle: "孩子數一數圖片，圈出正確的數字。",
+  wsH_oralWords: "大人指著圖片，孩子用英語說出名稱。勾選答對的。",
+  wsH_match: "把每個單詞和對應的圖片連起來。",
+  wsH_countWrite: "數一數，把數字寫在方框裡。",
+  wsH_circleWord: "圈出和圖片對應的單詞。",
+  wsH_colorBoxes: "用寫著的顏色給每個方框塗色。",
+  wsH_write: "寫出圖片的名稱，第一個字母已經寫好了。",
+  wsH_numbers: "用英語單詞寫出數字。",
+  wsH_unscramble: "把字母排成正確的順序。",
+  wsH_complete: "用圖片的名稱把句子補充完整。",
+  wsH_draw: "讀一讀，在框裡畫出來。",
+  wsH_talk: "大人提問，孩子用英語回答。勾選回答出來的。",
+  libButton: "按年齡推薦",
+  libTitle: "按年齡推薦的任務",
+  libHas: "已新增",
+  libAdd: "新增",
+  libAddChild: "加入",
+  libRecommended: "推薦",
+  libAddRec: "新增 {n} 個推薦任務",
+  libHint: "任務會以\"每天\"新增，只給這個孩子，並且需要審批。之後可以修改積分、日期和時間。",
+  libAdded: "已為 {name} 新增\"{task}\"。",
+  libAddedN: "已為 {name} 新增 {n} 個任務。",
+  libBand_b1: "1 到 2 歲",
+  libBand_b2: "3 到 4 歲",
+  libBand_b3: "5 到 6 歲",
+  libBand_b4: "7 到 9 歲",
+  libBand_b5: "10 歲及以上",
+  libTip_b1: "非常簡短的任務，總要有大人陪著。重點是養成習慣和多鼓勵，而不是結果。",
+  libTip_b2: "已經可以照顧自己的東西，幫忙做簡單的家務。",
+  libTip_b3: "適合開始固定的責任，比如整理床鋪和書包。",
+  libTip_b4: "能獨立完成，並管理自己的學習安排。",
+  libTip_b5: "可以承擔真正的家務，並幫助弟弟妹妹。",
+  lib_toysBox: "把玩具放進箱子（有人幫忙）",
+  lib_diaperBin: "把尿布扔進垃圾桶",
+  lib_shoesPlace: "把鞋子放好",
+  lib_brushHelp: "在幫助下刷牙",
+  lib_waterCup: "用杯子喝水",
+  lib_englishSong: "聽一首英文歌",
+  lib_washHands: "飯前洗手",
+  lib_napkins: "在餐桌上擺餐巾",
+  lib_waterPlant: "給植物澆水",
+  lib_dressHelp: "自己穿衣服（稍微幫忙）",
+  lib_booksShelf: "把書放回書架",
+  lib_english10: "英語：10 分鐘",
+  lib_clearPlate: "把盤子拿到水槽",
+  lib_feedPet: "喂寵物",
+  lib_backpack: "整理書包",
+  lib_chooseClothes: "挑選當天的衣服",
+  lib_sortSocks: "把襪子配成對",
+  lib_read10: "讀（或翻看）書 10 分鐘",
+  lib_english15: "英語：15 分鐘",
+  lib_tidyRoom: "整理房間",
+  lib_homework: "做作業",
+  lib_english20: "英語：20 分鐘",
+  lib_foldClothes: "疊自己的衣服",
+  lib_dryDishes: "擦乾碗盤",
+  lib_showerAlone: "自己洗澡",
+  lib_trashSmall: "倒浴室的垃圾",
+  lib_simpleSnack: "準備簡單的點心",
+  lib_washDishes: "洗碗",
+  lib_vacuum: "掃地或吸塵一個房間",
+  lib_study30: "學習 30 分鐘",
+  lib_english30: "英語：30 分鐘",
+  lib_wardrobe: "整理衣櫃",
+  lib_cookSimple: "做一道簡單的菜（大人陪同）",
+  lib_helpSibling: "幫助弟弟或妹妹",
+  prChooseTitle: "你想列印什麼？",
+  prWeek: "周",
+  prThisWeek: "本週",
+  prLastWeek: "上週",
+  prOptFamily: "每週報告 — 全家",
+  prOptFamilyHint: "家庭彙總，每個孩子一頁。",
+  prOptChild: "每週報告 — {name}",
+  prOptChildHint: "一頁紙，貼起來一起聊聊。",
+  prOptTest: "英語測驗 — {name}",
+  prOptScreen: "列印當前頁面",
+  prWeekOf: "周：",
+  prEarned: "獲得積分",
+  prLost: "扣除積分",
+  prTasks: "完成任務",
+  prSpent: "兌換獎勵花費",
+  prEnglish: "英語（目標 {goal} 分鐘）",
+  prPiggy: "存錢罐",
+  prBalance: "淨積分",
+  prDays: "每天的任務",
+  prEvents: "本週發生的事",
+  prNoEvents: "本週除了任務沒有其他記錄。",
+  prTest: "英語測驗：{total} 題對 {score} 題",
+  prTalk: "我們的每週談話",
+  prNextGoal: "下週目標：",
+  prSignParent: "家長",
+  prFamilyTitle: "每週彙總",
+  prHighlights: "本週亮點",
+  prHiTasks: "完成任務最多",
+  prHiEnglish: "英語學習時間最長",
+  prHiPoints: "獲得積分最多",
+  prFamilyNotes: "家庭留言",
+  prPrintedOn: "列印於 {date}"
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], FEATURE_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 75;
+const APP_VERSION = 76;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -1534,6 +1997,7 @@ function initialData() {
       { id: 5, nameKey: 'rewardSpecialToy', cost: 300, icon: '🧸' }
     ],
     history: [], piggyHistory: [], approvals: [], goals: [], achievements: [], behaviorNotes: [], privateNotes: [],
+    english: { settings: { pointsPer15: 5, testDay: 25, goals: {} }, sessions: [], tests: [] },
     familyAccount: { email: '', passwordHash: '' }
   };
 }
@@ -1634,7 +2098,7 @@ function normalize(raw, defaultKeys) {
     if (!h || typeof h !== 'object') return null;
     const childId = mapChild(h.childId); if (!childId) return null;
     const legacy = parseLegacyValue(h.value);
-    const type = ['task', 'reward', 'adjust', 'behavior'].includes(h.type) ? h.type : 'adjust';
+    const type = ['task', 'reward', 'adjust', 'behavior', 'english'].includes(h.type) ? h.type : 'adjust';
     let points = Number.isFinite(h.points) ? h.points : Number.isFinite(h.pointsEarned) ? h.pointsEarned : legacy.points;
     let cash = Number.isFinite(h.cash) ? h.cash : Number.isFinite(h.cashEarned) ? h.cashEarned : legacy.cash;
     if (type === 'reward' && points > 0) points = -points;
@@ -1643,7 +2107,8 @@ function normalize(raw, defaultKeys) {
       childName: text(h.childName, 40), taskId: h.taskId != null && h.taskId !== '' ? Number(h.taskId) : null,
       rewardId: h.rewardId != null && h.rewardId !== '' ? Number(h.rewardId) : null,
       note: text(h.note, 200), description: text(h.description, 200), points: Math.round(points), cash: round2(cash),
-      approvalId: h.approvalId ? cleanId(h.approvalId) : null
+      approvalId: h.approvalId ? cleanId(h.approvalId) : null,
+      minutes: type === 'english' ? clamp(int(h.minutes, 0), 0, 600) : undefined, activity: type === 'english' ? text(h.activity, 30) : undefined
     };
   }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date));
   // versões antigas guardavam a observação dentro da descrição ("Tarefa — observação")
@@ -1662,7 +2127,9 @@ function normalize(raw, defaultKeys) {
     const childId = mapChild(a.childId); if (!childId) return null;
     const status = ['pending', 'approved', 'rejected', 'reverted'].includes(a.status) ? a.status : 'pending';
     return {
-      id: cleanId(a.id) || `a${i}`, kind: a.kind === 'reward' ? 'reward' : 'task', childId,
+      id: cleanId(a.id) || `a${i}`, kind: ['reward', 'english'].includes(a.kind) ? a.kind : 'task', childId,
+      minutes: a.kind === 'english' ? clamp(int(a.minutes, 0), 0, 600) : undefined, activity: a.kind === 'english' ? text(a.activity, 30) : undefined,
+      studyDate: a.kind === 'english' ? safeIso(a.studyDate || a.submittedAt) : undefined,
       taskId: a.taskId != null ? Number(a.taskId) : null, rewardId: a.rewardId != null ? Number(a.rewardId) : null,
       label: text(a.label || a.taskName || a.rewardName, 120), points: int(a.points, 0), note: text(a.note, 200), status,
       submittedAt: safeIso(a.submittedAt || a.date), reviewedAt: a.reviewedAt ? safeIso(a.reviewedAt) : null,
@@ -1701,6 +2168,26 @@ function normalize(raw, defaultKeys) {
 
   const acc = raw.familyAccount && typeof raw.familyAccount === 'object' ? raw.familyAccount : {};
   d.familyAccount = { email: text(acc.email, 120), passwordHash: typeof acc.passwordHash === 'string' ? acc.passwordHash.slice(0, 80) : '' };
+
+  // inglês: tempo de estudo e provinhas
+  const en = raw.english && typeof raw.english === 'object' ? raw.english : {};
+  const es = en.settings && typeof en.settings === 'object' ? en.settings : {};
+  const goals = {};
+  if (es.goals && typeof es.goals === 'object') Object.entries(es.goals).forEach(([k, v]) => { const id = mapChild(k); if (id && int(v, -1) >= 0) goals[id] = clamp(int(v, 0), 0, 3000); });
+  d.english = {
+    settings: { pointsPer15: clamp(int(es.pointsPer15, 5), 0, 100), testDay: clamp(int(es.testDay, 25), 1, 28), goals },
+    sessions: (Array.isArray(en.sessions) ? en.sessions : []).map((x, i) => {
+      if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); const minutes = clamp(int(x.minutes, 0), 0, 600);
+      if (!childId || !minutes) return null;
+      return { id: cleanId(x.id) || `es${i}`, childId, date: safeIso(x.date), minutes, activity: text(x.activity, 30) || 'other', note: text(x.note, 200), historyId: x.historyId ? cleanId(x.historyId) : null };
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date)),
+    tests: (Array.isArray(en.tests) ? en.tests : []).map((x, i) => {
+      if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId) return null;
+      const total = clamp(int(x.total, 0), 0, 200);
+      return { id: cleanId(x.id) || `et${i}`, childId, date: safeIso(x.date), level: clamp(int(x.level, 1), 1, 3), score: clamp(int(x.score, 0), 0, total || 200), total,
+        cando: Array.isArray(x.cando) ? [...new Set(x.cando.map(v => cleanId(v)).filter(Boolean))].slice(0, 30) : [], note: text(x.note, 300) };
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date))
+  };
 
   // modo atual
   const m = raw.mode && typeof raw.mode === 'object' ? raw.mode : { current: raw.currentMode, childId: raw.activeChildId };
@@ -1991,7 +2478,9 @@ function undoHistory(id) {
     linked.forEach(p => { c.piggy = round2(Math.max(0, c.piggy - p.amount)); });
     S.piggyHistory = S.piggyHistory.filter(p => p.historyId !== h.id);
     if (!linked.length && h.cash) c.piggy = round2(Math.max(0, c.piggy - h.cash));
+    if (h.type === 'english') c.xp = Math.max(0, Number(c.xp || 0) - Math.max(0, h.points));
   }
+  S.english.sessions = S.english.sessions.filter(x => x.historyId !== h.id);
   if (h.approvalId) { const a = S.approvals.find(x => x.id === h.approvalId); if (a) a.status = 'reverted'; }
   S.behaviorNotes = S.behaviorNotes.filter(n => n.historyId !== h.id);
   S.history.splice(i, 1);
@@ -2027,6 +2516,11 @@ function approve(id) {
     a.status = 'approved'; a.reviewedAt = isoNow(); a.historyId = r.entry.id;
     return { ok: true, ...r, child: c };
   }
+  if (a.kind === 'english') {
+    const r = grantEnglish(c, a.minutes, a.activity, a.note, a.studyDate, a.id);
+    a.status = 'approved'; a.reviewedAt = isoNow(); a.historyId = r.entry.id;
+    return { ok: true, ...r, child: c };
+  }
   const rw = rewardById(a.rewardId); if (!rw) return { ok: false, reason: 'rewardGone' };
   if (c.points < rw.cost) return { ok: false, reason: 'points' };
   changePoints(c, -rw.cost);
@@ -2039,6 +2533,43 @@ function reject(id, reason) {
   a.status = 'rejected'; a.reason = text(reason, 200); a.reviewedAt = isoNow(); return true;
 }
 function pendingApprovals() { return S.approvals.filter(a => a.status === 'pending'); }
+
+/* ---------- inglês ---------- */
+const EN_ACTIVITIES = ['app', 'video', 'class', 'book', 'music', 'talk', 'homework', 'other'];
+function englishLevel(age) { return age < 3 ? 0 : age <= 4 ? 1 : age <= 6 ? 2 : 3; }
+function englishDefaultGoal(age) { return age < 3 ? 20 : age <= 4 ? 30 : age <= 6 ? 60 : age <= 9 ? 90 : 120; }
+function englishGoal(c) { const g = S.english.settings.goals[c.id]; return g === undefined ? englishDefaultGoal(c.age) : g; }
+function englishPointsFor(minutes) { return Math.floor(Math.max(0, minutes) / 15) * S.english.settings.pointsPer15; }
+function englishMinutes(c, from, to) {
+  const a = from ? from.getTime() : 0, b = to ? to.getTime() : Infinity;
+  return S.english.sessions.filter(x => x.childId === c.id).filter(x => { const t = Date.parse(x.date); return t >= a && t < b; }).reduce((s, x) => s + x.minutes, 0);
+}
+function weekStart(d = new Date()) { return keyToDate(weekKey(d)); }
+function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
+function grantEnglish(c, minutes, activity, note, date, approvalId) {
+  const when = date || isoNow(), pts = englishPointsFor(minutes);
+  changePoints(c, pts); c.xp = Number(c.xp || 0) + pts;
+  const entry = addHistory({ date: when, type: 'english', childId: c.id, childName: c.name, note: text(note, 200), points: pts, minutes, activity, approvalId: approvalId || null });
+  S.english.sessions.unshift({ id: uid('es'), childId: c.id, date: when, minutes, activity: EN_ACTIVITIES.includes(activity) ? activity : 'other', note: text(note, 200), historyId: entry.id });
+  S.english.sessions.sort((x, y) => y.date.localeCompare(x.date)); S.history.sort((x, y) => y.date.localeCompare(x.date));
+  return { entry, fresh: checkAchievements(c), points: pts };
+}
+function logEnglish(childId, minutes, activity, note, date) {
+  const c = childById(childId); minutes = clamp(int(minutes, 0), 0, 600);
+  if (!c || !minutes) return { ok: false, reason: 'minutes' };
+  if (isChildMode()) {
+    const a = { id: uid('a'), kind: 'english', childId: c.id, taskId: null, rewardId: null, label: '', points: englishPointsFor(minutes), note: text(note, 200), status: 'pending', submittedAt: isoNow(), reviewedAt: null, reason: '', historyId: null, minutes, activity, studyDate: date || isoNow() };
+    S.approvals.unshift(a); return { ok: true, pending: true };
+  }
+  return { ok: true, pending: false, ...grantEnglish(c, minutes, activity, note, date) };
+}
+function deleteEnglishSession(id) {
+  const s = S.english.sessions.find(x => x.id === id); if (!s) return false;
+  if (s.historyId && S.history.some(h => h.id === s.historyId)) return undoHistory(s.historyId);
+  S.english.sessions = S.english.sessions.filter(x => x.id !== id); return true;
+}
+function englishTestThisMonth(c, now = new Date()) { return S.english.tests.find(x => x.childId === c.id && monthKey(x.date) === monthKey(now)) || null; }
+function englishTestDue(c, now = new Date()) { return englishLevel(c.age) > 0 && now.getDate() >= S.english.settings.testDay && !englishTestThisMonth(c, now); }
 
 /* ---------- comportamento, perdas e ajustes ---------- */
 function recordBehavior(childId, type, note, points, cash) {
@@ -2166,11 +2697,13 @@ function historyText(h) {
   }
   if (h.type === 'reward') { const r = rewardById(h.rewardId); return t('redeemedX', { name: r ? rewardName(r) : (h.description || '—') }); }
   if (h.type === 'behavior') return (h.points > 0 || h.cash > 0 ? '👍 ' : '⚠️ ') + (h.description || t('behaviorNote'));
+  if (h.type === 'english') return `📚 ${t('enStudyLabel', { n: h.minutes || 0 })}${h.activity ? ' · ' + t('enAct_' + (EN_ACTIVITIES.includes(h.activity) ? h.activity : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   return h.description || t('manualAdjustment');
 }
-function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior' }[h.type]); }
+function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish' }[h.type]); }
 function approvalLabel(a) {
   if (a.kind === 'task') { const task = taskById(a.taskId); return task ? taskName(task) : (a.label || t('taskRemoved')); }
+  if (a.kind === 'english') return `📚 ${t('enStudyLabel', { n: a.minutes || 0 })} · ${t('enAct_' + (EN_ACTIVITIES.includes(a.activity) ? a.activity : 'other'))}`;
   const r = rewardById(a.rewardId); return r ? rewardName(r) : (a.label || '—');
 }
 function childName(id, fallback) { const c = childById(id); return c ? c.name : (fallback || '—'); }
@@ -2353,7 +2886,7 @@ const SECTIONS = [
   {
     id: 'dashboard', icon: '🏠', nav: 'navHome', child: true,
     build: () => `
-      <div id="dPending" class="parent-only"></div>
+      <div id="dPending" class="parent-only"></div><div id="dEnglish"></div>
       <div class="grid g4" id="dKids"></div>
       <div class="grid g3 mt">
         <div class="card"><div class="kpi" id="dToday">0</div><div class="kpi-label">${t('kpiToday')}</div></div>
@@ -2367,6 +2900,8 @@ const SECTIONS = [
     update() {
       const kids = visibleChildren();
       const pend = pendingApprovals().length;
+      const due = kids.filter(c => englishTestDue(c));
+      $('#dEnglish').innerHTML = due.length ? `<div class="notice" style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;background:#eef7ff;color:#0b4f8a"><span>🇬🇧 ${t('enDueBanner', { names: due.map(c => c.name).join(', ') })}</span><button type="button" class="btn btn-primary btn-sm" data-act="go" data-id="ingles">${t('enDueOpen')}</button></div>` : '';
       $('#dPending').innerHTML = pend ? `<div class="notice warn" style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap"><span>⏳ ${t('pendingBanner', { n: pend })}</span><button type="button" class="btn btn-primary btn-sm" data-act="go" data-id="premium">${t('reviewNow')}</button></div>` : '';
       $('#dKids').innerHTML = kids.map(c => {
         const p = childToday(c);
@@ -2395,7 +2930,7 @@ const SECTIONS = [
         <div class="row2"><div><label for="mChild">${t('child')}</label><select id="mChild" data-change="render"></select></div>
         <div><label for="mNote">${t('note')}</label><input id="mNote" maxlength="200" placeholder="${esc(t('notePlaceholder'))}"></div></div>
         <p class="hint" style="margin:10px 0 12px">${t('frequencyHint')}</p><div id="mList" class="list"></div>`)}
-      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button>` })}
+      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
     </div>`,
     update() {
       const sel = $('#mChild'); setSelect(sel, childOptions(activeChild() ? activeChild().id : sel.value || S.children[0].id));
@@ -3068,6 +3603,7 @@ function renderMobileChrome(sec, kid) {
     + `<button type="button" class="${TABS.includes(ui.section) ? '' : 'on'}" data-act="menu-open"><span class="ti">☰</span><span>${esc(t('more'))}</span>${pend ? `<i class="tab-badge">${pend}</i>` : ''}</button>`;
   $('#drawerTools').innerHTML = `<label for="drawerLang">${esc(t('language'))}</label><select id="drawerLang" class="select-lang" data-change="lang">${langOptions(S.language)}</select>
     <div class="mode-switch" role="group" aria-label="${esc(t('mode'))}"><button type="button" class="${kid ? '' : 'active'}" data-act="mode-parent">👨‍👩‍👧 ${t('modeParent')}</button><button type="button" class="${kid ? 'active' : ''}" data-act="mode-child">🧒 ${t('modeChild')}</button></div>
+    <button type="button" class="btn btn-soft btn-block" data-act="print">🖨️ ${esc(t('print'))}</button>
     ${installAvailable() ? `<button type="button" class="btn btn-primary btn-block" data-act="install">📲 ${esc(t('installBtn'))}</button>` : ''}
     ${!kid && isUnlocked() ? `<button type="button" class="btn btn-ghost btn-block" data-act="lock">🔒 ${esc(t('lockNow'))}</button>` : ''}`;
 }
@@ -3641,6 +4177,446 @@ Object.assign(ACTIONS, {
   'cloud-leave': el => cloudRun(el, async () => { if (!(await askConfirm(t('cLeaveConfirm'), { danger: true, okLabel: t('cLeave') }))) return; await Cloud.leave(); }),
   'cloud-disconnect': async () => { if (!(await askConfirm(t('cDisconnectConfirm')))) return; Cloud.disconnect(); ui.cloudRendered = null; render(); },
   'cloud-open': () => openCloudSection()
+});
+
+/* =====================================================================
+   Sugestões de tarefas por idade.
+   Cada sugestão usa uma chave de tradução (lib_*), então o nome muda
+   junto com o idioma do app, como as tarefas que já vêm prontas.
+   ===================================================================== */
+
+const AGE_BANDS = [
+  { id: 'b1', min: 0, max: 2 },
+  { id: 'b2', min: 3, max: 4 },
+  { id: 'b3', min: 5, max: 6 },
+  { id: 'b4', min: 7, max: 9 },
+  { id: 'b5', min: 10, max: 30 }
+];
+// rec: recomendada para começar (entra no botão "Adicionar as recomendadas")
+const TASK_LIBRARY = [
+  // 1 a 2 anos — sempre com ajuda, muito curtas
+  { key: 'lib_toysBox', icon: '🧸', points: 5, band: 'b1', rec: true },
+  { key: 'lib_diaperBin', icon: '🚮', points: 5, band: 'b1', rec: true },
+  { key: 'lib_shoesPlace', icon: '👟', points: 5, band: 'b1' },
+  { key: 'lib_brushHelp', icon: '🪥', points: 5, band: 'b1', rec: true },
+  { key: 'lib_waterCup', icon: '🥛', points: 5, band: 'b1' },
+  { key: 'lib_englishSong', icon: '🎵', points: 5, band: 'b1', rec: true },
+  // 3 a 4 anos
+  { key: 'taskPutToysAway', icon: '🧸', points: 10, band: 'b2', rec: true, existing: true },
+  { key: 'taskLaundryBasket', icon: '👕', points: 5, band: 'b2', rec: true, existing: true },
+  { key: 'lib_washHands', icon: '🧼', points: 5, band: 'b2', rec: true },
+  { key: 'lib_napkins', icon: '🍽️', points: 5, band: 'b2' },
+  { key: 'lib_waterPlant', icon: '🪴', points: 5, band: 'b2' },
+  { key: 'lib_dressHelp', icon: '👚', points: 10, band: 'b2', rec: true },
+  { key: 'lib_booksShelf', icon: '📚', points: 5, band: 'b2' },
+  { key: 'lib_english10', icon: '🇬🇧', points: 10, band: 'b2', rec: true },
+  // 5 a 6 anos
+  { key: 'taskMakeBed', icon: '🛏️', points: 10, band: 'b3', rec: true, existing: true },
+  { key: 'taskSetTable', icon: '🍽️', points: 15, band: 'b3', rec: true, existing: true },
+  { key: 'lib_clearPlate', icon: '🍴', points: 5, band: 'b3', rec: true },
+  { key: 'lib_feedPet', icon: '🐶', points: 10, band: 'b3' },
+  { key: 'lib_backpack', icon: '🎒', points: 10, band: 'b3', rec: true },
+  { key: 'lib_chooseClothes', icon: '👗', points: 5, band: 'b3' },
+  { key: 'lib_sortSocks', icon: '🧦', points: 10, band: 'b3' },
+  { key: 'lib_read10', icon: '📖', points: 10, band: 'b3', rec: true },
+  { key: 'lib_english15', icon: '🇬🇧', points: 15, band: 'b3', rec: true },
+  // 7 a 9 anos
+  { key: 'lib_tidyRoom', icon: '🧹', points: 20, band: 'b4', rec: true },
+  { key: 'lib_homework', icon: '✏️', points: 20, band: 'b4', rec: true },
+  { key: 'taskRead15', icon: '📚', points: 20, band: 'b4', rec: true, existing: true },
+  { key: 'lib_english20', icon: '🇬🇧', points: 20, band: 'b4', rec: true },
+  { key: 'lib_foldClothes', icon: '👕', points: 15, band: 'b4' },
+  { key: 'lib_dryDishes', icon: '🍽️', points: 15, band: 'b4' },
+  { key: 'lib_showerAlone', icon: '🚿', points: 10, band: 'b4', rec: true },
+  { key: 'lib_trashSmall', icon: '🗑️', points: 10, band: 'b4' },
+  { key: 'lib_simpleSnack', icon: '🥪', points: 15, band: 'b4' },
+  // 10 anos ou mais
+  { key: 'lib_washDishes', icon: '🧽', points: 25, band: 'b5', rec: true },
+  { key: 'lib_vacuum', icon: '🧹', points: 25, band: 'b5' },
+  { key: 'lib_study30', icon: '📘', points: 25, band: 'b5', rec: true },
+  { key: 'lib_english30', icon: '🇬🇧', points: 25, band: 'b5', rec: true },
+  { key: 'lib_wardrobe', icon: '🗄️', points: 20, band: 'b5' },
+  { key: 'lib_cookSimple', icon: '🍳', points: 30, band: 'b5' },
+  { key: 'lib_helpSibling', icon: '🤝', points: 20, band: 'b5', rec: true }
+];
+function bandOf(age) { return AGE_BANDS.find(b => age >= b.min && age <= b.max) || AGE_BANDS[AGE_BANDS.length - 1]; }
+function suggestionsFor(c) { const b = bandOf(c.age); return TASK_LIBRARY.filter(x => x.band === b.id); }
+/** Situação da sugestão para a criança: 'has' (já tem), 'other' (existe para outras crianças), 'new' */
+function suggestionState(sug, c) {
+  const task = S.tasks.find(x => x.nameKey === sug.key);
+  if (!task) return { state: 'new' };
+  return taskForChild(task, c) ? { state: 'has', task } : { state: 'other', task };
+}
+function addSuggestion(sug, c) {
+  const st = suggestionState(sug, c);
+  if (st.state === 'has') return false;
+  if (st.state === 'other') { if (!st.task.childIds.includes(c.id)) st.task.childIds.push(c.id); return true; }
+  let id = Date.now(); while (taskById(id)) id++;
+  S.tasks.push({ id, name: t(sug.key), nameKey: sug.key, points: sug.points, icon: sug.icon, frequency: 'daily', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
+  return true;
+}
+
+function openLibrary(childId) {
+  const kids = S.children; ui.libChild = childById(childId) ? childId : (ui.libChild && childById(ui.libChild) ? ui.libChild : kids[0].id);
+  Modal.open({ id: 'libModal', wide: true, title: '💡 ' + t('libTitle'), body: '<div id="libBody"></div>' });
+  renderLibrary();
+}
+function renderLibrary() {
+  const el = $('#libBody'); if (!el) return;
+  const c = childById(ui.libChild), band = bandOf(c.age);
+  const list = suggestionsFor(c);
+  const rows = list.map(sug => {
+    const st = suggestionState(sug, c);
+    const right = st.state === 'has' ? `<span class="pill ok">✔ ${t('libHas')}</span>`
+      : `<button type="button" class="btn btn-primary btn-sm" data-act="lib-add" data-id="${sug.key}">+ ${t(st.state === 'other' ? 'libAddChild' : 'libAdd')}</button>`;
+    return `<div class="item"><div class="meta"><span class="ico">${esc(sug.icon)}</span><div><strong>${esc(t(sug.key))}</strong><div class="sub">+${pts(sug.points)}${sug.rec ? ' · ⭐ ' + t('libRecommended') : ''}</div></div></div><div class="right">${right}</div></div>`;
+  }).join('');
+  const missingRec = list.filter(s => s.rec && suggestionState(s, c).state !== 'has').length;
+  el.innerHTML = `<div class="picker-row">${S.children.map(k => `<button type="button" class="picker ${k.id === c.id ? 'on' : ''}" style="--c:${k.accentColor}" data-act="lib-child" data-id="${esc(k.id)}">${avatar(k, 'sm')}<span>${esc(k.name)}<small>${years(k.age)}</small></span></button>`).join('')}</div>
+    <div class="notice" style="margin-bottom:12px"><strong>${esc(t('libBand_' + band.id))}</strong> — ${esc(t('libTip_' + band.id))}</div>
+    <div class="list">${rows}</div>
+    ${missingRec ? `<button type="button" class="btn btn-soft btn-block mt" data-act="lib-add-rec">⭐ ${t('libAddRec', { n: missingRec })}</button>` : ''}
+    <p class="hint">${t('libHint')}</p>`;
+}
+Object.assign(ACTIONS, {
+  'lib-open': el => openLibrary(el.dataset.id),
+  'lib-child': el => { ui.libChild = el.dataset.id; renderLibrary(); },
+  'lib-add': el => {
+    const c = childById(ui.libChild), sug = TASK_LIBRARY.find(x => x.key === el.dataset.id);
+    if (c && sug && addSuggestion(sug, c)) { commit(); renderLibrary(); toast(t('libAdded', { task: t(sug.key), name: c.name }), 'success'); }
+  },
+  'lib-add-rec': () => {
+    const c = childById(ui.libChild); let n = 0;
+    suggestionsFor(c).filter(s => s.rec).forEach(s => { if (addSuggestion(s, c)) n++; });
+    if (n) { commit(); renderLibrary(); toast(t('libAddedN', { n, name: c.name }), 'success'); }
+  }
+});
+
+/* =====================================================================
+   Inglês: tempo de estudo, provinha mensal para imprimir e resultados.
+   A provinha é gerada a partir de um banco de palavras com figuras
+   (emojis), então funciona igual em qualquer idioma do app.
+   ===================================================================== */
+
+const EN_WORDS = {
+  colors: [['red', '🟥'], ['blue', '🟦'], ['green', '🟩'], ['yellow', '🟨'], ['orange', '🟧'], ['purple', '🟪'], ['black', '⬛'], ['white', '⬜'], ['brown', '🟫']],
+  animals: [['cat', '🐱'], ['dog', '🐶'], ['cow', '🐮'], ['pig', '🐷'], ['fish', '🐟'], ['bird', '🐦'], ['lion', '🦁'], ['duck', '🦆'], ['horse', '🐴'], ['frog', '🐸'], ['rabbit', '🐰'], ['bear', '🐻'], ['monkey', '🐵'], ['elephant', '🐘']],
+  food: [['apple', '🍎'], ['banana', '🍌'], ['grapes', '🍇'], ['orange', '🍊'], ['strawberry', '🍓'], ['milk', '🥛'], ['bread', '🍞'], ['egg', '🥚'], ['pizza', '🍕'], ['cake', '🎂']],
+  things: [['ball', '⚽'], ['car', '🚗'], ['book', '📖'], ['house', '🏠'], ['sun', '☀️'], ['moon', '🌙'], ['star', '⭐'], ['tree', '🌳'], ['flower', '🌸'], ['hat', '🎩'], ['bed', '🛏️'], ['chair', '🪑'], ['clock', '⏰'], ['bus', '🚌']],
+  body: [['eye', '👁️'], ['nose', '👃'], ['ear', '👂'], ['hand', '✋'], ['foot', '🦶'], ['mouth', '👄']],
+  family: [['mom', '👩'], ['dad', '👨'], ['baby', '👶'], ['girl', '👧'], ['boy', '👦'], ['grandma', '👵'], ['grandpa', '👴']]
+};
+const EN_NUMBERS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+const EN_PLURAL_OK = ['star', 'cat', 'dog', 'ball', 'tree', 'flower', 'car', 'book', 'apple', 'duck', 'bird', 'hat'];
+const EN_DRAW_OK = [['apple', ['red', 'green']], ['star', ['yellow', 'blue']], ['ball', ['blue', 'red', 'green']], ['house', ['blue', 'yellow']], ['flower', ['purple', 'red', 'yellow']], ['car', ['red', 'blue', 'green']], ['fish', ['orange', 'blue']], ['tree', ['green']]];
+const EN_LEVELS = { 1: { name: 'Starter', ages: '3–4' }, 2: { name: 'Explorer', ages: '5–6' }, 3: { name: 'Adventurer', ages: '7+' } };
+const EN_CANDO = { 1: ['c1_colors', 'c1_count5', 'c1_animals', 'c1_hello', 'c1_song', 'c1_point'], 2: ['c2_colors', 'c2_count10', 'c2_animals', 'c2_food', 'c2_name', 'c2_letters'], 3: ['c3_count20', 'c3_write', 'c3_read', 'c3_questions', 'c3_sentence', 'c3_spell'] };
+
+/* ---------- números aleatórios com semente (a mesma provinha pode ser reimpressa) ---------- */
+function seededRng(seed) {
+  let h = 1779033703 ^ String(seed).length;
+  for (let i = 0; i < String(seed).length; i++) { h = Math.imul(h ^ String(seed).charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); }
+  let a = h >>> 0;
+  return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t2 = Math.imul(a ^ (a >>> 15), 1 | a); t2 = (t2 + Math.imul(t2 ^ (t2 >>> 7), 61 | t2)) ^ t2; return ((t2 ^ (t2 >>> 14)) >>> 0) / 4294967296; };
+}
+function shuffle(arr, rnd) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function pick(arr, n, rnd) { return shuffle(arr, rnd).slice(0, n); }
+function plural(w) { return ['fish'].includes(w) ? w : w + 's'; }
+
+/* ---------- gerador da provinha ---------- */
+function buildEnglishTest(level, seed) {
+  const rnd = seededRng(seed);
+  const S1 = [];
+  const nouns = [...EN_WORDS.animals, ...EN_WORDS.things, ...EN_WORDS.food.filter(([w]) => w !== 'orange')];
+  const colors = EN_WORDS.colors.filter(([w]) => w !== 'white' && w !== 'black');
+  if (level === 1) {
+    const easy = [...EN_WORDS.animals.slice(0, 8), ...EN_WORDS.things.slice(0, 8), ...EN_WORDS.food.slice(0, 5)];
+    S1.push({ type: 'circle', title: 'Listen and circle.', help: 'wsH_listenCircle', items: pick(easy, 4, rnd).map(target => { const opts = shuffle([target, ...pick(easy.filter(x => x !== target), 2, rnd)], rnd); return { opts, answer: target[0] }; }) });
+    S1.push({ type: 'colorCircles', title: 'Color the circles.', help: 'wsH_colorCircles', items: pick(colors.slice(0, 6), 4, rnd).map(([w]) => ({ word: w, answer: w })) });
+    S1.push({ type: 'countCircle', title: 'Count and circle the number.', help: 'wsH_countCircle', items: pick(nouns.filter(([w]) => EN_PLURAL_OK.includes(w)), 3, rnd).map(n => { const k = 1 + Math.floor(rnd() * 5); const opts = shuffle([k, ...pick([1, 2, 3, 4, 5].filter(x => x !== k), 2, rnd)], rnd); return { emoji: n[1], count: k, opts, answer: String(k) }; }) });
+    S1.push({ type: 'oral', title: 'Say it!', help: 'wsH_oralWords', items: pick(easy, 6, rnd).map(([w, e]) => ({ emoji: e, answer: w })) });
+  } else if (level === 2) {
+    const m = pick(nouns, 6, rnd);
+    S1.push({ type: 'match', title: 'Match the word to the picture.', help: 'wsH_match', words: m.map(x => x[0]), pics: shuffle(m, rnd).map(x => x[1]), items: m.map(([w, e]) => ({ answer: `${w} → ${e}` })) });
+    S1.push({ type: 'countWrite', title: 'How many? Write the number.', help: 'wsH_countWrite', items: pick(nouns.filter(([w]) => EN_PLURAL_OK.includes(w)), 4, rnd).map(n => { const k = 2 + Math.floor(rnd() * 8); return { emoji: n[1], count: k, answer: String(k) }; }) });
+    S1.push({ type: 'circleWord', title: 'Look and circle the word.', help: 'wsH_circleWord', items: pick(nouns, 4, rnd).map(target => ({ emoji: target[1], opts: shuffle([target[0], ...pick(nouns.filter(x => x !== target), 2, rnd).map(x => x[0])], rnd), answer: target[0] })) });
+    S1.push({ type: 'colorBoxes', title: 'Color the boxes.', help: 'wsH_colorBoxes', items: pick(colors, 4, rnd).map(([w]) => ({ word: w, answer: w })) });
+    S1.push({ type: 'oral', title: 'Say it!', help: 'wsH_oralWords', items: pick([...nouns, ...EN_WORDS.body], 6, rnd).map(([w, e]) => ({ emoji: e, answer: w })) });
+  } else {
+    S1.push({ type: 'write', title: 'Look and write.', help: 'wsH_write', items: pick(nouns.filter(([w]) => w.length <= 7), 6, rnd).map(([w, e]) => ({ emoji: e, hint: w[0] + ' ' + '_ '.repeat(w.length - 1).trim(), answer: w })) });
+    S1.push({ type: 'numbers', title: 'Write the numbers in English.', help: 'wsH_numbers', items: pick([...Array(20)].map((_, i) => i + 1), 5, rnd).map(k => ({ n: k, answer: EN_NUMBERS[k] })) });
+    S1.push({ type: 'unscramble', title: 'Unscramble the words.', help: 'wsH_unscramble', items: pick(nouns.filter(([w]) => w.length >= 3 && w.length <= 6), 4, rnd).map(([w, e]) => { let s = w; for (let i = 0; i < 5 && s === w; i++) s = shuffle(w.split(''), rnd).join(''); return { emoji: e, scrambled: s, answer: w }; }) });
+    const frames = ['This is a ___.', 'I can see a ___.', 'I have a ___.', 'Look! A ___.'];
+    S1.push({ type: 'complete', title: 'Complete the sentences.', help: 'wsH_complete', items: pick(nouns.filter(([w]) => !/^[aeiou]/.test(w)), 4, rnd).map(([w, e], i) => ({ emoji: e, sentence: frames[i % frames.length], answer: w })) });
+    const draws = pick(EN_DRAW_OK, 2, rnd).map(([obj, cols], i) => i === 0 ? { text: `Draw a ${cols[Math.floor(rnd() * cols.length)]} ${obj}.`, answer: '✔' } : { text: `Draw ${EN_NUMBERS[2 + Math.floor(rnd() * 3)]} ${plural(obj)}.`, answer: '✔' });
+    S1.push({ type: 'draw', title: 'Read and draw.', help: 'wsH_draw', items: draws });
+    const q = ["What's your name?", 'How old are you?', "What's your favorite color?", 'Can you count to ten?', 'What animal do you like?', 'How are you today?'];
+    S1.push({ type: 'talk', title: "Let's talk!", help: 'wsH_talk', items: pick(q, 4, rnd).map(x => ({ text: x, answer: '✔' })) });
+  }
+  const total = S1.reduce((s, sec) => s + sec.items.length, 0);
+  return { level, seed, sections: S1, total };
+}
+
+/* ---------- HTML da provinha (folha para a criança + gabarito) ---------- */
+function worksheetHtml(c, test, withKey) {
+  const lv = EN_LEVELS[test.level];
+  const month = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  let n = 0;
+  const sec = s => {
+    const head = `<div class="ws-sec"><h3><span class="ws-num">${++n}</span> ${esc(s.title)}</h3><p class="ws-help">${esc(t(s.help))}</p>`;
+    let body = '';
+    if (s.type === 'circle') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span>${it.opts.map(o => `<span class="ws-pic">${o[1]}</span>`).join('')}<span class="ws-say">(${esc(t('wsSay'))}: <b>${esc(it.answer)}</b>)</span></div>`).join('');
+    if (s.type === 'colorCircles') body = `<div class="ws-grid4">${s.items.map(it => `<div class="ws-cell"><div class="ws-circle"></div><b class="ws-word">${esc(it.word.toUpperCase())}</b></div>`).join('')}</div>`;
+    if (s.type === 'countCircle') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-count">${it.emoji.repeat(it.count)}</span><span class="ws-opts">${it.opts.map(o => `<span class="ws-opt">${o}</span>`).join('')}</span></div>`).join('');
+    if (s.type === 'oral') body = `<div class="ws-grid3">${s.items.map(it => `<div class="ws-cell"><span class="ws-pic">${it.emoji}</span><span class="ws-tick">☐</span></div>`).join('')}</div>`;
+    if (s.type === 'match') body = `<div class="ws-match"><div>${s.words.map(w => `<div class="ws-mw"><b>${esc(w)}</b><span class="ws-dot">●</span></div>`).join('')}</div><div>${s.pics.map(e => `<div class="ws-mp"><span class="ws-dot">●</span><span class="ws-pic">${e}</span></div>`).join('')}</div></div>`;
+    if (s.type === 'countWrite') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-count">${it.emoji.repeat(it.count)}</span><span class="ws-box"></span></div>`).join('');
+    if (s.type === 'circleWord') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-pic">${it.emoji}</span><span class="ws-opts">${it.opts.map(o => `<span class="ws-opt ws-optw">${esc(o)}</span>`).join('')}</span></div>`).join('');
+    if (s.type === 'colorBoxes') body = `<div class="ws-grid4">${s.items.map(it => `<div class="ws-cell"><div class="ws-square"></div><b class="ws-word">${esc(it.word)}</b></div>`).join('')}</div>`;
+    if (s.type === 'write') body = `<div class="ws-grid3">${s.items.map(it => `<div class="ws-cell"><span class="ws-pic">${it.emoji}</span><span class="ws-hint">${esc(it.hint)}</span></div>`).join('')}</div>`;
+    if (s.type === 'numbers') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><b class="ws-big">${it.n}</b><span class="ws-line"></span></div>`).join('');
+    if (s.type === 'unscramble') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-pic ws-picsm">${it.emoji}</span><b class="ws-scr">${esc(it.scrambled.split('').join(' '))}</b><span class="ws-line"></span></div>`).join('');
+    if (s.type === 'complete') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-pic ws-picsm">${it.emoji}</span><span class="ws-sent">${esc(it.sentence).replace('___', '<span class="ws-line ws-inline"></span>')}</span></div>`).join('');
+    if (s.type === 'draw') body = `<div class="ws-grid2">${s.items.map(it => `<div class="ws-cell ws-drawcell"><b>${esc(it.text)}</b><div class="ws-drawbox"></div></div>`).join('')}</div>`;
+    if (s.type === 'talk') body = s.items.map((it, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-sent">${esc(it.text)}</span><span class="ws-tick">☐</span></div>`).join('');
+    return head + body + '</div>';
+  };
+  const sheet = `<div class="ps-page ws">
+    <div class="ws-head"><div><div class="ws-title">🇬🇧 English Check</div><div class="ws-sub">${esc(month)} · Level ${test.level} — ${lv.name}</div></div>
+      <div class="ws-name"><div>Name: <b>${esc(c.name)}</b></div><div>Date: ____/____/______</div><div class="ws-score">Score: ______ / ${test.total}</div></div></div>
+    ${test.sections.map(sec).join('')}
+    <div class="ws-foot">⭐ Great job, ${esc(c.name)}! ⭐</div></div>`;
+  if (!withKey) return sheet;
+  n = 0;
+  const key = `<div class="ps-page ws ws-key"><div class="ws-head"><div><div class="ws-title">🔑 ${esc(t('wsKeyTitle'))}</div><div class="ws-sub">${esc(c.name)} · Level ${test.level} — ${lv.name} · ${esc(t('wsKeyTotal', { n: test.total }))}</div></div></div>
+    <p class="ws-help">${esc(t('wsKeyHint'))}</p>
+    ${test.sections.map(s => `<div class="ws-sec"><h3><span class="ws-num">${++n}</span> ${esc(s.title)}</h3><ol class="ws-keylist">${s.items.map(it => `<li>${esc(it.answer)}</li>`).join('')}</ol></div>`).join('')}
+    <div class="ws-sec"><h3>✅ ${esc(t('enCanDoTitle'))}</h3><ul class="ws-keylist">${EN_CANDO[test.level].map(k => `<li>☐ ${esc(t('cando_' + k))}</li>`).join('')}</ul></div></div>`;
+  return sheet + key;
+}
+
+/* ---------- seção Inglês ---------- */
+function englishWeeks(c, n) {
+  const out = []; let start = weekStart();
+  for (let i = n - 1; i >= 0; i--) { const from = addDays(start, -7 * i), to = addDays(from, 7); out.push({ from, minutes: englishMinutes(c, from, to) }); }
+  return out;
+}
+const ENGLISH_SECTION = {
+  id: 'ingles', icon: '🇬🇧', nav: 'navEnglish', child: true,
+  build: () => `<div id="enPicker"></div><div id="enBody"></div>`,
+  update() {
+    const kids = visibleChildren();
+    if (!kids.some(k => k.id === ui.enChild)) ui.enChild = kids[0].id;
+    $('#enPicker').innerHTML = isChildMode() ? '' : childPicker(ui.enChild, 'en-child');
+    const c = childById(ui.enChild), level = englishLevel(c.age);
+    const goal = englishGoal(c), wk = englishMinutes(c, weekStart(), addDays(weekStart(), 7));
+    const mFrom = new Date(new Date().getFullYear(), new Date().getMonth(), 1), month = englishMinutes(c, mFrom, null);
+    const weeks = englishWeeks(c, 8), wmax = Math.max(goal, ...weeks.map(w => w.minutes), 1);
+    const pend = S.approvals.filter(a => a.status === 'pending' && a.kind === 'english' && a.childId === c.id);
+    const test = englishTestThisMonth(c), last = S.english.tests.find(x => x.childId === c.id);
+    const day = S.english.settings.testDay, today = new Date().getDate();
+    const ppp = S.english.settings.pointsPer15;
+    const sessions = S.english.sessions.filter(x => x.childId === c.id).slice(0, 12);
+    const tests = S.english.tests.filter(x => x.childId === c.id).slice(0, 12);
+    const testStatus = level === 0 ? `<p class="hint">${t('enNoTestYet')}</p>`
+      : test ? `<div class="notice ok">✅ ${t('enTestDone', { score: test.score, total: test.total, pct: test.total ? Math.round(test.score / test.total * 100) : 0 })}</div>`
+      : today >= day ? `<div class="notice warn">📝 ${t('enTestToday')}</div>` : `<div class="notice">📅 ${t('enTestOn', { day })}</div>`;
+    const cando = level ? EN_CANDO[level].map(k => { const ok = last && last.level === level && last.cando.includes(k); return `<div class="item" style="padding:9px 11px"><div class="meta"><span>${ok ? '✅' : '⬜'}</span><div>${esc(t('cando_' + k))}</div></div></div>`; }).join('') : '';
+    $('#enBody').innerHTML = `<div class="grid g2">
+      ${card('⏱️ ' + t('enLogTitle'), `<label>${t('enMinutes')}</label><div class="chips" style="margin-bottom:8px">${[10, 15, 20, 30, 45, 60].map(m => `<button type="button" class="chip" data-act="en-min" data-id="${m}">${m} min</button>`).join('')}</div>
+        <input id="enMin" type="number" min="1" max="600" inputmode="numeric" placeholder="${esc(t('enMinutesPh'))}">
+        <div class="row2 field"><div><label for="enAct">${t('enActivity')}</label><select id="enAct">${EN_ACTIVITIES.map(a => `<option value="${a}">${esc(t('enAct_' + a))}</option>`).join('')}</select></div>
+        <div><label for="enDate">${t('date')}</label><input id="enDate" type="date" value="${dayKey()}" max="${dayKey()}"></div></div>
+        <div class="field"><label for="enNote">${t('note')}</label><input id="enNote" maxlength="200" placeholder="${esc(t('enNotePh'))}"></div>
+        ${ppp ? `<p class="hint">${t('enPointsHint', { n: ppp })}</p>` : ''}${isChildMode() ? `<p class="hint">${t('enChildHint')}</p>` : ''}
+        <button type="button" class="btn btn-primary btn-block mt" data-act="en-log">${t('enSave')}</button>
+        ${pend.length ? `<div class="notice warn mt">⏳ ${t('enPending', { n: pend.reduce((s, a) => s + a.minutes, 0) })}</div>` : ''}`)}
+      ${card('📈 ' + t('enProgress'), `<div class="grid g2"><div class="mini-kpi"><span>${t('enThisWeek')}</span><strong>${wk} / ${goal} min</strong></div><div class="mini-kpi"><span>${t('enThisMonth')}</span><strong>${month} min</strong></div></div>
+        <div class="progress" style="--accent:${c.progressColor}"><span style="width:${Math.min(100, goal ? wk / goal * 100 : 0)}%;background:${c.progressColor}"></span></div>
+        <p class="hint">${wk >= goal ? '🎉 ' + t('enGoalDone') : t('enGoalLeft', { n: goal - wk })}</p>
+        <h3 class="mt">${t('enLast8')}</h3><div class="en-bars">${weeks.map(w => `<div class="en-bar" title="${w.minutes} min"><span style="height:${Math.max(3, w.minutes / wmax * 100)}%;background:${w.minutes >= goal ? 'var(--success)' : c.progressColor}"></span><small>${fmtDate(w.from)}</small></div>`).join('')}</div>`)}
+    </div>
+    <div class="grid g2 mt">
+      ${card('📝 ' + t('enTestTitle'), `${level ? `<p class="hint" style="margin-top:-6px">${t('enLevelIs', { level, name: EN_LEVELS[level].name, ages: EN_LEVELS[level].ages })}</p>` : ''}${testStatus}
+        ${level ? `<div class="actions mt"><button type="button" class="btn btn-primary" data-act="en-print">🖨️ ${t('enPrintTest')}</button><button type="button" class="btn btn-soft parent-only" data-act="en-result">✍️ ${t('enAddResult')}</button><button type="button" class="btn btn-ghost parent-only" data-act="en-new-test" title="${esc(t('enNewTest'))}">🔄 ${t('enNewTest')}</button></div><p class="hint">${t('enPrintHint')}</p>` : ''}`)}
+      ${card('✅ ' + t('enCanDoTitle'), level ? `<p class="hint" style="margin-top:-6px">${last && last.level === level ? t('enCanDoFrom', { date: fmtDate(last.date) }) : t('enCanDoEmpty')}</p><div class="list">${cando}</div>` : `<p class="hint">${t('enNoTestYet')}</p>`)}
+    </div>
+    <div class="grid g2 mt">
+      ${card('📚 ' + t('enHistory'), sessions.length ? `<div class="list">${sessions.map(x => `<div class="item"><div class="meta"><span class="ico">📚</span><div><strong>${x.minutes} min · ${esc(t('enAct_' + x.activity))}</strong><div class="sub">${fmtDate(x.date)}${x.note ? ' · ' + esc(x.note) : ''}</div></div></div><div class="right"><button type="button" class="icon-btn danger parent-only" data-act="en-del" data-id="${esc(x.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>` : emptyBox(t('enNoSessions')))}
+      ${card('🏅 ' + t('enTests'), tests.length ? `<div class="list">${tests.map(x => `<div class="item"><div class="meta"><span class="ico">📝</span><div><strong>${x.score} / ${x.total} · ${x.total ? Math.round(x.score / x.total * 100) : 0}%</strong><div class="sub">${fmtDate(x.date)} · Level ${x.level} — ${EN_LEVELS[x.level].name} · ✅ ${x.cando.length}/${EN_CANDO[x.level].length}${x.note ? ' · ' + esc(x.note) : ''}</div></div></div><div class="right"><button type="button" class="icon-btn danger parent-only" data-act="en-test-del" data-id="${esc(x.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>` : emptyBox(t('enNoTests')))}
+    </div>
+    ${card('⚙️ ' + t('enRules'), `<div class="row2"><div><label for="enPpp">${t('enRulePoints')}</label><input id="enPpp" type="number" min="0" max="100" value="${ppp}"></div><div><label for="enDay">${t('enRuleDay')}</label><input id="enDay" type="number" min="1" max="28" value="${day}"></div></div>
+      <div class="field"><label for="enGoal">${t('enRuleGoal', { name: c.name })}</label><input id="enGoal" type="number" min="0" max="3000" value="${goal}"><p class="hint">${t('enRuleGoalHint', { n: englishDefaultGoal(c.age) })}</p></div>
+      <button type="button" class="btn btn-primary" data-act="en-rules">${t('save')}</button>`, { cls: 'mt parent-only' })}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'valores'), 0, ENGLISH_SECTION);
+
+function openResultModal(c) {
+  const level = englishLevel(c.age) || 1, gen = ui.enLastTest && ui.enLastTest.childId === c.id ? ui.enLastTest : null;
+  const total = gen ? gen.total : buildEnglishTest(level, 'x').total;
+  Modal.open({
+    id: 'enResultModal', title: '✍️ ' + t('enAddResult') + ' — ' + esc(c.name),
+    body: `<div class="row2"><div><label for="erDate">${t('date')}</label><input id="erDate" type="date" value="${dayKey()}" max="${dayKey()}"></div><div><label for="erLevel">${t('enLevel')}</label><select id="erLevel" data-change="er-level">${[1, 2, 3].map(l => `<option value="${l}" ${l === level ? 'selected' : ''}>Level ${l} — ${EN_LEVELS[l].name}</option>`).join('')}</select></div></div>
+      <div class="row2 field"><div><label for="erScore">${t('enScore')}</label><input id="erScore" type="number" min="0" inputmode="numeric" autofocus></div><div><label for="erTotal">${t('enTotal')}</label><input id="erTotal" type="number" min="1" value="${total}"></div></div>
+      <div class="field"><label>${t('enCanDoTitle')}</label><div id="erCando" class="chips"></div><p class="hint">${t('enCanDoHint')}</p></div>
+      <div class="field"><label for="erBonus">${t('enBonus')}</label><input id="erBonus" type="number" min="0" value="0"></div>
+      <div class="field"><label for="erNote">${t('note')}</label><textarea id="erNote" maxlength="300" placeholder="${esc(t('enResultNotePh'))}"></textarea></div>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="en-result-save" data-id="${esc(c.id)}">${t('save')}</button>`
+  });
+  renderCandoChips(level);
+}
+function renderCandoChips(level) { $('#erCando').innerHTML = EN_CANDO[level].map(k => `<label class="chip"><input type="checkbox" data-cando="${k}">${esc(t('cando_' + k))}</label>`).join(''); }
+
+Object.assign(ACTIONS, {
+  'en-child': el => { ui.enChild = el.dataset.id; render(); },
+  'en-min': el => { $('#enMin').value = el.dataset.id; $$('#enBody [data-act="en-min"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'en-log': () => {
+    const c = childById(ui.enChild), minutes = int($('#enMin').value, 0);
+    if (!(minutes > 0)) return toast(t('enNeedMinutes'), 'warn');
+    const dv = $('#enDate').value; const date = /^\d{4}-\d{2}-\d{2}$/.test(dv) && dv <= dayKey() ? (dv === dayKey() ? isoNow() : new Date(keyToDate(dv)).toISOString()) : isoNow();
+    const r = logEnglish(c.id, minutes, $('#enAct').value, $('#enNote').value, date);
+    if (!r.ok) return toast(t('enNeedMinutes'), 'warn');
+    commit();
+    if (r.pending) toast(t('sentForApproval'), 'success');
+    else { const hid = r.entry.id; toast(t('enSaved', { name: c.name, n: minutes }) + (r.points ? ` (+${pts(r.points)})` : ''), 'success', { label: t('undo'), run: () => { undoHistory(hid); commit(); toast(t('undone')); } }); celebrate(c, r.fresh, r.points); }
+  },
+  'en-del': async el => { if (!(await askConfirm(t('enDelConfirm'), { danger: true, okLabel: t('delete') }))) return; if (deleteEnglishSession(el.dataset.id)) { commit(); toast(t('deleted')); } },
+  'en-test-del': async el => { if (!(await askConfirm(t('enTestDelConfirm'), { danger: true, okLabel: t('delete') }))) return; S.english.tests = S.english.tests.filter(x => x.id !== el.dataset.id); commit(); toast(t('deleted')); },
+  'en-print': () => {
+    const c = childById(ui.enChild), level = englishLevel(c.age) || 1;
+    const test = buildEnglishTest(level, `${c.id}|${monthKey()}|${ui.enSeedBump || 0}`);
+    ui.enLastTest = { childId: c.id, total: test.total, level };
+    printDocument(worksheetHtml(c, test, !isChildMode()), t('enPrintTest') + ' — ' + c.name);
+  },
+  'en-result': () => openResultModal(childById(ui.enChild)),
+  'en-new-test': () => { ui.enSeedBump = (ui.enSeedBump || 0) + 1; ACTIONS['en-print'](); },
+  'en-result-save': el => {
+    const c = childById(el.dataset.id); if (!c) return;
+    const total = int($('#erTotal').value, 0), score = int($('#erScore').value, -1);
+    if (!(total > 0) || score < 0 || score > total) return toast(t('enScoreInvalid'), 'warn');
+    const dv = $('#erDate').value, date = /^\d{4}-\d{2}-\d{2}$/.test(dv) ? new Date(keyToDate(dv)).toISOString() : isoNow();
+    const level = clamp(int($('#erLevel').value, 1), 1, 3);
+    S.english.tests.unshift({ id: uid('et'), childId: c.id, date, level, score, total, cando: $$('#erCando [data-cando]:checked').map(i => i.dataset.cando), note: text($('#erNote').value, 300) });
+    S.english.tests.sort((a, b) => b.date.localeCompare(a.date));
+    const bonus = Math.max(0, int($('#erBonus').value, 0));
+    if (bonus) adjustPoints(c.id, bonus, t('enBonusReason'));
+    Modal.close('enResultModal'); commit(); toast(t('enResultSaved', { name: c.name }), 'success');
+  },
+  'en-rules': () => {
+    const c = childById(ui.enChild);
+    S.english.settings.pointsPer15 = clamp(int($('#enPpp').value, 5), 0, 100);
+    S.english.settings.testDay = clamp(int($('#enDay').value, 25), 1, 28);
+    S.english.settings.goals[c.id] = clamp(int($('#enGoal').value, englishDefaultGoal(c.age)), 0, 3000);
+    commit(); toast(t('saved'), 'success');
+  }
+});
+Object.assign(CHANGES, { 'er-level': el => renderCandoChips(clamp(int(el.value, 1), 1, 3)) });
+
+/* =====================================================================
+   Impressão: relatório da semana (por criança e da família) e provinha.
+   ===================================================================== */
+
+function printDocument(html, title) {
+  let area = $('#printArea');
+  if (!area) { area = document.createElement('div'); area.id = 'printArea'; document.body.appendChild(area); }
+  area.innerHTML = html;
+  const prevTitle = document.title; document.title = title || prevTitle;
+  document.body.classList.add('print-mode');
+  const done = () => { document.body.classList.remove('print-mode'); document.title = prevTitle; window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  Modal.close('printModal');
+  // Não desligar o modo de impressão por tempo: no iPhone a janela de impressão abre depois.
+  // Na tela, o modo de impressão não muda nada; ele sai no "afterprint" ou na próxima impressão.
+  setTimeout(() => window.print(), 60);
+}
+
+/* ---------- dados da semana ---------- */
+function weekBounds(offset = 0) { const from = addDays(weekStart(), 7 * offset); return { from, to: addDays(from, 7) }; }
+function inRange(iso, from, to) { const x = Date.parse(iso); return x >= from.getTime() && x < to.getTime(); }
+function weekData(c, from, to) {
+  const hist = S.history.filter(h => h.childId === c.id && inRange(h.date, from, to));
+  const earned = hist.filter(h => h.points > 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0);
+  const lost = -hist.filter(h => h.points < 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0);
+  const spent = -hist.filter(h => h.type === 'reward').reduce((s, h) => s + h.points, 0);
+  const tasks = hist.filter(h => h.type === 'task');
+  const piggy = round2(S.piggyHistory.filter(p => p.childId === c.id && inRange(p.date, from, to)).reduce((s, p) => s + p.amount, 0));
+  const english = S.english.sessions.filter(x => x.childId === c.id && inRange(x.date, from, to)).reduce((s, x) => s + x.minutes, 0);
+  const medals = S.achievements.filter(a => a.childId === c.id && inRange(a.date, from, to)).map(a => ACHIEVEMENTS.find(x => x.code === a.code)).filter(Boolean);
+  const days = [...Array(7)].map((_, i) => { const d = addDays(from, i), k = dayKey(d); const items = hist.filter(h => dayKey(h.date) === k); return { d, tasks: items.filter(h => h.type === 'task'), pts: items.reduce((s, h) => s + (h.type === 'reward' ? 0 : h.points), 0) }; });
+  const events = hist.filter(h => h.type !== 'task').sort((a, b) => a.date.localeCompare(b.date));
+  const test = S.english.tests.find(x => x.childId === c.id && inRange(x.date, from, to));
+  return { hist, earned, lost, spent, tasks, piggy, english, medals, days, events, test, balance: earned - lost };
+}
+
+/* ---------- HTML do relatório ---------- */
+function weekLabel(from, to) {
+  const o = { day: '2-digit', month: 'short' };
+  return `${from.toLocaleDateString(locale(), o)} – ${addDays(to, -1).toLocaleDateString(locale(), { ...o, year: 'numeric' })}`;
+}
+function printAvatar(c) { return c.photo ? `<img class="pr-av" src="${esc(c.photo)}" alt="">` : `<span class="pr-av pr-emoji">${esc(c.avatar)}</span>`; }
+function childReportHtml(c, from, to) {
+  const w = weekData(c, from, to), names = weekdayNames(true), goal = englishGoal(c);
+  const taskLine = h => { const task = taskById(h.taskId); return `<span class="pr-chip">${task ? esc(task.icon) + ' ' : ''}${esc(task ? taskName(task) : historyText(h))}</span>`; };
+  const ev = w.events.map(h => `<li class="${h.points < 0 && h.type !== 'reward' ? 'neg' : h.type === 'reward' ? 'rw' : 'pos'}"><b>${fmtDate(h.date)}</b> ${esc(historyText(h))} <em>${h.type === 'reward' ? '🎁 ' : ''}${signed(h.points)}${h.cash ? ' · ' + signedMoney(h.cash) : ''}</em></li>`).join('');
+  return `<div class="ps-page pr" style="--c:${c.accentColor}">
+    <div class="pr-head">${printAvatar(c)}<div><div class="pr-title">${esc(c.name)}</div><div class="pr-sub">${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))} · ${esc(S.familyName)}</div></div><div class="pr-star">⭐ ${c.points}<small>${esc(t('currentPoints'))}</small></div></div>
+    <div class="pr-kpis">
+      <div class="pr-kpi pos"><b>+${w.earned}</b><span>${esc(t('prEarned'))}</span></div>
+      <div class="pr-kpi neg"><b>−${w.lost}</b><span>${esc(t('prLost'))}</span></div>
+      <div class="pr-kpi"><b>${w.tasks.length}</b><span>${esc(t('prTasks'))}</span></div>
+      <div class="pr-kpi"><b>${w.spent}</b><span>${esc(t('prSpent'))}</span></div>
+      <div class="pr-kpi"><b>${w.english} min</b><span>${esc(t('prEnglish', { goal }))}</span></div>
+      <div class="pr-kpi"><b>${signedMoney(w.piggy)}</b><span>${esc(t('prPiggy'))}</span></div>
+    </div>
+    <h3>${esc(t('prDays'))}</h3>
+    <table class="pr-days"><thead><tr>${w.days.map(d => `<th>${esc(names[d.d.getDay()])}<br><small>${d.d.getDate()}</small></th>`).join('')}</tr></thead>
+      <tbody><tr>${w.days.map(d => `<td>${d.tasks.length ? d.tasks.map(taskLine).join('') : '<span class="pr-empty">—</span>'}</td>`).join('')}</tr>
+      <tr class="pr-pts">${w.days.map(d => `<td>${d.pts ? signed(d.pts) : '·'}</td>`).join('')}</tr></tbody></table>
+    <h3>${esc(t('prEvents'))}</h3>
+    ${ev ? `<ul class="pr-events">${ev}</ul>` : `<p class="pr-empty">${esc(t('prNoEvents'))}</p>`}
+    ${w.medals.length || w.test ? `<p class="pr-extra">${w.medals.map(a => `${a.icon} ${esc(t(a.key))}`).join(' · ')}${w.medals.length && w.test ? ' · ' : ''}${w.test ? `📝 ${esc(t('prTest', { score: w.test.score, total: w.test.total }))}` : ''}</p>` : ''}
+    <div class="pr-talk"><h3>${esc(t('prTalk'))}</h3><div class="pr-lines"><span></span><span></span><span></span></div>
+      <div class="pr-goal"><b>${esc(t('prNextGoal'))}</b><span></span></div>
+      <div class="pr-sign"><div><span></span>${esc(t('prSignParent'))}</div><div><span></span>${esc(c.name)}</div></div></div>
+  </div>`;
+}
+function familyReportHtml(from, to) {
+  const rows = S.children.map(c => ({ c, w: weekData(c, from, to) }));
+  const best = (f, min = 1) => { const top = [...rows].sort((a, b) => f(b.w) - f(a.w))[0]; return top && f(top.w) >= min ? top.c.name : null; };
+  const hi = [[t('prHiTasks'), best(w => w.tasks.length)], [t('prHiEnglish'), best(w => w.english)], [t('prHiPoints'), best(w => w.earned)]].filter(x => x[1]);
+  return `<div class="ps-page pr pr-family">
+    <div class="pr-head"><span class="pr-av pr-emoji">🌟</span><div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('prFamilyTitle'))} · ${esc(weekLabel(from, to))}</div></div></div>
+    <table class="pr-table"><thead><tr><th>${esc(t('child'))}</th><th>${esc(t('prEarned'))}</th><th>${esc(t('prLost'))}</th><th>${esc(t('prBalance'))}</th><th>${esc(t('prTasks'))}</th><th>${esc(t('prSpent'))}</th><th>${esc(t('navEnglish'))}</th><th>${esc(t('prPiggy'))}</th><th>⭐</th></tr></thead>
+      <tbody>${rows.map(({ c, w }) => `<tr><td><b>${esc(c.avatar)} ${esc(c.name)}</b></td><td class="pos">+${w.earned}</td><td class="neg">−${w.lost}</td><td><b>${signed(w.balance)}</b></td><td>${w.tasks.length}</td><td>${w.spent}</td><td>${w.english} min</td><td>${signedMoney(w.piggy)}</td><td>${c.points}</td></tr>`).join('')}</tbody></table>
+    ${hi.length ? `<h3>${esc(t('prHighlights'))}</h3><ul class="pr-events">${hi.map(([l, n]) => `<li class="pos">🏆 <b>${esc(l)}:</b> ${esc(n)}</li>`).join('')}</ul>` : ''}
+    <h3>${esc(t('prFamilyNotes'))}</h3><div class="pr-lines"><span></span><span></span><span></span><span></span></div>
+    <p class="pr-foot">${esc(t('prPrintedOn', { date: fmtDateTime(isoNow()) }))}</p>
+  </div>`;
+}
+
+/* ---------- janela "O que imprimir?" ---------- */
+function openPrintChooser() {
+  closeMenu();
+  const kids = visibleChildren(); ui.prWeek = ui.prWeek || 0;
+  Modal.open({
+    id: 'printModal', title: '🖨️ ' + t('prChooseTitle'),
+    body: `<label for="prWeek">${t('prWeek')}</label><select id="prWeek"><option value="0">${esc(t('prThisWeek'))} (${esc(weekLabel(weekBounds(0).from, weekBounds(0).to))})</option><option value="-1">${esc(t('prLastWeek'))} (${esc(weekLabel(weekBounds(-1).from, weekBounds(-1).to))})</option></select>
+      <div class="list mt">
+        ${!isChildMode() ? `<button type="button" class="item pr-opt" data-act="pr-family"><div class="meta"><span class="ico">👨‍👩‍👧</span><div><strong>${t('prOptFamily')}</strong><div class="sub">${t('prOptFamilyHint')}</div></div></div><span>›</span></button>` : ''}
+        ${kids.map(c => `<button type="button" class="item pr-opt" data-act="pr-child" data-id="${esc(c.id)}"><div class="meta">${avatar(c, 'sm')}<div><strong>${t('prOptChild', { name: esc(c.name) })}</strong><div class="sub">${t('prOptChildHint')}</div></div></div><span>›</span></button>`).join('')}
+        ${kids.filter(c => englishLevel(c.age) > 0).map(c => `<button type="button" class="item pr-opt" data-act="pr-test" data-id="${esc(c.id)}"><div class="meta"><span class="ico">🇬🇧</span><div><strong>${t('prOptTest', { name: esc(c.name) })}</strong><div class="sub">Level ${englishLevel(c.age)} — ${EN_LEVELS[englishLevel(c.age)].name}</div></div></div><span>›</span></button>`).join('')}
+        <button type="button" class="item pr-opt" data-act="pr-screen"><div class="meta"><span class="ico">📄</span><div><strong>${t('prOptScreen')}</strong><div class="sub">${esc(t('title_' + ui.section))}</div></div></div><span>›</span></button>
+      </div>`
+  });
+}
+function chosenWeek() { const v = $('#prWeek'); return weekBounds(v ? int(v.value, 0) : 0); }
+Object.assign(ACTIONS, {
+  print: () => openPrintChooser(),
+  'pr-family': () => { const { from, to } = chosenWeek(); printDocument(familyReportHtml(from, to) + S.children.map(c => childReportHtml(c, from, to)).join(''), t('prOptFamily')); },
+  'pr-child': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenWeek(); printDocument(childReportHtml(c, from, to), t('prOptChild', { name: c.name })); },
+  'pr-test': el => { ui.enChild = el.dataset.id; Modal.close('printModal'); ACTIONS['en-print'](); },
+  'pr-screen': () => { Modal.close('printModal'); document.body.classList.remove('print-mode'); setTimeout(() => window.print(), 80); }
 });
 
 </script>
