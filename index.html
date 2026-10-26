@@ -1073,7 +1073,7 @@ span.q-name{cursor:default}
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v87 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v88 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -8153,13 +8153,25 @@ I18N.de = {
 "rulesRepairFoot": "Entschuldigen und wiedergutmachen gibt {pct} % der Punkte zurück."
 };
 
+/* Jogos da semana: separados do quadro de tarefas */
+const GWEEK_TEXT = {
+  pt: { gWeekTitle: 'Jogos da semana de {name}', gWeekHint: 'Ficam separados do quadro de tarefas. Marque quando jogarem juntos.', gAsTask: 'Jogo da semana', gIdeasIntro: 'Jogos que combinam com a idade de {name} e o que cada um ensina. Toque em + Jogo da semana para combinar de jogar toda semana (fica separado do quadro de tarefas).', gTaskAdded: '"Jogar {game}" entrou nos jogos da semana de {name}.' },
+  en: { gWeekTitle: "{name}'s games of the week", gWeekHint: 'Kept separate from the task chart. Tick when you play together.', gAsTask: 'Game of the week', gIdeasIntro: "Games that suit {name}'s age and what each one teaches. Tap + Game of the week to plan playing it every week (kept separate from the task chart).", gTaskAdded: '"Play {game}" added to {name}\'s games of the week.' },
+  es: { gWeekTitle: 'Juegos de la semana de {name}', gWeekHint: 'Quedan separados del cuadro de tareas. Márcalo cuando jueguen juntos.', gAsTask: 'Juego de la semana', gIdeasIntro: 'Juegos que van con la edad de {name} y lo que enseña cada uno. Toca + Juego de la semana para jugarlo cada semana (queda separado del cuadro de tareas).', gTaskAdded: '"Jugar {game}" se añadió a los juegos de la semana de {name}.' },
+  it: { gWeekTitle: 'Giochi della settimana di {name}', gWeekHint: 'Restano separati dal tabellone dei compiti. Segna quando giocate insieme.', gAsTask: 'Gioco della settimana', gIdeasIntro: "Giochi adatti all'età di {name} e cosa insegna ognuno. Tocca + Gioco della settimana per giocarci ogni settimana (resta separato dal tabellone dei compiti).", gTaskAdded: '"Giocare a {game}" aggiunto ai giochi della settimana di {name}.' },
+  zh: { gWeekTitle: '{name} 的本周游戏', gWeekHint: '与任务表分开。一起玩过后点一下标记。', gAsTask: '本周游戏', gIdeasIntro: '适合 {name} 年龄的游戏，以及每个游戏能学到什么。点 + 本周游戏 约好每周一起玩（与任务表分开）。', gTaskAdded: '"玩{game}"已加入 {name} 的本周游戏。' },
+  zht: { gWeekTitle: '{name} 的本週遊戲', gWeekHint: '與任務表分開。一起玩過後點一下標記。', gAsTask: '本週遊戲', gIdeasIntro: '適合 {name} 年齡的遊戲，以及每個遊戲能學到什麼。點 + 本週遊戲 約好每週一起玩（與任務表分開）。', gTaskAdded: '"玩{game}"已加入 {name} 的本週遊戲。' },
+  de: { gWeekTitle: 'Spiele der Woche von {name}', gWeekHint: 'Getrennt vom Aufgabenplan. Abhaken, wenn ihr zusammen gespielt habt.', gAsTask: 'Spiel der Woche', gIdeasIntro: 'Spiele, die zum Alter von {name} passen, und was jedes lehrt. Tippe auf + Spiel der Woche, um es jede Woche zu spielen (getrennt vom Aufgabenplan).', gTaskAdded: '"{game} spielen" ist jetzt ein Spiel der Woche von {name}.' }
+};
+Object.keys(GWEEK_TEXT).forEach(l => Object.assign(I18N[l], GWEEK_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 87;
+const APP_VERSION = 88;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -8337,7 +8349,7 @@ function normalize(raw, defaultKeys) {
       days: parseDays(t.days), time: /^\d{2}:\d{2}$/.test(t.time || '') ? t.time : '',
       approvalRequired: t.approvalRequired === undefined ? false : !!t.approvalRequired, childIds,
       cashPerPoint: t.cashPerPoint === null || t.cashPerPoint === undefined || t.cashPerPoint === '' ? null : Math.max(0, round2(num(t.cashPerPoint))),
-      fixedCash: Math.max(0, round2(num(t.fixedCash, 0)))
+      fixedCash: Math.max(0, round2(num(t.fixedCash, 0))), ...(t.kind === 'game' ? { kind: 'game' } : {})
     };
   }).filter(t => t.name || t.nameKey);
 
@@ -8670,6 +8682,14 @@ function pointsToCash(points, t) { return round2(Math.max(0, points) * (t ? task
 /* ---------- agenda das tarefas ---------- */
 function taskForChild(t, c) { return !!c && (!t.childIds.length || t.childIds.includes(c.id)); }
 function tasksForChild(c) { return S.tasks.filter(t => taskForChild(t, c)); }
+/** Jogos combinados ("Jogar xadrez"…) ficam fora do quadro de tarefas e das contas de tarefas. */
+let _gameNames = null;
+function isGameTask(x) {
+  if (!x) return false; if (x.kind === 'game') return true; if (x.nameKey || typeof BOARD_GAMES === 'undefined') return false;
+  if (!_gameNames) { _gameNames = new Set(); Object.values(I18N).forEach(d => BOARD_GAMES.forEach(g => { if (d.gTaskName && d[g.key]) _gameNames.add(normName(d.gTaskName.replace('{game}', d[g.key]))); })); }
+  return _gameNames.has(normName(x.name || ''));
+}
+function choreTasksForChild(c) { return tasksForChild(c).filter(x => !isGameTask(x)); }
 function scheduledOn(t, date) { return !t.days.length || t.days.includes(toDate(date).getDay()); }
 function periodMatch(t, a, b) { return t.frequency === 'weekly' ? weekKey(a) === weekKey(b) : dayKey(a) === dayKey(b); }
 /** Situação da tarefa para a criança hoje: open | done | pending | off (fora do dia) | free (avulsa) */
@@ -8686,7 +8706,7 @@ function taskStatus(t, c, now = new Date()) {
   return { state: 'open' };
 }
 function childToday(c) {
-  const list = tasksForChild(c).filter(t => t.frequency !== 'oneOff').map(t => taskStatus(t, c)).filter(s => s.state !== 'off');
+  const list = choreTasksForChild(c).filter(t => t.frequency !== 'oneOff').map(t => taskStatus(t, c)).filter(s => s.state !== 'off');
   return { done: list.filter(s => s.state === 'done').length, total: list.length };
 }
 
@@ -8942,7 +8962,7 @@ function movePiggy(childId, amount, note, pot) {
 function taskEntries(c, sinceDate) { const since = sinceDate ? sinceDate.getTime() : 0; return S.history.filter(h => h.type === 'task' && h.childId === c.id && Date.parse(h.date) >= since); }
 function expectedBetween(c, from, days) {
   let expected = 0;
-  const tasks = tasksForChild(c).filter(t => t.frequency !== 'oneOff');
+  const tasks = choreTasksForChild(c).filter(t => t.frequency !== 'oneOff');
   const weeks = new Set();
   for (let i = 0; i < days; i++) {
     const d = addDays(from, i);
@@ -11043,13 +11063,13 @@ function prHeader(c, title, sub, right = '') {
 /** Tarefas da criança que entram nas tabelas (fixas primeiro). */
 function chartTasks(c) {
   const order = { daily: 0, weekly: 1, oneOff: 2 };
-  return tasksForChild(c).slice().sort((a, b) => order[a.frequency] - order[b.frequency]);
+  return choreTasksForChild(c).slice().sort((a, b) => order[a.frequency] - order[b.frequency]);
 }
 
 /* ---------- grade tarefa × dia do relatório (✔ feita, ✗ faltou, riscado = não era dia) ---------- */
 function reportRows(c, w) {
   const fixed = chartTasks(c).filter(x => x.frequency !== 'oneOff');
-  const extraIds = [...new Set(w.tasks.map(h => String(h.taskId)))].filter(id => !fixed.some(x => String(x.id) === id));
+  const extraIds = [...new Set(w.tasks.map(h => String(h.taskId)))].filter(id => !fixed.some(x => String(x.id) === id) && !isGameTask(taskById(id)));
   return [...fixed, ...extraIds.map(id => taskById(id) || { id, icon: '✅', name: (w.tasks.find(h => String(h.taskId) === id) || {}).description || t('taskRemoved'), frequency: 'oneOff', days: [] })];
 }
 function reportCell(task, d, weekDone) {
@@ -11187,7 +11207,7 @@ function taskChartHtml(c, from, to) {
 /** Uma página com todas as tarefas da família e para quem é cada uma. */
 function familyTasksHtml() {
   const kids = S.children, order = { daily: 0, weekly: 1, oneOff: 2 };
-  const tasks = S.tasks.slice().sort((a, b) => order[a.frequency] - order[b.frequency] || taskName(a).localeCompare(taskName(b)));
+  const tasks = S.tasks.filter(x => !isGameTask(x)).sort((a, b) => order[a.frequency] - order[b.frequency] || taskName(a).localeCompare(taskName(b)));
   // linhas mais baixas quando há muitas tarefas: a lista sempre cabe em uma folha A4
   const rowH = Math.max(15, Math.min(30, Math.floor(820 / Math.max(1, tasks.length))));
   const when = task => task.frequency === 'daily' ? (task.days.length ? daysLabel(task) : t('everyDay')) : freqName(task);
@@ -11278,7 +11298,7 @@ function qCell(task, c, d, weekDone) {
 }
 /** Pontos máximos que a criança pode ganhar numa semana com as tarefas fixas. */
 function weeklyPotential(c, pointsOf = x => x.points) {
-  return tasksForChild(c).reduce((s, x) => s + (x.frequency === 'daily' ? (x.days.length || 7) : x.frequency === 'weekly' ? 1 : 0) * pointsOf(x), 0);
+  return choreTasksForChild(c).reduce((s, x) => s + (x.frequency === 'daily' ? (x.days.length || 7) : x.frequency === 'weekly' ? 1 : 0) * pointsOf(x), 0);
 }
 
 const QUADRO_SECTION = {
@@ -11720,8 +11740,13 @@ function addGameTask(c, g) {
   const ex = S.tasks.find(x => normName(taskName(x)) === normName(name));
   if (ex) { if (taskForChild(ex, c)) return false; if (ex.childIds.length) ex.childIds.push(c.id); return true; }
   let id = Date.now(); while (taskById(id)) id++;
-  S.tasks.push({ id, name, nameKey: null, points: 10, icon: g.icon, frequency: 'weekly', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
+  S.tasks.push({ id, name, nameKey: null, kind: 'game', points: 10, icon: g.icon, frequency: 'weekly', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
   return true;
+}
+function gameWeekCard(c) {
+  const list = tasksForChild(c).filter(isGameTask);
+  if (!list.length) return '';
+  return card('🎲 ' + t('gWeekTitle', { name: esc(c.name) }), `<p class="hint" style="margin-top:-4px">${t('gWeekHint')}</p><div class="list">${list.map(x => missionRow(c, x, taskStatus(x, c))).join('')}</div>`, { cls: 'mt g-week' });
 }
 function addGameReward(key, icon, cost) {
   if (S.rewards.some(r => r.nameKey === key)) return false;
@@ -11816,6 +11841,7 @@ const GAMES_SECTION = {
       <div class="g-top"><div><b>🧠 ${t('gLevelFor', { name: esc(c.name) })}</b> <span class="pill">${esc(t('gLevelName_' + level))}</span></div><div class="g-stats"><span>⭐ ${t('gToday', { n: winsToday, max: set.maxPerDay })}</span><span>🏅 ${t('gMonth', { n: month })}</span></div></div>
       <div class="g-tabs">${tabs.map(([k, l]) => `<button type="button" class="chip ${ui.gTab === k ? 'on' : ''}" data-act="g-tab" data-id="${k}">${l}</button>`).join('')}</div>
       ${content}</div>
+      ${gameWeekCard(c)}
       ${parent ? card('⚙️ ' + t('gRules'), `<div class="row2"><div><label for="gPpw">${t('gRulePoints')}</label><input id="gPpw" type="number" min="0" max="100" value="${set.pointsPerWin}"></div><div><label for="gMax">${t('gRuleMax')}</label><input id="gMax" type="number" min="0" max="20" value="${set.maxPerDay}"></div></div><p class="hint">${t('gRuleHint')}</p><button type="button" class="btn btn-primary" data-act="g-rules">${t('save')}</button>`, { cls: 'mt' }) : ''}`;
     if (ui.gTab === 'play') renderGameBoard();
   }
