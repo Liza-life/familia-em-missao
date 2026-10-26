@@ -1009,13 +1009,49 @@ span.q-name{cursor:default}
 .sim-draw{height:150px;border:2px dashed #bbb;border-radius:12px;margin-bottom:6px}
 .sim-lines span{height:26px}
 .sim .ws-sec{break-inside:auto;page-break-inside:auto}.sim-prob,.sim-q,.sim .ws-row{break-inside:avoid;page-break-inside:avoid}
+/* seletor de ícones */
+.emoji-field{display:flex;gap:6px;align-items:stretch}
+.emoji-field input{flex:1;min-width:0;font-size:20px;text-align:center}
+.emoji-btn{flex:0 0 auto;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-size:20px;padding:0 10px;cursor:pointer;white-space:nowrap}
+.emoji-btn span{font-size:11px;color:var(--muted)}
+.emoji-btn:hover{border-color:var(--primary)}
+.emoji-pop{border:1.5px solid var(--primary);border-radius:16px;background:#fff;padding:8px;margin:8px 0;box-shadow:0 10px 24px rgba(43,39,78,.12)}
+.emoji-tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.emoji-tab{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:1px;border:0;background:none;border-radius:10px;padding:4px 7px;font-size:20px;cursor:pointer}
+.emoji-tab small{font-size:9.5px;color:var(--muted);font-weight:700}
+.emoji-tab.on{background:var(--accent-soft)}
+.emoji-tab.on small{color:var(--primary)}
+.emoji-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:4px;max-height:220px;overflow-y:auto;padding:8px 0}
+.emoji-cell{aspect-ratio:1;border:0;border-radius:10px;background:#f7f7fb;font-size:24px;cursor:pointer;padding:0}
+.emoji-cell:hover{background:#ede9fe;transform:scale(1.08)}
+.emoji-cell.on{background:var(--primary);box-shadow:0 0 0 2px var(--primary)}
+.emoji-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.emoji-foot .hint{margin:0;font-size:11.5px}
+/* estudos e provinhas */
+.st-chips .chip{font-size:12.5px;padding:5px 10px}
+.st-n{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:var(--primary);color:#fff;font-size:10.5px;margin-left:2px}
+.st-topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin:8px 0}
+.st-topic{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;margin:0;font-weight:400}
+.st-topic input{width:18px;height:18px;flex:0 0 auto;margin:0}
+.st-topic span{flex:1;display:flex;flex-direction:column;line-height:1.2}
+.st-topic small{font-size:11px;color:var(--muted)}
+.st-topic.done{background:#f0fdf4;border-color:#bbf7d0}
+.st-topic.done small{color:#0f6b45}
+.st-topic.on{border-color:var(--primary)}
+.st-en{background:#eef7ff;color:#0b4f8a}
+.sim-fill{font-size:17px;font-weight:700;flex:1}
+.bq-row{display:flex;gap:6px;align-items:center}
+.bq-row input{flex:1}
+.bq-stars{font-size:30px;letter-spacing:8px;margin:4px 0}
+.bq-ans{font-size:14px;font-style:italic;border-left:3px solid #a855f7;padding-left:8px}
+.book-sheet .ws-sec h3{font-size:15px!important}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v83 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v84 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -5631,13 +5667,532 @@ const FUTURE_TEXT = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], FUTURE_TEXT[l]));
 
+/* Textos: seletor de ícones. */
+const EMOJI_TEXT = {"pt": {"emo_house": "Casa", "emo_school": "Escola", "emo_food": "Comida", "emo_fun": "Diversão", "emo_sport": "Esporte", "emo_animals": "Bichos", "emo_nature": "Natureza", "emo_places": "Passeios", "emo_people": "Pessoas", "emo_symbols": "Símbolos", "emoHint": "Toque num ícone para escolher. Também dá para digitar ou colar qualquer emoji.", "emoChoose": "Escolher ícone"}, "en": {"emo_house": "Home", "emo_school": "School", "emo_food": "Food", "emo_fun": "Fun", "emo_sport": "Sports", "emo_animals": "Animals", "emo_nature": "Nature", "emo_places": "Outings", "emo_people": "People", "emo_symbols": "Symbols", "emoHint": "Tap an icon to choose it. You can also type or paste any emoji.", "emoChoose": "Choose icon"}, "es": {"emo_house": "Casa", "emo_school": "Escuela", "emo_food": "Comida", "emo_fun": "Diversión", "emo_sport": "Deporte", "emo_animals": "Animales", "emo_nature": "Naturaleza", "emo_places": "Paseos", "emo_people": "Personas", "emo_symbols": "Símbolos", "emoHint": "Toca un ícono para elegirlo. También puedes escribir o pegar cualquier emoji.", "emoChoose": "Elegir ícono"}, "it": {"emo_house": "Casa", "emo_school": "Scuola", "emo_food": "Cibo", "emo_fun": "Divertimento", "emo_sport": "Sport", "emo_animals": "Animali", "emo_nature": "Natura", "emo_places": "Gite", "emo_people": "Persone", "emo_symbols": "Simboli", "emoHint": "Tocca un'icona per sceglierla. Puoi anche scrivere o incollare qualsiasi emoji.", "emoChoose": "Scegli icona"}, "zh": {"emo_house": "家", "emo_school": "学校", "emo_food": "食物", "emo_fun": "娱乐", "emo_sport": "运动", "emo_animals": "动物", "emo_nature": "自然", "emo_places": "出游", "emo_people": "人物", "emo_symbols": "符号", "emoHint": "点一个图标来选择。也可以输入或粘贴任何表情。", "emoChoose": "选择图标"}, "zht": {"emo_house": "家", "emo_school": "學校", "emo_food": "食物", "emo_fun": "娛樂", "emo_sport": "運動", "emo_animals": "動物", "emo_nature": "自然", "emo_places": "出遊", "emo_people": "人物", "emo_symbols": "符號", "emoHint": "點一個圖示來選擇。也可以輸入或貼上任何表情。", "emoChoose": "選擇圖示"}};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], EMOJI_TEXT[l]));
+
+/* Textos da v84: estudos, provinhas por matéria e ficha do livro. */
+const STUDY_TEXT = {
+"pt": {
+"stTitle": "Provinhas por matéria",
+"stHint": "Escolha a matéria, marque os assuntos que ele estudou e imprima uma provinha só com isso. O gabarito sai separado.",
+"stStudied": "estudou · última vez {date} · {n}x",
+"stNotYet": "ainda não marcado",
+"stMark": "Marcar como estudado",
+"stPickHint": "Os assuntos já estudados vêm marcados. Você pode tirar ou incluir outros antes de imprimir.",
+"stPrint": "Imprimir provinha ({n} assunto(s))",
+"stKey": "Gabarito da última provinha",
+"stWhatStudied": "O que estudou?",
+"stEnMonth": "A provinha deste mês vai cobrar o que foi estudado: {list}.",
+"stEnNone": "Marque o que ele estudou ao registrar o inglês: a provinha do mês passa a cobrar só esses assuntos.",
+"stNoTopics": "Nenhum assunto escolhido.",
+"tp_pt_vowels": "Vogais",
+"tp_pt_alphabet": "Alfabeto",
+"tp_pt_syllables": "Sílabas",
+"tp_pt_rhymes": "Rimas",
+"tp_pt_plural": "Plural",
+"tp_pt_opposites": "Contrários",
+"tp_pt_spelling": "Ortografia",
+"tp_pt_punctuation": "Pontuação",
+"tp_pt_reading": "Interpretação de texto",
+"tp_pt_sentence": "Formar frases",
+"tp_math_count": "Contagem",
+"tp_math_compare": "Maior e menor",
+"tp_math_add": "Adição",
+"tp_math_sub": "Subtração",
+"tp_math_evenodd": "Par e ímpar",
+"tp_math_sequence": "Sequências",
+"tp_math_shapes": "Formas geométricas",
+"tp_math_mult": "Multiplicação",
+"tp_math_times": "Tabuada",
+"tp_math_money": "Dinheiro e troco",
+"tp_math_time": "Horas",
+"tp_math_div": "Divisão",
+"tp_math_fractions": "Frações (metade, terço…)",
+"tp_science_body": "Corpo humano",
+"tp_science_senses": "Os 5 sentidos",
+"tp_science_animals": "Animais",
+"tp_science_plants": "Plantas",
+"tp_science_water": "Água",
+"tp_science_food": "Alimentação saudável",
+"tp_science_space": "Sistema solar",
+"tp_science_hygiene": "Higiene",
+"tp_social_family": "Família",
+"tp_social_home": "Moradia e endereço",
+"tp_social_transport": "Meios de transporte",
+"tp_social_jobs": "Profissões",
+"tp_social_calendar": "Dias, meses e calendário",
+"tp_social_brazil": "Brasil",
+"tp_social_world": "Continentes e países",
+"tp_social_rules": "Regras de convivência",
+"tp_english_colors": "Cores",
+"tp_english_numbers": "Números",
+"tp_english_animals": "Animais",
+"tp_english_food": "Comidas e frutas",
+"tp_english_family": "Família",
+"tp_english_body": "Corpo",
+"tp_english_things": "Objetos e brinquedos",
+"tp_english_school": "Material escolar",
+"tp_english_clothes": "Roupas",
+"tp_english_greetings": "Cumprimentos",
+"bqTalk": "Conversar sobre o livro",
+"bqSeen": "Ver conversa",
+"bqIntro": "Faça as perguntas para {name} e anote o que ele(a) contar. Toque em 🔊 para o app ler a pergunta.",
+"bqPh": "O que {name} respondeu…",
+"bqPrint": "Imprimir ficha",
+"bqSheetTitle": "Ficha de leitura",
+"bqDraw": "Desenhe a parte que você mais gostou",
+"bqAfterAdd": "Que tal conversar sobre o livro? É ótimo para a interpretação de texto.",
+"bq_who": "Quem aparece na história?",
+"bq_liked": "Do que você mais gostou?",
+"bq_end": "Como a história terminou?",
+"bq_feel": "Você gostou do livro?",
+"bq_chars": "Quem são os personagens?",
+"bq_where": "Onde a história acontece?",
+"bq_bme": "O que aconteceu no começo, no meio e no fim?",
+"bq_fav": "Qual parte você mais gostou e por quê?",
+"bq_ifyou": "Se você fosse o personagem, o que faria?",
+"bq_stars": "Que nota você dá para o livro?",
+"bq_problem": "Qual foi o problema da história e como foi resolvido?",
+"bq_word": "Que palavra nova você aprendeu?",
+"bq_newend": "Invente outro final para a história.",
+"bq_recommend": "Você indicaria esse livro para quem? Por quê?"
+},
+"en": {
+"stTitle": "Quizzes by subject",
+"stHint": "Pick the subject, tick the topics they studied and print a quiz with just that. The answer key prints separately.",
+"stStudied": "studied · last time {date} · {n}x",
+"stNotYet": "not marked yet",
+"stMark": "Mark as studied",
+"stPickHint": "Studied topics come ticked. You can remove or add others before printing.",
+"stPrint": "Print quiz ({n} topic(s))",
+"stKey": "Answer key of the last quiz",
+"stWhatStudied": "What did they study?",
+"stEnMonth": "This month's quiz will cover what was studied: {list}.",
+"stEnNone": "Tick what they studied when logging English: the monthly quiz then covers only those topics.",
+"stNoTopics": "No topic chosen.",
+"tp_pt_vowels": "Vowels",
+"tp_pt_alphabet": "Alphabet",
+"tp_pt_syllables": "Syllables",
+"tp_pt_rhymes": "Rhymes",
+"tp_pt_plural": "Plural",
+"tp_pt_opposites": "Opposites",
+"tp_pt_spelling": "Spelling",
+"tp_pt_punctuation": "Punctuation",
+"tp_pt_reading": "Reading comprehension",
+"tp_pt_sentence": "Building sentences",
+"tp_math_count": "Counting",
+"tp_math_compare": "Greater and less",
+"tp_math_add": "Addition",
+"tp_math_sub": "Subtraction",
+"tp_math_evenodd": "Even and odd",
+"tp_math_sequence": "Sequences",
+"tp_math_shapes": "Shapes",
+"tp_math_mult": "Multiplication",
+"tp_math_times": "Times tables",
+"tp_math_money": "Money and change",
+"tp_math_time": "Telling time",
+"tp_math_div": "Division",
+"tp_math_fractions": "Fractions (half, third…)",
+"tp_science_body": "Human body",
+"tp_science_senses": "The 5 senses",
+"tp_science_animals": "Animals",
+"tp_science_plants": "Plants",
+"tp_science_water": "Water",
+"tp_science_food": "Healthy eating",
+"tp_science_space": "Solar system",
+"tp_science_hygiene": "Hygiene",
+"tp_social_family": "Family",
+"tp_social_home": "Home and address",
+"tp_social_transport": "Transportation",
+"tp_social_jobs": "Jobs",
+"tp_social_calendar": "Days, months and calendar",
+"tp_social_brazil": "Brazil",
+"tp_social_world": "Continents and countries",
+"tp_social_rules": "Living together",
+"tp_english_colors": "Colors",
+"tp_english_numbers": "Numbers",
+"tp_english_animals": "Animals",
+"tp_english_food": "Food and fruit",
+"tp_english_family": "Family",
+"tp_english_body": "Body",
+"tp_english_things": "Objects and toys",
+"tp_english_school": "School supplies",
+"tp_english_clothes": "Clothes",
+"tp_english_greetings": "Greetings",
+"bqTalk": "Talk about the book",
+"bqSeen": "See the talk",
+"bqIntro": "Ask {name} the questions and note what they tell you. Tap 🔊 to have the app read the question.",
+"bqPh": "What {name} answered…",
+"bqPrint": "Print sheet",
+"bqSheetTitle": "Reading sheet",
+"bqDraw": "Draw your favorite part",
+"bqAfterAdd": "How about talking about the book? It's great for reading comprehension.",
+"bq_who": "Who is in the story?",
+"bq_liked": "What did you like the most?",
+"bq_end": "How did the story end?",
+"bq_feel": "Did you like the book?",
+"bq_chars": "Who are the characters?",
+"bq_where": "Where does the story happen?",
+"bq_bme": "What happened at the beginning, middle and end?",
+"bq_fav": "Which part did you like most and why?",
+"bq_ifyou": "If you were the character, what would you do?",
+"bq_stars": "What rating do you give the book?",
+"bq_problem": "What was the problem in the story and how was it solved?",
+"bq_word": "What new word did you learn?",
+"bq_newend": "Make up a different ending.",
+"bq_recommend": "Who would you recommend this book to? Why?"
+},
+"es": {
+"stTitle": "Pequeñas pruebas por materia",
+"stHint": "Elige la materia, marca los temas que estudió e imprime una prueba solo con eso. Las respuestas salen aparte.",
+"stStudied": "estudió · última vez {date} · {n} vez/veces",
+"stNotYet": "todavía no marcado",
+"stMark": "Marcar como estudiado",
+"stPickHint": "Los temas ya estudiados vienen marcados. Puedes quitar o agregar otros antes de imprimir.",
+"stPrint": "Imprimir prueba ({n} tema(s))",
+"stKey": "Respuestas de la última prueba",
+"stWhatStudied": "¿Qué estudió?",
+"stEnMonth": "La prueba de este mes evaluará lo estudiado: {list}.",
+"stEnNone": "Marca lo que estudió al registrar el inglés: la prueba del mes pasa a evaluar solo esos temas.",
+"stNoTopics": "Ningún tema elegido.",
+"tp_pt_vowels": "Vocales",
+"tp_pt_alphabet": "Alfabeto",
+"tp_pt_syllables": "Sílabas",
+"tp_pt_rhymes": "Rimas",
+"tp_pt_plural": "Plural",
+"tp_pt_opposites": "Contrarios",
+"tp_pt_spelling": "Ortografía",
+"tp_pt_punctuation": "Puntuación",
+"tp_pt_reading": "Comprensión lectora",
+"tp_pt_sentence": "Formar frases",
+"tp_math_count": "Conteo",
+"tp_math_compare": "Mayor y menor",
+"tp_math_add": "Suma",
+"tp_math_sub": "Resta",
+"tp_math_evenodd": "Par e impar",
+"tp_math_sequence": "Secuencias",
+"tp_math_shapes": "Figuras geométricas",
+"tp_math_mult": "Multiplicación",
+"tp_math_times": "Tablas",
+"tp_math_money": "Dinero y cambio",
+"tp_math_time": "Horas",
+"tp_math_div": "División",
+"tp_math_fractions": "Fracciones (mitad, tercio…)",
+"tp_science_body": "Cuerpo humano",
+"tp_science_senses": "Los 5 sentidos",
+"tp_science_animals": "Animales",
+"tp_science_plants": "Plantas",
+"tp_science_water": "Agua",
+"tp_science_food": "Alimentación sana",
+"tp_science_space": "Sistema solar",
+"tp_science_hygiene": "Higiene",
+"tp_social_family": "Familia",
+"tp_social_home": "Vivienda y dirección",
+"tp_social_transport": "Medios de transporte",
+"tp_social_jobs": "Profesiones",
+"tp_social_calendar": "Días, meses y calendario",
+"tp_social_brazil": "Brasil",
+"tp_social_world": "Continentes y países",
+"tp_social_rules": "Reglas de convivencia",
+"tp_english_colors": "Colores",
+"tp_english_numbers": "Números",
+"tp_english_animals": "Animales",
+"tp_english_food": "Comidas y frutas",
+"tp_english_family": "Familia",
+"tp_english_body": "Cuerpo",
+"tp_english_things": "Objetos y juguetes",
+"tp_english_school": "Útiles escolares",
+"tp_english_clothes": "Ropa",
+"tp_english_greetings": "Saludos",
+"bqTalk": "Conversar sobre el libro",
+"bqSeen": "Ver la charla",
+"bqIntro": "Hazle las preguntas a {name} y anota lo que cuente. Toca 🔊 para que la app lea la pregunta.",
+"bqPh": "Lo que respondió {name}…",
+"bqPrint": "Imprimir ficha",
+"bqSheetTitle": "Ficha de lectura",
+"bqDraw": "Dibuja la parte que más te gustó",
+"bqAfterAdd": "¿Qué tal conversar sobre el libro? Es excelente para la comprensión lectora.",
+"bq_who": "¿Quién aparece en el cuento?",
+"bq_liked": "¿Qué fue lo que más te gustó?",
+"bq_end": "¿Cómo terminó el cuento?",
+"bq_feel": "¿Te gustó el libro?",
+"bq_chars": "¿Quiénes son los personajes?",
+"bq_where": "¿Dónde pasa la historia?",
+"bq_bme": "¿Qué pasó al principio, en el medio y al final?",
+"bq_fav": "¿Qué parte te gustó más y por qué?",
+"bq_ifyou": "Si fueras el personaje, ¿qué harías?",
+"bq_stars": "¿Qué nota le das al libro?",
+"bq_problem": "¿Cuál fue el problema de la historia y cómo se resolvió?",
+"bq_word": "¿Qué palabra nueva aprendiste?",
+"bq_newend": "Inventa otro final para la historia.",
+"bq_recommend": "¿A quién le recomendarías este libro? ¿Por qué?"
+},
+"it": {
+"stTitle": "Verifiche per materia",
+"stHint": "Scegli la materia, segna gli argomenti studiati e stampa una verifica solo con quelli. Le soluzioni si stampano a parte.",
+"stStudied": "studiato · ultima volta {date} · {n} volta/e",
+"stNotYet": "non ancora segnato",
+"stMark": "Segna come studiato",
+"stPickHint": "Gli argomenti già studiati sono segnati. Puoi toglierne o aggiungerne altri prima di stampare.",
+"stPrint": "Stampa verifica ({n} argomento/i)",
+"stKey": "Soluzioni dell'ultima verifica",
+"stWhatStudied": "Cosa ha studiato?",
+"stEnMonth": "La verifica di questo mese chiederà ciò che è stato studiato: {list}.",
+"stEnNone": "Segna cosa ha studiato quando registri l'inglese: la verifica del mese chiederà solo quegli argomenti.",
+"stNoTopics": "Nessun argomento scelto.",
+"tp_pt_vowels": "Vocali",
+"tp_pt_alphabet": "Alfabeto",
+"tp_pt_syllables": "Sillabe",
+"tp_pt_rhymes": "Rime",
+"tp_pt_plural": "Plurale",
+"tp_pt_opposites": "Contrari",
+"tp_pt_spelling": "Ortografia",
+"tp_pt_punctuation": "Punteggiatura",
+"tp_pt_reading": "Comprensione del testo",
+"tp_pt_sentence": "Formare frasi",
+"tp_math_count": "Contare",
+"tp_math_compare": "Maggiore e minore",
+"tp_math_add": "Addizione",
+"tp_math_sub": "Sottrazione",
+"tp_math_evenodd": "Pari e dispari",
+"tp_math_sequence": "Sequenze",
+"tp_math_shapes": "Figure geometriche",
+"tp_math_mult": "Moltiplicazione",
+"tp_math_times": "Tabelline",
+"tp_math_money": "Soldi e resto",
+"tp_math_time": "Le ore",
+"tp_math_div": "Divisione",
+"tp_math_fractions": "Frazioni (metà, terzo…)",
+"tp_science_body": "Corpo umano",
+"tp_science_senses": "I 5 sensi",
+"tp_science_animals": "Animali",
+"tp_science_plants": "Piante",
+"tp_science_water": "Acqua",
+"tp_science_food": "Alimentazione sana",
+"tp_science_space": "Sistema solare",
+"tp_science_hygiene": "Igiene",
+"tp_social_family": "Famiglia",
+"tp_social_home": "Casa e indirizzo",
+"tp_social_transport": "Mezzi di trasporto",
+"tp_social_jobs": "Mestieri",
+"tp_social_calendar": "Giorni, mesi e calendario",
+"tp_social_brazil": "Brasile",
+"tp_social_world": "Continenti e paesi",
+"tp_social_rules": "Regole di convivenza",
+"tp_english_colors": "Colori",
+"tp_english_numbers": "Numeri",
+"tp_english_animals": "Animali",
+"tp_english_food": "Cibo e frutta",
+"tp_english_family": "Famiglia",
+"tp_english_body": "Corpo",
+"tp_english_things": "Oggetti e giocattoli",
+"tp_english_school": "Materiale scolastico",
+"tp_english_clothes": "Vestiti",
+"tp_english_greetings": "Saluti",
+"bqTalk": "Parlare del libro",
+"bqSeen": "Vedi la chiacchierata",
+"bqIntro": "Fai le domande a {name} e annota quello che racconta. Tocca 🔊 per far leggere la domanda all'app.",
+"bqPh": "Cosa ha risposto {name}…",
+"bqPrint": "Stampa scheda",
+"bqSheetTitle": "Scheda di lettura",
+"bqDraw": "Disegna la parte che ti è piaciuta di più",
+"bqAfterAdd": "Che ne dici di parlare del libro? È ottimo per la comprensione del testo.",
+"bq_who": "Chi c'è nella storia?",
+"bq_liked": "Cosa ti è piaciuto di più?",
+"bq_end": "Come è finita la storia?",
+"bq_feel": "Ti è piaciuto il libro?",
+"bq_chars": "Chi sono i personaggi?",
+"bq_where": "Dove si svolge la storia?",
+"bq_bme": "Cosa è successo all'inizio, a metà e alla fine?",
+"bq_fav": "Quale parte ti è piaciuta di più e perché?",
+"bq_ifyou": "Se fossi il personaggio, cosa faresti?",
+"bq_stars": "Che voto dai al libro?",
+"bq_problem": "Qual era il problema della storia e come è stato risolto?",
+"bq_word": "Quale parola nuova hai imparato?",
+"bq_newend": "Inventa un altro finale per la storia.",
+"bq_recommend": "A chi consiglieresti questo libro? Perché?"
+},
+"zh": {
+"stTitle": "分科小测验",
+"stHint": "选择科目，勾选学过的内容，只打印这些内容的小测验。答案单独打印。",
+"stStudied": "学过 · 最近 {date} · {n} 次",
+"stNotYet": "还没标记",
+"stMark": "标记为学过",
+"stPickHint": "学过的内容会自动勾上。打印前可以去掉或加上其他内容。",
+"stPrint": "打印小测验（{n} 个内容）",
+"stKey": "上一份小测验的答案",
+"stWhatStudied": "学了什么？",
+"stEnMonth": "本月测验会考学过的内容：{list}。",
+"stEnNone": "登记英语时勾选学了什么：月度测验就只考这些内容。",
+"stNoTopics": "没有选择内容。",
+"tp_pt_vowels": "元音",
+"tp_pt_alphabet": "字母表",
+"tp_pt_syllables": "音节",
+"tp_pt_rhymes": "押韵",
+"tp_pt_plural": "复数",
+"tp_pt_opposites": "反义词",
+"tp_pt_spelling": "拼写",
+"tp_pt_punctuation": "标点",
+"tp_pt_reading": "阅读理解",
+"tp_pt_sentence": "组句",
+"tp_math_count": "数数",
+"tp_math_compare": "比大小",
+"tp_math_add": "加法",
+"tp_math_sub": "减法",
+"tp_math_evenodd": "单数和双数",
+"tp_math_sequence": "数列规律",
+"tp_math_shapes": "几何图形",
+"tp_math_mult": "乘法",
+"tp_math_times": "乘法表",
+"tp_math_money": "钱和找零",
+"tp_math_time": "认识时间",
+"tp_math_div": "除法",
+"tp_math_fractions": "分数（一半、三分之一……）",
+"tp_science_body": "人体",
+"tp_science_senses": "五种感官",
+"tp_science_animals": "动物",
+"tp_science_plants": "植物",
+"tp_science_water": "水",
+"tp_science_food": "健康饮食",
+"tp_science_space": "太阳系",
+"tp_science_hygiene": "卫生",
+"tp_social_family": "家庭",
+"tp_social_home": "住所和地址",
+"tp_social_transport": "交通工具",
+"tp_social_jobs": "职业",
+"tp_social_calendar": "星期、月份和日历",
+"tp_social_brazil": "巴西",
+"tp_social_world": "大洲和国家",
+"tp_social_rules": "相处规则",
+"tp_english_colors": "颜色",
+"tp_english_numbers": "数字",
+"tp_english_animals": "动物",
+"tp_english_food": "食物和水果",
+"tp_english_family": "家人",
+"tp_english_body": "身体",
+"tp_english_things": "物品和玩具",
+"tp_english_school": "文具",
+"tp_english_clothes": "衣服",
+"tp_english_greetings": "问候",
+"bqTalk": "聊聊这本书",
+"bqSeen": "查看聊天",
+"bqIntro": "问 {name} 这些问题，并记下他（她）说的话。点 🔊 让应用读出问题。",
+"bqPh": "{name} 的回答……",
+"bqPrint": "打印阅读卡",
+"bqSheetTitle": "阅读卡",
+"bqDraw": "画出你最喜欢的部分",
+"bqAfterAdd": "聊聊这本书吧？这对阅读理解很有帮助。",
+"bq_who": "故事里有谁？",
+"bq_liked": "你最喜欢什么？",
+"bq_end": "故事是怎么结束的？",
+"bq_feel": "你喜欢这本书吗？",
+"bq_chars": "人物有哪些？",
+"bq_where": "故事发生在哪里？",
+"bq_bme": "开头、中间和结尾发生了什么？",
+"bq_fav": "你最喜欢哪一部分？为什么？",
+"bq_ifyou": "如果你是故事里的人物，你会怎么做？",
+"bq_stars": "你给这本书打几分？",
+"bq_problem": "故事里遇到了什么问题？是怎么解决的？",
+"bq_word": "你学到了什么新词？",
+"bq_newend": "给故事编一个不同的结尾。",
+"bq_recommend": "你会把这本书推荐给谁？为什么？"
+},
+"zht": {
+"stTitle": "分科小測驗",
+"stHint": "選擇科目，勾選學過的內容，只打印這些內容的小測驗。答案單獨列印。",
+"stStudied": "學過 · 最近 {date} · {n} 次",
+"stNotYet": "還沒標記",
+"stMark": "標記為學過",
+"stPickHint": "學過的內容會自動勾上。列印前可以去掉或加上其他內容。",
+"stPrint": "列印小測驗（{n} 個內容）",
+"stKey": "上一份小測驗的答案",
+"stWhatStudied": "學了什麼？",
+"stEnMonth": "本月測驗會考學過的內容：{list}。",
+"stEnNone": "登記英語時勾選學了什麼：月度測驗就只考這些內容。",
+"stNoTopics": "沒有選擇內容。",
+"tp_pt_vowels": "母音",
+"tp_pt_alphabet": "字母表",
+"tp_pt_syllables": "音節",
+"tp_pt_rhymes": "押韻",
+"tp_pt_plural": "複數",
+"tp_pt_opposites": "反義詞",
+"tp_pt_spelling": "拼寫",
+"tp_pt_punctuation": "標點",
+"tp_pt_reading": "閱讀理解",
+"tp_pt_sentence": "組句",
+"tp_math_count": "數數",
+"tp_math_compare": "比大小",
+"tp_math_add": "加法",
+"tp_math_sub": "減法",
+"tp_math_evenodd": "單數和雙數",
+"tp_math_sequence": "數列規律",
+"tp_math_shapes": "幾何圖形",
+"tp_math_mult": "乘法",
+"tp_math_times": "乘法表",
+"tp_math_money": "錢和找零",
+"tp_math_time": "認識時間",
+"tp_math_div": "除法",
+"tp_math_fractions": "分數（一半、三分之一……）",
+"tp_science_body": "人體",
+"tp_science_senses": "五種感官",
+"tp_science_animals": "動物",
+"tp_science_plants": "植物",
+"tp_science_water": "水",
+"tp_science_food": "健康飲食",
+"tp_science_space": "太陽系",
+"tp_science_hygiene": "衛生",
+"tp_social_family": "家庭",
+"tp_social_home": "住所和地址",
+"tp_social_transport": "交通工具",
+"tp_social_jobs": "職業",
+"tp_social_calendar": "星期、月份和日曆",
+"tp_social_brazil": "巴西",
+"tp_social_world": "大洲和國家",
+"tp_social_rules": "相處規則",
+"tp_english_colors": "顏色",
+"tp_english_numbers": "數字",
+"tp_english_animals": "動物",
+"tp_english_food": "食物和水果",
+"tp_english_family": "家人",
+"tp_english_body": "身體",
+"tp_english_things": "物品和玩具",
+"tp_english_school": "文具",
+"tp_english_clothes": "衣服",
+"tp_english_greetings": "問候",
+"bqTalk": "聊聊這本書",
+"bqSeen": "檢視聊天",
+"bqIntro": "問 {name} 這些問題，並記下他（她）說的話。點 🔊 讓應用讀出問題。",
+"bqPh": "{name} 的回答……",
+"bqPrint": "列印閱讀卡",
+"bqSheetTitle": "閱讀卡",
+"bqDraw": "畫出你最喜歡的部分",
+"bqAfterAdd": "聊聊這本書吧？這對閱讀理解很有幫助。",
+"bq_who": "故事裡有誰？",
+"bq_liked": "你最喜歡什麼？",
+"bq_end": "故事是怎麼結束的？",
+"bq_feel": "你喜歡這本書嗎？",
+"bq_chars": "人物有哪些？",
+"bq_where": "故事發生在哪裡？",
+"bq_bme": "開頭、中間和結尾發生了什麼？",
+"bq_fav": "你最喜歡哪一部分？為什麼？",
+"bq_ifyou": "如果你是故事裡的人物，你會怎麼做？",
+"bq_stars": "你給這本書打幾分？",
+"bq_problem": "故事裡遇到了什麼問題？是怎麼解決的？",
+"bq_word": "你學到了什麼新詞？",
+"bq_newend": "給故事編一個不同的結尾。",
+"bq_recommend": "你會把這本書推薦給誰？為什麼？"
+}
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], STUDY_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 83;
+const APP_VERSION = 84;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -8237,8 +8792,12 @@ const EN_WORDS = {
   food: [['apple', '🍎'], ['banana', '🍌'], ['grapes', '🍇'], ['orange', '🍊'], ['strawberry', '🍓'], ['milk', '🥛'], ['bread', '🍞'], ['egg', '🥚'], ['pizza', '🍕'], ['cake', '🎂']],
   things: [['ball', '⚽'], ['car', '🚗'], ['book', '📖'], ['house', '🏠'], ['sun', '☀️'], ['moon', '🌙'], ['star', '⭐'], ['tree', '🌳'], ['flower', '🌸'], ['hat', '🎩'], ['bed', '🛏️'], ['chair', '🪑'], ['clock', '⏰'], ['bus', '🚌']],
   body: [['eye', '👁️'], ['nose', '👃'], ['ear', '👂'], ['hand', '✋'], ['foot', '🦶'], ['mouth', '👄']],
-  family: [['mom', '👩'], ['dad', '👨'], ['baby', '👶'], ['girl', '👧'], ['boy', '👦'], ['grandma', '👵'], ['grandpa', '👴']]
+  family: [['mom', '👩'], ['dad', '👨'], ['baby', '👶'], ['girl', '👧'], ['boy', '👦'], ['grandma', '👵'], ['grandpa', '👴']],
+  school: [['pencil', '✏️'], ['book', '📖'], ['bag', '🎒'], ['ruler', '📏'], ['scissors', '✂️'], ['crayon', '🖍️'], ['desk', '🪑'], ['teacher', '🧑‍🏫']],
+  clothes: [['shirt', '👕'], ['shoes', '👟'], ['hat', '🎩'], ['socks', '🧦'], ['dress', '👗'], ['pants', '👖'], ['coat', '🧥']]
 };
+// assuntos que podem ser marcados ao registrar o estudo de inglês
+const EN_TOPICS = ['colors', 'numbers', 'animals', 'food', 'family', 'body', 'things', 'school', 'clothes', 'greetings'];
 const EN_NUMBERS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
 const EN_PLURAL_OK = ['star', 'cat', 'dog', 'ball', 'tree', 'flower', 'car', 'book', 'apple', 'duck', 'bird', 'hat'];
 const EN_DRAW_OK = [['apple', ['red', 'green']], ['star', ['yellow', 'blue']], ['ball', ['blue', 'red', 'green']], ['house', ['blue', 'yellow']], ['flower', ['purple', 'red', 'yellow']], ['car', ['red', 'blue', 'green']], ['fish', ['orange', 'blue']], ['tree', ['green']]];
@@ -8257,27 +8816,34 @@ function pick(arr, n, rnd) { return shuffle(arr, rnd).slice(0, n); }
 function plural(w) { return ['fish'].includes(w) ? w : w + 's'; }
 
 /* ---------- gerador da provinha ---------- */
-function buildEnglishTest(level, seed) {
+function buildEnglishTest(level, seed, topics) {
   const rnd = seededRng(seed);
   const S1 = [];
-  const nouns = [...EN_WORDS.animals, ...EN_WORDS.things, ...EN_WORDS.food.filter(([w]) => w !== 'orange')];
+  // com assuntos marcados, a provinha usa só o que foi estudado (se tiver palavras suficientes)
+  const T = Array.isArray(topics) && topics.length ? topics : null;
+  const has = k => !T || T.includes(k);
+  const cats = ['animals', 'things', 'food', 'school', 'clothes', 'body', 'family'];
+  const allNouns = [...EN_WORDS.animals, ...EN_WORDS.things, ...EN_WORDS.food.filter(([w]) => w !== 'orange')];
+  let nouns = T ? cats.filter(k => T.includes(k)).flatMap(k => EN_WORDS[k].filter(([w]) => w !== 'orange')) : allNouns;
+  if (nouns.length < 6) nouns = [...nouns, ...allNouns.filter(x => !nouns.includes(x))].slice(0, Math.max(6, nouns.length));
   const colors = EN_WORDS.colors.filter(([w]) => w !== 'white' && w !== 'black');
+  const plOk = nouns.filter(([w]) => EN_PLURAL_OK.includes(w)), plNouns = plOk.length >= 4 ? plOk : allNouns.filter(([w]) => EN_PLURAL_OK.includes(w));
   if (level === 1) {
-    const easy = [...EN_WORDS.animals.slice(0, 8), ...EN_WORDS.things.slice(0, 8), ...EN_WORDS.food.slice(0, 5)];
+    const easy = T ? nouns : [...EN_WORDS.animals.slice(0, 8), ...EN_WORDS.things.slice(0, 8), ...EN_WORDS.food.slice(0, 5)];
     S1.push({ type: 'circle', title: 'Listen and circle.', help: 'wsH_listenCircle', items: pick(easy, 4, rnd).map(target => { const opts = shuffle([target, ...pick(easy.filter(x => x !== target), 2, rnd)], rnd); return { opts, answer: target[0] }; }) });
-    S1.push({ type: 'colorCircles', title: 'Color the circles.', help: 'wsH_colorCircles', items: pick(colors.slice(0, 6), 4, rnd).map(([w]) => ({ word: w, answer: w })) });
-    S1.push({ type: 'countCircle', title: 'Count and circle the number.', help: 'wsH_countCircle', items: pick(nouns.filter(([w]) => EN_PLURAL_OK.includes(w)), 3, rnd).map(n => { const k = 1 + Math.floor(rnd() * 5); const opts = shuffle([k, ...pick([1, 2, 3, 4, 5].filter(x => x !== k), 2, rnd)], rnd); return { emoji: n[1], count: k, opts, answer: String(k) }; }) });
+    if (has('colors')) S1.push({ type: 'colorCircles', title: 'Color the circles.', help: 'wsH_colorCircles', items: pick(colors.slice(0, 6), 4, rnd).map(([w]) => ({ word: w, answer: w })) });
+    if (has('numbers')) S1.push({ type: 'countCircle', title: 'Count and circle the number.', help: 'wsH_countCircle', items: pick(plNouns, 3, rnd).map(n => { const k = 1 + Math.floor(rnd() * 5); const opts = shuffle([k, ...pick([1, 2, 3, 4, 5].filter(x => x !== k), 2, rnd)], rnd); return { emoji: n[1], count: k, opts, answer: String(k) }; }) });
     S1.push({ type: 'oral', title: 'Say it!', help: 'wsH_oralWords', items: pick(easy, 6, rnd).map(([w, e]) => ({ emoji: e, answer: w })) });
   } else if (level === 2) {
     const m = pick(nouns, 6, rnd);
     S1.push({ type: 'match', title: 'Match the word to the picture.', help: 'wsH_match', words: m.map(x => x[0]), pics: shuffle(m, rnd).map(x => x[1]), items: m.map(([w, e]) => ({ answer: `${w} → ${e}` })) });
-    S1.push({ type: 'countWrite', title: 'How many? Write the number.', help: 'wsH_countWrite', items: pick(nouns.filter(([w]) => EN_PLURAL_OK.includes(w)), 4, rnd).map(n => { const k = 2 + Math.floor(rnd() * 8); return { emoji: n[1], count: k, answer: String(k) }; }) });
+    if (has('numbers')) S1.push({ type: 'countWrite', title: 'How many? Write the number.', help: 'wsH_countWrite', items: pick(plNouns, 4, rnd).map(n => { const k = 2 + Math.floor(rnd() * 8); return { emoji: n[1], count: k, answer: String(k) }; }) });
     S1.push({ type: 'circleWord', title: 'Look and circle the word.', help: 'wsH_circleWord', items: pick(nouns, 4, rnd).map(target => ({ emoji: target[1], opts: shuffle([target[0], ...pick(nouns.filter(x => x !== target), 2, rnd).map(x => x[0])], rnd), answer: target[0] })) });
-    S1.push({ type: 'colorBoxes', title: 'Color the boxes.', help: 'wsH_colorBoxes', items: pick(colors, 4, rnd).map(([w]) => ({ word: w, answer: w })) });
-    S1.push({ type: 'oral', title: 'Say it!', help: 'wsH_oralWords', items: pick([...nouns, ...EN_WORDS.body], 6, rnd).map(([w, e]) => ({ emoji: e, answer: w })) });
+    if (has('colors')) S1.push({ type: 'colorBoxes', title: 'Color the boxes.', help: 'wsH_colorBoxes', items: pick(colors, 4, rnd).map(([w]) => ({ word: w, answer: w })) });
+    S1.push({ type: 'oral', title: 'Say it!', help: 'wsH_oralWords', items: pick(T ? nouns : [...nouns, ...EN_WORDS.body], 6, rnd).map(([w, e]) => ({ emoji: e, answer: w })) });
   } else {
     S1.push({ type: 'write', title: 'Look and write.', help: 'wsH_write', items: pick(nouns.filter(([w]) => w.length <= 7), 6, rnd).map(([w, e]) => ({ emoji: e, hint: w[0] + ' ' + '_ '.repeat(w.length - 1).trim(), answer: w })) });
-    S1.push({ type: 'numbers', title: 'Write the numbers in English.', help: 'wsH_numbers', items: pick([...Array(20)].map((_, i) => i + 1), 5, rnd).map(k => ({ n: k, answer: EN_NUMBERS[k] })) });
+    if (has('numbers')) S1.push({ type: 'numbers', title: 'Write the numbers in English.', help: 'wsH_numbers', items: pick([...Array(20)].map((_, i) => i + 1), 5, rnd).map(k => ({ n: k, answer: EN_NUMBERS[k] })) });
     S1.push({ type: 'unscramble', title: 'Unscramble the words.', help: 'wsH_unscramble', items: pick(nouns.filter(([w]) => w.length >= 3 && w.length <= 6), 4, rnd).map(([w, e]) => { let s = w; for (let i = 0; i < 5 && s === w; i++) s = shuffle(w.split(''), rnd).join(''); return { emoji: e, scrambled: s, answer: w }; }) });
     const frames = ['This is a ___.', 'I can see a ___.', 'I have a ___.', 'Look! A ___.'];
     S1.push({ type: 'complete', title: 'Complete the sentences.', help: 'wsH_complete', items: pick(nouns.filter(([w]) => !/^[aeiou]/.test(w)), 4, rnd).map(([w, e], i) => ({ emoji: e, sentence: frames[i % frames.length], answer: w })) });
@@ -8287,7 +8853,7 @@ function buildEnglishTest(level, seed) {
     S1.push({ type: 'talk', title: "Let's talk!", help: 'wsH_talk', items: pick(q, 4, rnd).map(x => ({ text: x, answer: '✔' })) });
   }
   const total = S1.reduce((s, sec) => s + sec.items.length, 0);
-  return { level, seed, sections: S1, total };
+  return { level, seed, sections: S1, total, topics: T || [] };
 }
 
 /* ---------- HTML da provinha (folha para a criança + gabarito) ---------- */
@@ -9721,7 +10287,7 @@ SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'recompensas') + 1, 0, ALBUM_SE
 
 Object.assign(ACTIONS, {
   'fg-open': () => { if (!isChildMode()) openFamilyGoal(); },
-  'fg-idea': el => { const x = FAMILY_GOAL_IDEAS.find(i => i.key === el.dataset.id); if (!x) return; $('#fgName').value = t(x.key); $('#fgIcon').value = x.icon; $('#fgTarget').value = x.target; },
+  'fg-idea': el => { const x = FAMILY_GOAL_IDEAS.find(i => i.key === el.dataset.id); if (!x) return; $('#fgName').value = t(x.key); $('#fgIcon').value = x.icon; $('#fgIcon').dispatchEvent(new Event('input')); $('#fgTarget').value = x.target; },
   'fg-save': () => {
     const name = text($('#fgName').value, 60); if (!name) return toast(t('enterName'), 'warn');
     const target = clamp(int($('#fgTarget').value, 0), 10, 1000000), icon = text($('#fgIcon').value, 8) || '🎯', cur = S.familyGoal.active;
@@ -10219,6 +10785,305 @@ normalizeExtras = function (raw, d, mapChild) {
   if (f.kids && typeof f.kids === 'object') Object.entries(f.kids).forEach(([id, v]) => { const cid = mapChild(id); if (!cid || !v) return; d.future.kids[cid] = { grade: Number.isFinite(Number(v.grade)) && v.grade !== null && v.grade !== '' ? clamp(int(v.grade, 0), -4, 12) : undefined, cando: Array.isArray(v.cando) ? [...new Set(v.cando.filter(x => typeof x === 'string').map(x => x.slice(0, 10)))].slice(0, 200) : [] }; if (d.future.kids[cid].grade === undefined) delete d.future.kids[cid].grade; });
   if (f.lastSims && typeof f.lastSims === 'object') Object.entries(f.lastSims).forEach(([id, v]) => { const cid = mapChild(id); if (cid && v && typeof v.seed === 'string') d.future.lastSims[cid] = { seed: v.seed.slice(0, 80), date: safeIso(v.date) }; });
 };
+
+/* =====================================================================
+   Seletor de ícones: todo campo de ícone (tarefa, recompensa, meta da
+   família, avatar da criança…) ganha um botão que abre uma grade de
+   ícones separados por tema. Continua dando para digitar ou colar.
+   ===================================================================== */
+
+const EMOJI_GROUPS = [
+  { key: 'house', icon: '🏠', list: '🛏️ 🧸 🧹 🧽 🧺 👕 👚 👖 🧦 👟 🩳 🧷 🪥 🧼 🚿 🛁 🚽 🧻 🍽️ 🍴 🥄 🧂 🪴 🗑️ 🚮 🪣 🧴 🪒 💇 🎒 🗄️ 🪑 🛋️ 🚪 🪟 🔑 💡 🧯 🛒 📦 🐶 🐱 🐠 🫧' },
+  { key: 'school', icon: '📚', list: '📚 📖 📘 📗 📕 📓 📒 📝 ✏️ ✍️ 🖍️ 🖊️ 📐 📏 ✂️ 📎 🧮 🔢 🔤 🔡 🅰️ 🧠 🔬 🔭 🧪 🧫 🌍 🗺️ 🖥️ 💻 🎓 🏫 🎨 🎼 🎹 🎸 🥁 🎻 🎤 ♟️ 🧩 🇬🇧' },
+  { key: 'food', icon: '🍎', list: '🍎 🍌 🍇 🍓 🍊 🍉 🍍 🥭 🍐 🍒 🥝 🥥 🥕 🥦 🌽 🥔 🍅 🥚 🍞 🧀 🥛 🧃 🥤 🍕 🍔 🌭 🍟 🌮 🍝 🍚 🍣 🍿 🍦 🍧 🍩 🍪 🎂 🧁 🍫 🍬 🍭 🍮 🥞 🧇 🥐 🍯' },
+  { key: 'fun', icon: '🎈', list: '🎈 🎉 🎊 🎁 🎀 🪅 🧸 🪀 🪁 🎮 🕹️ 👾 🎲 🃏 🧩 ♟️ 🎯 🎳 🎪 🎠 🎡 🎢 🎬 🎥 📺 🎧 🎵 🎶 📸 🛝 🏖️ ⛱️ 🏕️ ⛺ 🎆 🎇 🪄 🎭 🖼️ 🛍️ 💸 💰 🪙 🐷' },
+  { key: 'sport', icon: '⚽', list: '⚽ 🏀 🏐 🏈 ⚾ 🎾 🏓 🏸 🥅 🏊 🚴 🛹 🛼 ⛸️ 🤸 🧘 🏃 🤾 🥋 🥊 🏋️ 🤿 🏄 🧗 🚶 🏆 🥇 🥈 🥉 🏅 🎖️ 💪 🦶 👟' },
+  { key: 'animals', icon: '🐾', list: '🐶 🐱 🐭 🐹 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🐔 🐧 🐦 🦆 🦉 🐴 🦄 🐝 🦋 🐞 🐢 🐍 🦖 🦕 🐙 🐬 🐳 🐟 🦈 🦀 🐘 🦒 🦓 🦘 🐿️ 🦔 🦜 🦩' },
+  { key: 'nature', icon: '🌳', list: '🌳 🌲 🌴 🌵 🌷 🌹 🌻 🌼 🌸 💐 🍀 🍁 🍂 🌿 🌱 🌾 🪴 ☀️ 🌞 🌙 ⭐ 🌟 ✨ ☁️ 🌈 ⛅ 🌧️ ❄️ ⛄ 🔥 💧 🌊 🌋 🏔️ 🌍 🪐 🚀 🛸 ☄️' },
+  { key: 'places', icon: '🚗', list: '🚗 🚌 🚕 🚓 🚑 🚒 🚜 🚲 🛴 🚂 ✈️ 🚁 ⛵ 🚢 🏠 🏡 🏫 🏥 🏪 🏬 🏰 🏯 ⛪ 🕌 🏟️ 🎡 🏞️ 🏝️ 🗽 🗼 🏙️ 🌃 🛣️ 🧳 🗺️ 🧭 ⛽' },
+  { key: 'people', icon: '😀', list: '😀 😄 😁 😊 🙂 😉 😍 🥰 😘 😎 🤩 🥳 🤗 🤔 😴 😢 😭 😠 😱 🤒 😷 🧒 👦 👧 🧑 👶 👨 👩 👴 👵 👨‍👩‍👧 👨‍👩‍👧‍👦 👪 🧑‍🎓 🧑‍🍳 🧑‍🚀 🦸 🧚 🧜 🤴 👸 👋 👍 👏 🙌 🤝 🙏 ❤️ 💖 💛 💚 💙 💜' },
+  { key: 'symbols', icon: '⭐', list: '⭐ 🌟 ✨ ⚡ 💥 💫 🔥 ❤️ 🧡 💛 💚 💙 💜 🤍 ✅ ✔️ ❌ ❓ ❗ 💯 🔔 🎵 💤 💬 💭 🏁 🚩 🎯 📌 📍 🔒 🔑 ⏰ ⏳ 📅 🗓️ 💎 👑 🎗️ ♻️ ☮️ 🆗 🆕 🔝 ➕ ➖ ✖️ ➗' }
+];
+let emojiTarget = null;
+function openEmojiPicker(input) {
+  emojiTarget = input; ui.emojiGroup = ui.emojiGroup || EMOJI_GROUPS[0].key;
+  closeEmojiPicker();
+  const box = document.createElement('div'); box.id = 'emojiPicker'; box.className = 'emoji-pop'; box.setAttribute('role', 'dialog');
+  (input.closest('.row2') || input.closest('.field') || input.closest('.emoji-field')).insertAdjacentElement('afterend', box);
+  renderEmojiPicker();
+}
+function renderEmojiPicker() {
+  const box = $('#emojiPicker'); if (!box) return;
+  const g = EMOJI_GROUPS.find(x => x.key === ui.emojiGroup) || EMOJI_GROUPS[0];
+  const cur = emojiTarget ? emojiTarget.value : '';
+  box.innerHTML = `<div class="emoji-tabs">${EMOJI_GROUPS.map(x => `<button type="button" class="emoji-tab ${x.key === g.key ? 'on' : ''}" data-act="emoji-group" data-id="${x.key}" title="${esc(t('emo_' + x.key))}">${x.icon}<small>${esc(t('emo_' + x.key))}</small></button>`).join('')}</div>
+    <div class="emoji-grid">${[...new Set(g.list.split(' ').filter(Boolean))].map(e => `<button type="button" class="emoji-cell ${e === cur ? 'on' : ''}" data-act="emoji-pick" data-id="${esc(e)}">${e}</button>`).join('')}</div>
+    <div class="emoji-foot"><span class="hint">${t('emoHint')}</span><button type="button" class="btn btn-ghost btn-sm" data-act="emoji-close">${t('close')}</button></div>`;
+}
+function closeEmojiPicker() { const b = $('#emojiPicker'); if (b) b.remove(); }
+/** Coloca o botão do seletor ao lado de cada campo de ícone que aparecer na tela. */
+const EMOJI_INPUTS = 'input[id$="Icon"], input[id$="Avatar"], input[data-emoji]';
+function attachEmojiButtons(root = document) {
+  $$(EMOJI_INPUTS, root).forEach(inp => {
+    if (inp.dataset.emojiReady || inp.type === 'hidden') return; inp.dataset.emojiReady = '1';
+    const wrap = document.createElement('div'); wrap.className = 'emoji-field';
+    inp.parentNode.insertBefore(wrap, inp); wrap.appendChild(inp);
+    inp.insertAdjacentHTML('afterend', `<button type="button" class="emoji-btn" data-act="emoji-open" aria-label="${esc(t('emoChoose'))}" title="${esc(t('emoChoose'))}">${esc(inp.value || '🙂')} <span>▾</span></button>`);
+    inp.addEventListener('input', () => { const b = inp.nextElementSibling; if (b) b.firstChild.textContent = (inp.value || '🙂') + ' '; });
+  });
+}
+new MutationObserver(muts => { if (muts.some(m => m.addedNodes.length)) attachEmojiButtons(); }).observe(document.documentElement, { childList: true, subtree: true });
+
+Object.assign(ACTIONS, {
+  'emoji-open': el => { const inp = el.previousElementSibling; if (!inp) return; if ($('#emojiPicker') && emojiTarget === inp) return closeEmojiPicker(); openEmojiPicker(inp); },
+  'emoji-group': el => { ui.emojiGroup = el.dataset.id; renderEmojiPicker(); },
+  'emoji-pick': el => {
+    if (!emojiTarget) return; emojiTarget.value = el.dataset.id;
+    emojiTarget.dispatchEvent(new Event('input', { bubbles: true })); emojiTarget.dispatchEvent(new Event('change', { bubbles: true }));
+    closeEmojiPicker();
+  },
+  'emoji-close': () => closeEmojiPicker()
+});
+
+/* =====================================================================
+   Estudos e provinhas: o que cada criança estudou (por matéria e
+   assunto) e provinhas para imprimir montadas só com esses assuntos.
+   Integra com a Lição de casa e com o Inglês. Também a ficha do livro.
+   O conteúdo das provinhas é em português (como na escola).
+   ===================================================================== */
+
+// assuntos por matéria (min = idade mínima sugerida)
+const STUDY_TOPICS = {
+  pt: [['vowels', 4], ['alphabet', 4], ['syllables', 5], ['rhymes', 5], ['plural', 6], ['opposites', 6], ['spelling', 7], ['punctuation', 7], ['reading', 7], ['sentence', 7]],
+  math: [['count', 3], ['compare', 5], ['add', 5], ['sub', 5], ['evenodd', 6], ['sequence', 6], ['shapes', 4], ['mult', 7], ['times', 7], ['money', 7], ['time', 7], ['div', 8], ['fractions', 8]],
+  science: [['body', 4], ['senses', 4], ['animals', 4], ['plants', 5], ['water', 6], ['food', 5], ['space', 6], ['hygiene', 4]],
+  social: [['family', 4], ['home', 5], ['transport', 4], ['jobs', 5], ['calendar', 6], ['brazil', 7], ['world', 7], ['rules', 5]],
+  english: EN_TOPICS.map(k => [k, 3])
+};
+const STUDY_SUBJECTS = ['pt', 'math', 'english', 'science', 'social'];
+
+/* ---------- o que foi estudado ---------- */
+function markStudied(c, subject, topics, date) {
+  const when = date || isoNow();
+  (topics || []).forEach(tp => {
+    const id = `${c.id}_${subject}_${tp}`, ex = S.studied.find(x => x.id === id);
+    if (ex) { ex.count++; if (when > ex.last) ex.last = when; } else S.studied.push({ id, childId: c.id, subject, topic: tp, first: when, last: when, count: 1 });
+  });
+}
+function studiedOf(c, subject) { return S.studied.filter(x => x.childId === c.id && x.subject === subject); }
+function topicsFor(c, subject) { return (STUDY_TOPICS[subject] || []).filter(([, min]) => c.age + 1 >= min).map(([k]) => k); }
+function studiedThisMonth(c, subject) { const m = monthKey(); return studiedOf(c, subject).filter(x => monthKey(x.last) === m).map(x => x.topic); }
+
+/* ---------- banco de perguntas (ciências e história/geografia) ---------- */
+const QBANK = {
+  science: {
+    body: [['Com que parte do corpo nós enxergamos?', ['Olhos', 'Orelhas', 'Mãos'], 0], ['Qual órgão bate no peito e leva o sangue pelo corpo?', ['Coração', 'Estômago', 'Pulmão'], 0], ['Quantos dedos temos em uma mão?', ['Cinco', 'Quatro', 'Dez'], 0], ['Os ossos servem para…', ['sustentar o corpo', 'sentir cheiro', 'fazer a digestão'], 0], ['Respiramos com os…', ['pulmões', 'rins', 'joelhos'], 0], ['O cérebro fica dentro da…', ['cabeça', 'barriga', 'perna'], 0]],
+    senses: [['Com qual sentido sentimos o cheiro das flores?', ['Olfato', 'Audição', 'Tato'], 0], ['A língua nos ajuda no sentido do…', ['paladar', 'olfato', 'tato'], 0], ['Ouvimos com as…', ['orelhas', 'mãos', 'pernas'], 0], ['Sentir se algo é quente ou gelado é o…', ['tato', 'paladar', 'olfato'], 0], ['Quantos sentidos temos?', ['Cinco', 'Três', 'Dez'], 0]],
+    animals: [['Qual destes animais vive na água?', ['Peixe', 'Cachorro', 'Galinha'], 0], ['Qual animal tem penas e bota ovos?', ['Galinha', 'Gato', 'Cavalo'], 0], ['A vaca se alimenta de…', ['capim', 'carne', 'peixe'], 0], ['Qual animal é um mamífero (mama quando é filhote)?', ['Cachorro', 'Sapo', 'Borboleta'], 0], ['A lagarta vira…', ['borboleta', 'abelha', 'formiga'], 0], ['Qual animal vive na floresta e come bananas?', ['Macaco', 'Pinguim', 'Tubarão'], 0]],
+    plants: [['Do que uma planta precisa para crescer?', ['Água, luz e terra', 'Só escuro', 'Só areia'], 0], ['Qual parte da planta fica embaixo da terra?', ['Raiz', 'Flor', 'Folha'], 0], ['A semente, quando é plantada, vira…', ['uma nova planta', 'uma pedra', 'um animal'], 0], ['As frutas nascem das…', ['flores', 'raízes', 'pedras'], 0], ['As folhas geralmente são de que cor?', ['Verde', 'Azul', 'Preto'], 0]],
+    water: [['Quando a água congela, ela vira…', ['gelo', 'vapor', 'areia'], 0], ['A chuva cai das…', ['nuvens', 'árvores', 'montanhas'], 0], ['Para economizar água devemos…', ['fechar a torneira ao escovar os dentes', 'deixar a torneira aberta', 'lavar a calçada com mangueira'], 0], ['A água fervendo solta…', ['vapor', 'gelo', 'pedra'], 0], ['Beber água é importante para…', ['a saúde do corpo', 'ficar com sono', 'nada'], 0]],
+    food: [['Qual destes é um alimento saudável?', ['Fruta', 'Refrigerante', 'Bala'], 0], ['Antes de comer devemos…', ['lavar as mãos', 'correr', 'dormir'], 0], ['O leite ajuda a deixar fortes os…', ['ossos e dentes', 'cabelos', 'olhos'], 0], ['Verduras e legumes devem ser comidos…', ['todos os dias', 'nunca', 'só no aniversário'], 0], ['Doces em excesso podem causar…', ['cáries', 'mais força', 'mais altura'], 0]],
+    space: [['Qual é a estrela mais perto da Terra?', ['O Sol', 'A Lua', 'Marte'], 0], ['A Lua gira em volta da…', ['Terra', 'casa', 'nuvem'], 0], ['O planeta onde vivemos se chama…', ['Terra', 'Júpiter', 'Sol'], 0], ['De dia vemos o…', ['Sol', 'céu cheio de estrelas', 'nada'], 0], ['Qual destes é um planeta?', ['Marte', 'Lua', 'Cometa'], 0]],
+    hygiene: [['Devemos escovar os dentes…', ['depois das refeições', 'uma vez por mês', 'nunca'], 0], ['Tomar banho serve para…', ['limpar o corpo', 'sujar a roupa', 'fazer barulho'], 0], ['Ao espirrar devemos cobrir a boca com…', ['o braço ou um lenço', 'as mãos sujas', 'nada'], 0], ['Lavamos as mãos com…', ['água e sabão', 'só terra', 'suco'], 0], ['Cortar as unhas ajuda a…', ['manter a higiene', 'crescer mais', 'enxergar melhor'], 0]]
+  },
+  social: {
+    family: [['Quem são os pais do seu pai ou da sua mãe?', ['Avós', 'Primos', 'Tios'], 0], ['O filho do seu tio é seu…', ['primo', 'irmão', 'avô'], 0], ['Uma família pode ser…', ['de muitos jeitos diferentes', 'só de um jeito', 'só com 3 pessoas'], 0], ['Ajudar em casa é…', ['tarefa de todos', 'só dos adultos', 'proibido'], 0]],
+    home: [['O endereço da casa tem…', ['rua, número e bairro', 'só a cor da casa', 'o nome do cachorro'], 0], ['Onde preparamos a comida?', ['Na cozinha', 'No banheiro', 'No quarto'], 0], ['Onde dormimos?', ['No quarto', 'Na garagem', 'No quintal'], 0], ['Casas podem ser feitas de…', ['tijolo, madeira e outros materiais', 'só papel', 'só vidro'], 0]],
+    transport: [['Qual destes anda nos trilhos?', ['Trem', 'Avião', 'Barco'], 0], ['Qual destes voa?', ['Avião', 'Ônibus', 'Bicicleta'], 0], ['Qual destes anda na água?', ['Barco', 'Carro', 'Moto'], 0], ['O sinal vermelho do semáforo quer dizer…', ['pare', 'siga', 'corra'], 0], ['Para atravessar a rua usamos a…', ['faixa de pedestres', 'calçada do vizinho', 'janela'], 0]],
+    jobs: [['Quem cuida da nossa saúde?', ['Médico', 'Bombeiro', 'Padeiro'], 0], ['Quem apaga incêndios?', ['Bombeiro', 'Professor', 'Dentista'], 0], ['Quem ensina na escola?', ['Professor', 'Carteiro', 'Pintor'], 0], ['Quem faz o pão?', ['Padeiro', 'Policial', 'Piloto'], 0], ['Quem cuida dos dentes?', ['Dentista', 'Mecânico', 'Agricultor'], 0]],
+    calendar: [['Quantos dias tem uma semana?', ['Sete', 'Cinco', 'Dez'], 0], ['Quantos meses tem um ano?', ['Doze', 'Dez', 'Sete'], 0], ['Que dia vem depois de segunda-feira?', ['Terça-feira', 'Domingo', 'Sexta-feira'], 0], ['O primeiro mês do ano é…', ['janeiro', 'dezembro', 'março'], 0], ['O Natal é em qual mês?', ['Dezembro', 'Julho', 'Abril'], 0]],
+    brazil: [['Qual é a capital do Brasil?', ['Brasília', 'São Paulo', 'Rio de Janeiro'], 0], ['Quais são as cores da bandeira do Brasil?', ['Verde, amarelo, azul e branco', 'Vermelho e branco', 'Preto e amarelo'], 0], ['Que língua falamos no Brasil?', ['Português', 'Espanhol', 'Inglês'], 0], ['O Brasil fica em qual continente?', ['América do Sul', 'Europa', 'Ásia'], 0], ['Em quantas regiões o Brasil é dividido?', ['Cinco', 'Duas', 'Dez'], 0], ['A maior floresta do Brasil é a…', ['Amazônia', 'Floresta Negra', 'Savana'], 0]],
+    world: [['Quantos continentes existem?', ['Seis (ou sete, dependendo da forma de contar)', 'Dois', 'Vinte'], 0], ['Qual é o maior oceano?', ['Pacífico', 'Atlântico', 'Índico'], 0], ['A Itália fica em qual continente?', ['Europa', 'África', 'América'], 0], ['Que língua se fala nos Estados Unidos?', ['Inglês', 'Português', 'Japonês'], 0], ['O Japão fica em qual continente?', ['Ásia', 'Europa', 'América do Sul'], 0]],
+    rules: [['Na escola, para falar devemos…', ['esperar a vez', 'gritar', 'interromper'], 0], ['Quando erramos com alguém devemos…', ['pedir desculpas', 'fingir que não foi nada', 'rir'], 0], ['O lixo deve ser jogado…', ['na lixeira', 'no chão', 'no rio'], 0], ['Respeitar os outros é…', ['tratar todos com educação', 'só os amigos', 'só os adultos'], 0]]
+  }
+};
+const PT_OPPOSITES = [['alto', 'baixo'], ['grande', 'pequeno'], ['quente', 'frio'], ['dia', 'noite'], ['feliz', 'triste'], ['cheio', 'vazio'], ['rápido', 'devagar'], ['aberto', 'fechado'], ['claro', 'escuro'], ['forte', 'fraco']];
+const PT_RHYMES = [['gato', 'pato', ['bola', 'casa']], ['mão', 'pão', ['flor', 'sol']], ['janela', 'panela', ['carro', 'mesa']], ['bola', 'cola', ['dedo', 'pé']], ['anel', 'papel', ['gato', 'lua']], ['limão', 'feijão', ['casa', 'rua']], ['dente', 'pente', ['bolo', 'mar']]];
+const PT_PLURAL = [['casa', 'casas'], ['flor', 'flores'], ['pão', 'pães'], ['animal', 'animais'], ['lápis', 'lápis'], ['mão', 'mãos'], ['papel', 'papéis'], ['leão', 'leões'], ['ovo', 'ovos'], ['mar', 'mares']];
+const PT_SENTENCES = [['O', 'gato', 'bebe', 'leite.'], ['A', 'menina', 'lê', 'um', 'livro.'], ['Eu', 'gosto', 'de', 'brincar.'], ['O', 'sol', 'está', 'quente.'], ['Meu', 'irmão', 'joga', 'bola.']];
+const PT_PUNCT = [['Você vai à escola amanhã', '?'], ['Que dia lindo', '!'], ['Eu tenho dois irmãos', '.'], ['Qual é o seu nome', '?'], ['Cuidado com o degrau', '!'], ['Hoje choveu muito', '.']];
+
+/* ---------- gerador da provinha ---------- */
+function buildStudyTest(c, subject, topics, seed) {
+  const rnd = seededRng(seed), R = (a, b) => a + Math.floor(rnd() * (b - a + 1)), names = S.children.map(k => k.name), nm = () => names[R(0, names.length - 1)];
+  const st = futStage(c.age), parts = [];
+  const mcPart = (title, list, n) => ({ kind: 'mc', title, items: pick(list, Math.min(n, list.length), rnd).map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })) });
+  const big = st === 's4' ? 1 : 0;
+  const gen = {
+    pt: {
+      vowels: () => ({ kind: 'fill', title: 'Circule as vogais (A, E, I, O, U) de cada palavra.', items: pick(SIM_WORDS, 4, rnd).map(([e, w]) => ({ e, text: w, answer: w.replace(/[^AEIOUÃÁÉÊÍÓÔÕÚ]/g, '').split('').join(' ') })) }),
+      alphabet: () => ({ kind: 'fill', title: 'Que letra vem depois?', items: [...Array(4)].map(() => { const i = R(0, 23), L = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; return { text: `${L[i]} → __`, answer: L[i + 1] }; }) }),
+      syllables: () => ({ kind: 'fill', title: 'Quantas sílabas tem cada palavra?', items: pick(SIM_WORDS, 4, rnd).map(([e, w, n]) => ({ e, text: w, answer: n })) }),
+      rhymes: () => ({ kind: 'mcw', title: 'Circule a palavra que rima.', items: pick(PT_RHYMES, 3, rnd).map(([a, b, bad]) => ({ q: a.toUpperCase(), o: shuffleKeep([b, ...bad], 0, rnd) })) }),
+      plural: () => ({ kind: 'fill', title: 'Escreva o plural (mais de um).', items: pick(PT_PLURAL, 4, rnd).map(([a, b]) => ({ text: `um(a) ${a} → dois/duas ______`, answer: b })) }),
+      opposites: () => ({ kind: 'fill', title: 'Escreva o contrário.', items: pick(PT_OPPOSITES, 4, rnd).map(([a, b]) => ({ text: `${a} ↔ ______`, answer: b })) }),
+      spelling: () => ({ kind: 'mcw', title: 'Circule a palavra escrita do jeito certo.', items: pick(SIM_SPELL, 4, rnd).map(([ok, bad]) => ({ q: '', o: shuffleKeep([ok, bad], 0, rnd) })) }),
+      punctuation: () => ({ kind: 'fill', title: 'Coloque o sinal certo no fim: ( . ) ( ? ) ( ! )', items: pick(PT_PUNCT, 4, rnd).map(([s, p]) => ({ text: `${s} __`, answer: p })) }),
+      sentence: () => ({ kind: 'fill', title: 'Coloque as palavras em ordem e escreva a frase.', items: pick(PT_SENTENCES, 2, rnd).map(w => ({ text: shuffle(w, rnd).join(' / '), answer: w.join(' '), line: true })) }),
+      reading: () => { const tx = pick(SIM_TEXTS[st === 's4' ? 's4' : 's3'], 1, rnd)[0]; return { kind: 'text', title: `Leia o texto: "${tx.title}"`, text: tx.text, q: tx.q.map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })), open: tx.open }; }
+    },
+    math: {
+      count: () => ({ kind: 'fill', title: 'Conte e escreva quantos tem.', items: [...Array(3)].map(() => { const n = R(2, st === 's2' ? 10 : 6), e = pick(G_EMOJI, 1, rnd)[0]; return { text: e.repeat(n), answer: n }; }) }),
+      compare: () => ({ kind: 'fill', title: 'Escreva > (maior), < (menor) ou = (igual).', items: [...Array(4)].map(() => { const a = R(1, 20 + 80 * big), b = R(1, 20 + 80 * big); return { text: `${a} __ ${b}`, answer: a > b ? '>' : a < b ? '<' : '=' }; }) }),
+      add: () => ({ kind: 'fill', title: 'Faça as contas de mais.', items: [...Array(4)].map(() => { const m = st === 's2' ? 9 : st === 's3' ? 50 : 500, a = R(1, m), b = R(1, m); return { text: `${a} + ${b} =`, answer: a + b }; }) }),
+      sub: () => ({ kind: 'fill', title: 'Faça as contas de menos.', items: [...Array(4)].map(() => { const m = st === 's2' ? 10 : st === 's3' ? 60 : 600, a = R(2, m), b = R(1, a); return { text: `${a} − ${b} =`, answer: a - b }; }) }),
+      evenodd: () => ({ kind: 'fill', title: 'O número é PAR ou ÍMPAR?', items: [...Array(4)].map(() => { const n = R(1, 50); return { text: `${n} → ______`, answer: n % 2 ? 'ímpar' : 'par' }; }) }),
+      sequence: () => ({ kind: 'fill', title: 'Complete a sequência.', items: [...Array(3)].map(() => { const st2 = [1, 2, 5, 10][R(0, 3)], a = R(0, 20); return { text: `${a}, ${a + st2}, ${a + 2 * st2}, __, ${a + 4 * st2}`, answer: a + 3 * st2 }; }) }),
+      shapes: () => mcPart('Formas geométricas.', [['Quantos lados tem um triângulo?', ['3', '4', '5'], 0], ['Quantos lados tem um quadrado?', ['4', '3', '6'], 0], ['Qual forma não tem cantos?', ['Círculo', 'Quadrado', 'Triângulo'], 0], ['Uma bola parece um(a)…', ['esfera', 'cubo', 'pirâmide'], 0], ['Um dado parece um…', ['cubo', 'cone', 'cilindro'], 0]], 3),
+      mult: () => ({ kind: 'fill', title: 'Faça as multiplicações.', items: [...Array(4)].map(() => { const a = R(2, big ? 25 : 10), b = R(2, 9); return { text: `${a} × ${b} =`, answer: a * b }; }) }),
+      times: () => { const n = R(2, 9); return { kind: 'fill', title: `Tabuada do ${n}.`, items: shuffle([...Array(10)].map((_, i) => i + 1), rnd).slice(0, 5).map(k => ({ text: `${n} × ${k} =`, answer: n * k })) }; },
+      money: () => ({ kind: 'fill', title: 'Problemas com dinheiro.', items: [...Array(2)].map(() => { const p = R(2, 9), q = R(2, 5), pay = (Math.ceil(p * q / 10) + 1) * 10; return { text: `${nm()} comprou ${q} picolés de R$ ${p},00 e pagou com R$ ${pay},00. Quanto recebeu de troco?`, answer: `R$ ${pay - p * q},00`, line: true }; }) }),
+      time: () => ({ kind: 'fill', title: 'Horas.', items: [...Array(3)].map(() => { const h = R(6, 18), m = [0, 15, 30, 45][R(0, 3)], d = [30, 45, 60, 90][R(0, 3)], tot = h * 60 + m + d; return { text: `Começou às ${h}h${String(m).padStart(2, '0')} e durou ${d} minutos. Terminou às…`, answer: `${Math.floor(tot / 60)}h${String(tot % 60).padStart(2, '0')}`, line: true }; }) }),
+      div: () => ({ kind: 'fill', title: 'Faça as divisões.', items: [...Array(4)].map(() => { const d = R(2, 9), q = R(2, big ? 30 : 10); return { text: `${d * q} ÷ ${d} =`, answer: q }; }) }),
+      fractions: () => ({ kind: 'fill', title: 'Metade, terço e quarto.', items: [...Array(3)].map(() => { const [nme, k] = [['a metade', 2], ['a terça parte', 3], ['a quarta parte', 4]][R(0, 2)], n = k * R(2, 10); return { text: `Quanto é ${nme} de ${n}?`, answer: n / k }; }) })
+    }
+  };
+  const list = topics.length ? topics : topicsFor(c, subject).slice(0, 4);
+  if (subject === 'english') return { subject, topics: list, english: buildEnglishTest(englishLevel(c.age) || 1, seed, list) };
+  if (subject === 'science' || subject === 'social') {
+    const bank = QBANK[subject]; list.forEach(tp => { if (bank[tp]) parts.push(mcPart(t('tp_' + subject + '_' + tp), bank[tp], st === 's2' || st === 's1' ? 3 : 4)); });
+  } else list.forEach(tp => { const f = gen[subject] && gen[subject][tp]; if (f) parts.push(f()); });
+  return { subject, topics: list, parts: parts.slice(0, 6) };
+}
+function studyTestHtml(c, test, mode) {
+  if (test.english) return worksheetHtml(c, test.english, mode === 'key' ? true : false).replace(mode === 'key' ? /^[\s\S]*?(?=<div class="ps-page ws ws-key")/ : /$^/, '');
+  let n = 0; const L = 'ABC', key = mode === 'key';
+  const head = title => `<div class="ws-sec"><h3><span class="ws-num">${++n}</span> ${esc(title)}</h3>`;
+  const part = p => {
+    if (p.kind === 'mc') return head(p.title) + p.items.map((x, i) => `<div class="sim-q"><b>${i + 1}. ${esc(x.q)}</b><div class="sim-opts">${x.o.map((o, k) => `<span class="${key && o.ok ? 'sim-ok' : ''}">(${L[k]}) ${esc(o.o)}</span>`).join('')}</div></div>`).join('') + '</div>';
+    if (p.kind === 'mcw') return head(p.title) + `<div class="ws-grid2">${p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span>${x.q ? `<b class="sim-w" style="flex:0 0 auto">${esc(x.q)}</b>` : ''}<span class="sim-pair">${x.o.map(o => `<span class="${key && o.ok ? 'g-circle' : ''}">${esc(o.o)}</span>`).join(' · ')}</span></div>`).join('')}</div></div>`;
+    if (p.kind === 'text') return head(p.title) + `<p class="sim-text">${esc(p.text)}</p>${p.q.map((x, i) => `<div class="sim-q"><b>${i + 1}. ${esc(x.q)}</b><div class="sim-opts">${x.o.map((o, k) => `<span class="${key && o.ok ? 'sim-ok' : ''}">(${L[k]}) ${esc(o.o)}</span>`).join('')}</div></div>`).join('')}<div class="sim-q"><b>${p.q.length + 1}. ${esc(p.open)}</b>${key ? `<p class="ws-help">${esc(t('fuOpenKey'))}</p>` : '<div class="pr-lines"><span></span><span></span></div>'}</div></div>`;
+    return head(p.title) + `<div class="${p.items.some(x => x.line) ? '' : 'ws-grid2'}">${p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span>${x.e ? `<span class="ws-pic">${x.e}</span>` : ''}<span class="sim-fill">${esc(String(x.text))}</span>${key ? `<span class="g-ans">${esc(String(x.answer))}</span>` : x.line ? '<span class="ws-line"></span>' : '<span class="ws-box"></span>'}</div>`).join('')}</div></div>`;
+  };
+  const top = `<div class="ws-head"><div><div class="ws-title">${key ? '🔑 ' + esc(t('wsKeyTitle')) : '📝 Provinha'} — ${esc(t('hwSub_' + test.subject))}</div><div class="ws-sub">${esc(test.topics.map(tp => t('tp_' + test.subject + '_' + tp)).join(' · '))}</div></div><div class="ws-name"><div>Nome: <b>${esc(c.name)}</b></div><div>Data: ____/____/______</div>${key ? '' : '<div class="ws-score">Acertos: ______</div>'}</div></div>`;
+  return `<div class="ps-page ws sim ${key ? 'ws-key' : ''}">${top}${test.parts.length ? test.parts.map(part).join('') : `<p class="hint">${esc(t('stNoTopics'))}</p>`}${key ? '' : `<div class="ws-foot">🌟 Muito bem, ${esc(c.name)}!</div>`}</div>`;
+}
+
+/* ---------- cartão "Provinhas por matéria" (na Lição de casa) ---------- */
+function studyCardHtml(c) {
+  ui.stSub = STUDY_SUBJECTS.includes(ui.stSub) ? ui.stSub : 'pt';
+  const sub = ui.stSub, all = topicsFor(c, sub), studied = studiedOf(c, sub), sel = ui.stSel && ui.stSel.sub === sub && ui.stSel.child === c.id ? ui.stSel.list : studied.map(x => x.topic).filter(tp => all.includes(tp));
+  ui.stSel = { sub, child: c.id, list: sel };
+  const last = S.studyTests[`${c.id}_${sub}`];
+  return card('📝 ' + t('stTitle'), `<p class="hint" style="margin-top:-6px">${t('stHint')}</p>
+    <div class="g-tabs">${STUDY_SUBJECTS.map(s => `<button type="button" class="chip ${s === sub ? 'on' : ''}" data-act="st-sub" data-id="${s}">${(HW_ICONS[s] || '🇬🇧')} ${esc(t('hwSub_' + s))} ${studiedOf(c, s).length ? `<b class="st-n">${studiedOf(c, s).length}</b>` : ''}</button>`).join('')}</div>
+    <div class="st-topics">${all.map(tp => { const x = studied.find(y => y.topic === tp), on = sel.includes(tp); return `<label class="st-topic ${x ? 'done' : ''} ${on ? 'on' : ''}"><input type="checkbox" data-change="st-pick" data-id="${tp}" ${on ? 'checked' : ''}><span><b>${esc(t('tp_' + sub + '_' + tp))}</b><small>${x ? `✔ ${t('stStudied', { date: fmtDate(x.last), n: x.count })}` : t('stNotYet')}</small></span>${x ? '' : `<button type="button" class="icon-btn" data-act="st-mark" data-id="${tp}" title="${esc(t('stMark'))}">＋</button>`}</label>`; }).join('')}</div>
+    <p class="hint">${t('stPickHint')}</p>
+    <div class="actions"><button type="button" class="btn btn-primary" data-act="st-print" ${sel.length ? '' : 'disabled'}>🖨️ ${t('stPrint', { n: sel.length })}</button><button type="button" class="btn btn-soft" data-act="st-key" ${last ? '' : 'disabled'}>🔑 ${t('stKey')}</button></div>
+    ${last ? `<p class="hint">${t('gKeyLast', { name: esc(c.name), date: fmtDateTime(last.date) })}</p>` : ''}`, { cls: 'mt parent-only' });
+}
+
+/* ---------- ligações com Lição de casa e Inglês ---------- */
+(function () {
+  const hw = SECTIONS.find(s => s.id === 'licao'), up0 = hw.update;
+  hw.update = function () {
+    up0.call(this);
+    const c = childById(ui.hwChild); if (!c) return;
+    const sub = ui.hwSub, tps = STUDY_TOPICS[sub] ? topicsFor(c, sub) : [];
+    ui.hwTopics = (ui.hwTopics || []).filter(x => tps.includes(x));
+    const anchor = $('#hwBody #hwDate'); const row = anchor && anchor.closest('.row2');
+    if (row && tps.length) row.insertAdjacentHTML('beforebegin', `<label class="mt">${t('stWhatStudied')}</label><div class="chips st-chips">${tps.map(tp => `<button type="button" class="chip ${ui.hwTopics.includes(tp) ? 'on' : ''}" data-act="hw-topic" data-id="${tp}">${esc(t('tp_' + sub + '_' + tp))}</button>`).join('')}</div>`);
+    $('#hwBody').insertAdjacentHTML('beforeend', studyCardHtml(c));
+    // lista mostra os assuntos de cada lição
+    $$('#hwBody [data-act="hw-del"]').forEach(b => { const e = S.homework.entries.find(x => x.id === b.dataset.id); if (e && e.topics && e.topics.length) { const sb = b.closest('.item').querySelector('.sub'); if (sb) sb.insertAdjacentText('beforeend', ' · ' + e.topics.map(tp => t('tp_' + e.subject + '_' + tp)).join(', ')); } });
+  };
+  const en = SECTIONS.find(s => s.id === 'ingles'), enUp0 = en.update;
+  en.update = function () {
+    enUp0.call(this);
+    const c = childById(ui.enChild); if (!c) return;
+    ui.enTopics = ui.enTopics || [];
+    const act = $('#enAct'); const row = act && act.closest('.row2');
+    if (row) row.insertAdjacentHTML('beforebegin', `<label class="mt">${t('stWhatStudied')}</label><div class="chips st-chips">${EN_TOPICS.map(tp => `<button type="button" class="chip ${ui.enTopics.includes(tp) ? 'on' : ''}" data-act="en-topic" data-id="${tp}">${esc(t('tp_english_' + tp))}</button>`).join('')}</div>`);
+    const m = studiedThisMonth(c, 'english');
+    const btn = $('#enBody [data-act="en-print"]');
+    if (btn) btn.closest('.card').querySelector('.actions').insertAdjacentHTML('afterend', `<div class="notice mt st-en">📚 ${m.length ? t('stEnMonth', { list: m.map(tp => t('tp_english_' + tp)).join(', ') }) : t('stEnNone')}</div>`);
+  };
+})();
+Object.assign(ACTIONS, {
+  'hw-topic': el => { const k = el.dataset.id; ui.hwTopics = ui.hwTopics || []; ui.hwTopics = ui.hwTopics.includes(k) ? ui.hwTopics.filter(x => x !== k) : [...ui.hwTopics, k]; el.classList.toggle('on'); },
+  'en-topic': el => { const k = el.dataset.id; ui.enTopics = ui.enTopics || []; ui.enTopics = ui.enTopics.includes(k) ? ui.enTopics.filter(x => x !== k) : [...ui.enTopics, k]; el.classList.toggle('on'); },
+  'hw-sub': (base => el => { const keep = ['hwPg', 'hwNote', 'hwDate'].map(id => [id, $('#' + id) && $('#' + id).value]); ui.hwTopics = []; base(el); render(); keep.forEach(([id, v]) => { if (v != null && $('#' + id)) $('#' + id).value = v; }); })(ACTIONS['hw-sub']),
+  'st-sub': el => { ui.stSub = el.dataset.id; ui.stSel = null; render(); },
+  'st-mark': el => { const c = childById(ui.hwChild); markStudied(c, ui.stSub, [el.dataset.id]); ui.stSel = null; commit(); },
+  'st-print': () => { const c = childById(ui.hwChild), sub = ui.stSub, seed = `${c.id}|${sub}|${Date.now()}`, list = ui.stSel.list; S.studyTests[`${c.id}_${sub}`] = { seed, date: isoNow(), topics: list }; commit(); printDocument(studyTestHtml(c, buildStudyTest(c, sub, list, seed), 'sheet'), 'Provinha — ' + c.name); },
+  'st-key': () => { const c = childById(ui.hwChild), sub = ui.stSub, last = S.studyTests[`${c.id}_${sub}`]; if (!last) return; printDocument(studyTestHtml(c, buildStudyTest(c, sub, last.topics, last.seed), 'key'), t('wsKeyTitle') + ' — ' + c.name); }
+});
+Object.assign(CHANGES, { 'st-pick': el => { const k = el.dataset.id; ui.stSel.list = el.checked ? [...new Set([...ui.stSel.list, k])] : ui.stSel.list.filter(x => x !== k); render(); } });
+(function () {
+  const hwLog = ACTIONS['hw-log'];
+  ACTIONS['hw-log'] = el => {
+    const c = childById(ui.hwChild), before = S.homework.entries.length, pend = S.approvals.length, topics = [...(ui.hwTopics || [])];
+    hwLog(el);
+    if (S.homework.entries.length > before) { S.homework.entries[0].topics = topics; }
+    if ((S.homework.entries.length > before || S.approvals.length > pend) && topics.length) { if (S.approvals.length > pend) S.approvals[0].topics = topics; markStudied(c, ui.hwSub, topics); ui.hwTopics = []; commit(); }
+  };
+  const enLog = ACTIONS['en-log'];
+  ACTIONS['en-log'] = el => {
+    const c = childById(ui.enChild), n0 = S.english.sessions.length, a0 = S.approvals.length, topics = [...(ui.enTopics || [])];
+    enLog(el);
+    if ((S.english.sessions.length > n0 || S.approvals.length > a0) && topics.length) { if (S.english.sessions.length > n0) { const s = S.english.sessions.find(x => x.childId === c.id); if (s) s.topics = topics; } markStudied(c, 'english', topics); ui.enTopics = []; commit(); }
+  };
+  // a provinha mensal de inglês usa o que foi estudado no mês (se tiver algo marcado)
+  ACTIONS['en-print'] = () => {
+    const c = childById(ui.enChild), level = englishLevel(c.age) || 1, topics = studiedThisMonth(c, 'english');
+    const test = buildEnglishTest(level, `${c.id}|${monthKey()}|${ui.enSeedBump || 0}`, topics);
+    ui.enLastTest = { childId: c.id, total: test.total, level };
+    printDocument(worksheetHtml(c, test, !isChildMode()), t('enPrintTest') + ' — ' + c.name);
+  };
+})();
+
+/* ---------- ficha do livro: conversar sobre o que leu ---------- */
+function bookQuestions(c) {
+  const st = futStage(c.age);
+  return st === 's1' || st === 's2' ? ['bq_who', 'bq_liked', 'bq_end', 'bq_feel'] : st === 's3' ? ['bq_chars', 'bq_where', 'bq_bme', 'bq_fav', 'bq_ifyou', 'bq_stars'] : ['bq_chars', 'bq_problem', 'bq_bme', 'bq_word', 'bq_fav', 'bq_newend', 'bq_recommend'];
+}
+function openBookTalk(b) {
+  const c = childById(b.childId), qs = bookQuestions(c), ans = b.talk || {};
+  Modal.open({
+    id: 'bookModal', wide: true, title: '📖 ' + esc(b.title),
+    body: `<p class="hint" style="margin-top:0">${t('bqIntro', { name: esc(c.name) })}</p>
+      ${qs.map(q => `<div class="field"><label>${esc(t(q))}</label><div class="bq-row"><button type="button" class="rt-say" style="position:static" data-act="bq-say" data-id="${q}">🔊</button><input data-bq="${q}" maxlength="300" value="${esc(ans[q] || '')}" placeholder="${esc(t('bqPh', { name: c.name }))}"></div></div>`).join('')}`,
+    foot: `<button type="button" class="btn btn-soft" data-act="bq-print" data-id="${esc(b.id)}">🖨️ ${t('bqPrint')}</button><button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="bq-save" data-id="${esc(b.id)}">${t('save')}</button>`
+  });
+}
+function bookSheetHtml(b) {
+  const c = childById(b.childId), qs = bookQuestions(c), small = futStage(c.age) === 's1' || futStage(c.age) === 's2';
+  return `<div class="ps-page ws sim book-sheet"><div class="ws-head"><div><div class="ws-title">📖 ${esc(t('bqSheetTitle'))}</div><div class="ws-sub">"${esc(b.title)}" · ${fmtDate(b.date)}</div></div><div class="ws-name"><div>${esc(t('name'))}: <b>${esc(c.name)}</b></div></div></div>
+    ${qs.map((q, i) => `<div class="ws-sec"><h3><span class="ws-num">${i + 1}</span> ${esc(t(q))}</h3>${q === 'bq_stars' ? '<p class="bq-stars">☆ ☆ ☆ ☆ ☆</p>' : q === 'bq_feel' ? '<p class="bq-stars">😍 🙂 😐 😢</p>' : (b.talk && b.talk[q] ? `<p class="bq-ans">${esc(b.talk[q])}</p>` : `<div class="pr-lines sim-lines">${'<span></span>'.repeat(small ? 1 : 2)}</div>`)}</div>`).join('')}
+    <div class="ws-sec"><h3>🎨 ${esc(t('bqDraw'))}</h3><div class="sim-draw" style="height:${small ? 260 : 190}px"></div></div></div>`;
+}
+(function () {
+  const rd = SECTIONS.find(s => s.id === 'leitura'), up0 = rd.update;
+  rd.update = function () {
+    up0.call(this);
+    $$('#rdBody [data-act="rd-del"]').forEach(btn => { const b = S.reading.books.find(x => x.id === btn.dataset.id); if (!b) return; const talked = b.talk && Object.values(b.talk).some(Boolean); btn.insertAdjacentHTML('beforebegin', `<button type="button" class="btn btn-soft btn-sm" data-act="bq-open" data-id="${esc(b.id)}">💬 ${t(talked ? 'bqSeen' : 'bqTalk')}</button>`); });
+  };
+  const add = ACTIONS['rd-add'];
+  ACTIONS['rd-add'] = el => { const n0 = S.reading.books.length; add(el); if (S.reading.books.length > n0) setTimeout(() => toast(t('bqAfterAdd'), 'info', { label: '💬 ' + t('bqTalk'), run: () => openBookTalk(S.reading.books[0]) }, 9000), 900); };
+})();
+Object.assign(ACTIONS, {
+  'bq-open': el => { const b = S.reading.books.find(x => x.id === el.dataset.id); if (b) openBookTalk(b); },
+  'bq-say': el => speak(t(el.dataset.id)),
+  'bq-save': el => { const b = S.reading.books.find(x => x.id === el.dataset.id); if (!b) return; b.talk = {}; $$('#bookModal [data-bq]').forEach(i => { const v = text(i.value, 300); if (v) b.talk[i.dataset.bq] = v; }); Modal.close('bookModal'); commit(); toast(t('saved'), 'success'); },
+  'bq-print': el => { const b = S.reading.books.find(x => x.id === el.dataset.id); if (!b) return; printDocument(bookSheetHtml(b), t('bqSheetTitle') + ' — ' + b.title); }
+});
+
+/* ---------- dados ---------- */
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    d.studied = (Array.isArray(raw.studied) ? raw.studied : []).map(x => { if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId || !STUDY_TOPICS[x.subject] || typeof x.topic !== 'string') return null; return { id: `${childId}_${x.subject}_${x.topic.slice(0, 20)}`, childId, subject: x.subject, topic: x.topic.slice(0, 20), first: safeIso(x.first), last: safeIso(x.last), count: clamp(int(x.count, 1), 1, 100000) }; }).filter(Boolean).slice(0, 3000);
+    d.studyTests = {}; if (raw.studyTests && typeof raw.studyTests === 'object') Object.entries(raw.studyTests).forEach(([k, v]) => { if (v && typeof v.seed === 'string' && /^[\w-]+_[a-z]+$/.test(k)) d.studyTests[k] = { seed: v.seed.slice(0, 80), date: safeIso(v.date), topics: Array.isArray(v.topics) ? v.topics.filter(x => typeof x === 'string').slice(0, 20) : [] }; });
+    // assuntos guardados nas lições, no inglês e nos livros
+    const rawHw = raw.homework && Array.isArray(raw.homework.entries) ? raw.homework.entries : [];
+    d.homework.entries.forEach(e => { const r = rawHw.find(x => x && x.id === e.id); if (r && Array.isArray(r.topics)) e.topics = r.topics.filter(x => typeof x === 'string').slice(0, 15); });
+    const rawEn = raw.english && Array.isArray(raw.english.sessions) ? raw.english.sessions : [];
+    d.english.sessions.forEach(e => { const r = rawEn.find(x => x && x.id === e.id); if (r && Array.isArray(r.topics)) e.topics = r.topics.filter(x => typeof x === 'string').slice(0, 15); });
+    const rawBooks = raw.reading && Array.isArray(raw.reading.books) ? raw.reading.books : [];
+    d.reading.books.forEach(b => { const r = rawBooks.find(x => x && x.id === b.id); if (r && r.talk && typeof r.talk === 'object') { b.talk = {}; Object.entries(r.talk).forEach(([k, v]) => { if (/^bq_\w+$/.test(k) && typeof v === 'string') b.talk[k] = text(v, 300); }); } });
+  };
+})();
 
 </script>
 <script>
