@@ -1045,13 +1045,35 @@ span.q-name{cursor:default}
 .bq-stars{font-size:30px;letter-spacing:8px;margin:4px 0}
 .bq-ans{font-size:14px;font-style:italic;border-left:3px solid #a855f7;padding-left:8px}
 .book-sheet .ws-sec h3{font-size:15px!important}
+/* combinados e consequências */
+.cq-kids{display:flex;gap:8px;flex-wrap:wrap}
+.cq-kid{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:999px;border:2px solid color-mix(in srgb,var(--c) 45%,#fff);background:#fff;font:inherit;cursor:pointer}
+.cq-kid:hover{background:#fff7ed;border-color:#f97316}
+.cq-kid em{font-style:normal;font-size:12px}
+.cq-rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;margin:6px 0 10px}
+.cq-rule{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font:inherit;text-align:left;cursor:pointer}
+.cq-rule span{font-size:22px}.cq-rule b{flex:1;font-size:13px;line-height:1.2}.cq-rule em{font-style:normal;font-weight:900;color:#b42318}
+.cq-rule.on{border-color:#dc2626;background:#fef2f2}
+.cq-mini{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;border:1.5px solid #fed7aa;background:#fff7ed;font-size:16px;cursor:pointer;z-index:2}
+.cq-mini:hover{background:#ffedd5;transform:scale(1.08)}
+.cq-qbtn{margin-right:6px}
+.mb{margin-bottom:16px}
+.rules-poster .rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.rp-col{border:2px solid #e2e2ea;border-radius:18px;padding:12px 16px}
+.rp-col.good{border-color:#86efac;background:#f0fdf4}.rp-col.bad{border-color:#fecaca;background:#fef2f2}
+.rp-col h3{margin:0 0 8px!important;font-size:18px!important}
+.rp-col ul{margin:0;padding-left:0;list-style:none}
+.rp-col li{font-size:15px;padding:6px 0;border-bottom:1px dashed #ddd}
+.rp-col.good li:before{content:"✅ "}
+.rp-col li b{float:right;color:#b42318}
+.rp-foot{font-size:13px;font-weight:700;margin:10px 0 0}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v85 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v86 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -6190,13 +6212,396 @@ const STUDY_TEXT = {
 const KITCHEN_TEXT = {"pt": {"lib_squeezeLemon": "Espremer limão para o suco", "lib_washVeggies": "Lavar frutas e verduras", "lib_stirMix": "Mexer a massa do bolo (com ajuda)", "lib_peel": "Descascar banana, ovo cozido ou tangerina", "lib_cutGarlicOnion": "Ajudar a cortar alho e cebola (com um adulto)", "lib_crackEggs": "Quebrar os ovos numa tigela", "lib_measure": "Medir os ingredientes da receita"}, "en": {"lib_squeezeLemon": "Squeeze lemons for juice", "lib_washVeggies": "Wash fruit and vegetables", "lib_stirMix": "Stir the cake batter (with help)", "lib_peel": "Peel a banana, boiled egg or tangerine", "lib_cutGarlicOnion": "Help chop garlic and onion (with an adult)", "lib_crackEggs": "Crack the eggs into a bowl", "lib_measure": "Measure the recipe ingredients"}, "es": {"lib_squeezeLemon": "Exprimir limones para el jugo", "lib_washVeggies": "Lavar frutas y verduras", "lib_stirMix": "Mezclar la masa del pastel (con ayuda)", "lib_peel": "Pelar banana, huevo duro o mandarina", "lib_cutGarlicOnion": "Ayudar a cortar ajo y cebolla (con un adulto)", "lib_crackEggs": "Romper los huevos en un bol", "lib_measure": "Medir los ingredientes de la receta"}, "it": {"lib_squeezeLemon": "Spremere i limoni per il succo", "lib_washVeggies": "Lavare frutta e verdura", "lib_stirMix": "Mescolare l'impasto della torta (con aiuto)", "lib_peel": "Sbucciare banana, uovo sodo o mandarino", "lib_cutGarlicOnion": "Aiutare a tagliare aglio e cipolla (con un adulto)", "lib_crackEggs": "Rompere le uova in una ciotola", "lib_measure": "Misurare gli ingredienti della ricetta"}, "zh": {"lib_squeezeLemon": "挤柠檬做果汁", "lib_washVeggies": "洗水果和蔬菜", "lib_stirMix": "搅拌蛋糕面糊（有人帮忙）", "lib_peel": "剥香蕉、煮鸡蛋或橘子", "lib_cutGarlicOnion": "帮忙切蒜和洋葱（大人陪同）", "lib_crackEggs": "把鸡蛋打进碗里", "lib_measure": "量食谱里的配料"}, "zht": {"lib_squeezeLemon": "擠檸檬做果汁", "lib_washVeggies": "洗水果和蔬菜", "lib_stirMix": "攪拌蛋糕麵糊（有人幫忙）", "lib_peel": "剝香蕉、煮雞蛋或橘子", "lib_cutGarlicOnion": "幫忙切蒜和洋蔥（大人陪同）", "lib_crackEggs": "把雞蛋打進碗裡", "lib_measure": "量食譜裡的配料"}};
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], KITCHEN_TEXT[l]));
 
+/* Textos da v86: combinados e consequências. */
+const RULES_TEXT = {
+"pt": {
+"r_disobey": "Desobedecer (não fazer o que foi pedido)",
+"r_fight": "Brigar ou bater no irmão",
+"r_lie": "Mentir",
+"r_rude": "Responder mal ou gritar",
+"r_tantrum": "Fazer birra ou escândalo",
+"r_mess": "Deixar bagunça depois de avisado",
+"r_break": "Quebrar algo de propósito",
+"r_screen": "Usar tela sem permissão",
+"r_bedtime": "Não ir para a cama na hora",
+"r_school": "Bilhete da escola por mau comportamento",
+"cq_calm": "Tempo de calma ({n} min)",
+"cq_noscreen": "Sem tela hoje",
+"cq_noreward": "Sem recompensa hoje",
+"cq_talk": "Conversa com os pais",
+"cq_fix": "Ajudar a consertar ou arrumar",
+"cq_early": "Dormir mais cedo",
+"cqTitle": "Consequência — {name}",
+"cqWarnsToday": "Hoje já recebeu {n} aviso(s).",
+"cqWhat": "O que aconteceu?",
+"cqPoints": "Pontos que perde",
+"cqNote": "Detalhe (opcional)",
+"cqNotePh": "Ex.: não desligou a TV quando pedi",
+"cqAlso": "Consequência além dos pontos (opcional)",
+"cqHint": "Dica: dê primeiro um aviso 🟡. Se ele pedir desculpas e consertar, você pode devolver {pct}% dos pontos em Comportamento (🤝 Reparou).",
+"cqWarnBtn": "Só um aviso",
+"cqApply": "Tirar pontos",
+"cqQuickTitle": "Desobedeceu? Registro rápido",
+"cqQuickHint": "Toque na criança, escolha o motivo e pronto. Também dá pelo ⚠️ no painel e no quadro.",
+"cqRepair": "Reparou",
+"cqRepaired": "reparou",
+"cqLose": "Perder pontos",
+"cqPick": "Escolha o que aconteceu.",
+"cqWarning": "Aviso",
+"cqWarned": "Aviso registrado para {name} ({n} hoje).",
+"cqApplied": "{name} perdeu {n} pontos.",
+"cqRepairedNote": "Reparou o erro",
+"cqRepairDone": "{name} pediu desculpas e consertou: recuperou {n} pontos.",
+"rulesTitle": "Combinados da família",
+"rulesHint": "O que faz perder pontos e quanto. Mude os valores, apague ou crie combinados da sua casa.",
+"rulesLose": "perde {n} pontos",
+"rulesSmall": "pequenos: {n}",
+"rulesNew": "Novo combinado",
+"rulesNewPh": "Ex.: Não guardar o celular na hora",
+"rulesAdd": "Adicionar combinado",
+"rulesSmallLabel": "Crianças até 4 anos perdem",
+"rulesSmallSame": "O mesmo que os maiores",
+"rulesRepairLabel": "Ao reparar o erro, recupera",
+"rulesRepairNo": "Nada",
+"rulesPrint": "Imprimir combinados",
+"rulesPosterSub": "O que combinamos juntos",
+"rulesGoodTitle": "Na nossa família a gente…",
+"rg_listen": "escuta e obedece os pais",
+"rg_kind": "trata os irmãos com carinho",
+"rg_truth": "fala sempre a verdade",
+"rg_help": "ajuda em casa",
+"rg_tidy": "guarda o que usou",
+"rg_sorry": "pede desculpas quando erra",
+"rulesGoodFoot": "Quem cumpre ganha estrelas e recompensas!",
+"rulesBadTitle": "Se não cumprir, perde pontos",
+"rulesWarnFoot": "Primeiro vem um aviso.",
+"rulesRepairFoot": "Pedindo desculpas e consertando, recupera {pct}% dos pontos."
+},
+"en": {
+"r_disobey": "Disobeying (not doing what was asked)",
+"r_fight": "Fighting or hitting a sibling",
+"r_lie": "Lying",
+"r_rude": "Talking back or yelling",
+"r_tantrum": "Throwing a tantrum",
+"r_mess": "Leaving a mess after being told",
+"r_break": "Breaking something on purpose",
+"r_screen": "Using screens without permission",
+"r_bedtime": "Not going to bed on time",
+"r_school": "Note from school for bad behavior",
+"cq_calm": "Calm-down time ({n} min)",
+"cq_noscreen": "No screens today",
+"cq_noreward": "No reward today",
+"cq_talk": "Talk with parents",
+"cq_fix": "Help fix or clean up",
+"cq_early": "Go to bed earlier",
+"cqTitle": "Consequence — {name}",
+"cqWarnsToday": "Already got {n} warning(s) today.",
+"cqWhat": "What happened?",
+"cqPoints": "Points lost",
+"cqNote": "Detail (optional)",
+"cqNotePh": "E.g. didn't turn off the TV when asked",
+"cqAlso": "Consequence besides points (optional)",
+"cqHint": "Tip: give a warning 🟡 first. If they apologize and make it right, you can give back {pct}% of the points in Behavior (🤝 Made it right).",
+"cqWarnBtn": "Just a warning",
+"cqApply": "Take points",
+"cqQuickTitle": "Misbehaved? Quick log",
+"cqQuickHint": "Tap the child, pick the reason and you're done. Also available from ⚠️ on the dashboard and chart.",
+"cqRepair": "Made it right",
+"cqRepaired": "made it right",
+"cqLose": "Lose points",
+"cqPick": "Choose what happened.",
+"cqWarning": "Warning",
+"cqWarned": "Warning logged for {name} ({n} today).",
+"cqApplied": "{name} lost {n} points.",
+"cqRepairedNote": "Made it right",
+"cqRepairDone": "{name} apologized and made it right: got {n} points back.",
+"rulesTitle": "Family rules",
+"rulesHint": "What makes them lose points and how many. Change values, delete or create your own rules.",
+"rulesLose": "loses {n} points",
+"rulesSmall": "little ones: {n}",
+"rulesNew": "New rule",
+"rulesNewPh": "E.g. Not putting the tablet away on time",
+"rulesAdd": "Add rule",
+"rulesSmallLabel": "Children up to 4 lose",
+"rulesSmallSame": "The same as older ones",
+"rulesRepairLabel": "Making it right gives back",
+"rulesRepairNo": "Nothing",
+"rulesPrint": "Print rules",
+"rulesPosterSub": "What we agreed on together",
+"rulesGoodTitle": "In our family we…",
+"rg_listen": "listen to and obey our parents",
+"rg_kind": "treat our siblings kindly",
+"rg_truth": "always tell the truth",
+"rg_help": "help at home",
+"rg_tidy": "put away what we use",
+"rg_sorry": "say sorry when we're wrong",
+"rulesGoodFoot": "Keeping the rules earns stars and rewards!",
+"rulesBadTitle": "Breaking a rule loses points",
+"rulesWarnFoot": "A warning comes first.",
+"rulesRepairFoot": "Apologizing and making it right gives back {pct}% of the points."
+},
+"es": {
+"r_disobey": "Desobedecer (no hacer lo que se pidió)",
+"r_fight": "Pelear o pegarle al hermano",
+"r_lie": "Mentir",
+"r_rude": "Contestar mal o gritar",
+"r_tantrum": "Hacer berrinche",
+"r_mess": "Dejar desorden después de avisarle",
+"r_break": "Romper algo a propósito",
+"r_screen": "Usar pantallas sin permiso",
+"r_bedtime": "No ir a la cama a la hora",
+"r_school": "Nota de la escuela por mal comportamiento",
+"cq_calm": "Tiempo de calma ({n} min)",
+"cq_noscreen": "Sin pantallas hoy",
+"cq_noreward": "Sin recompensa hoy",
+"cq_talk": "Charla con los padres",
+"cq_fix": "Ayudar a arreglar u ordenar",
+"cq_early": "Dormir más temprano",
+"cqTitle": "Consecuencia — {name}",
+"cqWarnsToday": "Hoy ya recibió {n} aviso(s).",
+"cqWhat": "¿Qué pasó?",
+"cqPoints": "Puntos que pierde",
+"cqNote": "Detalle (opcional)",
+"cqNotePh": "Ej.: no apagó la tele cuando se lo pedí",
+"cqAlso": "Consecuencia además de los puntos (opcional)",
+"cqHint": "Consejo: primero da un aviso 🟡. Si pide perdón y lo arregla, puedes devolver el {pct}% de los puntos en Comportamiento (🤝 Reparó).",
+"cqWarnBtn": "Solo un aviso",
+"cqApply": "Quitar puntos",
+"cqQuickTitle": "¿Desobedeció? Registro rápido",
+"cqQuickHint": "Toca al niño, elige el motivo y listo. También desde el ⚠️ del panel y del cuadro.",
+"cqRepair": "Reparó",
+"cqRepaired": "reparó",
+"cqLose": "Perder puntos",
+"cqPick": "Elige qué pasó.",
+"cqWarning": "Aviso",
+"cqWarned": "Aviso registrado para {name} ({n} hoy).",
+"cqApplied": "{name} perdió {n} puntos.",
+"cqRepairedNote": "Reparó el error",
+"cqRepairDone": "{name} pidió perdón y lo arregló: recuperó {n} puntos.",
+"rulesTitle": "Acuerdos de la familia",
+"rulesHint": "Qué hace perder puntos y cuántos. Cambia los valores, borra o crea acuerdos de tu casa.",
+"rulesLose": "pierde {n} puntos",
+"rulesSmall": "pequeños: {n}",
+"rulesNew": "Nuevo acuerdo",
+"rulesNewPh": "Ej.: No guardar la tableta a la hora",
+"rulesAdd": "Agregar acuerdo",
+"rulesSmallLabel": "Los niños de hasta 4 años pierden",
+"rulesSmallSame": "Lo mismo que los mayores",
+"rulesRepairLabel": "Al reparar el error, recupera",
+"rulesRepairNo": "Nada",
+"rulesPrint": "Imprimir acuerdos",
+"rulesPosterSub": "Lo que acordamos juntos",
+"rulesGoodTitle": "En nuestra familia…",
+"rg_listen": "escuchamos y obedecemos a los padres",
+"rg_kind": "tratamos a los hermanos con cariño",
+"rg_truth": "siempre decimos la verdad",
+"rg_help": "ayudamos en casa",
+"rg_tidy": "guardamos lo que usamos",
+"rg_sorry": "pedimos perdón cuando nos equivocamos",
+"rulesGoodFoot": "¡Quien cumple gana estrellas y recompensas!",
+"rulesBadTitle": "Si no cumple, pierde puntos",
+"rulesWarnFoot": "Primero viene un aviso.",
+"rulesRepairFoot": "Pidiendo perdón y arreglándolo, recupera el {pct}% de los puntos."
+},
+"it": {
+"r_disobey": "Disobbedire (non fare ciò che è stato chiesto)",
+"r_fight": "Litigare o picchiare il fratello",
+"r_lie": "Dire bugie",
+"r_rude": "Rispondere male o urlare",
+"r_tantrum": "Fare i capricci",
+"r_mess": "Lasciare disordine dopo essere avvisato",
+"r_break": "Rompere qualcosa apposta",
+"r_screen": "Usare schermi senza permesso",
+"r_bedtime": "Non andare a letto in orario",
+"r_school": "Nota della scuola per cattivo comportamento",
+"cq_calm": "Momento di calma ({n} min)",
+"cq_noscreen": "Niente schermi oggi",
+"cq_noreward": "Niente ricompensa oggi",
+"cq_talk": "Chiacchierata con i genitori",
+"cq_fix": "Aiutare a sistemare o riordinare",
+"cq_early": "A letto prima",
+"cqTitle": "Conseguenza — {name}",
+"cqWarnsToday": "Oggi ha già ricevuto {n} avviso/i.",
+"cqWhat": "Cosa è successo?",
+"cqPoints": "Punti che perde",
+"cqNote": "Dettaglio (facoltativo)",
+"cqNotePh": "Es.: non ha spento la TV quando gliel'ho chiesto",
+"cqAlso": "Conseguenza oltre ai punti (facoltativo)",
+"cqHint": "Consiglio: prima dai un avviso 🟡. Se chiede scusa e rimedia, puoi restituire il {pct}% dei punti in Comportamento (🤝 Ha rimediato).",
+"cqWarnBtn": "Solo un avviso",
+"cqApply": "Togli punti",
+"cqQuickTitle": "Ha disobbedito? Registro rapido",
+"cqQuickHint": "Tocca il bambino, scegli il motivo e fatto. Anche dal ⚠️ nella bacheca e nella tabella.",
+"cqRepair": "Ha rimediato",
+"cqRepaired": "ha rimediato",
+"cqLose": "Perdere punti",
+"cqPick": "Scegli cosa è successo.",
+"cqWarning": "Avviso",
+"cqWarned": "Avviso registrato per {name} ({n} oggi).",
+"cqApplied": "{name} ha perso {n} punti.",
+"cqRepairedNote": "Ha rimediato all'errore",
+"cqRepairDone": "{name} ha chiesto scusa e ha rimediato: ha recuperato {n} punti.",
+"rulesTitle": "Patti della famiglia",
+"rulesHint": "Cosa fa perdere punti e quanti. Cambia i valori, elimina o crea i patti di casa tua.",
+"rulesLose": "perde {n} punti",
+"rulesSmall": "piccoli: {n}",
+"rulesNew": "Nuovo patto",
+"rulesNewPh": "Es.: Non mettere via il tablet in orario",
+"rulesAdd": "Aggiungi patto",
+"rulesSmallLabel": "I bambini fino a 4 anni perdono",
+"rulesSmallSame": "Lo stesso dei grandi",
+"rulesRepairLabel": "Rimediando all'errore, recupera",
+"rulesRepairNo": "Niente",
+"rulesPrint": "Stampa i patti",
+"rulesPosterSub": "Quello che abbiamo deciso insieme",
+"rulesGoodTitle": "Nella nostra famiglia noi…",
+"rg_listen": "ascoltiamo e obbediamo ai genitori",
+"rg_kind": "trattiamo i fratelli con affetto",
+"rg_truth": "diciamo sempre la verità",
+"rg_help": "aiutiamo in casa",
+"rg_tidy": "rimettiamo a posto ciò che usiamo",
+"rg_sorry": "chiediamo scusa quando sbagliamo",
+"rulesGoodFoot": "Chi rispetta i patti guadagna stelle e ricompense!",
+"rulesBadTitle": "Se non li rispetta, perde punti",
+"rulesWarnFoot": "Prima arriva un avviso.",
+"rulesRepairFoot": "Chiedendo scusa e rimediando, recupera il {pct}% dei punti."
+},
+"zh": {
+"r_disobey": "不听话（没做让做的事）",
+"r_fight": "和兄弟姐妹打架或打人",
+"r_lie": "说谎",
+"r_rude": "顶嘴或大喊",
+"r_tantrum": "耍脾气、哭闹",
+"r_mess": "提醒后还乱放东西",
+"r_break": "故意弄坏东西",
+"r_screen": "没经允许看屏幕",
+"r_bedtime": "不按时上床",
+"r_school": "学校因不良行为发来通知",
+"cq_calm": "冷静时间（{n} 分钟）",
+"cq_noscreen": "今天不能看屏幕",
+"cq_noreward": "今天没有奖励",
+"cq_talk": "和爸爸妈妈谈话",
+"cq_fix": "帮忙修好或收拾",
+"cq_early": "早点睡觉",
+"cqTitle": "后果 — {name}",
+"cqWarnsToday": "今天已经被提醒 {n} 次。",
+"cqWhat": "发生了什么？",
+"cqPoints": "扣多少积分",
+"cqNote": "细节（可选）",
+"cqNotePh": "例如：让他关电视他没关",
+"cqAlso": "积分以外的后果（可选）",
+"cqHint": "小提示：先给一次提醒 🟡。如果孩子道歉并弥补，可以在\"行为\"里退回 {pct}% 的积分（🤝 已弥补）。",
+"cqWarnBtn": "只是提醒",
+"cqApply": "扣积分",
+"cqQuickTitle": "不听话？快速记录",
+"cqQuickHint": "点孩子，选原因就好。首页和任务表上的 ⚠️ 也可以用。",
+"cqRepair": "已弥补",
+"cqRepaired": "已弥补",
+"cqLose": "扣积分",
+"cqPick": "请选择发生了什么。",
+"cqWarning": "提醒",
+"cqWarned": "已为 {name} 记录提醒（今天 {n} 次）。",
+"cqApplied": "{name} 扣了 {n} 积分。",
+"cqRepairedNote": "弥补了错误",
+"cqRepairDone": "{name} 道歉并弥补了：拿回 {n} 积分。",
+"rulesTitle": "家庭约定",
+"rulesHint": "哪些行为会扣分，扣多少。可以改分值、删除或添加你们家的约定。",
+"rulesLose": "扣 {n} 积分",
+"rulesSmall": "小朋友：{n}",
+"rulesNew": "新约定",
+"rulesNewPh": "例如：没按时收好平板",
+"rulesAdd": "添加约定",
+"rulesSmallLabel": "4 岁以下的孩子扣",
+"rulesSmallSame": "和大孩子一样",
+"rulesRepairLabel": "弥补错误后退回",
+"rulesRepairNo": "不退",
+"rulesPrint": "打印家庭约定",
+"rulesPosterSub": "我们一起定下的约定",
+"rulesGoodTitle": "在我们家，我们……",
+"rg_listen": "听爸爸妈妈的话",
+"rg_kind": "友爱兄弟姐妹",
+"rg_truth": "永远说实话",
+"rg_help": "帮忙做家务",
+"rg_tidy": "用完东西放回原处",
+"rg_sorry": "做错了会道歉",
+"rulesGoodFoot": "遵守约定就能得到星星和奖励！",
+"rulesBadTitle": "不遵守就会扣分",
+"rulesWarnFoot": "先有一次提醒。",
+"rulesRepairFoot": "道歉并弥补，可以拿回 {pct}% 的积分。"
+},
+"zht": {
+"r_disobey": "不聽話（沒做讓做的事）",
+"r_fight": "和兄弟姐妹打架或打人",
+"r_lie": "說謊",
+"r_rude": "頂嘴或大喊",
+"r_tantrum": "耍脾氣、哭鬧",
+"r_mess": "提醒後還亂放東西",
+"r_break": "故意弄壞東西",
+"r_screen": "沒經允許看螢幕",
+"r_bedtime": "不按時上床",
+"r_school": "學校因不良行為發來通知",
+"cq_calm": "冷靜時間（{n} 分鐘）",
+"cq_noscreen": "今天不能看螢幕",
+"cq_noreward": "今天沒有獎勵",
+"cq_talk": "和爸爸媽媽談話",
+"cq_fix": "幫忙修好或收拾",
+"cq_early": "早點睡覺",
+"cqTitle": "後果 — {name}",
+"cqWarnsToday": "今天已經被提醒 {n} 次。",
+"cqWhat": "發生了什麼？",
+"cqPoints": "扣多少積分",
+"cqNote": "細節（可選）",
+"cqNotePh": "例如：讓他關電視他沒關",
+"cqAlso": "積分以外的後果（可選）",
+"cqHint": "小提示：先給一次提醒 🟡。如果孩子道歉並彌補，可以在\"行為\"裡退回 {pct}% 的積分（🤝 已彌補）。",
+"cqWarnBtn": "只是提醒",
+"cqApply": "扣積分",
+"cqQuickTitle": "不聽話？快速記錄",
+"cqQuickHint": "點孩子，選原因就好。首頁和任務表上的 ⚠️ 也可以用。",
+"cqRepair": "已彌補",
+"cqRepaired": "已彌補",
+"cqLose": "扣積分",
+"cqPick": "請選擇發生了什麼。",
+"cqWarning": "提醒",
+"cqWarned": "已為 {name} 記錄提醒（今天 {n} 次）。",
+"cqApplied": "{name} 扣了 {n} 積分。",
+"cqRepairedNote": "彌補了錯誤",
+"cqRepairDone": "{name} 道歉並彌補了：拿回 {n} 積分。",
+"rulesTitle": "家庭約定",
+"rulesHint": "哪些行為會扣分，扣多少。可以改分值、刪除或新增你們家的約定。",
+"rulesLose": "扣 {n} 積分",
+"rulesSmall": "小朋友：{n}",
+"rulesNew": "新約定",
+"rulesNewPh": "例如：沒按時收好平板",
+"rulesAdd": "新增約定",
+"rulesSmallLabel": "4 歲以下的孩子扣",
+"rulesSmallSame": "和大孩子一樣",
+"rulesRepairLabel": "彌補錯誤後退回",
+"rulesRepairNo": "不退",
+"rulesPrint": "列印家庭約定",
+"rulesPosterSub": "我們一起定下的約定",
+"rulesGoodTitle": "在我們家，我們……",
+"rg_listen": "聽爸爸媽媽的話",
+"rg_kind": "友愛兄弟姐妹",
+"rg_truth": "永遠說實話",
+"rg_help": "幫忙做家務",
+"rg_tidy": "用完東西放回原處",
+"rg_sorry": "做錯了會道歉",
+"rulesGoodFoot": "遵守約定就能得到星星和獎勵！",
+"rulesBadTitle": "不遵守就會扣分",
+"rulesWarnFoot": "先有一次提醒。",
+"rulesRepairFoot": "道歉並彌補，可以拿回 {pct}% 的積分。"
+}
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], RULES_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 85;
+const APP_VERSION = 86;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -11094,6 +11499,122 @@ Object.assign(ACTIONS, {
     d.english.sessions.forEach(e => { const r = rawEn.find(x => x && x.id === e.id); if (r && Array.isArray(r.topics)) e.topics = r.topics.filter(x => typeof x === 'string').slice(0, 15); });
     const rawBooks = raw.reading && Array.isArray(raw.reading.books) ? raw.reading.books : [];
     d.reading.books.forEach(b => { const r = rawBooks.find(x => x && x.id === b.id); if (r && r.talk && typeof r.talk === 'object') { b.talk = {}; Object.entries(r.talk).forEach(([k, v]) => { if (/^bq_\w+$/.test(k) && typeof v === 'string') b.talk[k] = text(v, 300); }); } });
+  };
+})();
+
+/* =====================================================================
+   Combinados e consequências: motivos prontos (desobedecer, brigar,
+   mentir…) com perda de pontos, aviso antes, consequências sem pontos
+   (tempo de calma, sem tela…) e a chance de reparar o erro.
+   Usa o registro de comportamento que já existe (recordBehavior).
+   ===================================================================== */
+
+const RULE_DEFAULTS = [
+  { key: 'r_disobey', icon: '🙉', points: 10 }, { key: 'r_fight', icon: '🥊', points: 15 }, { key: 'r_lie', icon: '🤥', points: 15 },
+  { key: 'r_rude', icon: '😤', points: 10 }, { key: 'r_tantrum', icon: '😫', points: 5 }, { key: 'r_mess', icon: '🧸', points: 5 },
+  { key: 'r_break', icon: '💥', points: 20 }, { key: 'r_screen', icon: '📺', points: 10 }, { key: 'r_bedtime', icon: '🛏️', points: 5 },
+  { key: 'r_school', icon: '📩', points: 15 }
+];
+const CONSEQUENCES = [{ key: 'cq_calm', icon: '⏸️' }, { key: 'cq_noscreen', icon: '📵' }, { key: 'cq_noreward', icon: '🎁' }, { key: 'cq_talk', icon: '🗣️' }, { key: 'cq_fix', icon: '🧹' }, { key: 'cq_early', icon: '🌙' }];
+function ruleName(r) { return r.key ? t(r.key) : r.name; }
+/** Pontos que a criança perde nesse combinado (os pequenos perdem menos, se estiver ligado). */
+function rulePoints(r, c) { const f = c.age <= 4 ? S.rules.smallFactor / 100 : 1; return Math.max(1, Math.round(r.points * f)); }
+function warningsToday(c) { const k = dayKey(); return S.behaviorNotes.filter(n => n.childId === c.id && n.type === 'negative' && n.warning && dayKey(n.date) === k).length; }
+
+function openConsequence(childId) {
+  const c = childById(childId); if (!c || isChildMode()) return;
+  ui.cq = { childId, rule: null, cons: [] };
+  const warns = warningsToday(c);
+  Modal.open({
+    id: 'cqModal', title: '⚠️ ' + t('cqTitle', { name: esc(c.name) }),
+    body: `${warns ? `<div class="notice warn" style="margin-bottom:10px">${t('cqWarnsToday', { n: warns })}</div>` : ''}
+      <label>${t('cqWhat')}</label>
+      <div class="cq-rules">${S.rules.list.map(r => `<button type="button" class="cq-rule" data-act="cq-rule" data-id="${esc(r.id)}"><span>${esc(r.icon)}</span><b>${esc(ruleName(r))}</b><em>−${rulePoints(r, c)}</em></button>`).join('')}</div>
+      <div class="row2 field"><div><label for="cqPts">${t('cqPoints')}</label><input id="cqPts" type="number" min="0" max="999" value="0" inputmode="numeric"></div><div><label for="cqNote">${t('cqNote')}</label><input id="cqNote" maxlength="200" placeholder="${esc(t('cqNotePh'))}"></div></div>
+      <label class="mt">${t('cqAlso')}</label>
+      <div class="chips">${CONSEQUENCES.map(x => `<button type="button" class="chip" data-act="cq-cons" data-id="${x.key}">${x.icon} ${esc(t(x.key, { n: c.age }))}</button>`).join('')}</div>
+      <p class="hint">${t('cqHint', { pct: S.rules.repairPct })}</p>`,
+    foot: `<button type="button" class="btn btn-soft" data-act="cq-warn">🟡 ${t('cqWarnBtn')}</button><button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-danger" data-act="cq-apply">${t('cqApply')}</button>`
+  });
+}
+function cqDescription() {
+  const r = S.rules.list.find(x => x.id === ui.cq.rule), c = childById(ui.cq.childId);
+  const parts = [r ? `${r.icon} ${ruleName(r)}` : '', text($('#cqNote').value, 200), ui.cq.cons.map(k => { const x = CONSEQUENCES.find(y => y.key === k); return x ? `${x.icon} ${t(k, { n: c.age })}` : ''; }).filter(Boolean).join(', ')].filter(Boolean);
+  return parts.join(' · ');
+}
+function repairable(n) { return n.type === 'negative' && !n.warning && n.points > 0 && !n.repaired && Date.now() - Date.parse(n.date) < 2 * 864e5; }
+
+/* ---------- liga no Comportamento, no painel e no Quadro ---------- */
+(function () {
+  const sec = SECTIONS.find(s => s.id === 'comportamento'), b0 = sec.build, u0 = sec.update;
+  sec.build = () => `<div id="cqQuick"></div>` + b0() + `<div id="cqRules" class="mt"></div>`;
+  sec.update = function () {
+    u0.call(this);
+    $('#cqQuick').innerHTML = card('⚡ ' + t('cqQuickTitle'), `<p class="hint" style="margin-top:-6px">${t('cqQuickHint')}</p><div class="cq-kids">${S.children.map(c => `<button type="button" class="cq-kid" style="--c:${c.accentColor}" data-act="cq-open" data-id="${esc(c.id)}">${avatar(c, 'sm')}<b>${esc(c.name)}</b>${warningsToday(c) ? `<em>🟡×${warningsToday(c)}</em>` : ''}</button>`).join('')}</div>`, { cls: 'mb' });
+    // "reparou" nas observações recentes
+    $$('#bList .item').forEach((it, i) => { const n = S.behaviorNotes[i]; if (n && repairable(n)) { const right = it.querySelector('.right') || it; right.insertAdjacentHTML('beforeend', `<button type="button" class="btn btn-soft btn-sm" data-act="cq-repair" data-id="${esc(n.id)}">🤝 ${t('cqRepair')}</button>`); } else if (n && n.repaired) it.querySelector('strong') && it.querySelector('strong').insertAdjacentHTML('beforeend', ` <span class="pill ok">🤝 ${t('cqRepaired')}</span>`); });
+    $('#cqRules').innerHTML = card('📜 ' + t('rulesTitle'), `<p class="hint" style="margin-top:-6px">${t('rulesHint')}</p>
+      <div class="list">${S.rules.list.map(r => `<div class="item"><div class="meta"><span class="ico">${esc(r.icon)}</span><div><strong>${esc(ruleName(r))}</strong><div class="sub">${t('rulesLose', { n: r.points })}${S.rules.smallFactor < 100 ? ' · ' + t('rulesSmall', { n: Math.max(1, Math.round(r.points * S.rules.smallFactor / 100)) }) : ''}</div></div></div><div class="right val-input"><input type="number" min="1" max="999" value="${r.points}" data-change="rule-pts" data-id="${esc(r.id)}" aria-label="${esc(t('points'))}"><button type="button" class="icon-btn danger" data-act="rule-del" data-id="${esc(r.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>
+      <div class="row2 mt"><div><label for="ruleName">${t('rulesNew')}</label><input id="ruleName" maxlength="60" placeholder="${esc(t('rulesNewPh'))}"></div><div class="row2"><div><label for="ruleIcon">${t('icon')}</label><input id="ruleIcon" maxlength="8" value="⚠️"></div><div><label for="rulePts">${t('points')}</label><input id="rulePts" type="number" min="1" value="10"></div></div></div>
+      <div class="actions mt"><button type="button" class="btn btn-soft" data-act="rule-add">+ ${t('rulesAdd')}</button></div>
+      <div class="row2 mt"><div><label for="ruleSmall">${t('rulesSmallLabel')}</label><select id="ruleSmall">${[100, 75, 50, 25].map(v => `<option value="${v}" ${S.rules.smallFactor === v ? 'selected' : ''}>${v === 100 ? t('rulesSmallSame') : v + '%'}</option>`).join('')}</select></div><div><label for="ruleRepair">${t('rulesRepairLabel')}</label><select id="ruleRepair">${[0, 25, 50, 75].map(v => `<option value="${v}" ${S.rules.repairPct === v ? 'selected' : ''}>${v ? v + '%' : t('rulesRepairNo')}</option>`).join('')}</select></div></div>
+      <div class="actions mt"><button type="button" class="btn btn-primary" data-act="rules-save">${t('save')}</button><button type="button" class="btn btn-soft" data-act="rules-print">🖨️ ${t('rulesPrint')}</button></div>`);
+  };
+  // painel: botão ⚠️ em cada criança
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), du0 = dash.update;
+  dash.update = function () { du0.call(this); if (isChildMode()) return; $$('#dKids .child-card').forEach(card => { const id = card.dataset.id; if (!card.querySelector('.cq-mini')) card.insertAdjacentHTML('beforeend', `<button type="button" class="cq-mini" data-act="cq-open" data-id="${esc(id)}" title="${esc(t('cqTitle', { name: childName(id) }))}" aria-label="${esc(t('cqTitle', { name: childName(id) }))}">⚠️</button>`); }); };
+  // quadro: botão no topo
+  const q = SECTIONS.find(s => s.id === 'quadro'), qu0 = q.update;
+  q.update = function () { qu0.call(this); if (isChildMode() || ui.qChild === 'all') return; const w = $('#qBody .q-week'); if (w) w.insertAdjacentHTML('beforebegin', `<button type="button" class="btn btn-soft btn-sm cq-qbtn" data-act="cq-open" data-id="${esc(qChild().id)}">⚠️ ${t('cqLose')}</button>`); };
+})();
+
+function rulesPosterHtml() {
+  return `<div class="ps-page pr pr-family rules-poster"><div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">📜</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('rulesTitle'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('rulesPosterSub'))}</div></div></div>
+    <div class="rp-grid"><div class="rp-col good"><h3>👍 ${esc(t('rulesGoodTitle'))}</h3><ul>${['rg_listen', 'rg_kind', 'rg_truth', 'rg_help', 'rg_tidy', 'rg_sorry'].map(k => `<li>${esc(t(k))}</li>`).join('')}</ul><p class="rp-foot">⭐ ${esc(t('rulesGoodFoot'))}</p></div>
+      <div class="rp-col bad"><h3>⚠️ ${esc(t('rulesBadTitle'))}</h3><ul>${S.rules.list.map(r => `<li><span>${esc(r.icon)}</span> ${esc(ruleName(r))} <b>−${r.points}</b></li>`).join('')}</ul><p class="rp-foot">🟡 ${esc(t('rulesWarnFoot'))}${S.rules.repairPct ? ' 🤝 ' + esc(t('rulesRepairFoot', { pct: S.rules.repairPct })) : ''}</p></div></div>
+    <div class="pr-sign" style="margin-top:28px">${S.children.map(c => `<div><span></span>${esc(c.name)}</div>`).join('')}<div><span></span>${esc(t('prSignParent'))}</div></div></div>`;
+}
+
+Object.assign(ACTIONS, {
+  'cq-open': el => openConsequence(el.dataset.id),
+  'cq-rule': el => { ui.cq.rule = el.dataset.id; $$('#cqModal .cq-rule').forEach(b => b.classList.toggle('on', b === el)); const r = S.rules.list.find(x => x.id === el.dataset.id); $('#cqPts').value = rulePoints(r, childById(ui.cq.childId)); },
+  'cq-cons': el => { const k = el.dataset.id; ui.cq.cons = ui.cq.cons.includes(k) ? ui.cq.cons.filter(x => x !== k) : [...ui.cq.cons, k]; el.classList.toggle('on'); },
+  'cq-warn': () => {
+    const c = childById(ui.cq.childId), desc = cqDescription(); if (!desc) return toast(t('cqPick'), 'warn');
+    const e = recordBehavior(c.id, 'negative', `🟡 ${t('cqWarning')}: ${desc}`, 0, 0); S.behaviorNotes[0].warning = true;
+    Modal.close('cqModal'); commit(); toast(t('cqWarned', { name: c.name, n: warningsToday(c) }), 'info');
+  },
+  'cq-apply': async () => {
+    const c = childById(ui.cq.childId), pts = Math.max(0, int($('#cqPts').value, 0)), desc = cqDescription();
+    if (!desc && !pts) return toast(t('cqPick'), 'warn');
+    const e = recordBehavior(c.id, 'negative', desc || t('negative'), pts, 0); const hid = e.id;
+    Modal.close('cqModal'); commit();
+    toast(t('cqApplied', { name: c.name, n: Math.abs(e.points) }), 'warn', { label: t('undo'), run: () => { undoHistory(hid); S.behaviorNotes = S.behaviorNotes.filter(n => n.historyId !== hid); commit(); toast(t('undone')); } }, 8000);
+  },
+  'cq-repair': el => {
+    const n = S.behaviorNotes.find(x => x.id === el.dataset.id); if (!n || !repairable(n) || !S.rules.repairPct) return;
+    const back = Math.max(1, Math.round(n.points * S.rules.repairPct / 100)), c = childById(n.childId);
+    n.repaired = true; recordBehavior(c.id, 'positive', `🤝 ${t('cqRepairedNote')}: ${n.text}`, back, 0); commit();
+    toast(`🤝 ${t('cqRepairDone', { name: c.name, n: back })}`, 'success');
+  },
+  'rule-del': el => { S.rules.list = S.rules.list.filter(r => r.id !== el.dataset.id); commit(); },
+  'rule-add': () => { const name = text($('#ruleName').value, 60); if (!name) return toast(t('enterName'), 'warn'); S.rules.list.push({ id: uid('rl'), key: null, name, icon: text($('#ruleIcon').value, 8) || '⚠️', points: clamp(int($('#rulePts').value, 10), 1, 999) }); commit(); toast(t('saved'), 'success'); },
+  'rules-save': () => { S.rules.smallFactor = int($('#ruleSmall').value, 100); S.rules.repairPct = int($('#ruleRepair').value, 50); commit(); toast(t('saved'), 'success'); },
+  'rules-print': () => printDocument(rulesPosterHtml(), t('rulesTitle'))
+});
+Object.assign(CHANGES, { 'rule-pts': el => { const r = S.rules.list.find(x => x.id === el.dataset.id); const v = int(el.value, 0); if (r && v > 0 && v !== r.points) { r.points = v; commit(); } } });
+
+/* ---------- dados ---------- */
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const r = raw.rules && typeof raw.rules === 'object' ? raw.rules : {};
+    const list = Array.isArray(r.list) ? r.list.map(x => { if (!x || typeof x !== 'object') return null; const key = typeof x.key === 'string' && RULE_DEFAULTS.some(dd => dd.key === x.key) ? x.key : null; const name = text(x.name, 60); if (!key && !name) return null; return { id: cleanId(x.id) || uid('rl'), key, name, icon: text(x.icon || '⚠️', 8) || '⚠️', points: clamp(int(x.points, 10), 1, 999) }; }).filter(Boolean) : null;
+    d.rules = { list: list || RULE_DEFAULTS.map(x => ({ id: x.key, key: x.key, name: '', icon: x.icon, points: x.points })), smallFactor: [25, 50, 75, 100].includes(int(r.smallFactor, 50)) ? int(r.smallFactor, 50) : 50, repairPct: [0, 25, 50, 75].includes(int(r.repairPct, 50)) ? int(r.repairPct, 50) : 50 };
+    // avisos e reparos ficam nas observações de comportamento
+    const rawNotes = Array.isArray(raw.behaviorNotes) ? raw.behaviorNotes : [];
+    d.behaviorNotes.forEach(n => { const x = rawNotes.find(y => y && y.id === n.id); if (x) { if (x.warning) n.warning = true; if (x.repaired) n.repaired = true; } });
   };
 })();
 
