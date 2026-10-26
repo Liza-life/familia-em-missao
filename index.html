@@ -802,13 +802,54 @@ span.q-name{cursor:default}
 .pr-chart .pr-box{padding:5px 9px}
 .pr-chart .pr-extras{gap:3px 12px}
 .pr-chart .pr-cheer{margin-top:8px}
+.pr-tasklist .pr-hero{padding:6px 12px;margin-bottom:6px}
+.pr-tasklist .pr-hero .pr-av{width:44px;height:44px;font-size:24px}
+.pr-tasklist .pr-title{font-size:22px}
+.pr-tasklist .pr-whogrid td{height:var(--rowh,26px);padding-top:0;padding-bottom:0}
+.pr-tasklist .pr-whogrid td.pr-tl,.pr-tasklist .pr-whogrid td.when{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pr-tasklist.pr-tight .pr-whogrid{font-size:10px}
+.pr-tasklist.pr-tight .pr-whogrid td.ok{font-size:12px}
+.pr-tasklist.pr-tight .pr-ti{font-size:10px;width:15px}
+.pr-tasklist .pr-foot{margin-top:6px}
+.g-print-box{border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}.g-print-box h3{margin:0 0 2px;font-size:16px}.g-print-box.key{background:#fafaff;border-style:dashed}
+/* jogos para dois */
+.g-tile.duel{background:linear-gradient(145deg,#fff,#fff7ed)}
+.g-modes{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
+.g-players{display:flex;justify-content:center;align-items:center;gap:10px;font-weight:800;flex-wrap:wrap}
+.g-players span{padding:5px 12px;border-radius:999px;background:#f4f4f8}
+.g-players span.on{background:var(--primary);color:#fff}
+.g-status{text-align:center;font-weight:800;margin:8px 0 12px}
+.g-ttt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:300px;margin:0 auto}
+.g-tcell{aspect-ratio:1;border-radius:16px;border:2px solid var(--line);background:#fff;font-size:46px;cursor:pointer}
+.g-tcell:hover:not([disabled]){border-color:var(--primary)}
+.g-tcell.win{background:#dcfce7;border-color:#16a34a}
+.g-c4{max-width:420px;margin:0 auto}
+.g-c4-cols{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+.g-c4-drop{height:34px;border-radius:10px;border:1.5px dashed #93c5fd;background:#eff6ff;color:#2563eb;font-weight:900;cursor:pointer}
+.g-c4-drop[disabled]{opacity:.35;cursor:default}
+.g-c4-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:8px;border-radius:16px;background:#2563eb}
+.g-c4-cell{aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:inset 0 3px 6px rgba(0,0,0,.25)}
+.g-c4-cell.p1{background:radial-gradient(circle at 35% 35%,#fca5a5,#dc2626)}
+.g-c4-cell.p2{background:radial-gradient(circle at 35% 35%,#fde68a,#eab308)}
+.g-c4-cell.win{outline:4px solid #22c55e;outline-offset:-2px}
+.g-c4-cell.last{box-shadow:0 0 0 3px rgba(255,255,255,.8)}
+.g-dam{display:grid;grid-template-columns:repeat(8,1fr);max-width:min(100%,440px);margin:0 auto;border:4px solid #7c4a1e;border-radius:8px;overflow:hidden}
+.g-dcell{aspect-ratio:1;border:0;padding:0;background:#f3e2c7;display:grid;place-items:center;cursor:default}
+.g-dcell.dark{background:#a46a3a;cursor:pointer}
+.g-dcell.can .g-piece{box-shadow:0 0 0 3px #fde047}
+.g-dcell.sel{background:#65a30d}
+.g-dcell.tgt{background:#84cc16}
+.g-dcell i{width:28%;height:28%;border-radius:50%;background:rgba(255,255,255,.75)}
+.g-piece{width:78%;height:78%;border-radius:50%;display:grid;place-items:center;font-size:clamp(10px,3.2vw,20px);box-shadow:0 3px 0 rgba(0,0,0,.35)}
+.g-piece.p1{background:radial-gradient(circle at 35% 35%,#fff,#e5e7eb);border:2px solid #9ca3af}
+.g-piece.p2{background:radial-gradient(circle at 35% 35%,#6b7280,#111827);border:2px solid #000}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v80 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v81 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -2664,7 +2705,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "Folha de desafios para {name} — nível {level} ({lname}): sudoku, labirinto, sequências e mais. Cada vez sai uma folha diferente.",
 "gPrintBtn": "Imprimir folha de desafios",
 "gPrintAll": "Imprimir para todos",
-"gPrintHint": "No modo responsável sai junto uma página de gabarito.",
 "gIdeasIntro": "Jogos que combinam com a idade de {name} e o que cada um ensina. Toque em + Tarefa para virar uma tarefa da semana.",
 "gAsTask": "Tarefa",
 "gAsRewardTitle": "Ou como recompensa",
@@ -2717,7 +2757,33 @@ const GAMES_TEXT = {
 "bg_rubik": "Cubo mágico",
 "bg_rubik_why": "Memória de sequências e persistência.",
 "bg_clue": "Detetive",
-"bg_clue_why": "Dedução e eliminar hipóteses."
+"bg_clue_why": "Dedução e eliminar hipóteses.",
+"g_ttt": "Jogo da velha",
+"g_c4": "Lig 4",
+"g_dam": "Damas",
+"gDesc_ttt": "Faça 3 em linha antes do outro.",
+"gDesc_c4": "Solte as fichas e faça 4 em linha.",
+"gDesc_dam": "Estratégia: capture as peças do outro.",
+"gDuelTitle": "Jogos para dois",
+"gDuelHint": "Para jogar com um irmão ou com vocês no mesmo celular, ou contra o computador (ganhar do computador vale estrelas).",
+"gVsCpu": "Contra o computador",
+"gTwoPlayers": "Dois jogadores",
+"gPlayer1": "Jogador 1",
+"gPlayer2": "Jogador 2",
+"gCpu": "Computador",
+"gDraw": "Empatou!",
+"gWinner": "{name} venceu!",
+"gCpuThinking": "O computador está pensando…",
+"gTurnOf": "Vez de {name}",
+"gDamHelp": "Toque numa peça com brilho amarelo e depois na casa verde. Peça normal anda para frente e pode comer para trás; quem chega ao outro lado vira dama 👑 e anda longe.",
+"gDamChain": "Pode comer de novo! Toque na próxima casa verde.",
+"gPrintKids": "Folha das crianças",
+"gPrintKidsHint": "Sai só a folha de desafios, sem respostas.",
+"gKeyTitle": "Gabarito (só para o responsável)",
+"gKeyLast": "Respostas da última folha de {name}, impressa em {date}.",
+"gKeyNone": "Imprima primeiro uma folha de {name}; o gabarito fica guardado aqui.",
+"gKeyBtn": "Gabarito de {name}",
+"gKeyAll": "Gabaritos de todos"
 },
 "en": {
 "navGames": "Games & thinking",
@@ -2768,7 +2834,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "Challenge sheet for {name} — level {level} ({lname}): sudoku, maze, sequences and more. A different sheet every time.",
 "gPrintBtn": "Print challenge sheet",
 "gPrintAll": "Print for everyone",
-"gPrintHint": "In parent mode an answer key page is printed too.",
 "gIdeasIntro": "Games that suit {name}'s age and what each one teaches. Tap + Task to make it a weekly task.",
 "gAsTask": "Task",
 "gAsRewardTitle": "Or as a reward",
@@ -2821,7 +2886,33 @@ const GAMES_TEXT = {
 "bg_rubik": "Rubik's cube",
 "bg_rubik_why": "Remembering sequences and persistence.",
 "bg_clue": "Clue",
-"bg_clue_why": "Deduction and ruling out options."
+"bg_clue_why": "Deduction and ruling out options.",
+"g_ttt": "Tic-tac-toe",
+"g_c4": "Connect 4",
+"g_dam": "Checkers",
+"gDesc_ttt": "Get 3 in a row first.",
+"gDesc_c4": "Drop the discs and make 4 in a row.",
+"gDesc_dam": "Strategy: capture the other player's pieces.",
+"gDuelTitle": "Games for two",
+"gDuelHint": "Play with a sibling or with you on the same phone, or against the computer (beating the computer earns stars).",
+"gVsCpu": "Against the computer",
+"gTwoPlayers": "Two players",
+"gPlayer1": "Player 1",
+"gPlayer2": "Player 2",
+"gCpu": "Computer",
+"gDraw": "It's a draw!",
+"gWinner": "{name} won!",
+"gCpuThinking": "The computer is thinking…",
+"gTurnOf": "{name}'s turn",
+"gDamHelp": "Tap a piece glowing yellow, then a green square. Normal pieces move forward and can capture backwards; reaching the other side makes a king 👑 that moves far.",
+"gDamChain": "You can capture again! Tap the next green square.",
+"gPrintKids": "Kids' sheet",
+"gPrintKidsHint": "Only the challenge sheet, without answers.",
+"gKeyTitle": "Answer key (parents only)",
+"gKeyLast": "Answers to {name}'s last sheet, printed on {date}.",
+"gKeyNone": "Print a sheet for {name} first; the answer key is kept here.",
+"gKeyBtn": "{name}'s answer key",
+"gKeyAll": "Everyone's answer keys"
 },
 "es": {
 "navGames": "Juegos y razonamiento",
@@ -2872,7 +2963,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "Hoja de desafíos para {name} — nivel {level} ({lname}): sudoku, laberinto, secuencias y más. Cada vez sale una hoja diferente.",
 "gPrintBtn": "Imprimir hoja de desafíos",
 "gPrintAll": "Imprimir para todos",
-"gPrintHint": "En modo responsable sale también una página con las respuestas.",
 "gIdeasIntro": "Juegos que van con la edad de {name} y lo que enseña cada uno. Toca + Tarea para convertirlo en tarea de la semana.",
 "gAsTask": "Tarea",
 "gAsRewardTitle": "O como recompensa",
@@ -2925,7 +3015,33 @@ const GAMES_TEXT = {
 "bg_rubik": "Cubo de Rubik",
 "bg_rubik_why": "Memoria de secuencias y perseverancia.",
 "bg_clue": "Clue (Detective)",
-"bg_clue_why": "Deducción y descartar hipótesis."
+"bg_clue_why": "Deducción y descartar hipótesis.",
+"g_ttt": "Tres en raya",
+"g_c4": "Conecta 4",
+"g_dam": "Damas",
+"gDesc_ttt": "Haz 3 en línea antes que el otro.",
+"gDesc_c4": "Suelta las fichas y haz 4 en línea.",
+"gDesc_dam": "Estrategia: captura las piezas del otro.",
+"gDuelTitle": "Juegos para dos",
+"gDuelHint": "Para jugar con un hermano o con ustedes en el mismo celular, o contra la computadora (ganarle da estrellas).",
+"gVsCpu": "Contra la computadora",
+"gTwoPlayers": "Dos jugadores",
+"gPlayer1": "Jugador 1",
+"gPlayer2": "Jugador 2",
+"gCpu": "Computadora",
+"gDraw": "¡Empate!",
+"gWinner": "¡{name} ganó!",
+"gCpuThinking": "La computadora está pensando…",
+"gTurnOf": "Turno de {name}",
+"gDamHelp": "Toca una pieza que brilla en amarillo y luego una casilla verde. La pieza normal avanza y puede comer hacia atrás; al llegar al otro lado se corona 👑 y se mueve lejos.",
+"gDamChain": "¡Puedes comer otra vez! Toca la siguiente casilla verde.",
+"gPrintKids": "Hoja de los niños",
+"gPrintKidsHint": "Sale solo la hoja de desafíos, sin respuestas.",
+"gKeyTitle": "Respuestas (solo para el responsable)",
+"gKeyLast": "Respuestas de la última hoja de {name}, impresa el {date}.",
+"gKeyNone": "Imprime primero una hoja de {name}; las respuestas quedan guardadas aquí.",
+"gKeyBtn": "Respuestas de {name}",
+"gKeyAll": "Respuestas de todos"
 },
 "it": {
 "navGames": "Giochi e logica",
@@ -2976,7 +3092,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "Foglio di sfide per {name} — livello {level} ({lname}): sudoku, labirinto, sequenze e altro. Ogni volta esce un foglio diverso.",
 "gPrintBtn": "Stampa foglio di sfide",
 "gPrintAll": "Stampa per tutti",
-"gPrintHint": "In modalità genitore viene stampata anche una pagina con le soluzioni.",
 "gIdeasIntro": "Giochi adatti all'età di {name} e cosa insegna ognuno. Tocca + Compito per trasformarlo in un compito della settimana.",
 "gAsTask": "Compito",
 "gAsRewardTitle": "Oppure come ricompensa",
@@ -3029,7 +3144,33 @@ const GAMES_TEXT = {
 "bg_rubik": "Cubo di Rubik",
 "bg_rubik_why": "Memoria delle sequenze e perseveranza.",
 "bg_clue": "Cluedo",
-"bg_clue_why": "Deduzione ed esclusione delle ipotesi."
+"bg_clue_why": "Deduzione ed esclusione delle ipotesi.",
+"g_ttt": "Tris",
+"g_c4": "Forza 4",
+"g_dam": "Dama",
+"gDesc_ttt": "Fai 3 in fila prima dell'altro.",
+"gDesc_c4": "Lascia cadere le pedine e fai 4 in fila.",
+"gDesc_dam": "Strategia: cattura le pedine dell'altro.",
+"gDuelTitle": "Giochi per due",
+"gDuelHint": "Per giocare con un fratello o con voi sullo stesso telefono, o contro il computer (battere il computer dà stelle).",
+"gVsCpu": "Contro il computer",
+"gTwoPlayers": "Due giocatori",
+"gPlayer1": "Giocatore 1",
+"gPlayer2": "Giocatore 2",
+"gCpu": "Computer",
+"gDraw": "Pareggio!",
+"gWinner": "{name} ha vinto!",
+"gCpuThinking": "Il computer sta pensando…",
+"gTurnOf": "Tocca a {name}",
+"gDamHelp": "Tocca una pedina che brilla di giallo e poi una casella verde. La pedina normale va avanti e può mangiare all'indietro; arrivata dall'altra parte diventa dama 👑 e si muove lontano.",
+"gDamChain": "Puoi mangiare ancora! Tocca la prossima casella verde.",
+"gPrintKids": "Foglio dei bambini",
+"gPrintKidsHint": "Esce solo il foglio di sfide, senza soluzioni.",
+"gKeyTitle": "Soluzioni (solo per il genitore)",
+"gKeyLast": "Soluzioni dell'ultimo foglio di {name}, stampato il {date}.",
+"gKeyNone": "Stampa prima un foglio per {name}; le soluzioni restano salvate qui.",
+"gKeyBtn": "Soluzioni di {name}",
+"gKeyAll": "Soluzioni di tutti"
 },
 "zh": {
 "navGames": "游戏与思维",
@@ -3080,7 +3221,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "给 {name} 的挑战练习 — 第 {level} 级（{lname}）：数独、迷宫、规律题等。每次都会生成不同的练习。",
 "gPrintBtn": "打印挑战练习",
 "gPrintAll": "给所有人打印",
-"gPrintHint": "家长模式下会同时打印答案页。",
 "gIdeasIntro": "适合 {name} 年龄的游戏，以及每个游戏能学到什么。点 + 任务 就会变成每周任务。",
 "gAsTask": "任务",
 "gAsRewardTitle": "或者当作奖励",
@@ -3133,7 +3273,33 @@ const GAMES_TEXT = {
 "bg_rubik": "魔方",
 "bg_rubik_why": "记忆步骤和坚持。",
 "bg_clue": "妙探寻凶（Clue）",
-"bg_clue_why": "推理和排除假设。"
+"bg_clue_why": "推理和排除假设。",
+"g_ttt": "井字棋",
+"g_c4": "四子棋",
+"g_dam": "跳棋（国际跳棋）",
+"gDesc_ttt": "先连成 3 个就赢。",
+"gDesc_c4": "投下棋子，连成 4 个。",
+"gDesc_dam": "策略：吃掉对方的棋子。",
+"gDuelTitle": "双人游戏",
+"gDuelHint": "和兄弟姐妹或你们在同一部手机上玩，也可以和电脑玩（赢了电脑有星星）。",
+"gVsCpu": "和电脑玩",
+"gTwoPlayers": "两个人玩",
+"gPlayer1": "玩家 1",
+"gPlayer2": "玩家 2",
+"gCpu": "电脑",
+"gDraw": "平局！",
+"gWinner": "{name} 赢了！",
+"gCpuThinking": "电脑正在想…",
+"gTurnOf": "轮到 {name}",
+"gDamHelp": "先点发黄光的棋子，再点绿色格子。普通棋子向前走，可以向后吃子；走到对面就变成王 👑，可以走很远。",
+"gDamChain": "还可以再吃！点下一个绿色格子。",
+"gPrintKids": "孩子的练习",
+"gPrintKidsHint": "只打印挑战练习，不带答案。",
+"gKeyTitle": "答案（只给家长）",
+"gKeyLast": "{name} 上一张练习的答案，打印于 {date}。",
+"gKeyNone": "先给 {name} 打印一张练习，答案会保存在这里。",
+"gKeyBtn": "{name} 的答案",
+"gKeyAll": "所有人的答案"
 },
 "zht": {
 "navGames": "遊戲與思維",
@@ -3184,7 +3350,6 @@ const GAMES_TEXT = {
 "gPrintIntro": "給 {name} 的挑戰練習 — 第 {level} 級（{lname}）：數獨、迷宮、規律題等。每次都會生成不同的練習。",
 "gPrintBtn": "列印挑戰練習",
 "gPrintAll": "給所有人列印",
-"gPrintHint": "家長模式下會同時列印答案頁。",
 "gIdeasIntro": "適合 {name} 年齡的遊戲，以及每個遊戲能學到什麼。點 + 任務 就會變成每週任務。",
 "gAsTask": "任務",
 "gAsRewardTitle": "或者當作獎勵",
@@ -3237,7 +3402,33 @@ const GAMES_TEXT = {
 "bg_rubik": "魔方",
 "bg_rubik_why": "記憶步驟和堅持。",
 "bg_clue": "妙探尋兇（Clue）",
-"bg_clue_why": "推理和排除假設。"
+"bg_clue_why": "推理和排除假設。",
+"g_ttt": "井字棋",
+"g_c4": "四子棋",
+"g_dam": "跳棋（國際跳棋）",
+"gDesc_ttt": "先連成 3 個就贏。",
+"gDesc_c4": "投下棋子，連成 4 個。",
+"gDesc_dam": "策略：吃掉對方的棋子。",
+"gDuelTitle": "雙人遊戲",
+"gDuelHint": "和兄弟姐妹或你們在同一部手機上玩，也可以和電腦玩（贏了電腦有星星）。",
+"gVsCpu": "和電腦玩",
+"gTwoPlayers": "兩個人玩",
+"gPlayer1": "玩家 1",
+"gPlayer2": "玩家 2",
+"gCpu": "電腦",
+"gDraw": "平局！",
+"gWinner": "{name} 贏了！",
+"gCpuThinking": "電腦正在想…",
+"gTurnOf": "輪到 {name}",
+"gDamHelp": "先點發黃光的棋子，再點綠色格子。普通棋子向前走，可以向後吃子；走到對面就變成王 👑，可以走很遠。",
+"gDamChain": "還可以再吃！點下一個綠色格子。",
+"gPrintKids": "孩子的練習",
+"gPrintKidsHint": "只打印挑戰練習，不帶答案。",
+"gKeyTitle": "答案（只給家長）",
+"gKeyLast": "{name} 上一張練習的答案，列印於 {date}。",
+"gKeyNone": "先給 {name} 列印一張練習，答案會儲存在這裡。",
+"gKeyBtn": "{name} 的答案",
+"gKeyAll": "所有人的答案"
 }
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], GAMES_TEXT[l]));
@@ -3248,7 +3439,7 @@ const GAMES_TEXT = {
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 80;
+const APP_VERSION = 81;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -3342,7 +3533,7 @@ function initialData() {
     history: [], piggyHistory: [], approvals: [], goals: [], achievements: [], behaviorNotes: [], privateNotes: [],
     english: { settings: { pointsPer15: 5, testDay: 25, goals: {} }, sessions: [], tests: [] },
     homework: { settings: { pointsPerPage: 2, autoTask: true }, entries: [] },
-    games: { settings: { pointsPerWin: 5, maxPerDay: 3 }, wins: [] },
+    games: { settings: { pointsPerWin: 5, maxPerDay: 3 }, wins: [], lastSheets: {} },
     familyAccount: { email: '', passwordHash: '' }
   };
 }
@@ -3556,8 +3747,10 @@ function normalize(raw, defaultKeys) {
     wins: (Array.isArray(gm.wins) ? gm.wins : []).map((x, i) => {
       if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId) return null;
       return { id: cleanId(x.id) || `gw${i}`, childId, date: safeIso(x.date), game: text(x.game, 20), level: clamp(int(x.level, 1), 0, 4), points: clamp(int(x.points, 0), 0, 100), historyId: x.historyId ? cleanId(x.historyId) : null };
-    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2000)
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2000),
+    lastSheets: {}
   };
+  if (gm.lastSheets && typeof gm.lastSheets === 'object') Object.entries(gm.lastSheets).forEach(([k, v]) => { const id = mapChild(k); if (id && v && typeof v.seed === 'string') d.games.lastSheets[id] = { seed: v.seed.slice(0, 80), date: safeIso(v.date) }; });
 
   // novidades já colocadas uma vez (para não voltarem se forem apagadas)
   d.seeded = Array.isArray(raw.seeded) ? [...new Set(raw.seeded.filter(x => typeof x === 'string').map(x => x.slice(0, 40)))].slice(0, 100) : [];
@@ -6244,10 +6437,13 @@ function taskChartHtml(c, from, to) {
 function familyTasksHtml() {
   const kids = S.children, order = { daily: 0, weekly: 1, oneOff: 2 };
   const tasks = S.tasks.slice().sort((a, b) => order[a.frequency] - order[b.frequency] || taskName(a).localeCompare(taskName(b)));
-  return `<div class="ps-page pr pr-family">
+  // linhas mais baixas quando há muitas tarefas: a lista sempre cabe em uma folha A4
+  const rowH = Math.max(15, Math.min(30, Math.floor(820 / Math.max(1, tasks.length))));
+  const when = task => task.frequency === 'daily' ? (task.days.length ? daysLabel(task) : t('everyDay')) : freqName(task);
+  return `<div class="ps-page pr pr-family pr-tasklist ${rowH < 21 ? 'pr-tight' : ''}" style="--rowh:${rowH}px">
     <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">📋</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('prTasksKicker'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('prTasksSub', { n: tasks.length }))}</div></div></div>
     <table class="pr-grid pr-whogrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th><th>${esc(t('prWhen'))}</th>${kids.map(c => `<th style="color:${c.accentColor}">${esc(c.avatar)}<small>${esc(c.name)}</small></th>`).join('')}</tr></thead>
-      <tbody>${tasks.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(taskName(task))}</td><td class="pts">+${task.points}</td><td class="when">${esc(freqName(task))}${task.frequency === 'daily' ? ` · ${esc(daysLabel(task))}` : ''}</td>${kids.map(c => taskForChild(task, c) ? `<td class="ok" style="color:${c.accentColor}">●</td>` : '<td class="no"></td>').join('')}</tr>`).join('')}</tbody></table>
+      <tbody>${tasks.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(taskName(task))}</td><td class="pts">+${task.points}</td><td class="when">${esc(when(task))}</td>${kids.map(c => taskForChild(task, c) ? `<td class="ok" style="color:${c.accentColor}">●</td>` : '<td class="no"></td>').join('')}</tr>`).join('')}</tbody></table>
     <p class="pr-foot">${esc(t('prPrintedOn', { date: fmtDateTime(isoNow()) }))}</p>
   </div>`;
 }
@@ -6751,9 +6947,14 @@ function puzzleSheetHtml(c, sheet, withKey) {
   };
   const top = key => `<div class="ws-head"><div><div class="ws-title">${key ? '🔑 ' + esc(t('wsKeyTitle')) : '🧩 ' + esc(t('gpTitle'))}</div><div class="ws-sub">${esc(t('gpLevel', { n: sheet.level }))} · ${esc(t('gLevelName_' + sheet.level))}</div></div><div class="ws-name"><div>${esc(t('name'))}: <b>${esc(c.name)}</b></div><div>${esc(t('date'))}: ____/____/______</div></div></div>`;
   const page = key => `<div class="ps-page ws g-sheet ${key ? 'ws-key' : ''}">${top(key)}${sheet.parts.map(p => body(p, key)).join('')}${key ? '' : `<div class="ws-foot">🧠 ${esc(t('gpCheer', { name: c.name }))}</div>`}</div>`;
+  // withKey: false = só a folha da criança · 'key' = só o gabarito · true = os dois
+  if (withKey === 'key') { n = 0; return page(true); }
   n = 0; const sheetHtml = page(false); n = 0;
   return withKey ? sheetHtml + page(true) : sheetHtml;
 }
+
+/** Nova folha: guarda a semente para o gabarito poder ser impresso depois (até em outro aparelho). */
+function newSheetSeed(c) { const seed = `${c.id}|${Date.now()}`; S.games.lastSheets[c.id] = { seed, date: isoNow() }; commit(); return seed; }
 
 /* ---------- ideias de jogos de tabuleiro por idade ---------- */
 const BOARD_GAMES = [
@@ -6842,12 +7043,18 @@ const GAMES_SECTION = {
     if (ui.gTab === 'play') {
       const games = [['sudoku', '🔢', level >= 1], ['memory', '🃏', true], ['seq', '🔁', level >= 1]];
       content = `<div class="g-pick">${games.map(([k, ico, ok]) => `<button type="button" class="g-tile" data-act="g-start" data-id="${k}" ${ok ? '' : 'disabled'}><span>${ico}</span><b>${t('g_' + k)}</b><small>${esc(t('gDesc_' + k))}</small></button>`).join('')}</div>
+        <h3 class="mt">👫 ${t('gDuelTitle')}</h3><p class="hint" style="margin-top:-4px">${t('gDuelHint')}</p>
+        <div class="g-pick">${[['ttt', '❌⭕'], ['c4', '🔴🟡'], ['dam', '⚫⚪']].map(([k, ico]) => `<button type="button" class="g-tile duel" data-act="g-duel" data-id="${k}" ${level >= 1 ? '' : 'disabled'}><span>${ico}</span><b>${t('g_' + k)}</b><small>${esc(t('gDesc_' + k))}</small></button>`).join('')}</div>
         <div id="gBoard"></div>
         <p class="hint">${set.pointsPerWin && set.maxPerDay ? t('gStarsRule', { n: set.pointsPerWin, max: set.maxPerDay }) : ''}</p>`;
     } else if (ui.gTab === 'print') {
+      const last = S.games.lastSheets[c.id];
+      const kidsWithKey = S.children.filter(k => S.games.lastSheets[k.id]);
       content = `<div class="notice">${t('gPrintIntro', { name: esc(c.name), level: Math.max(1, level), lname: esc(t('gLevelName_' + Math.max(1, level))) })}</div>
-        <div class="actions mt"><button type="button" class="btn btn-primary" data-act="g-print">🖨️ ${t('gPrintBtn')}</button>${parent ? `<button type="button" class="btn btn-soft" data-act="g-print-all">🖨️ ${t('gPrintAll')}</button>` : ''}</div>
-        <p class="hint">${t('gPrintHint')}</p>`;
+        <div class="g-print-box mt"><h3>🧩 ${t('gPrintKids')}</h3><p class="hint">${t('gPrintKidsHint')}</p>
+          <div class="actions"><button type="button" class="btn btn-primary" data-act="g-print">🖨️ ${t('gPrintBtn')}</button>${parent ? `<button type="button" class="btn btn-soft" data-act="g-print-all">🖨️ ${t('gPrintAll')}</button>` : ''}</div></div>
+        ${parent ? `<div class="g-print-box key mt"><h3>🔑 ${t('gKeyTitle')}</h3><p class="hint">${last ? t('gKeyLast', { name: esc(c.name), date: fmtDateTime(last.date) }) : t('gKeyNone', { name: esc(c.name) })}</p>
+          <div class="actions"><button type="button" class="btn btn-soft" data-act="g-key" ${last ? '' : 'disabled'}>🔑 ${t('gKeyBtn', { name: esc(c.name) })}</button><button type="button" class="btn btn-soft" data-act="g-key-all" ${kidsWithKey.length ? '' : 'disabled'}>🔑 ${t('gKeyAll')}</button></div></div>` : ''}`;
     } else {
       const list = BOARD_GAMES.filter(g => c.age >= g.min && c.age <= g.max);
       content = `<p class="hint" style="margin-top:0">${t('gIdeasIntro', { name: esc(c.name) })}</p>
@@ -6894,14 +7101,190 @@ Object.assign(ACTIONS, {
     if (g.i >= g.rounds.length) { if (g.right >= g.rounds.length - 1) return finishGame(); g.done = true; g.result = t('gSeqTryAgain', { n: g.right, total: g.rounds.length }); }
     renderGameBoard();
   },
-  'g-print': () => { const c = gChild(); printDocument(puzzleSheetHtml(c, buildPuzzleSheet(c, `${c.id}|${Date.now()}`), !isChildMode()), t('gpTitle') + ' — ' + c.name); },
-  'g-print-all': () => { const kids = S.children.filter(c => c.age >= 3); printDocument(kids.map(c => puzzleSheetHtml(c, buildPuzzleSheet(c, `${c.id}|${Date.now()}`), true)).join(''), t('gpTitle')); },
+  'g-print': () => { const c = gChild(); printDocument(puzzleSheetHtml(c, buildPuzzleSheet(c, newSheetSeed(c)), false), t('gpTitle') + ' — ' + c.name); },
+  'g-print-all': () => { const kids = S.children.filter(c => c.age >= 3); printDocument(kids.map(c => puzzleSheetHtml(c, buildPuzzleSheet(c, newSheetSeed(c)), false)).join(''), t('gpTitle')); },
+  'g-key': () => { if (isChildMode()) return; const c = gChild(), last = S.games.lastSheets[c.id]; if (!last) return; printDocument(puzzleSheetHtml(c, buildPuzzleSheet(c, last.seed), 'key'), t('gKeyTitle') + ' — ' + c.name); },
+  'g-key-all': () => { if (isChildMode()) return; const kids = S.children.filter(c => S.games.lastSheets[c.id]); printDocument(kids.map(c => puzzleSheetHtml(c, buildPuzzleSheet(c, S.games.lastSheets[c.id].seed), 'key')).join(''), t('gKeyTitle')); },
   'g-task': el => { const c = gChild(), g = BOARD_GAMES.find(x => x.key === el.dataset.id); if (c && g && addGameTask(c, g)) { commit(); toast(t('gTaskAdded', { game: t(g.key), name: c.name }), 'success'); } else toast(t('libHas'), 'info'); },
   'g-reward': el => { const key = el.dataset.id; if (addGameReward(key, key === 'rw_chessParent' ? '♟️' : '🎲', key === 'rw_chessParent' ? 100 : 200)) { commit(); toast(t('gRewardAdded', { name: t(key) }), 'success'); } else toast(t('libHas'), 'info'); },
   'g-rules': () => { S.games.settings.pointsPerWin = clamp(int($('#gPpw').value, 5), 0, 100); S.games.settings.maxPerDay = clamp(int($('#gMax').value, 3), 0, 20); commit(); toast(t('saved'), 'success'); }
 });
 // as duas recompensas de jogo também aparecem nas ideias de recompensas
 REWARD_IDEAS.splice(REWARD_IDEAS.findIndex(x => x.key === 'rw_friend'), 0, { tier: 'medium', key: 'rw_chessParent', icon: '♟️', cost: 100 }, { tier: 'medium', key: 'rw_gameNight', icon: '🎲', cost: 200 });
+
+/* =====================================================================
+   Jogos para dois (no mesmo aparelho) ou contra o computador:
+   Jogo da velha, Lig 4 e Damas (regras simples, boas para crianças).
+   Ganhar do computador vale estrelas (mesmo limite por dia dos desafios).
+   ===================================================================== */
+
+/* ---------- jogo da velha ---------- */
+const TTT_LINES = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+function tttWinner(b) { for (const [a, c, d] of TTT_LINES) if (b[a] && b[a] === b[c] && b[a] === b[d]) return { p: b[a], line: [a, c, d] }; return b.every(Boolean) ? { p: 0 } : null; }
+function tttCpu(b, skill) {
+  const empty = b.map((v, i) => v ? -1 : i).filter(i => i >= 0);
+  const tryFor = p => empty.find(i => { const x = [...b]; x[i] = p; const w = tttWinner(x); return w && w.p === p; });
+  const win = tryFor(2); if (win !== undefined) return win;
+  if (Math.random() < skill) { const block = tryFor(1); if (block !== undefined) return block; if (!b[4]) return 4; }
+  return empty[Math.floor(Math.random() * empty.length)];
+}
+
+/* ---------- lig 4 (7 colunas × 6 linhas) ---------- */
+const C4_W = 7, C4_H = 6;
+function c4Drop(b, col, p) { for (let r = C4_H - 1; r >= 0; r--) if (!b[r * C4_W + col]) { const x = [...b]; x[r * C4_W + col] = p; return { b: x, i: r * C4_W + col }; } return null; }
+function c4Winner(b) {
+  const dirs = [[0, 1], [1, 0], [1, 1], [1, -1]];
+  for (let r = 0; r < C4_H; r++) for (let c = 0; c < C4_W; c++) {
+    const p = b[r * C4_W + c]; if (!p) continue;
+    for (const [dr, dc] of dirs) {
+      const line = [0, 1, 2, 3].map(k => [r + dr * k, c + dc * k]);
+      if (line.every(([rr, cc]) => rr >= 0 && rr < C4_H && cc >= 0 && cc < C4_W && b[rr * C4_W + cc] === p)) return { p, line: line.map(([rr, cc]) => rr * C4_W + cc) };
+    }
+  }
+  return b.every(Boolean) ? { p: 0 } : null;
+}
+function c4Cpu(b, skill) {
+  const cols = [...Array(C4_W).keys()].filter(c => !b[c]);
+  const wins = p => cols.find(c => { const d = c4Drop(b, c, p); const w = d && c4Winner(d.b); return w && w.p === p; });
+  const w = wins(2); if (w !== undefined) return w;
+  if (Math.random() < skill) { const bl = wins(1); if (bl !== undefined) return bl; }
+  // evita dar a vitória de presente e prefere o meio
+  const safe = cols.filter(c => { const d = c4Drop(b, c, 2); if (!d) return false; const d2 = c4Drop(d.b, c, 1); const w2 = d2 && c4Winner(d2.b); return !(w2 && w2.p === 1); });
+  const pool = (Math.random() < skill && safe.length ? safe : cols).sort((a, b2) => Math.abs(a - 3) - Math.abs(b2 - 3));
+  return Math.random() < 0.6 ? pool[0] : pool[Math.floor(Math.random() * pool.length)];
+}
+
+/* ---------- damas (8×8; jogador 1 embaixo) ---------- */
+function damInit() { const b = Array(64).fill(null); for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) if ((r + c) % 2 === 1) { if (r < 3) b[r * 8 + c] = { p: 2, k: false }; if (r > 4) b[r * 8 + c] = { p: 1, k: false }; } return b; }
+const DIAG = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
+const inB = (r, c) => r >= 0 && r < 8 && c >= 0 && c < 8;
+/** Capturas possíveis de uma peça: [{to, cap}] */
+function damCaptures(b, i) {
+  const pc = b[i]; if (!pc) return []; const r = Math.floor(i / 8), c = i % 8, out = [];
+  DIAG.forEach(([dr, dc]) => {
+    if (!pc.k) { const r1 = r + dr, c1 = c + dc, r2 = r + 2 * dr, c2 = c + 2 * dc; if (inB(r2, c2) && b[r1 * 8 + c1] && b[r1 * 8 + c1].p !== pc.p && !b[r2 * 8 + c2]) out.push({ to: r2 * 8 + c2, cap: r1 * 8 + c1 }); return; }
+    let rr = r + dr, cc = c + dc; while (inB(rr, cc) && !b[rr * 8 + cc]) { rr += dr; cc += dc; }
+    if (!inB(rr, cc) || b[rr * 8 + cc].p === pc.p) return;
+    const cap = rr * 8 + cc; rr += dr; cc += dc;
+    while (inB(rr, cc) && !b[rr * 8 + cc]) { out.push({ to: rr * 8 + cc, cap }); rr += dr; cc += dc; }
+  });
+  return out;
+}
+function damSteps(b, i) {
+  const pc = b[i]; if (!pc) return []; const r = Math.floor(i / 8), c = i % 8, out = [];
+  DIAG.forEach(([dr, dc]) => {
+    if (!pc.k) { if (dr !== (pc.p === 1 ? -1 : 1)) return; const r1 = r + dr, c1 = c + dc; if (inB(r1, c1) && !b[r1 * 8 + c1]) out.push({ to: r1 * 8 + c1, cap: null }); return; }
+    let rr = r + dr, cc = c + dc; while (inB(rr, cc) && !b[rr * 8 + cc]) { out.push({ to: rr * 8 + cc, cap: null }); rr += dr; cc += dc; }
+  });
+  return out;
+}
+function damMovesFor(g, i) { if (g.chain != null) return i === g.chain ? damCaptures(g.board, i) : []; return [...damCaptures(g.board, i), ...damSteps(g.board, i)]; }
+function damAllMoves(g, p) { const out = []; g.board.forEach((pc, i) => { if (pc && pc.p === p) damMovesFor(g, i).forEach(m => out.push({ from: i, ...m })); }); return out; }
+function damApply(g, from, m) {
+  const b = g.board, pc = b[from]; b[m.to] = pc; b[from] = null; let more = false;
+  if (m.cap != null) { b[m.cap] = null; more = damCaptures(b, m.to).length > 0; }
+  if (more) { g.chain = m.to; g.sel = m.to; return; }
+  const row = Math.floor(m.to / 8); if ((pc.p === 1 && row === 0) || (pc.p === 2 && row === 7)) pc.k = true;
+  g.chain = null; g.sel = null; g.turn = g.turn === 1 ? 2 : 1;
+  const left = b.filter(x => x && x.p === g.turn).length;
+  if (!left || !damAllMoves(g, g.turn).length) g.winner = { p: g.turn === 1 ? 2 : 1 };
+}
+function damCpuMove(g) {
+  const moves = damAllMoves(g, 2); if (!moves.length) return;
+  const caps = moves.filter(m => m.cap != null);
+  let pool = caps.length && Math.random() < g.skill + 0.3 ? caps : moves;
+  if (Math.random() < g.skill) { // evita deixar peça para ser comida
+    const safe = pool.filter(m => { const x = { ...g, board: g.board.map(p => p && { ...p }), chain: null }; x.board[m.to] = x.board[m.from]; x.board[m.from] = null; if (m.cap != null) x.board[m.cap] = null; return !damAllMoves({ ...x, chain: null }, 1).some(mm => mm.cap === m.to); });
+    if (safe.length) pool = safe;
+  }
+  const m = pool[Math.floor(Math.random() * pool.length)]; damApply(g, m.from, m);
+}
+
+/* ---------- ligar aos jogos do app ---------- */
+function cpuSkill(age) { return age <= 4 ? 0.25 : age <= 6 ? 0.5 : age <= 9 ? 0.75 : 0.9; }
+function startDuel(type, mode) {
+  const c = gChild(); mode = mode || (ui.g && ui.g.type === type ? ui.g.mode : 'cpu');
+  const base = { type, mode, childId: c.id, level: gameLevel(c.age), turn: 1, winner: null, done: false, skill: cpuSkill(c.age), busy: false };
+  if (type === 'ttt') ui.g = { ...base, board: Array(9).fill(0) };
+  if (type === 'c4') ui.g = { ...base, board: Array(C4_W * C4_H).fill(0), last: null };
+  if (type === 'dam') ui.g = { ...base, board: damInit(), sel: null, chain: null };
+  renderGameBoard();
+}
+function duelEnd() {
+  const g = ui.g; if (!g.winner || g.done) return; g.done = true;
+  const c = childById(g.childId);
+  if (g.mode === 'cpu' && g.winner.p === 1 && c) { const w = recordWin(c, g.type, g.level); commit(); g.result = w.points ? t('gWinStars', { n: w.points }) : t('gWinNoStars'); }
+  renderGameBoard();
+}
+function cpuTurn() {
+  const g = ui.g; if (!g || g.mode !== 'cpu' || g.turn !== 2 || g.winner) return;
+  g.busy = true; renderGameBoard();
+  setTimeout(() => {
+    if (ui.g !== g) return;
+    if (g.type === 'ttt') { g.board[tttCpu(g.board, g.skill)] = 2; g.winner = tttWinner(g.board); g.turn = 1; }
+    if (g.type === 'c4') { const d = c4Drop(g.board, c4Cpu(g.board, g.skill), 2); if (d) { g.board = d.b; g.last = d.i; } g.winner = c4Winner(g.board); g.turn = 1; }
+    if (g.type === 'dam') { do { damCpuMove(g); } while (g.chain != null && !g.winner); }
+    g.busy = false;
+    if (g.winner) return duelEnd();
+    renderGameBoard();
+  }, g.type === 'dam' ? 650 : 450);
+}
+function duelHtml(g) {
+  const c = childById(g.childId), me = c ? c.name : t('gPlayer1'), other = g.mode === 'cpu' ? '🤖 ' + t('gCpu') : t('gPlayer2');
+  const marks = { ttt: ['❌', '⭕'], c4: ['🔴', '🟡'], dam: ['⚪', '⚫'] }[g.type];
+  const modeBtns = `<div class="g-modes"><button type="button" class="chip ${g.mode === 'cpu' ? 'on' : ''}" data-act="g-duel-mode" data-id="cpu">🤖 ${t('gVsCpu')}</button><button type="button" class="chip ${g.mode === '2p' ? 'on' : ''}" data-act="g-duel-mode" data-id="2p">👫 ${t('gTwoPlayers')}</button></div>`;
+  const status = g.winner ? (g.winner.p === 0 ? '🤝 ' + t('gDraw') : `🏆 ${t('gWinner', { name: g.winner.p === 1 ? me : other })}`) : g.busy ? '🤖 ' + t('gCpuThinking') : `${marks[g.turn - 1]} ${t('gTurnOf', { name: g.turn === 1 ? me : other })}`;
+  const players = `<div class="g-players"><span class="${g.turn === 1 && !g.winner ? 'on' : ''}">${marks[0]} ${esc(me)}</span><b>×</b><span class="${g.turn === 2 && !g.winner ? 'on' : ''}">${marks[1]} ${esc(other)}</span></div>`;
+  let board = '';
+  const line = g.winner && g.winner.line ? g.winner.line : [];
+  if (g.type === 'ttt') board = `<div class="g-ttt">${g.board.map((v, i) => `<button type="button" class="g-tcell ${line.includes(i) ? 'win' : ''}" data-act="g-ttt" data-id="${i}" ${v || g.winner || g.busy ? 'disabled' : ''}>${v ? marks[v - 1] : ''}</button>`).join('')}</div>`;
+  if (g.type === 'c4') board = `<div class="g-c4"><div class="g-c4-cols">${[...Array(C4_W).keys()].map(cc => `<button type="button" class="g-c4-drop" data-act="g-c4" data-id="${cc}" ${g.board[cc] || g.winner || g.busy ? 'disabled' : ''}>⬇</button>`).join('')}</div><div class="g-c4-grid">${g.board.map((v, i) => `<span class="g-c4-cell ${v ? 'p' + v : ''} ${line.includes(i) ? 'win' : ''} ${g.last === i ? 'last' : ''}"></span>`).join('')}</div></div>`;
+  if (g.type === 'dam') {
+    const targets = g.sel != null ? damMovesFor(g, g.sel).map(m => m.to) : [];
+    const movable = new Set(g.winner || g.busy ? [] : damAllMoves(g, g.turn).map(m => m.from));
+    board = `<div class="g-dam">${g.board.map((pc, i) => { const dark = (Math.floor(i / 8) + i % 8) % 2 === 1; const tgt = targets.includes(i); return `<button type="button" class="g-dcell ${dark ? 'dark' : ''} ${g.sel === i ? 'sel' : ''} ${tgt ? 'tgt' : ''} ${movable.has(i) && pc && pc.p === g.turn ? 'can' : ''}" data-act="g-dam" data-id="${i}" ${dark && !g.winner && !g.busy ? '' : 'disabled'}>${pc ? `<span class="g-piece p${pc.p} ${pc.k ? 'king' : ''}">${pc.k ? '👑' : ''}</span>` : tgt ? '<i></i>' : ''}</button>`; }).join('')}</div>
+      <p class="hint">${t(g.chain != null ? 'gDamChain' : 'gDamHelp')}</p>`;
+  }
+  const close = `<button type="button" class="btn btn-ghost btn-sm" data-act="g-quit">✕ ${t('close')}</button>`;
+  const after = g.winner ? `<div class="g-done">${status}${g.result ? ` · ${esc(g.result)}` : ''}<div class="actions"><button type="button" class="btn btn-primary" data-act="g-duel" data-id="${g.type}">🔄 ${t('gAgain')}</button>${close}</div></div>` : '';
+  return `<div class="g-board"><div class="g-board-head"><b>${{ ttt: '❌⭕ ', c4: '🔴🟡 ', dam: '⚫⚪ ' }[g.type]}${t('g_' + g.type)}</b><span class="hint">${esc(t('gDesc_' + g.type))}</span>${close}</div>
+    ${modeBtns}${players}<p class="g-status">${status}</p>${board}${after}</div>`;
+}
+// o quadro de jogo já existente passa a saber desenhar os jogos de dois
+const _renderGameBoardBase = renderGameBoard;
+renderGameBoard = function () {
+  const g = ui.g, el = $('#gBoard');
+  if (el && g && ['ttt', 'c4', 'dam'].includes(g.type)) { el.innerHTML = duelHtml(g); return; }
+  _renderGameBoardBase();
+};
+
+Object.assign(ACTIONS, {
+  'g-duel': el => startDuel(el.dataset.id),
+  'g-duel-mode': el => { if (ui.g) startDuel(ui.g.type, el.dataset.id); },
+  'g-ttt': el => {
+    const g = ui.g; if (!g || g.winner || g.busy) return; const i = int(el.dataset.id, 0); if (g.board[i]) return;
+    g.board[i] = g.turn; g.winner = tttWinner(g.board); g.turn = g.turn === 1 ? 2 : 1;
+    if (g.winner) return duelEnd(); renderGameBoard(); cpuTurn();
+  },
+  'g-c4': el => {
+    const g = ui.g; if (!g || g.winner || g.busy) return; const d = c4Drop(g.board, int(el.dataset.id, 0), g.turn); if (!d) return;
+    g.board = d.b; g.last = d.i; g.winner = c4Winner(g.board); g.turn = g.turn === 1 ? 2 : 1;
+    if (g.winner) return duelEnd(); renderGameBoard(); cpuTurn();
+  },
+  'g-dam': el => {
+    const g = ui.g; if (!g || g.winner || g.busy) return; const i = int(el.dataset.id, 0), pc = g.board[i];
+    if (g.mode === 'cpu' && g.turn === 2) return;
+    if (g.sel != null) { const m = damMovesFor(g, g.sel).find(x => x.to === i); if (m) { damApply(g, g.sel, m); if (g.winner) return duelEnd(); renderGameBoard(); if (g.chain == null) cpuTurn(); return; } }
+    if (g.chain != null) return; // no meio de uma sequência de capturas
+    if (pc && pc.p === g.turn && damMovesFor(g, i).length) { g.sel = i; renderGameBoard(); }
+  }
+});
+
+// no celular o tabuleiro fica abaixo dos botões: ao começar um jogo, rola até ele
+['g-start', 'g-duel'].forEach(k => {
+  const base = ACTIONS[k];
+  ACTIONS[k] = el => { base(el); const b = $('#gBoard'); if (b && b.scrollIntoView) setTimeout(() => b.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); };
+});
 
 </script>
 <script>
