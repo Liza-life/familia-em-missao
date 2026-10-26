@@ -378,43 +378,117 @@ html{-webkit-tap-highlight-color:transparent}
 #printArea{font-family:Inter,"Segoe UI",system-ui,Arial,sans-serif;color:#1d1d2b;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 #printArea h3{font-size:15px;margin:14px 0 6px}
 /* relatório */
-.pr-head{display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--c,#6c63ff);padding-bottom:10px;margin-bottom:12px}
-.pr-av{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#6c63ff);display:grid;place-items:center;font-size:34px;flex:0 0 auto}
-.pr-title{font-size:26px;font-weight:900}
-.pr-sub{font-size:13px;color:#555}
-.pr-star{margin-left:auto;text-align:center;font-size:22px;font-weight:900}
+#printArea h4{margin:0 0 4px;font-size:12.5px}
+.pr-hero{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:18px;margin-bottom:10px;background:color-mix(in srgb,var(--c,#6c63ff) 13%,#fff);border:2px solid color-mix(in srgb,var(--c,#6c63ff) 45%,#fff)}
+.pr-hero-txt{flex:1;min-width:0}
+.pr-kicker{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--c,#6c63ff) 75%,#000)}
+.pr-av{width:66px;height:66px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#6c63ff);display:grid;place-items:center;font-size:36px;flex:0 0 auto;background:#fff}
+.pr-title{font-size:28px;font-weight:900;line-height:1.1}
+.pr-sub{font-size:12.5px;color:#555}
+.pr-star{text-align:center;background:#fff;border-radius:14px;padding:6px 12px;border:2px solid var(--c,#6c63ff)}
+.pr-star b{display:block;font-size:22px;font-weight:900;white-space:nowrap}
 .pr-star small{display:block;font-size:10px;font-weight:600;color:#666}
+.pr-summary{font-size:14px;font-weight:600;margin:0 0 10px;padding:0 4px}
 .pr-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
-.pr-kpi{border:1.5px solid #ddd;border-radius:10px;padding:7px 6px;text-align:center}
+.pr-kpis3{grid-template-columns:repeat(3,1fr);margin-bottom:10px}
+.pr-kpi{border:1.5px solid #e2e2ea;border-radius:12px;padding:6px 6px 7px;text-align:center;background:#fafafe}
+.pr-ki{display:block;font-size:16px;line-height:1.1}
 .pr-kpi b{display:block;font-size:17px}
-.pr-kpi span{font-size:10.5px;color:#555}
-.pr-kpi.pos b,.pr-table .pos,.pr-events .pos em{color:#0f7a4c}
-.pr-kpi.neg b,.pr-table .neg,.pr-events .neg em{color:#b42318}
-.pr-days{width:100%;border-collapse:collapse;table-layout:fixed}
-.pr-days th,.pr-days td{border:1px solid #ccc;padding:4px;font-size:10.5px;vertical-align:top;text-align:center}
-.pr-days th{background:#f2f0ff}
-.pr-days td{height:70px;text-align:left}
-.pr-days .pr-pts td{height:auto;text-align:center;font-weight:800}
-.pr-chip{display:block;margin-bottom:2px;line-height:1.25}
-.pr-empty{color:#aaa}
-.pr-events{margin:0;padding-left:0;list-style:none;font-size:12px}
-.pr-events li{padding:4px 8px;border-left:4px solid #0f7a4c;margin-bottom:4px;background:#fafafa}
-.pr-events li.neg{border-left-color:#b42318}
-.pr-events li.rw{border-left-color:#c27c0e}
-.pr-events em{font-style:normal;font-weight:800;float:right}
-.pr-extra{font-size:12.5px;font-weight:700}
-.pr-talk{margin-top:12px;border:1.5px dashed #bbb;border-radius:12px;padding:8px 12px}
-.pr-talk h3{margin-top:4px}
+.pr-kpi>span:not(.pr-ki):not(.pr-bar){font-size:10px;color:#555;display:block;line-height:1.2}
+.pr-kpi small{display:block;font-size:9.5px;color:#666}
+.pr-kpi.pos b,.pos{color:#0f7a4c}
+.pr-kpi.neg b,.neg{color:#b42318}
+.pr-bar{display:block;height:6px;border-radius:6px;background:#e9e9f1;overflow:hidden;margin:4px 2px 1px}
+.pr-bar i{display:block;height:100%;background:var(--c,#6c63ff);border-radius:6px}
+.pr-grid{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:11px;border:1.5px solid #d9d9e3;border-radius:12px;overflow:hidden}
+.pr-grid th,.pr-grid td{border-right:1px solid #e4e4ec;border-bottom:1px solid #e4e4ec;padding:4px 3px;text-align:center;vertical-align:middle}
+.pr-grid th:last-child,.pr-grid td:last-child{border-right:0}
+.pr-grid tbody tr:last-child td{border-bottom:0}
+.pr-grid th{background:color-mix(in srgb,var(--c,#6c63ff) 14%,#fff);font-size:10.5px;text-transform:capitalize}
+.pr-grid th small{display:block;font-weight:600;color:#666}
+.pr-grid .pr-tl{text-align:left;width:38%;padding-left:8px}
+.pr-grid td.pr-tl{font-weight:600}
+.pr-grid td.pr-tl small{font-weight:500;color:#777}
+.pr-ti{display:inline-block;width:20px;font-size:13px}
+.pr-grid td.ok{color:#0f7a4c;font-size:15px;font-weight:900;background:#ecfaf2}
+.pr-grid td.ok small{font-size:9px;margin-left:1px}
+.pr-grid td.miss{color:#d0a4a0;font-size:13px}
+.pr-grid td.off,.pr-off-sw{background:repeating-linear-gradient(45deg,#f1f1f5 0 4px,#e3e3ea 4px 8px)}
+.pr-off-sw{display:inline-block;width:14px;height:10px;border-radius:3px;vertical-align:middle;border:1px solid #ddd}
+.pr-grid .pr-sum td{font-weight:800;background:#fafafe}
+.pr-legend{font-size:10px;color:#666;margin:4px 2px 8px}
+.pr-boxes{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px}
+.pr-box{border:1.5px solid #e2e2ea;border-top:4px solid #0f7a4c;border-radius:12px;padding:7px 9px;font-size:11px;break-inside:avoid}
+.pr-box.bad{border-top-color:#d96b2b}
+.pr-box.rw{border-top-color:#c27c0e}
+.pr-box ul{margin:0;padding:0;list-style:none}
+.pr-box li{padding:2px 0;border-bottom:1px dotted #e4e4ec;line-height:1.3}
+.pr-box li:last-child{border-bottom:0}
+.pr-box em{font-style:normal;font-weight:800;float:right;margin-left:6px}
+.pr-box.good em{color:#0f7a4c}.pr-box.bad em{color:#b42318}.pr-box.rw em{color:#8a5300}
+.pr-empty{color:#aaa;margin:0}
+.pr-talk{margin-top:10px;border:1.5px dashed #bbb;border-radius:14px;padding:8px 14px}
+.pr-talk h3{margin-top:6px!important}
+.pr-feel{display:flex;align-items:center;gap:14px;font-size:12.5px}
+.pr-feel span{font-size:24px;width:38px;height:38px;border:1.5px solid #ccc;border-radius:50%;display:grid;place-items:center}
 .pr-lines span,.pr-goal span,.pr-sign span{display:block;border-bottom:1px solid #999;height:24px}
-.pr-goal{display:flex;gap:8px;align-items:flex-end;margin-top:8px;font-size:12.5px}
+.pr-goal{display:flex;gap:8px;align-items:flex-end;margin-top:6px;font-size:12.5px}
 .pr-goal span{flex:1}
-.pr-sign{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px;font-size:11px;text-align:center;color:#555}
+.pr-sign{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:14px;font-size:11px;text-align:center;color:#555}
 .pr-sign span{margin-bottom:3px}
-.pr-table{width:100%;border-collapse:collapse;font-size:12.5px}
-.pr-table th,.pr-table td{border:1px solid #ccc;padding:7px;text-align:center}
-.pr-table th{background:#f2f0ff;font-size:11px}
-.pr-table td:first-child{text-align:left}
 .pr-foot{font-size:10px;color:#888;margin-top:14px}
+/* família */
+.pr-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pr-card{border:1.5px solid #e2e2ea;border-left:6px solid var(--c);border-radius:14px;padding:9px 12px;break-inside:avoid}
+.pr-card-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.pr-card-head .pr-av{width:42px;height:42px;font-size:24px;border-width:2px}
+.pr-card-head b{display:block;font-size:16px}
+.pr-card-head small{font-size:10.5px;color:#666}
+.pr-bal{margin-left:auto;font-weight:900;font-size:15px;background:color-mix(in srgb,var(--c) 14%,#fff);padding:3px 9px;border-radius:999px}
+.pr-mini{display:grid;grid-template-columns:1fr auto;font-size:11px;margin-top:5px;align-items:center}
+.pr-mini .pr-bar{grid-column:1/-1;margin:2px 0 0}
+.pr-mini small{color:#777;font-weight:600}
+.pr-chips{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap}
+.pr-chips span{font-size:10.5px;background:#f4f4f8;border-radius:999px;padding:2px 8px;font-weight:700}
+.pr-hi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pr-hi div{border:1.5px solid #f0d58a;background:#fffaf0;border-radius:12px;padding:6px 10px;font-size:12px}
+.pr-hi small{display:block;color:#8a5300;font-size:10px}
+.pr-hi b{font-size:14px}
+/* quadro de tarefas */
+.pr-chartgrid{font-size:12.5px}
+.pr-chartgrid td{height:34px}
+.pr-chartgrid .pr-tl{width:40%}
+.pr-tn small{display:block;font-size:9.5px;color:#777;font-weight:500}
+.pr-grid td.pts{font-weight:800;color:#8a5300;font-size:11px}
+.pr-cb{display:inline-block;width:20px;height:20px;border:2px solid color-mix(in srgb,var(--c,#6c63ff) 70%,#333);border-radius:6px}
+.pr-write{display:inline-block;width:80%;border-bottom:1.5px solid #888;height:18px}
+.pr-en td{background:#f3f8ff}
+.pr-big .pr-chartgrid{font-size:14px}
+.pr-big .pr-chartgrid td{height:44px}
+.pr-big .pr-ti{font-size:20px;width:28px}
+.pr-big .pr-cb{width:26px;height:26px;border-radius:50%}
+.pr-chart .pr-box{margin-top:8px;font-size:11.5px}
+.pr-extras{display:flex;flex-wrap:wrap;gap:6px 14px}
+.pr-extras span{white-space:nowrap}
+.pr-tally{display:inline-block;width:70px;border-bottom:1px solid #999;height:12px;vertical-align:bottom}
+.pr-cheer{text-align:center;font-weight:800;font-size:15px;margin-top:12px;color:color-mix(in srgb,var(--c,#6c63ff) 75%,#000)}
+.pr-whogrid{font-size:11.5px}
+.pr-whogrid .pr-tl{width:36%}
+.pr-whogrid td.when{font-size:10px;color:#555}
+.pr-whogrid td.ok{font-size:16px;background:none}
+.pr-whogrid th small{font-size:9.5px;color:#444}
+.pr-group{margin:16px 0 6px;font-size:13px;color:var(--muted)}
+/* plano da família (tela) */
+.plan-banner{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;background:#f3efff}
+.plan-banner .actions{display:flex;gap:6px;align-items:center}
+.plan-child{border:1.5px solid var(--line,#e6e6ef);border-left:5px solid var(--c);border-radius:14px;padding:10px 12px;margin-bottom:10px}
+.plan-head{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.plan-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px}
+.plan-item{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:10px;background:var(--soft,#f6f6fb);cursor:pointer;font-weight:400;margin:0}
+.plan-item input{width:18px;height:18px;flex:0 0 auto;margin:0}
+.plan-item.has{opacity:.6}
+.plan-name{display:flex;flex-direction:column;line-height:1.2}
+.plan-name small{color:var(--muted);font-size:11.5px}
 /* provinha */
 .ws-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:3px solid #1d1d2b;padding-bottom:8px;margin-bottom:8px}
 .ws-title{font-size:28px;font-weight:900}
@@ -461,13 +535,15 @@ html{-webkit-tap-highlight-color:transparent}
 .ws-key .ws-sec{border-color:#9b94ff}
 /* prévia na tela (usada pelos testes e se a impressão abrir em outra aba) */
 @media screen{body.print-mode #printArea{display:none}}
+.plan-sub{font-size:12px;font-weight:800;color:var(--muted);margin:8px 0 4px}
+.plan-item.rm{background:#fff3f0}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v76 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v77 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -1899,13 +1975,116 @@ FEATURE_TEXT.zht = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], FEATURE_TEXT[l]));
 
+/* Textos da v77: plano de tarefas por idade, quadro de tarefas e relatório novo. */
+const PLAN_TEXT = {
+pt: {
+  planAddTitle: 'Adicionar', planRemoveTitle: 'Tirar desta criança (não combina com a idade)', planAgeRange: 'indicada de {min} a {max} anos',
+  lib_washOwnPlate: 'Lavar o próprio prato', lib_sweep: 'Varrer a casa', lib_mop: 'Passar o mop na casa', lib_pajamas: 'Guardar o pijama', lib_dustLow: 'Tirar o pó dos móveis baixos', lib_hangTowel: 'Pendurar a toalha depois do banho', lib_wipeTable: 'Limpar a mesa depois da refeição', lib_putGroceries: 'Ajudar a guardar as compras', lib_hangLaundry: 'Ajudar a estender ou recolher a roupa', lib_vacuum: 'Aspirar a casa',
+  planOpen: 'Montar o plano para todas as crianças', planTitle: 'Plano de tarefas por idade', planIntro: 'Separei as tarefas que combinam com a idade de cada um e as que não combinam (essas saem só daquela criança). Desmarque o que não quiser e toque em aplicar. O que já existe não é repetido.', planApply: 'Aplicar {n} mudança(s)', planNothing: 'Todos já têm as tarefas do plano', planHint: 'Varrer fica para segunda, quarta e sexta, e o mop para terça, quinta e sábado. Tudo pode ser mudado depois em Tarefas.', planDone: 'Pronto: {n} mudança(s) nas tarefas! Que tal imprimir o quadro de tarefas?', planPrintNow: 'Imprimir', planBanner: 'Preparei um plano de tarefas para a idade de cada criança.', planBannerBtn: 'Ver e adicionar',
+  prChartBtn: 'Imprimir quadro', prTaskCol: 'Tarefa', prDayPoints: 'Pontos do dia', prLegDone: 'feita', prLegMiss: 'não foi feita', prLegOff: 'não era dia', prGood: 'Coisas boas', prImprove: 'Para melhorar', prRewards: 'Recompensas', prFeel: 'Como foi a minha semana?', prReportKicker: 'Relatório da semana', prSummary: '{name} fez {tasks} tarefa(s), ganhou {earned} pontos e perdeu {lost} nesta semana.', prOfPlanned: 'do combinado',
+  prOnceWeek: '1 vez na semana', prChartEnglish: 'Inglês (minutos)', prChartEnglishGoal: 'meta: {goal} min na semana', prChartKicker: 'Minhas tarefas', prChartTotal: 'pontos da semana', prChartHow: 'Pinte ou marque o quadradinho quando fizer a tarefa', prChartExtras: 'Extras (quando quiser)', prChartRewards: 'O que posso ganhar', prChartCheer: 'Você consegue, {name}! 💪', prTasksKicker: 'Tarefas da família', prTasksSub: '{n} tarefa(s) e para quem é cada uma', prWhen: 'Quando', prNextWeek: 'Próxima semana',
+  prGroupReports: 'Relatórios da semana', prGroupCharts: 'Quadros de tarefas', prGroupOther: 'Outros', prOptChartAll: 'Quadro de tarefas — todos', prOptChartAllHint: 'Lista da família e um quadro para cada criança.', prOptChart: 'Quadro de tarefas — {name}', prOptChartHint: 'Para pendurar e marcar durante a semana.'
+},
+en: {
+  planAddTitle: 'Add', planRemoveTitle: "Remove from this child (doesn't fit the age)", planAgeRange: 'suggested for ages {min} to {max}',
+  lib_washOwnPlate: 'Wash their own plate', lib_sweep: 'Sweep the house', lib_mop: 'Mop the house', lib_pajamas: 'Put pajamas away', lib_dustLow: 'Dust the low furniture', lib_hangTowel: 'Hang the towel after the bath', lib_wipeTable: 'Wipe the table after meals', lib_putGroceries: 'Help put the groceries away', lib_hangLaundry: 'Help hang or bring in the laundry', lib_vacuum: 'Vacuum the house',
+  planOpen: 'Build the plan for all children', planTitle: 'Task plan by age', planIntro: "I picked tasks that fit each child's age. Uncheck what you don't want and tap apply. Tasks that don't fit the age are removed only from that child. Existing tasks are not duplicated.", planApply: 'Apply {n} change(s)', planNothing: 'Everyone already has the plan tasks', planHint: 'Sweeping is set for Monday, Wednesday and Friday, and mopping for Tuesday, Thursday and Saturday. You can change everything later in Tasks.', planDone: 'Done: {n} task change(s)! How about printing the task chart?', planPrintNow: 'Print', planBanner: "I prepared a task plan for each child's age.", planBannerBtn: 'See and add',
+  prChartBtn: 'Print chart', prTaskCol: 'Task', prDayPoints: 'Points of the day', prLegDone: 'done', prLegMiss: 'not done', prLegOff: 'not that day', prGood: 'Good things', prImprove: 'To improve', prRewards: 'Rewards', prFeel: 'How was my week?', prReportKicker: 'Weekly report', prSummary: '{name} did {tasks} task(s), earned {earned} points and lost {lost} this week.', prOfPlanned: 'of the plan',
+  prOnceWeek: 'once a week', prChartEnglish: 'English (minutes)', prChartEnglishGoal: 'goal: {goal} min this week', prChartKicker: 'My tasks', prChartTotal: 'points this week', prChartHow: 'Color or tick the box when you do the task', prChartExtras: 'Extras (anytime)', prChartRewards: 'What I can earn', prChartCheer: 'You can do it, {name}! 💪', prTasksKicker: 'Family tasks', prTasksSub: '{n} task(s) and who each one is for', prWhen: 'When', prNextWeek: 'Next week',
+  prGroupReports: 'Weekly reports', prGroupCharts: 'Task charts', prGroupOther: 'Other', prOptChartAll: 'Task chart — everyone', prOptChartAllHint: 'Family list and one chart per child.', prOptChart: 'Task chart — {name}', prOptChartHint: 'To hang up and tick during the week.'
+},
+es: {
+  planAddTitle: 'Agregar', planRemoveTitle: 'Quitar a este niño (no va con la edad)', planAgeRange: 'indicada de {min} a {max} años',
+  lib_washOwnPlate: 'Lavar su propio plato', lib_sweep: 'Barrer la casa', lib_mop: 'Pasar el trapeador en la casa', lib_pajamas: 'Guardar el pijama', lib_dustLow: 'Quitar el polvo de los muebles bajos', lib_hangTowel: 'Colgar la toalla después del baño', lib_wipeTable: 'Limpiar la mesa después de comer', lib_putGroceries: 'Ayudar a guardar las compras', lib_hangLaundry: 'Ayudar a tender o recoger la ropa', lib_vacuum: 'Aspirar la casa',
+  planOpen: 'Armar el plan para todos los niños', planTitle: 'Plan de tareas por edad', planIntro: 'Elegí tareas que van con la edad de cada uno. Desmarca lo que no quieras y toca aplicar. Las que no van con la edad se quitan solo a ese niño. Lo que ya existe no se repite.', planApply: 'Aplicar {n} cambio(s)', planNothing: 'Todos ya tienen las tareas del plan', planHint: 'Barrer queda para lunes, miércoles y viernes, y el trapeador para martes, jueves y sábado. Todo se puede cambiar después en Tareas.', planDone: '¡Listo: {n} cambio(s) en las tareas! ¿Imprimimos el cuadro de tareas?', planPrintNow: 'Imprimir', planBanner: 'Preparé un plan de tareas para la edad de cada niño.', planBannerBtn: 'Ver y agregar',
+  prChartBtn: 'Imprimir cuadro', prTaskCol: 'Tarea', prDayPoints: 'Puntos del día', prLegDone: 'hecha', prLegMiss: 'no se hizo', prLegOff: 'no tocaba', prGood: 'Cosas buenas', prImprove: 'Para mejorar', prRewards: 'Recompensas', prFeel: '¿Cómo fue mi semana?', prReportKicker: 'Informe de la semana', prSummary: '{name} hizo {tasks} tarea(s), ganó {earned} puntos y perdió {lost} esta semana.', prOfPlanned: 'de lo acordado',
+  prOnceWeek: '1 vez por semana', prChartEnglish: 'Inglés (minutos)', prChartEnglishGoal: 'meta: {goal} min en la semana', prChartKicker: 'Mis tareas', prChartTotal: 'puntos de la semana', prChartHow: 'Pinta o marca el cuadrito cuando hagas la tarea', prChartExtras: 'Extras (cuando quieras)', prChartRewards: 'Lo que puedo ganar', prChartCheer: '¡Tú puedes, {name}! 💪', prTasksKicker: 'Tareas de la familia', prTasksSub: '{n} tarea(s) y para quién es cada una', prWhen: 'Cuándo', prNextWeek: 'La próxima semana',
+  prGroupReports: 'Informes de la semana', prGroupCharts: 'Cuadros de tareas', prGroupOther: 'Otros', prOptChartAll: 'Cuadro de tareas — todos', prOptChartAllHint: 'Lista de la familia y un cuadro para cada niño.', prOptChart: 'Cuadro de tareas — {name}', prOptChartHint: 'Para colgar y marcar durante la semana.'
+},
+it: {
+  planAddTitle: 'Aggiungere', planRemoveTitle: "Togliere a questo bambino (non adatto all'età)", planAgeRange: 'indicato da {min} a {max} anni',
+  lib_washOwnPlate: 'Lavare il proprio piatto', lib_sweep: 'Spazzare la casa', lib_mop: 'Passare il mocio in casa', lib_pajamas: 'Mettere a posto il pigiama', lib_dustLow: 'Spolverare i mobili bassi', lib_hangTowel: "Appendere l'asciugamano dopo il bagno", lib_wipeTable: 'Pulire il tavolo dopo i pasti', lib_putGroceries: 'Aiutare a mettere via la spesa', lib_hangLaundry: 'Aiutare a stendere o ritirare il bucato', lib_vacuum: "Passare l'aspirapolvere in casa",
+  planOpen: 'Preparare il piano per tutti i bambini', planTitle: 'Piano di compiti per età', planIntro: "Ho scelto i compiti adatti all'età di ognuno. Togli la spunta a quello che non vuoi e tocca applica. Quelli non adatti all'età vengono tolti solo a quel bambino. Quelli che esistono già non vengono ripetuti.", planApply: 'Applica {n} modifica/he', planNothing: 'Tutti hanno già i compiti del piano', planHint: 'Spazzare è previsto per lunedì, mercoledì e venerdì, il mocio per martedì, giovedì e sabato. Puoi cambiare tutto dopo in Compiti.', planDone: 'Fatto: {n} modifica/he ai compiti! Stampiamo la tabella dei compiti?', planPrintNow: 'Stampa', planBanner: "Ho preparato un piano di compiti per l'età di ogni bambino.", planBannerBtn: 'Vedi e aggiungi',
+  prChartBtn: 'Stampa tabella', prTaskCol: 'Compito', prDayPoints: 'Punti del giorno', prLegDone: 'fatto', prLegMiss: 'non fatto', prLegOff: 'non era il giorno', prGood: 'Cose belle', prImprove: 'Da migliorare', prRewards: 'Ricompense', prFeel: 'Com’è andata la mia settimana?', prReportKicker: 'Resoconto della settimana', prSummary: '{name} ha fatto {tasks} compito/i, ha guadagnato {earned} punti e ne ha persi {lost} questa settimana.', prOfPlanned: 'del previsto',
+  prOnceWeek: '1 volta a settimana', prChartEnglish: 'Inglese (minuti)', prChartEnglishGoal: 'obiettivo: {goal} min a settimana', prChartKicker: 'I miei compiti', prChartTotal: 'punti della settimana', prChartHow: 'Colora o segna il quadratino quando fai il compito', prChartExtras: 'Extra (quando vuoi)', prChartRewards: 'Cosa posso guadagnare', prChartCheer: 'Ce la puoi fare, {name}! 💪', prTasksKicker: 'Compiti della famiglia', prTasksSub: '{n} compito/i e per chi è ognuno', prWhen: 'Quando', prNextWeek: 'La prossima settimana',
+  prGroupReports: 'Resoconti della settimana', prGroupCharts: 'Tabelle dei compiti', prGroupOther: 'Altro', prOptChartAll: 'Tabella dei compiti — tutti', prOptChartAllHint: 'Elenco della famiglia e una tabella per ogni bambino.', prOptChart: 'Tabella dei compiti — {name}', prOptChartHint: 'Da appendere e segnare durante la settimana.'
+},
+zh: {
+  planAddTitle: '添加', planRemoveTitle: '从这个孩子移除（不适合这个年龄）', planAgeRange: '适合 {min} 到 {max} 岁',
+  lib_washOwnPlate: '洗自己的盘子', lib_sweep: '扫地', lib_mop: '拖地', lib_pajamas: '把睡衣收好', lib_dustLow: '擦矮家具上的灰', lib_hangTowel: '洗澡后把毛巾挂好', lib_wipeTable: '饭后擦桌子', lib_putGroceries: '帮忙把买来的东西收好', lib_hangLaundry: '帮忙晾衣服或收衣服', lib_vacuum: '用吸尘器打扫家里',
+  planOpen: '为所有孩子制定计划', planTitle: '按年龄的任务计划', planIntro: '我为每个孩子挑选了适合年龄的任务。取消不想要的，然后点应用。不适合年龄的任务只会从那个孩子移除。已经有的任务不会重复。', planApply: '应用 {n} 项更改', planNothing: '大家都已经有计划里的任务了', planHint: '扫地安排在周一、周三、周五，拖地安排在周二、周四、周六。之后都可以在"任务"里修改。', planDone: '已完成 {n} 项任务更改！要不要打印任务表？', planPrintNow: '打印', planBanner: '我为每个孩子的年龄准备了一份任务计划。', planBannerBtn: '查看并添加',
+  prChartBtn: '打印任务表', prTaskCol: '任务', prDayPoints: '当天积分', prLegDone: '已完成', prLegMiss: '没完成', prLegOff: '当天不用做', prGood: '做得好的', prImprove: '需要改进', prRewards: '奖励', prFeel: '我这周过得怎么样？', prReportKicker: '每周报告', prSummary: '{name} 本周完成了 {tasks} 个任务，获得 {earned} 积分，扣了 {lost} 积分。', prOfPlanned: '完成计划',
+  prOnceWeek: '每周 1 次', prChartEnglish: '英语（分钟）', prChartEnglishGoal: '目标：每周 {goal} 分钟', prChartKicker: '我的任务', prChartTotal: '本周积分', prChartHow: '完成任务后涂色或打勾', prChartExtras: '额外任务（随时都行）', prChartRewards: '我可以换到什么', prChartCheer: '{name}，你一定可以的！💪', prTasksKicker: '家庭任务', prTasksSub: '{n} 个任务，以及每个任务给谁', prWhen: '什么时候', prNextWeek: '下周',
+  prGroupReports: '每周报告', prGroupCharts: '任务表', prGroupOther: '其他', prOptChartAll: '任务表 — 所有人', prOptChartAllHint: '家庭任务清单，每个孩子一张任务表。', prOptChart: '任务表 — {name}', prOptChartHint: '贴起来，一周里随时打勾。'
+}
+};
+PLAN_TEXT.zht = {
+  planAddTitle: "新增",
+  planRemoveTitle: "從這個孩子移除（不適合這個年齡）",
+  planAgeRange: "適合 {min} 到 {max} 歲",
+  lib_washOwnPlate: "洗自己的盤子",
+  lib_sweep: "掃地",
+  lib_mop: "拖地",
+  lib_pajamas: "把睡衣收好",
+  lib_dustLow: "擦矮傢俱上的灰",
+  lib_hangTowel: "洗澡後把毛巾掛好",
+  lib_wipeTable: "飯後擦桌子",
+  lib_putGroceries: "幫忙把買來的東西收好",
+  lib_hangLaundry: "幫忙晾衣服或收衣服",
+  lib_vacuum: "用吸塵器打掃家裡",
+  planOpen: "為所有孩子制定計劃",
+  planTitle: "按年齡的任務計劃",
+  planIntro: "我為每個孩子挑選了適合年齡的任務。取消不想要的，然後點套用。不適合年齡的任務只會從那個孩子移除。已經有的任務不會重複。",
+  planApply: "套用 {n} 項更改",
+  planNothing: "大家都已經有計劃裡的任務了",
+  planHint: "掃地安排在週一、週三、週五，拖地安排在週二、週四、週六。之後都可以在\"任務\"裡修改。",
+  planDone: "已完成 {n} 項任務更改！要不要列印任務表？",
+  planPrintNow: "列印",
+  planBanner: "我為每個孩子的年齡準備了一份任務計劃。",
+  planBannerBtn: "檢視並新增",
+  prChartBtn: "列印任務表",
+  prTaskCol: "任務",
+  prDayPoints: "當天積分",
+  prLegDone: "已完成",
+  prLegMiss: "沒完成",
+  prLegOff: "當天不用做",
+  prGood: "做得好的",
+  prImprove: "需要改進",
+  prRewards: "獎勵",
+  prFeel: "我這週過得怎麼樣？",
+  prReportKicker: "每週報告",
+  prSummary: "{name} 本週完成了 {tasks} 個任務，獲得 {earned} 積分，扣了 {lost} 積分。",
+  prOfPlanned: "完成計劃",
+  prOnceWeek: "每週 1 次",
+  prChartEnglish: "英語（分鐘）",
+  prChartEnglishGoal: "目標：每週 {goal} 分鐘",
+  prChartKicker: "我的任務",
+  prChartTotal: "本週積分",
+  prChartHow: "完成任務後塗色或打勾",
+  prChartExtras: "額外任務（隨時都行）",
+  prChartRewards: "我可以換到什麼",
+  prChartCheer: "{name}，你一定可以的！💪",
+  prTasksKicker: "家庭任務",
+  prTasksSub: "{n} 個任務，以及每個任務給誰",
+  prWhen: "什麼時候",
+  prNextWeek: "下週",
+  prGroupReports: "每週報告",
+  prGroupCharts: "任務表",
+  prGroupOther: "其他",
+  prOptChartAll: "任務表 — 所有人",
+  prOptChartAllHint: "家庭任務清單，每個孩子一張任務表。",
+  prOptChart: "任務表 — {name}",
+  prOptChartHint: "貼起來，一週裡隨時打勾。"
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], PLAN_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 76;
+const APP_VERSION = 77;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -2886,7 +3065,7 @@ const SECTIONS = [
   {
     id: 'dashboard', icon: '🏠', nav: 'navHome', child: true,
     build: () => `
-      <div id="dPending" class="parent-only"></div><div id="dEnglish"></div>
+      <div id="dPending" class="parent-only"></div><div id="dPlan"></div><div id="dEnglish"></div>
       <div class="grid g4" id="dKids"></div>
       <div class="grid g3 mt">
         <div class="card"><div class="kpi" id="dToday">0</div><div class="kpi-label">${t('kpiToday')}</div></div>
@@ -2901,6 +3080,7 @@ const SECTIONS = [
       const kids = visibleChildren();
       const pend = pendingApprovals().length;
       const due = kids.filter(c => englishTestDue(c));
+      $('#dPlan').innerHTML = planBannerHtml();
       $('#dEnglish').innerHTML = due.length ? `<div class="notice" style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;background:#eef7ff;color:#0b4f8a"><span>🇬🇧 ${t('enDueBanner', { names: due.map(c => c.name).join(', ') })}</span><button type="button" class="btn btn-primary btn-sm" data-act="go" data-id="ingles">${t('enDueOpen')}</button></div>` : '';
       $('#dPending').innerHTML = pend ? `<div class="notice warn" style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap"><span>⏳ ${t('pendingBanner', { n: pend })}</span><button type="button" class="btn btn-primary btn-sm" data-act="go" data-id="premium">${t('reviewNow')}</button></div>` : '';
       $('#dKids').innerHTML = kids.map(c => {
@@ -2930,7 +3110,7 @@ const SECTIONS = [
         <div class="row2"><div><label for="mChild">${t('child')}</label><select id="mChild" data-change="render"></select></div>
         <div><label for="mNote">${t('note')}</label><input id="mNote" maxlength="200" placeholder="${esc(t('notePlaceholder'))}"></div></div>
         <p class="hint" style="margin:10px 0 12px">${t('frequencyHint')}</p><div id="mList" class="list"></div>`)}
-      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
+      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft" data-act="pr-chart-all">🖨️ ${t('prChartBtn')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
     </div>`,
     update() {
       const sel = $('#mChild'); setSelect(sel, childOptions(activeChild() ? activeChild().id : sel.value || S.children[0].id));
@@ -4180,9 +4360,13 @@ Object.assign(ACTIONS, {
 });
 
 /* =====================================================================
-   Sugestões de tarefas por idade.
+   Sugestões de tarefas por idade + "plano da família".
    Cada sugestão usa uma chave de tradução (lib_*), então o nome muda
    junto com o idioma do app, como as tarefas que já vêm prontas.
+   min/max: faixa de idade em que a tarefa aparece.
+   days: dias sugeridos (0 = domingo); vazio = todo dia.
+   alias: reconhece uma tarefa que a família já criou com outro nome,
+          para não criar repetida.
    ===================================================================== */
 
 const AGE_BANDS = [
@@ -4192,58 +4376,86 @@ const AGE_BANDS = [
   { id: 'b4', min: 7, max: 9 },
   { id: 'b5', min: 10, max: 30 }
 ];
-// rec: recomendada para começar (entra no botão "Adicionar as recomendadas")
 const TASK_LIBRARY = [
-  // 1 a 2 anos — sempre com ajuda, muito curtas
-  { key: 'lib_toysBox', icon: '🧸', points: 5, band: 'b1', rec: true },
-  { key: 'lib_diaperBin', icon: '🚮', points: 5, band: 'b1', rec: true },
-  { key: 'lib_shoesPlace', icon: '👟', points: 5, band: 'b1' },
-  { key: 'lib_brushHelp', icon: '🪥', points: 5, band: 'b1', rec: true },
-  { key: 'lib_waterCup', icon: '🥛', points: 5, band: 'b1' },
-  { key: 'lib_englishSong', icon: '🎵', points: 5, band: 'b1', rec: true },
-  // 3 a 4 anos
-  { key: 'taskPutToysAway', icon: '🧸', points: 10, band: 'b2', rec: true, existing: true },
-  { key: 'taskLaundryBasket', icon: '👕', points: 5, band: 'b2', rec: true, existing: true },
-  { key: 'lib_washHands', icon: '🧼', points: 5, band: 'b2', rec: true },
-  { key: 'lib_napkins', icon: '🍽️', points: 5, band: 'b2' },
-  { key: 'lib_waterPlant', icon: '🪴', points: 5, band: 'b2' },
-  { key: 'lib_dressHelp', icon: '👚', points: 10, band: 'b2', rec: true },
-  { key: 'lib_booksShelf', icon: '📚', points: 5, band: 'b2' },
-  { key: 'lib_english10', icon: '🇬🇧', points: 10, band: 'b2', rec: true },
-  // 5 a 6 anos
-  { key: 'taskMakeBed', icon: '🛏️', points: 10, band: 'b3', rec: true, existing: true },
-  { key: 'taskSetTable', icon: '🍽️', points: 15, band: 'b3', rec: true, existing: true },
-  { key: 'lib_clearPlate', icon: '🍴', points: 5, band: 'b3', rec: true },
-  { key: 'lib_feedPet', icon: '🐶', points: 10, band: 'b3' },
-  { key: 'lib_backpack', icon: '🎒', points: 10, band: 'b3', rec: true },
-  { key: 'lib_chooseClothes', icon: '👗', points: 5, band: 'b3' },
-  { key: 'lib_sortSocks', icon: '🧦', points: 10, band: 'b3' },
-  { key: 'lib_read10', icon: '📖', points: 10, band: 'b3', rec: true },
-  { key: 'lib_english15', icon: '🇬🇧', points: 15, band: 'b3', rec: true },
-  // 7 a 9 anos
-  { key: 'lib_tidyRoom', icon: '🧹', points: 20, band: 'b4', rec: true },
-  { key: 'lib_homework', icon: '✏️', points: 20, band: 'b4', rec: true },
-  { key: 'taskRead15', icon: '📚', points: 20, band: 'b4', rec: true, existing: true },
-  { key: 'lib_english20', icon: '🇬🇧', points: 20, band: 'b4', rec: true },
-  { key: 'lib_foldClothes', icon: '👕', points: 15, band: 'b4' },
-  { key: 'lib_dryDishes', icon: '🍽️', points: 15, band: 'b4' },
-  { key: 'lib_showerAlone', icon: '🚿', points: 10, band: 'b4', rec: true },
-  { key: 'lib_trashSmall', icon: '🗑️', points: 10, band: 'b4' },
-  { key: 'lib_simpleSnack', icon: '🥪', points: 15, band: 'b4' },
-  // 10 anos ou mais
-  { key: 'lib_washDishes', icon: '🧽', points: 25, band: 'b5', rec: true },
-  { key: 'lib_vacuum', icon: '🧹', points: 25, band: 'b5' },
-  { key: 'lib_study30', icon: '📘', points: 25, band: 'b5', rec: true },
-  { key: 'lib_english30', icon: '🇬🇧', points: 25, band: 'b5', rec: true },
-  { key: 'lib_wardrobe', icon: '🗄️', points: 20, band: 'b5' },
-  { key: 'lib_cookSimple', icon: '🍳', points: 30, band: 'b5' },
-  { key: 'lib_helpSibling', icon: '🤝', points: 20, band: 'b5', rec: true }
+  // cuidar das próprias coisas
+  { key: 'lib_toysBox', icon: '🧸', points: 5, min: 1, max: 2, alias: /brinquedo/ },
+  { key: 'taskPutToysAway', icon: '🧸', points: 10, min: 3, max: 9, existing: true, alias: /brinquedo/ },
+  { key: 'lib_shoesPlace', icon: '👟', points: 5, min: 1, max: 4, alias: /sapato|t[eê]nis|chinelo/ },
+  { key: 'lib_diaperBin', icon: '🚮', points: 5, min: 1, max: 2, alias: /fralda/ },
+  { key: 'taskLaundryBasket', icon: '👕', points: 5, min: 2, max: 14, existing: true, alias: /roupa suja|cesto/ },
+  { key: 'lib_pajamas', icon: '🩳', points: 5, min: 3, max: 6, alias: /pijama/ },
+  { key: 'lib_booksShelf', icon: '📚', points: 5, min: 3, max: 6, alias: /guardar.*livro/ },
+  { key: 'taskMakeBed', icon: '🛏️', points: 10, min: 5, max: 14, existing: true, alias: /cama/ },
+  { key: 'lib_backpack', icon: '🎒', points: 10, min: 5, max: 14, alias: /mochila/ },
+  { key: 'lib_chooseClothes', icon: '👗', points: 5, min: 5, max: 6, alias: /escolher.*roupa/ },
+  { key: 'lib_tidyRoom', icon: '🧹', points: 20, min: 7, max: 14, alias: /arrumar.*quarto/ },
+  { key: 'lib_foldClothes', icon: '👕', points: 15, min: 7, max: 14, alias: /dobrar/ },
+  { key: 'lib_wardrobe', icon: '🗄️', points: 20, min: 10, max: 30, alias: /arm[aá]rio/ },
+  // higiene
+  { key: 'lib_brushHelp', icon: '🪥', points: 5, min: 1, max: 2, alias: /dente/ },
+  { key: 'taskBrushTeeth', icon: '🪥', points: 5, min: 3, max: 9, existing: true, alias: /dente/ },
+  { key: 'lib_washHands', icon: '🧼', points: 5, min: 3, max: 5, alias: /lavar.*m[aã]o/ },
+  { key: 'lib_dressHelp', icon: '👚', points: 10, min: 3, max: 4, alias: /vestir/ },
+  { key: 'lib_hangTowel', icon: '🧺', points: 5, min: 4, max: 12, alias: /toalha/ },
+  { key: 'lib_showerAlone', icon: '🚿', points: 10, min: 7, max: 12, alias: /banho/ },
+  // cozinha e refeições
+  { key: 'lib_waterCup', icon: '🥛', points: 5, min: 1, max: 2 },
+  { key: 'lib_washOwnPlate', icon: '🍽️', points: 10, min: 3, max: 12, alias: /lavar.*prato|pr[oó]prio prato/ },
+  { key: 'lib_napkins', icon: '🧻', points: 5, min: 3, max: 5, alias: /guardanapo/ },
+  { key: 'taskSetTable', icon: '🍴', points: 15, min: 5, max: 9, existing: true, alias: /p[oô]r a mesa|arrumar a mesa/ },
+  { key: 'lib_wipeTable', icon: '🧽', points: 10, min: 5, max: 14, alias: /limpar.*mesa/ },
+  { key: 'lib_putGroceries', icon: '🛒', points: 10, min: 7, max: 30, alias: /compras/ },
+  { key: 'lib_dryDishes', icon: '🍽️', points: 15, min: 7, max: 9, alias: /secar.*lou[cç]a/ },
+  { key: 'lib_simpleSnack', icon: '🥪', points: 15, min: 7, max: 12, alias: /lanche/ },
+  { key: 'lib_washDishes', icon: '🧽', points: 25, min: 10, max: 30, alias: /lavar.*lou[cç]a/ },
+  { key: 'lib_cookSimple', icon: '🍳', points: 30, min: 10, max: 30, alias: /receita/ },
+  // casa
+  { key: 'lib_dustLow', icon: '🪶', points: 10, min: 3, max: 6, alias: /p[oó] d|tirar o p[oó]/ },
+  { key: 'lib_waterPlant', icon: '🪴', points: 5, min: 3, max: 9, alias: /regar|planta/ },
+  { key: 'lib_feedPet', icon: '🐶', points: 10, min: 5, max: 30, alias: /bichinho|cachorro|gato|pet/ },
+  { key: 'lib_sortSocks', icon: '🧦', points: 10, min: 5, max: 7, alias: /meia/ },
+  { key: 'lib_sweep', icon: '🧹', points: 15, min: 5, max: 30, days: [1, 3, 5], alias: /varrer/ },
+  { key: 'lib_mop', icon: '🫧', points: 15, min: 5, max: 30, days: [2, 4, 6], alias: /\bmop\b|pano no ch[aã]o/ },
+  { key: 'lib_hangLaundry', icon: '👚', points: 15, min: 7, max: 30, alias: /estender|varal|recolher/ },
+  { key: 'lib_trashSmall', icon: '🗑️', points: 10, min: 7, max: 12, alias: /lixo do banheiro/ },
+  { key: 'lib_vacuum', icon: '🧹', points: 25, min: 10, max: 30, alias: /aspirar/ },
+  // estudos e família
+  { key: 'lib_read10', icon: '📖', points: 10, min: 3, max: 6, alias: /\bler\b|leitura|livro por/ },
+  { key: 'taskRead15', icon: '📚', points: 20, min: 7, max: 12, existing: true, alias: /\bler\b|leitura/ },
+  { key: 'lib_homework', icon: '✏️', points: 20, min: 6, max: 14, alias: /li[cç][aã]o|dever de casa/ },
+  { key: 'lib_study30', icon: '📘', points: 25, min: 10, max: 30, alias: /estudar/ },
+  { key: 'lib_helpSibling', icon: '🤝', points: 15, min: 7, max: 30, alias: /irm[aã]o/ }
 ];
+// O "plano" de cada idade: o que eu colocaria para começar.
+// (Inglês fica de fora porque a seção Inglês já dá pontos pelo tempo de estudo.)
+const AGE_PLAN = {
+  b1: ['lib_toysBox', 'lib_brushHelp', 'lib_diaperBin', 'lib_shoesPlace'],
+  b2: ['taskPutToysAway', 'lib_washOwnPlate', 'taskBrushTeeth', 'taskLaundryBasket', 'lib_dressHelp', 'lib_washHands', 'lib_read10'],
+  b3: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_backpack', 'lib_hangTowel', 'lib_read10'],
+  b4: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_homework', 'taskRead15', 'lib_hangTowel'],
+  b5: ['lib_washDishes', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'lib_tidyRoom', 'lib_study30', 'lib_helpSibling']
+};
+
 function bandOf(age) { return AGE_BANDS.find(b => age >= b.min && age <= b.max) || AGE_BANDS[AGE_BANDS.length - 1]; }
-function suggestionsFor(c) { const b = bandOf(c.age); return TASK_LIBRARY.filter(x => x.band === b.id); }
+function libItem(key) { return TASK_LIBRARY.find(x => x.key === key) || null; }
+function isPlanned(sug, c) { return (AGE_PLAN[bandOf(c.age).id] || []).includes(sug.key); }
+function suggestionsFor(c) {
+  const age = Math.max(1, c.age);
+  return TASK_LIBRARY.filter(x => age >= x.min && age <= x.max)
+    .sort((a, b) => (isPlanned(b, c) - isPlanned(a, c)));
+}
+function normName(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+/** Encontra a tarefa que já existe para esta sugestão (pela chave ou por um nome parecido). */
+function findTaskFor(sug) {
+  const byKey = S.tasks.find(x => x.nameKey === sug.key);
+  if (byKey) return byKey;
+  if (!sug.alias) return null;
+  const re = new RegExp(normName(sug.alias.source));
+  return S.tasks.find(x => !x.nameKey && re.test(normName(x.name))) || null;
+}
 /** Situação da sugestão para a criança: 'has' (já tem), 'other' (existe para outras crianças), 'new' */
 function suggestionState(sug, c) {
-  const task = S.tasks.find(x => x.nameKey === sug.key);
+  const task = findTaskFor(sug);
   if (!task) return { state: 'new' };
   return taskForChild(task, c) ? { state: 'has', task } : { state: 'other', task };
 }
@@ -4252,10 +4464,24 @@ function addSuggestion(sug, c) {
   if (st.state === 'has') return false;
   if (st.state === 'other') { if (!st.task.childIds.includes(c.id)) st.task.childIds.push(c.id); return true; }
   let id = Date.now(); while (taskById(id)) id++;
-  S.tasks.push({ id, name: t(sug.key), nameKey: sug.key, points: sug.points, icon: sug.icon, frequency: 'daily', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
+  S.tasks.push({ id, name: t(sug.key), nameKey: sug.key, points: sug.points, icon: sug.icon, frequency: 'daily', days: [...(sug.days || [])], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
   return true;
 }
+/** Tarefas da lista que a criança tem, mas que não combinam com a idade dela. */
+function planMismatch(c) {
+  return S.tasks.filter(task => task.nameKey && taskForChild(task, c)).map(task => ({ task, sug: libItem(task.nameKey) }))
+    .filter(({ sug }) => sug && (c.age < sug.min || c.age > sug.max));
+}
+function removeChildFromTask(task, c) {
+  if (!task.childIds.length) task.childIds = S.children.map(k => k.id);
+  task.childIds = task.childIds.filter(id => id !== c.id);
+  if (!task.childIds.length) S.tasks = S.tasks.filter(x => x !== task);
+}
+function planFor(c) { return (AGE_PLAN[bandOf(c.age).id] || []).map(libItem).filter(Boolean); }
+function planMissing() { return S.children.reduce((n, c) => n + planFor(c).filter(s => suggestionState(s, c).state !== 'has').length + planMismatch(c).length, 0); }
+function sugDays(sug) { return sug.days && sug.days.length ? sug.days.map(d => weekdayNames(true)[d]).join(', ') : t('everyDay'); }
 
+/* ---------- janela: sugestões de uma criança ---------- */
 function openLibrary(childId) {
   const kids = S.children; ui.libChild = childById(childId) ? childId : (ui.libChild && childById(ui.libChild) ? ui.libChild : kids[0].id);
   Modal.open({ id: 'libModal', wide: true, title: '💡 ' + t('libTitle'), body: '<div id="libBody"></div>' });
@@ -4269,27 +4495,79 @@ function renderLibrary() {
     const st = suggestionState(sug, c);
     const right = st.state === 'has' ? `<span class="pill ok">✔ ${t('libHas')}</span>`
       : `<button type="button" class="btn btn-primary btn-sm" data-act="lib-add" data-id="${sug.key}">+ ${t(st.state === 'other' ? 'libAddChild' : 'libAdd')}</button>`;
-    return `<div class="item"><div class="meta"><span class="ico">${esc(sug.icon)}</span><div><strong>${esc(t(sug.key))}</strong><div class="sub">+${pts(sug.points)}${sug.rec ? ' · ⭐ ' + t('libRecommended') : ''}</div></div></div><div class="right">${right}</div></div>`;
+    return `<div class="item"><div class="meta"><span class="ico">${esc(sug.icon)}</span><div><strong>${esc(st.task ? taskName(st.task) : t(sug.key))}</strong><div class="sub">+${pts(sug.points)} · ${esc(sugDays(sug))}${isPlanned(sug, c) ? ' · ⭐ ' + t('libRecommended') : ''}</div></div></div><div class="right">${right}</div></div>`;
   }).join('');
-  const missingRec = list.filter(s => s.rec && suggestionState(s, c).state !== 'has').length;
+  const missingRec = planFor(c).filter(s => suggestionState(s, c).state !== 'has').length;
   el.innerHTML = `<div class="picker-row">${S.children.map(k => `<button type="button" class="picker ${k.id === c.id ? 'on' : ''}" style="--c:${k.accentColor}" data-act="lib-child" data-id="${esc(k.id)}">${avatar(k, 'sm')}<span>${esc(k.name)}<small>${years(k.age)}</small></span></button>`).join('')}</div>
     <div class="notice" style="margin-bottom:12px"><strong>${esc(t('libBand_' + band.id))}</strong> — ${esc(t('libTip_' + band.id))}</div>
+    <button type="button" class="btn btn-soft btn-block" style="margin-bottom:12px" data-act="plan-open">👨‍👩‍👧 ${t('planOpen')}</button>
     <div class="list">${rows}</div>
-    ${missingRec ? `<button type="button" class="btn btn-soft btn-block mt" data-act="lib-add-rec">⭐ ${t('libAddRec', { n: missingRec })}</button>` : ''}
+    ${missingRec ? `<button type="button" class="btn btn-primary btn-block mt" data-act="lib-add-rec">⭐ ${t('libAddRec', { n: missingRec })}</button>` : ''}
     <p class="hint">${t('libHint')}</p>`;
 }
+
+/* ---------- janela: plano da família (todas as crianças de uma vez) ---------- */
+function openPlan() {
+  Modal.close('libModal');
+  ui.planOff = new Set(); ui.planKeep = new Set();
+  Modal.open({ id: 'planModal', wide: true, title: '👨‍👩‍👧 ' + t('planTitle'), body: '<div id="planBody"></div>' });
+  renderPlan();
+}
+function renderPlan() {
+  const el = $('#planBody'); if (!el) return;
+  let total = 0;
+  const blocks = S.children.map(c => {
+    const items = planFor(c).map(sug => {
+      const st = suggestionState(sug, c), id = `${c.id}|${sug.key}`, has = st.state === 'has';
+      const on = !has && !ui.planOff.has(id); if (on) total++;
+      return `<label class="plan-item ${has ? 'has' : ''}"><input type="checkbox" data-change="plan-toggle" data-id="${esc(id)}" ${has ? 'checked disabled' : on ? 'checked' : ''}><span class="ico">${esc(sug.icon)}</span><span class="plan-name"><b>${esc(st.task ? taskName(st.task) : t(sug.key))}</b><small>${has ? '✔ ' + t('libHas') : `+${pts(sug.points)} · ${esc(sugDays(sug))}`}</small></span></label>`;
+    }).join('');
+    const mm = planMismatch(c).map(({ task, sug }) => {
+      const id = `${c.id}|${task.id}`, on = !ui.planKeep.has(id); if (on) total++;
+      return `<label class="plan-item rm"><input type="checkbox" data-change="plan-rm" data-id="${esc(id)}" ${on ? 'checked' : ''}><span class="ico">${esc(task.icon)}</span><span class="plan-name"><b>${esc(taskName(task))}</b><small>${esc(t('planAgeRange', { min: sug.min, max: sug.max }))}</small></span></label>`;
+    }).join('');
+    return `<div class="plan-child" style="--c:${c.accentColor}"><div class="plan-head">${avatar(c, 'sm')}<div><strong>${esc(c.name)}</strong><div class="sub">${years(c.age)} · ${esc(t('libBand_' + bandOf(c.age).id))}</div></div></div><div class="plan-sub">➕ ${t('planAddTitle')}</div><div class="plan-list">${items}</div>${mm ? `<div class="plan-sub">➖ ${t('planRemoveTitle')}</div><div class="plan-list">${mm}</div>` : ''}</div>`;
+  }).join('');
+  el.innerHTML = `<p class="hint" style="margin-top:0">${t('planIntro')}</p>${blocks}
+    <div class="row-actions mt"><button type="button" class="btn btn-primary btn-block" data-act="plan-apply" ${total ? '' : 'disabled'}>✅ ${total ? t('planApply', { n: total }) : t('planNothing')}</button></div>
+    <p class="hint">${t('planHint')}</p>`;
+}
+function applyPlan() {
+  let n = 0;
+  // primeiro tira o que não combina com a idade (antes de incluir, para não confundir "todas as crianças")
+  S.children.forEach(c => planMismatch(c).forEach(({ task }) => { if (!ui.planKeep.has(`${c.id}|${task.id}`)) { removeChildFromTask(task, c); n++; } }));
+  S.children.forEach(c => planFor(c).forEach(sug => { if (!ui.planOff.has(`${c.id}|${sug.key}`) && addSuggestion(sug, c)) n++; }));
+  if (!n) return;
+  try { localStorage.setItem('familiaMissao.planHide', '1'); } catch (e) {}
+  commit(); Modal.close('planModal');
+  toast(t('planDone', { n }), 'success', { label: '🖨️ ' + t('planPrintNow'), run: () => openPrintChooser() }, 9000);
+}
+function planBannerHtml() {
+  if (isChildMode()) return '';
+  let hidden = false; try { hidden = localStorage.getItem('familiaMissao.planHide') === '1'; } catch (e) {}
+  if (hidden || !planMissing()) return '';
+  return `<div class="notice plan-banner"><span>✨ ${t('planBanner')}</span><span class="actions"><button type="button" class="btn btn-primary btn-sm" data-act="plan-open">${t('planBannerBtn')}</button><button type="button" class="icon-btn" data-act="plan-hide" aria-label="${esc(t('close'))}">✕</button></span></div>`;
+}
+
 Object.assign(ACTIONS, {
   'lib-open': el => openLibrary(el.dataset.id),
   'lib-child': el => { ui.libChild = el.dataset.id; renderLibrary(); },
   'lib-add': el => {
-    const c = childById(ui.libChild), sug = TASK_LIBRARY.find(x => x.key === el.dataset.id);
+    const c = childById(ui.libChild), sug = libItem(el.dataset.id);
     if (c && sug && addSuggestion(sug, c)) { commit(); renderLibrary(); toast(t('libAdded', { task: t(sug.key), name: c.name }), 'success'); }
   },
   'lib-add-rec': () => {
     const c = childById(ui.libChild); let n = 0;
-    suggestionsFor(c).filter(s => s.rec).forEach(s => { if (addSuggestion(s, c)) n++; });
+    planFor(c).forEach(s => { if (addSuggestion(s, c)) n++; });
     if (n) { commit(); renderLibrary(); toast(t('libAddedN', { n, name: c.name }), 'success'); }
-  }
+  },
+  'plan-open': () => openPlan(),
+  'plan-apply': () => applyPlan(),
+  'plan-hide': () => { try { localStorage.setItem('familiaMissao.planHide', '1'); } catch (e) {} const b = $('#dPlan'); if (b) b.innerHTML = ''; }
+});
+Object.assign(CHANGES, {
+  'plan-rm': el => { const id = el.dataset.id; if (el.checked) ui.planKeep.delete(id); else ui.planKeep.add(id); renderPlan(); },
+  'plan-toggle': el => { const id = el.dataset.id; if (el.checked) ui.planOff.delete(id); else ui.planOff.add(id); renderPlan(); }
 });
 
 /* =====================================================================
@@ -4514,7 +4792,8 @@ Object.assign(ACTIONS, {
 Object.assign(CHANGES, { 'er-level': el => renderCandoChips(clamp(int(el.value, 1), 1, 3)) });
 
 /* =====================================================================
-   Impressão: relatório da semana (por criança e da família) e provinha.
+   Impressão: relatório da semana (por criança e da família),
+   quadro de tarefas para pendurar e provinha de inglês.
    ===================================================================== */
 
 function printDocument(html, title) {
@@ -4546,51 +4825,134 @@ function weekData(c, from, to) {
   const days = [...Array(7)].map((_, i) => { const d = addDays(from, i), k = dayKey(d); const items = hist.filter(h => dayKey(h.date) === k); return { d, tasks: items.filter(h => h.type === 'task'), pts: items.reduce((s, h) => s + (h.type === 'reward' ? 0 : h.points), 0) }; });
   const events = hist.filter(h => h.type !== 'task').sort((a, b) => a.date.localeCompare(b.date));
   const test = S.english.tests.find(x => x.childId === c.id && inRange(x.date, from, to));
-  return { hist, earned, lost, spent, tasks, piggy, english, medals, days, events, test, balance: earned - lost };
+  // aproveitamento: tarefas fixas feitas / previstas até hoje (ou a semana toda, se já passou)
+  const elapsed = Math.max(0, Math.min(7, Math.floor((startOfDay(new Date()).getTime() - from.getTime()) / 864e5) + 1));
+  const expected = elapsed ? expectedBetween(c, from, elapsed) : 0;
+  const regular = tasks.filter(h => { const task = taskById(h.taskId); return task && task.frequency !== 'oneOff'; }).length;
+  const rate = expected ? Math.min(100, Math.round(regular / expected * 100)) : 0;
+  return { hist, earned, lost, spent, tasks, piggy, english, medals, days, events, test, balance: earned - lost, expected, regular, rate };
 }
 
-/* ---------- HTML do relatório ---------- */
+/* ---------- pedaços comuns ---------- */
 function weekLabel(from, to) {
   const o = { day: '2-digit', month: 'short' };
   return `${from.toLocaleDateString(locale(), o)} – ${addDays(to, -1).toLocaleDateString(locale(), { ...o, year: 'numeric' })}`;
 }
 function printAvatar(c) { return c.photo ? `<img class="pr-av" src="${esc(c.photo)}" alt="">` : `<span class="pr-av pr-emoji">${esc(c.avatar)}</span>`; }
+function prBar(v, max) { const p = max > 0 ? Math.max(0, Math.min(100, Math.round(v / max * 100))) : 0; return `<span class="pr-bar"><i style="width:${p}%"></i></span>`; }
+function prHeader(c, title, sub, right = '') {
+  return `<div class="pr-hero" style="--c:${c.accentColor}">${printAvatar(c)}<div class="pr-hero-txt"><div class="pr-kicker">${esc(title)}</div><div class="pr-title">${esc(c.name)}</div><div class="pr-sub">${sub}</div></div>${right}</div>`;
+}
+/** Tarefas da criança que entram nas tabelas (fixas primeiro). */
+function chartTasks(c) {
+  const order = { daily: 0, weekly: 1, oneOff: 2 };
+  return tasksForChild(c).slice().sort((a, b) => order[a.frequency] - order[b.frequency]);
+}
+
+/* ---------- relatório da semana de uma criança ---------- */
 function childReportHtml(c, from, to) {
-  const w = weekData(c, from, to), names = weekdayNames(true), goal = englishGoal(c);
-  const taskLine = h => { const task = taskById(h.taskId); return `<span class="pr-chip">${task ? esc(task.icon) + ' ' : ''}${esc(task ? taskName(task) : historyText(h))}</span>`; };
-  const ev = w.events.map(h => `<li class="${h.points < 0 && h.type !== 'reward' ? 'neg' : h.type === 'reward' ? 'rw' : 'pos'}"><b>${fmtDate(h.date)}</b> ${esc(historyText(h))} <em>${h.type === 'reward' ? '🎁 ' : ''}${signed(h.points)}${h.cash ? ' · ' + signedMoney(h.cash) : ''}</em></li>`).join('');
+  const w = weekData(c, from, to), names = weekdayNames(true), goal = englishGoal(c), today = dayKey(new Date());
+  const days = w.days;
+  // grade tarefa × dia
+  const fixed = chartTasks(c).filter(x => x.frequency !== 'oneOff');
+  const extraIds = [...new Set(w.tasks.map(h => String(h.taskId)))].filter(id => !fixed.some(x => String(x.id) === id));
+  const rows = [...fixed, ...extraIds.map(id => taskById(id) || { id, icon: '✅', name: (w.tasks.find(h => String(h.taskId) === id) || {}).description || t('taskRemoved'), frequency: 'oneOff', days: [] })];
+  const cell = (task, d) => {
+    const k = dayKey(d.d), n = d.tasks.filter(h => String(h.taskId) === String(task.id)).length;
+    if (n) return `<td class="ok">✔${n > 1 ? `<small>×${n}</small>` : ''}</td>`;
+    if (task.frequency === 'daily' && !scheduledOn(task, d.d)) return '<td class="off"></td>';
+    if (task.frequency !== 'daily') return '<td></td>';
+    return k < today ? '<td class="miss">○</td>' : '<td></td>';
+  };
+  const grid = rows.length ? `<table class="pr-grid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th>${days.map(d => `<th>${esc(names[d.d.getDay()])}<small>${d.d.getDate()}</small></th>`).join('')}</tr></thead>
+    <tbody>${rows.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(task.nameKey || task.name ? taskName(task) : '')}${task.frequency === 'weekly' ? ` <small>(${esc(t('freqWeekly'))})</small>` : task.frequency === 'oneOff' ? ` <small>(${esc(t('freqOneOff'))})</small>` : ''}</td>${days.map(d => cell(task, d)).join('')}</tr>`).join('')}
+      <tr class="pr-sum"><td class="pr-tl">⭐ ${esc(t('prDayPoints'))}</td>${days.map(d => `<td>${d.pts ? (d.pts > 0 ? '+' : '') + d.pts : '·'}</td>`).join('')}</tr></tbody></table>`
+    : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`;
+  // o que aconteceu, separado em três caixas
+  const good = w.events.filter(h => h.type !== 'reward' && h.points >= 0).map(h => `<li><b>${fmtDate(h.date)}</b> ${esc(historyText(h))}${h.points ? ` <em>+${h.points}</em>` : ''}</li>`);
+  w.medals.forEach(a => good.push(`<li>${a.icon} ${esc(t(a.key))}</li>`));
+  if (w.test) good.push(`<li>📝 ${esc(t('prTest', { score: w.test.score, total: w.test.total }))}</li>`);
+  const bad = w.events.filter(h => h.type !== 'reward' && h.points < 0).map(h => `<li><b>${fmtDate(h.date)}</b> ${esc(historyText(h).replace(/^⚠️ /, ''))} <em>${h.points}</em></li>`);
+  const rw = w.events.filter(h => h.type === 'reward').map(h => { const r = rewardById(h.rewardId); return `<li><b>${fmtDate(h.date)}</b> ${r ? esc(r.icon) + ' ' + esc(rewardName(r)) : esc(h.description || '—')} <em>${h.points}</em></li>`; });
+  const box = (cls, title, list) => `<div class="pr-box ${cls}"><h4>${title}</h4>${list.length ? `<ul>${list.join('')}</ul>` : `<p class="pr-empty">—</p>`}</div>`;
+  const star = `<div class="pr-star"><b>⭐ ${c.points}</b><small>${esc(t('currentPoints'))}</small><small>${esc(t('levelShort'))} ${levelOf(c)}</small></div>`;
   return `<div class="ps-page pr" style="--c:${c.accentColor}">
-    <div class="pr-head">${printAvatar(c)}<div><div class="pr-title">${esc(c.name)}</div><div class="pr-sub">${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))} · ${esc(S.familyName)}</div></div><div class="pr-star">⭐ ${c.points}<small>${esc(t('currentPoints'))}</small></div></div>
+    ${prHeader(c, t('prReportKicker'), `${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))} · ${esc(S.familyName)}`, star)}
+    <p class="pr-summary">${esc(t('prSummary', { name: c.name, tasks: w.tasks.length, earned: w.earned, lost: w.lost }))}</p>
     <div class="pr-kpis">
-      <div class="pr-kpi pos"><b>+${w.earned}</b><span>${esc(t('prEarned'))}</span></div>
-      <div class="pr-kpi neg"><b>−${w.lost}</b><span>${esc(t('prLost'))}</span></div>
-      <div class="pr-kpi"><b>${w.tasks.length}</b><span>${esc(t('prTasks'))}</span></div>
-      <div class="pr-kpi"><b>${w.spent}</b><span>${esc(t('prSpent'))}</span></div>
-      <div class="pr-kpi"><b>${w.english} min</b><span>${esc(t('prEnglish', { goal }))}</span></div>
-      <div class="pr-kpi"><b>${signedMoney(w.piggy)}</b><span>${esc(t('prPiggy'))}</span></div>
+      <div class="pr-kpi"><span class="pr-ki">✅</span><b>${w.tasks.length}</b><span>${esc(t('prTasks'))}</span>${w.expected ? `${prBar(w.regular, w.expected)}<small>${w.rate}% ${esc(t('prOfPlanned'))}</small>` : ''}</div>
+      <div class="pr-kpi pos"><span class="pr-ki">⭐</span><b>+${w.earned}</b><span>${esc(t('prEarned'))}</span></div>
+      <div class="pr-kpi neg"><span class="pr-ki">⚠️</span><b>−${w.lost}</b><span>${esc(t('prLost'))}</span></div>
+      <div class="pr-kpi"><span class="pr-ki">🎁</span><b>${w.spent}</b><span>${esc(t('prSpent'))}</span></div>
+      <div class="pr-kpi"><span class="pr-ki">🇬🇧</span><b>${w.english} min</b><span>${esc(t('prEnglish', { goal }))}</span>${goal ? prBar(w.english, goal) : ''}</div>
+      <div class="pr-kpi"><span class="pr-ki">🐷</span><b>${signedMoney(w.piggy)}</b><span>${esc(t('prPiggy'))}</span></div>
     </div>
     <h3>${esc(t('prDays'))}</h3>
-    <table class="pr-days"><thead><tr>${w.days.map(d => `<th>${esc(names[d.d.getDay()])}<br><small>${d.d.getDate()}</small></th>`).join('')}</tr></thead>
-      <tbody><tr>${w.days.map(d => `<td>${d.tasks.length ? d.tasks.map(taskLine).join('') : '<span class="pr-empty">—</span>'}</td>`).join('')}</tr>
-      <tr class="pr-pts">${w.days.map(d => `<td>${d.pts ? signed(d.pts) : '·'}</td>`).join('')}</tr></tbody></table>
-    <h3>${esc(t('prEvents'))}</h3>
-    ${ev ? `<ul class="pr-events">${ev}</ul>` : `<p class="pr-empty">${esc(t('prNoEvents'))}</p>`}
-    ${w.medals.length || w.test ? `<p class="pr-extra">${w.medals.map(a => `${a.icon} ${esc(t(a.key))}`).join(' · ')}${w.medals.length && w.test ? ' · ' : ''}${w.test ? `📝 ${esc(t('prTest', { score: w.test.score, total: w.test.total }))}` : ''}</p>` : ''}
-    <div class="pr-talk"><h3>${esc(t('prTalk'))}</h3><div class="pr-lines"><span></span><span></span><span></span></div>
+    ${grid}
+    <p class="pr-legend">✔ ${esc(t('prLegDone'))} · ○ ${esc(t('prLegMiss'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
+    <div class="pr-boxes">${box('good', '👍 ' + esc(t('prGood')), good)}${box('bad', '💬 ' + esc(t('prImprove')), bad)}${box('rw', '🎁 ' + esc(t('prRewards')), rw)}</div>
+    <div class="pr-talk">
+      <div class="pr-feel"><b>${esc(t('prFeel'))}</b><span>😄</span><span>🙂</span><span>😐</span><span>😟</span></div>
+      <h3>${esc(t('prTalk'))}</h3><div class="pr-lines"><span></span><span></span></div>
       <div class="pr-goal"><b>${esc(t('prNextGoal'))}</b><span></span></div>
       <div class="pr-sign"><div><span></span>${esc(t('prSignParent'))}</div><div><span></span>${esc(c.name)}</div></div></div>
   </div>`;
 }
+
+/* ---------- relatório da semana da família ---------- */
 function familyReportHtml(from, to) {
   const rows = S.children.map(c => ({ c, w: weekData(c, from, to) }));
   const best = (f, min = 1) => { const top = [...rows].sort((a, b) => f(b.w) - f(a.w))[0]; return top && f(top.w) >= min ? top.c.name : null; };
   const hi = [[t('prHiTasks'), best(w => w.tasks.length)], [t('prHiEnglish'), best(w => w.english)], [t('prHiPoints'), best(w => w.earned)]].filter(x => x[1]);
+  const maxEarned = Math.max(1, ...rows.map(r => r.w.earned));
+  const tot = rows.reduce((s, { w }) => ({ tasks: s.tasks + w.tasks.length, earned: s.earned + w.earned, english: s.english + w.english }), { tasks: 0, earned: 0, english: 0 });
+  const cards = rows.map(({ c, w }) => `<div class="pr-card" style="--c:${c.accentColor}">
+      <div class="pr-card-head">${printAvatar(c)}<div><b>${esc(c.name)}</b><small>${years(c.age)} · ⭐ ${c.points}</small></div><span class="pr-bal">${signed(w.balance)}</span></div>
+      <div class="pr-mini"><span>⭐ ${esc(t('prEarned'))}</span><b class="pos">+${w.earned}</b>${prBar(w.earned, maxEarned)}</div>
+      <div class="pr-mini"><span>✅ ${esc(t('prTasks'))}</span><b>${w.tasks.length}${w.expected ? ` <small>(${w.rate}%)</small>` : ''}</b>${prBar(w.regular, w.expected)}</div>
+      <div class="pr-mini"><span>🇬🇧 ${esc(t('navEnglish'))}</span><b>${w.english} / ${englishGoal(c)} min</b>${prBar(w.english, englishGoal(c))}</div>
+      <div class="pr-chips"><span class="neg">⚠️ −${w.lost}</span><span>🎁 ${w.spent}</span><span>🐷 ${signedMoney(w.piggy)}</span></div>
+    </div>`).join('');
   return `<div class="ps-page pr pr-family">
-    <div class="pr-head"><span class="pr-av pr-emoji">🌟</span><div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('prFamilyTitle'))} · ${esc(weekLabel(from, to))}</div></div></div>
-    <table class="pr-table"><thead><tr><th>${esc(t('child'))}</th><th>${esc(t('prEarned'))}</th><th>${esc(t('prLost'))}</th><th>${esc(t('prBalance'))}</th><th>${esc(t('prTasks'))}</th><th>${esc(t('prSpent'))}</th><th>${esc(t('navEnglish'))}</th><th>${esc(t('prPiggy'))}</th><th>⭐</th></tr></thead>
-      <tbody>${rows.map(({ c, w }) => `<tr><td><b>${esc(c.avatar)} ${esc(c.name)}</b></td><td class="pos">+${w.earned}</td><td class="neg">−${w.lost}</td><td><b>${signed(w.balance)}</b></td><td>${w.tasks.length}</td><td>${w.spent}</td><td>${w.english} min</td><td>${signedMoney(w.piggy)}</td><td>${c.points}</td></tr>`).join('')}</tbody></table>
-    ${hi.length ? `<h3>${esc(t('prHighlights'))}</h3><ul class="pr-events">${hi.map(([l, n]) => `<li class="pos">🏆 <b>${esc(l)}:</b> ${esc(n)}</li>`).join('')}</ul>` : ''}
-    <h3>${esc(t('prFamilyNotes'))}</h3><div class="pr-lines"><span></span><span></span><span></span><span></span></div>
+    <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">🌟</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('prFamilyTitle'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(weekLabel(from, to))}</div></div></div>
+    <div class="pr-kpis pr-kpis3">
+      <div class="pr-kpi"><span class="pr-ki">✅</span><b>${tot.tasks}</b><span>${esc(t('prTasks'))}</span></div>
+      <div class="pr-kpi pos"><span class="pr-ki">⭐</span><b>+${tot.earned}</b><span>${esc(t('prEarned'))}</span></div>
+      <div class="pr-kpi"><span class="pr-ki">🇬🇧</span><b>${tot.english} min</b><span>${esc(t('navEnglish'))}</span></div>
+    </div>
+    <div class="pr-cards">${cards}</div>
+    ${hi.length ? `<h3>${esc(t('prHighlights'))}</h3><div class="pr-hi">${hi.map(([l, n]) => `<div>🏆 <small>${esc(l)}</small><b>${esc(n)}</b></div>`).join('')}</div>` : ''}
+    <h3>${esc(t('prFamilyNotes'))}</h3><div class="pr-lines"><span></span><span></span><span></span></div>
+    <p class="pr-foot">${esc(t('prPrintedOn', { date: fmtDateTime(isoNow()) }))}</p>
+  </div>`;
+}
+
+/* ---------- quadro de tarefas para pendurar ---------- */
+function taskChartHtml(c, from, to) {
+  const names = weekdayNames(true), days = [...Array(7)].map((_, i) => addDays(from, i));
+  const list = chartTasks(c), fixed = list.filter(x => x.frequency !== 'oneOff'), extra = list.filter(x => x.frequency === 'oneOff');
+  const small = c.age <= 4;
+  const rows = fixed.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span><span class="pr-tn">${esc(taskName(task))}${task.frequency === 'weekly' ? `<small>${esc(t('prOnceWeek'))}</small>` : task.time ? `<small>⏰ ${esc(task.time)}</small>` : ''}</span></td><td class="pts">+${task.points}</td>${days.map(d => task.frequency === 'daily' && !scheduledOn(task, d) ? '<td class="off"></td>' : '<td><span class="pr-cb"></span></td>').join('')}</tr>`).join('');
+  const goal = englishGoal(c);
+  const enRow = c.age >= 3 ? `<tr class="pr-en"><td class="pr-tl"><span class="pr-ti">🇬🇧</span><span class="pr-tn">${esc(t('prChartEnglish'))}<small>${esc(t('prChartEnglishGoal', { goal }))}</small></span></td><td class="pts">min</td>${days.map(() => '<td><span class="pr-write"></span></td>').join('')}</tr>` : '';
+  const rewards = S.rewards.slice().sort((a, b) => a.cost - b.cost).slice(0, 8);
+  return `<div class="ps-page pr pr-chart ${small ? 'pr-big' : ''}" style="--c:${c.accentColor}">
+    ${prHeader(c, t('prChartKicker'), `${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))}`, `<div class="pr-star"><b>⭐ ____</b><small>${esc(t('prChartTotal'))}</small></div>`)}
+    ${fixed.length ? `<table class="pr-grid pr-chartgrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th>${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr></thead><tbody>${rows}${enRow}</tbody></table>` : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`}
+    <p class="pr-legend">${esc(t('prChartHow'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
+    ${extra.length ? `<div class="pr-box good"><h4>➕ ${esc(t('prChartExtras'))}</h4><div class="pr-extras">${extra.map(x => `<span>${esc(x.icon)} ${esc(taskName(x))} <b>+${x.points}</b> <i class="pr-tally"></i></span>`).join('')}</div></div>` : ''}
+    ${rewards.length ? `<div class="pr-box rw"><h4>🎁 ${esc(t('prChartRewards'))}</h4><div class="pr-extras">${rewards.map(r => `<span>${esc(r.icon)} ${esc(rewardName(r))} <b>${r.cost} ⭐</b></span>`).join('')}</div></div>` : ''}
+    <p class="pr-cheer">${esc(t('prChartCheer', { name: c.name }))}</p>
+  </div>`;
+}
+/** Uma página com todas as tarefas da família e para quem é cada uma. */
+function familyTasksHtml() {
+  const kids = S.children, order = { daily: 0, weekly: 1, oneOff: 2 };
+  const tasks = S.tasks.slice().sort((a, b) => order[a.frequency] - order[b.frequency] || taskName(a).localeCompare(taskName(b)));
+  return `<div class="ps-page pr pr-family">
+    <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">📋</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('prTasksKicker'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('prTasksSub', { n: tasks.length }))}</div></div></div>
+    <table class="pr-grid pr-whogrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th><th>${esc(t('prWhen'))}</th>${kids.map(c => `<th style="color:${c.accentColor}">${esc(c.avatar)}<small>${esc(c.name)}</small></th>`).join('')}</tr></thead>
+      <tbody>${tasks.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(taskName(task))}</td><td class="pts">+${task.points}</td><td class="when">${esc(freqName(task))}${task.frequency === 'daily' ? ` · ${esc(daysLabel(task))}` : ''}</td>${kids.map(c => taskForChild(task, c) ? `<td class="ok" style="color:${c.accentColor}">●</td>` : '<td class="no"></td>').join('')}</tr>`).join('')}</tbody></table>
     <p class="pr-foot">${esc(t('prPrintedOn', { date: fmtDateTime(isoNow()) }))}</p>
   </div>`;
 }
@@ -4599,14 +4961,25 @@ function familyReportHtml(from, to) {
 function openPrintChooser() {
   closeMenu();
   const kids = visibleChildren(); ui.prWeek = ui.prWeek || 0;
+  const opt = (act, id, ico, title, sub) => `<button type="button" class="item pr-opt" data-act="${act}"${id ? ` data-id="${esc(id)}"` : ''}><div class="meta">${ico}<div><strong>${title}</strong><div class="sub">${sub}</div></div></div><span>›</span></button>`;
+  const icon = e => `<span class="ico">${e}</span>`;
   Modal.open({
     id: 'printModal', title: '🖨️ ' + t('prChooseTitle'),
-    body: `<label for="prWeek">${t('prWeek')}</label><select id="prWeek"><option value="0">${esc(t('prThisWeek'))} (${esc(weekLabel(weekBounds(0).from, weekBounds(0).to))})</option><option value="-1">${esc(t('prLastWeek'))} (${esc(weekLabel(weekBounds(-1).from, weekBounds(-1).to))})</option></select>
-      <div class="list mt">
-        ${!isChildMode() ? `<button type="button" class="item pr-opt" data-act="pr-family"><div class="meta"><span class="ico">👨‍👩‍👧</span><div><strong>${t('prOptFamily')}</strong><div class="sub">${t('prOptFamilyHint')}</div></div></div><span>›</span></button>` : ''}
-        ${kids.map(c => `<button type="button" class="item pr-opt" data-act="pr-child" data-id="${esc(c.id)}"><div class="meta">${avatar(c, 'sm')}<div><strong>${t('prOptChild', { name: esc(c.name) })}</strong><div class="sub">${t('prOptChildHint')}</div></div></div><span>›</span></button>`).join('')}
-        ${kids.filter(c => englishLevel(c.age) > 0).map(c => `<button type="button" class="item pr-opt" data-act="pr-test" data-id="${esc(c.id)}"><div class="meta"><span class="ico">🇬🇧</span><div><strong>${t('prOptTest', { name: esc(c.name) })}</strong><div class="sub">Level ${englishLevel(c.age)} — ${EN_LEVELS[englishLevel(c.age)].name}</div></div></div><span>›</span></button>`).join('')}
-        <button type="button" class="item pr-opt" data-act="pr-screen"><div class="meta"><span class="ico">📄</span><div><strong>${t('prOptScreen')}</strong><div class="sub">${esc(t('title_' + ui.section))}</div></div></div><span>›</span></button>
+    body: `<label for="prWeek">${t('prWeek')}</label><select id="prWeek"><option value="0">${esc(t('prThisWeek'))} (${esc(weekLabel(weekBounds(0).from, weekBounds(0).to))})</option><option value="-1">${esc(t('prLastWeek'))} (${esc(weekLabel(weekBounds(-1).from, weekBounds(-1).to))})</option><option value="1">${esc(t('prNextWeek'))} (${esc(weekLabel(weekBounds(1).from, weekBounds(1).to))})</option></select>
+      <h4 class="pr-group">📊 ${t('prGroupReports')}</h4>
+      <div class="list">
+        ${!isChildMode() ? opt('pr-family', '', icon('👨‍👩‍👧'), t('prOptFamily'), t('prOptFamilyHint')) : ''}
+        ${kids.map(c => opt('pr-child', c.id, avatar(c, 'sm'), t('prOptChild', { name: esc(c.name) }), t('prOptChildHint'))).join('')}
+      </div>
+      <h4 class="pr-group">📋 ${t('prGroupCharts')}</h4>
+      <div class="list">
+        ${!isChildMode() ? opt('pr-chart-all', '', icon('📋'), t('prOptChartAll'), t('prOptChartAllHint')) : ''}
+        ${kids.map(c => opt('pr-chart', c.id, avatar(c, 'sm'), t('prOptChart', { name: esc(c.name) }), t('prOptChartHint'))).join('')}
+      </div>
+      <h4 class="pr-group">🇬🇧 ${t('prGroupOther')}</h4>
+      <div class="list">
+        ${kids.filter(c => englishLevel(c.age) > 0).map(c => opt('pr-test', c.id, icon('🇬🇧'), t('prOptTest', { name: esc(c.name) }), `Level ${englishLevel(c.age)} — ${EN_LEVELS[englishLevel(c.age)].name}`)).join('')}
+        ${opt('pr-screen', '', icon('📄'), t('prOptScreen'), esc(t('title_' + ui.section)))}
       </div>`
   });
 }
@@ -4615,6 +4988,12 @@ Object.assign(ACTIONS, {
   print: () => openPrintChooser(),
   'pr-family': () => { const { from, to } = chosenWeek(); printDocument(familyReportHtml(from, to) + S.children.map(c => childReportHtml(c, from, to)).join(''), t('prOptFamily')); },
   'pr-child': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenWeek(); printDocument(childReportHtml(c, from, to), t('prOptChild', { name: c.name })); },
+  'pr-chart': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenWeek(); printDocument(taskChartHtml(c, from, to), t('prOptChart', { name: c.name })); },
+  'pr-chart-all': () => {
+    // Fora da janela de impressão (ex.: botão na tela de Tarefas) usa a próxima semana se hoje já é fim de semana.
+    const inModal = !!$('#prWeek'); const { from, to } = inModal ? chosenWeek() : weekBounds(new Date().getDay() === 0 ? 1 : 0);
+    printDocument(familyTasksHtml() + S.children.map(c => taskChartHtml(c, from, to)).join(''), t('prOptChartAll'));
+  },
   'pr-test': el => { ui.enChild = el.dataset.id; Modal.close('printModal'); ACTIONS['en-print'](); },
   'pr-screen': () => { Modal.close('printModal'); document.body.classList.remove('print-mode'); setTimeout(() => window.print(), 80); }
 });
