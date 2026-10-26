@@ -843,13 +843,126 @@ span.q-name{cursor:default}
 .g-piece{width:78%;height:78%;border-radius:50%;display:grid;place-items:center;font-size:clamp(10px,3.2vw,20px);box-shadow:0 3px 0 rgba(0,0,0,.35)}
 .g-piece.p1{background:radial-gradient(circle at 35% 35%,#fff,#e5e7eb);border:2px solid #9ca3af}
 .g-piece.p2{background:radial-gradient(circle at 35% 35%,#6b7280,#111827);border:2px solid #000}
+/* ===== Meta da família ===== */
+.fg-card{margin-bottom:16px;background:linear-gradient(135deg,#fff,#fff7ed);border:1.5px solid #fed7aa}
+.fg-empty{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.fg-head{display:flex;align-items:center;gap:12px}
+.fg-ico{font-size:40px}
+.fg-txt{flex:1;display:flex;flex-direction:column}
+.fg-txt small{font-size:11px;font-weight:800;color:#c2410c;text-transform:uppercase;letter-spacing:.06em}
+.fg-txt b{font-size:20px}
+.fg-txt span{font-size:13px;color:var(--muted)}
+.fg-actions{display:flex;gap:6px;align-items:center}
+.fg-bar{position:relative;height:26px;border-radius:999px;background:#ffedd5;overflow:hidden;margin:10px 0 8px}
+.fg-bar span{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#fb923c,#f59e0b);border-radius:999px;transition:width .4s}
+.fg-bar b{position:relative;display:block;text-align:center;line-height:26px;font-size:13px}
+.fg-parts{display:flex;gap:6px;flex-wrap:wrap}
+.fg-parts span{font-size:12.5px;padding:4px 10px;border-radius:999px;background:#fff;border:1.5px solid color-mix(in srgb,var(--c) 40%,#fff)}
+.fg-done{background:linear-gradient(135deg,#ecfdf5,#fff);border-color:#86efac}
+/* sentimentos */
+.mood-rows{display:grid;gap:8px}
+.mood-row{display:grid;grid-template-columns:auto 90px 1fr auto;align-items:center;gap:10px}
+.mood-faces{display:flex;gap:4px;flex-wrap:wrap}
+.mood-face{width:42px;height:42px;border-radius:50%;border:2px solid var(--line);background:#fff;font-size:22px;cursor:pointer;padding:0;opacity:.6}
+.mood-face:hover{opacity:1}
+.mood-face.on{opacity:1;border-color:var(--primary);background:var(--accent-soft);transform:scale(1.1)}
+.mood-week{display:flex;gap:2px;font-size:15px}
+.mood-week i{font-style:normal;width:20px;text-align:center;color:#c4c6d4}
+@media(max-width:620px){.mood-row{grid-template-columns:auto 1fr}.mood-faces{grid-column:1/-1}.mood-week{grid-column:1/-1}}
+/* agenda */
+.ev-banner{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:16px;background:#fdf4ff;color:#701a75}
+.ev-banner span{font-size:14px}
+.ev-banner em{font-style:normal;font-weight:800}
+.cal-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:-6px 0 12px}
+.day-evs{display:grid;gap:3px;margin-top:5px}
+.day-ev{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:7px;background:rgba(255,255,255,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:3px solid #a855f7}
+.day-ev.ev-birthday{border-left-color:#ec4899}.day-ev.ev-school{border-left-color:#3b82f6}.day-ev.ev-health{border-left-color:#ef4444}.day-ev.ev-outing{border-left-color:#22c55e}
+.day.has-ev .day-deco{display:none}
+.day-ev-list .item{border-left:4px solid #a855f7}
+@media(max-width:760px){.day-ev{font-size:0;padding:0;border:0;background:none}.day-ev:first-letter{font-size:13px}.day-evs{display:flex;gap:1px}}
+/* potes */
+.pots-kids{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.pots-kid{border:1.5px solid var(--line);border-left:5px solid var(--c);border-radius:16px;padding:10px 12px}
+.pots-kid-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.pots-kid-head b{flex:1}
+.pots-kid-head span{font-weight:900}
+.pots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pot{border-radius:14px;padding:8px;text-align:center;background:#f8fafc}
+.pot-spend{background:#eff6ff}.pot-save{background:#ecfdf5}.pot-give{background:#fdf2f8}
+.pot-ico{display:block;font-size:24px}
+.pot small{display:block;font-size:11.5px;color:var(--muted);font-weight:700}
+.pot b{display:block;font-size:16px}
+.pot em{display:block;font-style:normal;font-size:10.5px;color:#0f6b45;margin-top:3px}
+.pot .progress{margin:4px 0 0;height:6px}
+.pot .progress span{background:#16a34a}
+/* leitura */
+.rd-shelf{display:flex;flex-wrap:wrap;gap:3px;align-items:flex-end;padding:8px 8px 0;border-bottom:8px solid #a16207;border-radius:6px;background:linear-gradient(#fff,#fef9c3);min-height:120px}
+.rd-book{width:26px;height:110px;border-radius:4px 4px 1px 1px;background:hsl(var(--h) 65% 60%);display:flex;align-items:center;justify-content:center;box-shadow:inset -3px 0 0 rgba(0,0,0,.15)}
+.rd-book span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;font-weight:800;color:#fff;max-height:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-shadow:0 1px 1px rgba(0,0,0,.3)}
+/* rotina */
+.rt-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:6px}
+.rt-step{position:relative}
+.rt-tap{width:100%;display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 8px 12px;border-radius:20px;border:2.5px solid color-mix(in srgb,var(--c) 40%,#fff);background:#fff;font:inherit;cursor:pointer;position:relative}
+.rt-tap b{font-size:15px}
+.rt-big{font-size:56px;line-height:1.1}
+.rt-n{position:absolute;left:10px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font-weight:900;font-size:13px;display:grid;place-items:center}
+.rt-check{position:absolute;right:10px;top:8px;width:30px;height:30px;border-radius:50%;background:#16a34a;color:#fff;font-weight:900;display:grid;place-items:center;font-size:18px}
+.rt-step.ok .rt-tap{background:#ecfdf5;border-color:#16a34a}
+.rt-step.ok .rt-big{opacity:.55}
+.rt-say{position:absolute;right:8px;bottom:8px;border:0;background:#f4f4f8;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:16px}
+@media(max-width:620px){.rt-steps{grid-template-columns:1fr 1fr}.rt-big{font-size:46px}}
+/* rotina impressa */
+.pr-routine .rt-grid{margin-bottom:10px}
+.pr-routine .rt-grid td{height:var(--rowh,44px);padding-top:0;padding-bottom:0}
+.pr-routine .rt-grid .pr-tl{width:40%}
+.rt-num{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--c);color:#fff;font-size:11px;font-weight:900;margin-right:6px;vertical-align:middle}
+.rt-pic{font-size:calc(var(--rowh,44px) * .55);vertical-align:middle;margin-right:6px}
+.rt-name{font-size:14px;font-weight:800;vertical-align:middle}
+.pr-routine .rt-cb{width:calc(var(--rowh,44px) * .5);height:calc(var(--rowh,44px) * .5);border-radius:50%}
+/* álbum */
+.al-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.al-top b{display:block;font-size:18px}
+.al-page{margin-bottom:14px}
+.al-page h3{margin:0 0 8px;font-size:16px}
+.al-page h3 small{color:var(--muted);font-weight:700}
+.al-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+.al-slot{aspect-ratio:1;border-radius:12px;border:2px dashed #d4d4dc;display:grid;place-items:center;background:#fafafa}
+.al-slot small{color:#c4c6d4;font-weight:800;font-size:11px}
+.al-slot.has{border:2px solid color-mix(in srgb,var(--c) 50%,#fff);background:#fff;box-shadow:0 3px 8px rgba(43,39,78,.08)}
+.al-slot.has span{font-size:clamp(18px,4vw,30px)}
+.al-slot.new{animation:alpop 1s ease 2}
+@keyframes alpop{50%{transform:scale(1.15) rotate(-6deg)}}
+@media(max-width:620px){.al-grid{grid-template-columns:repeat(6,1fr)}}
+.al-print .al-grid{grid-template-columns:repeat(8,1fr);gap:4px}
+.al-print .al-slot.has span{font-size:22px}
+.al-print .al-page{break-inside:avoid}
+/* relatório do mês */
+.mr-kpis{grid-template-columns:repeat(4,1fr)!important;gap:6px}
+.mr-kpis small i{font-style:normal;font-weight:800}
+.mr-up{color:#0f7a4c}.mr-down{color:#b42318}.mr-eq{color:#888}
+.mr-two{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;margin:10px 0 8px}
+.mr-bars{display:flex;gap:8px;align-items:flex-end;height:110px;padding-top:6px}
+.mr-bars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.mr-bars span{width:70%;background:var(--c);border-radius:6px 6px 2px 2px;display:block}
+.mr-bars b{font-size:11px}.mr-bars small{font-size:9px;color:#666}
+.mr-moods{display:flex;gap:6px;justify-content:space-around}
+.mr-moods div{text-align:center}
+.mr-moods span{font-size:26px;display:block}
+.mr-moods b{font-size:14px}
+.mr-table{font-size:12px}
+.mr-table td{padding:6px 3px}
+.pr-moodweek{display:flex;gap:10px;align-items:center;font-size:12px;margin:8px 2px 0}
+.pr-moodweek span{display:flex;flex-direction:column;align-items:center;font-size:18px}
+.pr-moodweek small{font-size:9px;color:#666}
+.al-print .al-grid{grid-template-columns:repeat(12,1fr)!important}.al-print .al-page{margin-bottom:8px}.al-print .al-slot.has span{font-size:20px}
+.rt-tap{padding-bottom:40px}.rt-say{bottom:8px;right:50%;transform:translateX(50%)}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v81 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v82 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -3433,13 +3546,1110 @@ const GAMES_TEXT = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], GAMES_TEXT[l]));
 
+/* Textos da v82: meta da família, potes, leitura, rotina, agenda, sentimentos, álbum, relatório do mês. */
+const EXTRAS_TEXT = {
+"pt": {
+"navAlbum": "Álbum de figurinhas",
+"title_album": "Álbum de figurinhas",
+"sub_album": "Cada 50 pontos ganhos viram uma figurinha nova.",
+"navReading": "Leitura",
+"title_leitura": "Leitura",
+"sub_leitura": "Livros lidos e histórias contadas, com uma estante de cada um.",
+"navRoutine": "Rotina com figuras",
+"title_rotina": "Rotina com figuras",
+"sub_rotina": "Manhã e noite em figuras grandes, para os pequenos seguirem sozinhos.",
+"typeRoutine": "Rotina",
+"typeReading": "Leitura",
+"alComplete": "Álbum completo!",
+"alCount": "{n} de {total} figurinhas",
+"alHint": "Cada {n} pontos ganhos (tarefas, lição, inglês, jogos…) liberam uma figurinha. Se um ponto for desfeito, a figurinha volta a ficar vazia.",
+"alNext": "Faltam {n} pontos para a próxima figurinha.",
+"alPrint": "Imprimir álbum",
+"stAnimals": "🐾 Bichinhos",
+"stOcean": "🌊 Fundo do mar",
+"stSpace": "🚀 Espaço",
+"stDinos": "🦖 Dinossauros",
+"fgTitle": "Meta da família",
+"fgCreate": "Criar meta",
+"fgEmptyHint": "Os pontos de todos somam juntos para um prêmio da família inteira.",
+"fgReached": "Meta alcançada! Combinem o dia do prêmio.",
+"fgLeft": "Faltam {n} pontos",
+"fgFinish": "Já fizemos",
+"fgHint": "Conta todos os pontos ganhos por todas as crianças desde que a meta começou. Gastar pontos em recompensas não diminui a meta.",
+"fgIntro": "Escolha uma ideia ou escreva a sua. A meta junta os pontos que todos ganham, então um ajuda o outro.",
+"fgTarget": "Pontos para chegar lá",
+"fgTargetHint": "Se todos fizerem tudo, a família ganha cerca de {n} pontos por semana.",
+"fgRestart": "Começar a contar de novo a partir de hoje",
+"fgRemoveConfirm": "Apagar a meta da família?",
+"fgFinishConfirm": "Vocês já fizeram \"{name}\"? A meta vai para o histórico e você pode criar a próxima.",
+"fgFinished": "Parabéns, família! Agora escolham a próxima meta.",
+"fgPizza": "Noite de pizza",
+"fgPicnic": "Piquenique em família",
+"fgMovie": "Sessão de cinema em casa com pipoca",
+"fgPark": "Passeio no parque",
+"fgPool": "Dia de piscina",
+"fgCinema": "Ir ao cinema todos juntos",
+"fgTrip": "Viagem de fim de semana",
+"moodTitle": "Como foi o dia de cada um?",
+"moodHint": "Toque na carinha de como cada um ficou hoje. Ao lado aparecem os últimos 7 dias.",
+"moodHintChild": "Como você se sentiu hoje?",
+"moodSaved": "Anotado para {name}.",
+"mood_5": "Muito feliz",
+"mood_4": "Feliz",
+"mood_3": "Mais ou menos",
+"mood_2": "Triste",
+"mood_1": "Bravo",
+"evComing": "Agenda:",
+"evToday": "Hoje",
+"evTomorrow": "Amanhã",
+"evOpenCal": "Ver calendário",
+"evNew": "Novo evento",
+"evEdit": "Editar evento",
+"evNewThisDay": "Novo evento neste dia",
+"evWhat": "O que é?",
+"evTitlePh": "Ex.: Reunião da escola, aniversário da vovó",
+"evKind": "Tipo",
+"evKind_birthday": "Aniversário",
+"evKind_school": "Escola",
+"evKind_health": "Saúde",
+"evKind_outing": "Passeio",
+"evKind_family": "Família",
+"evKind_other": "Outro",
+"evWho": "Para quem?",
+"evWhoHint": "Nenhum marcado = a família toda.",
+"evYearly": "Repetir todo ano (aniversários)",
+"evYearlyShort": "todo ano",
+"evEveryone": "Família toda",
+"evNeedDate": "Escolha a data.",
+"evDelConfirm": "Apagar este evento?",
+"evCalHint": "Aniversários, provas, reuniões, consultas e passeios aparecem aqui e no painel um dia antes.",
+"potsTitle": "Os três potes",
+"potsHint": "Cada dinheiro que entra é dividido: {spend}% para gastar, {save}% para guardar e {give}% para doar.",
+"pot_spend": "Gastar",
+"pot_save": "Guardar",
+"pot_give": "Doar",
+"potMove": "Mover entre potes",
+"potFrom": "Tirar do pote",
+"potTo": "Colocar no pote",
+"potMoveHint": "Ex.: passar do Gastar para o Guardar para chegar mais rápido na meta.",
+"potMoveInvalid": "Valor maior que o que tem no pote.",
+"potNotEnough": "Não tem dinheiro suficiente no pote {pot}.",
+"potsSettings": "Como dividir",
+"potsSettingsHint": "O que sobra vai para o Gastar. O dinheiro que já estava no cofrinho fica no Guardar.",
+"potsOff": "Desligar os potes",
+"potsOn": "Ligar os potes",
+"potsOffNotice": "Os três potes (gastar, guardar e doar) estão desligados.",
+"rdAddTitle": "Registrar livro de {name}",
+"rdBookName": "Nome do livro ou da história",
+"rdBookPh": "Ex.: Os Três Porquinhos",
+"rdHow": "Como foi?",
+"rdHow_alone": "Leu sozinho",
+"rdHow_together": "Leu junto",
+"rdHow_listened": "Ouviu a história",
+"rdLiked": "Gostou?",
+"rdPointsHint": "Cada livro vale {n} pontos. A cada 5 livros, uma medalha!",
+"rdSave": "Salvar livro",
+"rdProgress": "Progresso",
+"rdTotal": "Livros no total",
+"rdMedals": "Medalhas",
+"rdNextMedal": "Faltam {n} livro(s) para a próxima medalha 🏅",
+"rdShelf": "Estante",
+"rdEmpty": "A estante ainda está vazia. Que tal começar hoje?",
+"rdList": "Livros registrados",
+"rdRules": "Regras da leitura",
+"rdRulePoints": "Pontos por livro",
+"rdNeedTitle": "Escreva o nome do livro.",
+"rdSaved": "{name} leu \"{title}\"",
+"rdMedalWon": "{name} ganhou uma medalha de leitura: {n} livros!",
+"rdDelConfirm": "Apagar este livro? Os pontos voltam.",
+"rdReadLabel": "Leu \"{title}\"",
+"rtMorning": "Manhã",
+"rtNight": "Noite",
+"rtPrint": "Imprimir rotina",
+"rtPrintAll": "Imprimir de todos",
+"rtEdit": "Editar rotina",
+"rtEditDone": "Pronto",
+"rtHint": "Toque em cada figura quando terminar. O 🔊 fala o nome em voz alta.",
+"rtComplete": "Rotina completa, {name}!",
+"rtEditTitle": "Passos da rotina",
+"rtEditHint": "Tire, coloque ou mude a ordem dos passos desta criança.",
+"rtAddStep": "Adicionar passo",
+"rtAllAdded": "Todos os passos já estão na rotina.",
+"rtReset": "Voltar ao padrão da idade",
+"rtRules": "Regras da rotina",
+"rtRulePoints": "Pontos por rotina completa (uma vez por dia)",
+"rtKicker": "Minha rotina",
+"rtCheer": "Um passo de cada vez, {name}! ⭐",
+"rtPrintHint": "Manhã e noite com figuras, para pendurar.",
+"rtDoneLabel": "Rotina da {kind} completa",
+"rs_wake": "Acordar",
+"rs_potty": "Fazer xixi",
+"rs_diaper": "Trocar a fralda",
+"rs_washFace": "Lavar o rosto",
+"rs_brush": "Escovar os dentes",
+"rs_dress": "Vestir a roupa",
+"rs_hair": "Pentear o cabelo",
+"rs_breakfast": "Tomar café",
+"rs_shoes": "Calçar os sapatos",
+"rs_backpack": "Pegar a mochila",
+"rs_water": "Beber água",
+"rs_kiss": "Beijo de bom dia",
+"rs_homework": "Fazer a lição",
+"rs_dinner": "Jantar",
+"rs_toys": "Guardar os brinquedos",
+"rs_bath": "Tomar banho",
+"rs_pajamas": "Vestir o pijama",
+"rs_brushNight": "Escovar os dentes",
+"rs_pottyNight": "Fazer xixi",
+"rs_clothesTomorrow": "Separar a roupa de amanhã",
+"rs_story": "Hora da história",
+"rs_pray": "Agradecer pelo dia",
+"rs_hug": "Abraço de boa noite",
+"rs_sleep": "Dormir",
+"mrGroup": "Relatório do mês",
+"mrOptFamily": "Relatório do mês — família",
+"mrOptFamilyHint": "Resumo de todos e uma página para cada criança.",
+"mrOptChild": "Relatório do mês — {name}",
+"mrOptChildHint": "Comparando com o mês anterior.",
+"mrKicker": "Relatório do mês",
+"mrFamilyKicker": "Mês da família",
+"mrSummary": "Neste mês {name} fez {tasks} tarefas, ganhou {earned} pontos, leu {books} livro(s) e fez {pages} página(s) de lição.",
+"mrVsLast": "vs. mês passado",
+"mrEnglishMin": "Minutos de inglês",
+"mrBooks": "Livros",
+"mrGames": "Desafios vencidos",
+"mrRoutines": "Rotinas completas",
+"mrTasksByWeek": "Tarefas por semana",
+"mrMoods": "Como se sentiu",
+"mrNoMoods": "Nenhuma carinha marcada neste período.",
+"mrHighlights": "Conquistas",
+"mrBooksLine": "{n} livro(s) lido(s)",
+"mrStickers": "{n} figurinha(s) no álbum",
+"mrTalk": "Nossa conversa do mês",
+"mrNextGoal": "Meta para o próximo mês:",
+"mrHappyDays": "dias felizes",
+"mrEvents": "Aconteceu no mês"
+},
+"en": {
+"navAlbum": "Sticker album",
+"title_album": "Sticker album",
+"sub_album": "Every 50 points earned turn into a new sticker.",
+"navReading": "Reading",
+"title_leitura": "Reading",
+"sub_leitura": "Books read and stories told, with a bookshelf for each child.",
+"navRoutine": "Picture routine",
+"title_rotina": "Picture routine",
+"sub_rotina": "Morning and evening in big pictures, so little ones can follow on their own.",
+"typeRoutine": "Routine",
+"typeReading": "Reading",
+"alComplete": "Album complete!",
+"alCount": "{n} of {total} stickers",
+"alHint": "Every {n} points earned (tasks, homework, English, games…) unlock a sticker. If points are undone, the sticker goes back to empty.",
+"alNext": "{n} more points to the next sticker.",
+"alPrint": "Print album",
+"stAnimals": "🐾 Animals",
+"stOcean": "🌊 Under the sea",
+"stSpace": "🚀 Space",
+"stDinos": "🦖 Dinosaurs",
+"fgTitle": "Family goal",
+"fgCreate": "Create goal",
+"fgEmptyHint": "Everyone's points add up together for a prize for the whole family.",
+"fgReached": "Goal reached! Pick the day for the prize.",
+"fgLeft": "{n} points to go",
+"fgFinish": "We did it",
+"fgHint": "Counts all points earned by all children since the goal started. Spending points on rewards doesn't lower the goal.",
+"fgIntro": "Pick an idea or write your own. The goal adds up everyone's points, so they help each other.",
+"fgTarget": "Points to get there",
+"fgTargetHint": "If everyone does everything, the family earns about {n} points a week.",
+"fgRestart": "Start counting again from today",
+"fgRemoveConfirm": "Delete the family goal?",
+"fgFinishConfirm": "Did you already do \"{name}\"? The goal moves to history and you can create the next one.",
+"fgFinished": "Congratulations, family! Now pick the next goal.",
+"fgPizza": "Pizza night",
+"fgPicnic": "Family picnic",
+"fgMovie": "Movie night at home with popcorn",
+"fgPark": "Trip to the park",
+"fgPool": "Pool day",
+"fgCinema": "Go to the movies together",
+"fgTrip": "Weekend trip",
+"moodTitle": "How was everyone's day?",
+"moodHint": "Tap the face for how each child felt today. The last 7 days show beside it.",
+"moodHintChild": "How did you feel today?",
+"moodSaved": "Noted for {name}.",
+"mood_5": "Very happy",
+"mood_4": "Happy",
+"mood_3": "So-so",
+"mood_2": "Sad",
+"mood_1": "Angry",
+"evComing": "Schedule:",
+"evToday": "Today",
+"evTomorrow": "Tomorrow",
+"evOpenCal": "Open calendar",
+"evNew": "New event",
+"evEdit": "Edit event",
+"evNewThisDay": "New event on this day",
+"evWhat": "What is it?",
+"evTitlePh": "E.g. School meeting, grandma's birthday",
+"evKind": "Type",
+"evKind_birthday": "Birthday",
+"evKind_school": "School",
+"evKind_health": "Health",
+"evKind_outing": "Outing",
+"evKind_family": "Family",
+"evKind_other": "Other",
+"evWho": "Who is it for?",
+"evWhoHint": "None selected = the whole family.",
+"evYearly": "Repeat every year (birthdays)",
+"evYearlyShort": "every year",
+"evEveryone": "Whole family",
+"evNeedDate": "Choose the date.",
+"evDelConfirm": "Delete this event?",
+"evCalHint": "Birthdays, tests, meetings, appointments and outings show here and on the dashboard a day before.",
+"potsTitle": "The three jars",
+"potsHint": "Every bit of money that comes in is split: {spend}% to spend, {save}% to save and {give}% to give.",
+"pot_spend": "Spend",
+"pot_save": "Save",
+"pot_give": "Give",
+"potMove": "Move between jars",
+"potFrom": "Take from jar",
+"potTo": "Put in jar",
+"potMoveHint": "E.g. move from Spend to Save to reach the goal faster.",
+"potMoveInvalid": "Amount is more than what's in the jar.",
+"potNotEnough": "Not enough money in the {pot} jar.",
+"potsSettings": "How to split",
+"potsSettingsHint": "What's left goes to Spend. Money already in the piggy bank stays in Save.",
+"potsOff": "Turn off the jars",
+"potsOn": "Turn on the jars",
+"potsOffNotice": "The three jars (spend, save and give) are turned off.",
+"rdAddTitle": "Log a book for {name}",
+"rdBookName": "Name of the book or story",
+"rdBookPh": "E.g. The Three Little Pigs",
+"rdHow": "How was it?",
+"rdHow_alone": "Read alone",
+"rdHow_together": "Read together",
+"rdHow_listened": "Listened to the story",
+"rdLiked": "Liked it?",
+"rdPointsHint": "Each book is worth {n} points. Every 5 books, a medal!",
+"rdSave": "Save book",
+"rdProgress": "Progress",
+"rdTotal": "Books in total",
+"rdMedals": "Medals",
+"rdNextMedal": "{n} book(s) to the next medal 🏅",
+"rdShelf": "Bookshelf",
+"rdEmpty": "The bookshelf is still empty. How about starting today?",
+"rdList": "Logged books",
+"rdRules": "Reading rules",
+"rdRulePoints": "Points per book",
+"rdNeedTitle": "Write the name of the book.",
+"rdSaved": "{name} read \"{title}\"",
+"rdMedalWon": "{name} won a reading medal: {n} books!",
+"rdDelConfirm": "Delete this book? The points go back.",
+"rdReadLabel": "Read \"{title}\"",
+"rtMorning": "Morning",
+"rtNight": "Evening",
+"rtPrint": "Print routine",
+"rtPrintAll": "Print for everyone",
+"rtEdit": "Edit routine",
+"rtEditDone": "Done",
+"rtHint": "Tap each picture when you finish. 🔊 says the name out loud.",
+"rtComplete": "Routine complete, {name}!",
+"rtEditTitle": "Routine steps",
+"rtEditHint": "Remove, add or reorder this child's steps.",
+"rtAddStep": "Add a step",
+"rtAllAdded": "All steps are already in the routine.",
+"rtReset": "Back to the default for this age",
+"rtRules": "Routine rules",
+"rtRulePoints": "Points per completed routine (once a day)",
+"rtKicker": "My routine",
+"rtCheer": "One step at a time, {name}! ⭐",
+"rtPrintHint": "Morning and evening in pictures, to hang up.",
+"rtDoneLabel": "{kind} routine complete",
+"rs_wake": "Wake up",
+"rs_potty": "Go potty",
+"rs_diaper": "Change diaper",
+"rs_washFace": "Wash face",
+"rs_brush": "Brush teeth",
+"rs_dress": "Get dressed",
+"rs_hair": "Brush hair",
+"rs_breakfast": "Have breakfast",
+"rs_shoes": "Put on shoes",
+"rs_backpack": "Get the backpack",
+"rs_water": "Drink water",
+"rs_kiss": "Good morning kiss",
+"rs_homework": "Do homework",
+"rs_dinner": "Have dinner",
+"rs_toys": "Put toys away",
+"rs_bath": "Take a bath",
+"rs_pajamas": "Put on pajamas",
+"rs_brushNight": "Brush teeth",
+"rs_pottyNight": "Go potty",
+"rs_clothesTomorrow": "Pick tomorrow's clothes",
+"rs_story": "Story time",
+"rs_pray": "Say thanks for the day",
+"rs_hug": "Good night hug",
+"rs_sleep": "Sleep",
+"mrGroup": "Monthly report",
+"mrOptFamily": "Monthly report — family",
+"mrOptFamilyHint": "Everyone's summary and one page per child.",
+"mrOptChild": "Monthly report — {name}",
+"mrOptChildHint": "Compared with the previous month.",
+"mrKicker": "Monthly report",
+"mrFamilyKicker": "Family month",
+"mrSummary": "This month {name} did {tasks} tasks, earned {earned} points, read {books} book(s) and did {pages} page(s) of homework.",
+"mrVsLast": "vs. last month",
+"mrEnglishMin": "English minutes",
+"mrBooks": "Books",
+"mrGames": "Challenges won",
+"mrRoutines": "Routines completed",
+"mrTasksByWeek": "Tasks per week",
+"mrMoods": "How they felt",
+"mrNoMoods": "No faces marked in this period.",
+"mrHighlights": "Achievements",
+"mrBooksLine": "{n} book(s) read",
+"mrStickers": "{n} sticker(s) in the album",
+"mrTalk": "Our monthly talk",
+"mrNextGoal": "Goal for next month:",
+"mrHappyDays": "happy days",
+"mrEvents": "What happened this month"
+},
+"es": {
+"navAlbum": "Álbum de figuritas",
+"title_album": "Álbum de figuritas",
+"sub_album": "Cada 50 puntos ganados se convierten en una figurita nueva.",
+"navReading": "Lectura",
+"title_leitura": "Lectura",
+"sub_leitura": "Libros leídos y cuentos contados, con una estantería para cada uno.",
+"navRoutine": "Rutina con dibujos",
+"title_rotina": "Rutina con dibujos",
+"sub_rotina": "Mañana y noche con dibujos grandes, para que los pequeños la sigan solos.",
+"typeRoutine": "Rutina",
+"typeReading": "Lectura",
+"alComplete": "¡Álbum completo!",
+"alCount": "{n} de {total} figuritas",
+"alHint": "Cada {n} puntos ganados (tareas, deberes, inglés, juegos…) liberan una figurita. Si se deshace un punto, la figurita vuelve a quedar vacía.",
+"alNext": "Faltan {n} puntos para la próxima figurita.",
+"alPrint": "Imprimir álbum",
+"stAnimals": "🐾 Animalitos",
+"stOcean": "🌊 Fondo del mar",
+"stSpace": "🚀 Espacio",
+"stDinos": "🦖 Dinosaurios",
+"fgTitle": "Meta de la familia",
+"fgCreate": "Crear meta",
+"fgEmptyHint": "Los puntos de todos se suman para un premio de toda la familia.",
+"fgReached": "¡Meta alcanzada! Elijan el día del premio.",
+"fgLeft": "Faltan {n} puntos",
+"fgFinish": "Ya lo hicimos",
+"fgHint": "Cuenta todos los puntos ganados por todos los niños desde que empezó la meta. Gastar puntos en recompensas no baja la meta.",
+"fgIntro": "Elige una idea o escribe la tuya. La meta junta los puntos de todos, así se ayudan entre ellos.",
+"fgTarget": "Puntos para llegar",
+"fgTargetHint": "Si todos hacen todo, la familia gana cerca de {n} puntos por semana.",
+"fgRestart": "Empezar a contar de nuevo desde hoy",
+"fgRemoveConfirm": "¿Borrar la meta de la familia?",
+"fgFinishConfirm": "¿Ya hicieron \"{name}\"? La meta pasa al historial y puedes crear la próxima.",
+"fgFinished": "¡Felicidades, familia! Ahora elijan la próxima meta.",
+"fgPizza": "Noche de pizza",
+"fgPicnic": "Pícnic en familia",
+"fgMovie": "Cine en casa con palomitas",
+"fgPark": "Paseo al parque",
+"fgPool": "Día de piscina",
+"fgCinema": "Ir al cine todos juntos",
+"fgTrip": "Viaje de fin de semana",
+"moodTitle": "¿Cómo fue el día de cada uno?",
+"moodHint": "Toca la carita de cómo se sintió cada uno hoy. Al lado aparecen los últimos 7 días.",
+"moodHintChild": "¿Cómo te sentiste hoy?",
+"moodSaved": "Anotado para {name}.",
+"mood_5": "Muy feliz",
+"mood_4": "Feliz",
+"mood_3": "Más o menos",
+"mood_2": "Triste",
+"mood_1": "Enojado",
+"evComing": "Agenda:",
+"evToday": "Hoy",
+"evTomorrow": "Mañana",
+"evOpenCal": "Ver calendario",
+"evNew": "Nuevo evento",
+"evEdit": "Editar evento",
+"evNewThisDay": "Nuevo evento este día",
+"evWhat": "¿Qué es?",
+"evTitlePh": "Ej.: Reunión de la escuela, cumpleaños de la abuela",
+"evKind": "Tipo",
+"evKind_birthday": "Cumpleaños",
+"evKind_school": "Escuela",
+"evKind_health": "Salud",
+"evKind_outing": "Paseo",
+"evKind_family": "Familia",
+"evKind_other": "Otro",
+"evWho": "¿Para quién?",
+"evWhoHint": "Ninguno marcado = toda la familia.",
+"evYearly": "Repetir cada año (cumpleaños)",
+"evYearlyShort": "cada año",
+"evEveryone": "Toda la familia",
+"evNeedDate": "Elige la fecha.",
+"evDelConfirm": "¿Borrar este evento?",
+"evCalHint": "Cumpleaños, pruebas, reuniones, consultas y paseos aparecen aquí y en el panel un día antes.",
+"potsTitle": "Los tres frascos",
+"potsHint": "Cada dinero que entra se divide: {spend}% para gastar, {save}% para ahorrar y {give}% para donar.",
+"pot_spend": "Gastar",
+"pot_save": "Ahorrar",
+"pot_give": "Donar",
+"potMove": "Mover entre frascos",
+"potFrom": "Sacar del frasco",
+"potTo": "Poner en el frasco",
+"potMoveHint": "Ej.: pasar de Gastar a Ahorrar para llegar antes a la meta.",
+"potMoveInvalid": "El valor es mayor que lo que hay en el frasco.",
+"potNotEnough": "No hay dinero suficiente en el frasco {pot}.",
+"potsSettings": "Cómo dividir",
+"potsSettingsHint": "Lo que sobra va a Gastar. El dinero que ya estaba en la alcancía queda en Ahorrar.",
+"potsOff": "Apagar los frascos",
+"potsOn": "Encender los frascos",
+"potsOffNotice": "Los tres frascos (gastar, ahorrar y donar) están apagados.",
+"rdAddTitle": "Registrar libro de {name}",
+"rdBookName": "Nombre del libro o del cuento",
+"rdBookPh": "Ej.: Los tres cerditos",
+"rdHow": "¿Cómo fue?",
+"rdHow_alone": "Leyó solo",
+"rdHow_together": "Leyó junto",
+"rdHow_listened": "Escuchó el cuento",
+"rdLiked": "¿Le gustó?",
+"rdPointsHint": "Cada libro vale {n} puntos. ¡Cada 5 libros, una medalla!",
+"rdSave": "Guardar libro",
+"rdProgress": "Progreso",
+"rdTotal": "Libros en total",
+"rdMedals": "Medallas",
+"rdNextMedal": "Falta(n) {n} libro(s) para la próxima medalla 🏅",
+"rdShelf": "Estantería",
+"rdEmpty": "La estantería todavía está vacía. ¿Empezamos hoy?",
+"rdList": "Libros registrados",
+"rdRules": "Reglas de lectura",
+"rdRulePoints": "Puntos por libro",
+"rdNeedTitle": "Escribe el nombre del libro.",
+"rdSaved": "{name} leyó \"{title}\"",
+"rdMedalWon": "¡{name} ganó una medalla de lectura: {n} libros!",
+"rdDelConfirm": "¿Borrar este libro? Los puntos vuelven.",
+"rdReadLabel": "Leyó \"{title}\"",
+"rtMorning": "Mañana",
+"rtNight": "Noche",
+"rtPrint": "Imprimir rutina",
+"rtPrintAll": "Imprimir de todos",
+"rtEdit": "Editar rutina",
+"rtEditDone": "Listo",
+"rtHint": "Toca cada dibujo al terminar. El 🔊 dice el nombre en voz alta.",
+"rtComplete": "¡Rutina completa, {name}!",
+"rtEditTitle": "Pasos de la rutina",
+"rtEditHint": "Quita, agrega o cambia el orden de los pasos de este niño.",
+"rtAddStep": "Agregar paso",
+"rtAllAdded": "Todos los pasos ya están en la rutina.",
+"rtReset": "Volver a la rutina de su edad",
+"rtRules": "Reglas de la rutina",
+"rtRulePoints": "Puntos por rutina completa (una vez al día)",
+"rtKicker": "Mi rutina",
+"rtCheer": "¡Un paso a la vez, {name}! ⭐",
+"rtPrintHint": "Mañana y noche con dibujos, para colgar.",
+"rtDoneLabel": "Rutina de la {kind} completa",
+"rs_wake": "Despertar",
+"rs_potty": "Hacer pipí",
+"rs_diaper": "Cambiar el pañal",
+"rs_washFace": "Lavarse la cara",
+"rs_brush": "Cepillarse los dientes",
+"rs_dress": "Vestirse",
+"rs_hair": "Peinarse",
+"rs_breakfast": "Desayunar",
+"rs_shoes": "Ponerse los zapatos",
+"rs_backpack": "Tomar la mochila",
+"rs_water": "Beber agua",
+"rs_kiss": "Beso de buenos días",
+"rs_homework": "Hacer los deberes",
+"rs_dinner": "Cenar",
+"rs_toys": "Guardar los juguetes",
+"rs_bath": "Bañarse",
+"rs_pajamas": "Ponerse el pijama",
+"rs_brushNight": "Cepillarse los dientes",
+"rs_pottyNight": "Hacer pipí",
+"rs_clothesTomorrow": "Preparar la ropa de mañana",
+"rs_story": "Hora del cuento",
+"rs_pray": "Agradecer por el día",
+"rs_hug": "Abrazo de buenas noches",
+"rs_sleep": "Dormir",
+"mrGroup": "Informe del mes",
+"mrOptFamily": "Informe del mes — familia",
+"mrOptFamilyHint": "Resumen de todos y una página para cada niño.",
+"mrOptChild": "Informe del mes — {name}",
+"mrOptChildHint": "Comparando con el mes anterior.",
+"mrKicker": "Informe del mes",
+"mrFamilyKicker": "Mes de la familia",
+"mrSummary": "Este mes {name} hizo {tasks} tareas, ganó {earned} puntos, leyó {books} libro(s) e hizo {pages} página(s) de deberes.",
+"mrVsLast": "vs. el mes pasado",
+"mrEnglishMin": "Minutos de inglés",
+"mrBooks": "Libros",
+"mrGames": "Desafíos ganados",
+"mrRoutines": "Rutinas completas",
+"mrTasksByWeek": "Tareas por semana",
+"mrMoods": "Cómo se sintió",
+"mrNoMoods": "Ninguna carita marcada en este período.",
+"mrHighlights": "Logros",
+"mrBooksLine": "{n} libro(s) leído(s)",
+"mrStickers": "{n} figurita(s) en el álbum",
+"mrTalk": "Nuestra charla del mes",
+"mrNextGoal": "Meta para el próximo mes:",
+"mrHappyDays": "días felices",
+"mrEvents": "Lo que pasó en el mes"
+},
+"it": {
+"navAlbum": "Album di figurine",
+"title_album": "Album di figurine",
+"sub_album": "Ogni 50 punti guadagnati diventano una figurina nuova.",
+"navReading": "Lettura",
+"title_leitura": "Lettura",
+"sub_leitura": "Libri letti e storie raccontate, con una libreria per ognuno.",
+"navRoutine": "Routine con figure",
+"title_rotina": "Routine con figure",
+"sub_rotina": "Mattina e sera con figure grandi, così i piccoli la seguono da soli.",
+"typeRoutine": "Routine",
+"typeReading": "Lettura",
+"alComplete": "Album completo!",
+"alCount": "{n} di {total} figurine",
+"alHint": "Ogni {n} punti guadagnati (compiti, compiti di scuola, inglese, giochi…) sbloccano una figurina. Se un punto viene annullato, la figurina torna vuota.",
+"alNext": "Mancano {n} punti alla prossima figurina.",
+"alPrint": "Stampa album",
+"stAnimals": "🐾 Animaletti",
+"stOcean": "🌊 Fondo del mare",
+"stSpace": "🚀 Spazio",
+"stDinos": "🦖 Dinosauri",
+"fgTitle": "Obiettivo della famiglia",
+"fgCreate": "Crea obiettivo",
+"fgEmptyHint": "I punti di tutti si sommano per un premio per tutta la famiglia.",
+"fgReached": "Obiettivo raggiunto! Scegliete il giorno del premio.",
+"fgLeft": "Mancano {n} punti",
+"fgFinish": "Fatto",
+"fgHint": "Conta tutti i punti guadagnati da tutti i bambini da quando è iniziato l'obiettivo. Spendere punti in ricompense non abbassa l'obiettivo.",
+"fgIntro": "Scegli un'idea o scrivi la tua. L'obiettivo somma i punti di tutti, così si aiutano a vicenda.",
+"fgTarget": "Punti per arrivarci",
+"fgTargetHint": "Se tutti fanno tutto, la famiglia guadagna circa {n} punti a settimana.",
+"fgRestart": "Ricominciare a contare da oggi",
+"fgRemoveConfirm": "Eliminare l'obiettivo della famiglia?",
+"fgFinishConfirm": "Avete già fatto \"{name}\"? L'obiettivo va nello storico e puoi crearne un altro.",
+"fgFinished": "Complimenti, famiglia! Ora scegliete il prossimo obiettivo.",
+"fgPizza": "Serata pizza",
+"fgPicnic": "Picnic in famiglia",
+"fgMovie": "Cinema in casa con i popcorn",
+"fgPark": "Gita al parco",
+"fgPool": "Giornata in piscina",
+"fgCinema": "Andare al cinema tutti insieme",
+"fgTrip": "Gita nel fine settimana",
+"moodTitle": "Com'è andata la giornata di ognuno?",
+"moodHint": "Tocca la faccina di come si è sentito ognuno oggi. Accanto ci sono gli ultimi 7 giorni.",
+"moodHintChild": "Come ti sei sentito oggi?",
+"moodSaved": "Annotato per {name}.",
+"mood_5": "Felicissimo",
+"mood_4": "Felice",
+"mood_3": "Così così",
+"mood_2": "Triste",
+"mood_1": "Arrabbiato",
+"evComing": "Agenda:",
+"evToday": "Oggi",
+"evTomorrow": "Domani",
+"evOpenCal": "Vedi calendario",
+"evNew": "Nuovo evento",
+"evEdit": "Modifica evento",
+"evNewThisDay": "Nuovo evento in questo giorno",
+"evWhat": "Che cos'è?",
+"evTitlePh": "Es.: Riunione a scuola, compleanno della nonna",
+"evKind": "Tipo",
+"evKind_birthday": "Compleanno",
+"evKind_school": "Scuola",
+"evKind_health": "Salute",
+"evKind_outing": "Gita",
+"evKind_family": "Famiglia",
+"evKind_other": "Altro",
+"evWho": "Per chi?",
+"evWhoHint": "Nessuno selezionato = tutta la famiglia.",
+"evYearly": "Ripeti ogni anno (compleanni)",
+"evYearlyShort": "ogni anno",
+"evEveryone": "Tutta la famiglia",
+"evNeedDate": "Scegli la data.",
+"evDelConfirm": "Eliminare questo evento?",
+"evCalHint": "Compleanni, verifiche, riunioni, visite e gite compaiono qui e nella bacheca il giorno prima.",
+"potsTitle": "I tre barattoli",
+"potsHint": "Ogni soldo che entra viene diviso: {spend}% da spendere, {save}% da risparmiare e {give}% da donare.",
+"pot_spend": "Spendere",
+"pot_save": "Risparmiare",
+"pot_give": "Donare",
+"potMove": "Sposta tra i barattoli",
+"potFrom": "Prendi dal barattolo",
+"potTo": "Metti nel barattolo",
+"potMoveHint": "Es.: spostare da Spendere a Risparmiare per arrivare prima all'obiettivo.",
+"potMoveInvalid": "L'importo è maggiore di quello nel barattolo.",
+"potNotEnough": "Non ci sono abbastanza soldi nel barattolo {pot}.",
+"potsSettings": "Come dividere",
+"potsSettingsHint": "Quello che resta va in Spendere. I soldi già nel salvadanaio restano in Risparmiare.",
+"potsOff": "Disattiva i barattoli",
+"potsOn": "Attiva i barattoli",
+"potsOffNotice": "I tre barattoli (spendere, risparmiare e donare) sono disattivati.",
+"rdAddTitle": "Registra un libro di {name}",
+"rdBookName": "Titolo del libro o della storia",
+"rdBookPh": "Es.: I tre porcellini",
+"rdHow": "Com'è andata?",
+"rdHow_alone": "Letto da solo",
+"rdHow_together": "Letto insieme",
+"rdHow_listened": "Ha ascoltato la storia",
+"rdLiked": "Gli è piaciuto?",
+"rdPointsHint": "Ogni libro vale {n} punti. Ogni 5 libri, una medaglia!",
+"rdSave": "Salva libro",
+"rdProgress": "Progressi",
+"rdTotal": "Libri in totale",
+"rdMedals": "Medaglie",
+"rdNextMedal": "Manca/no {n} libro/i alla prossima medaglia 🏅",
+"rdShelf": "Libreria",
+"rdEmpty": "La libreria è ancora vuota. Cominciamo oggi?",
+"rdList": "Libri registrati",
+"rdRules": "Regole della lettura",
+"rdRulePoints": "Punti per libro",
+"rdNeedTitle": "Scrivi il titolo del libro.",
+"rdSaved": "{name} ha letto \"{title}\"",
+"rdMedalWon": "{name} ha vinto una medaglia di lettura: {n} libri!",
+"rdDelConfirm": "Eliminare questo libro? I punti tornano indietro.",
+"rdReadLabel": "Ha letto \"{title}\"",
+"rtMorning": "Mattina",
+"rtNight": "Sera",
+"rtPrint": "Stampa routine",
+"rtPrintAll": "Stampa per tutti",
+"rtEdit": "Modifica routine",
+"rtEditDone": "Fatto",
+"rtHint": "Tocca ogni figura quando hai finito. 🔊 dice il nome ad alta voce.",
+"rtComplete": "Routine completata, {name}!",
+"rtEditTitle": "Passi della routine",
+"rtEditHint": "Togli, aggiungi o cambia l'ordine dei passi di questo bambino.",
+"rtAddStep": "Aggiungi un passo",
+"rtAllAdded": "Tutti i passi sono già nella routine.",
+"rtReset": "Torna alla routine per la sua età",
+"rtRules": "Regole della routine",
+"rtRulePoints": "Punti per routine completata (una volta al giorno)",
+"rtKicker": "La mia routine",
+"rtCheer": "Un passo alla volta, {name}! ⭐",
+"rtPrintHint": "Mattina e sera con figure, da appendere.",
+"rtDoneLabel": "Routine della {kind} completata",
+"rs_wake": "Svegliarsi",
+"rs_potty": "Fare pipì",
+"rs_diaper": "Cambiare il pannolino",
+"rs_washFace": "Lavarsi la faccia",
+"rs_brush": "Lavarsi i denti",
+"rs_dress": "Vestirsi",
+"rs_hair": "Pettinarsi",
+"rs_breakfast": "Fare colazione",
+"rs_shoes": "Mettere le scarpe",
+"rs_backpack": "Prendere lo zaino",
+"rs_water": "Bere acqua",
+"rs_kiss": "Bacio del buongiorno",
+"rs_homework": "Fare i compiti",
+"rs_dinner": "Cenare",
+"rs_toys": "Mettere a posto i giocattoli",
+"rs_bath": "Fare il bagno",
+"rs_pajamas": "Mettere il pigiama",
+"rs_brushNight": "Lavarsi i denti",
+"rs_pottyNight": "Fare pipì",
+"rs_clothesTomorrow": "Preparare i vestiti di domani",
+"rs_story": "L'ora della storia",
+"rs_pray": "Ringraziare per la giornata",
+"rs_hug": "Abbraccio della buonanotte",
+"rs_sleep": "Dormire",
+"mrGroup": "Resoconto del mese",
+"mrOptFamily": "Resoconto del mese — famiglia",
+"mrOptFamilyHint": "Riepilogo di tutti e una pagina per ogni bambino.",
+"mrOptChild": "Resoconto del mese — {name}",
+"mrOptChildHint": "Confrontato con il mese precedente.",
+"mrKicker": "Resoconto del mese",
+"mrFamilyKicker": "Il mese della famiglia",
+"mrSummary": "Questo mese {name} ha fatto {tasks} compiti, guadagnato {earned} punti, letto {books} libro/i e fatto {pages} pagina/e di compiti di scuola.",
+"mrVsLast": "rispetto al mese scorso",
+"mrEnglishMin": "Minuti di inglese",
+"mrBooks": "Libri",
+"mrGames": "Sfide vinte",
+"mrRoutines": "Routine completate",
+"mrTasksByWeek": "Compiti per settimana",
+"mrMoods": "Come si è sentito",
+"mrNoMoods": "Nessuna faccina segnata in questo periodo.",
+"mrHighlights": "Conquiste",
+"mrBooksLine": "{n} libro/i letto/i",
+"mrStickers": "{n} figurina/e nell'album",
+"mrTalk": "La nostra chiacchierata del mese",
+"mrNextGoal": "Obiettivo per il prossimo mese:",
+"mrHappyDays": "giorni felici",
+"mrEvents": "Cosa è successo nel mese"
+},
+"zh": {
+"navAlbum": "贴纸册",
+"title_album": "贴纸册",
+"sub_album": "每获得 50 积分就能得到一张新贴纸。",
+"navReading": "阅读",
+"title_leitura": "阅读",
+"sub_leitura": "读过的书和讲过的故事，每个孩子都有一个书架。",
+"navRoutine": "图片作息",
+"title_rotina": "图片作息",
+"sub_rotina": "早上和晚上的大图片，小朋友可以自己照着做。",
+"typeRoutine": "作息",
+"typeReading": "阅读",
+"alComplete": "贴纸册集满了！",
+"alCount": "{total} 张贴纸中的 {n} 张",
+"alHint": "每获得 {n} 积分（任务、作业、英语、游戏……）就解锁一张贴纸。如果积分被撤销，贴纸会变回空白。",
+"alNext": "再得 {n} 积分就有下一张贴纸。",
+"alPrint": "打印贴纸册",
+"stAnimals": "🐾 小动物",
+"stOcean": "🌊 海底世界",
+"stSpace": "🚀 太空",
+"stDinos": "🦖 恐龙",
+"fgTitle": "家庭目标",
+"fgCreate": "创建目标",
+"fgEmptyHint": "所有人的积分加在一起，换一个全家的奖励。",
+"fgReached": "目标达成！一起定个领奖的日子吧。",
+"fgLeft": "还差 {n} 积分",
+"fgFinish": "已经兑现",
+"fgHint": "计算目标开始后所有孩子获得的积分。用积分兑换奖励不会减少目标进度。",
+"fgIntro": "选一个点子或自己写。目标会把大家的积分加在一起，所以大家会互相帮忙。",
+"fgTarget": "需要多少积分",
+"fgTargetHint": "如果大家都完成所有任务，全家每周大约能得 {n} 积分。",
+"fgRestart": "从今天重新开始计算",
+"fgRemoveConfirm": "删除家庭目标？",
+"fgFinishConfirm": "\"{name}\"已经兑现了吗？目标会进入历史记录，你可以创建下一个。",
+"fgFinished": "恭喜全家！现在选下一个目标吧。",
+"fgPizza": "披萨之夜",
+"fgPicnic": "家庭野餐",
+"fgMovie": "在家看电影吃爆米花",
+"fgPark": "去公园玩",
+"fgPool": "游泳日",
+"fgCinema": "全家一起去电影院",
+"fgTrip": "周末出游",
+"moodTitle": "每个人今天过得怎么样？",
+"moodHint": "点一下每个孩子今天心情的表情。旁边会显示最近 7 天。",
+"moodHintChild": "你今天感觉怎么样？",
+"moodSaved": "已为 {name} 记录。",
+"mood_5": "非常开心",
+"mood_4": "开心",
+"mood_3": "一般",
+"mood_2": "难过",
+"mood_1": "生气",
+"evComing": "日程：",
+"evToday": "今天",
+"evTomorrow": "明天",
+"evOpenCal": "查看日历",
+"evNew": "新建事件",
+"evEdit": "编辑事件",
+"evNewThisDay": "在这一天新建事件",
+"evWhat": "是什么事？",
+"evTitlePh": "例如：学校家长会、奶奶的生日",
+"evKind": "类型",
+"evKind_birthday": "生日",
+"evKind_school": "学校",
+"evKind_health": "健康",
+"evKind_outing": "出游",
+"evKind_family": "家庭",
+"evKind_other": "其他",
+"evWho": "和谁有关？",
+"evWhoHint": "不勾选 = 全家。",
+"evYearly": "每年重复（生日）",
+"evYearlyShort": "每年",
+"evEveryone": "全家",
+"evNeedDate": "请选择日期。",
+"evDelConfirm": "删除这个事件？",
+"evCalHint": "生日、考试、会议、看病和出游会显示在这里，并提前一天显示在首页。",
+"potsTitle": "三个罐子",
+"potsHint": "每笔收入都会分开：{spend}% 用来花，{save}% 存起来，{give}% 捐出去。",
+"pot_spend": "花",
+"pot_save": "存",
+"pot_give": "捐",
+"potMove": "在罐子之间转钱",
+"potFrom": "从这个罐子拿",
+"potTo": "放进这个罐子",
+"potMoveHint": "例如：从\"花\"转到\"存\"，更快达到目标。",
+"potMoveInvalid": "金额超过罐子里的钱。",
+"potNotEnough": "{pot}罐里的钱不够。",
+"potsSettings": "怎么分",
+"potsSettingsHint": "剩下的放进\"花\"。存钱罐里原来的钱都在\"存\"里。",
+"potsOff": "关闭罐子",
+"potsOn": "打开罐子",
+"potsOffNotice": "三个罐子（花、存、捐）已关闭。",
+"rdAddTitle": "登记 {name} 读的书",
+"rdBookName": "书名或故事名",
+"rdBookPh": "例如：三只小猪",
+"rdHow": "怎么读的？",
+"rdHow_alone": "自己读",
+"rdHow_together": "一起读",
+"rdHow_listened": "听故事",
+"rdLiked": "喜欢吗？",
+"rdPointsHint": "每本书 {n} 积分。每读 5 本得一枚奖牌！",
+"rdSave": "保存",
+"rdProgress": "进度",
+"rdTotal": "总共读了",
+"rdMedals": "奖牌",
+"rdNextMedal": "再读 {n} 本就得下一枚奖牌 🏅",
+"rdShelf": "书架",
+"rdEmpty": "书架还是空的。今天开始吧？",
+"rdList": "已登记的书",
+"rdRules": "阅读规则",
+"rdRulePoints": "每本书积分",
+"rdNeedTitle": "请写书名。",
+"rdSaved": "{name} 读了《{title}》",
+"rdMedalWon": "{name} 获得阅读奖牌：{n} 本书！",
+"rdDelConfirm": "删除这本书？积分会退回。",
+"rdReadLabel": "读了《{title}》",
+"rtMorning": "早上",
+"rtNight": "晚上",
+"rtPrint": "打印作息表",
+"rtPrintAll": "给所有人打印",
+"rtEdit": "编辑作息",
+"rtEditDone": "完成",
+"rtHint": "做完一步就点一下图片。🔊 会读出名字。",
+"rtComplete": "{name}，作息完成啦！",
+"rtEditTitle": "作息步骤",
+"rtEditHint": "为这个孩子删除、添加或调整步骤顺序。",
+"rtAddStep": "添加步骤",
+"rtAllAdded": "所有步骤都已经加入作息。",
+"rtReset": "恢复这个年龄的默认作息",
+"rtRules": "作息规则",
+"rtRulePoints": "完成作息的积分（每天一次）",
+"rtKicker": "我的作息",
+"rtCheer": "{name}，一步一步来！⭐",
+"rtPrintHint": "早上和晚上的图片作息表，可以贴起来。",
+"rtDoneLabel": "{kind}的作息完成",
+"rs_wake": "起床",
+"rs_potty": "上厕所",
+"rs_diaper": "换尿布",
+"rs_washFace": "洗脸",
+"rs_brush": "刷牙",
+"rs_dress": "穿衣服",
+"rs_hair": "梳头",
+"rs_breakfast": "吃早餐",
+"rs_shoes": "穿鞋",
+"rs_backpack": "拿书包",
+"rs_water": "喝水",
+"rs_kiss": "早安亲亲",
+"rs_homework": "做作业",
+"rs_dinner": "吃晚饭",
+"rs_toys": "收玩具",
+"rs_bath": "洗澡",
+"rs_pajamas": "穿睡衣",
+"rs_brushNight": "刷牙",
+"rs_pottyNight": "上厕所",
+"rs_clothesTomorrow": "准备明天的衣服",
+"rs_story": "故事时间",
+"rs_pray": "感谢美好的一天",
+"rs_hug": "晚安抱抱",
+"rs_sleep": "睡觉",
+"mrGroup": "月度报告",
+"mrOptFamily": "月度报告 — 全家",
+"mrOptFamilyHint": "所有人的汇总，每个孩子一页。",
+"mrOptChild": "月度报告 — {name}",
+"mrOptChildHint": "和上个月对比。",
+"mrKicker": "月度报告",
+"mrFamilyKicker": "家庭的一个月",
+"mrSummary": "本月 {name} 完成了 {tasks} 个任务，获得 {earned} 积分，读了 {books} 本书，做了 {pages} 页作业。",
+"mrVsLast": "比上个月",
+"mrEnglishMin": "英语分钟数",
+"mrBooks": "书",
+"mrGames": "完成的挑战",
+"mrRoutines": "完成的作息",
+"mrTasksByWeek": "每周任务",
+"mrMoods": "心情",
+"mrNoMoods": "这段时间没有记录表情。",
+"mrHighlights": "成就",
+"mrBooksLine": "读了 {n} 本书",
+"mrStickers": "贴纸册里有 {n} 张贴纸",
+"mrTalk": "我们的月度谈话",
+"mrNextGoal": "下个月的目标：",
+"mrHappyDays": "开心的日子",
+"mrEvents": "本月发生的事"
+},
+"zht": {
+"navAlbum": "貼紙冊",
+"title_album": "貼紙冊",
+"sub_album": "每獲得 50 積分就能得到一張新貼紙。",
+"navReading": "閱讀",
+"title_leitura": "閱讀",
+"sub_leitura": "讀過的書和講過的故事，每個孩子都有一個書架。",
+"navRoutine": "圖片作息",
+"title_rotina": "圖片作息",
+"sub_rotina": "早上和晚上的大圖片，小朋友可以自己照著做。",
+"typeRoutine": "作息",
+"typeReading": "閱讀",
+"alComplete": "貼紙冊集滿了！",
+"alCount": "{total} 張貼紙中的 {n} 張",
+"alHint": "每獲得 {n} 積分（任務、作業、英語、遊戲……）就解鎖一張貼紙。如果積分被撤銷，貼紙會變回空白。",
+"alNext": "再得 {n} 積分就有下一張貼紙。",
+"alPrint": "列印貼紙冊",
+"stAnimals": "🐾 小動物",
+"stOcean": "🌊 海底世界",
+"stSpace": "🚀 太空",
+"stDinos": "🦖 恐龍",
+"fgTitle": "家庭目標",
+"fgCreate": "建立目標",
+"fgEmptyHint": "所有人的積分加在一起，換一個全家的獎勵。",
+"fgReached": "目標達成！一起定個領獎的日子吧。",
+"fgLeft": "還差 {n} 積分",
+"fgFinish": "已經兌現",
+"fgHint": "計算目標開始後所有孩子獲得的積分。用積分兌換獎勵不會減少目標進度。",
+"fgIntro": "選一個點子或自己寫。目標會把大家的積分加在一起，所以大家會互相幫忙。",
+"fgTarget": "需要多少積分",
+"fgTargetHint": "如果大家都完成所有任務，全家每週大約能得 {n} 積分。",
+"fgRestart": "從今天重新開始計算",
+"fgRemoveConfirm": "刪除家庭目標？",
+"fgFinishConfirm": "\"{name}\"已經兌現了嗎？目標會進入歷史記錄，你可以建立下一個。",
+"fgFinished": "恭喜全家！現在選下一個目標吧。",
+"fgPizza": "披薩之夜",
+"fgPicnic": "家庭野餐",
+"fgMovie": "在家看電影吃爆米花",
+"fgPark": "去公園玩",
+"fgPool": "游泳日",
+"fgCinema": "全家一起去電影院",
+"fgTrip": "週末出遊",
+"moodTitle": "每個人今天過得怎麼樣？",
+"moodHint": "點一下每個孩子今天心情的表情。旁邊會顯示最近 7 天。",
+"moodHintChild": "你今天感覺怎麼樣？",
+"moodSaved": "已為 {name} 記錄。",
+"mood_5": "非常開心",
+"mood_4": "開心",
+"mood_3": "一般",
+"mood_2": "難過",
+"mood_1": "生氣",
+"evComing": "日程：",
+"evToday": "今天",
+"evTomorrow": "明天",
+"evOpenCal": "檢視日曆",
+"evNew": "新建事件",
+"evEdit": "編輯事件",
+"evNewThisDay": "在這一天新建事件",
+"evWhat": "是什麼事？",
+"evTitlePh": "例如：學校家長會、奶奶的生日",
+"evKind": "型別",
+"evKind_birthday": "生日",
+"evKind_school": "學校",
+"evKind_health": "健康",
+"evKind_outing": "出遊",
+"evKind_family": "家庭",
+"evKind_other": "其他",
+"evWho": "和誰有關？",
+"evWhoHint": "不勾選 = 全家。",
+"evYearly": "每年重複（生日）",
+"evYearlyShort": "每年",
+"evEveryone": "全家",
+"evNeedDate": "請選擇日期。",
+"evDelConfirm": "刪除這個事件？",
+"evCalHint": "生日、考試、會議、看病和出遊會顯示在這裡，並提前一天顯示在首頁。",
+"potsTitle": "三個罐子",
+"potsHint": "每筆收入都會分開：{spend}% 用來花，{save}% 存起來，{give}% 捐出去。",
+"pot_spend": "花",
+"pot_save": "存",
+"pot_give": "捐",
+"potMove": "在罐子之間轉錢",
+"potFrom": "從這個罐子拿",
+"potTo": "放進這個罐子",
+"potMoveHint": "例如：從\"花\"轉到\"存\"，更快達到目標。",
+"potMoveInvalid": "金額超過罐子裡的錢。",
+"potNotEnough": "{pot}罐裡的錢不夠。",
+"potsSettings": "怎麼分",
+"potsSettingsHint": "剩下的放進\"花\"。存錢罐裡原來的錢都在\"存\"裡。",
+"potsOff": "關閉罐子",
+"potsOn": "開啟罐子",
+"potsOffNotice": "三個罐子（花、存、捐）已關閉。",
+"rdAddTitle": "登記 {name} 讀的書",
+"rdBookName": "書名或故事名",
+"rdBookPh": "例如：三隻小豬",
+"rdHow": "怎麼讀的？",
+"rdHow_alone": "自己讀",
+"rdHow_together": "一起讀",
+"rdHow_listened": "聽故事",
+"rdLiked": "喜歡嗎？",
+"rdPointsHint": "每本書 {n} 積分。每讀 5 本得一枚獎牌！",
+"rdSave": "儲存",
+"rdProgress": "進度",
+"rdTotal": "總共讀了",
+"rdMedals": "獎牌",
+"rdNextMedal": "再讀 {n} 本就得下一枚獎牌 🏅",
+"rdShelf": "書架",
+"rdEmpty": "書架還是空的。今天開始吧？",
+"rdList": "已登記的書",
+"rdRules": "閱讀規則",
+"rdRulePoints": "每本書積分",
+"rdNeedTitle": "請寫書名。",
+"rdSaved": "{name} 讀了《{title}》",
+"rdMedalWon": "{name} 獲得閱讀獎牌：{n} 本書！",
+"rdDelConfirm": "刪除這本書？積分會退回。",
+"rdReadLabel": "讀了《{title}》",
+"rtMorning": "早上",
+"rtNight": "晚上",
+"rtPrint": "列印作息表",
+"rtPrintAll": "給所有人列印",
+"rtEdit": "編輯作息",
+"rtEditDone": "完成",
+"rtHint": "做完一步就點一下圖片。🔊 會讀出名字。",
+"rtComplete": "{name}，作息完成啦！",
+"rtEditTitle": "作息步驟",
+"rtEditHint": "為這個孩子刪除、新增或調整步驟順序。",
+"rtAddStep": "新增步驟",
+"rtAllAdded": "所有步驟都已經加入作息。",
+"rtReset": "恢復這個年齡的預設作息",
+"rtRules": "作息規則",
+"rtRulePoints": "完成作息的積分（每天一次）",
+"rtKicker": "我的作息",
+"rtCheer": "{name}，一步一步來！⭐",
+"rtPrintHint": "早上和晚上的圖片作息表，可以貼起來。",
+"rtDoneLabel": "{kind}的作息完成",
+"rs_wake": "起床",
+"rs_potty": "上廁所",
+"rs_diaper": "換尿布",
+"rs_washFace": "洗臉",
+"rs_brush": "刷牙",
+"rs_dress": "穿衣服",
+"rs_hair": "梳頭",
+"rs_breakfast": "吃早餐",
+"rs_shoes": "穿鞋",
+"rs_backpack": "拿書包",
+"rs_water": "喝水",
+"rs_kiss": "早安親親",
+"rs_homework": "做作業",
+"rs_dinner": "吃晚飯",
+"rs_toys": "收玩具",
+"rs_bath": "洗澡",
+"rs_pajamas": "穿睡衣",
+"rs_brushNight": "刷牙",
+"rs_pottyNight": "上廁所",
+"rs_clothesTomorrow": "準備明天的衣服",
+"rs_story": "故事時間",
+"rs_pray": "感謝美好的一天",
+"rs_hug": "晚安抱抱",
+"rs_sleep": "睡覺",
+"mrGroup": "月度報告",
+"mrOptFamily": "月度報告 — 全家",
+"mrOptFamilyHint": "所有人的彙總，每個孩子一頁。",
+"mrOptChild": "月度報告 — {name}",
+"mrOptChildHint": "和上個月對比。",
+"mrKicker": "月度報告",
+"mrFamilyKicker": "家庭的一個月",
+"mrSummary": "本月 {name} 完成了 {tasks} 個任務，獲得 {earned} 積分，讀了 {books} 本書，做了 {pages} 頁作業。",
+"mrVsLast": "比上個月",
+"mrEnglishMin": "英語分鐘數",
+"mrBooks": "書",
+"mrGames": "完成的挑戰",
+"mrRoutines": "完成的作息",
+"mrTasksByWeek": "每週任務",
+"mrMoods": "心情",
+"mrNoMoods": "這段時間沒有記錄表情。",
+"mrHighlights": "成就",
+"mrBooksLine": "讀了 {n} 本書",
+"mrStickers": "貼紙冊裡有 {n} 張貼紙",
+"mrTalk": "我們的月度談話",
+"mrNextGoal": "下個月的目標：",
+"mrHappyDays": "開心的日子",
+"mrEvents": "本月發生的事"
+}
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], EXTRAS_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 81;
+const APP_VERSION = 82;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -3634,7 +4844,7 @@ function normalize(raw, defaultKeys) {
     if (!h || typeof h !== 'object') return null;
     const childId = mapChild(h.childId); if (!childId) return null;
     const legacy = parseLegacyValue(h.value);
-    const type = ['task', 'reward', 'adjust', 'behavior', 'english', 'homework', 'game'].includes(h.type) ? h.type : 'adjust';
+    const type = ['task', 'reward', 'adjust', 'behavior', 'english', 'homework', 'game', 'routine', 'reading'].includes(h.type) ? h.type : 'adjust';
     let points = Number.isFinite(h.points) ? h.points : Number.isFinite(h.pointsEarned) ? h.pointsEarned : legacy.points;
     let cash = Number.isFinite(h.cash) ? h.cash : Number.isFinite(h.cashEarned) ? h.cashEarned : legacy.cash;
     if (type === 'reward' && points > 0) points = -points;
@@ -3656,7 +4866,9 @@ function normalize(raw, defaultKeys) {
     if (!p || typeof p !== 'object') return null;
     const childId = mapChild(p.childId); if (!childId) return null;
     return { id: cleanId(p.id) || `p${i}x${Date.parse(p.date) || 0}`, date: safeIso(p.date), childId, amount: round2(num(p.amount)),
-      note: text(p.note, 120), source: ['manual', 'task', 'behavior'].includes(p.source) ? p.source : 'manual', historyId: p.historyId ? cleanId(p.historyId) : null };
+      note: text(p.note, 120), source: ['manual', 'task', 'behavior'].includes(p.source) ? p.source : 'manual', historyId: p.historyId ? cleanId(p.historyId) : null,
+      alloc: p.alloc && typeof p.alloc === 'object' ? { spend: round2(num(p.alloc.spend, 0)), save: round2(num(p.alloc.save, 0)), give: round2(num(p.alloc.give, 0)) } : undefined,
+      pot: ['spend', 'save', 'give'].includes(p.pot) ? p.pot : undefined };
   }).filter(p => p && p.amount).sort((a, b) => b.date.localeCompare(a.date));
 
   const rawApprovals = Array.isArray(raw.approvals) ? raw.approvals : Array.isArray(raw.pendingApprovals) ? raw.pendingApprovals : [];
@@ -3774,6 +4986,7 @@ function normalize(raw, defaultKeys) {
   }
   if (d.theme.name === 'custom' && !d.theme.custom) d.theme.name = 'purple';
   if (d.theme.name === 'child' && !d.theme.childId) d.theme.name = 'purple';
+  if (typeof normalizeExtras === 'function') normalizeExtras(raw, d, mapChild);
   return d;
 }
 
@@ -3999,7 +5212,12 @@ function addHistory(entry) {
 }
 function addPiggy(c, amount, note, source, historyId, date) {
   const before = c.piggy; c.piggy = round2(Math.max(0, c.piggy + amount)); const real = round2(c.piggy - before);
-  if (real) S.piggyHistory.unshift({ id: uid('p'), date: date || isoNow(), childId: c.id, amount: real, note: text(note, 120), source, historyId: historyId || null });
+  if (real) {
+    const e = { id: uid('p'), date: date || isoNow(), childId: c.id, amount: real, note: text(note, 120), source, historyId: historyId || null };
+    if (typeof potAlloc === 'function') Object.assign(e, potAlloc(c, real, addPiggy.pot));
+    S.piggyHistory.unshift(e);
+  }
+  addPiggy.pot = null;
   return real;
 }
 function changePoints(c, delta) { const before = c.points; c.points = Math.max(0, c.points + delta); return c.points - before; }
@@ -4202,8 +5420,9 @@ function adjustPoints(childId, points, reason) {
   const dp = changePoints(c, int(points, 0)); if (!dp) return null;
   return addHistory({ type: 'adjust', childId: c.id, childName: c.name, description: text(reason, 120), points: dp });
 }
-function movePiggy(childId, amount, note) {
+function movePiggy(childId, amount, note, pot) {
   const c = childById(childId); if (!c) return 0;
+  addPiggy.pot = pot || null;
   const real = addPiggy(c, round2(amount), note, 'manual');
   if (real > 0) checkAchievements(c);
   return real;
@@ -4311,12 +5530,14 @@ function historyText(h) {
   }
   if (h.type === 'reward') { const r = rewardById(h.rewardId); return t('redeemedX', { name: r ? rewardName(r) : (h.description || '—') }); }
   if (h.type === 'behavior') return (h.points > 0 || h.cash > 0 ? '👍 ' : '⚠️ ') + (h.description || t('behaviorNote'));
+  if (h.type === 'routine') return `${h.description === 'night' ? '🌙' : '🌅'} ${t('rtDoneLabel', { kind: t(h.description === 'night' ? 'rtNight' : 'rtMorning').toLowerCase() })}`;
+  if (h.type === 'reading') return `📚 ${t('rdReadLabel', { title: h.description || '' })}`;
   if (h.type === 'game') return `🧩 ${t('gWonLabel', { game: t('g_' + (h.game || 'sudoku')) })}`;
   if (h.type === 'homework') return `📝 ${t('hwLabel', { n: h.pages || 0 })}${h.subject ? ' · ' + t('hwSub_' + (HW_SUBJECTS.includes(h.subject) ? h.subject : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   if (h.type === 'english') return `📚 ${t('enStudyLabel', { n: h.minutes || 0 })}${h.activity ? ' · ' + t('enAct_' + (EN_ACTIVITIES.includes(h.activity) ? h.activity : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   return h.description || t('manualAdjustment');
 }
-function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish', homework: 'typeHomework', game: 'typeGame' }[h.type]); }
+function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish', homework: 'typeHomework', game: 'typeGame', routine: 'typeRoutine', reading: 'typeReading' }[h.type]); }
 function approvalLabel(a) {
   if (a.kind === 'task') { const task = taskById(a.taskId); return task ? taskName(task) : (a.label || t('taskRemoved')); }
   if (a.kind === 'homework') return `📝 ${t('hwLabel', { n: a.pages || 0 })} · ${t('hwSub_' + (HW_SUBJECTS.includes(a.subject) ? a.subject : 'other'))}`;
@@ -6348,6 +7569,7 @@ function childReportHtml(c, from, to) {
     ${grid}
     <p class="pr-legend">✔ ${esc(t('prLegDone'))} · ✗ ${esc(t('prLegMiss'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
     <div class="pr-boxes">${box('good', '👍 ' + esc(t('prGood')), good)}${box('bad', '💬 ' + esc(t('prImprove')), bad)}${box('rw', '🎁 ' + esc(t('prRewards')), rw)}</div>
+    ${(() => { const ms = w.days.map(d => moodOf(c, dayKey(d.d))); return ms.some(Boolean) ? `<div class="pr-moodweek"><b>💬 ${esc(t('mrMoods'))}:</b>${w.days.map((d, i) => `<span><small>${esc(weekdayNames(true)[d.d.getDay()])}</small>${ms[i] ? moodEmoji(ms[i].mood) : '·'}</span>`).join('')}</div>` : ''; })()}
     <div class="pr-talk">
       <div class="pr-feel"><b>${esc(t('prFeel'))}</b><span>😄</span><span>🙂</span><span>😐</span><span>😟</span></div>
       <h3>${esc(t('prTalk'))}</h3><div class="pr-lines"><span></span><span></span></div>
@@ -7284,6 +8506,561 @@ Object.assign(ACTIONS, {
 ['g-start', 'g-duel'].forEach(k => {
   const base = ACTIONS[k];
   ACTIONS[k] = el => { base(el); const b = $('#gBoard'); if (b && b.scrollIntoView) setTimeout(() => b.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); };
+});
+
+/* =====================================================================
+   Dados das novidades da v82: meta da família, figurinhas, cofrinho com
+   três potes, sentimentos, leitura, rotina com figuras e agenda.
+   Tudo em listas com id (a sincronização junta sem perder nada).
+   ===================================================================== */
+
+function normalizeExtras(raw, d, mapChild) {
+  // meta da família
+  const fg = raw.familyGoal && typeof raw.familyGoal === 'object' ? raw.familyGoal : {};
+  const cleanGoal = g => g && typeof g === 'object' && text(g.name, 60) ? { id: cleanId(g.id) || uid('fg'), name: text(g.name, 60), icon: text(g.icon || '🍕', 8) || '🍕', target: clamp(int(g.target, 1500), 10, 1000000), start: safeIso(g.start), doneAt: g.doneAt ? safeIso(g.doneAt) : null } : null;
+  d.familyGoal = { active: cleanGoal(fg.active), past: (Array.isArray(fg.past) ? fg.past : []).map(cleanGoal).filter(Boolean).slice(0, 50) };
+  // cofrinho com potes
+  const pt = raw.pots && typeof raw.pots === 'object' ? raw.pots : {};
+  d.pots = { enabled: pt.enabled !== false, save: clamp(int(pt.save, 20), 0, 100), give: clamp(int(pt.give, 10), 0, 100), moves: [] };
+  if (d.pots.save + d.pots.give > 100) d.pots.give = 100 - d.pots.save;
+  d.pots.moves = (Array.isArray(pt.moves) ? pt.moves : []).map(m => { if (!m || typeof m !== 'object') return null; const childId = mapChild(m.childId); const pots = ['spend', 'save', 'give']; if (!childId || !pots.includes(m.from) || !pots.includes(m.to) || m.from === m.to) return null; const amount = round2(num(m.amount, 0)); return amount > 0 ? { id: cleanId(m.id) || uid('pm'), childId, date: safeIso(m.date), from: m.from, to: m.to, amount } : null; }).filter(Boolean).slice(0, 2000);
+  // sentimentos (um por criança por dia: o id é criança+dia)
+  d.moods = (Array.isArray(raw.moods) ? raw.moods : []).map(m => { if (!m || typeof m !== 'object') return null; const childId = mapChild(m.childId); const day = /^\d{4}-\d{2}-\d{2}$/.test(m.day) ? m.day : null; if (!childId || !day) return null; return { id: `${childId}_${day}`, childId, day, mood: clamp(int(m.mood, 3), 1, 5), note: text(m.note, 200) }; }).filter(Boolean).slice(-3000);
+  // leitura
+  const rd = raw.reading && typeof raw.reading === 'object' ? raw.reading : {};
+  d.reading = { settings: { pointsPerBook: clamp(int(rd.settings && rd.settings.pointsPerBook, 10), 0, 200) },
+    books: (Array.isArray(rd.books) ? rd.books : []).map(b => { if (!b || typeof b !== 'object') return null; const childId = mapChild(b.childId); if (!childId || !text(b.title, 100)) return null; return { id: cleanId(b.id) || uid('bk'), childId, date: safeIso(b.date), title: text(b.title, 100), how: ['alone', 'together', 'listened'].includes(b.how) ? b.how : 'together', liked: clamp(int(b.liked, 2), 1, 3), historyId: b.historyId ? cleanId(b.historyId) : null }; }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date)) };
+  // rotina com figuras
+  const rt = raw.routines && typeof raw.routines === 'object' ? raw.routines : {};
+  d.routines = { settings: { points: clamp(int(rt.settings && rt.settings.points, 5), 0, 100) }, kids: {}, done: [] };
+  d.children.forEach(c => {
+    const k = rt.kids && rt.kids[c.id]; const okList = l => Array.isArray(l) ? l.filter(x => ROUTINE_STEPS[x]).slice(0, 14) : null;
+    d.routines.kids[c.id] = { morning: (k && okList(k.morning)) || defaultRoutine(c, 'morning'), night: (k && okList(k.night)) || defaultRoutine(c, 'night') };
+  });
+  d.routines.done = (Array.isArray(rt.done) ? rt.done : []).map(x => { if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId || !['morning', 'night'].includes(x.kind) || !/^\d{4}-\d{2}-\d{2}$/.test(x.day)) return null; return { id: `${childId}_${x.day}_${x.kind}`, childId, day: x.day, kind: x.kind, steps: Array.isArray(x.steps) ? x.steps.filter(s => ROUTINE_STEPS[s]).slice(0, 14) : [], historyId: x.historyId ? cleanId(x.historyId) : null }; }).filter(Boolean).slice(-1500);
+  // agenda
+  d.events = (Array.isArray(raw.events) ? raw.events : []).map(e => { if (!e || typeof e !== 'object' || !text(e.title, 80) || !/^\d{4}-\d{2}-\d{2}$/.test(e.day)) return null; return { id: cleanId(e.id) || uid('ev'), day: e.day, time: /^\d{2}:\d{2}$/.test(e.time || '') ? e.time : '', title: text(e.title, 80), kind: EVENT_KINDS[e.kind] ? e.kind : 'other', childIds: Array.isArray(e.childIds) ? [...new Set(e.childIds.map(mapChild).filter(Boolean))] : [], yearly: !!e.yearly }; }).filter(Boolean).slice(0, 1000);
+}
+
+/* ---------- cofrinho com três potes ---------- */
+const POTS = [{ id: 'spend', icon: '🛍️' }, { id: 'save', icon: '🏦' }, { id: 'give', icon: '💝' }];
+/** Como dividir uma entrada (ou de qual pote sai uma retirada). */
+function potAlloc(c, amount, pot) {
+  if (!S.pots || !S.pots.enabled) return {};
+  if (amount < 0) return { pot: pot || 'spend' };
+  const save = round2(amount * S.pots.save / 100), give = round2(amount * S.pots.give / 100);
+  return { alloc: { spend: round2(amount - save - give), save, give } };
+}
+function potBalances(c) {
+  const b = { spend: 0, save: 0, give: 0 };
+  S.piggyHistory.filter(p => p.childId === c.id).forEach(p => {
+    if (p.amount > 0) { if (p.alloc) { b.spend += p.alloc.spend; b.save += p.alloc.save; b.give += p.alloc.give; } else b.save += p.amount; /* dinheiro de antes dos potes = guardado */ }
+    else b[p.pot || 'spend'] += p.amount;
+  });
+  S.pots.moves.filter(m => m.childId === c.id).forEach(m => { b[m.from] -= m.amount; b[m.to] += m.amount; });
+  // o total sempre bate com o cofrinho: guardar e doar valem o que foi separado; o resto é "gastar"
+  const total = Number(c.piggy || 0);
+  b.save = round2(Math.min(total, Math.max(0, b.save))); b.give = round2(Math.min(total - b.save, Math.max(0, b.give)));
+  b.spend = round2(Math.max(0, total - b.save - b.give));
+  return b;
+}
+function movePot(childId, from, to, amount) {
+  const c = childById(childId); if (!c) return false; const bal = potBalances(c);
+  amount = round2(Math.min(amount, bal[from])); if (!(amount > 0) || from === to) return false;
+  S.pots.moves.unshift({ id: uid('pm'), childId, date: isoNow(), from, to, amount }); return true;
+}
+
+/* ---------- meta da família ---------- */
+const FAMILY_GOAL_IDEAS = [
+  { key: 'fgPizza', icon: '🍕', target: 1500 }, { key: 'fgPicnic', icon: '🧺', target: 1500 }, { key: 'fgMovie', icon: '🍿', target: 1200 },
+  { key: 'fgPark', icon: '🌳', target: 2500 }, { key: 'fgPool', icon: '🏊', target: 3000 }, { key: 'fgCinema', icon: '🎬', target: 4000 }, { key: 'fgTrip', icon: '🚗', target: 8000 }
+];
+function earnedSince(c, sinceIso) { const t0 = Date.parse(sinceIso); return S.history.filter(h => h.childId === c.id && h.points > 0 && h.type !== 'reward' && Date.parse(h.date) >= t0).reduce((s, h) => s + h.points, 0); }
+function familyGoalProgress() {
+  const g = S.familyGoal.active; if (!g) return null;
+  const parts = S.children.map(c => ({ c, n: earnedSince(c, g.start) })), total = parts.reduce((s, p) => s + p.n, 0);
+  return { g, parts, total, pct: Math.min(100, Math.round(total / g.target * 100)), reached: total >= g.target };
+}
+
+/* ---------- figurinhas (uma a cada 50 pontos ganhos) ---------- */
+const STICKER_SETS = [
+  { key: 'stAnimals', items: ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐨', '🐯', '🦁', '🐮', '🐷', '🐸', '🐵', '🐔', '🐧', '🐦', '🦆', '🦉', '🐴', '🦄', '🐝', '🦋'] },
+  { key: 'stOcean', items: ['🐳', '🐬', '🐟', '🐠', '🐡', '🦈', '🐙', '🦑', '🦀', '🦞', '🦐', '🐚', '🪼', '🐢', '🦭', '🐋', '🌊', '⛵', '🏝️', '⚓', '🧜', '🪸', '🐊', '🦦'] },
+  { key: 'stSpace', items: ['🚀', '🛸', '🌍', '🌙', '⭐', '🌟', '☀️', '🪐', '☄️', '🌌', '👩‍🚀', '🛰️', '🔭', '🌑', '🌕', '🌠', '👽', '🌎', '🌏', '💫', '🌞', '🌛', '🧑‍🚀', '✨'] },
+  { key: 'stDinos', items: ['🦖', '🦕', '🐉', '🐲', '🌋', '🥚', '🦴', '🌴', '🌿', '🪨', '🐊', '🦎', '🐍', '🦂', '🦗', '🍄', '🌵', '🪺', '🌾', '🍃', '🌲', '🪵', '🔥', '💎'] }
+];
+const STICKER_EVERY = 50;
+function stickerCount(c) { const total = S.history.filter(h => h.childId === c.id && h.points > 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0); return Math.floor(total / STICKER_EVERY); }
+/** Ordem das figurinhas de cada criança (sempre a mesma), página por página. */
+function stickerOrder(c) { const rnd = seededRng('album|' + c.id); return STICKER_SETS.map(set => shuffle(set.items, rnd)); }
+
+/* ---------- sentimentos ---------- */
+const MOODS = [{ v: 5, e: '😄' }, { v: 4, e: '🙂' }, { v: 3, e: '😐' }, { v: 2, e: '😢' }, { v: 1, e: '😠' }];
+function moodOf(c, day) { return S.moods.find(m => m.childId === c.id && m.day === day) || null; }
+function setMood(c, day, v) {
+  const id = `${c.id}_${day}`, ex = S.moods.find(m => m.id === id);
+  if (ex && ex.mood === v) { S.moods = S.moods.filter(m => m !== ex); return null; }
+  if (ex) ex.mood = v; else S.moods.push({ id, childId: c.id, day, mood: v, note: '' });
+  return v;
+}
+function moodEmoji(v) { const m = MOODS.find(x => x.v === v); return m ? m.e : ''; }
+
+/* ---------- leitura ---------- */
+function addBook(c, title, how, liked, date) {
+  const pts = S.reading.settings.pointsPerBook, when = date || isoNow();
+  let historyId = null;
+  if (pts) { changePoints(c, pts); c.xp = Number(c.xp || 0) + pts; historyId = addHistory({ date: when, type: 'reading', childId: c.id, childName: c.name, points: pts, description: text(title, 100) }).id; checkAchievements(c); }
+  const b = { id: uid('bk'), childId: c.id, date: when, title: text(title, 100), how, liked, historyId };
+  S.reading.books.unshift(b); S.reading.books.sort((x, y) => y.date.localeCompare(x.date)); S.history.sort((x, y) => y.date.localeCompare(x.date));
+  return b;
+}
+function deleteBook(id) {
+  const b = S.reading.books.find(x => x.id === id); if (!b) return false;
+  if (b.historyId && S.history.some(h => h.id === b.historyId)) undoHistory(b.historyId);
+  S.reading.books = S.reading.books.filter(x => x.id !== id); return true;
+}
+
+/* ---------- rotina com figuras ---------- */
+const ROUTINE_STEPS = {
+  wake: '🌞', potty: '🚽', washFace: '💦', brush: '🪥', dress: '👕', hair: '💇', breakfast: '🥣', shoes: '👟', backpack: '🎒', water: '🥤', kiss: '😘',
+  dinner: '🍽️', toys: '🧸', bath: '🛁', pajamas: '🩳', brushNight: '🪥', pottyNight: '🚽', clothesTomorrow: '👚', story: '📖', pray: '🙏', hug: '🤗', sleep: '😴', homework: '✏️', diaper: '🧷'
+};
+const ROUTINE_BANK = { morning: ['wake', 'potty', 'diaper', 'washFace', 'brush', 'dress', 'hair', 'breakfast', 'shoes', 'backpack', 'water', 'kiss'], night: ['homework', 'dinner', 'toys', 'bath', 'pajamas', 'brushNight', 'pottyNight', 'diaper', 'clothesTomorrow', 'story', 'pray', 'hug', 'sleep'] };
+function defaultRoutine(c, kind) {
+  if (kind === 'morning') return c.age <= 2 ? ['wake', 'diaper', 'brush', 'dress', 'breakfast', 'kiss'] : c.age <= 4 ? ['wake', 'potty', 'washFace', 'brush', 'dress', 'breakfast', 'shoes'] : ['wake', 'potty', 'washFace', 'brush', 'dress', 'breakfast', 'shoes', 'backpack'];
+  return c.age <= 2 ? ['dinner', 'bath', 'pajamas', 'brushNight', 'story', 'sleep'] : c.age <= 4 ? ['dinner', 'toys', 'bath', 'pajamas', 'brushNight', 'pottyNight', 'story', 'sleep'] : ['homework', 'dinner', 'toys', 'bath', 'pajamas', 'brushNight', 'clothesTomorrow', 'story', 'sleep'];
+}
+function routineOf(c) { if (!S.routines.kids[c.id]) S.routines.kids[c.id] = { morning: defaultRoutine(c, 'morning'), night: defaultRoutine(c, 'night') }; return S.routines.kids[c.id]; }
+function routineDone(c, kind, day = dayKey()) { return S.routines.done.find(x => x.id === `${c.id}_${day}_${kind}`) || null; }
+function toggleRoutineStep(c, kind, step) {
+  const day = dayKey(), id = `${c.id}_${day}_${kind}`;
+  let rec = S.routines.done.find(x => x.id === id);
+  if (!rec) { rec = { id, childId: c.id, day, kind, steps: [], historyId: null }; S.routines.done.push(rec); }
+  rec.steps = rec.steps.includes(step) ? rec.steps.filter(s => s !== step) : [...rec.steps, step];
+  const list = routineOf(c)[kind], complete = list.every(s => rec.steps.includes(s));
+  let gained = 0;
+  if (complete && !rec.historyId && S.routines.settings.points) {
+    gained = S.routines.settings.points; changePoints(c, gained); c.xp = Number(c.xp || 0) + gained;
+    rec.historyId = addHistory({ type: 'routine', childId: c.id, childName: c.name, points: gained, description: kind }).id; checkAchievements(c);
+  }
+  return { complete, gained };
+}
+
+/* ---------- agenda ---------- */
+const EVENT_KINDS = { birthday: '🎂', school: '🏫', health: '🩺', outing: '🎡', family: '👨‍👩‍👧', other: '📌' };
+/** Eventos de um dia (aniversários se repetem todo ano). */
+function eventsOn(day) { const md = day.slice(5); return S.events.filter(e => e.day === day || (e.yearly && e.day.slice(5) === md && e.day <= day)).sort((a, b) => (a.time || '99').localeCompare(b.time || '99')); }
+function eventLabel(e, day) {
+  let s = `${EVENT_KINDS[e.kind]} ${e.title}`;
+  if (e.yearly && e.kind === 'birthday' && day) { const n = Number(day.slice(0, 4)) - Number(e.day.slice(0, 4)); if (n > 0) s += ` (${n})`; }
+  return s;
+}
+
+/* =====================================================================
+   Painel: meta da família, agenda de hoje/amanhã e "como foi o dia".
+   Seção Álbum de figurinhas.
+   ===================================================================== */
+
+/* ---------- meta da família ---------- */
+function familyGoalCard() {
+  const p = familyGoalProgress(), parent = !isChildMode();
+  if (!p) return parent ? `<div class="card fg-card fg-empty"><div><b>🎯 ${t('fgTitle')}</b><p class="hint" style="margin:2px 0 0">${t('fgEmptyHint')}</p></div><button type="button" class="btn btn-primary btn-sm" data-act="fg-open">+ ${t('fgCreate')}</button></div>` : '';
+  const { g, parts, total, pct, reached } = p;
+  return `<div class="card fg-card ${reached ? 'fg-done' : ''}">
+    <div class="fg-head"><span class="fg-ico">${esc(g.icon)}</span><div class="fg-txt"><small>🎯 ${t('fgTitle')}</small><b>${esc(g.name)}</b><span>${reached ? '🎉 ' + t('fgReached') : t('fgLeft', { n: Math.max(0, g.target - total) })}</span></div>
+      ${parent ? `<div class="fg-actions">${reached ? `<button type="button" class="btn btn-primary btn-sm" data-act="fg-finish">✅ ${t('fgFinish')}</button>` : ''}<button type="button" class="icon-btn" data-act="fg-open" aria-label="${esc(t('edit'))}">✏️</button></div>` : ''}</div>
+    <div class="fg-bar"><span style="width:${pct}%"></span><b>${total} / ${g.target} ⭐</b></div>
+    <div class="fg-parts">${parts.map(({ c, n }) => `<span style="--c:${c.accentColor}">${esc(c.avatar)} ${esc(c.name)} <b>+${n}</b></span>`).join('')}</div>
+    <p class="hint" style="margin:6px 0 0">${t('fgHint')}</p></div>`;
+}
+function openFamilyGoal() {
+  const g = S.familyGoal.active;
+  Modal.open({
+    id: 'fgModal', title: '🎯 ' + t('fgTitle'),
+    body: `<p class="hint" style="margin-top:0">${t('fgIntro')}</p>
+      <div class="chips" style="margin-bottom:10px">${FAMILY_GOAL_IDEAS.map(x => `<button type="button" class="chip" data-act="fg-idea" data-id="${x.key}">${x.icon} ${esc(t(x.key))} · ${x.target}</button>`).join('')}</div>
+      <div class="row2"><div><label for="fgName">${t('name')}</label><input id="fgName" maxlength="60" value="${esc(g ? g.name : '')}" placeholder="${esc(t('fgPizza'))}"></div><div><label for="fgIcon">${t('icon')}</label><input id="fgIcon" maxlength="8" value="${esc(g ? g.icon : '🍕')}"></div></div>
+      <div class="field"><label for="fgTarget">${t('fgTarget')}</label><input id="fgTarget" type="number" min="10" inputmode="numeric" value="${g ? g.target : 1500}"><p class="hint">${t('fgTargetHint', { n: S.children.reduce((s, c) => s + weeklyPotential(c), 0) })}</p></div>
+      ${g ? `<label class="check"><input type="checkbox" id="fgRestart"> ${t('fgRestart')}</label>` : ''}`,
+    foot: `${g ? `<button type="button" class="btn btn-ghost danger" data-act="fg-remove">${t('delete')}</button>` : ''}<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="fg-save">${t('save')}</button>`
+  });
+}
+
+/* ---------- como foi o dia ---------- */
+function moodCard() {
+  const kids = visibleChildren(), day = dayKey();
+  return card('💬 ' + t('moodTitle'), `<p class="hint" style="margin-top:-6px">${t(isChildMode() ? 'moodHintChild' : 'moodHint')}</p>
+    <div class="mood-rows">${kids.map(c => { const m = moodOf(c, day); return `<div class="mood-row">${avatar(c, 'sm')}<b>${esc(c.name)}</b><div class="mood-faces">${MOODS.map(x => `<button type="button" class="mood-face ${m && m.mood === x.v ? 'on' : ''}" data-act="mood" data-id="${esc(c.id)}" data-v="${x.v}" aria-label="${esc(t('mood_' + x.v))}" title="${esc(t('mood_' + x.v))}">${x.e}</button>`).join('')}</div>
+      <span class="mood-week">${[...Array(7)].map((_, i) => { const d = dayKey(addDays(new Date(), i - 6)), mm = moodOf(c, d); return `<i title="${esc(fmtDate(keyToDate(d).toISOString()))}">${mm ? moodEmoji(mm.mood) : '·'}</i>`; }).join('')}</span></div>`; }).join('')}</div>`, { cls: 'mt' });
+}
+
+/* ---------- agenda no painel ---------- */
+function eventsBanner() {
+  const today = dayKey(), tomorrow = dayKey(addDays(new Date(), 1));
+  const evs = [...eventsOn(today).map(e => ({ e, when: t('evToday'), day: today })), ...eventsOn(tomorrow).map(e => ({ e, when: t('evTomorrow'), day: tomorrow }))]
+    .filter(({ e }) => !e.childIds.length || e.childIds.some(id => canSeeChild(id)));
+  if (!evs.length) return '';
+  return `<div class="notice ev-banner"><b>📅 ${t('evComing')}</b>${evs.map(({ e, when, day }) => `<span><em>${esc(when)}${e.time ? ' ' + esc(e.time) : ''}</em> ${esc(eventLabel(e, day))}${e.childIds.length ? ' · ' + e.childIds.map(id => esc(childName(id))).join(', ') : ''}</span>`).join('')}<button type="button" class="btn btn-soft btn-sm" data-act="go" data-id="calendario">${t('evOpenCal')}</button></div>`;
+}
+
+/* ---------- liga no painel ---------- */
+(function () {
+  const dash = SECTIONS.find(s => s.id === 'dashboard');
+  const build0 = dash.build, update0 = dash.update;
+  dash.build = () => build0().replace('<div class="grid g4" id="dKids"></div>', '<div id="dEvents"></div><div id="dGoal"></div><div class="grid g4" id="dKids"></div><div id="dMood"></div>');
+  dash.update = function () { update0.call(this); $('#dEvents').innerHTML = eventsBanner(); $('#dGoal').innerHTML = familyGoalCard(); $('#dMood').innerHTML = moodCard(); };
+})();
+
+/* ---------- álbum de figurinhas ---------- */
+function albumHtml(c, printable) {
+  const n = stickerCount(c), order = stickerOrder(c), per = 24, total = per * STICKER_SETS.length;
+  const earned = S.history.filter(h => h.childId === c.id && h.points > 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0);
+  const next = STICKER_EVERY - (earned % STICKER_EVERY);
+  const pages = STICKER_SETS.map((set, si) => `<div class="al-page"><h3>${esc(t(set.key))} <small>${Math.max(0, Math.min(per, n - si * per))}/${per}</small></h3><div class="al-grid">${order[si].map((e, i) => { const k = si * per + i, has = k < n; return `<div class="al-slot ${has ? 'has' : ''} ${k === n - 1 && !printable ? 'new' : ''}">${has ? `<span>${e}</span>` : `<small>${k + 1}</small>`}</div>`; }).join('')}</div></div>`).join('');
+  return `<div class="al-top"><div><b>${t('alCount', { n: Math.min(n, total), total })}</b><span class="hint">${n >= total ? '🏆 ' + t('alComplete') : t('alNext', { n: next })}</span></div></div>${pages}`;
+}
+const ALBUM_SECTION = {
+  id: 'album', icon: '📒', nav: 'navAlbum', child: true,
+  build: () => `<div id="alPicker"></div><div id="alBody"></div>`,
+  update() {
+    const kids = visibleChildren(); if (!kids.some(k => k.id === ui.alChild)) ui.alChild = kids[0].id;
+    $('#alPicker').innerHTML = isChildMode() ? '' : childPicker(ui.alChild, 'al-child');
+    const c = childById(ui.alChild);
+    $('#alBody').innerHTML = `<div class="card al-card" style="--c:${c.accentColor}"><div class="actions" style="justify-content:flex-end;margin-bottom:6px"><button type="button" class="btn btn-soft btn-sm" data-act="al-print">🖨️ ${t('alPrint')}</button></div>${albumHtml(c, false)}<p class="hint">${t('alHint', { n: STICKER_EVERY })}</p></div>`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'recompensas') + 1, 0, ALBUM_SECTION);
+
+Object.assign(ACTIONS, {
+  'fg-open': () => { if (!isChildMode()) openFamilyGoal(); },
+  'fg-idea': el => { const x = FAMILY_GOAL_IDEAS.find(i => i.key === el.dataset.id); if (!x) return; $('#fgName').value = t(x.key); $('#fgIcon').value = x.icon; $('#fgTarget').value = x.target; },
+  'fg-save': () => {
+    const name = text($('#fgName').value, 60); if (!name) return toast(t('enterName'), 'warn');
+    const target = clamp(int($('#fgTarget').value, 0), 10, 1000000), icon = text($('#fgIcon').value, 8) || '🎯', cur = S.familyGoal.active;
+    if (cur && !($('#fgRestart') && $('#fgRestart').checked)) Object.assign(cur, { name, target, icon });
+    else S.familyGoal.active = { id: uid('fg'), name, icon, target, start: isoNow(), doneAt: null };
+    Modal.close('fgModal'); commit(); toast(t('saved'), 'success');
+  },
+  'fg-remove': async () => { if (!(await askConfirm(t('fgRemoveConfirm'), { danger: true, okLabel: t('delete') }))) return; S.familyGoal.active = null; Modal.close('fgModal'); commit(); },
+  'fg-finish': async () => {
+    const g = S.familyGoal.active; if (!g || !(await askConfirm(t('fgFinishConfirm', { name: g.name }), { okLabel: t('fgFinish') }))) return;
+    g.doneAt = isoNow(); S.familyGoal.past.unshift(g); S.familyGoal.active = null; commit(); toast('🎉 ' + t('fgFinished'), 'success'); setTimeout(openFamilyGoal, 400);
+  },
+  mood: el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const v = setMood(c, dayKey(), int(el.dataset.v, 3)); commit(); if (v) toast(`${moodEmoji(v)} ${t('moodSaved', { name: c.name })}`, 'success'); },
+  'al-child': el => { ui.alChild = el.dataset.id; render(); },
+  'al-print': () => { const c = childById(ui.alChild); printDocument(`<div class="ps-page pr al-print" style="--c:${c.accentColor}">${prHeader(c, t('navAlbum'), esc(S.familyName))}${albumHtml(c, true)}</div>`, t('navAlbum') + ' — ' + c.name); }
+});
+
+/* =====================================================================
+   Cofrinho com três potes: Gastar, Guardar (com meta) e Doar.
+   Cada entrada de dinheiro é dividida pelas porcentagens escolhidas.
+   ===================================================================== */
+
+function potsHtml(c) {
+  const b = potBalances(c), goal = S.goals.find(g => g.childId === c.id);
+  return `<div class="pots">${POTS.map(p => `<div class="pot pot-${p.id}"><span class="pot-ico">${p.icon}</span><small>${t('pot_' + p.id)}</small><b>${money(b[p.id])}</b>${p.id === 'save' && goal ? `<div class="progress"><span style="width:${Math.min(100, b.save / goal.target * 100)}%"></span></div><em>🎯 ${esc(goal.name)} · ${money(goal.target)}</em>` : ''}</div>`).join('')}</div>`;
+}
+(function () {
+  const sec = SECTIONS.find(s => s.id === 'cofrinho');
+  const build0 = sec.build, update0 = sec.update;
+  sec.build = () => build0()
+    .replace('<div class="grid g4" id="pCards"></div>', '<div class="grid g4" id="pCards"></div><div id="pPots" class="mt"></div>')
+    .replace('<button type="button" class="btn btn-primary mt" data-act="piggy-move">', `<div class="field" id="pPotWrap"><label for="pPot">${t('potFrom')}</label><select id="pPot">${POTS.map(p => `<option value="${p.id}">${p.icon} ${t('pot_' + p.id)}</option>`).join('')}</select></div><button type="button" class="btn btn-primary mt" data-act="piggy-move">`);
+  sec.update = function () {
+    update0.call(this);
+    const kids = visibleChildren(), parent = !isChildMode();
+    const w = $('#pPotWrap'); if (w) w.hidden = !S.pots.enabled || ($('#pType') && $('#pType').value !== 'remove');
+    $('#pPots').innerHTML = S.pots.enabled ? card('🫙 ' + t('potsTitle'), `<p class="hint" style="margin-top:-6px">${t('potsHint', { save: S.pots.save, give: S.pots.give, spend: 100 - S.pots.save - S.pots.give })}</p>
+      <div class="pots-kids">${kids.map(c => `<div class="pots-kid" style="--c:${c.accentColor}"><div class="pots-kid-head">${avatar(c, 'sm')}<b>${esc(c.name)}</b><span>${money(c.piggy)}</span>${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="pot-move-open" data-id="${esc(c.id)}">↔️ ${t('potMove')}</button>` : ''}</div>${potsHtml(c)}</div>`).join('')}</div>
+      ${parent ? `<details class="mt"><summary>⚙️ ${t('potsSettings')}</summary><div class="row2 mt"><div><label for="potSave">🏦 ${t('pot_save')} (%)</label><input id="potSave" type="number" min="0" max="100" value="${S.pots.save}"></div><div><label for="potGive">💝 ${t('pot_give')} (%)</label><input id="potGive" type="number" min="0" max="100" value="${S.pots.give}"></div></div><p class="hint">${t('potsSettingsHint')}</p><div class="actions"><button type="button" class="btn btn-primary btn-sm" data-act="pots-save">${t('save')}</button><button type="button" class="btn btn-ghost btn-sm" data-act="pots-off">${t('potsOff')}</button></div></details>` : ''}`)
+      : (parent ? `<div class="notice">🫙 ${t('potsOffNotice')} <button type="button" class="btn btn-soft btn-sm" data-act="pots-on">${t('potsOn')}</button></div>` : '');
+  };
+})();
+// a meta do cofrinho passa a olhar para o pote "Guardar"
+const _goalsListBase = goalsList;
+goalsList = function (list, manage) {
+  if (!S.pots.enabled) return _goalsListBase(list, manage);
+  if (!list.length) return emptyBox(t('noGoals'));
+  return list.map(g => {
+    const c = childById(g.childId); if (!c) return ''; const save = potBalances(c).save, pct = Math.min(100, save / g.target * 100);
+    return `<div class="item" style="display:block"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><div class="meta">${avatar(c, 'sm')}<div><strong>🎯 ${esc(g.name)}</strong><div class="sub">🏦 ${esc(c.name)}: ${money(save)} ${t('of')} ${money(g.target)}${pct >= 100 ? ' · 🎉 ' + t('goalDone') : ''}</div></div></div>${manage ? `<button type="button" class="icon-btn danger" data-act="del-goal" data-id="${esc(g.id)}" aria-label="${esc(t('delete'))}">🗑️</button>` : ''}</div><div class="progress" style="--accent:${c.progressColor}"><span style="width:${pct}%;background:${c.progressColor}"></span></div></div>`;
+  }).join('');
+};
+
+function openPotMove(c) {
+  const b = potBalances(c);
+  Modal.open({
+    id: 'potModal', title: '↔️ ' + t('potMove') + ' — ' + esc(c.name),
+    body: `<div class="row2"><div><label for="pmFrom">${t('potFrom')}</label><select id="pmFrom">${POTS.map(p => `<option value="${p.id}">${p.icon} ${t('pot_' + p.id)} (${money(b[p.id])})</option>`).join('')}</select></div>
+      <div><label for="pmTo">${t('potTo')}</label><select id="pmTo">${POTS.map((p, i) => `<option value="${p.id}" ${i === 1 ? 'selected' : ''}>${p.icon} ${t('pot_' + p.id)}</option>`).join('')}</select></div></div>
+      <div class="field"><label for="pmAmount">${t('amountBRL')}</label><input id="pmAmount" type="number" min="0" step="0.01" inputmode="decimal"></div><p class="hint">${t('potMoveHint')}</p>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="pot-move" data-id="${esc(c.id)}">${t('save')}</button>`
+  });
+}
+Object.assign(ACTIONS, {
+  'pot-move-open': el => { const c = childById(el.dataset.id); if (c && !isChildMode()) openPotMove(c); },
+  'pot-move': el => { const ok = movePot(el.dataset.id, $('#pmFrom').value, $('#pmTo').value, round2(num($('#pmAmount').value, 0))); if (!ok) return toast(t('potMoveInvalid'), 'warn'); Modal.close('potModal'); commit(); toast(t('movementSaved'), 'success'); },
+  'pots-save': () => { const sv = clamp(int($('#potSave').value, 20), 0, 100), gv = clamp(int($('#potGive').value, 10), 0, 100 - sv); S.pots.save = sv; S.pots.give = gv; commit(); toast(t('saved'), 'success'); },
+  'pots-off': () => { S.pots.enabled = false; commit(); },
+  'pots-on': () => { S.pots.enabled = true; commit(); }
+});
+// retirada: sai do pote escolhido
+(function () {
+  const base = ACTIONS['piggy-move'];
+  ACTIONS['piggy-move'] = el => {
+    if (!S.pots.enabled || $('#pType').value !== 'remove') return base(el);
+    const c = childById($('#pChild').value), amount = round2(num($('#pAmount').value, 0)), pot = $('#pPot').value;
+    if (!c || !(amount > 0)) return toast(t('validValue'), 'warn');
+    if (potBalances(c)[pot] < amount) return toast(t('potNotEnough', { pot: t('pot_' + pot) }), 'warn');
+    movePiggy(c.id, -amount, $('#pNote').value, pot); $('#pAmount').value = ''; $('#pNote').value = ''; commit(); toast(t('movementSaved'), 'success');
+  };
+  const ch = CHANGES['piggy-type'];
+  CHANGES['pot-type'] = () => { const w = $('#pPotWrap'); if (w) w.hidden = !S.pots.enabled || $('#pType').value !== 'remove'; };
+})();
+document.addEventListener('change', e => { if (e.target && e.target.id === 'pType') CHANGES['pot-type'](); });
+
+/* =====================================================================
+   Leitura (livros lidos e histórias contadas) e Rotina com figuras.
+   ===================================================================== */
+
+/* ---------- leitura ---------- */
+const READ_HOW = { alone: '📖', together: '👩‍👧', listened: '👂' };
+const READING_SECTION = {
+  id: 'leitura', icon: '📚', nav: 'navReading', child: true,
+  build: () => `<div id="rdPicker"></div><div id="rdBody"></div>`,
+  update() {
+    const kids = visibleChildren(); if (!kids.some(k => k.id === ui.rdChild)) ui.rdChild = kids[0].id;
+    $('#rdPicker').innerHTML = isChildMode() ? '' : childPicker(ui.rdChild, 'rd-child');
+    const c = childById(ui.rdChild), books = S.reading.books.filter(b => b.childId === c.id), m0 = monthKey();
+    const month = books.filter(b => monthKey(b.date) === m0).length, next = 5 - (books.length % 5);
+    ui.rdHow = ui.rdHow || (c.age <= 5 ? 'listened' : 'together'); ui.rdLiked = ui.rdLiked || 3;
+    const shelf = books.slice(0, 60).map((b, i) => `<div class="rd-book" style="--h:${(b.title.length * 37 + i * 53) % 360}" title="${esc(b.title)} · ${fmtDate(b.date)}"><span>${esc(b.title)}</span></div>`).join('');
+    $('#rdBody').innerHTML = `<div class="grid g2">
+      ${card('📚 ' + t('rdAddTitle', { name: esc(c.name) }), `<label for="rdTitle">${t('rdBookName')}</label><input id="rdTitle" maxlength="100" placeholder="${esc(t('rdBookPh'))}">
+        <label class="mt">${t('rdHow')}</label><div class="chips">${Object.entries(READ_HOW).map(([k, e]) => `<button type="button" class="chip ${ui.rdHow === k ? 'on' : ''}" data-act="rd-how" data-id="${k}">${e} ${t('rdHow_' + k)}</button>`).join('')}</div>
+        <label class="mt">${t('rdLiked')}</label><div class="chips">${[[3, '😍'], [2, '🙂'], [1, '😐']].map(([v, e]) => `<button type="button" class="chip ${ui.rdLiked === v ? 'on' : ''}" data-act="rd-liked" data-id="${v}">${e}</button>`).join('')}</div>
+        <div class="field"><label for="rdDate">${t('date')}</label><input id="rdDate" type="date" value="${dayKey()}" max="${dayKey()}"></div>
+        ${S.reading.settings.pointsPerBook ? `<p class="hint">${t('rdPointsHint', { n: S.reading.settings.pointsPerBook })}</p>` : ''}
+        <button type="button" class="btn btn-primary btn-block mt" data-act="rd-add">✅ ${t('rdSave')}</button>`)}
+      ${card('🏅 ' + t('rdProgress'), `<div class="grid g3"><div class="mini-kpi"><span>${t('rdTotal')}</span><strong>${books.length} 📚</strong></div><div class="mini-kpi"><span>${t('enThisMonth')}</span><strong>${month}</strong></div><div class="mini-kpi"><span>${t('rdMedals')}</span><strong>${'🏅'.repeat(Math.min(8, Math.floor(books.length / 5))) || '—'}</strong></div></div>
+        <p class="hint">${t('rdNextMedal', { n: next })}</p>
+        <h3 class="mt">📖 ${t('rdShelf')}</h3><div class="rd-shelf">${shelf || `<p class="hint">${t('rdEmpty')}</p>`}</div>`)}
+    </div>
+    ${books.length ? card('🗂️ ' + t('rdList'), `<div class="list">${books.slice(0, 30).map(b => `<div class="item"><div class="meta"><span class="ico">${READ_HOW[b.how]}</span><div><strong>${esc(b.title)}</strong><div class="sub">${fmtDate(b.date)} · ${t('rdHow_' + b.how)} · ${['', '😐', '🙂', '😍'][b.liked]}</div></div></div><div class="right"><button type="button" class="icon-btn danger parent-only" data-act="rd-del" data-id="${esc(b.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>`, { cls: 'mt' }) : ''}
+    ${card('⚙️ ' + t('rdRules'), `<label for="rdPts">${t('rdRulePoints')}</label><input id="rdPts" type="number" min="0" max="200" value="${S.reading.settings.pointsPerBook}"><button type="button" class="btn btn-primary mt" data-act="rd-rules">${t('save')}</button>`, { cls: 'mt parent-only' })}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'licao') + 1, 0, READING_SECTION);
+
+/* ---------- rotina com figuras ---------- */
+function speak(textToSay) {
+  try {
+    if (!('speechSynthesis' in window)) return;
+    const u = new SpeechSynthesisUtterance(textToSay); u.lang = { pt: 'pt-BR', en: 'en-US', es: 'es-ES', it: 'it-IT', zh: 'zh-CN', zht: 'zh-TW' }[S.language] || 'pt-BR'; u.rate = 0.9;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function routineChartHtml(c, from) {
+  const days = [...Array(7)].map((_, i) => addDays(from, i)), names = weekdayNames(true), r = routineOf(c);
+  const rows = (r.morning.length + r.night.length), rowH = Math.max(30, Math.min(56, Math.floor(760 / Math.max(1, rows))));
+  const table = kind => `<table class="pr-grid rt-grid"><thead><tr><th class="pr-tl">${kind === 'morning' ? '🌅 ' + esc(t('rtMorning')) : '🌙 ' + esc(t('rtNight'))}</th>${days.map(d => `<th>${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr></thead>
+    <tbody>${r[kind].map((s, i) => `<tr><td class="pr-tl"><span class="rt-num">${i + 1}</span><span class="rt-pic">${ROUTINE_STEPS[s]}</span><span class="rt-name">${esc(t('rs_' + s))}</span></td>${days.map(() => '<td><span class="pr-cb rt-cb"></span></td>').join('')}</tr>`).join('')}</tbody></table>`;
+  return `<div class="ps-page pr pr-routine" style="--c:${c.accentColor};--rowh:${rowH}px">${prHeader(c, t('rtKicker'), `${esc(t('prWeekOf'))} ${esc(weekLabel(from, addDays(from, 7)))}`)}${table('morning')}${table('night')}<p class="pr-cheer">${esc(t('rtCheer', { name: c.name }))}</p></div>`;
+}
+const ROUTINE_SECTION = {
+  id: 'rotina', icon: '🌅', nav: 'navRoutine', child: true,
+  build: () => `<div id="rtPicker"></div><div id="rtBody"></div>`,
+  update() {
+    const kids = visibleChildren(); if (!kids.some(k => k.id === ui.rtChild)) ui.rtChild = (kids.find(k => k.age <= 5) || kids[0]).id;
+    $('#rtPicker').innerHTML = isChildMode() ? '' : childPicker(ui.rtChild, 'rt-child');
+    const c = childById(ui.rtChild), parent = !isChildMode();
+    ui.rtKind = ui.rtKind || (new Date().getHours() < 14 ? 'morning' : 'night');
+    const kind = ui.rtKind, list = routineOf(c)[kind], rec = routineDone(c, kind), doneSteps = rec ? rec.steps : [];
+    const complete = list.length && list.every(s => doneSteps.includes(s));
+    let editor = '';
+    if (parent && ui.rtEdit) {
+      editor = card('✏️ ' + t('rtEditTitle'), `<p class="hint" style="margin-top:-6px">${t('rtEditHint')}</p><div class="list">${list.map((s, i) => `<div class="item"><div class="meta"><span class="ico">${ROUTINE_STEPS[s]}</span><strong>${i + 1}. ${esc(t('rs_' + s))}</strong></div><div class="right"><button type="button" class="icon-btn" data-act="rt-up" data-id="${s}" ${i ? '' : 'disabled'} aria-label="↑">⬆️</button><button type="button" class="icon-btn danger" data-act="rt-rm" data-id="${s}" aria-label="${esc(t('delete'))}">✕</button></div></div>`).join('')}</div>
+        <label class="mt">${t('rtAddStep')}</label><div class="chips">${ROUTINE_BANK[kind].filter(s => !list.includes(s)).map(s => `<button type="button" class="chip" data-act="rt-add" data-id="${s}">${ROUTINE_STEPS[s]} ${esc(t('rs_' + s))}</button>`).join('') || `<span class="hint">${t('rtAllAdded')}</span>`}</div>
+        <button type="button" class="btn btn-ghost btn-sm mt" data-act="rt-reset">↺ ${t('rtReset')}</button>`, { cls: 'mt' });
+    }
+    $('#rtBody').innerHTML = `<div class="card rt-card" style="--c:${c.accentColor}">
+      <div class="g-tabs"><button type="button" class="chip ${kind === 'morning' ? 'on' : ''}" data-act="rt-kind" data-id="morning">🌅 ${t('rtMorning')}</button><button type="button" class="chip ${kind === 'night' ? 'on' : ''}" data-act="rt-kind" data-id="night">🌙 ${t('rtNight')}</button>
+        <span style="flex:1"></span><button type="button" class="btn btn-soft btn-sm" data-act="rt-print">🖨️ ${t('rtPrint')}</button>${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="rt-print-all">🖨️ ${t('rtPrintAll')}</button><button type="button" class="btn btn-soft btn-sm" data-act="rt-edit">✏️ ${t(ui.rtEdit ? 'rtEditDone' : 'rtEdit')}</button>` : ''}</div>
+      <p class="hint">${t('rtHint')}</p>
+      <div class="rt-steps">${list.map((s, i) => { const ok = doneSteps.includes(s); return `<div class="rt-step ${ok ? 'ok' : ''}"><button type="button" class="rt-tap" data-act="rt-step" data-id="${s}"><span class="rt-n">${i + 1}</span><span class="rt-big">${ROUTINE_STEPS[s]}</span><b>${esc(t('rs_' + s))}</b>${ok ? '<span class="rt-check">✔</span>' : ''}</button><button type="button" class="rt-say" data-act="rt-say" data-id="${s}" aria-label="🔊">🔊</button></div>`; }).join('')}</div>
+      ${complete ? `<div class="g-done">🎉 <b>${t('rtComplete', { name: esc(c.name) })}</b>${rec && rec.historyId ? ` +${S.routines.settings.points} ⭐` : ''}</div>` : ''}
+    </div>${editor}
+    ${parent ? card('⚙️ ' + t('rtRules'), `<label for="rtPts">${t('rtRulePoints')}</label><input id="rtPts" type="number" min="0" max="100" value="${S.routines.settings.points}"><button type="button" class="btn btn-primary mt" data-act="rt-rules">${t('save')}</button>`, { cls: 'mt' }) : ''}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'quadro') + 1, 0, ROUTINE_SECTION);
+
+Object.assign(ACTIONS, {
+  'rd-child': el => { ui.rdChild = el.dataset.id; ui.rdHow = null; render(); },
+  'rd-how': el => { ui.rdHow = el.dataset.id; $$('#rdBody [data-act="rd-how"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'rd-liked': el => { ui.rdLiked = int(el.dataset.id, 3); $$('#rdBody [data-act="rd-liked"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'rd-add': () => {
+    const c = childById(ui.rdChild), title = text($('#rdTitle').value, 100); if (!title) return toast(t('rdNeedTitle'), 'warn');
+    const dv = $('#rdDate').value, date = /^\d{4}-\d{2}-\d{2}$/.test(dv) && dv < dayKey() ? keyToDate(dv).toISOString() : isoNow();
+    const b = addBook(c, title, ui.rdHow, ui.rdLiked, date); commit();
+    const n = S.reading.books.filter(x => x.childId === c.id).length;
+    toast(`📚 ${t('rdSaved', { name: c.name, title })}` + (b.historyId ? ` (+${pts(S.reading.settings.pointsPerBook)})` : ''), 'success', { label: t('undo'), run: () => { deleteBook(b.id); commit(); toast(t('undone')); } });
+    if (n % 5 === 0) setTimeout(() => toast(`🏅 ${t('rdMedalWon', { name: c.name, n })}`, 'success'), 700);
+  },
+  'rd-del': async el => { if (!(await askConfirm(t('rdDelConfirm'), { danger: true, okLabel: t('delete') }))) return; if (deleteBook(el.dataset.id)) { commit(); toast(t('deleted')); } },
+  'rd-rules': () => { S.reading.settings.pointsPerBook = clamp(int($('#rdPts').value, 10), 0, 200); commit(); toast(t('saved'), 'success'); },
+  'rt-child': el => { ui.rtChild = el.dataset.id; render(); },
+  'rt-kind': el => { ui.rtKind = el.dataset.id; render(); },
+  'rt-edit': () => { ui.rtEdit = !ui.rtEdit; render(); },
+  'rt-say': el => speak(t('rs_' + el.dataset.id)),
+  'rt-step': el => {
+    const c = childById(ui.rtChild); if (!c) return; const s = el.dataset.id;
+    const before = (routineDone(c, ui.rtKind) || { steps: [] }).steps.includes(s);
+    const r = toggleRoutineStep(c, ui.rtKind, s); commit();
+    if (!before) speak(t('rs_' + s));
+    if (r.complete && !before) { speak(t('rtComplete', { name: c.name })); if (r.gained) celebrate(c, [], r.gained); }
+  },
+  'rt-up': el => { const l = routineOf(childById(ui.rtChild))[ui.rtKind], i = l.indexOf(el.dataset.id); if (i > 0) { [l[i - 1], l[i]] = [l[i], l[i - 1]]; commit(); } },
+  'rt-rm': el => { const k = routineOf(childById(ui.rtChild)); k[ui.rtKind] = k[ui.rtKind].filter(s => s !== el.dataset.id); commit(); },
+  'rt-add': el => { const l = routineOf(childById(ui.rtChild))[ui.rtKind]; if (!l.includes(el.dataset.id) && l.length < 14) { l.push(el.dataset.id); commit(); } },
+  'rt-reset': () => { const c = childById(ui.rtChild); routineOf(c)[ui.rtKind] = defaultRoutine(c, ui.rtKind); commit(); },
+  'rt-rules': () => { S.routines.settings.points = clamp(int($('#rtPts').value, 5), 0, 100); commit(); toast(t('saved'), 'success'); },
+  'rt-print': () => { const c = childById(ui.rtChild); printDocument(routineChartHtml(c, weekStart()), t('rtKicker') + ' — ' + c.name); },
+  'rt-print-all': () => printDocument(S.children.map(c => routineChartHtml(c, weekStart())).join(''), t('rtKicker'))
+});
+
+/* =====================================================================
+   Agenda da família no calendário e Relatório do mês para imprimir.
+   ===================================================================== */
+
+/* ---------- agenda ---------- */
+function openEventModal(id, day) {
+  const e = id ? S.events.find(x => x.id === id) : null;
+  const d = e || { day: day || dayKey(), time: '', title: '', kind: 'school', childIds: [], yearly: false };
+  Modal.open({
+    id: 'evModal', title: e ? '✏️ ' + t('evEdit') : '📅 ' + t('evNew'),
+    body: `<label for="evTitle">${t('evWhat')}</label><input id="evTitle" maxlength="80" value="${esc(d.title)}" placeholder="${esc(t('evTitlePh'))}">
+      <label class="mt">${t('evKind')}</label><div class="chips">${Object.entries(EVENT_KINDS).map(([k, ic]) => `<label class="chip ${d.kind === k ? 'on' : ''}"><input type="radio" name="evKind" value="${k}" ${d.kind === k ? 'checked' : ''}>${ic} ${t('evKind_' + k)}</label>`).join('')}</div>
+      <div class="row2 field"><div><label for="evDay">${t('date')}</label><input id="evDay" type="date" value="${d.day}"></div><div><label for="evTime">${t('time')}</label><input id="evTime" type="time" value="${esc(d.time)}"></div></div>
+      <div class="field"><label>${t('evWho')}</label><div class="chips">${S.children.map(c => `<label class="chip ${d.childIds.includes(c.id) ? 'on' : ''}"><input type="checkbox" data-evkid="${esc(c.id)}" ${d.childIds.includes(c.id) ? 'checked' : ''}>${esc(c.avatar)} ${esc(c.name)}</label>`).join('')}</div><p class="hint">${t('evWhoHint')}</p></div>
+      <label class="check"><input type="checkbox" id="evYearly" ${d.yearly ? 'checked' : ''}> ${t('evYearly')}</label>`,
+    foot: `${e ? `<button type="button" class="btn btn-ghost danger" data-act="ev-del" data-id="${esc(e.id)}">${t('delete')}</button>` : ''}<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="ev-save" data-id="${e ? esc(e.id) : ''}">${t('save')}</button>`
+  });
+}
+(function () {
+  const cal = SECTIONS.find(s => s.id === 'calendario');
+  const build0 = cal.build, update0 = cal.update;
+  cal.build = () => build0().replace('<div class="cal-legend" id="calLegend"></div>', `<div class="cal-legend" id="calLegend"></div><div class="cal-tools parent-only"><button type="button" class="btn btn-primary btn-sm" data-act="ev-new">+ ${t('evNew')}</button><span class="hint">${t('evCalHint')}</span></div>`);
+  cal.update = function () {
+    update0.call(this);
+    $$('#calGrid .day[data-id]').forEach(el => {
+      const evs = eventsOn(el.dataset.id).filter(e => !e.childIds.length || e.childIds.some(id => canSeeChild(id))); if (!evs.length) return;
+      el.classList.add('has-ev');
+      el.insertAdjacentHTML('beforeend', `<div class="day-evs">${evs.slice(0, 2).map(e => `<span class="day-ev ev-${e.kind}">${EVENT_KINDS[e.kind]} ${esc(e.title)}</span>`).join('')}${evs.length > 2 ? `<span class="day-ev">+${evs.length - 2}</span>` : ''}</div>`);
+    });
+  };
+})();
+const _openDayBase = openDay;
+openDay = function (key) {
+  _openDayBase(key);
+  const box = $('#dayModal .list'); if (!box) return;
+  const evs = eventsOn(key), parent = !isChildMode();
+  box.insertAdjacentHTML('beforebegin', `<div class="day-ev-list">${evs.map(e => `<div class="item ev-item ev-${e.kind}"><div class="meta"><span class="ico">${EVENT_KINDS[e.kind]}</span><div><strong>${esc(eventLabel(e, key))}</strong><div class="sub">${e.time ? esc(e.time) + ' · ' : ''}${e.childIds.length ? e.childIds.map(id => esc(childName(id))).join(', ') : t('evEveryone')}${e.yearly ? ' · 🔁 ' + t('evYearlyShort') : ''}</div></div></div>${parent ? `<button type="button" class="icon-btn" data-act="ev-edit" data-id="${esc(e.id)}" aria-label="${esc(t('edit'))}">✏️</button>` : ''}</div>`).join('')}
+    ${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="ev-new" data-id="${key}" style="margin:4px 0 10px">+ ${t('evNewThisDay')}</button>` : ''}</div>`);
+};
+Object.assign(ACTIONS, {
+  'ev-new': el => { if (isChildMode()) return; Modal.close('dayModal'); openEventModal(null, el && el.dataset.id); },
+  'ev-edit': el => { Modal.close('dayModal'); openEventModal(el.dataset.id); },
+  'ev-save': el => {
+    const title = text($('#evTitle').value, 80); if (!title) return toast(t('enterName'), 'warn');
+    const day = $('#evDay').value; if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return toast(t('evNeedDate'), 'warn');
+    const kindEl = $('#evModal input[name="evKind"]:checked'), kind = kindEl ? kindEl.value : 'other';
+    const data = { day, time: /^\d{2}:\d{2}$/.test($('#evTime').value) ? $('#evTime').value : '', title, kind, childIds: $$('#evModal [data-evkid]:checked').map(i => i.dataset.evkid), yearly: $('#evYearly').checked };
+    const ex = el.dataset.id && S.events.find(x => x.id === el.dataset.id);
+    if (ex) Object.assign(ex, data); else S.events.push({ id: uid('ev'), ...data });
+    Modal.close('evModal'); commit(); toast(t('saved'), 'success');
+  },
+  'ev-del': async el => { if (!(await askConfirm(t('evDelConfirm'), { danger: true, okLabel: t('delete') }))) return; S.events = S.events.filter(x => x.id !== el.dataset.id); Modal.close('evModal'); commit(); toast(t('deleted')); }
+});
+document.addEventListener('change', e => { if (e.target && e.target.name === 'evKind' && e.target.value === 'birthday') { const y = $('#evYearly'); if (y) y.checked = true; } if (e.target && e.target.closest && e.target.closest('#evModal .chip')) { const l = e.target.closest('.chip'); if (e.target.type === 'radio') $$('#evModal input[name="evKind"]').forEach(r => r.closest('.chip').classList.toggle('on', r.checked)); else l.classList.toggle('on', e.target.checked); } });
+
+/* ---------- relatório do mês ---------- */
+function monthBounds(offset = 0) { const n = new Date(); const from = new Date(n.getFullYear(), n.getMonth() + offset, 1); return { from, to: new Date(from.getFullYear(), from.getMonth() + 1, 1) }; }
+function monthData(c, from, to) {
+  const inR = iso => { const x = Date.parse(iso); return x >= from.getTime() && x < to.getTime(); };
+  const hist = S.history.filter(h => h.childId === c.id && inR(h.date));
+  const dayIn = d => { const x = keyToDate(d).getTime(); return x >= from.getTime() && x < to.getTime(); };
+  const moods = S.moods.filter(m => m.childId === c.id && dayIn(m.day));
+  const weeks = []; for (let d = startOfDay(weekStart(from)); d < to; d = addDays(d, 7)) weeks.push({ from: d, n: hist.filter(h => h.type === 'task' && Date.parse(h.date) >= d.getTime() && Date.parse(h.date) < addDays(d, 7).getTime()).length });
+  return {
+    tasks: hist.filter(h => h.type === 'task').length,
+    earned: hist.filter(h => h.points > 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0),
+    lost: -hist.filter(h => h.points < 0 && h.type !== 'reward').reduce((s, h) => s + h.points, 0),
+    spent: -hist.filter(h => h.type === 'reward').reduce((s, h) => s + h.points, 0),
+    pages: S.homework.entries.filter(x => x.childId === c.id && inR(x.date)).reduce((s, x) => s + x.pages, 0),
+    english: S.english.sessions.filter(x => x.childId === c.id && inR(x.date)).reduce((s, x) => s + x.minutes, 0),
+    books: S.reading.books.filter(x => x.childId === c.id && inR(x.date)).length,
+    games: S.games.wins.filter(x => x.childId === c.id && inR(x.date)).length,
+    routines: S.routines.done.filter(x => x.childId === c.id && dayIn(x.day) && x.historyId).length,
+    piggy: round2(S.piggyHistory.filter(p => p.childId === c.id && inR(p.date)).reduce((s, p) => s + p.amount, 0)),
+    moods: MOODS.map(m => ({ ...m, n: moods.filter(x => x.mood === m.v).length })), moodDays: moods.length,
+    test: S.english.tests.find(x => x.childId === c.id && inR(x.date)),
+    medals: S.achievements.filter(a => a.childId === c.id && inR(a.date)).map(a => ACHIEVEMENTS.find(x => x.code === a.code)).filter(Boolean),
+    bad: hist.filter(h => h.points < 0 && h.type !== 'reward'), weeks
+  };
+}
+function monthLabel(from) { const s = from.toLocaleDateString(locale(), { month: 'long', year: 'numeric' }); return s.charAt(0).toUpperCase() + s.slice(1); }
+function trend(now, before) { if (now > before) return `<i class="mr-up">▲ ${now - before}</i>`; if (now < before) return `<i class="mr-down">▼ ${before - now}</i>`; return '<i class="mr-eq">=</i>'; }
+function monthChildHtml(c, from, to) {
+  const m = monthData(c, from, to), pf = new Date(from.getFullYear(), from.getMonth() - 1, 1), p = monthData(c, pf, from);
+  const k = (ico, v, label, prev) => `<div class="pr-kpi"><span class="pr-ki">${ico}</span><b>${v}</b><span>${esc(label)}</span>${prev !== undefined ? `<small>${trend(typeof v === 'number' ? v : parseFloat(v), prev)} ${esc(t('mrVsLast'))}</small>` : ''}</div>`;
+  const wmax = Math.max(1, ...m.weeks.map(w => w.n));
+  return `<div class="ps-page pr pr-month" style="--c:${c.accentColor}">
+    ${prHeader(c, t('mrKicker'), `${esc(monthLabel(from))} · ${esc(S.familyName)}`, `<div class="pr-star"><b>⭐ ${c.points}</b><small>${esc(t('currentPoints'))}</small><small>${esc(t('levelShort'))} ${levelOf(c)}</small></div>`)}
+    <p class="pr-summary">${esc(t('mrSummary', { name: c.name, tasks: m.tasks, earned: m.earned, books: m.books, pages: m.pages }))}</p>
+    <div class="pr-kpis mr-kpis">${k('✅', m.tasks, t('prTasks'), p.tasks)}${k('⭐', m.earned, t('prEarned'), p.earned)}${k('⚠️', m.lost, t('prLost'), p.lost)}${k('📝', m.pages, t('prHwPages'), p.pages)}${k('🇬🇧', m.english, t('mrEnglishMin'), p.english)}${k('📚', m.books, t('mrBooks'), p.books)}${k('🧩', m.games, t('mrGames'), p.games)}${k('🌅', m.routines, t('mrRoutines'), p.routines)}</div>
+    <div class="mr-two">
+      <div class="pr-box good"><h4>📈 ${esc(t('mrTasksByWeek'))}</h4><div class="mr-bars">${m.weeks.map(w => `<div><span style="height:${Math.max(4, w.n / wmax * 100)}%"></span><b>${w.n}</b><small>${fmtDate(w.from.toISOString())}</small></div>`).join('')}</div></div>
+      <div class="pr-box"><h4>💬 ${esc(t('mrMoods'))}</h4>${m.moodDays ? `<div class="mr-moods">${m.moods.map(x => `<div><span>${x.e}</span><b>${x.n}</b></div>`).join('')}</div>` : `<p class="pr-empty">${esc(t('mrNoMoods'))}</p>`}</div>
+    </div>
+    <div class="pr-boxes">
+      <div class="pr-box good"><h4>🏅 ${esc(t('mrHighlights'))}</h4><ul>${[m.medals.map(a => `<li>${a.icon} ${esc(t(a.key))}</li>`).join(''), m.test ? `<li>📝 ${esc(t('prTest', { score: m.test.score, total: m.test.total }))}</li>` : '', m.books ? `<li>📚 ${esc(t('mrBooksLine', { n: m.books }))}</li>` : '', `<li>📒 ${esc(t('mrStickers', { n: stickerCount(c) }))}</li>`, m.piggy ? `<li>🐷 ${esc(signedMoney(m.piggy))}</li>` : ''].join('')}</ul></div>
+      <div class="pr-box bad"><h4>💬 ${esc(t('prImprove'))}</h4>${m.bad.length ? `<ul>${m.bad.slice(0, 6).map(h => `<li><b>${fmtDate(h.date)}</b> ${esc(historyText(h).replace(/^⚠️ /, ''))} <em>${h.points}</em></li>`).join('')}</ul>` : '<p class="pr-empty">—</p>'}</div>
+      <div class="pr-box rw"><h4>🎁 ${esc(t('prSpent'))}</h4><p style="margin:0;font-size:16px;font-weight:900">${m.spent} ⭐</p></div>
+    </div>
+    <div class="pr-talk"><h3>${esc(t('mrTalk'))}</h3><div class="pr-lines"><span></span><span></span></div><div class="pr-goal"><b>${esc(t('mrNextGoal'))}</b><span></span></div><div class="pr-sign"><div><span></span>${esc(t('prSignParent'))}</div><div><span></span>${esc(c.name)}</div></div></div>
+  </div>`;
+}
+function monthFamilyHtml(from, to) {
+  const rows = S.children.map(c => ({ c, m: monthData(c, from, to) }));
+  const fg = S.familyGoal.past.filter(g => g.doneAt && Date.parse(g.doneAt) >= from.getTime() && Date.parse(g.doneAt) < to.getTime());
+  const evs = S.events.filter(e => !e.yearly && keyToDate(e.day) >= from && keyToDate(e.day) < to);
+  const cols = [['✅', 'tasks'], ['⭐', 'earned'], ['⚠️', 'lost'], ['📝', 'pages'], ['🇬🇧', 'english'], ['📚', 'books'], ['🧩', 'games'], ['🌅', 'routines']];
+  return `<div class="ps-page pr pr-family">
+    <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">🗓️</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('mrFamilyKicker'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(monthLabel(from))}</div></div></div>
+    <table class="pr-grid mr-table"><thead><tr><th class="pr-tl">${esc(t('child'))}</th>${cols.map(([ic]) => `<th>${ic}</th>`).join('')}<th>😄</th></tr></thead>
+      <tbody>${rows.map(({ c, m }) => `<tr><td class="pr-tl"><b>${esc(c.avatar)} ${esc(c.name)}</b></td>${cols.map(([, k]) => `<td>${m[k]}</td>`).join('')}<td>${m.moodDays ? Math.round(m.moods.filter(x => x.v >= 4).reduce((s, x) => s + x.n, 0) / m.moodDays * 100) + '%' : '—'}</td></tr>`).join('')}
+      <tr class="pr-sum"><td class="pr-tl">${esc(t('prTotalCol'))}</td>${cols.map(([, k]) => `<td>${rows.reduce((s, r) => s + r.m[k], 0)}</td>`).join('')}<td></td></tr></tbody></table>
+    <p class="pr-legend">✅ ${esc(t('prTasks'))} · ⭐ ${esc(t('prEarned'))} · ⚠️ ${esc(t('prLost'))} · 📝 ${esc(t('prHwPages'))} · 🇬🇧 ${esc(t('mrEnglishMin'))} · 📚 ${esc(t('mrBooks'))} · 🧩 ${esc(t('mrGames'))} · 🌅 ${esc(t('mrRoutines'))} · 😄 ${esc(t('mrHappyDays'))}</p>
+    ${fg.length ? `<h3>🎯 ${esc(t('fgTitle'))}</h3><ul class="pr-events">${fg.map(g => `<li class="pos">${esc(g.icon)} ${esc(g.name)} — ${esc(t('fgReached'))}</li>`).join('')}</ul>` : ''}
+    ${evs.length ? `<h3>📅 ${esc(t('mrEvents'))}</h3><ul class="pr-events">${evs.map(e => `<li>${fmtDate(keyToDate(e.day).toISOString())} — ${esc(eventLabel(e))}</li>`).join('')}</ul>` : ''}
+    <h3>${esc(t('prFamilyNotes'))}</h3><div class="pr-lines"><span></span><span></span><span></span></div>
+    <p class="pr-foot">${esc(t('prPrintedOn', { date: fmtDateTime(isoNow()) }))}</p></div>`;
+}
+const _openPrintChooserBase = openPrintChooser;
+openPrintChooser = function () {
+  _openPrintChooserBase();
+  const body = $('#printModal .list:last-of-type'); if (!body) return;
+  const kids = visibleChildren(), m0 = monthBounds(0), m1 = monthBounds(-1);
+  body.insertAdjacentHTML('beforebegin', `<h4 class="pr-group">🗓️ ${t('mrGroup')}</h4><select id="prMonth"><option value="0">${esc(monthLabel(m0.from))}</option><option value="-1">${esc(monthLabel(m1.from))}</option></select>
+    <div class="list mt">${!isChildMode() ? `<button type="button" class="item pr-opt" data-act="pr-month-family"><div class="meta"><span class="ico">🗓️</span><div><strong>${t('mrOptFamily')}</strong><div class="sub">${t('mrOptFamilyHint')}</div></div></div><span>›</span></button>` : ''}
+      ${kids.map(c => `<button type="button" class="item pr-opt" data-act="pr-month" data-id="${esc(c.id)}"><div class="meta">${avatar(c, 'sm')}<div><strong>${t('mrOptChild', { name: esc(c.name) })}</strong><div class="sub">${t('mrOptChildHint')}</div></div></div><span>›</span></button>`).join('')}
+      <button type="button" class="item pr-opt" data-act="rt-print-all"><div class="meta"><span class="ico">🌅</span><div><strong>${t('rtKicker')}</strong><div class="sub">${t('rtPrintHint')}</div></div></div><span>›</span></button></div>`);
+};
+function chosenMonth() { const v = $('#prMonth'); return monthBounds(v ? int(v.value, 0) : 0); }
+Object.assign(ACTIONS, {
+  'pr-month': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenMonth(); printDocument(monthChildHtml(c, from, to), t('mrOptChild', { name: c.name })); },
+  'pr-month-family': () => { const { from, to } = chosenMonth(); printDocument(monthFamilyHtml(from, to) + S.children.map(c => monthChildHtml(c, from, to)).join(''), t('mrOptFamily')); }
 });
 
 </script>
