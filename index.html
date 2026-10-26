@@ -175,21 +175,69 @@ th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.3p
 .tag{font-size:11px;font-weight:800;color:#fff;background:var(--c);border-radius:999px;padding:2px 8px}
 .pin-error{color:var(--danger);font-size:13px;font-weight:700;margin-top:8px}
 
-/* ===== Calendário ===== */
+/* ===== Calendário (visual do original: cada dia da semana com sua cor) ===== */
+.calendar-shell{position:relative;overflow:hidden}
+.calendar-shell:before{content:"";position:absolute;inset:-80px auto auto -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(108,99,255,.16),transparent 68%);pointer-events:none}
+.calendar-shell:after{content:"";position:absolute;right:-70px;bottom:-90px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.13),transparent 70%);pointer-events:none}
+.calendar-shell>*{position:relative;z-index:1}
+.cal-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.cal-sum-card{padding:14px;border-radius:16px;background:linear-gradient(135deg,#fff,#f7f7ff);border:1px solid var(--line);box-shadow:0 8px 22px rgba(43,39,78,.06);position:relative}
+.cal-sum-card strong{display:block;font-size:24px}
+.cal-sum-card span{font-size:12px;color:var(--muted)}
+.cal-sum-card .cal-sum-ico{position:absolute;right:12px;top:10px;font-size:20px;opacity:.8}
+.cal-legend{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:2px 0 16px}
+.cal-legend-item{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:700}
+.cal-legend-item .dot{width:10px;height:10px}
 .cal-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:6px 0 14px}
 .cal-head h2{text-align:center}
-.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
-.wd{text-align:center;font-weight:800;color:#5e5974;font-size:13px;padding:8px 2px;border-radius:12px;background:#f5f3ff}
-.day{min-height:96px;border-radius:14px;padding:8px;background:#fff;border:1px solid var(--line);cursor:pointer;position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
-.day:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(43,39,78,.1)}
-.day.out{opacity:.45;cursor:default}
-.day.out:hover{transform:none;box-shadow:none}
-.day.today{border:2px solid var(--primary)}
-.day .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:10px;font-weight:900;background:#f2f3fa}
-.day.today .num{background:var(--primary);color:#fff}
-.day.has .num{background:var(--accent-soft);color:var(--accent)}
-.day-rows{margin-top:6px;display:grid;gap:3px}
-.day-row{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.wd{text-align:center;font-weight:800;color:#4b4668;font-size:13px;padding:8px 4px;border-radius:12px;background:linear-gradient(135deg,#f5f3ff,#fff);border:1px solid rgba(108,99,255,.10);text-transform:capitalize}
+.day{min-height:104px;border-radius:14px;padding:10px;background:#fff;border:1px solid var(--line);cursor:pointer;position:relative;overflow:hidden;box-shadow:0 7px 18px rgba(43,39,78,.07);transition:transform .18s ease,box-shadow .18s ease}
+.day:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(43,39,78,.12)}
+.day.weekday-0{background:linear-gradient(145deg,#fff1f3,#fff8f8);border-color:#ffd7de}
+.day.weekday-1{background:linear-gradient(145deg,#eef5ff,#f9fbff);border-color:#cfe0ff}
+.day.weekday-2{background:linear-gradient(145deg,#eefcf5,#fbfffd);border-color:#ccefdc}
+.day.weekday-3{background:linear-gradient(145deg,#fff8e8,#fffdf7);border-color:#f6e2aa}
+.day.weekday-4{background:linear-gradient(145deg,#f7efff,#fcf9ff);border-color:#e4d0ff}
+.day.weekday-5{background:linear-gradient(145deg,#fff0f7,#fffafd);border-color:#f6cfe1}
+.day.weekday-6{background:linear-gradient(145deg,#eefbff,#f9feff);border-color:#c9edf5}
+.day.out{opacity:.55;filter:saturate(.65);cursor:default}
+.day.out:hover{transform:none;box-shadow:0 7px 18px rgba(43,39,78,.07)}
+.day-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
+.day .num{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;font-size:16px;font-weight:900;color:#fff;box-shadow:0 5px 12px rgba(0,0,0,.12);flex:0 0 auto}
+.weekday-0 .num{background:linear-gradient(135deg,#fb7185,#e11d48)}
+.weekday-1 .num{background:linear-gradient(135deg,#60a5fa,#2563eb)}
+.weekday-2 .num{background:linear-gradient(135deg,#34d399,#059669)}
+.weekday-3 .num{background:linear-gradient(135deg,#fbbf24,#d97706)}
+.weekday-4 .num{background:linear-gradient(135deg,#a78bfa,#7c3aed)}
+.weekday-5 .num{background:linear-gradient(135deg,#f472b6,#db2777)}
+.weekday-6 .num{background:linear-gradient(135deg,#22d3ee,#0891b2)}
+.day-name{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.45px;padding:5px 7px;border-radius:999px;background:rgba(255,255,255,.75);color:#5e5974;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.day-deco{position:absolute;right:9px;bottom:7px;font-size:17px;opacity:.45}
+.day.today{border:2px solid var(--primary);box-shadow:0 10px 26px rgba(108,99,255,.20)}
+.day.today .day-name{background:var(--primary);color:#fff}
+.day.has{box-shadow:0 10px 25px rgba(43,39,78,.13)}
+.day.has .day-deco{opacity:.9}
+.day-rows{margin-top:8px;display:grid;gap:4px}
+.day-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:rgba(255,255,255,.72);padding:4px 6px;border-radius:8px}
+.day-count{display:inline-block;font-size:11px;font-weight:800;margin-top:6px;padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.78)}
+.month-message{margin-top:16px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,#fff8e8,#fff);border:1px solid #f5dfae;display:flex;align-items:center;gap:12px}
+.month-message-icon{font-size:28px}
+.month-message strong{display:block}
+.month-message span{color:var(--muted);font-size:14px}
+@media(max-width:900px){.day-name{display:none}}
+@media(max-width:760px){
+  .cal-summary{grid-template-columns:1fr 1fr}
+  .calendar{gap:5px}
+  .wd{font-size:11px;padding:6px 1px}
+  .day{min-height:66px;padding:5px;border-radius:11px}
+  .day .num{width:26px;height:26px;font-size:13px;border-radius:9px}
+  .day-rows{display:none}
+  .day-count{font-size:10px;padding:2px 6px;margin-top:4px}
+  .day-count span{display:none}
+  .day-count b:before{content:"✔ "}
+  .day-deco{font-size:13px;right:5px;bottom:3px}
+}
 .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--c)}
 .day-count{font-size:11px;font-weight:800;margin-top:4px}
 .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
@@ -271,8 +319,6 @@ body:not(.child-mode) .child-only{display:none!important}
 
   .g2,.g3,.row2{grid-template-columns:1fr}
   .title h1{font-size:24px}
-  .calendar-wrap{overflow-x:auto}
-  .calendar{min-width:640px}
 }
 @media(max-width:520px){.theme-grid{grid-template-columns:1fr}.item{flex-wrap:wrap}.right{justify-content:flex-start}}
 @media print{
@@ -349,7 +395,6 @@ html{-webkit-tap-highlight-color:transparent}
   .sheet-grip{display:block;width:42px;height:5px;border-radius:99px;background:#d9dbe6;margin:0 auto 8px;flex:0 0 auto}
   .modal-foot .btn{flex:1}
   .choices{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .day{min-height:74px;padding:6px}
 }
 @media(max-width:400px){.g4{grid-template-columns:1fr}}
 @media(max-width:369px){.mb-mode span:last-child{display:none}.mb-mode{padding:4px}}
@@ -537,13 +582,94 @@ html{-webkit-tap-highlight-color:transparent}
 @media screen{body.print-mode #printArea{display:none}}
 .plan-sub{font-size:12px;font-weight:800;color:var(--muted);margin:8px 0 4px}
 .plan-item.rm{background:#fff3f0}
+/* ===== Quadro de tarefas (no app) ===== */
+.q-card{border-top:5px solid var(--c)}
+.q-hero{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 14px;border-radius:18px;background:color-mix(in srgb,var(--c) 12%,#fff);margin-bottom:12px}
+.q-hero .avatar{width:56px;height:56px;font-size:30px}
+.q-hero-txt{flex:1;min-width:140px}
+.q-hero-txt small{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--c) 75%,#000)}
+.q-hero-txt h2{margin:0;font-size:24px}
+.q-hero-txt span{font-size:13px;color:var(--muted)}
+.q-week{display:flex;gap:6px}
+.q-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.q-stats div{border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:#fff}
+.q-stats b{display:block;font-size:20px}
+.q-stats span{font-size:11.5px;color:var(--muted)}
+.q-stats .pos{color:#0f7a4c}
+.q-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.q-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;-webkit-overflow-scrolling:touch}
+.q-grid{width:100%;border-collapse:separate;border-spacing:0;min-width:640px}
+.q-grid th,.q-grid td{padding:6px 4px;text-align:center;border-bottom:1px solid var(--line);border-right:1px solid #f0f1f6;font-size:13px;vertical-align:middle}
+.q-grid thead th{background:color-mix(in srgb,var(--c) 14%,#fff);font-size:12px;text-transform:capitalize;color:#4b4668;letter-spacing:0}
+.q-grid thead th small{display:block;font-weight:600;color:var(--muted)}
+.q-grid thead th.q-th-today{background:var(--c);color:#fff}
+.q-grid thead th.q-th-today small{color:#fff}
+.q-grid tbody tr:last-child th,.q-grid tbody tr:last-child td{border-bottom:0}
+.q-task{text-align:left!important;position:sticky;left:0;background:#fff;z-index:1;min-width:190px;max-width:260px;text-transform:none!important}
+.q-grid thead .q-task{background:color-mix(in srgb,var(--c) 14%,#fff)}
+.q-name{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:2px;font:inherit;text-align:left;cursor:pointer;color:inherit}
+span.q-name{cursor:default}
+.q-name b{display:block;font-size:13.5px;line-height:1.25}
+.q-name small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.q-ico{font-size:22px;flex:0 0 auto;width:28px;text-align:center}
+.q-pen{font-style:normal;font-size:11px;opacity:.35;margin-left:auto}
+.q-name:hover .q-pen{opacity:1}
+.q-pts input{width:56px;padding:6px 4px;text-align:center;font-weight:800;border-radius:10px}
+.q-pts b{color:#8a5300}
+.q-btn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2.5px solid color-mix(in srgb,var(--c) 70%,#333);background:#fff;font-size:17px;font-weight:900;padding:0;cursor:pointer;color:#fff}
+.q-btn.open{box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,transparent);animation:qpulse 2s infinite}
+.q-btn.open:hover{background:color-mix(in srgb,var(--c) 20%,#fff)}
+.q-btn.done{background:#16a34a;border-color:#16a34a}
+.q-btn.wait{border-color:#f59e0b;background:#fff7e6;font-size:15px;cursor:default}
+.q-btn.past{border-style:dashed;border-color:#c9cbd8;color:#b8bacb;font-size:15px}
+.q-btn.past:hover{border-color:#16a34a;color:#16a34a}
+.q-btn.miss{border:0;color:#d0a4a0;cursor:default;background:none}
+.q-btn.fut{border:2px dashed #e1e2ea;cursor:default;width:28px;height:28px}
+.q-off{background:repeating-linear-gradient(45deg,#f6f6f9 0 5px,#ececf2 5px 10px)}
+.q-rest{color:#c4c6d4}
+.q-today{background:color-mix(in srgb,var(--c) 7%,#fff)}
+.q-ok{background:#effbf3}
+.q-sum th,.q-sum td{font-weight:800;background:#fafafe}
+@keyframes qpulse{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--c) 10%,transparent)}}
+.q-extras h3{margin:16px 0 8px;font-size:16px}
+.q-foot{display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-top:14px}
+.q-en,.q-rw{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:#fff}
+.q-en span{float:right;font-weight:800}
+.q-en .progress{margin-top:8px}
+.q-en .progress span{float:none;background:var(--c)}
+.q-rw-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.q-rw-list span{font-size:12.5px;padding:4px 9px;border-radius:999px;background:#f4f4f8}
+.q-rw-list span.ok{background:#e7f8ef;color:#0f6b45;font-weight:700}
+.q-rw-list i{font-style:normal;font-weight:800;margin-left:2px}
+@media(max-width:760px){
+  .q-stats{grid-template-columns:1fr 1fr}
+  .q-foot{grid-template-columns:1fr}
+  .q-grid{min-width:560px}
+  .q-task{min-width:150px;max-width:170px}
+  .q-name b{font-size:12.5px}
+  .q-btn{width:30px;height:30px}
+  .q-pts input{width:46px}
+}
+/* valores das tarefas */
+.val-scale{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
+.val-scale span{font-size:12px;padding:5px 10px;border-radius:999px;background:#fff8e6;border:1px solid #f5dfae}
+.val-scale b{color:#8a5300}
+.val-input{display:flex;align-items:center;gap:6px}
+.val-input input{width:70px;text-align:center;font-weight:800}
+.val-input small{min-width:64px;color:#0f6b45;font-weight:700}
+.val-week{margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.val-week h4{margin:0 0 8px}
+.val-kid{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.val-kid span{flex:1;font-weight:700}
+.val-kid small{color:var(--muted);min-width:80px;text-align:right}
+.tm-sug .btn{margin-left:6px}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v77 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v78 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -2078,13 +2204,104 @@ PLAN_TEXT.zht = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], PLAN_TEXT[l]));
 
+/* Textos da v78: quadro de tarefas no app e valor de cada tarefa. */
+const QUADRO_TEXT = {
+pt: {
+  tabChart: 'Quadro', navChart: 'Quadro de tarefas', title_quadro: 'Quadro de tarefas', sub_quadro: 'A semana de cada criança: marque, edite e imprima daqui.',
+  qMarkPast: 'Marcar como feita neste dia', qTimesWeek: '{n}x nesta semana', qPotential: 'pontos possíveis na semana', valTitleShort: 'Valores', qPrintThis: 'Imprimir quadro', qPrintAll: 'Imprimir todos',
+  qHintParent: 'Toque na bolinha de hoje para marcar. Em dias que já passaram, toque no ○ para registrar o que foi feito no papel. Toque no ✔ para desfazer, no nome para editar a tarefa e mude os pontos direto no número (vale para todas as crianças que têm a tarefa).',
+  qHintChild: 'Toque na bolinha de hoje quando terminar a tarefa. ⏳ = esperando o responsável aprovar.',
+  qMarkedPast: '{task} marcada para {name} em {date}.', qUndoConfirm: 'Desfazer "{task}" de {date}? Os pontos voltam.', qPtsSaved: '{task}: agora vale {n} pontos.',
+  valTitle: 'Quanto vale cada tarefa', valIntro: 'Já coloquei os pontos que sugiro para cada tarefa, pelo esforço que ela pede. Hoje 10 pontos = {value}. Mude o que quiser e toque em salvar.',
+  valLvl5: 'rapidinha (dentes, toalha, sapatos)', valLvl10: 'cuidar das próprias coisas (cama, brinquedos, prato)', valLvl15: 'ajuda maior (dobrar roupa, ler 15 min)', valLvl20: 'tarefa da casa (varrer, mop, lição)', valLvl25: 'tarefa grande (louça, aspirar)',
+  valBefore: 'antes {n}', valNoSug: 'sem sugestão', valWeekTitle: 'Quanto cada um pode ganhar por semana (fazendo tudo)', valWeekHint: 'Conta só as tarefas diárias e semanais, nos dias marcados.', valSaved: 'Valores salvos ({n} tarefa(s) mudaram).',
+  tmSuggest: 'Sugestão para esta tarefa: {n} pontos', tmUseSug: 'Usar'
+},
+en: {
+  tabChart: 'Chart', navChart: 'Task chart', title_quadro: 'Task chart', sub_quadro: "Each child's week: tick, edit and print from here.",
+  qMarkPast: 'Mark as done on this day', qTimesWeek: '{n}x this week', qPotential: 'possible points this week', valTitleShort: 'Values', qPrintThis: 'Print chart', qPrintAll: 'Print all',
+  qHintParent: "Tap today's circle to tick. On past days, tap ○ to record what was ticked on paper. Tap ✔ to undo, the name to edit the task, and change the points right in the number (it applies to every child with that task).",
+  qHintChild: "Tap today's circle when you finish the task. ⏳ = waiting for a parent to approve.",
+  qMarkedPast: '{task} marked for {name} on {date}.', qUndoConfirm: 'Undo "{task}" from {date}? The points go back.', qPtsSaved: '{task}: now worth {n} points.',
+  valTitle: 'How much each task is worth', valIntro: 'I already filled in the points I suggest for each task, based on the effort it takes. Right now 10 points = {value}. Change anything and tap save.',
+  valLvl5: 'quick (teeth, towel, shoes)', valLvl10: 'own things (bed, toys, plate)', valLvl15: 'bigger help (fold clothes, read 15 min)', valLvl20: 'house chore (sweep, mop, homework)', valLvl25: 'big chore (dishes, vacuum)',
+  valBefore: 'was {n}', valNoSug: 'no suggestion', valWeekTitle: 'How much each child can earn per week (doing everything)', valWeekHint: 'Counts only daily and weekly tasks, on their set days.', valSaved: 'Values saved ({n} task(s) changed).',
+  tmSuggest: 'Suggested for this task: {n} points', tmUseSug: 'Use'
+},
+es: {
+  tabChart: 'Cuadro', navChart: 'Cuadro de tareas', title_quadro: 'Cuadro de tareas', sub_quadro: 'La semana de cada niño: marca, edita e imprime desde aquí.',
+  qMarkPast: 'Marcar como hecha este día', qTimesWeek: '{n} vez/veces esta semana', qPotential: 'puntos posibles en la semana', valTitleShort: 'Valores', qPrintThis: 'Imprimir cuadro', qPrintAll: 'Imprimir todos',
+  qHintParent: 'Toca el círculo de hoy para marcar. En días pasados, toca el ○ para registrar lo que se marcó en papel. Toca el ✔ para deshacer, el nombre para editar la tarea y cambia los puntos directo en el número (vale para todos los niños que tienen la tarea).',
+  qHintChild: 'Toca el círculo de hoy cuando termines la tarea. ⏳ = esperando que el responsable apruebe.',
+  qMarkedPast: '{task} marcada para {name} el {date}.', qUndoConfirm: '¿Deshacer "{task}" del {date}? Los puntos vuelven.', qPtsSaved: '{task}: ahora vale {n} puntos.',
+  valTitle: 'Cuánto vale cada tarea', valIntro: 'Ya puse los puntos que sugiero para cada tarea, según el esfuerzo que pide. Hoy 10 puntos = {value}. Cambia lo que quieras y toca guardar.',
+  valLvl5: 'rapidita (dientes, toalla, zapatos)', valLvl10: 'sus propias cosas (cama, juguetes, plato)', valLvl15: 'ayuda mayor (doblar ropa, leer 15 min)', valLvl20: 'tarea de la casa (barrer, trapeador, deberes)', valLvl25: 'tarea grande (platos, aspirar)',
+  valBefore: 'antes {n}', valNoSug: 'sin sugerencia', valWeekTitle: 'Cuánto puede ganar cada uno por semana (haciendo todo)', valWeekHint: 'Cuenta solo las tareas diarias y semanales, en los días marcados.', valSaved: 'Valores guardados ({n} tarea(s) cambiaron).',
+  tmSuggest: 'Sugerencia para esta tarea: {n} puntos', tmUseSug: 'Usar'
+},
+it: {
+  tabChart: 'Tabella', navChart: 'Tabella dei compiti', title_quadro: 'Tabella dei compiti', sub_quadro: 'La settimana di ogni bambino: segna, modifica e stampa da qui.',
+  qMarkPast: 'Segna come fatto in questo giorno', qTimesWeek: '{n} volta/e questa settimana', qPotential: 'punti possibili nella settimana', valTitleShort: 'Valori', qPrintThis: 'Stampa tabella', qPrintAll: 'Stampa tutte',
+  qHintParent: "Tocca il cerchio di oggi per segnare. Nei giorni passati, tocca ○ per registrare quello che è stato segnato sulla carta. Tocca ✔ per annullare, il nome per modificare il compito e cambia i punti direttamente nel numero (vale per tutti i bambini che hanno quel compito).",
+  qHintChild: 'Tocca il cerchio di oggi quando finisci il compito. ⏳ = in attesa che il genitore approvi.',
+  qMarkedPast: '{task} segnato per {name} il {date}.', qUndoConfirm: 'Annullare "{task}" del {date}? I punti tornano indietro.', qPtsSaved: '{task}: ora vale {n} punti.',
+  valTitle: 'Quanto vale ogni compito', valIntro: "Ho già messo i punti che consiglio per ogni compito, in base all'impegno che richiede. Ora 10 punti = {value}. Cambia quello che vuoi e tocca salva.",
+  valLvl5: 'veloce (denti, asciugamano, scarpe)', valLvl10: 'le proprie cose (letto, giocattoli, piatto)', valLvl15: 'aiuto maggiore (piegare vestiti, leggere 15 min)', valLvl20: 'faccenda di casa (spazzare, mocio, compiti)', valLvl25: 'faccenda grande (piatti, aspirapolvere)',
+  valBefore: 'prima {n}', valNoSug: 'nessun consiglio', valWeekTitle: 'Quanto può guadagnare ognuno a settimana (facendo tutto)', valWeekHint: 'Conta solo i compiti giornalieri e settimanali, nei giorni previsti.', valSaved: 'Valori salvati ({n} compito/i cambiati).',
+  tmSuggest: 'Consigliato per questo compito: {n} punti', tmUseSug: 'Usa'
+},
+zh: {
+  tabChart: '任务表', navChart: '任务表', title_quadro: '任务表', sub_quadro: '每个孩子的一周：在这里打勾、编辑和打印。',
+  qMarkPast: '标记为这一天已完成', qTimesWeek: '本周 {n} 次', qPotential: '本周可得积分', valTitleShort: '分值', qPrintThis: '打印任务表', qPrintAll: '全部打印',
+  qHintParent: '点今天的圆圈来打勾。过去的日子，点 ○ 把纸上记录的补上。点 ✔ 可以撤销，点任务名可以编辑，直接改数字就能改积分（对所有有这个任务的孩子都有效）。',
+  qHintChild: '做完任务后点今天的圆圈。⏳ = 等家长审批。',
+  qMarkedPast: '已为 {name} 标记 {date} 的"{task}"。', qUndoConfirm: '撤销 {date} 的"{task}"？积分会退回。', qPtsSaved: '{task}：现在值 {n} 积分。',
+  valTitle: '每个任务值多少', valIntro: '我已经按每个任务需要的努力填好了建议积分。目前 10 积分 = {value}。想改哪个就改，然后点保存。',
+  valLvl5: '很快的（刷牙、毛巾、鞋子）', valLvl10: '照顾自己的东西（床、玩具、盘子）', valLvl15: '大一点的帮忙（叠衣服、读书 15 分钟）', valLvl20: '家务（扫地、拖地、作业）', valLvl25: '大家务（洗碗、吸尘）',
+  valBefore: '原来 {n}', valNoSug: '没有建议', valWeekTitle: '每个孩子每周最多能得多少（全部完成）', valWeekHint: '只计算每天和每周的任务，按设定的日子。', valSaved: '分值已保存（{n} 个任务有改动）。',
+  tmSuggest: '这个任务的建议：{n} 积分', tmUseSug: '使用'
+}
+};
+QUADRO_TEXT.zht = {
+  tabChart: "任務表",
+  navChart: "任務表",
+  title_quadro: "任務表",
+  sub_quadro: "每個孩子的一週：在這裡打勾、編輯和列印。",
+  qMarkPast: "標記為這一天已完成",
+  qTimesWeek: "本週 {n} 次",
+  qPotential: "本週可得積分",
+  valTitleShort: "分值",
+  qPrintThis: "列印任務表",
+  qPrintAll: "全部列印",
+  qHintParent: "點今天的圓圈來打勾。過去的日子，點 ○ 把紙上記錄的補上。點 ✔ 可以撤銷，點任務名可以編輯，直接改數字就能改積分（對所有有這個任務的孩子都有效）。",
+  qHintChild: "做完任務後點今天的圓圈。⏳ = 等家長審批。",
+  qMarkedPast: "已為 {name} 標記 {date} 的\"{task}\"。",
+  qUndoConfirm: "撤銷 {date} 的\"{task}\"？積分會退回。",
+  qPtsSaved: "{task}：現在值 {n} 積分。",
+  valTitle: "每個任務值多少",
+  valIntro: "我已經按每個任務需要的努力填好了建議積分。目前 10 積分 = {value}。想改哪個就改，然後點儲存。",
+  valLvl5: "很快的（刷牙、毛巾、鞋子）",
+  valLvl10: "照顧自己的東西（床、玩具、盤子）",
+  valLvl15: "大一點的幫忙（疊衣服、讀書 15 分鐘）",
+  valLvl20: "家務（掃地、拖地、作業）",
+  valLvl25: "大家務（洗碗、吸塵）",
+  valBefore: "原來 {n}",
+  valNoSug: "沒有建議",
+  valWeekTitle: "每個孩子每週最多能得多少（全部完成）",
+  valWeekHint: "只計算每天和每週的任務，按設定的日子。",
+  valSaved: "分值已儲存（{n} 個任務有改動）。",
+  tmSuggest: "這個任務的建議：{n} 積分",
+  tmUseSug: "使用"
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], QUADRO_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 77;
+const APP_VERSION = 78;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -3110,7 +3327,7 @@ const SECTIONS = [
         <div class="row2"><div><label for="mChild">${t('child')}</label><select id="mChild" data-change="render"></select></div>
         <div><label for="mNote">${t('note')}</label><input id="mNote" maxlength="200" placeholder="${esc(t('notePlaceholder'))}"></div></div>
         <p class="hint" style="margin:10px 0 12px">${t('frequencyHint')}</p><div id="mList" class="list"></div>`)}
-      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft" data-act="pr-chart-all">🖨️ ${t('prChartBtn')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
+      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft" data-act="tv-open">💰 ${t('valTitleShort')}</button><button type="button" class="btn btn-soft" data-act="pr-chart-all">🖨️ ${t('prChartBtn')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
     </div>`,
     update() {
       const sel = $('#mChild'); setSelect(sel, childOptions(activeChild() ? activeChild().id : sel.value || S.children[0].id));
@@ -3238,10 +3455,10 @@ const SECTIONS = [
   /* ==================== CALENDÁRIO ==================== */
   {
     id: 'calendario', icon: '📅', nav: 'navCalendar', child: true,
-    build: () => `<div class="card"><div class="grid g4" id="calSummary"></div><div class="legend mt" id="calLegend"></div>
+    build: () => `<div class="card calendar-shell"><div class="cal-summary" id="calSummary"></div><div class="cal-legend" id="calLegend"></div>
       <div class="cal-head"><button type="button" class="btn btn-soft" data-act="cal-prev" aria-label="‹">←</button><h2 id="calTitle"></h2><button type="button" class="btn btn-soft" data-act="cal-next" aria-label="›">→</button></div>
       <div class="calendar-wrap"><div class="calendar" id="calGrid"></div></div>
-      <div class="notice mt">🌟 <strong>${t('calMsgTitle')}</strong> ${t('calMsgText')}</div></div>`,
+      <div class="month-message"><div class="month-message-icon">🌟</div><div><strong>${t('calMsgTitle')}</strong><span>${t('calMsgText')}</span></div></div></div>`,
     update() {
       const d = ui.calDate, y = d.getFullYear(), m = d.getMonth(), mk = monthKey(d);
       const title = d.toLocaleDateString(locale(), { month: 'long', year: 'numeric' }); $('#calTitle').textContent = title.charAt(0).toUpperCase() + title.slice(1);
@@ -3249,23 +3466,25 @@ const SECTIONS = [
       const month = hist.filter(h => monthKey(h.date) === mk), tasks = month.filter(h => h.type === 'task');
       const kids = visibleChildren();
       const top = kids.map(c => ({ c, n: tasks.filter(h => h.childId === c.id).length })).sort((a, b) => b.n - a.n)[0];
-      const box = (v, l) => `<div class="mini-kpi"><strong>${v}</strong><span>${l}</span></div>`;
-      $('#calSummary').innerHTML = box(tasks.length, t('calMonthTasks')) + box(new Set(month.map(h => dayKey(h.date))).size, t('calActiveDays'))
-        + box(isChildMode() ? `${esc(kids[0].avatar)} ${esc(kids[0].name)}` : (top && top.n ? `${esc(top.c.avatar)} ${esc(top.c.name)}` : '—'), isChildMode() ? t('myProfile') : t('calTop'))
-        + box(`${tasks.reduce((a, h) => a + h.points, 0)} ⭐`, t('calPoints'));
-      $('#calLegend').innerHTML = kids.map(c => `<span><i class="dot" style="--c:${c.progressColor}"></i>${esc(c.name)}</span>`).join('');
-      const names = weekdayNames(true);
-      let html = names.map(n => `<div class="wd">${esc(n)}</div>`).join('');
+      const box = (ico, v, l) => `<div class="cal-sum-card"><span class="cal-sum-ico">${ico}</span><strong>${v}</strong><span>${l}</span></div>`;
+      $('#calSummary').innerHTML = box('✅', tasks.length, t('calMonthTasks')) + box('📆', new Set(month.map(h => dayKey(h.date))).size, t('calActiveDays'))
+        + box('🏆', isChildMode() ? `${esc(kids[0].avatar)} ${esc(kids[0].name)}` : (top && top.n ? `${esc(top.c.avatar)} ${esc(top.c.name)}` : '—'), isChildMode() ? t('myProfile') : t('calTop'))
+        + box('⭐', `${tasks.reduce((a, h) => a + h.points, 0)} ⭐`, t('calPoints'));
+      $('#calLegend').innerHTML = kids.map(c => `<span class="cal-legend-item"><i class="dot" style="--c:${c.progressColor}"></i>${esc(c.name)}</span>`).join('');
+      const short = weekdayNames(true), long = weekdayNames(false);
+      const deco = ['☀️', '📘', '🌿', '⭐', '🎨', '💖', '🎈'];
+      let html = short.map((n, i) => `<div class="wd wd-${i}">${esc(n)}</div>`).join('');
       const first = new Date(y, m, 1), last = new Date(y, m + 1, 0);
-      for (let i = 0; i < first.getDay(); i++) html += `<div class="day out"><span class="num">${new Date(y, m, i - first.getDay() + 1).getDate()}</span></div>`;
+      const outDay = dt => `<div class="day out weekday-${dt.getDay()}"><div class="day-top"><span class="num">${dt.getDate()}</span><span class="day-name">${esc(short[dt.getDay()])}</span></div><span class="day-deco">${deco[dt.getDay()]}</span></div>`;
+      for (let i = 0; i < first.getDay(); i++) html += outDay(new Date(y, m, i - first.getDay() + 1));
       const today = dayKey();
       for (let day = 1; day <= last.getDate(); day++) {
-        const key = dayKey(new Date(y, m, day)); const items = hist.filter(h => dayKey(h.date) === key);
+        const dt = new Date(y, m, day), wd = dt.getDay(), key = dayKey(dt); const items = hist.filter(h => dayKey(h.date) === key);
         const rows = items.slice(0, 2).map(h => { const c = childById(h.childId); return `<div class="day-row"><i class="dot" style="--c:${c ? c.progressColor : '#999'}"></i>${esc(childName(h.childId, h.childName))}</div>`; }).join('');
-        html += `<div class="day ${items.length ? 'has' : ''} ${key === today ? 'today' : ''}" data-act="cal-day" data-id="${key}" role="button" tabindex="0"><span class="num">${day}</span>${items.length ? `<div class="day-rows">${rows}</div><div class="day-count">${items.length} ${items.length === 1 ? t('activity') : t('activities')}</div>` : ''}</div>`;
+        html += `<div class="day weekday-${wd} ${items.length ? 'has' : ''} ${key === today ? 'today' : ''}" data-act="cal-day" data-id="${key}" role="button" tabindex="0"><div class="day-top"><span class="num">${day}</span><span class="day-name">${esc(short[wd])}</span></div>${items.length ? `<div class="day-rows">${rows}</div><div class="day-count"><b>${items.length}</b><span> ${items.length === 1 ? t('activity') : t('activities')}</span></div>` : ''}<span class="day-deco">${items.length ? '✨' : deco[wd]}</span></div>`;
       }
       const tail = (7 - ((first.getDay() + last.getDate()) % 7)) % 7;
-      for (let i = 1; i <= tail; i++) html += `<div class="day out"><span class="num">${i}</span></div>`;
+      for (let i = 1; i <= tail; i++) html += outDay(new Date(y, m + 1, i));
       $('#calGrid').innerHTML = html;
     }
   },
@@ -3770,7 +3989,7 @@ function renderHostBanner() {
 }
 
 /* ---------- celular: barra do topo, menu lateral e abas embaixo ---------- */
-const TABS = ['dashboard', 'tarefas', 'recompensas', 'cofrinho'];
+const TABS = ['dashboard', 'quadro', 'tarefas', 'recompensas'];
 function renderMobileChrome(sec, kid) {
   const modeBtn = kid
     ? `<button type="button" class="mb-mode" data-act="mode-child" aria-label="${esc(t('modeChild'))}">${avatar(kid, 'sm')}<span>${esc(kid.name)}</span></button>`
@@ -3779,7 +3998,7 @@ function renderMobileChrome(sec, kid) {
     <div class="mb-title"><strong>${esc(t('title_' + sec.id))}</strong><small>${esc(S.familyName)}</small></div>
     <button type="button" class="pill cloud-chip mb-cloud" data-cloud-chip data-act="cloud-open" hidden></button>${modeBtn}`;
   const pend = !kid ? pendingApprovals().length : 0;
-  $('#tabBar').innerHTML = TABS.map(id => { const s = SECTIONS.find(x => x.id === id); return `<button type="button" class="${ui.section === id ? 'on' : ''}" data-act="go" data-id="${id}"><span class="ti">${s.icon}</span><span>${esc(t(s.nav))}</span></button>`; }).join('')
+  $('#tabBar').innerHTML = TABS.map(id => { const s = SECTIONS.find(x => x.id === id); return `<button type="button" class="${ui.section === id ? 'on' : ''}" data-act="go" data-id="${id}"><span class="ti">${s.icon}</span><span>${esc(t(s.tab || s.nav))}</span></button>`; }).join('')
     + `<button type="button" class="${TABS.includes(ui.section) ? '' : 'on'}" data-act="menu-open"><span class="ti">☰</span><span>${esc(t('more'))}</span>${pend ? `<i class="tab-badge">${pend}</i>` : ''}</button>`;
   $('#drawerTools').innerHTML = `<label for="drawerLang">${esc(t('language'))}</label><select id="drawerLang" class="select-lang" data-change="lang">${langOptions(S.language)}</select>
     <div class="mode-switch" role="group" aria-label="${esc(t('mode'))}"><button type="button" class="${kid ? '' : 'active'}" data-act="mode-parent">👨‍👩‍👧 ${t('modeParent')}</button><button type="button" class="${kid ? 'active' : ''}" data-act="mode-child">🧒 ${t('modeChild')}</button></div>
@@ -3841,21 +4060,21 @@ function celebrate(c, fresh, gained) {
   (fresh || []).forEach((a, i) => setTimeout(() => toast(`${a.icon} ${c.name}: ${t(a.key)}!`, 'success'), 500 + i * 400));
   if (gained && c.points >= c.goal && c.points - gained < c.goal) setTimeout(() => toast(`🏆 ${t('goalReached', { name: c.name })}`, 'success'), 900);
 }
-function openTaskModal(id) {
+function openTaskModal(id, presetChild) {
   const task = id != null ? taskById(id) : null;
-  const d = task || { name: '', points: 10, icon: '✅', frequency: 'daily', days: [], time: '', approvalRequired: true, childIds: [], cashPerPoint: null, fixedCash: 0 };
+  const d = task || { name: '', points: 10, icon: '✅', frequency: 'daily', days: [], time: '', approvalRequired: true, childIds: presetChild ? [presetChild] : [], cashPerPoint: null, fixedCash: 0 };
   const names = weekdayNames(true);
   Modal.open({
     id: 'taskModal', title: task ? t('editTask') : t('newTask'),
     body: `<input type="hidden" id="tmId" value="${task ? task.id : ''}">
-      <label for="tmName">${t('name')}</label><input id="tmName" maxlength="80" value="${esc(task ? taskName(task) : '')}" placeholder="${esc(t('taskNamePh'))}" autofocus>
+      <label for="tmName">${t('name')}</label><input id="tmName" data-change="task-preview" maxlength="80" value="${esc(task ? taskName(task) : '')}" placeholder="${esc(t('taskNamePh'))}" autofocus>
       <div class="row2 field"><div><label for="tmPoints">${t('points')}</label><input id="tmPoints" type="number" min="1" value="${d.points}" data-change="task-preview"></div><div><label for="tmIcon">${t('icon')}</label><input id="tmIcon" maxlength="8" value="${esc(d.icon)}"></div></div>
       <div class="row2 field"><div><label for="tmFreq">${t('frequency')}</label><select id="tmFreq" data-change="task-freq"><option value="daily">${t('freqDaily')}</option><option value="weekly">${t('freqWeekly')}</option><option value="oneOff">${t('freqOneOff')}</option></select></div><div><label for="tmTime">${t('time')}</label><input id="tmTime" type="time" value="${esc(d.time)}"></div></div>
       <p class="hint">${t('frequencyHint')}</p>
       <div class="field" id="tmDaysWrap"><label>${t('weekDays')}</label><div class="chips">${names.map((n, i) => `<label class="chip ${d.days.includes(i) ? 'on' : ''}"><input type="checkbox" data-day="${i}" ${d.days.includes(i) ? 'checked' : ''}>${esc(n)}</label>`).join('')}</div><p class="hint">${t('weekDaysHint')}</p></div>
       <div class="field"><label>${t('assignTo')}</label><div class="chips">${S.children.map(c => `<label class="chip ${d.childIds.includes(c.id) ? 'on' : ''}"><input type="checkbox" data-kid="${esc(c.id)}" ${d.childIds.includes(c.id) ? 'checked' : ''}>${esc(c.avatar)} ${esc(c.name)}</label>`).join('')}</div><p class="hint">${t('assignHint')}</p></div>
       <div class="row2 field"><div><label for="tmCpp">${t('cashPerPoint')}</label><input id="tmCpp" type="number" min="0" step="0.01" value="${d.cashPerPoint ?? ''}" placeholder="${S.defaultPointValue.toFixed(2)}" data-change="task-preview"></div><div><label for="tmFixed">${t('fixedExtra')}</label><input id="tmFixed" type="number" min="0" step="0.01" value="${Number(d.fixedCash).toFixed(2)}" data-change="task-preview"></div></div>
-      <p class="hint" id="tmPreview"></p>
+      <p class="hint" id="tmPreview"></p><p class="hint tm-sug" id="tmSug"></p>
       <label class="check"><input type="checkbox" id="tmApproval" ${d.approvalRequired ? 'checked' : ''}> ${t('requireApproval')}</label><p class="hint">${t('requireApprovalHint')}</p>`,
     foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="task-save">${t('save')}</button>`
   });
@@ -3866,6 +4085,8 @@ function taskModalSync() {
   const p = Math.max(1, int($('#tmPoints').value, 1)), cppRaw = $('#tmCpp').value;
   const cpp = cppRaw === '' ? S.defaultPointValue : Math.max(0, num(cppRaw, 0));
   $('#tmPreview').textContent = t('taskValuePreview', { value: money(p * cpp + Math.max(0, num($('#tmFixed').value, 0))) });
+  const sug = suggestedPoints({ name: $('#tmName').value, nameKey: null, points: p });
+  const sb = $('#tmSug'); if (sb) sb.innerHTML = sug ? `💡 ${t('tmSuggest', { n: sug })} ${sug !== p ? `<button type="button" class="btn btn-soft btn-sm" data-act="tm-use-sug" data-id="${sug}">${t('tmUseSug')}</button>` : '✔'}` : '';
 }
 function saveTaskModal() {
   const name = text($('#tmName').value, 80); if (!name) return toast(t('enterName'), 'warn');
@@ -4073,6 +4294,7 @@ const ACTIONS = {
   'task-new': () => openTaskModal(null),
   'task-edit': el => openTaskModal(el.dataset.id),
   'task-save': () => saveTaskModal(),
+  'tm-use-sug': el => { $('#tmPoints').value = el.dataset.id; taskModalSync(); },
   'task-del': async el => { const task = taskById(el.dataset.id); if (!task || !(await askConfirm(t('deleteTaskConfirm', { name: taskName(task) }), { danger: true, okLabel: t('delete') }))) return; S.tasks = S.tasks.filter(x => x !== task); commit(); toast(t('deleted')); },
   'reward-new': () => openRewardModal(null),
   'reward-edit': el => openRewardModal(el.dataset.id),
@@ -4182,7 +4404,7 @@ function bindEvents() {
     const chip = e.target.closest('.chip'); if (chip && e.target.type === 'checkbox') chip.classList.toggle('on', e.target.checked);
     const el = e.target.closest('[data-change]'); if (el && CHANGES[el.dataset.change]) CHANGES[el.dataset.change](el, e);
   });
-  document.addEventListener('input', e => { const el = e.target.closest('[data-change]'); if (el && ['calc', 'values-preview', 'task-preview'].includes(el.dataset.change)) CHANGES[el.dataset.change](el, e); });
+  document.addEventListener('input', e => { const el = e.target.closest('[data-change]'); if (el && ['calc', 'values-preview', 'task-preview', 'tv-preview'].includes(el.dataset.change)) CHANGES[el.dataset.change](el, e); });
   document.addEventListener('keydown', e => {
     touchUnlock();
     if (e.key === 'Escape') { const m = Modal.top(); if (m) { e.preventDefault(); Modal.close(m.id); } else closeMenu(); return; }
@@ -4378,13 +4600,13 @@ const AGE_BANDS = [
 ];
 const TASK_LIBRARY = [
   // cuidar das próprias coisas
-  { key: 'lib_toysBox', icon: '🧸', points: 5, min: 1, max: 2, alias: /brinquedo/ },
+  { key: 'lib_toysBox', icon: '🧸', points: 10, min: 1, max: 2, alias: /brinquedo/ },
   { key: 'taskPutToysAway', icon: '🧸', points: 10, min: 3, max: 9, existing: true, alias: /brinquedo/ },
   { key: 'lib_shoesPlace', icon: '👟', points: 5, min: 1, max: 4, alias: /sapato|t[eê]nis|chinelo/ },
   { key: 'lib_diaperBin', icon: '🚮', points: 5, min: 1, max: 2, alias: /fralda/ },
   { key: 'taskLaundryBasket', icon: '👕', points: 5, min: 2, max: 14, existing: true, alias: /roupa suja|cesto/ },
   { key: 'lib_pajamas', icon: '🩳', points: 5, min: 3, max: 6, alias: /pijama/ },
-  { key: 'lib_booksShelf', icon: '📚', points: 5, min: 3, max: 6, alias: /guardar.*livro/ },
+  { key: 'lib_booksShelf', icon: '📚', points: 10, min: 3, max: 6, alias: /guardar.*livro/ },
   { key: 'taskMakeBed', icon: '🛏️', points: 10, min: 5, max: 14, existing: true, alias: /cama/ },
   { key: 'lib_backpack', icon: '🎒', points: 10, min: 5, max: 14, alias: /mochila/ },
   { key: 'lib_chooseClothes', icon: '👗', points: 5, min: 5, max: 6, alias: /escolher.*roupa/ },
@@ -4402,7 +4624,7 @@ const TASK_LIBRARY = [
   { key: 'lib_waterCup', icon: '🥛', points: 5, min: 1, max: 2 },
   { key: 'lib_washOwnPlate', icon: '🍽️', points: 10, min: 3, max: 12, alias: /lavar.*prato|pr[oó]prio prato/ },
   { key: 'lib_napkins', icon: '🧻', points: 5, min: 3, max: 5, alias: /guardanapo/ },
-  { key: 'taskSetTable', icon: '🍴', points: 15, min: 5, max: 9, existing: true, alias: /p[oô]r a mesa|arrumar a mesa/ },
+  { key: 'taskSetTable', icon: '🍴', points: 10, min: 5, max: 9, existing: true, alias: /p[oô]r a mesa|arrumar a mesa/ },
   { key: 'lib_wipeTable', icon: '🧽', points: 10, min: 5, max: 14, alias: /limpar.*mesa/ },
   { key: 'lib_putGroceries', icon: '🛒', points: 10, min: 7, max: 30, alias: /compras/ },
   { key: 'lib_dryDishes', icon: '🍽️', points: 15, min: 7, max: 9, alias: /secar.*lou[cç]a/ },
@@ -4414,14 +4636,14 @@ const TASK_LIBRARY = [
   { key: 'lib_waterPlant', icon: '🪴', points: 5, min: 3, max: 9, alias: /regar|planta/ },
   { key: 'lib_feedPet', icon: '🐶', points: 10, min: 5, max: 30, alias: /bichinho|cachorro|gato|pet/ },
   { key: 'lib_sortSocks', icon: '🧦', points: 10, min: 5, max: 7, alias: /meia/ },
-  { key: 'lib_sweep', icon: '🧹', points: 15, min: 5, max: 30, days: [1, 3, 5], alias: /varrer/ },
-  { key: 'lib_mop', icon: '🫧', points: 15, min: 5, max: 30, days: [2, 4, 6], alias: /\bmop\b|pano no ch[aã]o/ },
+  { key: 'lib_sweep', icon: '🧹', points: 20, min: 5, max: 30, days: [1, 3, 5], alias: /varrer/ },
+  { key: 'lib_mop', icon: '🫧', points: 20, min: 5, max: 30, days: [2, 4, 6], alias: /\bmop\b|pano no ch[aã]o/ },
   { key: 'lib_hangLaundry', icon: '👚', points: 15, min: 7, max: 30, alias: /estender|varal|recolher/ },
   { key: 'lib_trashSmall', icon: '🗑️', points: 10, min: 7, max: 12, alias: /lixo do banheiro/ },
   { key: 'lib_vacuum', icon: '🧹', points: 25, min: 10, max: 30, alias: /aspirar/ },
   // estudos e família
   { key: 'lib_read10', icon: '📖', points: 10, min: 3, max: 6, alias: /\bler\b|leitura|livro por/ },
-  { key: 'taskRead15', icon: '📚', points: 20, min: 7, max: 12, existing: true, alias: /\bler\b|leitura/ },
+  { key: 'taskRead15', icon: '📚', points: 15, min: 7, max: 12, existing: true, alias: /\bler\b|leitura/ },
   { key: 'lib_homework', icon: '✏️', points: 20, min: 6, max: 14, alias: /li[cç][aã]o|dever de casa/ },
   { key: 'lib_study30', icon: '📘', points: 25, min: 10, max: 30, alias: /estudar/ },
   { key: 'lib_helpSibling', icon: '🤝', points: 15, min: 7, max: 30, alias: /irm[aã]o/ }
@@ -4826,8 +5048,8 @@ function weekData(c, from, to) {
   const events = hist.filter(h => h.type !== 'task').sort((a, b) => a.date.localeCompare(b.date));
   const test = S.english.tests.find(x => x.childId === c.id && inRange(x.date, from, to));
   // aproveitamento: tarefas fixas feitas / previstas até hoje (ou a semana toda, se já passou)
-  const elapsed = Math.max(0, Math.min(7, Math.floor((startOfDay(new Date()).getTime() - from.getTime()) / 864e5) + 1));
-  const expected = elapsed ? expectedBetween(c, from, elapsed) : 0;
+  const elapsed = Math.max(0, Math.min(7, Math.round((startOfDay(new Date()).getTime() - startOfDay(from).getTime()) / 864e5) + 1));
+  const expected = elapsed ? expectedBetween(c, startOfDay(from), elapsed) : 0;
   const regular = tasks.filter(h => { const task = taskById(h.taskId); return task && task.frequency !== 'oneOff'; }).length;
   const rate = expected ? Math.min(100, Math.round(regular / expected * 100)) : 0;
   return { hist, earned, lost, spent, tasks, piggy, english, medals, days, events, test, balance: earned - lost, expected, regular, rate };
@@ -4996,6 +5218,147 @@ Object.assign(ACTIONS, {
   },
   'pr-test': el => { ui.enChild = el.dataset.id; Modal.close('printModal'); ACTIONS['en-print'](); },
   'pr-screen': () => { Modal.close('printModal'); document.body.classList.remove('print-mode'); setTimeout(() => window.print(), 80); }
+});
+
+/* =====================================================================
+   Quadro de tarefas no app: a mesma grade do papel (tarefa × dia),
+   mas dá para marcar, desfazer, mudar pontos, editar e imprimir daqui.
+   ===================================================================== */
+
+function qChild() {
+  const kid = activeChild(); if (kid) return kid;
+  if (!childById(ui.qChild)) ui.qChild = S.children[0].id;
+  return childById(ui.qChild);
+}
+/** Situação de uma tarefa num dia do quadro. */
+function qCell(task, c, d, weekDone) {
+  const k = dayKey(d), today = dayKey();
+  const entry = S.history.find(h => h.type === 'task' && h.childId === c.id && String(h.taskId) === String(task.id) && dayKey(h.date) === k);
+  if (entry) return { state: 'done', entry };
+  const pend = S.approvals.find(a => a.status === 'pending' && a.kind === 'task' && a.childId === c.id && String(a.taskId) === String(task.id) && dayKey(a.submittedAt) === k);
+  if (pend) return { state: 'pending' };
+  if (task.frequency === 'daily' && !scheduledOn(task, d)) return { state: 'off' };
+  if (task.frequency === 'weekly' && weekDone) return { state: 'rest' };
+  if (k > today) return { state: 'future' };
+  return { state: k === today ? 'today' : 'past' };
+}
+/** Pontos máximos que a criança pode ganhar numa semana com as tarefas fixas. */
+function weeklyPotential(c, pointsOf = x => x.points) {
+  return tasksForChild(c).reduce((s, x) => s + (x.frequency === 'daily' ? (x.days.length || 7) : x.frequency === 'weekly' ? 1 : 0) * pointsOf(x), 0);
+}
+
+const QUADRO_SECTION = {
+  id: 'quadro', icon: '📋', nav: 'navChart', tab: 'tabChart', child: true,
+  build: () => `<div id="qPicker"></div><div id="qBody"></div>`,
+  update() {
+    const c = qChild(), parent = !isChildMode();
+    ui.qWeek = ui.qWeek || 0;
+    const { from, to } = weekBounds(ui.qWeek), days = [...Array(7)].map((_, i) => addDays(from, i)), names = weekdayNames(true);
+    $('#qPicker').innerHTML = parent ? childPicker(c.id, 'q-child') : '';
+    const list = chartTasks(c), fixed = list.filter(x => x.frequency !== 'oneOff'), extra = list.filter(x => x.frequency === 'oneOff');
+    const w = weekData(c, from, to), today = dayKey();
+    const row = task => {
+      const weekDone = task.frequency === 'weekly' && S.history.some(h => h.type === 'task' && h.childId === c.id && String(h.taskId) === String(task.id) && inRange(h.date, from, to));
+      const cells = days.map(d => {
+        const s = qCell(task, c, d, weekDone), k = dayKey(d);
+        if (s.state === 'done') return `<td class="q-ok">${parent ? `<button type="button" class="q-btn done" data-act="q-undo" data-id="${esc(s.entry.id)}" title="${esc(t('undo'))}">✔</button>` : '<span class="q-btn done">✔</span>'}</td>`;
+        if (s.state === 'pending') return `<td><span class="q-btn wait" title="${esc(t('awaitingApproval'))}">⏳</span></td>`;
+        if (s.state === 'off') return '<td class="q-off"></td>';
+        if (s.state === 'rest') return '<td class="q-rest">·</td>';
+        if (s.state === 'future') return '<td><span class="q-btn fut"></span></td>';
+        if (s.state === 'today') return `<td class="q-today"><button type="button" class="q-btn open" data-act="q-mark" data-id="${esc(task.id)}" aria-label="${esc(t('markDone'))}"></button></td>`;
+        return parent ? `<td><button type="button" class="q-btn past" data-act="q-mark-past" data-id="${esc(task.id)}" data-day="${k}" title="${esc(t('qMarkPast'))}">○</button></td>` : '<td><span class="q-btn miss">○</span></td>';
+      }).join('');
+      const ptsCell = parent ? `<td class="q-pts"><input type="number" min="1" max="999" inputmode="numeric" value="${task.points}" data-change="q-pts" data-id="${esc(task.id)}" aria-label="${esc(t('points'))}"></td>` : `<td class="q-pts"><b>+${task.points}</b></td>`;
+      const sub = task.frequency === 'weekly' ? t('prOnceWeek') : task.days.length ? daysLabel(task) : (task.time ? '⏰ ' + task.time : '');
+      return `<tr><th class="q-task" scope="row">${parent ? `<button type="button" class="q-name" data-act="task-edit" data-id="${esc(task.id)}" title="${esc(t('edit'))}">` : '<span class="q-name">'}<span class="q-ico">${esc(task.icon)}</span><span><b>${esc(taskName(task))}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span>${parent ? ' <i class="q-pen">✏️</i></button>' : '</span>'}</th>${ptsCell}${cells}</tr>`;
+    };
+    const head = `<tr><th class="q-task">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th class="${dayKey(d) === today ? 'q-th-today' : ''}">${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr>`;
+    const sums = `<tr class="q-sum"><th class="q-task">⭐ ${esc(t('prDayPoints'))}</th><td></td>${w.days.map(d => `<td>${d.pts ? (d.pts > 0 ? '+' : '') + d.pts : '·'}</td>`).join('')}</tr>`;
+    const extras = extra.length ? `<div class="q-extras"><h3>➕ ${esc(t('prChartExtras'))}</h3><div class="list">${extra.map(x => { const n = w.tasks.filter(h => String(h.taskId) === String(x.id)).length; return `<div class="item"><div class="meta"><span class="ico">${esc(x.icon)}</span><div><strong>${esc(taskName(x))}</strong><div class="sub">+${pts(x.points)}${n ? ` · ${t('qTimesWeek', { n })}` : ''}</div></div></div><div class="right">${ui.qWeek === 0 ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-mark" data-id="${esc(x.id)}">✔ ${t('markDone')}</button>` : ''}${parent ? `<button type="button" class="icon-btn" data-act="task-edit" data-id="${esc(x.id)}" aria-label="${esc(t('edit'))}">✏️</button>` : ''}</div></div>`; }).join('')}</div></div>` : '';
+    const goal = englishGoal(c), pot = weeklyPotential(c);
+    const rewards = S.rewards.slice().sort((a, b) => a.cost - b.cost).slice(0, 6);
+    $('#qBody').innerHTML = `<div class="card q-card" style="--c:${c.accentColor}">
+      <div class="q-hero">${avatar(c)}<div class="q-hero-txt"><small>${esc(t('prChartKicker'))}</small><h2>${esc(c.name)}</h2><span>${esc(weekLabel(from, to))}</span></div>
+        <div class="q-week"><button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="-1" aria-label="‹">←</button>${ui.qWeek ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="0">${esc(t('prThisWeek'))}</button>` : ''}<button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="1" aria-label="›">→</button></div></div>
+      <div class="q-stats"><div><b>${w.tasks.length}</b><span>${esc(t('prTasks'))}</span></div><div><b class="pos">+${w.earned}</b><span>${esc(t('prEarned'))}</span></div><div><b>${w.expected ? w.rate + '%' : '—'}</b><span>${esc(t('prOfPlanned'))}</span></div><div><b>${pot}</b><span>${esc(t('qPotential'))}</span></div></div>
+      <div class="q-tools">
+        ${parent ? `<button type="button" class="btn btn-primary btn-sm" data-act="q-new">+ ${t('newTask')}</button><button type="button" class="btn btn-soft btn-sm" data-act="lib-open" data-id="${esc(c.id)}">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft btn-sm" data-act="tv-open">💰 ${t('valTitleShort')}</button>` : ''}
+        <button type="button" class="btn btn-soft btn-sm" data-act="q-print">🖨️ ${t('qPrintThis')}</button>${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-print-all">🖨️ ${t('qPrintAll')}</button>` : ''}
+      </div>
+      ${fixed.length ? `<div class="q-wrap"><table class="q-grid"><thead>${head}</thead><tbody>${fixed.map(row).join('')}${sums}</tbody></table></div>` : emptyBox(t('noTasksForChild'))}
+      <p class="hint">${parent ? t('qHintParent') : t('qHintChild')}</p>
+      ${extras}
+      <div class="q-foot">
+        <div class="q-en"><b>🇬🇧 ${esc(t('navEnglish'))}</b><span>${w.english} / ${goal} min</span><div class="progress"><span style="width:${goal ? Math.min(100, Math.round(w.english / goal * 100)) : 0}%"></span></div></div>
+        ${rewards.length ? `<div class="q-rw"><b>🎁 ${esc(t('prChartRewards'))}</b><div class="q-rw-list">${rewards.map(r => `<span class="${c.points >= r.cost ? 'ok' : ''}">${esc(r.icon)} ${esc(rewardName(r))} <i>${r.cost} ⭐</i></span>`).join('')}</div></div>` : ''}
+      </div>
+    </div>`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'tarefas') + 1, 0, QUADRO_SECTION);
+
+/* ---------- valores de cada tarefa ---------- */
+/** Pontos sugeridos para uma tarefa (pela lista de sugestões), ou null se não houver. */
+function suggestedPoints(task) {
+  const byKey = task.nameKey && libItem(task.nameKey); if (byKey) return byKey.points;
+  const n = normName(taskName(task));
+  const sug = TASK_LIBRARY.find(s => s.alias && new RegExp(normName(s.alias.source)).test(n));
+  return sug ? sug.points : null;
+}
+function openTaskValues() {
+  Modal.close('libModal');
+  const order = { daily: 0, weekly: 1, oneOff: 2 };
+  const tasks = S.tasks.slice().sort((a, b) => order[a.frequency] - order[b.frequency] || taskName(a).localeCompare(taskName(b)));
+  Modal.open({
+    id: 'tvModal', wide: true, title: '💰 ' + t('valTitle'),
+    body: `<p class="hint" style="margin-top:0">${t('valIntro', { value: money(S.defaultPointValue * 10) })}</p>
+      <div class="val-scale">${[[5, 'valLvl5'], [10, 'valLvl10'], [15, 'valLvl15'], [20, 'valLvl20'], [25, 'valLvl25']].map(([p, k]) => `<span><b>${p}</b> ${esc(t(k))}</span>`).join('')}</div>
+      <div class="list">${tasks.map(x => { const sug = suggestedPoints(x), v = sug || x.points; return `<div class="item val-row"><div class="meta"><span class="ico">${esc(x.icon)}</span><div><strong>${esc(taskName(x))}</strong><div class="sub">${esc(freqName(x))}${x.frequency === 'daily' ? ' · ' + esc(daysLabel(x)) : ''}${sug && sug !== x.points ? ` · <s>${t('valBefore', { n: x.points })}</s>` : ''}${sug ? '' : ` · ${t('valNoSug')}`}</div></div></div><div class="right val-input"><input type="number" min="1" max="999" inputmode="numeric" value="${v}" data-vid="${esc(x.id)}" data-change="tv-preview"><span>${esc(t('pts'))}</span><small data-vmoney="${esc(x.id)}"></small></div></div>`; }).join('')}</div>
+      <div class="val-week" id="valWeek"></div>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="tv-save">${t('save')}</button>`
+  });
+  tvPreview();
+}
+function tvInputs() { const m = {}; $$('#tvModal [data-vid]').forEach(i => { m[i.dataset.vid] = Math.max(1, int(i.value, 1)); }); return m; }
+function tvPreview() {
+  const m = tvInputs();
+  Object.entries(m).forEach(([id, p]) => { const task = taskById(id), el = $(`[data-vmoney="${CSS.escape(id)}"]`); if (task && el) el.textContent = money(p * taskCashPerPoint(task) + Number(task.fixedCash || 0)); });
+  const box = $('#valWeek'); if (!box) return;
+  box.innerHTML = `<h4>${t('valWeekTitle')}</h4>` + S.children.map(c => { const p = weeklyPotential(c, x => m[x.id] ?? x.points); return `<div class="val-kid" style="--c:${c.accentColor}">${avatar(c, 'sm')}<span>${esc(c.name)}</span><b>${p} ${esc(t('pts'))}</b><small>≈ ${money(p * S.defaultPointValue)}</small></div>`; }).join('') + `<p class="hint">${t('valWeekHint')}</p>`;
+}
+
+Object.assign(ACTIONS, {
+  'q-child': el => { ui.qChild = el.dataset.id; render(); },
+  'q-week': el => { const v = int(el.dataset.id, 0); ui.qWeek = v === 0 ? 0 : (ui.qWeek || 0) + v; render(); },
+  'q-new': () => openTaskModal(null, qChild().id),
+  'q-mark': el => { const c = qChild(), task = taskById(el.dataset.id); if (!c || !task) return; afterComplete(completeTask(c.id, task.id, ''), c, task); },
+  'q-mark-past': el => {
+    if (isChildMode()) return;
+    const c = qChild(), task = taskById(el.dataset.id); if (!c || !task) return;
+    const d = keyToDate(el.dataset.day); d.setHours(12, 0, 0, 0);
+    const r = grantTask(c, task, '', d.toISOString()); commit();
+    const hid = r.entry.id;
+    toast(t('qMarkedPast', { name: c.name, task: taskName(task), date: fmtDate(d.toISOString()) }), 'success', { label: t('undo'), run: () => { undoHistory(hid); commit(); toast(t('undone')); } });
+  },
+  'q-undo': async el => {
+    if (isChildMode()) return;
+    const h = S.history.find(x => x.id === el.dataset.id); if (!h) return;
+    if (!(await askConfirm(t('qUndoConfirm', { task: historyText(h), date: fmtDate(h.date) }), { okLabel: t('undo') }))) return;
+    undoHistory(h.id); commit(); toast(t('undone'));
+  },
+  'q-print': () => { const c = qChild(); const { from, to } = weekBounds(ui.qWeek || 0); printDocument(taskChartHtml(c, from, to), t('prOptChart', { name: c.name })); },
+  'q-print-all': () => { const { from, to } = weekBounds(ui.qWeek || 0); printDocument(familyTasksHtml() + S.children.map(c => taskChartHtml(c, from, to)).join(''), t('prOptChartAll')); },
+  'tv-open': () => openTaskValues(),
+  'tv-save': () => {
+    const m = tvInputs(); let n = 0;
+    Object.entries(m).forEach(([id, p]) => { const task = taskById(id); if (task && task.points !== p) { task.points = p; n++; } });
+    Modal.close('tvModal'); if (n) commit(); toast(t('valSaved', { n }), 'success');
+  }
+});
+Object.assign(CHANGES, {
+  'q-pts': el => { const task = taskById(el.dataset.id); const p = int(el.value, 0); if (!task || p < 1) { el.value = task ? task.points : 1; return; } if (task.points !== p) { task.points = p; commit(); toast(t('qPtsSaved', { task: taskName(task), n: p }), 'success'); } },
+  'tv-preview': () => tvPreview()
 });
 
 </script>
