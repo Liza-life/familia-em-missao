@@ -956,13 +956,66 @@ span.q-name{cursor:default}
 .pr-moodweek small{font-size:9px;color:#666}
 .al-print .al-grid{grid-template-columns:repeat(12,1fr)!important}.al-print .al-page{margin-bottom:8px}.al-print .al-slot.has span{font-size:20px}
 .rt-tap{padding-bottom:40px}.rt-say{bottom:8px;right:50%;transform:translateX(50%)}
+/* ===== Rumo ao futuro ===== */
+.fu-kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.fu-kid{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:14px;border:1.5px solid var(--line);cursor:pointer;background:#fff}
+.fu-kid.on{border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 20%,transparent)}
+.fu-kid div{flex:1;display:flex;flex-direction:column}
+.fu-kid small{color:var(--muted);font-size:11.5px}
+.fu-kid span{font-size:12px;font-weight:800;white-space:nowrap}
+.fu-card{border-top:5px solid var(--c)}
+.fu-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fu-head h2{margin:0}
+.fu-head span{color:var(--muted);font-size:13px}
+.fu-head>div:nth-child(2){flex:1}
+.fu-grade{min-width:180px}
+.fu-count{margin:12px 0;padding:12px 14px;border-radius:14px;background:color-mix(in srgb,var(--c) 10%,#fff);font-size:15px}
+.fu-line{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.fu-y{flex:1 0 82px;border-radius:12px;padding:8px;background:#f4f4f8;text-align:center;display:flex;flex-direction:column;gap:2px;position:relative}
+.fu-y b{font-size:15px}.fu-y small{font-size:11px;color:var(--muted)}
+.fu-y em{font-style:normal;font-size:11px;font-weight:800}
+.fu-y.apply{background:#fef3c7;border:2px solid #f59e0b}
+.fu-y.entry{background:#dcfce7;border:2px solid #16a34a}
+.fu-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fu-num{border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.fu-num span{font-size:12.5px;color:var(--muted);font-weight:700}
+.fu-num b{float:right;font-size:13px}
+.fu-num .progress{margin-top:8px}
+.fu-pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.fu-pillar{border:1.5px solid var(--line);border-radius:16px;padding:10px 12px;background:#fff}
+.fu-pillar.hi{border-color:#38bdf8;background:#f0f9ff}
+.fu-ph{display:flex;align-items:center;gap:8px}
+.fu-ph span{font-size:22px}.fu-ph b{flex:1}.fu-ph small{font-weight:800;color:var(--muted)}
+.fu-pillar .progress{margin:6px 0 8px}
+.fu-goal{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;padding:4px 0;font-weight:500;margin:0;cursor:pointer}
+.fu-goal input{width:18px;height:18px;flex:0 0 auto;margin:1px 0 0}
+.fu-goal.ok span{color:#0f6b45;font-weight:700}
+.fu-tip{font-size:12px;color:#7c5a00;background:#fffbeb;border-radius:10px;padding:6px 8px;margin:8px 0 0}
+.fu-abroad ul{margin:6px 0 0;padding-left:20px}
+/* simulado impresso */
+.sim .ws-sec{padding:7px 12px}
+.sim-w{font-size:22px;letter-spacing:3px;flex:1}
+.sim-w u{color:#2563eb;text-decoration:none;border-bottom:2px solid #2563eb}
+.sim-count{font-size:22px;flex:1;letter-spacing:1px}
+.sim-text{font-size:14.5px;line-height:1.6;background:#fafafa;border-left:4px solid #1d1d2b;padding:8px 12px;margin:4px 0 8px}
+.sim-q{margin:6px 0;font-size:13.5px}
+.sim-opts{display:flex;flex-wrap:wrap;gap:4px 18px;margin:3px 0 0 14px;font-size:13px}
+.sim-ok{border:2.5px solid #ef4444;border-radius:12px;padding:0 6px}
+.sim-pair{font-size:18px;font-weight:700}
+.sim-prob{margin:6px 0;font-size:14px}
+.sim-work{height:46px;border:1px dashed #ccc;border-radius:8px;margin:4px 0}
+.sim-ans{font-size:13px;text-align:right}
+.sim-theme{font-size:15px;font-weight:800;margin:4px 0 6px}
+.sim-draw{height:150px;border:2px dashed #bbb;border-radius:12px;margin-bottom:6px}
+.sim-lines span{height:26px}
+.sim .ws-sec{break-inside:auto;page-break-inside:auto}.sim-prob,.sim-q,.sim .ws-row{break-inside:avoid;page-break-inside:avoid}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v82 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v83 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -4643,13 +4696,948 @@ const EXTRAS_TEXT = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], EXTRAS_TEXT[l]));
 
+/* Textos da v83: Rumo ao futuro. */
+const FUTURE_TEXT = {
+"pt": {
+"navFuture": "Rumo ao futuro",
+"title_futuro": "Rumo ao futuro",
+"sub_futuro": "Preparar desde pequeno para uma escola com prova de seleção ou para viver em outro país.",
+"fuGoalTitle": "O objetivo da família",
+"fuSchool": "Escola que vocês querem",
+"fuEntry": "Entrada na escola",
+"fuEntryHigh": "Ensino Médio (1ª série)",
+"fuAbroad": "Preparar também para, talvez, morar em outro país",
+"fuThisYear": "é este ano",
+"fuTopHint": "A inscrição costuma ser no meio do ano em que a criança está no {grade}. Confira sempre as datas no site da escola.",
+"fuGradeBaby": "Berçário",
+"fuGradeMaternal": "Maternal",
+"fuGradePre1": "Pré I",
+"fuGradePre2": "Pré II",
+"fuGradeN": "{n}º ano",
+"fuNow": "Agora: {grade} · {age} anos",
+"fuGradeNow": "Ano escolar agora",
+"fuDone": "Já chegou na série de entrada.",
+"fuApplyNow": "Este é o ano da inscrição! Fique de olho no site da escola.",
+"fuCountdown": "Faltam {n} ano(s): inscrição em {year} para entrar em {entry} na {school}.",
+"fuTheSchool": "escola",
+"fuApply": "inscrição",
+"fuEnter": "entrada",
+"fuMonthTitle": "Este mês (vem do que vocês já registram)",
+"fuPillarsTitle": "O que trabalhar agora — fase {stage}",
+"fuPillarsHint": "Marque o que a criança já consegue fazer. As dicas mostram como treinar em casa, brincando.",
+"fuStage_s1": "Pequenos (até 4 anos)",
+"fuStage_s2": "5 e 6 anos",
+"fuStage_s3": "7 e 8 anos",
+"fuStage_s4": "9 anos ou mais",
+"fuP_read": "Leitura",
+"fuP_write": "Escrita",
+"fuP_math": "Matemática",
+"fuP_logic": "Raciocínio lógico",
+"fuP_talk": "Comunicação e convivência",
+"fuP_auto": "Autonomia e organização",
+"fuP_world": "Inglês e mundo",
+"fg_r1a": "Ouve uma história inteira com atenção",
+"fg_r1b": "Aponta figuras e diz o nome delas",
+"fg_r1c": "Conta com as próprias palavras o que aconteceu na história",
+"fg_r2a": "Conhece todas as letras",
+"fg_r2b": "Lê palavras simples",
+"fg_r2c": "Reconta uma história com começo, meio e fim",
+"fg_r3a": "Lê sozinho livros curtos",
+"fg_r3b": "Responde perguntas sobre o que leu",
+"fg_r3c": "Lê em voz alta com entonação",
+"fg_r4a": "Lê livros com capítulos",
+"fg_r4b": "Encontra informações no texto",
+"fg_r4c": "Dá opinião sobre o que leu e explica por quê",
+"fg_w1a": "Segura o lápis e desenha com intenção",
+"fg_w1b": "Faz traços, bolinhas e risquinhos",
+"fg_w2a": "Escreve o próprio nome",
+"fg_w2b": "Escreve palavras simples sozinho",
+"fg_w2c": "Copia frases curtas",
+"fg_w3a": "Escreve frases com letra maiúscula e ponto final",
+"fg_w3b": "Escreve um bilhete ou cartinha",
+"fg_w3c": "Conta um acontecimento por escrito",
+"fg_w4a": "Escreve um texto com começo, meio e fim",
+"fg_w4b": "Separa o texto em parágrafos",
+"fg_w4c": "Relê e corrige o próprio texto",
+"fg_m1a": "Conta até 10",
+"fg_m1b": "Reconhece círculo, quadrado e triângulo",
+"fg_m1c": "Sabe o que é mais e o que é menos",
+"fg_m2a": "Conta até 50",
+"fg_m2b": "Soma e subtrai usando objetos",
+"fg_m2c": "Reconhece os números até 100",
+"fg_m3a": "Faz contas de cabeça até 20",
+"fg_m3b": "Sabe a tabuada do 2, do 5 e do 10",
+"fg_m3c": "Resolve problemas de historinha",
+"fg_m4a": "Sabe a tabuada até 10",
+"fg_m4b": "Faz multiplicação e divisão",
+"fg_m4c": "Resolve problemas com mais de uma etapa",
+"fg_l1a": "Monta quebra-cabeças de 12 peças ou mais",
+"fg_l1b": "Encaixa formas e empilha blocos",
+"fg_l2a": "Descobre o que vem depois numa sequência",
+"fg_l2b": "Joga jogos de regra (dominó, memória)",
+"fg_l3a": "Resolve sudoku 4×4 ou 6×6",
+"fg_l3b": "Sabe mexer as peças do xadrez",
+"fg_l3c": "Explica como chegou numa resposta",
+"fg_l4a": "Resolve desafios de lógica com várias etapas",
+"fg_l4b": "Joga xadrez pensando nas próximas jogadas",
+"fg_l4c": "Treina com provas da OBMEP Mirim ou do Canguru",
+"fg_t1a": "Fala o próprio nome e a idade",
+"fg_t1b": "Espera a vez de falar e de brincar",
+"fg_t2a": "Se apresenta para alguém novo",
+"fg_t2b": "Pede \"por favor\" e agradece",
+"fg_t2c": "Conta como foi o dia",
+"fg_t3a": "Explica uma ideia para os outros",
+"fg_t3b": "Trabalha em grupo e divide as coisas",
+"fg_t3c": "Sabe perder e ganhar com educação",
+"fg_t4a": "Apresenta um assunto para a família",
+"fg_t4b": "Dá opinião com argumentos",
+"fg_t4c": "Resolve conflitos conversando",
+"fg_a1a": "Guarda os brinquedos",
+"fg_a1b": "Come e se veste com pouca ajuda",
+"fg_a2a": "Arruma a própria mochila",
+"fg_a2b": "Segue a rotina da manhã e da noite",
+"fg_a3a": "Faz a lição sozinho na maior parte do tempo",
+"fg_a3b": "Lembra dos próprios compromissos",
+"fg_a4a": "Organiza a semana de estudos",
+"fg_a4b": "Cuida do próprio dinheiro nos potes",
+"fg_a4c": "Pede ajuda quando precisa",
+"fg_g1a": "Canta músicas em inglês",
+"fg_g1b": "Sabe as cores em inglês",
+"fg_g2a": "Conhece palavras básicas em inglês",
+"fg_g2b": "Sabe o nome da cidade e do país onde mora",
+"fg_g2c": "Reconhece o Brasil no mapa",
+"fg_g3a": "Fala frases simples em inglês",
+"fg_g3b": "Conhece os continentes e alguns países",
+"fg_g3c": "Sabe que outros lugares têm outras línguas e costumes",
+"fg_g4a": "Mantém uma conversa simples em inglês",
+"fg_g4b": "Lê textos curtos em inglês",
+"fg_g4c": "Tem curiosidade por outras culturas e pergunta sobre elas",
+"fuTip_read_s1": "Leia todo dia antes de dormir e pergunte: \"o que você acha que vai acontecer?\"",
+"fuTip_read_s2": "Leia junto apontando as palavras com o dedo; peça para ele recontar a história.",
+"fuTip_read_s3": "10 a 15 minutos de leitura sozinho por dia, e uma conversa rápida sobre o livro.",
+"fuTip_read_s4": "Livros com capítulos; peça um resumo e a opinião dele. Vale gibi e jornal infantil.",
+"fuTip_write_s1": "Massinha, giz e desenho livre fortalecem a mão para escrever depois.",
+"fuTip_write_s2": "Escrever a lista do mercado juntos, o nome dos irmãos, bilhetinhos com desenho.",
+"fuTip_write_s3": "Uma cartinha por semana para alguém da família ou um \"diário\" de 3 frases.",
+"fuTip_write_s4": "Uma redação curta por semana; o simulado aqui embaixo traz temas como os da prova.",
+"fuTip_math_s1": "Contar degraus, pratos, carros na rua. Separar brinquedos por cor e tamanho.",
+"fuTip_math_s2": "Brincar de mercadinho com moedas e somar com objetos do dia a dia.",
+"fuTip_math_s3": "Cálculo mental no carro (\"quanto é 8 + 7?\") e problemas com o nome dos irmãos.",
+"fuTip_math_s4": "Tabuada em forma de jogo, problemas de troco e horas. Provas antigas da OBMEP Mirim.",
+"fuTip_logic_s1": "Quebra-cabeça, encaixe e jogo da memória (tem no app em Jogos).",
+"fuTip_logic_s2": "Sequências, dominó, Lince e Cara a Cara. Sudoku de frutas no app.",
+"fuTip_logic_s3": "Xadrez e damas com vocês; peça para ele explicar \"por que fez essa jogada\".",
+"fuTip_logic_s4": "Desafios de lógica, sudoku 6×6 e 9×9, xadrez com estratégia, cubo mágico.",
+"fuTip_talk_s1": "Converse muito, nomeie sentimentos e incentive a pedir as coisas com palavras.",
+"fuTip_talk_s2": "Treinar a apresentação: \"Oi, eu sou o…, tenho … anos e gosto de…\".",
+"fuTip_talk_s3": "No jantar, cada um conta uma coisa boa do dia e dá uma opinião.",
+"fuTip_talk_s4": "Pedir que ele explique um assunto para a família (é parecido com a dinâmica e a entrevista).",
+"fuTip_auto_s1": "Deixar fazer sozinho, mesmo que demore: guardar, calçar, levar o prato.",
+"fuTip_auto_s2": "A rotina com figuras e a mochila arrumada na noite anterior.",
+"fuTip_auto_s3": "Horário fixo de lição e o quadro de tarefas como responsabilidade dele.",
+"fuTip_auto_s4": "Ele mesmo planeja a semana de estudos e cuida dos três potes de dinheiro.",
+"fuTip_world_s1": "Músicas e desenhos em inglês, e falar cores e animais em inglês brincando.",
+"fuTip_world_s2": "Um mapa-múndi na parede; mostrar onde fica o Brasil e de onde vêm as coisas.",
+"fuTip_world_s3": "Inglês um pouco todo dia (a seção Inglês conta o tempo) e conhecer um país por mês.",
+"fuTip_world_s4": "Conversas curtas em inglês em casa, séries com legenda e pesquisa sobre outros países.",
+"fuSimTitle": "Simulado para imprimir",
+"fuSimHint": "Português, matemática e redação no nível da idade, parecido com provas de seleção. Cada vez sai um simulado diferente, e o gabarito é impresso separado.",
+"fuSimBtn": "Imprimir simulado de {name}",
+"fuSimKey": "Gabarito do último simulado",
+"fuOpenKey": "Resposta pessoal: veja se ele respondeu a pergunta com uma frase completa.",
+"fuEssayKey": "Avalie: ficou no tema? Tem começo, meio e fim? Letra legível, maiúscula e ponto? Ideias próprias?",
+"fuAbroadTitle": "Para o caso de morarem em outro país",
+"fuAb1": "Inglês todo dia, nem que sejam 10 minutos: é o que mais facilita a adaptação.",
+"fuAb2": "Mapa-múndi em casa e \"um país por mês\": comida, bandeira, língua e costumes.",
+"fuAb3": "Autonomia (se vestir, se organizar, pedir ajuda) faz muita diferença numa escola nova.",
+"fuAb4": "Manter o português com leitura e histórias em casa, para não perder a língua da família.",
+"fuAb5": "Guardar boletins, vacinas e documentos escolares organizados: escolas de fora costumam pedir."
+},
+"en": {
+"navFuture": "Toward the future",
+"title_futuro": "Toward the future",
+"sub_futuro": "Prepare from an early age for a school with an entrance exam or for living in another country.",
+"fuGoalTitle": "The family's goal",
+"fuSchool": "School you want",
+"fuEntry": "School entry",
+"fuEntryHigh": "High school (1st year)",
+"fuAbroad": "Also prepare to maybe live in another country",
+"fuThisYear": "is this year",
+"fuTopHint": "Registration is usually in the middle of the year the child is in {grade}. Always check dates on the school's website.",
+"fuGradeBaby": "Nursery",
+"fuGradeMaternal": "Toddler class",
+"fuGradePre1": "Pre-K 1",
+"fuGradePre2": "Pre-K 2",
+"fuGradeN": "Grade {n}",
+"fuNow": "Now: {grade} · {age} years old",
+"fuGradeNow": "Current school year",
+"fuDone": "Already reached the entry grade.",
+"fuApplyNow": "This is the registration year! Keep an eye on the school's website.",
+"fuCountdown": "{n} year(s) to go: registration in {year} to start in {entry} at {school}.",
+"fuTheSchool": "the school",
+"fuApply": "registration",
+"fuEnter": "entry",
+"fuMonthTitle": "This month (from what you already log)",
+"fuPillarsTitle": "What to work on now — stage {stage}",
+"fuPillarsHint": "Tick what the child can already do. The tips show how to practice at home through play.",
+"fuStage_s1": "Little ones (up to 4)",
+"fuStage_s2": "Ages 5 and 6",
+"fuStage_s3": "Ages 7 and 8",
+"fuStage_s4": "Age 9 and up",
+"fuP_read": "Reading",
+"fuP_write": "Writing",
+"fuP_math": "Math",
+"fuP_logic": "Logical thinking",
+"fuP_talk": "Communication and getting along",
+"fuP_auto": "Independence and organization",
+"fuP_world": "English and the world",
+"fg_r1a": "Listens to a whole story with attention",
+"fg_r1b": "Points at pictures and names them",
+"fg_r1c": "Retells in their own words what happened in the story",
+"fg_r2a": "Knows all the letters",
+"fg_r2b": "Reads simple words",
+"fg_r2c": "Retells a story with a beginning, middle and end",
+"fg_r3a": "Reads short books alone",
+"fg_r3b": "Answers questions about what they read",
+"fg_r3c": "Reads aloud with expression",
+"fg_r4a": "Reads chapter books",
+"fg_r4b": "Finds information in a text",
+"fg_r4c": "Gives an opinion about what they read and explains why",
+"fg_w1a": "Holds a pencil and draws on purpose",
+"fg_w1b": "Makes lines, circles and scribbles",
+"fg_w2a": "Writes their own name",
+"fg_w2b": "Writes simple words alone",
+"fg_w2c": "Copies short sentences",
+"fg_w3a": "Writes sentences with a capital letter and period",
+"fg_w3b": "Writes a note or a little letter",
+"fg_w3c": "Writes about something that happened",
+"fg_w4a": "Writes a text with a beginning, middle and end",
+"fg_w4b": "Splits the text into paragraphs",
+"fg_w4c": "Rereads and corrects their own text",
+"fg_m1a": "Counts to 10",
+"fg_m1b": "Recognizes circle, square and triangle",
+"fg_m1c": "Knows more and less",
+"fg_m2a": "Counts to 50",
+"fg_m2b": "Adds and subtracts using objects",
+"fg_m2c": "Recognizes numbers up to 100",
+"fg_m3a": "Does mental math up to 20",
+"fg_m3b": "Knows the 2, 5 and 10 times tables",
+"fg_m3c": "Solves word problems",
+"fg_m4a": "Knows times tables up to 10",
+"fg_m4b": "Does multiplication and division",
+"fg_m4c": "Solves multi-step problems",
+"fg_l1a": "Does puzzles of 12 pieces or more",
+"fg_l1b": "Fits shapes and stacks blocks",
+"fg_l2a": "Figures out what comes next in a sequence",
+"fg_l2b": "Plays rule games (dominoes, memory)",
+"fg_l3a": "Solves 4×4 or 6×6 sudoku",
+"fg_l3b": "Knows how chess pieces move",
+"fg_l3c": "Explains how they got an answer",
+"fg_l4a": "Solves multi-step logic challenges",
+"fg_l4b": "Plays chess thinking ahead",
+"fg_l4c": "Practices with math olympiad tests (e.g. Kangaroo)",
+"fg_t1a": "Says their name and age",
+"fg_t1b": "Waits their turn to talk and play",
+"fg_t2a": "Introduces themselves to someone new",
+"fg_t2b": "Says \"please\" and \"thank you\"",
+"fg_t2c": "Tells how their day was",
+"fg_t3a": "Explains an idea to others",
+"fg_t3b": "Works in a group and shares",
+"fg_t3c": "Wins and loses politely",
+"fg_t4a": "Presents a topic to the family",
+"fg_t4b": "Gives opinions with reasons",
+"fg_t4c": "Solves conflicts by talking",
+"fg_a1a": "Puts toys away",
+"fg_a1b": "Eats and dresses with little help",
+"fg_a2a": "Packs their own backpack",
+"fg_a2b": "Follows the morning and evening routine",
+"fg_a3a": "Does homework alone most of the time",
+"fg_a3b": "Remembers their own commitments",
+"fg_a4a": "Organizes their study week",
+"fg_a4b": "Takes care of their own money in the jars",
+"fg_a4c": "Asks for help when needed",
+"fg_g1a": "Sings songs in English",
+"fg_g1b": "Knows the colors in English",
+"fg_g2a": "Knows basic words in English",
+"fg_g2b": "Knows the name of their city and country",
+"fg_g2c": "Finds Brazil on the map",
+"fg_g3a": "Says simple sentences in English",
+"fg_g3b": "Knows the continents and some countries",
+"fg_g3c": "Knows other places have other languages and customs",
+"fg_g4a": "Holds a simple conversation in English",
+"fg_g4b": "Reads short texts in English",
+"fg_g4c": "Is curious about other cultures and asks about them",
+"fuTip_read_s1": "Read every day before bed and ask: \"what do you think will happen?\"",
+"fuTip_read_s2": "Read together pointing at the words; ask them to retell the story.",
+"fuTip_read_s3": "10 to 15 minutes of reading alone a day, and a quick chat about the book.",
+"fuTip_read_s4": "Chapter books; ask for a summary and their opinion. Comics and kids' news count too.",
+"fuTip_write_s1": "Play-dough, chalk and free drawing strengthen the hand for writing later.",
+"fuTip_write_s2": "Write the grocery list together, siblings' names, little notes with drawings.",
+"fuTip_write_s3": "One little letter a week to a family member, or a 3-sentence \"diary\".",
+"fuTip_write_s4": "One short essay a week; the practice test below has topics like those on the exam.",
+"fuTip_math_s1": "Count steps, plates, cars on the street. Sort toys by color and size.",
+"fuTip_math_s2": "Play shop with coins and add up everyday objects.",
+"fuTip_math_s3": "Mental math in the car (\"what's 8 + 7?\") and problems using the siblings' names.",
+"fuTip_math_s4": "Times tables as a game, change and time problems. Old math olympiad tests.",
+"fuTip_logic_s1": "Puzzles, shape sorters and the memory game (in the app under Games).",
+"fuTip_logic_s2": "Sequences, dominoes, spot-it games and Guess Who. Fruit sudoku in the app.",
+"fuTip_logic_s3": "Chess and checkers with you; ask them to explain \"why that move\".",
+"fuTip_logic_s4": "Logic challenges, 6×6 and 9×9 sudoku, chess strategy, Rubik's cube.",
+"fuTip_talk_s1": "Talk a lot, name feelings and encourage asking for things with words.",
+"fuTip_talk_s2": "Practice the introduction: \"Hi, I'm…, I'm … years old and I like…\".",
+"fuTip_talk_s3": "At dinner, everyone shares one good thing from the day and an opinion.",
+"fuTip_talk_s4": "Ask them to explain a topic to the family (it's like the group activity and interview).",
+"fuTip_auto_s1": "Let them do it alone, even if it takes longer: put away, put on shoes, carry the plate.",
+"fuTip_auto_s2": "The picture routine and the backpack packed the night before.",
+"fuTip_auto_s3": "A fixed homework time and the task chart as their responsibility.",
+"fuTip_auto_s4": "They plan their study week and take care of the three money jars.",
+"fuTip_world_s1": "Songs and cartoons in English, and say colors and animals in English while playing.",
+"fuTip_world_s2": "A world map on the wall; show where Brazil is and where things come from.",
+"fuTip_world_s3": "A little English every day (the English section tracks time) and one country a month.",
+"fuTip_world_s4": "Short conversations in English at home, shows with subtitles and research on other countries.",
+"fuSimTitle": "Practice test to print",
+"fuSimHint": "Portuguese, math and writing at their age level, similar to entrance exams. A different test every time, and the answer key prints separately.",
+"fuSimBtn": "Print {name}'s practice test",
+"fuSimKey": "Answer key of the last test",
+"fuOpenKey": "Personal answer: check that they answered with a complete sentence.",
+"fuEssayKey": "Check: did they stay on topic? Beginning, middle and end? Neat handwriting, capitals and periods? Their own ideas?",
+"fuAbroadTitle": "In case you move to another country",
+"fuAb1": "English every day, even just 10 minutes: it makes adapting much easier.",
+"fuAb2": "A world map at home and \"one country a month\": food, flag, language and customs.",
+"fuAb3": "Independence (dressing, organizing, asking for help) makes a big difference at a new school.",
+"fuAb4": "Keep Portuguese alive with reading and stories at home, so they don't lose the family language.",
+"fuAb5": "Keep report cards, vaccine records and school documents organized: schools abroad usually ask for them."
+},
+"es": {
+"navFuture": "Rumbo al futuro",
+"title_futuro": "Rumbo al futuro",
+"sub_futuro": "Prepararse desde pequeños para una escuela con examen de admisión o para vivir en otro país.",
+"fuGoalTitle": "El objetivo de la familia",
+"fuSchool": "Escuela que quieren",
+"fuEntry": "Ingreso a la escuela",
+"fuEntryHigh": "Secundaria superior (1.º año)",
+"fuAbroad": "Prepararse también para, tal vez, vivir en otro país",
+"fuThisYear": "es este año",
+"fuTopHint": "La inscripción suele ser a mitad del año en que el niño está en {grade}. Confirma siempre las fechas en el sitio de la escuela.",
+"fuGradeBaby": "Guardería",
+"fuGradeMaternal": "Maternal",
+"fuGradePre1": "Preescolar I",
+"fuGradePre2": "Preescolar II",
+"fuGradeN": "{n}.º año",
+"fuNow": "Ahora: {grade} · {age} años",
+"fuGradeNow": "Año escolar actual",
+"fuDone": "Ya llegó al año de ingreso.",
+"fuApplyNow": "¡Este es el año de la inscripción! Atento al sitio de la escuela.",
+"fuCountdown": "Faltan {n} año(s): inscripción en {year} para entrar en {entry} en {school}.",
+"fuTheSchool": "la escuela",
+"fuApply": "inscripción",
+"fuEnter": "ingreso",
+"fuMonthTitle": "Este mes (de lo que ya registran)",
+"fuPillarsTitle": "Qué trabajar ahora — etapa {stage}",
+"fuPillarsHint": "Marca lo que el niño ya puede hacer. Los consejos muestran cómo practicar en casa jugando.",
+"fuStage_s1": "Pequeños (hasta 4 años)",
+"fuStage_s2": "5 y 6 años",
+"fuStage_s3": "7 y 8 años",
+"fuStage_s4": "9 años o más",
+"fuP_read": "Lectura",
+"fuP_write": "Escritura",
+"fuP_math": "Matemáticas",
+"fuP_logic": "Razonamiento lógico",
+"fuP_talk": "Comunicación y convivencia",
+"fuP_auto": "Autonomía y organización",
+"fuP_world": "Inglés y el mundo",
+"fg_r1a": "Escucha un cuento completo con atención",
+"fg_r1b": "Señala dibujos y dice su nombre",
+"fg_r1c": "Cuenta con sus palabras lo que pasó en el cuento",
+"fg_r2a": "Conoce todas las letras",
+"fg_r2b": "Lee palabras sencillas",
+"fg_r2c": "Vuelve a contar un cuento con inicio, desarrollo y final",
+"fg_r3a": "Lee solo libros cortos",
+"fg_r3b": "Responde preguntas sobre lo que leyó",
+"fg_r3c": "Lee en voz alta con entonación",
+"fg_r4a": "Lee libros con capítulos",
+"fg_r4b": "Encuentra información en el texto",
+"fg_r4c": "Da su opinión sobre lo que leyó y explica por qué",
+"fg_w1a": "Sostiene el lápiz y dibuja con intención",
+"fg_w1b": "Hace trazos, círculos y rayitas",
+"fg_w2a": "Escribe su propio nombre",
+"fg_w2b": "Escribe palabras sencillas solo",
+"fg_w2c": "Copia frases cortas",
+"fg_w3a": "Escribe frases con mayúscula y punto final",
+"fg_w3b": "Escribe una nota o cartita",
+"fg_w3c": "Cuenta por escrito algo que pasó",
+"fg_w4a": "Escribe un texto con inicio, desarrollo y final",
+"fg_w4b": "Separa el texto en párrafos",
+"fg_w4c": "Relee y corrige su propio texto",
+"fg_m1a": "Cuenta hasta 10",
+"fg_m1b": "Reconoce círculo, cuadrado y triángulo",
+"fg_m1c": "Sabe qué es más y qué es menos",
+"fg_m2a": "Cuenta hasta 50",
+"fg_m2b": "Suma y resta con objetos",
+"fg_m2c": "Reconoce los números hasta 100",
+"fg_m3a": "Hace cuentas mentales hasta 20",
+"fg_m3b": "Sabe las tablas del 2, 5 y 10",
+"fg_m3c": "Resuelve problemas con historias",
+"fg_m4a": "Sabe las tablas hasta el 10",
+"fg_m4b": "Hace multiplicaciones y divisiones",
+"fg_m4c": "Resuelve problemas de varios pasos",
+"fg_l1a": "Arma rompecabezas de 12 piezas o más",
+"fg_l1b": "Encaja formas y apila bloques",
+"fg_l2a": "Descubre qué sigue en una secuencia",
+"fg_l2b": "Juega juegos de reglas (dominó, memoria)",
+"fg_l3a": "Resuelve sudoku 4×4 o 6×6",
+"fg_l3b": "Sabe mover las piezas del ajedrez",
+"fg_l3c": "Explica cómo llegó a una respuesta",
+"fg_l4a": "Resuelve desafíos de lógica de varios pasos",
+"fg_l4b": "Juega ajedrez pensando en las próximas jugadas",
+"fg_l4c": "Practica con pruebas de olimpiadas de matemáticas (Canguro)",
+"fg_t1a": "Dice su nombre y su edad",
+"fg_t1b": "Espera su turno para hablar y jugar",
+"fg_t2a": "Se presenta a alguien nuevo",
+"fg_t2b": "Pide \"por favor\" y da las gracias",
+"fg_t2c": "Cuenta cómo fue su día",
+"fg_t3a": "Explica una idea a los demás",
+"fg_t3b": "Trabaja en grupo y comparte",
+"fg_t3c": "Sabe perder y ganar con educación",
+"fg_t4a": "Presenta un tema a la familia",
+"fg_t4b": "Da su opinión con argumentos",
+"fg_t4c": "Resuelve conflictos conversando",
+"fg_a1a": "Guarda los juguetes",
+"fg_a1b": "Come y se viste con poca ayuda",
+"fg_a2a": "Prepara su propia mochila",
+"fg_a2b": "Sigue la rutina de la mañana y la noche",
+"fg_a3a": "Hace los deberes solo la mayor parte del tiempo",
+"fg_a3b": "Recuerda sus propios compromisos",
+"fg_a4a": "Organiza su semana de estudio",
+"fg_a4b": "Cuida su dinero en los frascos",
+"fg_a4c": "Pide ayuda cuando la necesita",
+"fg_g1a": "Canta canciones en inglés",
+"fg_g1b": "Sabe los colores en inglés",
+"fg_g2a": "Conoce palabras básicas en inglés",
+"fg_g2b": "Sabe el nombre de su ciudad y su país",
+"fg_g2c": "Reconoce Brasil en el mapa",
+"fg_g3a": "Dice frases sencillas en inglés",
+"fg_g3b": "Conoce los continentes y algunos países",
+"fg_g3c": "Sabe que en otros lugares hay otras lenguas y costumbres",
+"fg_g4a": "Mantiene una conversación sencilla en inglés",
+"fg_g4b": "Lee textos cortos en inglés",
+"fg_g4c": "Tiene curiosidad por otras culturas y pregunta sobre ellas",
+"fuTip_read_s1": "Lean todos los días antes de dormir y pregunta: \"¿qué crees que va a pasar?\"",
+"fuTip_read_s2": "Lean juntos señalando las palabras; pídele que vuelva a contar el cuento.",
+"fuTip_read_s3": "10 a 15 minutos de lectura solo al día y una charla rápida sobre el libro.",
+"fuTip_read_s4": "Libros con capítulos; pide un resumen y su opinión. Valen cómics y periódicos infantiles.",
+"fuTip_write_s1": "Plastilina, tiza y dibujo libre fortalecen la mano para escribir después.",
+"fuTip_write_s2": "Escribir juntos la lista del mercado, los nombres de los hermanos, notitas con dibujos.",
+"fuTip_write_s3": "Una cartita por semana para alguien de la familia o un \"diario\" de 3 frases.",
+"fuTip_write_s4": "Una redacción corta por semana; el simulacro de abajo trae temas como los del examen.",
+"fuTip_math_s1": "Contar escalones, platos, autos en la calle. Separar juguetes por color y tamaño.",
+"fuTip_math_s2": "Jugar a la tiendita con monedas y sumar con objetos de la casa.",
+"fuTip_math_s3": "Cálculo mental en el auto (\"¿cuánto es 8 + 7?\") y problemas con el nombre de los hermanos.",
+"fuTip_math_s4": "Las tablas como juego, problemas de cambio y de horas. Pruebas antiguas de olimpiadas.",
+"fuTip_logic_s1": "Rompecabezas, encajes y juego de memoria (en la app, en Juegos).",
+"fuTip_logic_s2": "Secuencias, dominó, Lince y Adivina quién. Sudoku de frutas en la app.",
+"fuTip_logic_s3": "Ajedrez y damas con ustedes; pídele que explique \"por qué hizo esa jugada\".",
+"fuTip_logic_s4": "Desafíos de lógica, sudoku 6×6 y 9×9, ajedrez con estrategia, cubo de Rubik.",
+"fuTip_talk_s1": "Conversa mucho, nombra los sentimientos y anima a pedir las cosas con palabras.",
+"fuTip_talk_s2": "Practicar la presentación: \"Hola, soy…, tengo … años y me gusta…\".",
+"fuTip_talk_s3": "En la cena, cada uno cuenta algo bueno del día y da una opinión.",
+"fuTip_talk_s4": "Pedirle que explique un tema a la familia (se parece a la dinámica y la entrevista).",
+"fuTip_auto_s1": "Dejar que lo haga solo aunque tarde: guardar, calzarse, llevar el plato.",
+"fuTip_auto_s2": "La rutina con dibujos y la mochila preparada la noche anterior.",
+"fuTip_auto_s3": "Horario fijo de deberes y el cuadro de tareas como su responsabilidad.",
+"fuTip_auto_s4": "Él mismo planea su semana de estudio y cuida los tres frascos de dinero.",
+"fuTip_world_s1": "Canciones y dibujos animados en inglés, y decir colores y animales en inglés jugando.",
+"fuTip_world_s2": "Un mapamundi en la pared; mostrar dónde está Brasil y de dónde vienen las cosas.",
+"fuTip_world_s3": "Un poco de inglés cada día (la sección Inglés cuenta el tiempo) y un país por mes.",
+"fuTip_world_s4": "Conversaciones cortas en inglés en casa, series con subtítulos e investigar otros países.",
+"fuSimTitle": "Simulacro para imprimir",
+"fuSimHint": "Portugués, matemáticas y redacción al nivel de la edad, parecido a los exámenes de admisión. Cada vez sale uno distinto y las respuestas se imprimen aparte.",
+"fuSimBtn": "Imprimir simulacro de {name}",
+"fuSimKey": "Respuestas del último simulacro",
+"fuOpenKey": "Respuesta personal: revisa que haya respondido con una frase completa.",
+"fuEssayKey": "Evalúa: ¿se mantuvo en el tema? ¿Tiene inicio, desarrollo y final? ¿Letra legible, mayúsculas y puntos? ¿Ideas propias?",
+"fuAbroadTitle": "Por si se mudan a otro país",
+"fuAb1": "Inglés todos los días, aunque sean 10 minutos: es lo que más facilita la adaptación.",
+"fuAb2": "Un mapamundi en casa y \"un país por mes\": comida, bandera, idioma y costumbres.",
+"fuAb3": "La autonomía (vestirse, organizarse, pedir ayuda) marca mucha diferencia en una escuela nueva.",
+"fuAb4": "Mantener el portugués con lectura y cuentos en casa, para no perder la lengua de la familia.",
+"fuAb5": "Guardar boletas, vacunas y documentos escolares organizados: las escuelas de afuera suelen pedirlos."
+},
+"it": {
+"navFuture": "Verso il futuro",
+"title_futuro": "Verso il futuro",
+"sub_futuro": "Prepararsi fin da piccoli per una scuola con esame di ammissione o per vivere in un altro paese.",
+"fuGoalTitle": "L'obiettivo della famiglia",
+"fuSchool": "La scuola che volete",
+"fuEntry": "Ingresso nella scuola",
+"fuEntryHigh": "Scuola superiore (1º anno)",
+"fuAbroad": "Prepararsi anche a vivere, forse, in un altro paese",
+"fuThisYear": "è quest'anno",
+"fuTopHint": "L'iscrizione di solito è a metà dell'anno in cui il bambino frequenta il {grade}. Controlla sempre le date sul sito della scuola.",
+"fuGradeBaby": "Nido",
+"fuGradeMaternal": "Materna (piccoli)",
+"fuGradePre1": "Materna (medi)",
+"fuGradePre2": "Materna (grandi)",
+"fuGradeN": "{n}º anno",
+"fuNow": "Ora: {grade} · {age} anni",
+"fuGradeNow": "Anno scolastico attuale",
+"fuDone": "Ha già raggiunto l'anno di ingresso.",
+"fuApplyNow": "Questo è l'anno dell'iscrizione! Tieni d'occhio il sito della scuola.",
+"fuCountdown": "Mancano {n} anno/i: iscrizione nel {year} per entrare nel {entry} alla {school}.",
+"fuTheSchool": "scuola",
+"fuApply": "iscrizione",
+"fuEnter": "ingresso",
+"fuMonthTitle": "Questo mese (da quello che registrate già)",
+"fuPillarsTitle": "Su cosa lavorare ora — fase {stage}",
+"fuPillarsHint": "Segna quello che il bambino sa già fare. I consigli mostrano come esercitarsi a casa giocando.",
+"fuStage_s1": "Piccoli (fino a 4 anni)",
+"fuStage_s2": "5 e 6 anni",
+"fuStage_s3": "7 e 8 anni",
+"fuStage_s4": "9 anni o più",
+"fuP_read": "Lettura",
+"fuP_write": "Scrittura",
+"fuP_math": "Matematica",
+"fuP_logic": "Ragionamento logico",
+"fuP_talk": "Comunicazione e convivenza",
+"fuP_auto": "Autonomia e organizzazione",
+"fuP_world": "Inglese e mondo",
+"fg_r1a": "Ascolta una storia intera con attenzione",
+"fg_r1b": "Indica le figure e dice il loro nome",
+"fg_r1c": "Racconta con parole sue cosa è successo nella storia",
+"fg_r2a": "Conosce tutte le lettere",
+"fg_r2b": "Legge parole semplici",
+"fg_r2c": "Racconta di nuovo una storia con inizio, svolgimento e fine",
+"fg_r3a": "Legge da solo libri brevi",
+"fg_r3b": "Risponde a domande su ciò che ha letto",
+"fg_r3c": "Legge ad alta voce con intonazione",
+"fg_r4a": "Legge libri a capitoli",
+"fg_r4b": "Trova informazioni nel testo",
+"fg_r4c": "Dà un'opinione su ciò che ha letto e spiega perché",
+"fg_w1a": "Tiene la matita e disegna con intenzione",
+"fg_w1b": "Fa tratti, cerchi e scarabocchi",
+"fg_w2a": "Scrive il proprio nome",
+"fg_w2b": "Scrive parole semplici da solo",
+"fg_w2c": "Copia frasi brevi",
+"fg_w3a": "Scrive frasi con la maiuscola e il punto",
+"fg_w3b": "Scrive un biglietto o una letterina",
+"fg_w3c": "Racconta per iscritto un fatto",
+"fg_w4a": "Scrive un testo con inizio, svolgimento e fine",
+"fg_w4b": "Divide il testo in paragrafi",
+"fg_w4c": "Rilegge e corregge il proprio testo",
+"fg_m1a": "Conta fino a 10",
+"fg_m1b": "Riconosce cerchio, quadrato e triangolo",
+"fg_m1c": "Sa cosa è di più e cosa è di meno",
+"fg_m2a": "Conta fino a 50",
+"fg_m2b": "Somma e sottrae con gli oggetti",
+"fg_m2c": "Riconosce i numeri fino a 100",
+"fg_m3a": "Fa calcoli a mente fino a 20",
+"fg_m3b": "Sa le tabelline del 2, del 5 e del 10",
+"fg_m3c": "Risolve problemi con una storia",
+"fg_m4a": "Sa le tabelline fino al 10",
+"fg_m4b": "Fa moltiplicazioni e divisioni",
+"fg_m4c": "Risolve problemi con più passaggi",
+"fg_l1a": "Fa puzzle da 12 pezzi o più",
+"fg_l1b": "Incastra forme e impila blocchi",
+"fg_l2a": "Scopre cosa viene dopo in una sequenza",
+"fg_l2b": "Gioca a giochi con regole (domino, memory)",
+"fg_l3a": "Risolve sudoku 4×4 o 6×6",
+"fg_l3b": "Sa muovere i pezzi degli scacchi",
+"fg_l3c": "Spiega come è arrivato a una risposta",
+"fg_l4a": "Risolve sfide di logica con più passaggi",
+"fg_l4b": "Gioca a scacchi pensando alle prossime mosse",
+"fg_l4c": "Si allena con le prove delle olimpiadi di matematica (Kangourou)",
+"fg_t1a": "Dice il proprio nome e l'età",
+"fg_t1b": "Aspetta il turno per parlare e giocare",
+"fg_t2a": "Si presenta a una persona nuova",
+"fg_t2b": "Dice \"per favore\" e \"grazie\"",
+"fg_t2c": "Racconta com'è andata la giornata",
+"fg_t3a": "Spiega un'idea agli altri",
+"fg_t3b": "Lavora in gruppo e condivide",
+"fg_t3c": "Sa perdere e vincere con educazione",
+"fg_t4a": "Presenta un argomento alla famiglia",
+"fg_t4b": "Dà opinioni con argomenti",
+"fg_t4c": "Risolve i conflitti parlando",
+"fg_a1a": "Mette a posto i giocattoli",
+"fg_a1b": "Mangia e si veste con poco aiuto",
+"fg_a2a": "Prepara il proprio zaino",
+"fg_a2b": "Segue la routine del mattino e della sera",
+"fg_a3a": "Fa i compiti da solo la maggior parte del tempo",
+"fg_a3b": "Si ricorda dei propri impegni",
+"fg_a4a": "Organizza la settimana di studio",
+"fg_a4b": "Si occupa dei propri soldi nei barattoli",
+"fg_a4c": "Chiede aiuto quando serve",
+"fg_g1a": "Canta canzoni in inglese",
+"fg_g1b": "Sa i colori in inglese",
+"fg_g2a": "Conosce parole di base in inglese",
+"fg_g2b": "Sa il nome della sua città e del suo paese",
+"fg_g2c": "Riconosce il Brasile sulla carta",
+"fg_g3a": "Dice frasi semplici in inglese",
+"fg_g3b": "Conosce i continenti e alcuni paesi",
+"fg_g3c": "Sa che in altri posti ci sono altre lingue e usanze",
+"fg_g4a": "Sostiene una conversazione semplice in inglese",
+"fg_g4b": "Legge testi brevi in inglese",
+"fg_g4c": "È curioso di altre culture e fa domande",
+"fuTip_read_s1": "Leggete ogni giorno prima di dormire e chiedete: \"cosa pensi che succederà?\"",
+"fuTip_read_s2": "Leggete insieme indicando le parole; chiedetegli di raccontare di nuovo la storia.",
+"fuTip_read_s3": "10–15 minuti di lettura da solo al giorno e una breve chiacchierata sul libro.",
+"fuTip_read_s4": "Libri a capitoli; chiedete un riassunto e la sua opinione. Valgono fumetti e giornalini.",
+"fuTip_write_s1": "Plastilina, gessetti e disegno libero rafforzano la mano per scrivere poi.",
+"fuTip_write_s2": "Scrivere insieme la lista della spesa, i nomi dei fratelli, bigliettini con disegni.",
+"fuTip_write_s3": "Una letterina a settimana per qualcuno di famiglia o un \"diario\" di 3 frasi.",
+"fuTip_write_s4": "Un breve tema a settimana; la simulazione qui sotto ha argomenti come quelli dell'esame.",
+"fuTip_math_s1": "Contare gradini, piatti, macchine per strada. Dividere i giochi per colore e grandezza.",
+"fuTip_math_s2": "Giocare al negozio con le monete e sommare con gli oggetti di casa.",
+"fuTip_math_s3": "Calcolo mentale in macchina (\"quanto fa 8 + 7?\") e problemi con i nomi dei fratelli.",
+"fuTip_math_s4": "Tabelline come gioco, problemi di resto e di orari. Vecchie prove delle olimpiadi.",
+"fuTip_logic_s1": "Puzzle, incastri e memory (nell'app, in Giochi).",
+"fuTip_logic_s2": "Sequenze, domino, Lince e Indovina chi. Sudoku di frutta nell'app.",
+"fuTip_logic_s3": "Scacchi e dama con voi; chiedetegli di spiegare \"perché ha fatto quella mossa\".",
+"fuTip_logic_s4": "Sfide di logica, sudoku 6×6 e 9×9, scacchi con strategia, cubo di Rubik.",
+"fuTip_talk_s1": "Parlate tanto, date un nome alle emozioni e incoraggiatelo a chiedere con le parole.",
+"fuTip_talk_s2": "Allenare la presentazione: \"Ciao, sono…, ho … anni e mi piace…\".",
+"fuTip_talk_s3": "A cena, ognuno racconta una cosa bella della giornata e dà un'opinione.",
+"fuTip_talk_s4": "Chiedetegli di spiegare un argomento alla famiglia (è simile alla prova di gruppo e al colloquio).",
+"fuTip_auto_s1": "Lasciarlo fare da solo anche se ci mette di più: riordinare, mettere le scarpe, portare il piatto.",
+"fuTip_auto_s2": "La routine con figure e lo zaino preparato la sera prima.",
+"fuTip_auto_s3": "Orario fisso per i compiti e la tabella dei compiti come sua responsabilità.",
+"fuTip_auto_s4": "Pianifica lui la settimana di studio e si occupa dei tre barattoli di soldi.",
+"fuTip_world_s1": "Canzoni e cartoni in inglese, e dire colori e animali in inglese giocando.",
+"fuTip_world_s2": "Un planisfero sul muro; mostrare dov'è il Brasile e da dove vengono le cose.",
+"fuTip_world_s3": "Un po' di inglese ogni giorno (la sezione Inglese conta il tempo) e un paese al mese.",
+"fuTip_world_s4": "Brevi conversazioni in inglese a casa, serie con sottotitoli e ricerche su altri paesi.",
+"fuSimTitle": "Simulazione da stampare",
+"fuSimHint": "Portoghese, matematica e tema al livello dell'età, simile agli esami di ammissione. Ogni volta esce una simulazione diversa e le soluzioni si stampano a parte.",
+"fuSimBtn": "Stampa la simulazione di {name}",
+"fuSimKey": "Soluzioni dell'ultima simulazione",
+"fuOpenKey": "Risposta personale: controlla che abbia risposto con una frase completa.",
+"fuEssayKey": "Valuta: è rimasto in tema? C'è inizio, svolgimento e fine? Grafia leggibile, maiuscole e punti? Idee proprie?",
+"fuAbroadTitle": "Nel caso vi trasferiate in un altro paese",
+"fuAb1": "Inglese ogni giorno, anche solo 10 minuti: è ciò che aiuta di più ad adattarsi.",
+"fuAb2": "Un planisfero in casa e \"un paese al mese\": cibo, bandiera, lingua e usanze.",
+"fuAb3": "L'autonomia (vestirsi, organizzarsi, chiedere aiuto) fa molta differenza in una scuola nuova.",
+"fuAb4": "Mantenere il portoghese con letture e storie a casa, per non perdere la lingua della famiglia.",
+"fuAb5": "Tenere in ordine pagelle, vaccinazioni e documenti scolastici: le scuole all'estero di solito li chiedono."
+},
+"zh": {
+"navFuture": "迈向未来",
+"title_futuro": "迈向未来",
+"sub_futuro": "从小为需要入学考试的学校做准备，或者为将来去别的国家生活做准备。",
+"fuGoalTitle": "家庭目标",
+"fuSchool": "想上的学校",
+"fuEntry": "入学年级",
+"fuEntryHigh": "高中（一年级）",
+"fuAbroad": "也为将来可能去别的国家生活做准备",
+"fuThisYear": "就是今年",
+"fuTopHint": "报名通常在孩子读{grade}那年的年中。请一定以学校网站上的日期为准。",
+"fuGradeBaby": "托班",
+"fuGradeMaternal": "小班",
+"fuGradePre1": "中班",
+"fuGradePre2": "大班",
+"fuGradeN": "{n} 年级",
+"fuNow": "现在：{grade} · {age} 岁",
+"fuGradeNow": "现在的年级",
+"fuDone": "已经到入学年级了。",
+"fuApplyNow": "今年就是报名年！留意学校网站。",
+"fuCountdown": "还有 {n} 年：{year} 年报名，{entry} 年进入{school}。",
+"fuTheSchool": "学校",
+"fuApply": "报名",
+"fuEnter": "入学",
+"fuMonthTitle": "本月（来自你们已经登记的内容）",
+"fuPillarsTitle": "现在要练习的 — {stage}",
+"fuPillarsHint": "勾选孩子已经会做的事。小提示告诉你怎么在家边玩边练。",
+"fuStage_s1": "小朋友（4 岁以下）",
+"fuStage_s2": "5 到 6 岁",
+"fuStage_s3": "7 到 8 岁",
+"fuStage_s4": "9 岁以上",
+"fuP_read": "阅读",
+"fuP_write": "写作",
+"fuP_math": "数学",
+"fuP_logic": "逻辑思维",
+"fuP_talk": "沟通与相处",
+"fuP_auto": "独立与条理",
+"fuP_world": "英语与世界",
+"fg_r1a": "能专心听完一个故事",
+"fg_r1b": "能指着图片说出名字",
+"fg_r1c": "能用自己的话讲故事里发生了什么",
+"fg_r2a": "认识所有字母",
+"fg_r2b": "能读简单的词",
+"fg_r2c": "能有头有尾地复述故事",
+"fg_r3a": "能自己读短篇书",
+"fg_r3b": "能回答关于读过内容的问题",
+"fg_r3c": "能有感情地朗读",
+"fg_r4a": "能读分章节的书",
+"fg_r4b": "能在文章里找到信息",
+"fg_r4c": "能说出对读过内容的看法并解释原因",
+"fg_w1a": "会握笔并有意识地画画",
+"fg_w1b": "会画线、圆圈和涂鸦",
+"fg_w2a": "会写自己的名字",
+"fg_w2b": "能自己写简单的词",
+"fg_w2c": "能抄写短句",
+"fg_w3a": "会写开头大写、结尾有句号的句子",
+"fg_w3b": "会写便条或小信",
+"fg_w3c": "能把一件事写下来",
+"fg_w4a": "能写有开头、经过和结尾的文章",
+"fg_w4b": "会分段",
+"fg_w4c": "会重读并修改自己的文章",
+"fg_m1a": "能数到 10",
+"fg_m1b": "认识圆形、正方形和三角形",
+"fg_m1c": "知道多和少",
+"fg_m2a": "能数到 50",
+"fg_m2b": "会用实物做加减",
+"fg_m2c": "认识 100 以内的数",
+"fg_m3a": "会 20 以内的心算",
+"fg_m3b": "会 2、5、10 的乘法表",
+"fg_m3c": "会解应用题",
+"fg_m4a": "会 10 以内的乘法表",
+"fg_m4b": "会乘法和除法",
+"fg_m4c": "会解多步骤的问题",
+"fg_l1a": "会拼 12 片以上的拼图",
+"fg_l1b": "会配对形状、叠积木",
+"fg_l2a": "能找出序列里的下一个",
+"fg_l2b": "会玩有规则的游戏（多米诺、记忆翻牌）",
+"fg_l3a": "会做 4×4 或 6×6 数独",
+"fg_l3b": "知道国际象棋棋子怎么走",
+"fg_l3c": "能解释自己怎么得出答案",
+"fg_l4a": "能解多步骤的逻辑题",
+"fg_l4b": "下棋时会想后面几步",
+"fg_l4c": "用数学竞赛题（如袋鼠数学）练习",
+"fg_t1a": "会说自己的名字和年龄",
+"fg_t1b": "会等轮到自己再说话和玩",
+"fg_t2a": "会向新认识的人介绍自己",
+"fg_t2b": "会说\"请\"和\"谢谢\"",
+"fg_t2c": "会讲今天过得怎么样",
+"fg_t3a": "能向别人解释一个想法",
+"fg_t3b": "会和小组合作、分享",
+"fg_t3c": "输赢都有礼貌",
+"fg_t4a": "能给家人介绍一个主题",
+"fg_t4b": "能有理由地表达看法",
+"fg_t4c": "会用沟通解决矛盾",
+"fg_a1a": "会收玩具",
+"fg_a1b": "吃饭穿衣只需要一点帮助",
+"fg_a2a": "会自己整理书包",
+"fg_a2b": "会按早晚作息做事",
+"fg_a3a": "大多数时候能自己做作业",
+"fg_a3b": "记得自己的安排",
+"fg_a4a": "会安排一周的学习",
+"fg_a4b": "会管理罐子里的钱",
+"fg_a4c": "需要时会求助",
+"fg_g1a": "会唱英文歌",
+"fg_g1b": "知道颜色的英文",
+"fg_g2a": "认识基本的英文单词",
+"fg_g2b": "知道自己住的城市和国家",
+"fg_g2c": "能在地图上找到巴西",
+"fg_g3a": "会说简单的英文句子",
+"fg_g3b": "认识各大洲和一些国家",
+"fg_g3c": "知道别的地方有不同的语言和习俗",
+"fg_g4a": "能用英语进行简单对话",
+"fg_g4b": "能读简短的英文文章",
+"fg_g4c": "对其他文化好奇并会提问",
+"fuTip_read_s1": "每天睡前读故事，问一问：\"你觉得接下来会发生什么？\"",
+"fuTip_read_s2": "一起读时用手指指着字；请孩子复述故事。",
+"fuTip_read_s3": "每天自己读 10 到 15 分钟，再聊聊这本书。",
+"fuTip_read_s4": "读分章节的书；请他总结并说说看法。漫画和儿童报纸也算。",
+"fuTip_write_s1": "玩橡皮泥、粉笔和自由画画，为以后写字锻炼小手。",
+"fuTip_write_s2": "一起写购物清单、兄弟姐妹的名字、带画的小纸条。",
+"fuTip_write_s3": "每周给家人写一封小信，或写 3 句话的\"日记\"。",
+"fuTip_write_s4": "每周写一篇短作文；下面的模拟卷有和考试类似的题目。",
+"fuTip_math_s1": "数台阶、盘子、街上的车。按颜色和大小给玩具分类。",
+"fuTip_math_s2": "用硬币玩开商店，用家里的东西做加法。",
+"fuTip_math_s3": "在车上心算（\"8 + 7 是多少？\"），用兄弟姐妹的名字编应用题。",
+"fuTip_math_s4": "把乘法表变成游戏，做找零和时间的题。用往年的数学竞赛题。",
+"fuTip_logic_s1": "拼图、形状配对和记忆翻牌（应用里\"游戏\"就有）。",
+"fuTip_logic_s2": "规律题、多米诺、找图游戏和猜猜我是谁。应用里有水果数独。",
+"fuTip_logic_s3": "和你们下国际象棋和跳棋；请他解释\"为什么这样走\"。",
+"fuTip_logic_s4": "逻辑挑战、6×6 和 9×9 数独、有策略地下棋、魔方。",
+"fuTip_talk_s1": "多聊天，说出情绪的名字，鼓励用说话来提要求。",
+"fuTip_talk_s2": "练习自我介绍：\"你好，我是……，我……岁，我喜欢……\"。",
+"fuTip_talk_s3": "晚饭时每人说一件今天的好事和一个看法。",
+"fuTip_talk_s4": "请他给家人讲一个主题（和小组活动、面试很像）。",
+"fuTip_auto_s1": "让孩子自己做，慢一点也没关系：收东西、穿鞋、端盘子。",
+"fuTip_auto_s2": "图片作息表，以及前一晚整理好书包。",
+"fuTip_auto_s3": "固定的作业时间，任务表由他自己负责。",
+"fuTip_auto_s4": "自己安排一周的学习，自己管理三个钱罐。",
+"fuTip_world_s1": "听英文歌、看英文动画，玩的时候说颜色和动物的英文。",
+"fuTip_world_s2": "墙上贴一张世界地图；指出巴西在哪里、东西从哪里来。",
+"fuTip_world_s3": "每天学一点英语（\"英语\"部分会记录时间），每个月认识一个国家。",
+"fuTip_world_s4": "在家用英语简单对话，看带字幕的节目，查一查其他国家。",
+"fuSimTitle": "可打印的模拟卷",
+"fuSimHint": "按年龄出的葡萄牙语、数学和写作题，类似入学考试。每次都不一样，答案单独打印。",
+"fuSimBtn": "打印 {name} 的模拟卷",
+"fuSimKey": "上一份模拟卷的答案",
+"fuOpenKey": "开放题：看他是否用完整的句子回答。",
+"fuEssayKey": "评一评：有没有切题？有没有开头、经过和结尾？字迹清楚、大写和句号？有没有自己的想法？",
+"fuAbroadTitle": "如果将来搬到别的国家",
+"fuAb1": "每天学英语，哪怕 10 分钟：这是最有助于适应的。",
+"fuAb2": "家里放一张世界地图，\"每月一个国家\"：食物、国旗、语言和习俗。",
+"fuAb3": "独立能力（穿衣、整理、求助）在新学校里非常重要。",
+"fuAb4": "在家通过阅读和讲故事保持葡萄牙语，不要丢掉家里的语言。",
+"fuAb5": "把成绩单、疫苗记录和学校文件整理好：国外学校通常会要求提供。"
+},
+"zht": {
+"navFuture": "邁向未來",
+"title_futuro": "邁向未來",
+"sub_futuro": "從小為需要入學考試的學校做準備，或者為將來去別的國家生活做準備。",
+"fuGoalTitle": "家庭目標",
+"fuSchool": "想上的學校",
+"fuEntry": "入學年級",
+"fuEntryHigh": "高中（一年級）",
+"fuAbroad": "也為將來可能去別的國家生活做準備",
+"fuThisYear": "就是今年",
+"fuTopHint": "報名通常在孩子讀{grade}那年的年中。請一定以學校網站上的日期為準。",
+"fuGradeBaby": "托班",
+"fuGradeMaternal": "小班",
+"fuGradePre1": "中班",
+"fuGradePre2": "大班",
+"fuGradeN": "{n} 年級",
+"fuNow": "現在：{grade} · {age} 歲",
+"fuGradeNow": "現在的年級",
+"fuDone": "已經到入學年級了。",
+"fuApplyNow": "今年就是報名年！留意學校網站。",
+"fuCountdown": "還有 {n} 年：{year} 年報名，{entry} 年進入{school}。",
+"fuTheSchool": "學校",
+"fuApply": "報名",
+"fuEnter": "入學",
+"fuMonthTitle": "本月（來自你們已經登記的內容）",
+"fuPillarsTitle": "現在要練習的 — {stage}",
+"fuPillarsHint": "勾選孩子已經會做的事。小提示告訴你怎麼在家邊玩邊練。",
+"fuStage_s1": "小朋友（4 歲以下）",
+"fuStage_s2": "5 到 6 歲",
+"fuStage_s3": "7 到 8 歲",
+"fuStage_s4": "9 歲以上",
+"fuP_read": "閱讀",
+"fuP_write": "寫作",
+"fuP_math": "數學",
+"fuP_logic": "邏輯思維",
+"fuP_talk": "溝通與相處",
+"fuP_auto": "獨立與條理",
+"fuP_world": "英語與世界",
+"fg_r1a": "能專心聽完一個故事",
+"fg_r1b": "能指著圖片說出名字",
+"fg_r1c": "能用自己的話講故事裡發生了什麼",
+"fg_r2a": "認識所有字母",
+"fg_r2b": "能讀簡單的詞",
+"fg_r2c": "能有頭有尾地複述故事",
+"fg_r3a": "能自己讀短篇書",
+"fg_r3b": "能回答關於讀過內容的問題",
+"fg_r3c": "能有感情地朗讀",
+"fg_r4a": "能讀分章節的書",
+"fg_r4b": "能在文章裡找到資訊",
+"fg_r4c": "能說出對讀過內容的看法並解釋原因",
+"fg_w1a": "會握筆並有意識地畫畫",
+"fg_w1b": "會畫線、圓圈和塗鴉",
+"fg_w2a": "會寫自己的名字",
+"fg_w2b": "能自己寫簡單的詞",
+"fg_w2c": "能抄寫短句",
+"fg_w3a": "會寫開頭大寫、結尾有句號的句子",
+"fg_w3b": "會寫便條或小信",
+"fg_w3c": "能把一件事寫下來",
+"fg_w4a": "能寫有開頭、經過和結尾的文章",
+"fg_w4b": "會分段",
+"fg_w4c": "會重讀並修改自己的文章",
+"fg_m1a": "能數到 10",
+"fg_m1b": "認識圓形、正方形和三角形",
+"fg_m1c": "知道多和少",
+"fg_m2a": "能數到 50",
+"fg_m2b": "會用實物做加減",
+"fg_m2c": "認識 100 以內的數",
+"fg_m3a": "會 20 以內的心算",
+"fg_m3b": "會 2、5、10 的乘法表",
+"fg_m3c": "會解應用題",
+"fg_m4a": "會 10 以內的乘法表",
+"fg_m4b": "會乘法和除法",
+"fg_m4c": "會解多步驟的問題",
+"fg_l1a": "會拼 12 片以上的拼圖",
+"fg_l1b": "會配對形狀、疊積木",
+"fg_l2a": "能找出序列裡的下一個",
+"fg_l2b": "會玩有規則的遊戲（多米諾、記憶翻牌）",
+"fg_l3a": "會做 4×4 或 6×6 數獨",
+"fg_l3b": "知道國際象棋棋子怎麼走",
+"fg_l3c": "能解釋自己怎麼得出答案",
+"fg_l4a": "能解多步驟的邏輯題",
+"fg_l4b": "下棋時會想後面幾步",
+"fg_l4c": "用數學競賽題（如袋鼠數學）練習",
+"fg_t1a": "會說自己的名字和年齡",
+"fg_t1b": "會等輪到自己再說話和玩",
+"fg_t2a": "會向新認識的人介紹自己",
+"fg_t2b": "會說\"請\"和\"謝謝\"",
+"fg_t2c": "會講今天過得怎麼樣",
+"fg_t3a": "能向別人解釋一個想法",
+"fg_t3b": "會和小組合作、分享",
+"fg_t3c": "輸贏都有禮貌",
+"fg_t4a": "能給家人介紹一個主題",
+"fg_t4b": "能有理由地表達看法",
+"fg_t4c": "會用溝通解決矛盾",
+"fg_a1a": "會收玩具",
+"fg_a1b": "吃飯穿衣只需要一點幫助",
+"fg_a2a": "會自己整理書包",
+"fg_a2b": "會按早晚作息做事",
+"fg_a3a": "大多數時候能自己做作業",
+"fg_a3b": "記得自己的安排",
+"fg_a4a": "會安排一週的學習",
+"fg_a4b": "會管理罐子裡的錢",
+"fg_a4c": "需要時會求助",
+"fg_g1a": "會唱英文歌",
+"fg_g1b": "知道顏色的英文",
+"fg_g2a": "認識基本的英文單詞",
+"fg_g2b": "知道自己住的城市和國家",
+"fg_g2c": "能在地圖上找到巴西",
+"fg_g3a": "會說簡單的英文句子",
+"fg_g3b": "認識各大洲和一些國家",
+"fg_g3c": "知道別的地方有不同的語言和習俗",
+"fg_g4a": "能用英語進行簡單對話",
+"fg_g4b": "能讀簡短的英文文章",
+"fg_g4c": "對其他文化好奇並會提問",
+"fuTip_read_s1": "每天睡前讀故事，問一問：\"你覺得接下來會發生什麼？\"",
+"fuTip_read_s2": "一起讀時用手指指著字；請孩子複述故事。",
+"fuTip_read_s3": "每天自己讀 10 到 15 分鐘，再聊聊這本書。",
+"fuTip_read_s4": "讀分章節的書；請他總結並說說看法。漫畫和兒童報紙也算。",
+"fuTip_write_s1": "玩橡皮泥、粉筆和自由畫畫，為以後寫字鍛鍊小手。",
+"fuTip_write_s2": "一起寫購物清單、兄弟姐妹的名字、帶畫的小紙條。",
+"fuTip_write_s3": "每週給家人寫一封小信，或寫 3 句話的\"日記\"。",
+"fuTip_write_s4": "每週寫一篇短作文；下面的模擬卷有和考試類似的題目。",
+"fuTip_math_s1": "數臺階、盤子、街上的車。按顏色和大小給玩具分類。",
+"fuTip_math_s2": "用硬幣玩開商店，用家裡的東西做加法。",
+"fuTip_math_s3": "在車上心算（\"8 + 7 是多少？\"），用兄弟姐妹的名字編應用題。",
+"fuTip_math_s4": "把乘法表變成遊戲，做找零和時間的題。用往年的數學競賽題。",
+"fuTip_logic_s1": "拼圖、形狀配對和記憶翻牌（應用裡\"遊戲\"就有）。",
+"fuTip_logic_s2": "規律題、多米諾、找圖遊戲和猜猜我是誰。應用裡有水果數獨。",
+"fuTip_logic_s3": "和你們下國際象棋和跳棋；請他解釋\"為什麼這樣走\"。",
+"fuTip_logic_s4": "邏輯挑戰、6×6 和 9×9 數獨、有策略地下棋、魔方。",
+"fuTip_talk_s1": "多聊天，說出情緒的名字，鼓勵用說話來提要求。",
+"fuTip_talk_s2": "練習自我介紹：\"你好，我是……，我……歲，我喜歡……\"。",
+"fuTip_talk_s3": "晚飯時每人說一件今天的好事和一個看法。",
+"fuTip_talk_s4": "請他給家人講一個主題（和小組活動、面試很像）。",
+"fuTip_auto_s1": "讓孩子自己做，慢一點也沒關係：收東西、穿鞋、端盤子。",
+"fuTip_auto_s2": "圖片作息表，以及前一晚整理好書包。",
+"fuTip_auto_s3": "固定的作業時間，任務表由他自己負責。",
+"fuTip_auto_s4": "自己安排一週的學習，自己管理三個錢罐。",
+"fuTip_world_s1": "聽英文歌、看英文動畫，玩的時候說顏色和動物的英文。",
+"fuTip_world_s2": "牆上貼一張世界地圖；指出巴西在哪裡、東西從哪裡來。",
+"fuTip_world_s3": "每天學一點英語（\"英語\"部分會記錄時間），每個月認識一個國家。",
+"fuTip_world_s4": "在家用英語簡單對話，看帶字幕的節目，查一查其他國家。",
+"fuSimTitle": "可列印的模擬卷",
+"fuSimHint": "按年齡出的葡萄牙語、數學和寫作題，類似入學考試。每次都不一樣，答案單獨列印。",
+"fuSimBtn": "列印 {name} 的模擬卷",
+"fuSimKey": "上一份模擬卷的答案",
+"fuOpenKey": "開放題：看他是否用完整的句子回答。",
+"fuEssayKey": "評一評：有沒有切題？有沒有開頭、經過和結尾？字跡清楚、大寫和句號？有沒有自己的想法？",
+"fuAbroadTitle": "如果將來搬到別的國家",
+"fuAb1": "每天學英語，哪怕 10 分鐘：這是最有助於適應的。",
+"fuAb2": "家裡放一張世界地圖，\"每月一個國家\"：食物、國旗、語言和習俗。",
+"fuAb3": "獨立能力（穿衣、整理、求助）在新學校裡非常重要。",
+"fuAb4": "在家通過閱讀和講故事保持葡萄牙語，不要丟掉家裡的語言。",
+"fuAb5": "把成績單、疫苗記錄和學校檔案整理好：國外學校通常會要求提供。"
+}
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], FUTURE_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 82;
+const APP_VERSION = 83;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -9062,6 +10050,175 @@ Object.assign(ACTIONS, {
   'pr-month': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenMonth(); printDocument(monthChildHtml(c, from, to), t('mrOptChild', { name: c.name })); },
   'pr-month-family': () => { const { from, to } = chosenMonth(); printDocument(monthFamilyHtml(from, to) + S.children.map(c => monthChildHtml(c, from, to)).join(''), t('mrOptFamily')); }
 });
+
+/* =====================================================================
+   Rumo ao futuro: preparação para uma escola com processo seletivo
+   (padrão: Germinare, entrada no 6º ano) e/ou para morar em outro país.
+   Linha do tempo, metas por idade ("já consegue"), números do mês e
+   simulados para imprimir (português, matemática e redação) com gabarito.
+   ===================================================================== */
+
+const FUT_PILLARS = [
+  { id: 'read', icon: '📖' }, { id: 'write', icon: '✍️' }, { id: 'math', icon: '➗' }, { id: 'logic', icon: '🧠' },
+  { id: 'talk', icon: '🗣️' }, { id: 'auto', icon: '🎒' }, { id: 'world', icon: '🌎' }
+];
+// metas "já consegue" por fase (s1: até 4 anos · s2: 5–6 · s3: 7–8 · s4: 9–10 · s5: 11+)
+const FUT_GOALS = {
+  read: { s1: ['r1a', 'r1b', 'r1c'], s2: ['r2a', 'r2b', 'r2c'], s3: ['r3a', 'r3b', 'r3c'], s4: ['r4a', 'r4b', 'r4c'] },
+  write: { s1: ['w1a', 'w1b'], s2: ['w2a', 'w2b', 'w2c'], s3: ['w3a', 'w3b', 'w3c'], s4: ['w4a', 'w4b', 'w4c'] },
+  math: { s1: ['m1a', 'm1b', 'm1c'], s2: ['m2a', 'm2b', 'm2c'], s3: ['m3a', 'm3b', 'm3c'], s4: ['m4a', 'm4b', 'm4c'] },
+  logic: { s1: ['l1a', 'l1b'], s2: ['l2a', 'l2b'], s3: ['l3a', 'l3b', 'l3c'], s4: ['l4a', 'l4b', 'l4c'] },
+  talk: { s1: ['t1a', 't1b'], s2: ['t2a', 't2b', 't2c'], s3: ['t3a', 't3b', 't3c'], s4: ['t4a', 't4b', 't4c'] },
+  auto: { s1: ['a1a', 'a1b'], s2: ['a2a', 'a2b'], s3: ['a3a', 'a3b'], s4: ['a4a', 'a4b', 'a4c'] },
+  world: { s1: ['g1a', 'g1b'], s2: ['g2a', 'g2b', 'g2c'], s3: ['g3a', 'g3b', 'g3c'], s4: ['g4a', 'g4b', 'g4c'] }
+};
+function futStage(age) { return age <= 4 ? 's1' : age <= 6 ? 's2' : age <= 8 ? 's3' : 's4'; }
+// metas de cada mês, puxadas do que já é registrado no app
+const FUT_MONTH = { s1: { books: 12, english: 60, games: 4 }, s2: { books: 10, english: 160, games: 8, pages: 0 }, s3: { books: 8, english: 300, games: 10, pages: 40 }, s4: { books: 5, english: 400, games: 12, pages: 60 } };
+
+/* ---------- ano escolar e linha do tempo ---------- */
+// -4..-3 berçário, -2 maternal, -1 pré I, 0 pré II, 1..9 = 1º ao 9º ano
+function futGrade(c) { const k = S.future.kids[c.id]; return k && Number.isFinite(k.grade) ? k.grade : Math.max(-4, Math.min(9, c.age - 5)); }
+function gradeLabel(g) { return g <= -3 ? t('fuGradeBaby') : g === -2 ? t('fuGradeMaternal') : g === -1 ? t('fuGradePre1') : g === 0 ? t('fuGradePre2') : t('fuGradeN', { n: g }); }
+function futTimeline(c) {
+  const now = new Date(), g = futGrade(c), entry = S.future.entryGrade, applyIn = entry - 1;
+  const yearsToApply = applyIn - g, applyYear = now.getFullYear() + yearsToApply;
+  return { grade: g, applyYear, entryYear: applyYear + 1, yearsToApply, done: g >= entry };
+}
+
+/* ---------- simulados (conteúdo em português, como a prova) ---------- */
+const SIM_TEXTS = {
+  s3: [
+    { title: 'O girassol da Lia', text: 'Lia plantou uma semente no quintal. Todos os dias ela regava a terra antes de ir para a escola. Depois de uma semana, nasceu um broto verde. Lia ficou tão feliz que contou para a turma inteira. No fim do mês, o broto virou um girassol amarelo, maior que a própria Lia.',
+      q: [['O que Lia plantou?', ['Uma árvore', 'Uma semente', 'Uma flor de plástico'], 1], ['Quando Lia regava a terra?', ['Antes de ir para a escola', 'À noite', 'Só no domingo'], 0], ['Como Lia se sentiu quando nasceu o broto?', ['Triste', 'Com medo', 'Feliz'], 2], ['No fim, o girassol ficou…', ['menor que Lia', 'maior que Lia', 'do mesmo tamanho'], 1]], open: 'Você já plantou alguma coisa? Conte em uma frase.' },
+    { title: 'O cachorro Pipoca', text: 'Pipoca é um cachorro pequeno e muito curioso. Um dia ele fugiu pelo portão para seguir uma borboleta. A família procurou pela rua toda. No fim da tarde, Pipoca voltou sozinho, sujo de terra e balançando o rabo. Desde então, o portão fica sempre fechado.',
+      q: [['Como é o Pipoca?', ['Grande e bravo', 'Pequeno e curioso', 'Velho e cansado'], 1], ['Por que Pipoca fugiu?', ['Para seguir uma borboleta', 'Porque estava com fome', 'Para brincar com outro cachorro'], 0], ['Quando ele voltou?', ['De manhã', 'No fim da tarde', 'No dia seguinte'], 1], ['O que a família faz agora?', ['Deixa o portão aberto', 'Prende o Pipoca', 'Deixa o portão fechado'], 2]], open: 'Por que é importante deixar o portão fechado?' }
+  ],
+  s4: [
+    { title: 'A feira de ciências', text: 'Na feira de ciências da escola, Bruno e Carol decidiram mostrar como a água pode limpar o ar. Eles colocaram plantas em garrafas e mediram a umidade durante cinco dias. No começo, o experimento deu errado: as plantas murcharam porque receberam sol demais. Em vez de desistir, os dois mudaram as garrafas de lugar e começaram de novo. No dia da feira, o projeto ganhou o prêmio de "melhor ideia", e a professora elogiou principalmente a persistência da dupla.',
+      q: [['Qual era o objetivo do projeto?', ['Mostrar como a água pode limpar o ar', 'Vender plantas', 'Medir a altura das garrafas'], 0], ['Por que o experimento deu errado no começo?', ['Faltou água', 'As plantas pegaram sol demais', 'As garrafas quebraram'], 1], ['O que a dupla fez depois do erro?', ['Desistiu', 'Trocou de projeto', 'Mudou as garrafas de lugar e recomeçou'], 2], ['A palavra "persistência" no texto quer dizer…', ['não desistir', 'ter sorte', 'ser rápido'], 0]], open: 'O que você aprende com a atitude de Bruno e Carol? Explique em duas frases.' },
+    { title: 'O mercado da vila', text: 'Toda quinta-feira, o mercado da vila abre às sete horas. Seu Antônio vende frutas e sempre separa as mais bonitas para os primeiros clientes. Dona Rosa, que vende pães, chega às seis para o forno estar quente na hora certa. Neste mês, os dois tiveram uma ideia: quem comprar frutas ganha um desconto no pão. As vendas das duas bancas aumentaram, e outros vendedores quiseram participar da parceria.',
+      q: [['Em que dia o mercado abre?', ['Segunda-feira', 'Quinta-feira', 'Sábado'], 1], ['Por que Dona Rosa chega às seis horas?', ['Para o forno estar quente na hora certa', 'Para escolher as frutas', 'Para limpar o mercado'], 0], ['Qual foi a ideia dos dois?', ['Fechar mais cedo', 'Dar desconto no pão para quem compra frutas', 'Vender só pela internet'], 1], ['O que aconteceu depois da parceria?', ['As vendas caíram', 'As bancas fecharam', 'As vendas aumentaram'], 2]], open: 'Invente uma parceria entre duas lojas do seu bairro. Como ela funcionaria?' }
+  ]
+};
+const SIM_SPELL = [['casa', 'caza'], ['cachorro', 'caxorro'], ['escola', 'iscola'], ['pássaro', 'páçaro'], ['girafa', 'jirafa'], ['chuva', 'xuva'], ['exemplo', 'ezemplo'], ['amanhã', 'amanhan'], ['excelente', 'ecelente'], ['professora', 'profesora']];
+const SIM_WORDS = [['🐱', 'GATO', 2], ['🦆', 'PATO', 2], ['⚽', 'BOLA', 2], ['🦋', 'BORBOLETA', 4], ['🐸', 'SAPO', 2], ['🍌', 'BANANA', 3], ['🏠', 'CASA', 2], ['🐘', 'ELEFANTE', 4], ['🍎', 'MAÇÃ', 2], ['🌙', 'LUA', 2], ['🦁', 'LEÃO', 2], ['🐟', 'PEIXE', 2], ['🚗', 'CARRO', 2], ['📚', 'LIVRO', 2], ['🌻', 'GIRASSOL', 3]];
+const SIM_THEMES = {
+  s2: ['Desenhe a sua família e escreva o nome de cada pessoa.', 'Desenhe o seu brinquedo favorito e escreva o nome dele.', 'Desenhe o que você mais gosta de comer e escreva o nome.'],
+  s3: ['Conte como foi o seu fim de semana.', 'Escreva um bilhete para alguém da sua família dizendo por que gosta dessa pessoa.', 'Invente uma história com um animal que fala.'],
+  s4: ['Se você pudesse inventar algo para ajudar as pessoas, o que seria? Explique como funcionaria.', 'Escreva uma carta para você mesmo daqui a 5 anos contando seus sonhos.', 'Conte uma vez em que você errou, aprendeu e tentou de novo.', 'Imagine que sua família vai morar em outro país. Como seria o primeiro dia lá?']
+};
+function buildSim(c, seed) {
+  const st = futStage(c.age), rnd = seededRng(seed), names = S.children.map(k => k.name);
+  const nm = () => names[Math.floor(rnd() * names.length)] || 'Ana', R = (a, b) => a + Math.floor(rnd() * (b - a + 1));
+  const parts = [];
+  if (st === 's1' || st === 's2') {
+    parts.push({ kind: 'syll', title: 'Quantos pedacinhos (sílabas) tem cada palavra?', items: pick(SIM_WORDS, 4, rnd).map(([e, w, n]) => ({ e, w, answer: n })) });
+    parts.push({ kind: 'letter', title: 'Complete a letra que falta.', items: pick(SIM_WORDS.filter(x => x[1].length <= 6), 4, rnd).map(([e, w]) => { const i = R(0, w.length - 1); return { e, w: w.slice(0, i) + '_' + w.slice(i + 1), answer: w[i] }; }) });
+    parts.push({ kind: 'mcount', title: 'Conte e escreva quantos tem. Depois some.', items: [...Array(3)].map(() => { const a = R(1, 5), b = R(1, 4), e = pick(G_EMOJI, 1, rnd)[0]; return { text: `${e.repeat(a)}  +  ${e.repeat(b)}  =`, answer: a + b }; }) });
+  } else {
+    const tx = pick(SIM_TEXTS[st], 1, rnd)[0];
+    parts.push({ kind: 'text', title: `Leia o texto: "${tx.title}"`, text: tx.text, q: tx.q.map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })), open: tx.open });
+    parts.push({ kind: 'spell', title: 'Circule a palavra escrita do jeito certo.', items: pick(SIM_SPELL, 4, rnd).map(([ok, bad]) => { const sw = rnd() < 0.5; return { a: sw ? bad : ok, b: sw ? ok : bad, answer: ok }; }) });
+    const probs = st === 's3'
+      ? [() => { const a = R(8, 30), b = R(3, 15); return { text: `${nm()} tinha ${a} figurinhas e ganhou mais ${b}. Com quantas ficou?`, answer: a + b }; },
+         () => { const a = R(15, 40), b = R(3, 12); return { text: `Na cesta havia ${a} laranjas. Foram usadas ${b} para fazer suco. Quantas sobraram?`, answer: a - b }; },
+         () => { const a = R(2, 5), b = R(2, 9); return { text: `${nm()} arrumou ${a} pacotes com ${b} biscoitos em cada um. Quantos biscoitos ao todo?`, answer: a * b }; },
+         () => { const a = R(11, 49), b = R(11, 49); return { text: `Arme e efetue: ${a} + ${b} =`, answer: a + b }; },
+         () => { const b = R(11, 30), a = b + R(5, 40); return { text: `Arme e efetue: ${a} − ${b} =`, answer: a - b }; }]
+      : [() => { const p = R(3, 9), q = R(4, 12), r = R(5, 20); return { text: `${nm()} comprou ${q} cadernos de R$ ${p},00 e pagou com R$ ${p * q + r},00. Quanto recebeu de troco?`, answer: `R$ ${r},00` }; },
+         () => { const g = R(3, 6), n = g * R(4, 9); return { text: `${n} alunos vão ser divididos em ${g} grupos iguais. Quantos alunos ficam em cada grupo?`, answer: n / g }; },
+         () => { const n = 2 * R(6, 25); return { text: `Qual é a metade de ${n}? E o dobro de ${n}?`, answer: `${n / 2} e ${n * 2}` }; },
+         () => { const a = R(12, 48), b = R(3, 9); return { text: `Arme e efetue: ${a} × ${b} =`, answer: a * b }; },
+         () => { const d = R(3, 9), q = R(12, 60); return { text: `Arme e efetue: ${d * q} ÷ ${d} =`, answer: q }; },
+         () => { const h = R(7, 10), m = [15, 30, 45][R(0, 2)], dur = R(40, 90); const tot = h * 60 + m + dur; return { text: `A aula começou às ${h}h${String(m).padStart(2, '0')} e durou ${dur} minutos. A que horas terminou?`, answer: `${Math.floor(tot / 60)}h${String(tot % 60).padStart(2, '0')}` }; }];
+    parts.push({ kind: 'math', title: 'Resolva os problemas. Mostre como pensou.', items: shuffle(probs, rnd).slice(0, st === 's3' ? 4 : 5).map(f => f()) });
+  }
+  parts.push({ kind: 'essay', title: st === 's1' || st === 's2' ? 'Desenho e escrita' : 'Redação', theme: pick(SIM_THEMES[st === 's1' ? 's2' : st], 1, rnd)[0], lines: st === 's4' ? 14 : st === 's3' ? 8 : 3 });
+  return { stage: st, parts };
+}
+function shuffleKeep(opts, ansIdx, rnd) { const items = opts.map((o, i) => ({ o, ok: i === ansIdx })); return shuffle(items, rnd); }
+function simHtml(c, sim, mode) {
+  let n = 0; const L = 'ABCD';
+  const head = title => `<div class="ws-sec"><h3><span class="ws-num">${++n}</span> ${esc(title)}</h3>`;
+  const part = (p, key) => {
+    if (p.kind === 'syll') return head(p.title) + p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-pic">${x.e}</span><b class="sim-w">${x.w}</b><span class="ws-box">${key ? x.answer : ''}</span></div>`).join('') + '</div>';
+    if (p.kind === 'letter') return head(p.title) + `<div class="ws-grid2">${p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="ws-pic">${x.e}</span><b class="sim-w">${key ? x.w.replace('_', `<u>${x.answer}</u>`) : x.w}</b></div>`).join('')}</div></div>`;
+    if (p.kind === 'mcount') return head(p.title) + p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="sim-count">${x.text}</span><span class="ws-box">${key ? x.answer : ''}</span></div>`).join('') + '</div>';
+    if (p.kind === 'text') return head(p.title) + `<p class="sim-text">${esc(p.text)}</p>${p.q.map((x, i) => `<div class="sim-q"><b>${i + 1}. ${esc(x.q)}</b><div class="sim-opts">${x.o.map((o, k) => `<span class="${key && o.ok ? 'sim-ok' : ''}">(${L[k]}) ${esc(o.o)}</span>`).join('')}</div></div>`).join('')}
+      <div class="sim-q"><b>${p.q.length + 1}. ${esc(p.open)}</b>${key ? `<p class="ws-help">${esc(t('fuOpenKey'))}</p>` : '<div class="pr-lines"><span></span><span></span></div>'}</div></div>`;
+    if (p.kind === 'spell') return head(p.title) + `<div class="ws-grid2">${p.items.map((x, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="sim-pair"><span class="${key && x.a === x.answer ? 'g-circle' : ''}">${esc(x.a)}</span> · <span class="${key && x.b === x.answer ? 'g-circle' : ''}">${esc(x.b)}</span></span></div>`).join('')}</div></div>`;
+    if (p.kind === 'math') return head(p.title) + p.items.map((x, i) => `<div class="sim-prob"><b>${i + 1}.</b> ${esc(x.text)}${key ? ` <span class="g-ans">${esc(String(x.answer))}</span>` : '<div class="sim-work"></div><div class="sim-ans">Resposta: ______________</div>'}</div>`).join('') + '</div>';
+    return head(p.title) + `<p class="sim-theme">${esc(p.theme)}</p>${key ? `<p class="ws-help">${esc(t('fuEssayKey'))}</p>` : `${p.lines <= 3 ? '<div class="sim-draw"></div>' : ''}<div class="pr-lines sim-lines">${'<span></span>'.repeat(p.lines)}</div>`}</div>`;
+  };
+  const top = key => `<div class="ws-head"><div><div class="ws-title">${key ? '🔑 ' + esc(t('wsKeyTitle')) : '🎓 Simulado'}</div><div class="ws-sub">${esc(S.future.school || '')} · ${esc(t('fuStage_' + sim.stage))}</div></div><div class="ws-name"><div>Nome: <b>${esc(c.name)}</b></div><div>Data: ____/____/______</div>${key ? '' : '<div class="ws-score">Acertos: ______</div>'}</div></div>`;
+  const page = key => { n = 0; return `<div class="ps-page ws sim ${key ? 'ws-key' : ''}">${top(key)}${sim.parts.map(p => part(p, key)).join('')}${key ? '' : `<div class="ws-foot">🌟 Você está se preparando para o futuro, ${esc(c.name)}!</div>`}</div>`; };
+  return mode === 'key' ? page(true) : page(false);
+}
+
+/* ---------- tela ---------- */
+function futMonthNumbers(c) {
+  const m0 = new Date(new Date().getFullYear(), new Date().getMonth(), 1), inM = iso => Date.parse(iso) >= m0.getTime();
+  return { books: S.reading.books.filter(b => b.childId === c.id && inM(b.date)).length, english: S.english.sessions.filter(x => x.childId === c.id && inM(x.date)).reduce((s, x) => s + x.minutes, 0),
+    games: S.games.wins.filter(x => x.childId === c.id && inM(x.date)).length, pages: S.homework.entries.filter(x => x.childId === c.id && inM(x.date)).reduce((s, x) => s + x.pages, 0) };
+}
+const FUTURE_SECTION = {
+  id: 'futuro', icon: '🎓', nav: 'navFuture', child: false,
+  build: () => `<div id="fuTop"></div><div id="fuPicker"></div><div id="fuBody"></div>`,
+  update() {
+    const F = S.future; if (!childById(ui.fuChild)) ui.fuChild = S.children[0].id;
+    const c = childById(ui.fuChild), st = futStage(c.age), tl = futTimeline(c), k = S.future.kids[c.id] || { cando: [] };
+    $('#fuTop').innerHTML = card('🎯 ' + t('fuGoalTitle'), `<div class="row2"><div><label for="fuSchool">${t('fuSchool')}</label><input id="fuSchool" maxlength="80" value="${esc(F.school)}" placeholder="Germinare (São Paulo)"></div><div><label for="fuEntry">${t('fuEntry')}</label><select id="fuEntry">${[1, 2, 6, 7, 8, 9, 10].map(g => `<option value="${g}" ${F.entryGrade === g ? 'selected' : ''}>${g === 10 ? t('fuEntryHigh') : gradeLabel(g)}</option>`).join('')}</select></div></div>
+      <label class="check mt"><input type="checkbox" id="fuAbroad" ${F.abroad ? 'checked' : ''}> 🌍 ${t('fuAbroad')}</label>
+      <div class="actions mt"><button type="button" class="btn btn-primary btn-sm" data-act="fu-save">${t('save')}</button></div>
+      <div class="fu-kids mt">${S.children.map(x => { const l = futTimeline(x); return `<div class="fu-kid ${x.id === c.id ? 'on' : ''}" style="--c:${x.accentColor}" data-act="fu-child" data-id="${esc(x.id)}">${avatar(x, 'sm')}<div><b>${esc(x.name)}</b><small>${esc(gradeLabel(l.grade))}</small></div><span>${l.done ? '✅' : l.yearsToApply <= 0 ? `📝 ${t('fuThisYear')}` : `📅 ${l.applyYear}`}</span></div>`; }).join('')}</div>
+      <p class="hint">${t('fuTopHint', { grade: F.entryGrade === 10 ? t('fuEntryHigh') : gradeLabel(F.entryGrade - 1) })}</p>`);
+    $('#fuPicker').innerHTML = '';
+    // linha do tempo
+    const years = [], y0 = new Date().getFullYear();
+    for (let i = 0; i <= Math.max(0, tl.yearsToApply) + 1 && i < 12; i++) { const g = tl.grade + i; years.push({ y: y0 + i, g, apply: i === tl.yearsToApply, entry: i === tl.yearsToApply + 1 }); }
+    const nums = futMonthNumbers(c), goals = FUT_MONTH[st];
+    const bar = (ico, label, v, goal, unit = '') => goal ? `<div class="fu-num"><span>${ico} ${esc(label)}</span><b>${v}${unit} / ${goal}${unit}</b><div class="progress"><span style="width:${Math.min(100, v / goal * 100)}%;background:${v >= goal ? '#16a34a' : c.progressColor}"></span></div></div>` : '';
+    const pillars = FUT_PILLARS.map(p => { const list = (FUT_GOALS[p.id][st] || []); const ok = list.filter(g => k.cando.includes(g)).length; const hi = p.id === 'world' && F.abroad; return `<div class="fu-pillar ${hi ? 'hi' : ''}"><div class="fu-ph"><span>${p.icon}</span><b>${esc(t('fuP_' + p.id))}</b><small>${ok}/${list.length}</small></div><div class="progress"><span style="width:${list.length ? ok / list.length * 100 : 0}%;background:${c.progressColor}"></span></div>
+      ${list.map(g => `<label class="fu-goal ${k.cando.includes(g) ? 'ok' : ''}"><input type="checkbox" data-change="fu-cando" data-id="${g}" ${k.cando.includes(g) ? 'checked' : ''}><span>${esc(t('fg_' + g))}</span></label>`).join('')}
+      <p class="fu-tip">💡 ${esc(t('fuTip_' + p.id + '_' + st))}</p></div>`; }).join('');
+    const last = F.lastSims[c.id];
+    $('#fuBody').innerHTML = `<div class="card fu-card" style="--c:${c.accentColor}">
+      <div class="fu-head">${avatar(c)}<div><h2>${esc(c.name)}</h2><span>${years ? '' : ''}${esc(t('fuNow', { grade: gradeLabel(tl.grade), age: c.age }))}</span></div>
+        <div class="fu-grade"><label for="fuGrade">${t('fuGradeNow')}</label><select id="fuGrade" data-change="fu-grade">${[-4, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(g => `<option value="${g}" ${g === tl.grade || (g === -4 && tl.grade <= -3) ? 'selected' : ''}>${esc(gradeLabel(g))}</option>`).join('')}</select></div></div>
+      <div class="fu-count">${tl.done ? `✅ ${t('fuDone')}` : tl.yearsToApply <= 0 ? `📝 <b>${t('fuApplyNow')}</b>` : `⏳ ${t('fuCountdown', { n: tl.yearsToApply, year: tl.applyYear, entry: tl.entryYear, school: esc(F.school || t('fuTheSchool')) })}`}</div>
+      <div class="fu-line">${years.map(x => `<div class="fu-y ${x.apply ? 'apply' : ''} ${x.entry ? 'entry' : ''}"><b>${x.y}</b><small>${esc(x.g > 9 ? '' : gradeLabel(x.g))}</small>${x.apply ? `<em>📝 ${t('fuApply')}</em>` : x.entry ? `<em>🎓 ${t('fuEnter')}</em>` : ''}</div>`).join('')}</div>
+      <h3 class="mt">📊 ${t('fuMonthTitle')}</h3>
+      <div class="fu-nums">${bar('📚', t('mrBooks'), nums.books, goals.books)}${bar('🇬🇧', t('mrEnglishMin'), nums.english, goals.english)}${bar('🧩', t('mrGames'), nums.games, goals.games)}${bar('📝', t('prHwPages'), nums.pages, goals.pages)}</div>
+      <h3 class="mt">🌱 ${t('fuPillarsTitle', { stage: t('fuStage_' + st) })}</h3><p class="hint" style="margin-top:-4px">${t('fuPillarsHint')}</p>
+      <div class="fu-pillars">${pillars}</div>
+      ${c.age >= 5 ? `<div class="g-print-box mt"><h3>📝 ${t('fuSimTitle')}</h3><p class="hint">${t('fuSimHint')}</p><div class="actions"><button type="button" class="btn btn-primary" data-act="fu-sim">🖨️ ${t('fuSimBtn', { name: esc(c.name) })}</button><button type="button" class="btn btn-soft" data-act="fu-sim-key" ${last ? '' : 'disabled'}>🔑 ${t('fuSimKey')}</button></div>${last ? `<p class="hint">${t('gKeyLast', { name: esc(c.name), date: fmtDateTime(last.date) })}</p>` : ''}</div>` : ''}
+      ${F.abroad ? `<div class="notice mt fu-abroad"><b>🌍 ${t('fuAbroadTitle')}</b><ul>${['fuAb1', 'fuAb2', 'fuAb3', 'fuAb4', 'fuAb5'].map(x => `<li>${esc(t(x))}</li>`).join('')}</ul></div>` : ''}
+    </div>`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'jogos') + 1, 0, FUTURE_SECTION);
+
+Object.assign(ACTIONS, {
+  'fu-child': el => { ui.fuChild = el.dataset.id; render(); },
+  'fu-save': () => { S.future.school = text($('#fuSchool').value, 80); S.future.entryGrade = clamp(int($('#fuEntry').value, 6), 1, 10); S.future.abroad = $('#fuAbroad').checked; commit(); toast(t('saved'), 'success'); },
+  'fu-sim': () => { const c = childById(ui.fuChild), seed = `${c.id}|sim|${Date.now()}`; S.future.lastSims[c.id] = { seed, date: isoNow() }; commit(); printDocument(simHtml(c, buildSim(c, seed), 'sheet'), 'Simulado — ' + c.name); },
+  'fu-sim-key': () => { const c = childById(ui.fuChild), last = S.future.lastSims[c.id]; if (!last) return; printDocument(simHtml(c, buildSim(c, last.seed), 'key'), t('wsKeyTitle') + ' — ' + c.name); }
+});
+Object.assign(CHANGES, {
+  'fu-grade': el => { const c = childById(ui.fuChild); S.future.kids[c.id] = { ...(S.future.kids[c.id] || { cando: [] }), grade: int(el.value, 0) }; commit(); },
+  'fu-cando': el => { const c = childById(ui.fuChild), k = S.future.kids[c.id] || (S.future.kids[c.id] = { grade: futGrade(c), cando: [] }); if (!Number.isFinite(k.grade)) k.grade = futGrade(c); k.cando = el.checked ? [...new Set([...k.cando, el.dataset.id])] : k.cando.filter(x => x !== el.dataset.id); commit(); }
+});
+
+/* ---------- dados ---------- */
+const _normalizeExtrasBase = normalizeExtras;
+normalizeExtras = function (raw, d, mapChild) {
+  _normalizeExtrasBase(raw, d, mapChild);
+  const f = raw.future && typeof raw.future === 'object' ? raw.future : {};
+  d.future = { school: typeof f.school === 'string' ? text(f.school, 80) : 'Germinare (São Paulo)', entryGrade: clamp(int(f.entryGrade, 6), 1, 10), abroad: !!f.abroad, kids: {}, lastSims: {} };
+  if (f.kids && typeof f.kids === 'object') Object.entries(f.kids).forEach(([id, v]) => { const cid = mapChild(id); if (!cid || !v) return; d.future.kids[cid] = { grade: Number.isFinite(Number(v.grade)) && v.grade !== null && v.grade !== '' ? clamp(int(v.grade, 0), -4, 12) : undefined, cando: Array.isArray(v.cando) ? [...new Set(v.cando.filter(x => typeof x === 'string').map(x => x.slice(0, 10)))].slice(0, 200) : [] }; if (d.future.kids[cid].grade === undefined) delete d.future.kids[cid].grade; });
+  if (f.lastSims && typeof f.lastSims === 'object') Object.entries(f.lastSims).forEach(([id, v]) => { const cid = mapChild(id); if (cid && v && typeof v.seed === 'string') d.future.lastSims[cid] = { seed: v.seed.slice(0, 80), date: safeIso(v.date) }; });
+};
 
 </script>
 <script>
