@@ -1051,7 +1051,7 @@ span.q-name{cursor:default}
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v84 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v85 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -6186,13 +6186,17 @@ const STUDY_TEXT = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], STUDY_TEXT[l]));
 
+/* Textos: ajuda com a comida. */
+const KITCHEN_TEXT = {"pt": {"lib_squeezeLemon": "Espremer limão para o suco", "lib_washVeggies": "Lavar frutas e verduras", "lib_stirMix": "Mexer a massa do bolo (com ajuda)", "lib_peel": "Descascar banana, ovo cozido ou tangerina", "lib_cutGarlicOnion": "Ajudar a cortar alho e cebola (com um adulto)", "lib_crackEggs": "Quebrar os ovos numa tigela", "lib_measure": "Medir os ingredientes da receita"}, "en": {"lib_squeezeLemon": "Squeeze lemons for juice", "lib_washVeggies": "Wash fruit and vegetables", "lib_stirMix": "Stir the cake batter (with help)", "lib_peel": "Peel a banana, boiled egg or tangerine", "lib_cutGarlicOnion": "Help chop garlic and onion (with an adult)", "lib_crackEggs": "Crack the eggs into a bowl", "lib_measure": "Measure the recipe ingredients"}, "es": {"lib_squeezeLemon": "Exprimir limones para el jugo", "lib_washVeggies": "Lavar frutas y verduras", "lib_stirMix": "Mezclar la masa del pastel (con ayuda)", "lib_peel": "Pelar banana, huevo duro o mandarina", "lib_cutGarlicOnion": "Ayudar a cortar ajo y cebolla (con un adulto)", "lib_crackEggs": "Romper los huevos en un bol", "lib_measure": "Medir los ingredientes de la receta"}, "it": {"lib_squeezeLemon": "Spremere i limoni per il succo", "lib_washVeggies": "Lavare frutta e verdura", "lib_stirMix": "Mescolare l'impasto della torta (con aiuto)", "lib_peel": "Sbucciare banana, uovo sodo o mandarino", "lib_cutGarlicOnion": "Aiutare a tagliare aglio e cipolla (con un adulto)", "lib_crackEggs": "Rompere le uova in una ciotola", "lib_measure": "Misurare gli ingredienti della ricetta"}, "zh": {"lib_squeezeLemon": "挤柠檬做果汁", "lib_washVeggies": "洗水果和蔬菜", "lib_stirMix": "搅拌蛋糕面糊（有人帮忙）", "lib_peel": "剥香蕉、煮鸡蛋或橘子", "lib_cutGarlicOnion": "帮忙切蒜和洋葱（大人陪同）", "lib_crackEggs": "把鸡蛋打进碗里", "lib_measure": "量食谱里的配料"}, "zht": {"lib_squeezeLemon": "擠檸檬做果汁", "lib_washVeggies": "洗水果和蔬菜", "lib_stirMix": "攪拌蛋糕麵糊（有人幫忙）", "lib_peel": "剝香蕉、煮雞蛋或橘子", "lib_cutGarlicOnion": "幫忙切蒜和洋蔥（大人陪同）", "lib_crackEggs": "把雞蛋打進碗裡", "lib_measure": "量食譜裡的配料"}};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], KITCHEN_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 84;
+const APP_VERSION = 85;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -8616,6 +8620,14 @@ const TASK_LIBRARY = [
   { key: 'lib_dryDishes', icon: '🍽️', points: 15, min: 7, max: 9, alias: /secar.*lou[cç]a/ },
   { key: 'lib_simpleSnack', icon: '🥪', points: 15, min: 7, max: 12, alias: /lanche/ },
   { key: 'lib_washDishes', icon: '🧽', points: 25, min: 10, max: 30, alias: /lavar.*lou[cç]a/ },
+  // ajuda com a comida
+  { key: 'lib_squeezeLemon', icon: '🍋', points: 5, min: 3, max: 30, alias: /espremer|lim[aã]o/ },
+  { key: 'lib_washVeggies', icon: '🥕', points: 5, min: 3, max: 30, alias: /lavar.*(fruta|verdura|legume)/ },
+  { key: 'lib_stirMix', icon: '🥣', points: 5, min: 3, max: 8, alias: /mexer.*massa|misturar/ },
+  { key: 'lib_peel', icon: '🍌', points: 5, min: 4, max: 9, alias: /descascar/ },
+  { key: 'lib_cutGarlicOnion', icon: '🧄', points: 10, min: 5, max: 30, alias: /alho|cebola/ },
+  { key: 'lib_crackEggs', icon: '🥚', points: 5, min: 5, max: 12, alias: /quebrar.*ovo/ },
+  { key: 'lib_measure', icon: '🥄', points: 5, min: 6, max: 12, alias: /medir.*ingrediente/ },
   { key: 'lib_cookSimple', icon: '🍳', points: 30, min: 10, max: 30, alias: /receita/ },
   // casa
   { key: 'lib_dustLow', icon: '🪶', points: 10, min: 3, max: 6, alias: /p[oó] d|tirar o p[oó]/ },
@@ -8637,12 +8649,12 @@ const TASK_LIBRARY = [
 ];
 // O "plano" de cada idade: o que eu colocaria para começar.
 // (Inglês fica de fora porque a seção Inglês já dá pontos pelo tempo de estudo.)
-const PLAN_VERSION = '2'; // aumentar quando o plano ganhar tarefas novas, para o aviso voltar
+const PLAN_VERSION = '3'; // aumentar quando o plano ganhar tarefas novas, para o aviso voltar
 const AGE_PLAN = {
   b1: ['lib_toysBox', 'lib_brushHelp', 'lib_diaperBin', 'lib_shoesPlace', 'lib_lineHang', 'lib_lineTake'],
-  b2: ['taskPutToysAway', 'lib_washOwnPlate', 'taskBrushTeeth', 'taskLaundryBasket', 'lib_dressHelp', 'lib_washHands', 'lib_read10', 'lib_lineHang', 'lib_lineTake'],
-  b3: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_backpack', 'lib_hangTowel', 'lib_read10'],
-  b4: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_homework', 'taskRead15', 'lib_hangTowel'],
+  b2: ['taskPutToysAway', 'lib_washOwnPlate', 'taskBrushTeeth', 'taskLaundryBasket', 'lib_dressHelp', 'lib_washHands', 'lib_read10', 'lib_lineHang', 'lib_lineTake', 'lib_squeezeLemon'],
+  b3: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_backpack', 'lib_hangTowel', 'lib_read10', 'lib_cutGarlicOnion'],
+  b4: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_homework', 'taskRead15', 'lib_hangTowel', 'lib_cutGarlicOnion'],
   b5: ['lib_washDishes', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'lib_tidyRoom', 'lib_study30', 'lib_helpSibling']
 };
 
