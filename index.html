@@ -723,13 +723,92 @@ span.q-name{cursor:default}
 .fw-grid .pr-compact th,.fw-grid .pr-compact td{padding:1px 2px}
 .fw-grid .pr-compact td.pr-tl{font-size:8.7px;letter-spacing:-.15px}
 .rw-idea{cursor:pointer}.rw-idea .meta input{width:18px;height:18px;margin:0 4px 0 0;flex:0 0 auto}
+/* ===== Jogos e raciocínio ===== */
+.g-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.g-stats{display:flex;gap:8px;flex-wrap:wrap}
+.g-stats span{font-size:12.5px;font-weight:700;background:#f4f4f8;border-radius:999px;padding:4px 10px}
+.g-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.g-pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.g-tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 10px;border-radius:18px;border:1.5px solid var(--line);background:linear-gradient(145deg,#fff,#f6f4ff);cursor:pointer;font:inherit;color:inherit;text-align:center;transition:transform .15s,box-shadow .15s}
+.g-tile:hover:not([disabled]){transform:translateY(-2px);box-shadow:0 10px 22px rgba(43,39,78,.1)}
+.g-tile[disabled]{opacity:.4;cursor:default}
+.g-tile span{font-size:34px}
+.g-tile b{font-size:15px}
+.g-tile small{font-size:12px;color:var(--muted)}
+.g-board{margin-top:14px;border:2px solid var(--primary);border-radius:20px;padding:14px;background:#fff}
+.g-board-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.g-board-head .hint{flex:1;margin:0}
+.g-sud-play{display:grid;grid-template-columns:repeat(var(--n),1fr);max-width:min(100%,calc(var(--n)*58px));margin:0 auto;border:3px solid #1d1d2b;border-radius:10px;overflow:hidden}
+.g-cell{aspect-ratio:1;border:1px solid #c9cbd8;background:#fff;font:inherit;font-size:24px;font-weight:800;cursor:pointer;color:#2563eb;padding:0}
+.g-n9 .g-cell{font-size:18px}
+.g-cell.fixed{color:#1d1d2b;background:#f4f4f8;cursor:default}
+.g-cell.sel{background:#e0e7ff;box-shadow:inset 0 0 0 3px var(--primary)}
+.g-cell.bad{color:#dc2626;background:#fee2e2}
+.g-cell.bb{border-bottom:3px solid #1d1d2b}
+.g-cell.br{border-right:3px solid #1d1d2b}
+.g-pad{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.g-key{min-width:50px;height:50px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:24px;font-weight:800;cursor:pointer}
+.g-key:active{transform:scale(.95)}
+.g-key.erase{background:#f4f4f8;font-size:20px}
+.g-mem{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:440px;margin:0 auto}
+.g-mem6{grid-template-columns:repeat(3,1fr);max-width:330px}
+.g-mem8{grid-template-columns:repeat(4,1fr);max-width:400px}
+.g-mem20{grid-template-columns:repeat(5,1fr);max-width:500px}
+.g-card{aspect-ratio:1;border-radius:14px;border:0;background:linear-gradient(135deg,var(--primary),#a78bfa);color:#fff;font-size:30px;cursor:pointer;box-shadow:0 6px 14px rgba(43,39,78,.15)}
+.g-card.up{background:#fff;border:2px solid var(--primary);font-size:36px}
+.g-card.ok{background:#ecfdf5;border-color:#16a34a}
+.g-seq-play{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;font-size:26px;font-weight:900}
+.g-seq-play span{min-width:48px;height:56px;display:grid;place-items:center;border-radius:14px;background:#f4f4f8;padding:0 8px}
+.g-seq-play.emo span{font-size:34px}
+.g-seq-play .g-q{background:#fef3c7;border:2px dashed #f59e0b}
+.g-opts{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.g-opt{min-width:70px;height:64px;border-radius:16px;border:2px solid var(--line);background:#fff;font:inherit;font-size:26px;font-weight:900;cursor:pointer}
+.g-opt.emo{font-size:36px}
+.g-opt:hover{border-color:var(--primary)}
+.g-feedback{text-align:center;font-weight:800;margin:10px 0 0}
+.g-feedback.ok{color:#16a34a}.g-feedback.bad{color:#b45309}
+.g-done{margin-top:14px;padding:14px;border-radius:16px;background:linear-gradient(135deg,#ecfdf5,#fff);border:1.5px solid #86efac;text-align:center;font-size:16px}
+.g-done .actions{justify-content:center;margin-top:10px}
+@media(max-width:620px){.g-pick{grid-template-columns:1fr}.g-tile{flex-direction:row;text-align:left;padding:12px}.g-tile span{font-size:28px}.g-tile small{display:none}}
+/* folha impressa */
+.g-sheet .ws-sec{padding:6px 12px}
+.g-sud-row{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.g-sud{border-collapse:collapse;border:3px solid #1d1d2b;width:auto!important;table-layout:fixed}
+.g-sud td{width:44px;height:44px;border:1px solid #888;text-align:center;font-size:24px;font-weight:800}
+.g-sud6 td{width:38px;height:38px;font-size:20px}
+.g-sud9 td{width:30px;height:30px;font-size:16px}
+.g-sud td.bb{border-bottom:3px solid #1d1d2b}
+.g-sud td.br{border-right:3px solid #1d1d2b}
+.g-sud td.ans{color:#2563eb}
+.g-maze-wrap{display:flex;justify-content:center}
+.g-maze{max-width:100%;height:auto}
+.g-seq{font-size:22px;font-weight:800;letter-spacing:1px;flex:1}
+.g-seq.emo{font-size:28px}
+.g-seq i{font-style:normal;color:#bbb;margin:0 6px;font-size:16px}
+.g-blank{display:inline-block;min-width:48px;border-bottom:2px solid #1d1d2b;text-align:center;color:#2563eb}
+.g-circle{display:inline-block;border:3px solid #ef4444;border-radius:50%;padding:0 4px}
+.g-math{font-size:20px;font-weight:800}
+.g-box{display:inline-block;width:40px;height:30px;border:2px solid #1d1d2b;border-radius:6px;vertical-align:middle}
+.g-ans{color:#2563eb;border-bottom:2px solid #2563eb;padding:0 6px}
+/* quadro impresso: altura das linhas vem do cálculo (cabe em 1 folha) */
+.pr-chart .pr-chartgrid td{height:var(--rowh,34px);padding-top:0;padding-bottom:0}
+.pr-chart .pr-cb{width:var(--cb,20px);height:var(--cb,20px)}
+.pr-big .pr-chartgrid td{height:var(--rowh,44px)}
+.pr-big .pr-cb{width:var(--cb,26px);height:var(--cb,26px)}
+.pr-tight .pr-chartgrid{font-size:11px}
+.pr-tight .pr-tn small{display:inline;margin-left:4px}
+.pr-tight .pr-ti{font-size:11px}
+.pr-chart{break-inside:avoid;page-break-inside:avoid}
+.pr-chart .pr-box{padding:5px 9px}
+.pr-chart .pr-extras{gap:3px 12px}
+.pr-chart .pr-cheer{margin-top:8px}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v79 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v80 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -2469,32 +2548,39 @@ HW_TEXT.zht = {
 /* Textos: ideias de recompensas. */
 const RW_TEXT = {
 pt: {
+  rw_minigame30: "Jogar o minigame no fim de semana (30 min)", rw_minigame60: "Jogar o minigame no fim de semana (1 hora)",
   rwIdeasBtn: 'Ideias de recompensas', rwIdeasTitle: 'Ideias de recompensas', rwIdeasIntro: 'Marque as que quiser e ajuste o preço. As que vocês já têm aparecem com o preço atual e o sugerido; se ficarem marcadas, recebem o preço novo.', rwIdeasHint: 'Dica: misture coisas pequenas (para os menores conseguirem rápido) com grandes (para juntar). Tempo junto com vocês costuma valer mais que brinquedo.', rwIdeasSave: 'Salvar recompensas', rwIdeasDone: '{added} recompensa(s) nova(s) e {changed} preço(s) ajustado(s).', rwHasNow: 'já existe · hoje custa {n}', rwNew: 'nova',
   rwTier_small: '⭐ Pequenas — para o dia a dia', rwTierHint_small: 'Dá para conseguir em 1 ou 2 dias. Ótimas para os menores.', rwTier_medium: '🌈 Médias — da semana', rwTierHint_medium: 'Mais ou menos uma semana de tarefas.', rwTier_big: '🏆 Grandes — para juntar', rwTierHint_big: 'Um mês ou mais. Ensina a esperar e guardar.',
   rw_sticker: 'Ganhar um adesivo ou figurinha', rw_song: 'Escolher a música no carro', rw_story: 'Uma história a mais antes de dormir', rw_bubbles: 'Brincar de bolha de sabão', rw_dessert: 'Escolher a sobremesa', rw_screen15: '15 minutos a mais de tela', rw_momTime: '30 minutos só com a mamãe ou o papai', rw_bake: 'Fazer um bolo ou biscoito juntos', rw_picnic: 'Piquenique na sala ou no quintal', rw_dinner: 'Escolher o jantar', rw_friend: 'Convidar um amigo para brincar', rw_camp: 'Acampamento na sala (cabana de lençol)', rw_smallToy: 'Brinquedo pequeno', rw_cinema: 'Ir ao cinema', rw_yesDay: 'Dia do sim (com combinados)'
 },
 en: {
+  rw_minigame30: "Play the mini game on the weekend (30 min)", rw_minigame60: "Play the mini game on the weekend (1 hour)",
   rwIdeasBtn: 'Reward ideas', rwIdeasTitle: 'Reward ideas', rwIdeasIntro: 'Tick the ones you want and adjust the price. Rewards you already have show the current and the suggested price; if left ticked, they get the new price.', rwIdeasHint: 'Tip: mix small things (so the little ones get them quickly) with big ones (to save up for). Time with you is often worth more than a toy.', rwIdeasSave: 'Save rewards', rwIdeasDone: '{added} new reward(s) and {changed} price(s) adjusted.', rwHasNow: 'already added · costs {n} now', rwNew: 'new',
   rwTier_small: '⭐ Small — everyday', rwTierHint_small: 'Reachable in 1 or 2 days. Great for the little ones.', rwTier_medium: '🌈 Medium — weekly', rwTierHint_medium: 'About a week of tasks.', rwTier_big: '🏆 Big — to save up for', rwTierHint_big: 'A month or more. Teaches waiting and saving.',
   rw_sticker: 'Get a sticker', rw_song: 'Pick the music in the car', rw_story: 'One more bedtime story', rw_bubbles: 'Play with soap bubbles', rw_dessert: 'Choose dessert', rw_screen15: '15 more minutes of screen time', rw_momTime: '30 minutes alone with mom or dad', rw_bake: 'Bake a cake or cookies together', rw_picnic: 'Picnic in the living room or yard', rw_dinner: 'Choose dinner', rw_friend: 'Invite a friend to play', rw_camp: 'Living room camp (blanket fort)', rw_smallToy: 'Small toy', rw_cinema: 'Go to the movies', rw_yesDay: 'Yes Day (with ground rules)'
 },
 es: {
+  rw_minigame30: "Jugar al minijuego el fin de semana (30 min)", rw_minigame60: "Jugar al minijuego el fin de semana (1 hora)",
   rwIdeasBtn: 'Ideas de recompensas', rwIdeasTitle: 'Ideas de recompensas', rwIdeasIntro: 'Marca las que quieras y ajusta el precio. Las que ya tienen aparecen con el precio actual y el sugerido; si quedan marcadas, reciben el precio nuevo.', rwIdeasHint: 'Consejo: mezcla cosas pequeñas (para que los más chicos las consigan rápido) con grandes (para ahorrar). El tiempo con ustedes suele valer más que un juguete.', rwIdeasSave: 'Guardar recompensas', rwIdeasDone: '{added} recompensa(s) nueva(s) y {changed} precio(s) ajustado(s).', rwHasNow: 'ya existe · hoy cuesta {n}', rwNew: 'nueva',
   rwTier_small: '⭐ Pequeñas — del día a día', rwTierHint_small: 'Se consiguen en 1 o 2 días. Ideales para los más pequeños.', rwTier_medium: '🌈 Medianas — de la semana', rwTierHint_medium: 'Más o menos una semana de tareas.', rwTier_big: '🏆 Grandes — para ahorrar', rwTierHint_big: 'Un mes o más. Enseña a esperar y ahorrar.',
   rw_sticker: 'Ganar una pegatina', rw_song: 'Elegir la música en el coche', rw_story: 'Un cuento más antes de dormir', rw_bubbles: 'Jugar con pompas de jabón', rw_dessert: 'Elegir el postre', rw_screen15: '15 minutos más de pantalla', rw_momTime: '30 minutos a solas con mamá o papá', rw_bake: 'Hacer un pastel o galletas juntos', rw_picnic: 'Pícnic en la sala o el patio', rw_dinner: 'Elegir la cena', rw_friend: 'Invitar a un amigo a jugar', rw_camp: 'Campamento en la sala (cabaña de sábanas)', rw_smallToy: 'Juguete pequeño', rw_cinema: 'Ir al cine', rw_yesDay: 'Día del sí (con reglas)'
 },
 it: {
+  rw_minigame30: "Giocare al minigioco nel fine settimana (30 min)", rw_minigame60: "Giocare al minigioco nel fine settimana (1 ora)",
   rwIdeasBtn: 'Idee di ricompense', rwIdeasTitle: 'Idee di ricompense', rwIdeasIntro: 'Spunta quelle che vuoi e regola il prezzo. Quelle che avete già mostrano il prezzo attuale e quello consigliato; se restano spuntate, prendono il prezzo nuovo.', rwIdeasHint: 'Consiglio: mescola cose piccole (così i più piccoli le ottengono presto) con cose grandi (per risparmiare). Il tempo con voi spesso vale più di un giocattolo.', rwIdeasSave: 'Salva ricompense', rwIdeasDone: '{added} ricompensa/e nuova/e e {changed} prezzo/i aggiornato/i.', rwHasNow: 'già presente · ora costa {n}', rwNew: 'nuova',
   rwTier_small: '⭐ Piccole — di tutti i giorni', rwTierHint_small: 'Si ottengono in 1 o 2 giorni. Perfette per i più piccoli.', rwTier_medium: '🌈 Medie — della settimana', rwTierHint_medium: 'Circa una settimana di compiti.', rwTier_big: '🏆 Grandi — da mettere da parte', rwTierHint_big: 'Un mese o più. Insegna ad aspettare e risparmiare.',
   rw_sticker: 'Ricevere un adesivo', rw_song: 'Scegliere la musica in macchina', rw_story: 'Una storia in più prima di dormire', rw_bubbles: 'Giocare con le bolle di sapone', rw_dessert: 'Scegliere il dolce', rw_screen15: '15 minuti in più di schermo', rw_momTime: '30 minuti da solo con mamma o papà', rw_bake: 'Fare una torta o biscotti insieme', rw_picnic: 'Picnic in salotto o in giardino', rw_dinner: 'Scegliere la cena', rw_friend: 'Invitare un amico a giocare', rw_camp: 'Campeggio in salotto (capanna di lenzuola)', rw_smallToy: 'Piccolo giocattolo', rw_cinema: 'Andare al cinema', rw_yesDay: 'Giorno del sì (con regole)'
 },
 zh: {
+  rw_minigame30: "周末玩小游戏机（30 分钟）", rw_minigame60: "周末玩小游戏机（1 小时）",
   rwIdeasBtn: '奖励点子', rwIdeasTitle: '奖励点子', rwIdeasIntro: '勾选想要的并调整价格。已经有的奖励会显示现在的价格和建议价格；保持勾选就会用新价格。', rwIdeasHint: '小提示：小奖励（让小的孩子很快能换到）和大奖励（需要攒）搭配着用。和你们在一起的时间往往比玩具更珍贵。', rwIdeasSave: '保存奖励', rwIdeasDone: '新增 {added} 个奖励，调整了 {changed} 个价格。', rwHasNow: '已有 · 现在 {n}', rwNew: '新',
   rwTier_small: '⭐ 小奖励 — 日常', rwTierHint_small: '1 到 2 天就能换到，很适合小的孩子。', rwTier_medium: '🌈 中奖励 — 每周', rwTierHint_medium: '大约一周的任务。', rwTier_big: '🏆 大奖励 — 慢慢攒', rwTierHint_big: '一个月或更久，学会等待和储蓄。',
   rw_sticker: '得到一张贴纸', rw_song: '在车上选音乐', rw_story: '睡前多讲一个故事', rw_bubbles: '玩肥皂泡泡', rw_dessert: '选甜点', rw_screen15: '多 15 分钟屏幕时间', rw_momTime: '和妈妈或爸爸单独相处 30 分钟', rw_bake: '一起做蛋糕或饼干', rw_picnic: '在客厅或院子野餐', rw_dinner: '选晚餐', rw_friend: '邀请朋友来玩', rw_camp: '客厅露营（床单帐篷）', rw_smallToy: '小玩具', rw_cinema: '去看电影', rw_yesDay: '"说好"日（有约定）'
 }
 };
 RW_TEXT.zht = {
+  rw_minigame30: "週末玩小遊戲機（30 分鐘）",
+  rw_minigame60: "週末玩小遊戲機（1 小時）",
   rwIdeasBtn: "獎勵點子",
   rwIdeasTitle: "獎勵點子",
   rwIdeasIntro: "勾選想要的並調整價格。已經有的獎勵會顯示現在的價格和建議價格；保持勾選就會用新價格。",
@@ -2527,13 +2613,642 @@ RW_TEXT.zht = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], RW_TEXT[l]));
 
+/* Textos: jogos e raciocínio. */
+const GAMES_TEXT = {
+"pt": {
+"navGames": "Jogos e raciocínio",
+"title_jogos": "Jogos e raciocínio",
+"sub_jogos": "Desafios para pensar: jogar no app, imprimir e ideias de jogos de tabuleiro.",
+"typeGame": "Jogo",
+"gWonLabel": "Venceu o desafio: {game}",
+"g_sudoku": "Sudoku",
+"g_memory": "Jogo da memória",
+"g_seq": "O que vem depois?",
+"gDesc_sudoku": "Lógica: cada símbolo uma vez por linha, coluna e quadrado.",
+"gDesc_memory": "Memória e atenção: ache os pares.",
+"gDesc_seq": "Padrões e números: descubra o próximo.",
+"gLevelName_0": "Bebê (1 a 2 anos)",
+"gLevelName_1": "Pequenos (3 e 4 anos)",
+"gLevelName_2": "Exploradores (5 e 6 anos)",
+"gLevelName_3": "Pensadores (7 a 9 anos)",
+"gLevelName_4": "Mestres (10+)",
+"gpLevel": "Nível {n}",
+"gpTitle": "Desafios de raciocínio",
+"gpSudoku": "Sudoku",
+"gpSudokuHelp": "Complete a grade {n}×{n}: cada número aparece uma vez em cada linha, cada coluna e cada quadrado grosso.",
+"gpSudokuHelpPics": "Desenhe a fruta que falta: cada fruta aparece uma vez em cada linha, coluna e quadradinho.",
+"gpMaze": "Labirinto",
+"gpMazeHelp": "Ajude o ratinho a chegar ao queijo sem atravessar as paredes.",
+"gpSeq": "O que vem depois?",
+"gpSeqHelp": "Descubra o padrão e complete (ou circule a resposta).",
+"gpOdd": "Qual é o diferente?",
+"gpOddHelp": "Circule a figura que é diferente das outras.",
+"gpMissing": "Número escondido",
+"gpMissingHelp": "Descubra o número que falta no quadradinho.",
+"gpCheer": "Muito bem, {name}! Seu cérebro ficou mais forte hoje.",
+"gTaskName": "Jogar {game}",
+"gWinStars": "+{n} estrelas!",
+"gWinNoStars": "Hoje as estrelas dos jogos já acabaram, mas valeu o treino!",
+"gWin": "Conseguiu!",
+"gAgain": "Jogar de novo",
+"gMemoryHelp": "Vire duas cartas e ache os pares",
+"gMoves": "{n} jogada(s)",
+"gSeqProgress": "Pergunta {i} de {n} · {right} certa(s)",
+"gRight": "Isso!",
+"gWrongWas": "Quase! Era {a}.",
+"gSeqTryAgain": "Acertou {n} de {total}. Tente de novo para ganhar as estrelas!",
+"gTabPlay": "Jogar",
+"gTabPrint": "Imprimir",
+"gTabIdeas": "Jogos de tabuleiro",
+"gStarsRule": "Cada desafio vencido vale {n} estrelas, até {max} por dia. Depois disso dá para continuar jogando só por diversão.",
+"gPrintIntro": "Folha de desafios para {name} — nível {level} ({lname}): sudoku, labirinto, sequências e mais. Cada vez sai uma folha diferente.",
+"gPrintBtn": "Imprimir folha de desafios",
+"gPrintAll": "Imprimir para todos",
+"gPrintHint": "No modo responsável sai junto uma página de gabarito.",
+"gIdeasIntro": "Jogos que combinam com a idade de {name} e o que cada um ensina. Toque em + Tarefa para virar uma tarefa da semana.",
+"gAsTask": "Tarefa",
+"gAsRewardTitle": "Ou como recompensa",
+"gAsRewardHint": "Jogar junto com vocês é um prêmio que as crianças adoram.",
+"rw_gameNight": "Noite de jogos de tabuleiro em família",
+"rw_chessParent": "Uma partida de xadrez com a mamãe ou o papai",
+"gLevelFor": "Nível de {name}",
+"gToday": "hoje {n}/{max}",
+"gMonth": "{n} no mês",
+"gRules": "Regras dos jogos",
+"gRulePoints": "Estrelas por desafio vencido",
+"gRuleMax": "Máximo de desafios com estrelas por dia",
+"gRuleHint": "O limite evita que fiquem só no celular para ganhar pontos.",
+"gTaskAdded": "\"Jogar {game}\" virou tarefa de {name}.",
+"gRewardAdded": "\"{name}\" entrou nas recompensas.",
+"bg_shapes": "Brinquedo de encaixe de formas",
+"bg_shapes_why": "Formas, cores e coordenação das mãos.",
+"bg_blocks": "Blocos de montar",
+"bg_blocks_why": "Criatividade, equilíbrio e noção de espaço.",
+"bg_puzzleSmall": "Quebra-cabeça de 4 a 24 peças",
+"bg_puzzleSmall_why": "Atenção, paciência e observar detalhes.",
+"bg_memory": "Jogo da memória",
+"bg_memory_why": "Memória e concentração.",
+"bg_domino": "Dominó",
+"bg_domino_why": "Contar, comparar quantidades e esperar a vez.",
+"bg_lince": "Lince",
+"bg_lince_why": "Atenção visual e rapidez.",
+"bg_guess": "Cara a Cara",
+"bg_guess_why": "Fazer perguntas, eliminar possibilidades (lógica).",
+"bg_uno": "Uno",
+"bg_uno_why": "Cores, números, regras e estratégia simples.",
+"bg_checkers": "Damas",
+"bg_checkers_why": "Planejar jogadas e pensar no que o outro vai fazer.",
+"bg_tangram": "Tangram",
+"bg_tangram_why": "Geometria e montar figuras com peças.",
+"bg_jenga": "Torre (tipo Jenga)",
+"bg_jenga_why": "Coordenação, calma e equilíbrio.",
+"bg_puzzleBig": "Quebra-cabeça de 48 a 200 peças",
+"bg_puzzleBig_why": "Organização, paciência e foco.",
+"bg_chess": "Xadrez",
+"bg_chess_why": "Estratégia, concentração e pensar antes de agir. A partir dos 6 anos já dá para aprender.",
+"bg_battleship": "Batalha naval",
+"bg_battleship_why": "Coordenadas (linha e coluna) e dedução.",
+"bg_sudoku": "Sudoku em papel",
+"bg_sudoku_why": "Lógica pura, sem precisar fazer contas.",
+"bg_monopoly": "Banco Imobiliário (Júnior)",
+"bg_monopoly_why": "Dinheiro, troco e decisões.",
+"bg_rushhour": "Quebra-cabeças de lógica (tipo Rush Hour)",
+"bg_rushhour_why": "Raciocínio passo a passo, desafios em níveis.",
+"bg_rubik": "Cubo mágico",
+"bg_rubik_why": "Memória de sequências e persistência.",
+"bg_clue": "Detetive",
+"bg_clue_why": "Dedução e eliminar hipóteses."
+},
+"en": {
+"navGames": "Games & thinking",
+"title_jogos": "Games & thinking",
+"sub_jogos": "Brain challenges: play in the app, print, and board game ideas.",
+"typeGame": "Game",
+"gWonLabel": "Won the challenge: {game}",
+"g_sudoku": "Sudoku",
+"g_memory": "Memory game",
+"g_seq": "What comes next?",
+"gDesc_sudoku": "Logic: each symbol once per row, column and box.",
+"gDesc_memory": "Memory and attention: find the pairs.",
+"gDesc_seq": "Patterns and numbers: find the next one.",
+"gLevelName_0": "Baby (ages 1–2)",
+"gLevelName_1": "Little ones (3–4)",
+"gLevelName_2": "Explorers (5–6)",
+"gLevelName_3": "Thinkers (7–9)",
+"gLevelName_4": "Masters (10+)",
+"gpLevel": "Level {n}",
+"gpTitle": "Thinking challenges",
+"gpSudoku": "Sudoku",
+"gpSudokuHelp": "Fill the {n}×{n} grid: each number appears once in every row, column and thick box.",
+"gpSudokuHelpPics": "Draw the missing fruit: each fruit appears once in every row, column and small box.",
+"gpMaze": "Maze",
+"gpMazeHelp": "Help the mouse reach the cheese without crossing the walls.",
+"gpSeq": "What comes next?",
+"gpSeqHelp": "Find the pattern and complete it (or circle the answer).",
+"gpOdd": "Which one is different?",
+"gpOddHelp": "Circle the picture that is different from the others.",
+"gpMissing": "Hidden number",
+"gpMissingHelp": "Find the number missing in the box.",
+"gpCheer": "Well done, {name}! Your brain got stronger today.",
+"gTaskName": "Play {game}",
+"gWinStars": "+{n} stars!",
+"gWinNoStars": "Today's game stars are used up, but great practice!",
+"gWin": "You did it!",
+"gAgain": "Play again",
+"gMemoryHelp": "Turn two cards and find the pairs",
+"gMoves": "{n} move(s)",
+"gSeqProgress": "Question {i} of {n} · {right} right",
+"gRight": "Yes!",
+"gWrongWas": "Almost! It was {a}.",
+"gSeqTryAgain": "You got {n} of {total}. Try again to win the stars!",
+"gTabPlay": "Play",
+"gTabPrint": "Print",
+"gTabIdeas": "Board games",
+"gStarsRule": "Each challenge won is worth {n} stars, up to {max} per day. After that they can keep playing just for fun.",
+"gPrintIntro": "Challenge sheet for {name} — level {level} ({lname}): sudoku, maze, sequences and more. A different sheet every time.",
+"gPrintBtn": "Print challenge sheet",
+"gPrintAll": "Print for everyone",
+"gPrintHint": "In parent mode an answer key page is printed too.",
+"gIdeasIntro": "Games that suit {name}'s age and what each one teaches. Tap + Task to make it a weekly task.",
+"gAsTask": "Task",
+"gAsRewardTitle": "Or as a reward",
+"gAsRewardHint": "Playing together with you is a prize kids love.",
+"rw_gameNight": "Family board game night",
+"rw_chessParent": "A chess game with mom or dad",
+"gLevelFor": "{name}'s level",
+"gToday": "today {n}/{max}",
+"gMonth": "{n} this month",
+"gRules": "Game rules",
+"gRulePoints": "Stars per challenge won",
+"gRuleMax": "Max challenges with stars per day",
+"gRuleHint": "The limit keeps them from staying on the phone just to earn points.",
+"gTaskAdded": "\"Play {game}\" is now a task for {name}.",
+"gRewardAdded": "\"{name}\" was added to rewards.",
+"bg_shapes": "Shape sorter",
+"bg_shapes_why": "Shapes, colors and hand coordination.",
+"bg_blocks": "Building blocks",
+"bg_blocks_why": "Creativity, balance and spatial sense.",
+"bg_puzzleSmall": "Jigsaw puzzle (4 to 24 pieces)",
+"bg_puzzleSmall_why": "Attention, patience and noticing details.",
+"bg_memory": "Memory game",
+"bg_memory_why": "Memory and concentration.",
+"bg_domino": "Dominoes",
+"bg_domino_why": "Counting, comparing amounts and taking turns.",
+"bg_lince": "Spot-it picture game (Lince)",
+"bg_lince_why": "Visual attention and speed.",
+"bg_guess": "Guess Who",
+"bg_guess_why": "Asking questions and ruling things out (logic).",
+"bg_uno": "Uno",
+"bg_uno_why": "Colors, numbers, rules and simple strategy.",
+"bg_checkers": "Checkers",
+"bg_checkers_why": "Planning moves and thinking about the other player.",
+"bg_tangram": "Tangram",
+"bg_tangram_why": "Geometry and building shapes from pieces.",
+"bg_jenga": "Block tower (Jenga-style)",
+"bg_jenga_why": "Coordination, calm and balance.",
+"bg_puzzleBig": "Jigsaw puzzle (48 to 200 pieces)",
+"bg_puzzleBig_why": "Organization, patience and focus.",
+"bg_chess": "Chess",
+"bg_chess_why": "Strategy, concentration and thinking before acting. From age 6 they can learn.",
+"bg_battleship": "Battleship",
+"bg_battleship_why": "Coordinates (row and column) and deduction.",
+"bg_sudoku": "Sudoku on paper",
+"bg_sudoku_why": "Pure logic, no math needed.",
+"bg_monopoly": "Monopoly (Junior)",
+"bg_monopoly_why": "Money, change and decisions.",
+"bg_rushhour": "Logic puzzles (Rush Hour-style)",
+"bg_rushhour_why": "Step-by-step reasoning with levels.",
+"bg_rubik": "Rubik's cube",
+"bg_rubik_why": "Remembering sequences and persistence.",
+"bg_clue": "Clue",
+"bg_clue_why": "Deduction and ruling out options."
+},
+"es": {
+"navGames": "Juegos y razonamiento",
+"title_jogos": "Juegos y razonamiento",
+"sub_jogos": "Desafíos para pensar: jugar en la app, imprimir e ideas de juegos de mesa.",
+"typeGame": "Juego",
+"gWonLabel": "Ganó el desafío: {game}",
+"g_sudoku": "Sudoku",
+"g_memory": "Juego de memoria",
+"g_seq": "¿Qué sigue?",
+"gDesc_sudoku": "Lógica: cada símbolo una vez por fila, columna y cuadro.",
+"gDesc_memory": "Memoria y atención: encuentra las parejas.",
+"gDesc_seq": "Patrones y números: descubre el siguiente.",
+"gLevelName_0": "Bebé (1 a 2 años)",
+"gLevelName_1": "Pequeños (3 y 4 años)",
+"gLevelName_2": "Exploradores (5 y 6 años)",
+"gLevelName_3": "Pensadores (7 a 9 años)",
+"gLevelName_4": "Maestros (10+)",
+"gpLevel": "Nivel {n}",
+"gpTitle": "Desafíos de razonamiento",
+"gpSudoku": "Sudoku",
+"gpSudokuHelp": "Completa la cuadrícula {n}×{n}: cada número aparece una vez en cada fila, columna y cuadro grueso.",
+"gpSudokuHelpPics": "Dibuja la fruta que falta: cada fruta aparece una vez en cada fila, columna y cuadrito.",
+"gpMaze": "Laberinto",
+"gpMazeHelp": "Ayuda al ratón a llegar al queso sin atravesar las paredes.",
+"gpSeq": "¿Qué sigue?",
+"gpSeqHelp": "Descubre el patrón y complétalo (o rodea la respuesta).",
+"gpOdd": "¿Cuál es diferente?",
+"gpOddHelp": "Rodea la figura que es diferente de las demás.",
+"gpMissing": "Número escondido",
+"gpMissingHelp": "Descubre el número que falta en el cuadrito.",
+"gpCheer": "¡Muy bien, {name}! Tu cerebro se hizo más fuerte hoy.",
+"gTaskName": "Jugar {game}",
+"gWinStars": "¡+{n} estrellas!",
+"gWinNoStars": "Hoy ya se acabaron las estrellas de los juegos, ¡pero valió la práctica!",
+"gWin": "¡Lo lograste!",
+"gAgain": "Jugar otra vez",
+"gMemoryHelp": "Voltea dos cartas y encuentra las parejas",
+"gMoves": "{n} jugada(s)",
+"gSeqProgress": "Pregunta {i} de {n} · {right} correcta(s)",
+"gRight": "¡Eso!",
+"gWrongWas": "¡Casi! Era {a}.",
+"gSeqTryAgain": "Acertaste {n} de {total}. ¡Intenta de nuevo para ganar las estrellas!",
+"gTabPlay": "Jugar",
+"gTabPrint": "Imprimir",
+"gTabIdeas": "Juegos de mesa",
+"gStarsRule": "Cada desafío ganado vale {n} estrellas, hasta {max} por día. Después pueden seguir jugando solo por diversión.",
+"gPrintIntro": "Hoja de desafíos para {name} — nivel {level} ({lname}): sudoku, laberinto, secuencias y más. Cada vez sale una hoja diferente.",
+"gPrintBtn": "Imprimir hoja de desafíos",
+"gPrintAll": "Imprimir para todos",
+"gPrintHint": "En modo responsable sale también una página con las respuestas.",
+"gIdeasIntro": "Juegos que van con la edad de {name} y lo que enseña cada uno. Toca + Tarea para convertirlo en tarea de la semana.",
+"gAsTask": "Tarea",
+"gAsRewardTitle": "O como recompensa",
+"gAsRewardHint": "Jugar junto a ustedes es un premio que a los niños les encanta.",
+"rw_gameNight": "Noche de juegos de mesa en familia",
+"rw_chessParent": "Una partida de ajedrez con mamá o papá",
+"gLevelFor": "Nivel de {name}",
+"gToday": "hoy {n}/{max}",
+"gMonth": "{n} en el mes",
+"gRules": "Reglas de los juegos",
+"gRulePoints": "Estrellas por desafío ganado",
+"gRuleMax": "Máximo de desafíos con estrellas por día",
+"gRuleHint": "El límite evita que se queden en el celular solo para ganar puntos.",
+"gTaskAdded": "\"Jugar {game}\" ahora es tarea de {name}.",
+"gRewardAdded": "\"{name}\" se agregó a las recompensas.",
+"bg_shapes": "Juguete de encajar formas",
+"bg_shapes_why": "Formas, colores y coordinación de las manos.",
+"bg_blocks": "Bloques de construcción",
+"bg_blocks_why": "Creatividad, equilibrio y noción de espacio.",
+"bg_puzzleSmall": "Rompecabezas de 4 a 24 piezas",
+"bg_puzzleSmall_why": "Atención, paciencia y observar detalles.",
+"bg_memory": "Juego de memoria",
+"bg_memory_why": "Memoria y concentración.",
+"bg_domino": "Dominó",
+"bg_domino_why": "Contar, comparar cantidades y esperar el turno.",
+"bg_lince": "Lince",
+"bg_lince_why": "Atención visual y rapidez.",
+"bg_guess": "Adivina quién",
+"bg_guess_why": "Hacer preguntas y descartar opciones (lógica).",
+"bg_uno": "Uno",
+"bg_uno_why": "Colores, números, reglas y estrategia simple.",
+"bg_checkers": "Damas",
+"bg_checkers_why": "Planear jugadas y pensar en lo que hará el otro.",
+"bg_tangram": "Tangram",
+"bg_tangram_why": "Geometría y armar figuras con piezas.",
+"bg_jenga": "Torre de bloques (tipo Jenga)",
+"bg_jenga_why": "Coordinación, calma y equilibrio.",
+"bg_puzzleBig": "Rompecabezas de 48 a 200 piezas",
+"bg_puzzleBig_why": "Organización, paciencia y concentración.",
+"bg_chess": "Ajedrez",
+"bg_chess_why": "Estrategia, concentración y pensar antes de actuar. Desde los 6 años ya pueden aprender.",
+"bg_battleship": "Batalla naval",
+"bg_battleship_why": "Coordenadas (fila y columna) y deducción.",
+"bg_sudoku": "Sudoku en papel",
+"bg_sudoku_why": "Lógica pura, sin hacer cuentas.",
+"bg_monopoly": "Monopoly (Junior)",
+"bg_monopoly_why": "Dinero, cambio y decisiones.",
+"bg_rushhour": "Rompecabezas de lógica (tipo Rush Hour)",
+"bg_rushhour_why": "Razonamiento paso a paso, con niveles.",
+"bg_rubik": "Cubo de Rubik",
+"bg_rubik_why": "Memoria de secuencias y perseverancia.",
+"bg_clue": "Clue (Detective)",
+"bg_clue_why": "Deducción y descartar hipótesis."
+},
+"it": {
+"navGames": "Giochi e logica",
+"title_jogos": "Giochi e logica",
+"sub_jogos": "Sfide per pensare: gioca nell'app, stampa e idee di giochi da tavolo.",
+"typeGame": "Gioco",
+"gWonLabel": "Ha vinto la sfida: {game}",
+"g_sudoku": "Sudoku",
+"g_memory": "Memory",
+"g_seq": "Cosa viene dopo?",
+"gDesc_sudoku": "Logica: ogni simbolo una volta per riga, colonna e riquadro.",
+"gDesc_memory": "Memoria e attenzione: trova le coppie.",
+"gDesc_seq": "Sequenze e numeri: scopri il prossimo.",
+"gLevelName_0": "Bebè (1–2 anni)",
+"gLevelName_1": "Piccoli (3–4 anni)",
+"gLevelName_2": "Esploratori (5–6 anni)",
+"gLevelName_3": "Pensatori (7–9 anni)",
+"gLevelName_4": "Maestri (10+)",
+"gpLevel": "Livello {n}",
+"gpTitle": "Sfide di logica",
+"gpSudoku": "Sudoku",
+"gpSudokuHelp": "Completa la griglia {n}×{n}: ogni numero compare una volta in ogni riga, colonna e riquadro spesso.",
+"gpSudokuHelpPics": "Disegna il frutto mancante: ogni frutto compare una volta in ogni riga, colonna e quadratino.",
+"gpMaze": "Labirinto",
+"gpMazeHelp": "Aiuta il topolino ad arrivare al formaggio senza attraversare i muri.",
+"gpSeq": "Cosa viene dopo?",
+"gpSeqHelp": "Scopri la regola e completa (o cerchia la risposta).",
+"gpOdd": "Qual è diverso?",
+"gpOddHelp": "Cerchia la figura diversa dalle altre.",
+"gpMissing": "Numero nascosto",
+"gpMissingHelp": "Trova il numero che manca nel quadratino.",
+"gpCheer": "Bravissimo, {name}! Oggi il tuo cervello è diventato più forte.",
+"gTaskName": "Giocare a {game}",
+"gWinStars": "+{n} stelle!",
+"gWinNoStars": "Per oggi le stelle dei giochi sono finite, ma è stato un ottimo allenamento!",
+"gWin": "Ce l'hai fatta!",
+"gAgain": "Gioca ancora",
+"gMemoryHelp": "Gira due carte e trova le coppie",
+"gMoves": "{n} mossa/e",
+"gSeqProgress": "Domanda {i} di {n} · {right} giusta/e",
+"gRight": "Esatto!",
+"gWrongWas": "Quasi! Era {a}.",
+"gSeqTryAgain": "Ne hai indovinate {n} su {total}. Riprova per vincere le stelle!",
+"gTabPlay": "Gioca",
+"gTabPrint": "Stampa",
+"gTabIdeas": "Giochi da tavolo",
+"gStarsRule": "Ogni sfida vinta vale {n} stelle, fino a {max} al giorno. Dopo si può continuare a giocare solo per divertimento.",
+"gPrintIntro": "Foglio di sfide per {name} — livello {level} ({lname}): sudoku, labirinto, sequenze e altro. Ogni volta esce un foglio diverso.",
+"gPrintBtn": "Stampa foglio di sfide",
+"gPrintAll": "Stampa per tutti",
+"gPrintHint": "In modalità genitore viene stampata anche una pagina con le soluzioni.",
+"gIdeasIntro": "Giochi adatti all'età di {name} e cosa insegna ognuno. Tocca + Compito per trasformarlo in un compito della settimana.",
+"gAsTask": "Compito",
+"gAsRewardTitle": "Oppure come ricompensa",
+"gAsRewardHint": "Giocare insieme a voi è un premio che i bambini adorano.",
+"rw_gameNight": "Serata di giochi da tavolo in famiglia",
+"rw_chessParent": "Una partita a scacchi con mamma o papà",
+"gLevelFor": "Livello di {name}",
+"gToday": "oggi {n}/{max}",
+"gMonth": "{n} nel mese",
+"gRules": "Regole dei giochi",
+"gRulePoints": "Stelle per sfida vinta",
+"gRuleMax": "Massimo di sfide con stelle al giorno",
+"gRuleHint": "Il limite evita che restino al telefono solo per guadagnare punti.",
+"gTaskAdded": "\"Giocare a {game}\" ora è un compito di {name}.",
+"gRewardAdded": "\"{name}\" è stato aggiunto alle ricompense.",
+"bg_shapes": "Gioco a incastro delle forme",
+"bg_shapes_why": "Forme, colori e coordinazione delle mani.",
+"bg_blocks": "Costruzioni",
+"bg_blocks_why": "Creatività, equilibrio e senso dello spazio.",
+"bg_puzzleSmall": "Puzzle da 4 a 24 pezzi",
+"bg_puzzleSmall_why": "Attenzione, pazienza e osservare i dettagli.",
+"bg_memory": "Memory",
+"bg_memory_why": "Memoria e concentrazione.",
+"bg_domino": "Domino",
+"bg_domino_why": "Contare, confrontare quantità e aspettare il turno.",
+"bg_lince": "Lince",
+"bg_lince_why": "Attenzione visiva e rapidità.",
+"bg_guess": "Indovina chi",
+"bg_guess_why": "Fare domande ed escludere possibilità (logica).",
+"bg_uno": "Uno",
+"bg_uno_why": "Colori, numeri, regole e strategia semplice.",
+"bg_checkers": "Dama",
+"bg_checkers_why": "Pianificare le mosse e pensare a cosa farà l'altro.",
+"bg_tangram": "Tangram",
+"bg_tangram_why": "Geometria e comporre figure con i pezzi.",
+"bg_jenga": "Torre di blocchi (tipo Jenga)",
+"bg_jenga_why": "Coordinazione, calma ed equilibrio.",
+"bg_puzzleBig": "Puzzle da 48 a 200 pezzi",
+"bg_puzzleBig_why": "Organizzazione, pazienza e concentrazione.",
+"bg_chess": "Scacchi",
+"bg_chess_why": "Strategia, concentrazione e pensare prima di agire. Dai 6 anni si può già imparare.",
+"bg_battleship": "Battaglia navale",
+"bg_battleship_why": "Coordinate (riga e colonna) e deduzione.",
+"bg_sudoku": "Sudoku su carta",
+"bg_sudoku_why": "Logica pura, senza fare calcoli.",
+"bg_monopoly": "Monopoly (Junior)",
+"bg_monopoly_why": "Soldi, resto e decisioni.",
+"bg_rushhour": "Rompicapi di logica (tipo Rush Hour)",
+"bg_rushhour_why": "Ragionamento passo passo, a livelli.",
+"bg_rubik": "Cubo di Rubik",
+"bg_rubik_why": "Memoria delle sequenze e perseveranza.",
+"bg_clue": "Cluedo",
+"bg_clue_why": "Deduzione ed esclusione delle ipotesi."
+},
+"zh": {
+"navGames": "游戏与思维",
+"title_jogos": "游戏与思维",
+"sub_jogos": "动脑挑战：在应用里玩、打印练习，还有桌游推荐。",
+"typeGame": "游戏",
+"gWonLabel": "完成挑战：{game}",
+"g_sudoku": "数独",
+"g_memory": "记忆翻牌",
+"g_seq": "下一个是什么？",
+"gDesc_sudoku": "逻辑：每行、每列、每宫每个符号只出现一次。",
+"gDesc_memory": "记忆和专注：找出成对的牌。",
+"gDesc_seq": "规律和数字：找出下一个。",
+"gLevelName_0": "宝宝（1–2 岁）",
+"gLevelName_1": "小朋友（3–4 岁）",
+"gLevelName_2": "探索者（5–6 岁）",
+"gLevelName_3": "思考者（7–9 岁）",
+"gLevelName_4": "大师（10 岁以上）",
+"gpLevel": "第 {n} 级",
+"gpTitle": "思维挑战",
+"gpSudoku": "数独",
+"gpSudokuHelp": "填满 {n}×{n} 的格子：每行、每列、每个粗线框里每个数字只出现一次。",
+"gpSudokuHelpPics": "画出缺少的水果：每行、每列、每个小框里每种水果只出现一次。",
+"gpMaze": "迷宫",
+"gpMazeHelp": "帮小老鼠找到奶酪，不能穿过墙。",
+"gpSeq": "下一个是什么？",
+"gpSeqHelp": "找出规律并填上（或圈出答案）。",
+"gpOdd": "哪个不一样？",
+"gpOddHelp": "圈出和其他不一样的图。",
+"gpMissing": "藏起来的数字",
+"gpMissingHelp": "找出方框里缺少的数字。",
+"gpCheer": "{name}，真棒！今天你的大脑变得更强了。",
+"gTaskName": "玩{game}",
+"gWinStars": "+{n} 颗星！",
+"gWinNoStars": "今天游戏的星星已经用完了，但练习很有收获！",
+"gWin": "成功了！",
+"gAgain": "再玩一次",
+"gMemoryHelp": "翻开两张牌，找出成对的",
+"gMoves": "{n} 步",
+"gSeqProgress": "第 {i}/{n} 题 · 答对 {right} 题",
+"gRight": "对了！",
+"gWrongWas": "差一点！答案是 {a}。",
+"gSeqTryAgain": "{total} 题答对 {n} 题。再试一次就能赢星星！",
+"gTabPlay": "玩",
+"gTabPrint": "打印",
+"gTabIdeas": "桌游",
+"gStarsRule": "每完成一个挑战得 {n} 颗星，每天最多 {max} 次。之后可以继续玩，只是为了好玩。",
+"gPrintIntro": "给 {name} 的挑战练习 — 第 {level} 级（{lname}）：数独、迷宫、规律题等。每次都会生成不同的练习。",
+"gPrintBtn": "打印挑战练习",
+"gPrintAll": "给所有人打印",
+"gPrintHint": "家长模式下会同时打印答案页。",
+"gIdeasIntro": "适合 {name} 年龄的游戏，以及每个游戏能学到什么。点 + 任务 就会变成每周任务。",
+"gAsTask": "任务",
+"gAsRewardTitle": "或者当作奖励",
+"gAsRewardHint": "和你们一起玩，是孩子们最喜欢的奖励。",
+"rw_gameNight": "家庭桌游之夜",
+"rw_chessParent": "和妈妈或爸爸下一盘棋",
+"gLevelFor": "{name} 的级别",
+"gToday": "今天 {n}/{max}",
+"gMonth": "本月 {n} 次",
+"gRules": "游戏规则",
+"gRulePoints": "每完成一个挑战得几颗星",
+"gRuleMax": "每天最多几次挑战有星星",
+"gRuleHint": "设上限，避免孩子为了积分一直玩手机。",
+"gTaskAdded": "\"玩{game}\"已成为 {name} 的任务。",
+"gRewardAdded": "\"{name}\"已加入奖励。",
+"bg_shapes": "形状配对玩具",
+"bg_shapes_why": "认识形状、颜色，锻炼手部协调。",
+"bg_blocks": "积木",
+"bg_blocks_why": "创造力、平衡感和空间感。",
+"bg_puzzleSmall": "4 到 24 片拼图",
+"bg_puzzleSmall_why": "专注、耐心和观察细节。",
+"bg_memory": "记忆翻牌",
+"bg_memory_why": "记忆力和专注力。",
+"bg_domino": "多米诺骨牌",
+"bg_domino_why": "数数、比较多少、学会轮流。",
+"bg_lince": "找图游戏（Lince）",
+"bg_lince_why": "视觉注意力和反应速度。",
+"bg_guess": "猜猜我是谁",
+"bg_guess_why": "提问和排除可能（逻辑）。",
+"bg_uno": "UNO",
+"bg_uno_why": "颜色、数字、规则和简单策略。",
+"bg_checkers": "跳棋（国际跳棋）",
+"bg_checkers_why": "计划走法，想想对方会怎么走。",
+"bg_tangram": "七巧板",
+"bg_tangram_why": "几何和用块拼出图形。",
+"bg_jenga": "叠叠乐",
+"bg_jenga_why": "协调、冷静和平衡。",
+"bg_puzzleBig": "48 到 200 片拼图",
+"bg_puzzleBig_why": "条理、耐心和专注。",
+"bg_chess": "国际象棋",
+"bg_chess_why": "策略、专注，三思而后行。6 岁起就可以学。",
+"bg_battleship": "海战棋",
+"bg_battleship_why": "坐标（行和列）和推理。",
+"bg_sudoku": "纸上数独",
+"bg_sudoku_why": "纯逻辑，不需要计算。",
+"bg_monopoly": "大富翁（儿童版）",
+"bg_monopoly_why": "钱、找零和做决定。",
+"bg_rushhour": "逻辑益智（像 Rush Hour）",
+"bg_rushhour_why": "一步一步推理，分关卡。",
+"bg_rubik": "魔方",
+"bg_rubik_why": "记忆步骤和坚持。",
+"bg_clue": "妙探寻凶（Clue）",
+"bg_clue_why": "推理和排除假设。"
+},
+"zht": {
+"navGames": "遊戲與思維",
+"title_jogos": "遊戲與思維",
+"sub_jogos": "動腦挑戰：在應用裡玩、列印練習，還有桌遊推薦。",
+"typeGame": "遊戲",
+"gWonLabel": "完成挑戰：{game}",
+"g_sudoku": "數獨",
+"g_memory": "記憶翻牌",
+"g_seq": "下一個是什麼？",
+"gDesc_sudoku": "邏輯：每行、每列、每宮每個符號只出現一次。",
+"gDesc_memory": "記憶和專注：找出成對的牌。",
+"gDesc_seq": "規律和數字：找出下一個。",
+"gLevelName_0": "寶寶（1–2 歲）",
+"gLevelName_1": "小朋友（3–4 歲）",
+"gLevelName_2": "探索者（5–6 歲）",
+"gLevelName_3": "思考者（7–9 歲）",
+"gLevelName_4": "大師（10 歲以上）",
+"gpLevel": "第 {n} 級",
+"gpTitle": "思維挑戰",
+"gpSudoku": "數獨",
+"gpSudokuHelp": "填滿 {n}×{n} 的格子：每行、每列、每個粗線框裡每個數字只出現一次。",
+"gpSudokuHelpPics": "畫出缺少的水果：每行、每列、每個小框裡每種水果只出現一次。",
+"gpMaze": "迷宮",
+"gpMazeHelp": "幫小老鼠找到乳酪，不能穿過牆。",
+"gpSeq": "下一個是什麼？",
+"gpSeqHelp": "找出規律並填上（或圈出答案）。",
+"gpOdd": "哪個不一樣？",
+"gpOddHelp": "圈出和其他不一樣的圖。",
+"gpMissing": "藏起來的數字",
+"gpMissingHelp": "找出方框裡缺少的數字。",
+"gpCheer": "{name}，真棒！今天你的大腦變得更強了。",
+"gTaskName": "玩{game}",
+"gWinStars": "+{n} 顆星！",
+"gWinNoStars": "今天遊戲的星星已經用完了，但練習很有收穫！",
+"gWin": "成功了！",
+"gAgain": "再玩一次",
+"gMemoryHelp": "翻開兩張牌，找出成對的",
+"gMoves": "{n} 步",
+"gSeqProgress": "第 {i}/{n} 題 · 答對 {right} 題",
+"gRight": "對了！",
+"gWrongWas": "差一點！答案是 {a}。",
+"gSeqTryAgain": "{total} 題答對 {n} 題。再試一次就能贏星星！",
+"gTabPlay": "玩",
+"gTabPrint": "列印",
+"gTabIdeas": "桌遊",
+"gStarsRule": "每完成一個挑戰得 {n} 顆星，每天最多 {max} 次。之後可以繼續玩，只是為了好玩。",
+"gPrintIntro": "給 {name} 的挑戰練習 — 第 {level} 級（{lname}）：數獨、迷宮、規律題等。每次都會生成不同的練習。",
+"gPrintBtn": "列印挑戰練習",
+"gPrintAll": "給所有人列印",
+"gPrintHint": "家長模式下會同時列印答案頁。",
+"gIdeasIntro": "適合 {name} 年齡的遊戲，以及每個遊戲能學到什麼。點 + 任務 就會變成每週任務。",
+"gAsTask": "任務",
+"gAsRewardTitle": "或者當作獎勵",
+"gAsRewardHint": "和你們一起玩，是孩子們最喜歡的獎勵。",
+"rw_gameNight": "家庭桌遊之夜",
+"rw_chessParent": "和媽媽或爸爸下一盤棋",
+"gLevelFor": "{name} 的級別",
+"gToday": "今天 {n}/{max}",
+"gMonth": "本月 {n} 次",
+"gRules": "遊戲規則",
+"gRulePoints": "每完成一個挑戰得幾顆星",
+"gRuleMax": "每天最多幾次挑戰有星星",
+"gRuleHint": "設上限，避免孩子為了積分一直玩手機。",
+"gTaskAdded": "\"玩{game}\"已成為 {name} 的任務。",
+"gRewardAdded": "\"{name}\"已加入獎勵。",
+"bg_shapes": "形狀配對玩具",
+"bg_shapes_why": "認識形狀、顏色，鍛鍊手部協調。",
+"bg_blocks": "積木",
+"bg_blocks_why": "創造力、平衡感和空間感。",
+"bg_puzzleSmall": "4 到 24 片拼圖",
+"bg_puzzleSmall_why": "專注、耐心和觀察細節。",
+"bg_memory": "記憶翻牌",
+"bg_memory_why": "記憶力和專注力。",
+"bg_domino": "多米諾骨牌",
+"bg_domino_why": "數數、比較多少、學會輪流。",
+"bg_lince": "找圖遊戲（Lince）",
+"bg_lince_why": "視覺注意力和反應速度。",
+"bg_guess": "猜猜我是誰",
+"bg_guess_why": "提問和排除可能（邏輯）。",
+"bg_uno": "UNO",
+"bg_uno_why": "顏色、數字、規則和簡單策略。",
+"bg_checkers": "跳棋（國際跳棋）",
+"bg_checkers_why": "計劃走法，想想對方會怎麼走。",
+"bg_tangram": "七巧板",
+"bg_tangram_why": "幾何和用塊拼出圖形。",
+"bg_jenga": "疊疊樂",
+"bg_jenga_why": "協調、冷靜和平衡。",
+"bg_puzzleBig": "48 到 200 片拼圖",
+"bg_puzzleBig_why": "條理、耐心和專注。",
+"bg_chess": "國際象棋",
+"bg_chess_why": "策略、專注，三思而後行。6 歲起就可以學。",
+"bg_battleship": "海戰棋",
+"bg_battleship_why": "座標（行和列）和推理。",
+"bg_sudoku": "紙上數獨",
+"bg_sudoku_why": "純邏輯，不需要計算。",
+"bg_monopoly": "大富翁（兒童版）",
+"bg_monopoly_why": "錢、找零和做決定。",
+"bg_rushhour": "邏輯益智（像 Rush Hour）",
+"bg_rushhour_why": "一步一步推理，分關卡。",
+"bg_rubik": "魔方",
+"bg_rubik_why": "記憶步驟和堅持。",
+"bg_clue": "妙探尋兇（Clue）",
+"bg_clue_why": "推理和排除假設。"
+}
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], GAMES_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 79;
+const APP_VERSION = 80;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -2627,6 +3342,7 @@ function initialData() {
     history: [], piggyHistory: [], approvals: [], goals: [], achievements: [], behaviorNotes: [], privateNotes: [],
     english: { settings: { pointsPer15: 5, testDay: 25, goals: {} }, sessions: [], tests: [] },
     homework: { settings: { pointsPerPage: 2, autoTask: true }, entries: [] },
+    games: { settings: { pointsPerWin: 5, maxPerDay: 3 }, wins: [] },
     familyAccount: { email: '', passwordHash: '' }
   };
 }
@@ -2727,7 +3443,7 @@ function normalize(raw, defaultKeys) {
     if (!h || typeof h !== 'object') return null;
     const childId = mapChild(h.childId); if (!childId) return null;
     const legacy = parseLegacyValue(h.value);
-    const type = ['task', 'reward', 'adjust', 'behavior', 'english', 'homework'].includes(h.type) ? h.type : 'adjust';
+    const type = ['task', 'reward', 'adjust', 'behavior', 'english', 'homework', 'game'].includes(h.type) ? h.type : 'adjust';
     let points = Number.isFinite(h.points) ? h.points : Number.isFinite(h.pointsEarned) ? h.pointsEarned : legacy.points;
     let cash = Number.isFinite(h.cash) ? h.cash : Number.isFinite(h.cashEarned) ? h.cashEarned : legacy.cash;
     if (type === 'reward' && points > 0) points = -points;
@@ -2738,7 +3454,8 @@ function normalize(raw, defaultKeys) {
       note: text(h.note, 200), description: text(h.description, 200), points: Math.round(points), cash: round2(cash),
       approvalId: h.approvalId ? cleanId(h.approvalId) : null,
       minutes: type === 'english' ? clamp(int(h.minutes, 0), 0, 600) : undefined, activity: type === 'english' ? text(h.activity, 30) : undefined,
-      pages: type === 'homework' ? clamp(int(h.pages, 0), 0, 200) : undefined, subject: type === 'homework' ? text(h.subject, 30) : undefined
+      pages: type === 'homework' ? clamp(int(h.pages, 0), 0, 200) : undefined, subject: type === 'homework' ? text(h.subject, 30) : undefined,
+      game: type === 'game' ? text(h.game, 20) : undefined, level: type === 'game' ? clamp(int(h.level, 1), 0, 4) : undefined
     };
   }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date));
   // versões antigas guardavam a observação dentro da descrição ("Tarefa — observação")
@@ -2830,6 +3547,20 @@ function normalize(raw, defaultKeys) {
       return { id: cleanId(x.id) || `hw${i}`, childId, date: safeIso(x.date), pages, subject: text(x.subject, 30) || 'other', note: text(x.note, 200), historyId: x.historyId ? cleanId(x.historyId) : null, taskHistoryId: x.taskHistoryId ? cleanId(x.taskHistoryId) : null };
     }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date))
   };
+
+  // jogos de raciocínio: vitórias que deram estrelas
+  const gm = raw.games && typeof raw.games === 'object' ? raw.games : {};
+  const gs = gm.settings && typeof gm.settings === 'object' ? gm.settings : {};
+  d.games = {
+    settings: { pointsPerWin: clamp(int(gs.pointsPerWin, 5), 0, 100), maxPerDay: clamp(int(gs.maxPerDay, 3), 0, 20) },
+    wins: (Array.isArray(gm.wins) ? gm.wins : []).map((x, i) => {
+      if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId) return null;
+      return { id: cleanId(x.id) || `gw${i}`, childId, date: safeIso(x.date), game: text(x.game, 20), level: clamp(int(x.level, 1), 0, 4), points: clamp(int(x.points, 0), 0, 100), historyId: x.historyId ? cleanId(x.historyId) : null };
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2000)
+  };
+
+  // novidades já colocadas uma vez (para não voltarem se forem apagadas)
+  d.seeded = Array.isArray(raw.seeded) ? [...new Set(raw.seeded.filter(x => typeof x === 'string').map(x => x.slice(0, 40)))].slice(0, 100) : [];
 
   // modo atual
   const m = raw.mode && typeof raw.mode === 'object' ? raw.mode : { current: raw.currentMode, childId: raw.activeChildId };
@@ -3120,10 +3851,11 @@ function undoHistory(id) {
     linked.forEach(p => { c.piggy = round2(Math.max(0, c.piggy - p.amount)); });
     S.piggyHistory = S.piggyHistory.filter(p => p.historyId !== h.id);
     if (!linked.length && h.cash) c.piggy = round2(Math.max(0, c.piggy - h.cash));
-    if (h.type === 'english' || h.type === 'homework') c.xp = Math.max(0, Number(c.xp || 0) - Math.max(0, h.points));
+    if (['english', 'homework', 'game'].includes(h.type)) c.xp = Math.max(0, Number(c.xp || 0) - Math.max(0, h.points));
   }
   S.english.sessions = S.english.sessions.filter(x => x.historyId !== h.id);
   S.homework.entries = S.homework.entries.filter(x => x.historyId !== h.id);
+  S.games.wins = S.games.wins.filter(x => x.historyId !== h.id);
   S.homework.entries.forEach(x => { if (x.taskHistoryId === h.id) x.taskHistoryId = null; });
   if (h.approvalId) { const a = S.approvals.find(x => x.id === h.approvalId); if (a) a.status = 'reverted'; }
   S.behaviorNotes = S.behaviorNotes.filter(n => n.historyId !== h.id);
@@ -3386,11 +4118,12 @@ function historyText(h) {
   }
   if (h.type === 'reward') { const r = rewardById(h.rewardId); return t('redeemedX', { name: r ? rewardName(r) : (h.description || '—') }); }
   if (h.type === 'behavior') return (h.points > 0 || h.cash > 0 ? '👍 ' : '⚠️ ') + (h.description || t('behaviorNote'));
+  if (h.type === 'game') return `🧩 ${t('gWonLabel', { game: t('g_' + (h.game || 'sudoku')) })}`;
   if (h.type === 'homework') return `📝 ${t('hwLabel', { n: h.pages || 0 })}${h.subject ? ' · ' + t('hwSub_' + (HW_SUBJECTS.includes(h.subject) ? h.subject : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   if (h.type === 'english') return `📚 ${t('enStudyLabel', { n: h.minutes || 0 })}${h.activity ? ' · ' + t('enAct_' + (EN_ACTIVITIES.includes(h.activity) ? h.activity : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   return h.description || t('manualAdjustment');
 }
-function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish', homework: 'typeHomework' }[h.type]); }
+function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish', homework: 'typeHomework', game: 'typeGame' }[h.type]); }
 function approvalLabel(a) {
   if (a.kind === 'task') { const task = taskById(a.taskId); return task ? taskName(task) : (a.label || t('taskRemoved')); }
   if (a.kind === 'homework') return `📝 ${t('hwLabel', { n: a.pages || 0 })} · ${t('hwSub_' + (HW_SUBJECTS.includes(a.subject) ? a.subject : 'other'))}`;
@@ -4727,6 +5460,7 @@ async function boot() {
   }
   if (!data) data = normalize(initialData(), defaultKeys);
   S = data; ui.today = dayKey();
+  if (typeof seedExtras === 'function' && seedExtras()) Store.save(S);
   if (migrated) Store.save(S);
   const invited = !!Cloud.cfg.pendingCode;
   if (invited && !saved && !migrated) { S.onboardingComplete = true; ui.unlockedUntil = Date.now() + UNLOCK_MS; ui.section = 'nuvem'; }
@@ -5477,6 +6211,11 @@ function familyWeekHtml(from, to) {
 }
 
 /* ---------- quadro de tarefas para pendurar ---------- */
+/** Escolhe n itens espalhados de uma lista ordenada (do mais barato ao mais caro). */
+function spreadPick(list, n) {
+  if (list.length <= n) return list;
+  return [...Array(n)].map((_, i) => list[Math.round(i * (list.length - 1) / (n - 1))]);
+}
 function taskChartHtml(c, from, to) {
   const names = weekdayNames(true), days = [...Array(7)].map((_, i) => addDays(from, i));
   const list = chartTasks(c), fixed = list.filter(x => x.frequency !== 'oneOff'), extra = list.filter(x => x.frequency === 'oneOff');
@@ -5485,8 +6224,14 @@ function taskChartHtml(c, from, to) {
   const goal = englishGoal(c);
   const enRow = c.age >= 3 ? `<tr class="pr-en"><td class="pr-tl"><span class="pr-ti">🇬🇧</span><span class="pr-tn">${esc(t('prChartEnglish'))}<small>${esc(t('prChartEnglishGoal', { goal }))}</small></span></td><td class="pts">min</td>${days.map(() => '<td><span class="pr-write"></span></td>').join('')}</tr>` : '';
   const hwRow = c.age >= 5 ? `<tr class="pr-en"><td class="pr-tl"><span class="pr-ti">📝</span><span class="pr-tn">${esc(t('prChartHw'))}<small>${esc(t('prChartHwHint'))}</small></span></td><td class="pts">📄</td>${days.map(() => '<td><span class="pr-write"></span></td>').join('')}</tr>` : '';
-  const rewards = S.rewards.slice().sort((a, b) => a.cost - b.cost).slice(0, 8);
-  return `<div class="ps-page pr pr-chart ${small ? 'pr-big' : ''}" style="--c:${c.accentColor}">
+  const rewards = spreadPick(S.rewards.slice().sort((a, b) => a.cost - b.cost), 8);
+  // altura das linhas calculada para o quadro inteiro caber em uma folha A4
+  const nRows = fixed.length + (hwRow ? 1 : 0) + (enRow ? 1 : 0);
+  const extrasH = extra.length ? 34 + Math.ceil(extra.length / 3) * 20 : 0;
+  const avail = 1039 - 110 - 36 - 22 - (rewards.length ? 34 + Math.ceil(rewards.length / 4) * 20 : 0) - extrasH - 34 - 48;
+  const rowH = Math.max(20, Math.min(small ? 46 : 38, Math.floor(avail / Math.max(1, nRows))));
+  const cb = Math.max(14, Math.min(small ? 28 : 22, rowH - 10));
+  return `<div class="ps-page pr pr-chart ${small && rowH >= 34 ? 'pr-big' : ''} ${rowH < 28 ? 'pr-tight' : ''}" style="--c:${c.accentColor};--rowh:${rowH}px;--cb:${cb}px">
     ${prHeader(c, t('prChartKicker'), `${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))}`, `<div class="pr-star"><b>⭐ ____</b><small>${esc(t('prChartTotal'))}</small></div>`)}
     ${fixed.length ? `<table class="pr-grid pr-chartgrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th>${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr></thead><tbody>${rows}${hwRow}${enRow}</tbody></table>` : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`}
     <p class="pr-legend">${esc(t('prChartHow'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
@@ -5788,6 +6533,8 @@ Object.assign(ACTIONS, {
    pequenas = 1 a 2 dias, médias = cerca de uma semana, grandes = um mês.
    ===================================================================== */
 const REWARD_IDEAS = [
+  { tier: 'medium', key: 'rw_minigame30', icon: '🎮', cost: 150 },
+  { tier: 'medium', key: 'rw_minigame60', icon: '🎮', cost: 280 },
   { tier: 'small', key: 'rw_sticker', icon: '🌟', cost: 20 },
   { tier: 'small', key: 'rw_song', icon: '🎶', cost: 20 },
   { tier: 'small', key: 'rw_story', icon: '📖', cost: 30 },
@@ -5840,6 +6587,321 @@ Object.assign(ACTIONS, {
     Modal.close('rwIdeasModal'); commit(); toast(t('rwIdeasDone', { added, changed }), 'success');
   }
 });
+
+/** Recompensas pedidas pela família que entram uma vez sozinhas (ids fixos: dois aparelhos não duplicam). */
+const SEED_REWARDS = [
+  { seed: 'minigame', id: 90001, key: 'rw_minigame30', icon: '🎮', cost: 150 },
+  { seed: 'minigame', id: 90002, key: 'rw_minigame60', icon: '🎮', cost: 280 }
+];
+function seedExtras() {
+  let changed = false;
+  SEED_REWARDS.forEach(x => {
+    if (S.seeded.includes(x.seed)) return;
+    if (!rewardById(x.id) && !S.rewards.some(r => r.nameKey === x.key)) { S.rewards.push({ id: x.id, name: t(x.key), nameKey: x.key, cost: x.cost, icon: x.icon }); changed = true; }
+  });
+  [...new Set(SEED_REWARDS.map(x => x.seed))].forEach(sd => { if (!S.seeded.includes(sd)) { S.seeded.push(sd); changed = true; } });
+  if (changed) S.rewards.sort((a, b) => a.cost - b.cost);
+  return changed;
+}
+
+/* =====================================================================
+   Jogos e raciocínio: mini-jogos no app (sudoku, memória, sequências),
+   folhas de desafios para imprimir (com gabarito) e ideias de jogos de
+   tabuleiro por idade, que viram tarefa ou recompensa.
+   ===================================================================== */
+
+/* ---------- nível pela idade ---------- */
+function gameLevel(age) { return age < 3 ? 0 : age <= 4 ? 1 : age <= 6 ? 2 : age <= 9 ? 3 : 4; }
+const G_FRUITS = ['🍎', '🍌', '🍇', '🍓', '🍊', '🍉'];
+const G_EMOJI = ['🐶', '🐱', '🐰', '🦊', '🐻', '🐼', '🐸', '🐵', '🦁', '🐯', '🐮', '🐷', '🐔', '🐙', '🦋', '🐢', '🚗', '⭐', '🌈', '🍦'];
+function sudokuSpec(level) {
+  return level <= 1 ? { n: 4, br: 2, bc: 2, holes: 5, syms: G_FRUITS.slice(0, 4) }
+    : level === 2 ? { n: 4, br: 2, bc: 2, holes: 8, syms: ['1', '2', '3', '4'] }
+    : level === 3 ? { n: 6, br: 2, bc: 3, holes: 16, syms: ['1', '2', '3', '4', '5', '6'] }
+    : { n: 9, br: 3, bc: 3, holes: 38, syms: ['1', '2', '3', '4', '5', '6', '7', '8', '9'] };
+}
+
+/* ---------- sudoku: gera uma grade completa e tira números mantendo uma solução só ---------- */
+function sudokuSolutions(g, n, br, bc, limit = 2) {
+  const i = g.indexOf(-1); if (i < 0) return 1;
+  const r = Math.floor(i / n), c = i % n; let count = 0;
+  for (let v = 0; v < n && count < limit; v++) {
+    let ok = true;
+    for (let k = 0; k < n && ok; k++) if (g[r * n + k] === v || g[k * n + c] === v) ok = false;
+    const r0 = r - r % br, c0 = c - c % bc;
+    for (let a = 0; a < br && ok; a++) for (let b = 0; b < bc && ok; b++) if (g[(r0 + a) * n + c0 + b] === v) ok = false;
+    if (ok) { g[i] = v; count += sudokuSolutions(g, n, br, bc, limit - count); g[i] = -1; }
+  }
+  return count;
+}
+function makeSudoku(level, rnd) {
+  const { n, br, bc, holes, syms } = sudokuSpec(level);
+  const bands = n / br, stacks = n / bc;
+  const rows = shuffle([...Array(bands).keys()], rnd).flatMap(b => shuffle([...Array(br).keys()], rnd).map(x => b * br + x));
+  const cols = shuffle([...Array(stacks).keys()], rnd).flatMap(s => shuffle([...Array(bc).keys()], rnd).map(x => s * bc + x));
+  const sym = shuffle([...Array(n).keys()], rnd);
+  const base = (r, c) => (bc * (r % br) + Math.floor(r / br) + c) % n;
+  const solution = []; for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) solution.push(sym[base(rows[r], cols[c])]);
+  const puzzle = [...solution]; let removed = 0;
+  for (const i of shuffle([...Array(n * n).keys()], rnd)) {
+    if (removed >= holes) break;
+    const keep = puzzle[i]; puzzle[i] = -1;
+    if (sudokuSolutions([...puzzle], n, br, bc) === 1) removed++; else puzzle[i] = keep;
+  }
+  return { n, br, bc, syms, solution, puzzle };
+}
+
+/* ---------- sequências: "o que vem depois?" ---------- */
+function makeSequence(level, rnd) {
+  if (level <= 2 && (level <= 1 || rnd() < 0.5)) {
+    const pats = level <= 1 ? ['AB', 'AAB', 'ABB'] : ['ABC', 'AABB', 'ABAC', 'ABB'];
+    const pat = pats[Math.floor(rnd() * pats.length)], letters = [...new Set(pat)];
+    const map = {}; pick(G_EMOJI, letters.length, rnd).forEach((e, i) => { map[letters[i]] = e; });
+    const len = level <= 1 ? 5 : 6, seq = [...Array(len + 1)].map((_, i) => map[pat[i % pat.length]]);
+    const answer = seq[len];
+    const options = shuffle([answer, ...pick(G_EMOJI.filter(e => e !== answer && !Object.values(map).includes(e)), 1, rnd), ...Object.values(map).filter(e => e !== answer)].slice(0, 3), rnd);
+    return { items: seq.slice(0, len), answer, options, emoji: true };
+  }
+  const kinds = level <= 2 ? ['+1', '+2', '-1'] : level === 3 ? ['+2', '+3', '+5', '-2', '+10', 'x2'] : ['+3', '+4', '+6', '-3', 'x2', '+n', '+9'];
+  const k = kinds[Math.floor(rnd() * kinds.length)];
+  let start = 1 + Math.floor(rnd() * (level <= 2 ? 5 : 12)); if (k.startsWith('-')) start += 10 * (level <= 2 ? 1 : 3);
+  const seq = [start];
+  for (let i = 1; i < 6; i++) {
+    const p = seq[i - 1];
+    seq.push(k === 'x2' ? p * 2 : k === '+n' ? p + i : p + Number(k));
+  }
+  if (k === 'x2') { seq.length = 0; let v = 1 + Math.floor(rnd() * 3); for (let i = 0; i < 6; i++) { seq.push(v); v *= 2; } }
+  const answer = seq[5], items = seq.slice(0, 5);
+  const options = shuffle([answer, answer + 1, answer - (k === 'x2' ? 2 : 1), answer + 2].filter((v, i, a) => a.indexOf(v) === i).slice(0, 3), rnd);
+  return { items: items.map(String), answer: String(answer), options: options.map(String), emoji: false };
+}
+/* ---------- "qual é diferente?" ---------- */
+function makeOddOne(rnd) {
+  const [a, b] = pick(G_EMOJI, 2, rnd), pos = Math.floor(rnd() * 5);
+  return { items: [...Array(5)].map((_, i) => i === pos ? b : a), answer: pos };
+}
+/* ---------- contas com quadradinho (7+) ---------- */
+function makeMissing(level, rnd) {
+  const max = level >= 4 ? 50 : 20, a = 1 + Math.floor(rnd() * max / 2), b = 1 + Math.floor(rnd() * max / 2), op = rnd() < 0.5 ? '+' : '−';
+  if (op === '+') return rnd() < 0.5 ? { text: `□ + ${b} = ${a + b}`, answer: a } : { text: `${a} + □ = ${a + b}`, answer: b };
+  const big = a + b; return rnd() < 0.5 ? { text: `${big} − □ = ${a}`, answer: b } : { text: `□ − ${b} = ${a}`, answer: big };
+}
+/* ---------- labirinto (desenhado em SVG) ---------- */
+function makeMaze(w, h, rnd) {
+  const walls = [...Array(w * h)].map(() => ({ n: 1, s: 1, e: 1, w: 1 })), seen = new Set([0]), stack = [0];
+  while (stack.length) {
+    const cur = stack[stack.length - 1], x = cur % w, y = Math.floor(cur / w);
+    const nb = [[0, -1, 'n', 's'], [0, 1, 's', 'n'], [1, 0, 'e', 'w'], [-1, 0, 'w', 'e']]
+      .map(([dx, dy, a, b]) => ({ nx: x + dx, ny: y + dy, a, b })).filter(o => o.nx >= 0 && o.ny >= 0 && o.nx < w && o.ny < h && !seen.has(o.ny * w + o.nx));
+    if (!nb.length) { stack.pop(); continue; }
+    const o = nb[Math.floor(rnd() * nb.length)], nxt = o.ny * w + o.nx;
+    walls[cur][o.a] = 0; walls[nxt][o.b] = 0; seen.add(nxt); stack.push(nxt);
+  }
+  // caminho da solução (para o gabarito)
+  const prev = new Map([[0, -1]]), q = [0];
+  while (q.length) { const c = q.shift(), x = c % w, y = Math.floor(c / w); [[0, -1, 'n'], [0, 1, 's'], [1, 0, 'e'], [-1, 0, 'w']].forEach(([dx, dy, d]) => { const n2 = (y + dy) * w + x + dx; if (!walls[c][d] && !prev.has(n2)) { prev.set(n2, c); q.push(n2); } }); }
+  const path = []; for (let c = w * h - 1; c !== -1; c = prev.get(c)) path.unshift(c);
+  return { w, h, walls, path };
+}
+function mazeSvg(m, withPath, size = 520) {
+  const cs = Math.floor(size / Math.max(m.w, m.h)), W = cs * m.w, H = cs * m.h, sw = Math.max(2, Math.round(cs / 9));
+  let lines = '';
+  m.walls.forEach((c, i) => {
+    const x = (i % m.w) * cs, y = Math.floor(i / m.w) * cs;
+    if (c.n && i !== 0) lines += `M${x} ${y}h${cs}`; if (c.w) lines += `M${x} ${y}v${cs}`;
+    if (c.s && i !== m.w * m.h - 1) lines += `M${x} ${y + cs}h${cs}`; if (c.e) lines += `M${x + cs} ${y}v${cs}`;
+  });
+  const pathD = withPath ? m.path.map((c, k) => `${k ? 'L' : 'M'}${(c % m.w) * cs + cs / 2} ${Math.floor(c / m.w) * cs + cs / 2}`).join('') : '';
+  const fs = Math.round(cs * 0.62);
+  return `<svg class="g-maze" viewBox="-4 -4 ${W + 8} ${H + 8}" width="${W + 8}" height="${H + 8}" xmlns="http://www.w3.org/2000/svg">
+    ${withPath ? `<path d="${pathD}" fill="none" stroke="#ef4444" stroke-width="${Math.max(3, sw)}" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>` : ''}
+    <path d="${lines}" stroke="#1d1d2b" stroke-width="${sw}" stroke-linecap="square" fill="none"/>
+    <text x="${cs / 2}" y="${cs / 2 + fs / 3}" font-size="${fs}" text-anchor="middle">🐭</text>
+    <text x="${W - cs / 2}" y="${H - cs / 2 + fs / 3}" font-size="${fs}" text-anchor="middle">🧀</text></svg>`;
+}
+
+/* ---------- folha de desafios para imprimir ---------- */
+function sudokuTableHtml(s, show, cls = '') {
+  return `<table class="g-sud g-sud${s.n} ${cls}">${[...Array(s.n)].map((_, r) => `<tr>${[...Array(s.n)].map((_, c) => {
+    const i = r * s.n + c, v = show ? s.solution[i] : s.puzzle[i];
+    const bR = (r + 1) % s.br === 0 && r < s.n - 1, bC = (c + 1) % s.bc === 0 && c < s.n - 1;
+    return `<td class="${bR ? 'bb' : ''} ${bC ? 'br' : ''} ${show && s.puzzle[i] < 0 ? 'ans' : ''}">${v >= 0 ? esc(s.syms[v]) : ''}</td>`;
+  }).join('')}</tr>`).join('')}</table>`;
+}
+function buildPuzzleSheet(c, seed) {
+  const level = Math.max(1, gameLevel(c.age)), rnd = seededRng(seed), parts = [];
+  const sud = [makeSudoku(level, rnd)]; if (level >= 2 && level <= 3) sud.push(makeSudoku(level, rnd));
+  parts.push({ kind: 'sudoku', items: sud });
+  const mz = level === 1 ? [5, 5] : level === 2 ? [8, 8] : level === 3 ? [12, 12] : [16, 16];
+  parts.push({ kind: 'maze', item: makeMaze(mz[0], mz[1], rnd) });
+  parts.push({ kind: 'seq', items: [...Array(level <= 1 ? 4 : 5)].map(() => makeSequence(level, rnd)) });
+  if (level <= 2) parts.push({ kind: 'odd', items: [...Array(level <= 1 ? 3 : 4)].map(() => makeOddOne(rnd)) });
+  else parts.push({ kind: 'missing', items: [...Array(8)].map(() => makeMissing(level, rnd)) });
+  return { level, parts };
+}
+function puzzleSheetHtml(c, sheet, withKey) {
+  let n = 0;
+  const head = (title, help) => `<div class="ws-sec"><h3><span class="ws-num">${++n}</span> ${esc(title)}</h3><p class="ws-help">${esc(help)}</p>`;
+  const body = (p, key) => {
+    if (p.kind === 'sudoku') return head(t('gpSudoku'), t(p.items[0].n === 4 && sheet.level <= 1 ? 'gpSudokuHelpPics' : 'gpSudokuHelp', { n: p.items[0].n })) + `<div class="g-sud-row">${p.items.map(s => sudokuTableHtml(s, key)).join('')}</div></div>`;
+    if (p.kind === 'maze') return head(t('gpMaze'), t('gpMazeHelp')) + `<div class="g-maze-wrap">${mazeSvg(p.item, key, sheet.level <= 1 ? 360 : 460)}</div></div>`;
+    if (p.kind === 'seq') return head(t('gpSeq'), t('gpSeqHelp')) + p.items.map((q, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="g-seq ${q.emoji ? 'emo' : ''}">${q.items.map(esc).join('<i>·</i>')}<i>·</i><b class="g-blank">${key ? esc(q.answer) : ''}</b></span>${q.emoji && !key ? `<span class="ws-opts">${q.options.map(o => `<span class="ws-opt">${esc(o)}</span>`).join('')}</span>` : ''}</div>`).join('') + '</div>';
+    if (p.kind === 'odd') return head(t('gpOdd'), t('gpOddHelp')) + p.items.map((q, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="g-seq emo">${q.items.map((e, k) => `<span class="${key && k === q.answer ? 'g-circle' : ''}">${esc(e)}</span>`).join(' ')}</span></div>`).join('') + '</div>';
+    return head(t('gpMissing'), t('gpMissingHelp')) + `<div class="ws-grid2">${p.items.map((q, i) => `<div class="ws-row"><span class="ws-idx">${i + 1}.</span><span class="g-math">${esc(q.text).replace('□', key ? `<b class="g-ans">${q.answer}</b>` : '<span class="g-box"></span>')}</span></div>`).join('')}</div></div>`;
+  };
+  const top = key => `<div class="ws-head"><div><div class="ws-title">${key ? '🔑 ' + esc(t('wsKeyTitle')) : '🧩 ' + esc(t('gpTitle'))}</div><div class="ws-sub">${esc(t('gpLevel', { n: sheet.level }))} · ${esc(t('gLevelName_' + sheet.level))}</div></div><div class="ws-name"><div>${esc(t('name'))}: <b>${esc(c.name)}</b></div><div>${esc(t('date'))}: ____/____/______</div></div></div>`;
+  const page = key => `<div class="ps-page ws g-sheet ${key ? 'ws-key' : ''}">${top(key)}${sheet.parts.map(p => body(p, key)).join('')}${key ? '' : `<div class="ws-foot">🧠 ${esc(t('gpCheer', { name: c.name }))}</div>`}</div>`;
+  n = 0; const sheetHtml = page(false); n = 0;
+  return withKey ? sheetHtml + page(true) : sheetHtml;
+}
+
+/* ---------- ideias de jogos de tabuleiro por idade ---------- */
+const BOARD_GAMES = [
+  { key: 'bg_shapes', icon: '🔷', min: 1, max: 3 }, { key: 'bg_blocks', icon: '🧱', min: 1, max: 6 }, { key: 'bg_puzzleSmall', icon: '🧩', min: 2, max: 4 },
+  { key: 'bg_memory', icon: '🃏', min: 3, max: 8 }, { key: 'bg_domino', icon: '🁫', min: 3, max: 8 }, { key: 'bg_lince', icon: '👀', min: 4, max: 9 }, { key: 'bg_guess', icon: '🤔', min: 4, max: 9 },
+  { key: 'bg_uno', icon: '🟥', min: 5, max: 30 }, { key: 'bg_checkers', icon: '⚫', min: 5, max: 30 }, { key: 'bg_tangram', icon: '🔺', min: 5, max: 30 }, { key: 'bg_jenga', icon: '🪵', min: 5, max: 30 }, { key: 'bg_puzzleBig', icon: '🧩', min: 5, max: 30 },
+  { key: 'bg_chess', icon: '♟️', min: 6, max: 30 }, { key: 'bg_battleship', icon: '🚢', min: 6, max: 30 }, { key: 'bg_sudoku', icon: '🔢', min: 6, max: 30 }, { key: 'bg_monopoly', icon: '🏦', min: 7, max: 30 },
+  { key: 'bg_rushhour', icon: '🚗', min: 7, max: 30 }, { key: 'bg_rubik', icon: '🟨', min: 8, max: 30 }, { key: 'bg_clue', icon: '🔍', min: 8, max: 30 }
+];
+function addGameTask(c, g) {
+  const name = t('gTaskName', { game: t(g.key) });
+  const ex = S.tasks.find(x => normName(taskName(x)) === normName(name));
+  if (ex) { if (taskForChild(ex, c)) return false; if (ex.childIds.length) ex.childIds.push(c.id); return true; }
+  let id = Date.now(); while (taskById(id)) id++;
+  S.tasks.push({ id, name, nameKey: null, points: 10, icon: g.icon, frequency: 'weekly', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 });
+  return true;
+}
+function addGameReward(key, icon, cost) {
+  if (S.rewards.some(r => r.nameKey === key)) return false;
+  let id = Date.now(); while (rewardById(id)) id++;
+  S.rewards.push({ id, name: t(key), nameKey: key, cost, icon }); S.rewards.sort((a, b) => a.cost - b.cost); return true;
+}
+
+/* ---------- estrelas por vitória (com limite por dia) ---------- */
+function gameWinsToday(c) { const k = dayKey(); return S.games.wins.filter(x => x.childId === c.id && dayKey(x.date) === k && x.points > 0).length; }
+function recordWin(c, game, level) {
+  const set = S.games.settings, canEarn = set.pointsPerWin > 0 && gameWinsToday(c) < set.maxPerDay;
+  const win = { id: uid('gw'), childId: c.id, date: isoNow(), game, level, points: canEarn ? set.pointsPerWin : 0, historyId: null };
+  if (canEarn) {
+    changePoints(c, set.pointsPerWin); c.xp = Number(c.xp || 0) + set.pointsPerWin;
+    win.historyId = addHistory({ type: 'game', childId: c.id, childName: c.name, points: set.pointsPerWin, game, level }).id;
+    checkAchievements(c);
+  }
+  S.games.wins.unshift(win); S.games.wins = S.games.wins.slice(0, 2000);
+  return win;
+}
+
+/* ---------- jogos no app ---------- */
+function gChild() { const kid = activeChild(); if (kid) return kid; if (!childById(ui.gChild)) ui.gChild = (S.children.find(k => k.age >= 3) || S.children[0]).id; return childById(ui.gChild); }
+function startGame(type) {
+  const c = gChild(), level = gameLevel(c.age), rnd = Math.random;
+  if (type === 'sudoku') { const s = makeSudoku(Math.max(1, level), rnd); ui.g = { type, level: Math.max(1, level), childId: c.id, ...s, cur: [...s.puzzle], sel: s.puzzle.indexOf(-1), done: false }; }
+  if (type === 'memory') { const pairs = [3, 4, 6, 8, 10][level]; const em = pick(G_EMOJI, pairs, rnd); ui.g = { type, level, childId: c.id, cards: shuffle([...em, ...em], rnd), open: [], matched: [], moves: 0, done: false, lock: false }; }
+  if (type === 'seq') { const lv = Math.max(1, level); ui.g = { type, level: lv, childId: c.id, rounds: [...Array(5)].map(() => makeSequence(lv, rnd)), i: 0, right: 0, last: null, done: false }; }
+  renderGameBoard();
+}
+function finishGame() {
+  const g = ui.g, c = childById(g.childId); if (!c || g.done) return; g.done = true;
+  const win = recordWin(c, g.type, g.level); commit();
+  g.result = win.points ? t('gWinStars', { n: win.points }) : t('gWinNoStars');
+  renderGameBoard();
+}
+function renderGameBoard() {
+  const el = $('#gBoard'); if (!el) return;
+  const g = ui.g; if (!g) { el.innerHTML = ''; return; }
+  const close = `<button type="button" class="btn btn-ghost btn-sm" data-act="g-quit">✕ ${t('close')}</button>`;
+  const doneBox = g.done ? `<div class="g-done">🎉 <b>${t('gWin')}</b> ${esc(g.result || '')}<div class="actions"><button type="button" class="btn btn-primary" data-act="g-start" data-id="${g.type}">🔄 ${t('gAgain')}</button>${close}</div></div>` : '';
+  if (g.type === 'sudoku') {
+    const wrong = i => g.cur[i] >= 0 && g.puzzle[i] < 0 && g.cur[i] !== g.solution[i];
+    el.innerHTML = `<div class="g-board"><div class="g-board-head"><b>🔢 ${t('g_sudoku')}</b><span class="hint">${t(g.level <= 1 ? 'gpSudokuHelpPics' : 'gpSudokuHelp', { n: g.n })}</span>${close}</div>
+      <div class="g-sud-play g-n${g.n}" style="--n:${g.n}">${g.cur.map((v, i) => { const r = Math.floor(i / g.n), cc = i % g.n; return `<button type="button" class="g-cell ${g.puzzle[i] >= 0 ? 'fixed' : ''} ${g.sel === i ? 'sel' : ''} ${wrong(i) ? 'bad' : ''} ${(r + 1) % g.br === 0 && r < g.n - 1 ? 'bb' : ''} ${(cc + 1) % g.bc === 0 && cc < g.n - 1 ? 'br' : ''}" data-act="g-cell" data-id="${i}" ${g.puzzle[i] >= 0 || g.done ? 'disabled' : ''}>${v >= 0 ? esc(g.syms[v]) : ''}</button>`; }).join('')}</div>
+      ${g.done ? '' : `<div class="g-pad">${g.syms.map((s, v) => `<button type="button" class="g-key" data-act="g-num" data-id="${v}">${esc(s)}</button>`).join('')}<button type="button" class="g-key erase" data-act="g-num" data-id="-1">⌫</button></div>`}${doneBox}</div>`;
+  } else if (g.type === 'memory') {
+    el.innerHTML = `<div class="g-board"><div class="g-board-head"><b>🃏 ${t('g_memory')}</b><span class="hint">${t('gMemoryHelp')} · ${t('gMoves', { n: g.moves })}</span>${close}</div>
+      <div class="g-mem g-mem${g.cards.length}">${g.cards.map((e, i) => { const up = g.open.includes(i) || g.matched.includes(i); return `<button type="button" class="g-card ${up ? 'up' : ''} ${g.matched.includes(i) ? 'ok' : ''}" data-act="g-card" data-id="${i}" ${up || g.done ? 'disabled' : ''}>${up ? esc(e) : '❔'}</button>`; }).join('')}</div>${doneBox}</div>`;
+  } else {
+    const q = g.rounds[Math.min(g.i, g.rounds.length - 1)];
+    el.innerHTML = `<div class="g-board"><div class="g-board-head"><b>🔁 ${t('g_seq')}</b><span class="hint">${t('gSeqProgress', { i: Math.min(g.i + 1, g.rounds.length), n: g.rounds.length, right: g.right })}</span>${close}</div>
+      ${g.done ? '' : `<div class="g-seq-play ${q.emoji ? 'emo' : ''}">${q.items.map(x => `<span>${esc(x)}</span>`).join('')}<span class="g-q">?</span></div>
+      <div class="g-opts">${q.options.map(o => `<button type="button" class="g-opt ${q.emoji ? 'emo' : ''}" data-act="g-opt" data-id="${esc(o)}">${esc(o)}</button>`).join('')}</div>`}
+      ${g.last ? `<p class="g-feedback ${g.last.ok ? 'ok' : 'bad'}">${g.last.ok ? '✅ ' + t('gRight') : '💭 ' + t('gWrongWas', { a: g.last.answer })}</p>` : ''}${doneBox}</div>`;
+  }
+}
+
+const GAMES_SECTION = {
+  id: 'jogos', icon: '🧩', nav: 'navGames', child: true,
+  build: () => `<div id="gPicker"></div><div id="gBody"></div>`,
+  update() {
+    const c = gChild(), parent = !isChildMode(), level = gameLevel(c.age), set = S.games.settings;
+    $('#gPicker').innerHTML = parent ? childPicker(c.id, 'g-child') : '';
+    ui.gTab = ui.gTab || 'play';
+    if (ui.g && ui.g.childId !== c.id) ui.g = null;
+    const tabs = [['play', '🎮 ' + t('gTabPlay')], ['print', '🖨️ ' + t('gTabPrint')], ['ideas', '🎲 ' + t('gTabIdeas')]];
+    const winsToday = gameWinsToday(c), month = S.games.wins.filter(x => x.childId === c.id && monthKey(x.date) === monthKey()).length;
+    let content = '';
+    if (ui.gTab === 'play') {
+      const games = [['sudoku', '🔢', level >= 1], ['memory', '🃏', true], ['seq', '🔁', level >= 1]];
+      content = `<div class="g-pick">${games.map(([k, ico, ok]) => `<button type="button" class="g-tile" data-act="g-start" data-id="${k}" ${ok ? '' : 'disabled'}><span>${ico}</span><b>${t('g_' + k)}</b><small>${esc(t('gDesc_' + k))}</small></button>`).join('')}</div>
+        <div id="gBoard"></div>
+        <p class="hint">${set.pointsPerWin && set.maxPerDay ? t('gStarsRule', { n: set.pointsPerWin, max: set.maxPerDay }) : ''}</p>`;
+    } else if (ui.gTab === 'print') {
+      content = `<div class="notice">${t('gPrintIntro', { name: esc(c.name), level: Math.max(1, level), lname: esc(t('gLevelName_' + Math.max(1, level))) })}</div>
+        <div class="actions mt"><button type="button" class="btn btn-primary" data-act="g-print">🖨️ ${t('gPrintBtn')}</button>${parent ? `<button type="button" class="btn btn-soft" data-act="g-print-all">🖨️ ${t('gPrintAll')}</button>` : ''}</div>
+        <p class="hint">${t('gPrintHint')}</p>`;
+    } else {
+      const list = BOARD_GAMES.filter(g => c.age >= g.min && c.age <= g.max);
+      content = `<p class="hint" style="margin-top:0">${t('gIdeasIntro', { name: esc(c.name) })}</p>
+        <div class="list">${list.map(g => `<div class="item"><div class="meta"><span class="ico">${esc(g.icon)}</span><div><strong>${esc(t(g.key))}</strong><div class="sub">${esc(t(g.key + '_why'))}</div></div></div>${parent ? `<div class="right"><button type="button" class="btn btn-soft btn-sm" data-act="g-task" data-id="${g.key}">+ ${t('gAsTask')}</button></div>` : ''}</div>`).join('')}</div>
+        ${parent ? `<h3 class="mt">🎁 ${t('gAsRewardTitle')}</h3><p class="hint" style="margin-top:-4px">${t('gAsRewardHint')}</p><div class="actions"><button type="button" class="btn btn-soft" data-act="g-reward" data-id="rw_gameNight">🎲 ${t('rw_gameNight')} · 200 ⭐</button><button type="button" class="btn btn-soft" data-act="g-reward" data-id="rw_chessParent">♟️ ${t('rw_chessParent')} · 100 ⭐</button></div>` : ''}`;
+    }
+    $('#gBody').innerHTML = `<div class="card">
+      <div class="g-top"><div><b>🧠 ${t('gLevelFor', { name: esc(c.name) })}</b> <span class="pill">${esc(t('gLevelName_' + level))}</span></div><div class="g-stats"><span>⭐ ${t('gToday', { n: winsToday, max: set.maxPerDay })}</span><span>🏅 ${t('gMonth', { n: month })}</span></div></div>
+      <div class="g-tabs">${tabs.map(([k, l]) => `<button type="button" class="chip ${ui.gTab === k ? 'on' : ''}" data-act="g-tab" data-id="${k}">${l}</button>`).join('')}</div>
+      ${content}</div>
+      ${parent ? card('⚙️ ' + t('gRules'), `<div class="row2"><div><label for="gPpw">${t('gRulePoints')}</label><input id="gPpw" type="number" min="0" max="100" value="${set.pointsPerWin}"></div><div><label for="gMax">${t('gRuleMax')}</label><input id="gMax" type="number" min="0" max="20" value="${set.maxPerDay}"></div></div><p class="hint">${t('gRuleHint')}</p><button type="button" class="btn btn-primary" data-act="g-rules">${t('save')}</button>`, { cls: 'mt' }) : ''}`;
+    if (ui.gTab === 'play') renderGameBoard();
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'ingles') + 1, 0, GAMES_SECTION);
+
+Object.assign(ACTIONS, {
+  'g-child': el => { ui.gChild = el.dataset.id; ui.g = null; render(); },
+  'g-tab': el => { ui.gTab = el.dataset.id; render(); },
+  'g-start': el => startGame(el.dataset.id),
+  'g-quit': () => { ui.g = null; renderGameBoard(); },
+  'g-cell': el => { if (!ui.g || ui.g.done) return; ui.g.sel = int(el.dataset.id, 0); renderGameBoard(); },
+  'g-num': el => {
+    const g = ui.g; if (!g || g.done || g.sel < 0 || g.puzzle[g.sel] >= 0) return;
+    g.cur[g.sel] = int(el.dataset.id, -1);
+    if (g.cur.every((v, i) => v === g.solution[i])) return finishGame();
+    const nxt = g.cur.findIndex((v, i) => v < 0 && i > g.sel); if (g.cur[g.sel] === g.solution[g.sel] && nxt >= 0) g.sel = nxt;
+    renderGameBoard();
+  },
+  'g-card': el => {
+    const g = ui.g; if (!g || g.done || g.lock) return; const i = int(el.dataset.id, 0);
+    if (g.open.includes(i) || g.matched.includes(i)) return;
+    g.open.push(i);
+    if (g.open.length === 2) {
+      g.moves++; const [a, b] = g.open;
+      if (g.cards[a] === g.cards[b]) { g.matched.push(a, b); g.open = []; if (g.matched.length === g.cards.length) return finishGame(); }
+      else { g.lock = true; setTimeout(() => { g.open = []; g.lock = false; renderGameBoard(); }, 900); }
+    }
+    renderGameBoard();
+  },
+  'g-opt': el => {
+    const g = ui.g; if (!g || g.done) return; const q = g.rounds[g.i], ok = el.dataset.id === q.answer;
+    if (ok) g.right++; g.last = { ok, answer: q.answer }; g.i++;
+    if (g.i >= g.rounds.length) { if (g.right >= g.rounds.length - 1) return finishGame(); g.done = true; g.result = t('gSeqTryAgain', { n: g.right, total: g.rounds.length }); }
+    renderGameBoard();
+  },
+  'g-print': () => { const c = gChild(); printDocument(puzzleSheetHtml(c, buildPuzzleSheet(c, `${c.id}|${Date.now()}`), !isChildMode()), t('gpTitle') + ' — ' + c.name); },
+  'g-print-all': () => { const kids = S.children.filter(c => c.age >= 3); printDocument(kids.map(c => puzzleSheetHtml(c, buildPuzzleSheet(c, `${c.id}|${Date.now()}`), true)).join(''), t('gpTitle')); },
+  'g-task': el => { const c = gChild(), g = BOARD_GAMES.find(x => x.key === el.dataset.id); if (c && g && addGameTask(c, g)) { commit(); toast(t('gTaskAdded', { game: t(g.key), name: c.name }), 'success'); } else toast(t('libHas'), 'info'); },
+  'g-reward': el => { const key = el.dataset.id; if (addGameReward(key, key === 'rw_chessParent' ? '♟️' : '🎲', key === 'rw_chessParent' ? 100 : 200)) { commit(); toast(t('gRewardAdded', { name: t(key) }), 'success'); } else toast(t('libHas'), 'info'); },
+  'g-rules': () => { S.games.settings.pointsPerWin = clamp(int($('#gPpw').value, 5), 0, 100); S.games.settings.maxPerDay = clamp(int($('#gMax').value, 3), 0, 20); commit(); toast(t('saved'), 'success'); }
+});
+// as duas recompensas de jogo também aparecem nas ideias de recompensas
+REWARD_IDEAS.splice(REWARD_IDEAS.findIndex(x => x.key === 'rw_friend'), 0, { tier: 'medium', key: 'rw_chessParent', icon: '♟️', cost: 100 }, { tier: 'medium', key: 'rw_gameNight', icon: '🎲', cost: 200 });
 
 </script>
 <script>
