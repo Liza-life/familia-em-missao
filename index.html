@@ -434,7 +434,7 @@ html{-webkit-tap-highlight-color:transparent}
 .pr-star b{display:block;font-size:22px;font-weight:900;white-space:nowrap}
 .pr-star small{display:block;font-size:10px;font-weight:600;color:#666}
 .pr-summary{font-size:14px;font-weight:600;margin:0 0 10px;padding:0 4px}
-.pr-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.pr-kpis{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .pr-kpis3{grid-template-columns:repeat(3,1fr);margin-bottom:10px}
 .pr-kpi{border:1.5px solid #e2e2ea;border-radius:12px;padding:6px 6px 7px;text-align:center;background:#fafafe}
 .pr-ki{display:block;font-size:16px;line-height:1.1}
@@ -663,13 +663,73 @@ span.q-name{cursor:default}
 .val-kid span{flex:1;font-weight:700}
 .val-kid small{color:var(--muted);min-width:80px;text-align:right}
 .tm-sug .btn{margin-left:6px}
+/* ===== Semana da família (todos juntos) ===== */
+.fw-kid{border:1.5px solid #e2e2ea;border-left:6px solid var(--c);border-radius:14px;padding:7px 9px;margin-bottom:8px;break-inside:avoid;page-break-inside:avoid;background:#fff}
+.fw-head{display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap}
+.fw-head .pr-av{width:34px;height:34px;font-size:19px;border-width:2px}
+.fw-name b{display:block;font-size:15px;line-height:1.1}
+.fw-name small{font-size:10px;color:#666}
+.fw-chips{display:flex;gap:5px;flex-wrap:wrap;margin-left:auto}
+.fw-chips span{font-size:10.5px;font-weight:700;background:#f4f4f8;border-radius:999px;padding:2px 8px}
+.fw-chips .fw-main{background:color-mix(in srgb,var(--c) 16%,#fff)}
+.fw-note{font-size:10px;color:#8a3b12;margin:4px 2px 0}
+.pr-compact{font-size:10px}
+.pr-compact th,.pr-compact td{padding:2px 3px}
+.pr-compact th{font-size:9.5px}
+.pr-compact .pr-tl{width:34%}
+.pr-compact td.ok{font-size:12px}
+.pr-compact .pr-ti{font-size:11px;width:16px}
+.pr-grid td.miss{color:#c2410c;font-weight:800}
+.pr-grid .pr-tot{font-weight:900;background:#fafafe;width:7%}
+.pr-grid .pr-hw td{background:#f3f8ff;font-weight:800;color:#1d4ed8}
+.fw-foot{margin-top:6px;font-size:12px}
+.fw-foot .pr-lines span{height:22px}
+.fw-screen .fw-wrap{overflow-x:auto}
+.fw-screen .ps-page{min-width:620px;color:#1d1d2b}
+.fw-screen h3{font-size:15px}
+/* lição de casa */
+.hw-pages .chip{min-width:44px;justify-content:center;font-weight:800}
+.hw-subs{display:grid;gap:6px}
+.hw-subs div{display:grid;grid-template-columns:150px 1fr 34px;gap:8px;align-items:center;font-size:13px}
+.hw-subs .progress{margin:0}
+.hw-subs b{text-align:right}
+.q-hw td,.q-hw th{background:#f3f8ff}
+.q-pages{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:10px;background:#dbeafe;color:#1d4ed8;font-weight:900}
+.q-btn.add{border:2px dashed #93c5fd;color:#2563eb;background:#fff;font-size:18px}
+.pr-compact th,.pr-compact td{padding:1px 3px;line-height:1.25}
+.pr-compact td.pr-tl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pr-fweek .pr-hero{padding:6px 12px;margin-bottom:4px;border-radius:14px}
+.pr-fweek .pr-hero .pr-av{width:42px;height:42px;font-size:22px}
+.pr-fweek .pr-title{font-size:20px}
+.pr-fweek .pr-legend{margin:2px 2px 5px}
+.pr-fweek .fw-kid{padding:4px 8px 5px;margin-bottom:5px}
+.pr-fweek .fw-head{margin-bottom:3px}
+.pr-fweek .fw-head .pr-av{width:28px;height:28px;font-size:16px}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:start}
+.fw-grid .fw-kid{margin-bottom:0}
+.fw-grid .fw-chips{margin-left:0;width:100%}
+.fw-grid .fw-chips span{font-size:9px;padding:1px 6px}
+.fw-grid .pr-compact{font-size:9px}
+.fw-grid .pr-compact th{font-size:8.5px}
+.fw-grid .pr-compact .pr-tl{width:38%}
+.fw-grid .pr-compact .pr-ti{font-size:10px;width:14px}
+.fw-grid .pr-compact td.ok{font-size:11px}
+.fw-grid .pr-grid .pr-tot{width:9%}
+.fw-grid .fw-note{font-size:9px}
+.fw-screen .fw-grid{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+.fw-screen .pr-compact{font-size:11px}
+.fw-screen .ps-page{min-width:0}
+.fw-grid .pr-compact .pr-tl{width:44%}
+.fw-grid .pr-compact th,.fw-grid .pr-compact td{padding:1px 2px}
+.fw-grid .pr-compact td.pr-tl{font-size:8.7px;letter-spacing:-.15px}
+.rw-idea{cursor:pointer}.rw-idea .meta input{width:18px;height:18px;margin:0 4px 0 0;flex:0 0 auto}
 
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v78 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v79 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -2295,13 +2355,185 @@ QUADRO_TEXT.zht = {
 };
 ['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], QUADRO_TEXT[l]));
 
+/* Textos da v79: lição de casa e semana da família (todos juntos). */
+const HW_TEXT = {
+pt: {
+  hwRules: "Regras da lição de casa", lib_lineHang: "Ajudar a pendurar a roupa no varal", lib_lineTake: "Ajudar a tirar a roupa do varal",
+  qHwHint: 'toque para registrar as páginas',
+  navHomework: 'Lição de casa', title_licao: 'Lição de casa', sub_licao: 'Quantas páginas cada um fez, de qual matéria.', typeHomework: 'Lição de casa',
+  hwLabel: '{n} página(s) de lição', hwSub_pt: 'Português', hwSub_math: 'Matemática', hwSub_science: 'Ciências', hwSub_english: 'Inglês', hwSub_social: 'História/Geografia', hwSub_reading: 'Leitura', hwSub_writing: 'Caligrafia', hwSub_other: 'Outra',
+  hwLogTitle: 'Registrar lição de {name}', hwPages: 'Quantas páginas?', hwPagesPh: 'Ou digite o número de páginas', hwSubject: 'Matéria', hwNotePh: 'Ex.: apostila, caderno de caligrafia', hwPointsHint: 'Cada página vale {n} pontos.', hwTaskHint: 'A tarefa "{task}" (+{n}) é marcada junto.', hwSave: 'Salvar lição', hwPending: '{n} página(s) esperando aprovação.',
+  hwToday: 'Hoje', hwLast8: 'Páginas nas últimas 8 semanas', hwBySubject: 'Por matéria neste mês', hwHistory: 'Lições registradas', hwEmpty: 'Nenhuma lição registrada ainda.', hwRulePoints: 'Pontos por página', hwRuleAuto: 'Marcar junto a tarefa "Fazer a lição de casa"', hwRuleHint: 'Assim a criança ganha pela tarefa (fez a lição) e um pouco a mais pelas páginas.', hwNeedPages: 'Coloque quantas páginas foram feitas.', hwSaved: '{name}: {n} página(s) de lição registradas', hwDelConfirm: 'Apagar este registro de lição? Os pontos voltam.',
+  prTotalCol: 'Total', prHwRow: 'Lição (páginas)', prHwPages: 'Páginas de lição', prHiHomework: 'Mais páginas de lição', prChartHw: 'Lição de casa (páginas)', prChartHwHint: 'escreva quantas páginas fez',
+  fwDoneOf: '{done} de {total} tarefas', fwPages: 'páginas', fwKicker: 'Semana da família — todos juntos', fwLegTotal: 'Total = quantas vezes fez na semana', fwAgreements: 'Combinados para a próxima semana:', fwOpt: 'Semana da família — todos juntos', fwOptHint: 'Uma folha com as 4 crianças: o que foi feito e o que faltou em cada dia.', fwOptShort: 'Semana de todos', fwAll: 'Todos', fwAllSub: 'semana da família', fwPrintBtn: 'Imprimir a semana de todos'
+},
+en: {
+  hwRules: "Homework rules", lib_lineHang: "Help hang the laundry on the line", lib_lineTake: "Help take the laundry off the line",
+  qHwHint: 'tap to log the pages',
+  navHomework: 'Homework', title_licao: 'Homework', sub_licao: 'How many pages each child did, and in which subject.', typeHomework: 'Homework',
+  hwLabel: '{n} page(s) of homework', hwSub_pt: 'Portuguese', hwSub_math: 'Math', hwSub_science: 'Science', hwSub_english: 'English', hwSub_social: 'History/Geography', hwSub_reading: 'Reading', hwSub_writing: 'Handwriting', hwSub_other: 'Other',
+  hwLogTitle: "Log {name}'s homework", hwPages: 'How many pages?', hwPagesPh: 'Or type the number of pages', hwSubject: 'Subject', hwNotePh: 'E.g. workbook, handwriting notebook', hwPointsHint: 'Each page is worth {n} points.', hwTaskHint: 'The task "{task}" (+{n}) is ticked too.', hwSave: 'Save homework', hwPending: '{n} page(s) waiting for approval.',
+  hwToday: 'Today', hwLast8: 'Pages in the last 8 weeks', hwBySubject: 'By subject this month', hwHistory: 'Logged homework', hwEmpty: 'No homework logged yet.', hwRulePoints: 'Points per page', hwRuleAuto: 'Also tick the task "Do homework"', hwRuleHint: 'This way the child earns for the task (did the homework) and a bit more for the pages.', hwNeedPages: 'Enter how many pages were done.', hwSaved: '{name}: {n} page(s) of homework logged', hwDelConfirm: 'Delete this homework entry? The points go back.',
+  prTotalCol: 'Total', prHwRow: 'Homework (pages)', prHwPages: 'Homework pages', prHiHomework: 'Most homework pages', prChartHw: 'Homework (pages)', prChartHwHint: 'write how many pages you did',
+  fwDoneOf: '{done} of {total} tasks', fwPages: 'pages', fwKicker: 'Family week — everyone together', fwLegTotal: 'Total = times done this week', fwAgreements: 'Agreements for next week:', fwOpt: 'Family week — everyone together', fwOptHint: 'One sheet with all 4 children: what was done and what was missed each day.', fwOptShort: 'Everyone’s week', fwAll: 'Everyone', fwAllSub: 'family week', fwPrintBtn: "Print everyone's week"
+},
+es: {
+  hwRules: "Reglas de los deberes", lib_lineHang: "Ayudar a tender la ropa en el tendedero", lib_lineTake: "Ayudar a quitar la ropa del tendedero",
+  qHwHint: 'toca para registrar las páginas',
+  navHomework: 'Deberes', title_licao: 'Deberes', sub_licao: 'Cuántas páginas hizo cada uno y de qué materia.', typeHomework: 'Deberes',
+  hwLabel: '{n} página(s) de deberes', hwSub_pt: 'Portugués', hwSub_math: 'Matemáticas', hwSub_science: 'Ciencias', hwSub_english: 'Inglés', hwSub_social: 'Historia/Geografía', hwSub_reading: 'Lectura', hwSub_writing: 'Caligrafía', hwSub_other: 'Otra',
+  hwLogTitle: 'Registrar deberes de {name}', hwPages: '¿Cuántas páginas?', hwPagesPh: 'O escribe el número de páginas', hwSubject: 'Materia', hwNotePh: 'Ej.: cuadernillo, cuaderno de caligrafía', hwPointsHint: 'Cada página vale {n} puntos.', hwTaskHint: 'La tarea "{task}" (+{n}) se marca también.', hwSave: 'Guardar deberes', hwPending: '{n} página(s) esperando aprobación.',
+  hwToday: 'Hoy', hwLast8: 'Páginas en las últimas 8 semanas', hwBySubject: 'Por materia este mes', hwHistory: 'Deberes registrados', hwEmpty: 'Todavía no hay deberes registrados.', hwRulePoints: 'Puntos por página', hwRuleAuto: 'Marcar también la tarea "Hacer la tarea escolar"', hwRuleHint: 'Así el niño gana por la tarea (hizo los deberes) y un poco más por las páginas.', hwNeedPages: 'Indica cuántas páginas se hicieron.', hwSaved: '{name}: {n} página(s) de deberes registradas', hwDelConfirm: '¿Borrar este registro de deberes? Los puntos vuelven.',
+  prTotalCol: 'Total', prHwRow: 'Deberes (páginas)', prHwPages: 'Páginas de deberes', prHiHomework: 'Más páginas de deberes', prChartHw: 'Deberes (páginas)', prChartHwHint: 'escribe cuántas páginas hiciste',
+  fwDoneOf: '{done} de {total} tareas', fwPages: 'páginas', fwKicker: 'Semana de la familia — todos juntos', fwLegTotal: 'Total = veces que lo hizo en la semana', fwAgreements: 'Acuerdos para la próxima semana:', fwOpt: 'Semana de la familia — todos juntos', fwOptHint: 'Una hoja con los 4 niños: lo que se hizo y lo que faltó cada día.', fwOptShort: 'Semana de todos', fwAll: 'Todos', fwAllSub: 'semana de la familia', fwPrintBtn: 'Imprimir la semana de todos'
+},
+it: {
+  hwRules: "Regole dei compiti", lib_lineHang: "Aiutare a stendere i panni", lib_lineTake: "Aiutare a ritirare i panni",
+  qHwHint: 'tocca per registrare le pagine',
+  navHomework: 'Compiti di scuola', title_licao: 'Compiti di scuola', sub_licao: 'Quante pagine ha fatto ognuno e di quale materia.', typeHomework: 'Compiti di scuola',
+  hwLabel: '{n} pagina/e di compiti', hwSub_pt: 'Portoghese', hwSub_math: 'Matematica', hwSub_science: 'Scienze', hwSub_english: 'Inglese', hwSub_social: 'Storia/Geografia', hwSub_reading: 'Lettura', hwSub_writing: 'Calligrafia', hwSub_other: 'Altro',
+  hwLogTitle: 'Registra i compiti di {name}', hwPages: 'Quante pagine?', hwPagesPh: 'Oppure scrivi il numero di pagine', hwSubject: 'Materia', hwNotePh: 'Es.: libro di esercizi, quaderno di calligrafia', hwPointsHint: 'Ogni pagina vale {n} punti.', hwTaskHint: 'Viene segnato anche il compito "{task}" (+{n}).', hwSave: 'Salva compiti', hwPending: '{n} pagina/e in attesa di approvazione.',
+  hwToday: 'Oggi', hwLast8: 'Pagine nelle ultime 8 settimane', hwBySubject: 'Per materia questo mese', hwHistory: 'Compiti registrati', hwEmpty: 'Nessun compito registrato.', hwRulePoints: 'Punti per pagina', hwRuleAuto: 'Segna anche il compito "Fare i compiti di scuola"', hwRuleHint: 'Così il bambino guadagna per il compito (ha fatto i compiti) e un po’ di più per le pagine.', hwNeedPages: 'Indica quante pagine sono state fatte.', hwSaved: '{name}: {n} pagina/e di compiti registrate', hwDelConfirm: 'Eliminare questa registrazione? I punti tornano indietro.',
+  prTotalCol: 'Totale', prHwRow: 'Compiti (pagine)', prHwPages: 'Pagine di compiti', prHiHomework: 'Più pagine di compiti', prChartHw: 'Compiti di scuola (pagine)', prChartHwHint: 'scrivi quante pagine hai fatto',
+  fwDoneOf: '{done} di {total} compiti', fwPages: 'pagine', fwKicker: 'Settimana della famiglia — tutti insieme', fwLegTotal: 'Totale = volte fatto nella settimana', fwAgreements: 'Accordi per la prossima settimana:', fwOpt: 'Settimana della famiglia — tutti insieme', fwOptHint: 'Un foglio con tutti e 4 i bambini: cosa è stato fatto e cosa è mancato ogni giorno.', fwOptShort: 'Settimana di tutti', fwAll: 'Tutti', fwAllSub: 'settimana della famiglia', fwPrintBtn: 'Stampa la settimana di tutti'
+},
+zh: {
+  hwRules: "作业规则", lib_lineHang: "帮忙把衣服晾到晾衣绳上", lib_lineTake: "帮忙把衣服从晾衣绳上收下来",
+  qHwHint: '点这里登记页数',
+  navHomework: '家庭作业', title_licao: '家庭作业', sub_licao: '每个孩子做了多少页，哪一科。', typeHomework: '家庭作业',
+  hwLabel: '{n} 页作业', hwSub_pt: '葡萄牙语', hwSub_math: '数学', hwSub_science: '科学', hwSub_english: '英语', hwSub_social: '历史/地理', hwSub_reading: '阅读', hwSub_writing: '写字', hwSub_other: '其他',
+  hwLogTitle: '登记 {name} 的作业', hwPages: '做了几页？', hwPagesPh: '或者输入页数', hwSubject: '科目', hwNotePh: '例如：练习册、写字本', hwPointsHint: '每页 {n} 积分。', hwTaskHint: '"{task}"（+{n}）会一起打勾。', hwSave: '保存作业', hwPending: '{n} 页等待审批。',
+  hwToday: '今天', hwLast8: '最近 8 周的页数', hwBySubject: '本月按科目', hwHistory: '已登记的作业', hwEmpty: '还没有登记作业。', hwRulePoints: '每页积分', hwRuleAuto: '同时给"做作业"任务打勾', hwRuleHint: '这样孩子做作业的任务有积分，页数再多加一点。', hwNeedPages: '请填写做了几页。', hwSaved: '{name}：已登记 {n} 页作业', hwDelConfirm: '删除这条作业记录？积分会退回。',
+  prTotalCol: '合计', prHwRow: '作业（页）', prHwPages: '作业页数', prHiHomework: '作业页数最多', prChartHw: '家庭作业（页）', prChartHwHint: '写下做了几页',
+  fwDoneOf: '{total} 个任务完成 {done} 个', fwPages: '页', fwKicker: '家庭一周 — 全家一起', fwLegTotal: '合计 = 本周做了几次', fwAgreements: '下周的约定：', fwOpt: '家庭一周 — 全家一起', fwOptHint: '一张纸上有 4 个孩子：每天做了什么、漏了什么。', fwOptShort: '全家这周', fwAll: '全部', fwAllSub: '家庭一周', fwPrintBtn: '打印全家这周'
+}
+};
+HW_TEXT.zht = {
+  hwRules: "作業規則",
+  lib_lineHang: "幫忙把衣服晾到晾衣繩上",
+  lib_lineTake: "幫忙把衣服從晾衣繩上收下來",
+  qHwHint: "點這裡登記頁數",
+  navHomework: "家庭作業",
+  title_licao: "家庭作業",
+  sub_licao: "每個孩子做了多少頁，哪一科。",
+  typeHomework: "家庭作業",
+  hwLabel: "{n} 頁作業",
+  hwSub_pt: "葡萄牙語",
+  hwSub_math: "數學",
+  hwSub_science: "科學",
+  hwSub_english: "英語",
+  hwSub_social: "歷史/地理",
+  hwSub_reading: "閱讀",
+  hwSub_writing: "寫字",
+  hwSub_other: "其他",
+  hwLogTitle: "登記 {name} 的作業",
+  hwPages: "做了幾頁？",
+  hwPagesPh: "或者輸入頁數",
+  hwSubject: "科目",
+  hwNotePh: "例如：練習冊、寫字本",
+  hwPointsHint: "每頁 {n} 積分。",
+  hwTaskHint: "\"{task}\"（+{n}）會一起打勾。",
+  hwSave: "儲存作業",
+  hwPending: "{n} 頁等待審批。",
+  hwToday: "今天",
+  hwLast8: "最近 8 周的頁數",
+  hwBySubject: "本月按科目",
+  hwHistory: "已登記的作業",
+  hwEmpty: "還沒有登記作業。",
+  hwRulePoints: "每頁積分",
+  hwRuleAuto: "同時給\"做作業\"任務打勾",
+  hwRuleHint: "這樣孩子做作業的任務有積分，頁數再多加一點。",
+  hwNeedPages: "請填寫做了幾頁。",
+  hwSaved: "{name}：已登記 {n} 頁作業",
+  hwDelConfirm: "刪除這條作業記錄？積分會退回。",
+  prTotalCol: "合計",
+  prHwRow: "作業（頁）",
+  prHwPages: "作業頁數",
+  prHiHomework: "作業頁數最多",
+  prChartHw: "家庭作業（頁）",
+  prChartHwHint: "寫下做了幾頁",
+  fwDoneOf: "{total} 個任務完成 {done} 個",
+  fwPages: "頁",
+  fwKicker: "家庭一週 — 全家一起",
+  fwLegTotal: "合計 = 本週做了幾次",
+  fwAgreements: "下週的約定：",
+  fwOpt: "家庭一週 — 全家一起",
+  fwOptHint: "一張紙上有 4 個孩子：每天做了什麼、漏了什麼。",
+  fwOptShort: "全家這週",
+  fwAll: "全部",
+  fwAllSub: "家庭一週",
+  fwPrintBtn: "列印全家這週"
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], HW_TEXT[l]));
+
+/* Textos: ideias de recompensas. */
+const RW_TEXT = {
+pt: {
+  rwIdeasBtn: 'Ideias de recompensas', rwIdeasTitle: 'Ideias de recompensas', rwIdeasIntro: 'Marque as que quiser e ajuste o preço. As que vocês já têm aparecem com o preço atual e o sugerido; se ficarem marcadas, recebem o preço novo.', rwIdeasHint: 'Dica: misture coisas pequenas (para os menores conseguirem rápido) com grandes (para juntar). Tempo junto com vocês costuma valer mais que brinquedo.', rwIdeasSave: 'Salvar recompensas', rwIdeasDone: '{added} recompensa(s) nova(s) e {changed} preço(s) ajustado(s).', rwHasNow: 'já existe · hoje custa {n}', rwNew: 'nova',
+  rwTier_small: '⭐ Pequenas — para o dia a dia', rwTierHint_small: 'Dá para conseguir em 1 ou 2 dias. Ótimas para os menores.', rwTier_medium: '🌈 Médias — da semana', rwTierHint_medium: 'Mais ou menos uma semana de tarefas.', rwTier_big: '🏆 Grandes — para juntar', rwTierHint_big: 'Um mês ou mais. Ensina a esperar e guardar.',
+  rw_sticker: 'Ganhar um adesivo ou figurinha', rw_song: 'Escolher a música no carro', rw_story: 'Uma história a mais antes de dormir', rw_bubbles: 'Brincar de bolha de sabão', rw_dessert: 'Escolher a sobremesa', rw_screen15: '15 minutos a mais de tela', rw_momTime: '30 minutos só com a mamãe ou o papai', rw_bake: 'Fazer um bolo ou biscoito juntos', rw_picnic: 'Piquenique na sala ou no quintal', rw_dinner: 'Escolher o jantar', rw_friend: 'Convidar um amigo para brincar', rw_camp: 'Acampamento na sala (cabana de lençol)', rw_smallToy: 'Brinquedo pequeno', rw_cinema: 'Ir ao cinema', rw_yesDay: 'Dia do sim (com combinados)'
+},
+en: {
+  rwIdeasBtn: 'Reward ideas', rwIdeasTitle: 'Reward ideas', rwIdeasIntro: 'Tick the ones you want and adjust the price. Rewards you already have show the current and the suggested price; if left ticked, they get the new price.', rwIdeasHint: 'Tip: mix small things (so the little ones get them quickly) with big ones (to save up for). Time with you is often worth more than a toy.', rwIdeasSave: 'Save rewards', rwIdeasDone: '{added} new reward(s) and {changed} price(s) adjusted.', rwHasNow: 'already added · costs {n} now', rwNew: 'new',
+  rwTier_small: '⭐ Small — everyday', rwTierHint_small: 'Reachable in 1 or 2 days. Great for the little ones.', rwTier_medium: '🌈 Medium — weekly', rwTierHint_medium: 'About a week of tasks.', rwTier_big: '🏆 Big — to save up for', rwTierHint_big: 'A month or more. Teaches waiting and saving.',
+  rw_sticker: 'Get a sticker', rw_song: 'Pick the music in the car', rw_story: 'One more bedtime story', rw_bubbles: 'Play with soap bubbles', rw_dessert: 'Choose dessert', rw_screen15: '15 more minutes of screen time', rw_momTime: '30 minutes alone with mom or dad', rw_bake: 'Bake a cake or cookies together', rw_picnic: 'Picnic in the living room or yard', rw_dinner: 'Choose dinner', rw_friend: 'Invite a friend to play', rw_camp: 'Living room camp (blanket fort)', rw_smallToy: 'Small toy', rw_cinema: 'Go to the movies', rw_yesDay: 'Yes Day (with ground rules)'
+},
+es: {
+  rwIdeasBtn: 'Ideas de recompensas', rwIdeasTitle: 'Ideas de recompensas', rwIdeasIntro: 'Marca las que quieras y ajusta el precio. Las que ya tienen aparecen con el precio actual y el sugerido; si quedan marcadas, reciben el precio nuevo.', rwIdeasHint: 'Consejo: mezcla cosas pequeñas (para que los más chicos las consigan rápido) con grandes (para ahorrar). El tiempo con ustedes suele valer más que un juguete.', rwIdeasSave: 'Guardar recompensas', rwIdeasDone: '{added} recompensa(s) nueva(s) y {changed} precio(s) ajustado(s).', rwHasNow: 'ya existe · hoy cuesta {n}', rwNew: 'nueva',
+  rwTier_small: '⭐ Pequeñas — del día a día', rwTierHint_small: 'Se consiguen en 1 o 2 días. Ideales para los más pequeños.', rwTier_medium: '🌈 Medianas — de la semana', rwTierHint_medium: 'Más o menos una semana de tareas.', rwTier_big: '🏆 Grandes — para ahorrar', rwTierHint_big: 'Un mes o más. Enseña a esperar y ahorrar.',
+  rw_sticker: 'Ganar una pegatina', rw_song: 'Elegir la música en el coche', rw_story: 'Un cuento más antes de dormir', rw_bubbles: 'Jugar con pompas de jabón', rw_dessert: 'Elegir el postre', rw_screen15: '15 minutos más de pantalla', rw_momTime: '30 minutos a solas con mamá o papá', rw_bake: 'Hacer un pastel o galletas juntos', rw_picnic: 'Pícnic en la sala o el patio', rw_dinner: 'Elegir la cena', rw_friend: 'Invitar a un amigo a jugar', rw_camp: 'Campamento en la sala (cabaña de sábanas)', rw_smallToy: 'Juguete pequeño', rw_cinema: 'Ir al cine', rw_yesDay: 'Día del sí (con reglas)'
+},
+it: {
+  rwIdeasBtn: 'Idee di ricompense', rwIdeasTitle: 'Idee di ricompense', rwIdeasIntro: 'Spunta quelle che vuoi e regola il prezzo. Quelle che avete già mostrano il prezzo attuale e quello consigliato; se restano spuntate, prendono il prezzo nuovo.', rwIdeasHint: 'Consiglio: mescola cose piccole (così i più piccoli le ottengono presto) con cose grandi (per risparmiare). Il tempo con voi spesso vale più di un giocattolo.', rwIdeasSave: 'Salva ricompense', rwIdeasDone: '{added} ricompensa/e nuova/e e {changed} prezzo/i aggiornato/i.', rwHasNow: 'già presente · ora costa {n}', rwNew: 'nuova',
+  rwTier_small: '⭐ Piccole — di tutti i giorni', rwTierHint_small: 'Si ottengono in 1 o 2 giorni. Perfette per i più piccoli.', rwTier_medium: '🌈 Medie — della settimana', rwTierHint_medium: 'Circa una settimana di compiti.', rwTier_big: '🏆 Grandi — da mettere da parte', rwTierHint_big: 'Un mese o più. Insegna ad aspettare e risparmiare.',
+  rw_sticker: 'Ricevere un adesivo', rw_song: 'Scegliere la musica in macchina', rw_story: 'Una storia in più prima di dormire', rw_bubbles: 'Giocare con le bolle di sapone', rw_dessert: 'Scegliere il dolce', rw_screen15: '15 minuti in più di schermo', rw_momTime: '30 minuti da solo con mamma o papà', rw_bake: 'Fare una torta o biscotti insieme', rw_picnic: 'Picnic in salotto o in giardino', rw_dinner: 'Scegliere la cena', rw_friend: 'Invitare un amico a giocare', rw_camp: 'Campeggio in salotto (capanna di lenzuola)', rw_smallToy: 'Piccolo giocattolo', rw_cinema: 'Andare al cinema', rw_yesDay: 'Giorno del sì (con regole)'
+},
+zh: {
+  rwIdeasBtn: '奖励点子', rwIdeasTitle: '奖励点子', rwIdeasIntro: '勾选想要的并调整价格。已经有的奖励会显示现在的价格和建议价格；保持勾选就会用新价格。', rwIdeasHint: '小提示：小奖励（让小的孩子很快能换到）和大奖励（需要攒）搭配着用。和你们在一起的时间往往比玩具更珍贵。', rwIdeasSave: '保存奖励', rwIdeasDone: '新增 {added} 个奖励，调整了 {changed} 个价格。', rwHasNow: '已有 · 现在 {n}', rwNew: '新',
+  rwTier_small: '⭐ 小奖励 — 日常', rwTierHint_small: '1 到 2 天就能换到，很适合小的孩子。', rwTier_medium: '🌈 中奖励 — 每周', rwTierHint_medium: '大约一周的任务。', rwTier_big: '🏆 大奖励 — 慢慢攒', rwTierHint_big: '一个月或更久，学会等待和储蓄。',
+  rw_sticker: '得到一张贴纸', rw_song: '在车上选音乐', rw_story: '睡前多讲一个故事', rw_bubbles: '玩肥皂泡泡', rw_dessert: '选甜点', rw_screen15: '多 15 分钟屏幕时间', rw_momTime: '和妈妈或爸爸单独相处 30 分钟', rw_bake: '一起做蛋糕或饼干', rw_picnic: '在客厅或院子野餐', rw_dinner: '选晚餐', rw_friend: '邀请朋友来玩', rw_camp: '客厅露营（床单帐篷）', rw_smallToy: '小玩具', rw_cinema: '去看电影', rw_yesDay: '"说好"日（有约定）'
+}
+};
+RW_TEXT.zht = {
+  rwIdeasBtn: "獎勵點子",
+  rwIdeasTitle: "獎勵點子",
+  rwIdeasIntro: "勾選想要的並調整價格。已經有的獎勵會顯示現在的價格和建議價格；保持勾選就會用新價格。",
+  rwIdeasHint: "小提示：小獎勵（讓小的孩子很快能換到）和大獎勵（需要攢）搭配著用。和你們在一起的時間往往比玩具更珍貴。",
+  rwIdeasSave: "儲存獎勵",
+  rwIdeasDone: "新增 {added} 個獎勵，調整了 {changed} 個價格。",
+  rwHasNow: "已有 · 現在 {n}",
+  rwNew: "新",
+  rwTier_small: "⭐ 小獎勵 — 日常",
+  rwTierHint_small: "1 到 2 天就能換到，很適合小的孩子。",
+  rwTier_medium: "🌈 中獎勵 — 每週",
+  rwTierHint_medium: "大約一週的任務。",
+  rwTier_big: "🏆 大獎勵 — 慢慢攢",
+  rwTierHint_big: "一個月或更久，學會等待和儲蓄。",
+  rw_sticker: "得到一張貼紙",
+  rw_song: "在車上選音樂",
+  rw_story: "睡前多講一個故事",
+  rw_bubbles: "玩肥皂泡泡",
+  rw_dessert: "選甜點",
+  rw_screen15: "多 15 分鐘螢幕時間",
+  rw_momTime: "和媽媽或爸爸單獨相處 30 分鐘",
+  rw_bake: "一起做蛋糕或餅乾",
+  rw_picnic: "在客廳或院子野餐",
+  rw_dinner: "選晚餐",
+  rw_friend: "邀請朋友來玩",
+  rw_camp: "客廳露營（床單帳篷）",
+  rw_smallToy: "小玩具",
+  rw_cinema: "去看電影",
+  rw_yesDay: "\"說好\"日（有約定）"
+};
+['pt', 'en', 'es', 'it', 'zh', 'zht'].forEach(l => Object.assign(I18N[l], RW_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 78;
+const APP_VERSION = 79;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -2394,6 +2626,7 @@ function initialData() {
     ],
     history: [], piggyHistory: [], approvals: [], goals: [], achievements: [], behaviorNotes: [], privateNotes: [],
     english: { settings: { pointsPer15: 5, testDay: 25, goals: {} }, sessions: [], tests: [] },
+    homework: { settings: { pointsPerPage: 2, autoTask: true }, entries: [] },
     familyAccount: { email: '', passwordHash: '' }
   };
 }
@@ -2494,7 +2727,7 @@ function normalize(raw, defaultKeys) {
     if (!h || typeof h !== 'object') return null;
     const childId = mapChild(h.childId); if (!childId) return null;
     const legacy = parseLegacyValue(h.value);
-    const type = ['task', 'reward', 'adjust', 'behavior', 'english'].includes(h.type) ? h.type : 'adjust';
+    const type = ['task', 'reward', 'adjust', 'behavior', 'english', 'homework'].includes(h.type) ? h.type : 'adjust';
     let points = Number.isFinite(h.points) ? h.points : Number.isFinite(h.pointsEarned) ? h.pointsEarned : legacy.points;
     let cash = Number.isFinite(h.cash) ? h.cash : Number.isFinite(h.cashEarned) ? h.cashEarned : legacy.cash;
     if (type === 'reward' && points > 0) points = -points;
@@ -2504,7 +2737,8 @@ function normalize(raw, defaultKeys) {
       rewardId: h.rewardId != null && h.rewardId !== '' ? Number(h.rewardId) : null,
       note: text(h.note, 200), description: text(h.description, 200), points: Math.round(points), cash: round2(cash),
       approvalId: h.approvalId ? cleanId(h.approvalId) : null,
-      minutes: type === 'english' ? clamp(int(h.minutes, 0), 0, 600) : undefined, activity: type === 'english' ? text(h.activity, 30) : undefined
+      minutes: type === 'english' ? clamp(int(h.minutes, 0), 0, 600) : undefined, activity: type === 'english' ? text(h.activity, 30) : undefined,
+      pages: type === 'homework' ? clamp(int(h.pages, 0), 0, 200) : undefined, subject: type === 'homework' ? text(h.subject, 30) : undefined
     };
   }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date));
   // versões antigas guardavam a observação dentro da descrição ("Tarefa — observação")
@@ -2523,9 +2757,10 @@ function normalize(raw, defaultKeys) {
     const childId = mapChild(a.childId); if (!childId) return null;
     const status = ['pending', 'approved', 'rejected', 'reverted'].includes(a.status) ? a.status : 'pending';
     return {
-      id: cleanId(a.id) || `a${i}`, kind: ['reward', 'english'].includes(a.kind) ? a.kind : 'task', childId,
+      id: cleanId(a.id) || `a${i}`, kind: ['reward', 'english', 'homework'].includes(a.kind) ? a.kind : 'task', childId,
+      pages: a.kind === 'homework' ? clamp(int(a.pages, 0), 0, 200) : undefined, subject: a.kind === 'homework' ? text(a.subject, 30) : undefined,
       minutes: a.kind === 'english' ? clamp(int(a.minutes, 0), 0, 600) : undefined, activity: a.kind === 'english' ? text(a.activity, 30) : undefined,
-      studyDate: a.kind === 'english' ? safeIso(a.studyDate || a.submittedAt) : undefined,
+      studyDate: ['english', 'homework'].includes(a.kind) ? safeIso(a.studyDate || a.submittedAt) : undefined,
       taskId: a.taskId != null ? Number(a.taskId) : null, rewardId: a.rewardId != null ? Number(a.rewardId) : null,
       label: text(a.label || a.taskName || a.rewardName, 120), points: int(a.points, 0), note: text(a.note, 200), status,
       submittedAt: safeIso(a.submittedAt || a.date), reviewedAt: a.reviewedAt ? safeIso(a.reviewedAt) : null,
@@ -2582,6 +2817,17 @@ function normalize(raw, defaultKeys) {
       const total = clamp(int(x.total, 0), 0, 200);
       return { id: cleanId(x.id) || `et${i}`, childId, date: safeIso(x.date), level: clamp(int(x.level, 1), 1, 3), score: clamp(int(x.score, 0), 0, total || 200), total,
         cando: Array.isArray(x.cando) ? [...new Set(x.cando.map(v => cleanId(v)).filter(Boolean))].slice(0, 30) : [], note: text(x.note, 300) };
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date))
+  };
+  // lição de casa: páginas feitas
+  const hw = raw.homework && typeof raw.homework === 'object' ? raw.homework : {};
+  const hs = hw.settings && typeof hw.settings === 'object' ? hw.settings : {};
+  d.homework = {
+    settings: { pointsPerPage: clamp(int(hs.pointsPerPage, 2), 0, 100), autoTask: hs.autoTask !== false },
+    entries: (Array.isArray(hw.entries) ? hw.entries : []).map((x, i) => {
+      if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); const pages = clamp(int(x.pages, 0), 0, 200);
+      if (!childId || !pages) return null;
+      return { id: cleanId(x.id) || `hw${i}`, childId, date: safeIso(x.date), pages, subject: text(x.subject, 30) || 'other', note: text(x.note, 200), historyId: x.historyId ? cleanId(x.historyId) : null, taskHistoryId: x.taskHistoryId ? cleanId(x.taskHistoryId) : null };
     }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date))
   };
 
@@ -2874,13 +3120,55 @@ function undoHistory(id) {
     linked.forEach(p => { c.piggy = round2(Math.max(0, c.piggy - p.amount)); });
     S.piggyHistory = S.piggyHistory.filter(p => p.historyId !== h.id);
     if (!linked.length && h.cash) c.piggy = round2(Math.max(0, c.piggy - h.cash));
-    if (h.type === 'english') c.xp = Math.max(0, Number(c.xp || 0) - Math.max(0, h.points));
+    if (h.type === 'english' || h.type === 'homework') c.xp = Math.max(0, Number(c.xp || 0) - Math.max(0, h.points));
   }
   S.english.sessions = S.english.sessions.filter(x => x.historyId !== h.id);
+  S.homework.entries = S.homework.entries.filter(x => x.historyId !== h.id);
+  S.homework.entries.forEach(x => { if (x.taskHistoryId === h.id) x.taskHistoryId = null; });
   if (h.approvalId) { const a = S.approvals.find(x => x.id === h.approvalId); if (a) a.status = 'reverted'; }
   S.behaviorNotes = S.behaviorNotes.filter(n => n.historyId !== h.id);
   S.history.splice(i, 1);
   return true;
+}
+
+/* ---------- lição de casa ---------- */
+const HW_SUBJECTS = ['pt', 'math', 'science', 'english', 'social', 'reading', 'writing', 'other'];
+function homeworkPointsFor(pages) { return Math.max(0, pages) * S.homework.settings.pointsPerPage; }
+function homeworkPages(c, from, to) { return S.homework.entries.filter(x => x.childId === c.id && Date.parse(x.date) >= from.getTime() && (!to || Date.parse(x.date) < to.getTime())).reduce((s, x) => s + x.pages, 0); }
+/** A tarefa "Fazer a lição de casa" desta criança, se existir. */
+function homeworkTaskFor(c) {
+  return tasksForChild(c).find(x => x.nameKey === 'lib_homework') || tasksForChild(c).find(x => !x.nameKey && /li[cç][aã]o|dever de casa/i.test(x.name)) || null;
+}
+function grantHomework(c, pages, subject, note, date, approvalId) {
+  const when = date || isoNow(), pts = homeworkPointsFor(pages);
+  changePoints(c, pts); c.xp = Number(c.xp || 0) + pts;
+  const entry = addHistory({ date: when, type: 'homework', childId: c.id, childName: c.name, note: text(note, 200), points: pts, pages, subject: HW_SUBJECTS.includes(subject) ? subject : 'other', approvalId: approvalId || null });
+  const rec = { id: uid('hw'), childId: c.id, date: when, pages, subject: HW_SUBJECTS.includes(subject) ? subject : 'other', note: text(note, 200), historyId: entry.id, taskHistoryId: null };
+  // marca junto a tarefa "Fazer a lição de casa" daquele dia, se ainda não foi marcada
+  let taskEntry = null;
+  const task = S.homework.settings.autoTask ? homeworkTaskFor(c) : null;
+  if (task && task.frequency !== 'oneOff' && (task.frequency !== 'daily' || scheduledOn(task, when))
+      && !S.history.some(h => h.type === 'task' && h.childId === c.id && h.taskId === task.id && periodMatch(task, h.date, when))) {
+    taskEntry = grantTask(c, task, '', when).entry; rec.taskHistoryId = taskEntry.id;
+  }
+  S.homework.entries.unshift(rec);
+  S.homework.entries.sort((x, y) => y.date.localeCompare(x.date)); S.history.sort((x, y) => y.date.localeCompare(x.date));
+  return { entry, taskEntry, fresh: checkAchievements(c), points: pts + (taskEntry ? taskEntry.points : 0) };
+}
+function logHomework(childId, pages, subject, note, date) {
+  const c = childById(childId); pages = clamp(int(pages, 0), 0, 200);
+  if (!c || !pages) return { ok: false, reason: 'pages' };
+  if (isChildMode()) {
+    const a = { id: uid('a'), kind: 'homework', childId: c.id, taskId: null, rewardId: null, label: '', points: homeworkPointsFor(pages), note: text(note, 200), status: 'pending', submittedAt: isoNow(), reviewedAt: null, reason: '', historyId: null, pages, subject, studyDate: date || isoNow() };
+    S.approvals.unshift(a); return { ok: true, pending: true };
+  }
+  return { ok: true, pending: false, ...grantHomework(c, pages, subject, note, date) };
+}
+function deleteHomework(id) {
+  const x = S.homework.entries.find(e => e.id === id); if (!x) return false;
+  if (x.taskHistoryId && S.history.some(h => h.id === x.taskHistoryId)) undoHistory(x.taskHistoryId);
+  if (x.historyId && S.history.some(h => h.id === x.historyId)) return undoHistory(x.historyId);
+  S.homework.entries = S.homework.entries.filter(e => e.id !== id); return true;
 }
 
 /* ---------- recompensas ---------- */
@@ -2909,6 +3197,11 @@ function approve(id) {
     const dup = S.history.find(h => h.type === 'task' && h.childId === c.id && h.taskId === t.id && t.frequency !== 'oneOff' && periodMatch(t, h.date, a.submittedAt));
     if (dup) { a.status = 'rejected'; a.reason = 'duplicate'; a.reviewedAt = isoNow(); return { ok: false, reason: 'duplicate' }; }
     const r = grantTask(c, t, a.note, a.submittedAt, a.id);
+    a.status = 'approved'; a.reviewedAt = isoNow(); a.historyId = r.entry.id;
+    return { ok: true, ...r, child: c };
+  }
+  if (a.kind === 'homework') {
+    const r = grantHomework(c, a.pages, a.subject, a.note, a.studyDate, a.id);
     a.status = 'approved'; a.reviewedAt = isoNow(); a.historyId = r.entry.id;
     return { ok: true, ...r, child: c };
   }
@@ -3093,12 +3386,14 @@ function historyText(h) {
   }
   if (h.type === 'reward') { const r = rewardById(h.rewardId); return t('redeemedX', { name: r ? rewardName(r) : (h.description || '—') }); }
   if (h.type === 'behavior') return (h.points > 0 || h.cash > 0 ? '👍 ' : '⚠️ ') + (h.description || t('behaviorNote'));
+  if (h.type === 'homework') return `📝 ${t('hwLabel', { n: h.pages || 0 })}${h.subject ? ' · ' + t('hwSub_' + (HW_SUBJECTS.includes(h.subject) ? h.subject : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   if (h.type === 'english') return `📚 ${t('enStudyLabel', { n: h.minutes || 0 })}${h.activity ? ' · ' + t('enAct_' + (EN_ACTIVITIES.includes(h.activity) ? h.activity : 'other')) : ''}${h.note ? ' — ' + h.note : ''}`;
   return h.description || t('manualAdjustment');
 }
-function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish' }[h.type]); }
+function historyType(h) { return t({ task: 'typeTask', reward: 'typeReward', adjust: 'typeAdjust', behavior: 'typeBehavior', english: 'typeEnglish', homework: 'typeHomework' }[h.type]); }
 function approvalLabel(a) {
   if (a.kind === 'task') { const task = taskById(a.taskId); return task ? taskName(task) : (a.label || t('taskRemoved')); }
+  if (a.kind === 'homework') return `📝 ${t('hwLabel', { n: a.pages || 0 })} · ${t('hwSub_' + (HW_SUBJECTS.includes(a.subject) ? a.subject : 'other'))}`;
   if (a.kind === 'english') return `📚 ${t('enStudyLabel', { n: a.minutes || 0 })} · ${t('enAct_' + (EN_ACTIVITIES.includes(a.activity) ? a.activity : 'other'))}`;
   const r = rewardById(a.rewardId); return r ? rewardName(r) : (a.label || '—');
 }
@@ -3347,7 +3642,7 @@ const SECTIONS = [
   {
     id: 'recompensas', icon: '🎁', nav: 'navRewards', child: true,
     build: () => `<div class="grid g2">
-      ${card(t('rewardStore'), '<div id="rList" class="list"></div>', { head: `<button type="button" class="btn btn-primary parent-only" data-act="reward-new">+ ${t('newReward')}</button>` })}
+      ${card(t('rewardStore'), '<div id="rList" class="list"></div>', { head: `<div class="actions parent-only"><button type="button" class="btn btn-soft" data-act="rw-ideas">💡 ${t('rwIdeasBtn')}</button><button type="button" class="btn btn-primary" data-act="reward-new">+ ${t('newReward')}</button></div>` })}
       <div class="stack">
         ${card(t('redeemReward'), `<div class="row2"><div><label for="rChild">${t('child')}</label><select id="rChild" data-change="redeem-info"></select></div>
           <div><label for="rReward">${t('reward')}</label><select id="rReward" data-change="redeem-info"></select></div></div>
@@ -4638,7 +4933,8 @@ const TASK_LIBRARY = [
   { key: 'lib_sortSocks', icon: '🧦', points: 10, min: 5, max: 7, alias: /meia/ },
   { key: 'lib_sweep', icon: '🧹', points: 20, min: 5, max: 30, days: [1, 3, 5], alias: /varrer/ },
   { key: 'lib_mop', icon: '🫧', points: 20, min: 5, max: 30, days: [2, 4, 6], alias: /\bmop\b|pano no ch[aã]o/ },
-  { key: 'lib_hangLaundry', icon: '👚', points: 15, min: 7, max: 30, alias: /estender|varal|recolher/ },
+  { key: 'lib_lineHang', icon: '👕', points: 5, min: 1, max: 30, alias: /pendurar.*varal|estender/ },
+  { key: 'lib_lineTake', icon: '🧺', points: 5, min: 1, max: 30, alias: /tirar.*varal|recolher/ },
   { key: 'lib_trashSmall', icon: '🗑️', points: 10, min: 7, max: 12, alias: /lixo do banheiro/ },
   { key: 'lib_vacuum', icon: '🧹', points: 25, min: 10, max: 30, alias: /aspirar/ },
   // estudos e família
@@ -4650,9 +4946,10 @@ const TASK_LIBRARY = [
 ];
 // O "plano" de cada idade: o que eu colocaria para começar.
 // (Inglês fica de fora porque a seção Inglês já dá pontos pelo tempo de estudo.)
+const PLAN_VERSION = '2'; // aumentar quando o plano ganhar tarefas novas, para o aviso voltar
 const AGE_PLAN = {
-  b1: ['lib_toysBox', 'lib_brushHelp', 'lib_diaperBin', 'lib_shoesPlace'],
-  b2: ['taskPutToysAway', 'lib_washOwnPlate', 'taskBrushTeeth', 'taskLaundryBasket', 'lib_dressHelp', 'lib_washHands', 'lib_read10'],
+  b1: ['lib_toysBox', 'lib_brushHelp', 'lib_diaperBin', 'lib_shoesPlace', 'lib_lineHang', 'lib_lineTake'],
+  b2: ['taskPutToysAway', 'lib_washOwnPlate', 'taskBrushTeeth', 'taskLaundryBasket', 'lib_dressHelp', 'lib_washHands', 'lib_read10', 'lib_lineHang', 'lib_lineTake'],
   b3: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_backpack', 'lib_hangTowel', 'lib_read10'],
   b4: ['taskPutToysAway', 'lib_washOwnPlate', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'taskBrushTeeth', 'lib_homework', 'taskRead15', 'lib_hangTowel'],
   b5: ['lib_washDishes', 'lib_sweep', 'lib_mop', 'taskMakeBed', 'lib_tidyRoom', 'lib_study30', 'lib_helpSibling']
@@ -4760,13 +5057,13 @@ function applyPlan() {
   S.children.forEach(c => planMismatch(c).forEach(({ task }) => { if (!ui.planKeep.has(`${c.id}|${task.id}`)) { removeChildFromTask(task, c); n++; } }));
   S.children.forEach(c => planFor(c).forEach(sug => { if (!ui.planOff.has(`${c.id}|${sug.key}`) && addSuggestion(sug, c)) n++; }));
   if (!n) return;
-  try { localStorage.setItem('familiaMissao.planHide', '1'); } catch (e) {}
+  try { localStorage.setItem('familiaMissao.planHide', PLAN_VERSION); } catch (e) {}
   commit(); Modal.close('planModal');
   toast(t('planDone', { n }), 'success', { label: '🖨️ ' + t('planPrintNow'), run: () => openPrintChooser() }, 9000);
 }
 function planBannerHtml() {
   if (isChildMode()) return '';
-  let hidden = false; try { hidden = localStorage.getItem('familiaMissao.planHide') === '1'; } catch (e) {}
+  let hidden = false; try { hidden = localStorage.getItem('familiaMissao.planHide') === PLAN_VERSION; } catch (e) {}
   if (hidden || !planMissing()) return '';
   return `<div class="notice plan-banner"><span>✨ ${t('planBanner')}</span><span class="actions"><button type="button" class="btn btn-primary btn-sm" data-act="plan-open">${t('planBannerBtn')}</button><button type="button" class="icon-btn" data-act="plan-hide" aria-label="${esc(t('close'))}">✕</button></span></div>`;
 }
@@ -4785,7 +5082,7 @@ Object.assign(ACTIONS, {
   },
   'plan-open': () => openPlan(),
   'plan-apply': () => applyPlan(),
-  'plan-hide': () => { try { localStorage.setItem('familiaMissao.planHide', '1'); } catch (e) {} const b = $('#dPlan'); if (b) b.innerHTML = ''; }
+  'plan-hide': () => { try { localStorage.setItem('familiaMissao.planHide', PLAN_VERSION); } catch (e) {} const b = $('#dPlan'); if (b) b.innerHTML = ''; }
 });
 Object.assign(CHANGES, {
   'plan-rm': el => { const id = el.dataset.id; if (el.checked) ui.planKeep.delete(id); else ui.planKeep.add(id); renderPlan(); },
@@ -5043,16 +5340,17 @@ function weekData(c, from, to) {
   const tasks = hist.filter(h => h.type === 'task');
   const piggy = round2(S.piggyHistory.filter(p => p.childId === c.id && inRange(p.date, from, to)).reduce((s, p) => s + p.amount, 0));
   const english = S.english.sessions.filter(x => x.childId === c.id && inRange(x.date, from, to)).reduce((s, x) => s + x.minutes, 0);
+  const hwList = S.homework.entries.filter(x => x.childId === c.id && inRange(x.date, from, to)), homework = hwList.reduce((s, x) => s + x.pages, 0);
   const medals = S.achievements.filter(a => a.childId === c.id && inRange(a.date, from, to)).map(a => ACHIEVEMENTS.find(x => x.code === a.code)).filter(Boolean);
-  const days = [...Array(7)].map((_, i) => { const d = addDays(from, i), k = dayKey(d); const items = hist.filter(h => dayKey(h.date) === k); return { d, tasks: items.filter(h => h.type === 'task'), pts: items.reduce((s, h) => s + (h.type === 'reward' ? 0 : h.points), 0) }; });
-  const events = hist.filter(h => h.type !== 'task').sort((a, b) => a.date.localeCompare(b.date));
+  const days = [...Array(7)].map((_, i) => { const d = addDays(from, i), k = dayKey(d); const items = hist.filter(h => dayKey(h.date) === k); return { d, pages: hwList.filter(x => dayKey(x.date) === k).reduce((s, x) => s + x.pages, 0), tasks: items.filter(h => h.type === 'task'), pts: items.reduce((s, h) => s + (h.type === 'reward' ? 0 : h.points), 0) }; });
+  const events = hist.filter(h => !['task', 'english', 'homework'].includes(h.type)).sort((a, b) => a.date.localeCompare(b.date));
   const test = S.english.tests.find(x => x.childId === c.id && inRange(x.date, from, to));
   // aproveitamento: tarefas fixas feitas / previstas até hoje (ou a semana toda, se já passou)
   const elapsed = Math.max(0, Math.min(7, Math.round((startOfDay(new Date()).getTime() - startOfDay(from).getTime()) / 864e5) + 1));
   const expected = elapsed ? expectedBetween(c, startOfDay(from), elapsed) : 0;
   const regular = tasks.filter(h => { const task = taskById(h.taskId); return task && task.frequency !== 'oneOff'; }).length;
   const rate = expected ? Math.min(100, Math.round(regular / expected * 100)) : 0;
-  return { hist, earned, lost, spent, tasks, piggy, english, medals, days, events, test, balance: earned - lost, expected, regular, rate };
+  return { hist, earned, lost, spent, tasks, piggy, english, homework, medals, days, events, test, balance: earned - lost, expected, regular, rate };
 }
 
 /* ---------- pedaços comuns ---------- */
@@ -5071,25 +5369,34 @@ function chartTasks(c) {
   return tasksForChild(c).slice().sort((a, b) => order[a.frequency] - order[b.frequency]);
 }
 
+/* ---------- grade tarefa × dia do relatório (✔ feita, ✗ faltou, riscado = não era dia) ---------- */
+function reportRows(c, w) {
+  const fixed = chartTasks(c).filter(x => x.frequency !== 'oneOff');
+  const extraIds = [...new Set(w.tasks.map(h => String(h.taskId)))].filter(id => !fixed.some(x => String(x.id) === id));
+  return [...fixed, ...extraIds.map(id => taskById(id) || { id, icon: '✅', name: (w.tasks.find(h => String(h.taskId) === id) || {}).description || t('taskRemoved'), frequency: 'oneOff', days: [] })];
+}
+function reportCell(task, d, weekDone) {
+  const k = dayKey(d.d), today = dayKey(), n = d.tasks.filter(h => String(h.taskId) === String(task.id)).length;
+  if (n) return `<td class="ok">✔${n > 1 ? `<small>×${n}</small>` : ''}</td>`;
+  if (task.frequency === 'daily' && !scheduledOn(task, d.d)) return '<td class="off"></td>';
+  if (task.frequency !== 'daily') return task.frequency === 'weekly' && !weekDone && k <= today && d.d.getDay() === 0 ? '<td class="miss">✗</td>' : '<td></td>';
+  return k < today ? '<td class="miss">✗</td>' : '<td></td>';
+}
+function reportGridHtml(c, w, opts = {}) {
+  const names = weekdayNames(true), days = w.days, rows = reportRows(c, w);
+  if (!rows.length) return `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`;
+  const showHw = w.homework > 0 || !!homeworkTaskFor(c);
+  return `<table class="pr-grid ${opts.cls || ''}"><thead><tr><th class="pr-tl">${esc(opts.title || t('prTaskCol'))}</th>${days.map(d => `<th>${esc(names[d.d.getDay()])}<small>${d.d.getDate()}</small></th>`).join('')}${opts.total ? `<th>${esc(t('prTotalCol'))}</th>` : ''}</tr></thead>
+    <tbody>${rows.map(task => { const done = w.tasks.filter(h => String(h.taskId) === String(task.id)).length; const weekDone = done > 0; return `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(task.nameKey || task.name ? taskName(task) : '')}${task.frequency === 'weekly' ? ` <small>(${esc(t('freqWeekly'))})</small>` : task.frequency === 'oneOff' ? ` <small>(${esc(t('freqOneOff'))})</small>` : ''}</td>${days.map(d => reportCell(task, d, weekDone)).join('')}${opts.total ? `<td class="pr-tot">${done}</td>` : ''}</tr>`; }).join('')}
+      ${showHw ? `<tr class="pr-hw"><td class="pr-tl"><span class="pr-ti">📝</span>${esc(t('prHwRow'))}</td>${days.map(d => `<td>${d.pages ? d.pages : ''}</td>`).join('')}${opts.total ? `<td class="pr-tot">${w.homework}</td>` : ''}</tr>` : ''}
+      <tr class="pr-sum"><td class="pr-tl">⭐ ${esc(t('prDayPoints'))}</td>${days.map(d => `<td>${d.pts ? (d.pts > 0 ? '+' : '') + d.pts : '·'}</td>`).join('')}${opts.total ? `<td class="pr-tot">${w.earned - w.lost}</td>` : ''}</tr></tbody></table>`;
+}
+
 /* ---------- relatório da semana de uma criança ---------- */
 function childReportHtml(c, from, to) {
   const w = weekData(c, from, to), names = weekdayNames(true), goal = englishGoal(c), today = dayKey(new Date());
   const days = w.days;
-  // grade tarefa × dia
-  const fixed = chartTasks(c).filter(x => x.frequency !== 'oneOff');
-  const extraIds = [...new Set(w.tasks.map(h => String(h.taskId)))].filter(id => !fixed.some(x => String(x.id) === id));
-  const rows = [...fixed, ...extraIds.map(id => taskById(id) || { id, icon: '✅', name: (w.tasks.find(h => String(h.taskId) === id) || {}).description || t('taskRemoved'), frequency: 'oneOff', days: [] })];
-  const cell = (task, d) => {
-    const k = dayKey(d.d), n = d.tasks.filter(h => String(h.taskId) === String(task.id)).length;
-    if (n) return `<td class="ok">✔${n > 1 ? `<small>×${n}</small>` : ''}</td>`;
-    if (task.frequency === 'daily' && !scheduledOn(task, d.d)) return '<td class="off"></td>';
-    if (task.frequency !== 'daily') return '<td></td>';
-    return k < today ? '<td class="miss">○</td>' : '<td></td>';
-  };
-  const grid = rows.length ? `<table class="pr-grid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th>${days.map(d => `<th>${esc(names[d.d.getDay()])}<small>${d.d.getDate()}</small></th>`).join('')}</tr></thead>
-    <tbody>${rows.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span>${esc(task.nameKey || task.name ? taskName(task) : '')}${task.frequency === 'weekly' ? ` <small>(${esc(t('freqWeekly'))})</small>` : task.frequency === 'oneOff' ? ` <small>(${esc(t('freqOneOff'))})</small>` : ''}</td>${days.map(d => cell(task, d)).join('')}</tr>`).join('')}
-      <tr class="pr-sum"><td class="pr-tl">⭐ ${esc(t('prDayPoints'))}</td>${days.map(d => `<td>${d.pts ? (d.pts > 0 ? '+' : '') + d.pts : '·'}</td>`).join('')}</tr></tbody></table>`
-    : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`;
+  const grid = reportGridHtml(c, w);
   // o que aconteceu, separado em três caixas
   const good = w.events.filter(h => h.type !== 'reward' && h.points >= 0).map(h => `<li><b>${fmtDate(h.date)}</b> ${esc(historyText(h))}${h.points ? ` <em>+${h.points}</em>` : ''}</li>`);
   w.medals.forEach(a => good.push(`<li>${a.icon} ${esc(t(a.key))}</li>`));
@@ -5107,11 +5414,12 @@ function childReportHtml(c, from, to) {
       <div class="pr-kpi neg"><span class="pr-ki">⚠️</span><b>−${w.lost}</b><span>${esc(t('prLost'))}</span></div>
       <div class="pr-kpi"><span class="pr-ki">🎁</span><b>${w.spent}</b><span>${esc(t('prSpent'))}</span></div>
       <div class="pr-kpi"><span class="pr-ki">🇬🇧</span><b>${w.english} min</b><span>${esc(t('prEnglish', { goal }))}</span>${goal ? prBar(w.english, goal) : ''}</div>
+      <div class="pr-kpi"><span class="pr-ki">📝</span><b>${w.homework}</b><span>${esc(t('prHwPages'))}</span></div>
       <div class="pr-kpi"><span class="pr-ki">🐷</span><b>${signedMoney(w.piggy)}</b><span>${esc(t('prPiggy'))}</span></div>
     </div>
     <h3>${esc(t('prDays'))}</h3>
     ${grid}
-    <p class="pr-legend">✔ ${esc(t('prLegDone'))} · ○ ${esc(t('prLegMiss'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
+    <p class="pr-legend">✔ ${esc(t('prLegDone'))} · ✗ ${esc(t('prLegMiss'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
     <div class="pr-boxes">${box('good', '👍 ' + esc(t('prGood')), good)}${box('bad', '💬 ' + esc(t('prImprove')), bad)}${box('rw', '🎁 ' + esc(t('prRewards')), rw)}</div>
     <div class="pr-talk">
       <div class="pr-feel"><b>${esc(t('prFeel'))}</b><span>😄</span><span>🙂</span><span>😐</span><span>😟</span></div>
@@ -5125,7 +5433,7 @@ function childReportHtml(c, from, to) {
 function familyReportHtml(from, to) {
   const rows = S.children.map(c => ({ c, w: weekData(c, from, to) }));
   const best = (f, min = 1) => { const top = [...rows].sort((a, b) => f(b.w) - f(a.w))[0]; return top && f(top.w) >= min ? top.c.name : null; };
-  const hi = [[t('prHiTasks'), best(w => w.tasks.length)], [t('prHiEnglish'), best(w => w.english)], [t('prHiPoints'), best(w => w.earned)]].filter(x => x[1]);
+  const hi = [[t('prHiTasks'), best(w => w.tasks.length)], [t('prHiEnglish'), best(w => w.english)], [t('prHiHomework'), best(w => w.homework)], [t('prHiPoints'), best(w => w.earned)]].filter(x => x[1]);
   const maxEarned = Math.max(1, ...rows.map(r => r.w.earned));
   const tot = rows.reduce((s, { w }) => ({ tasks: s.tasks + w.tasks.length, earned: s.earned + w.earned, english: s.english + w.english }), { tasks: 0, earned: 0, english: 0 });
   const cards = rows.map(({ c, w }) => `<div class="pr-card" style="--c:${c.accentColor}">
@@ -5133,7 +5441,7 @@ function familyReportHtml(from, to) {
       <div class="pr-mini"><span>⭐ ${esc(t('prEarned'))}</span><b class="pos">+${w.earned}</b>${prBar(w.earned, maxEarned)}</div>
       <div class="pr-mini"><span>✅ ${esc(t('prTasks'))}</span><b>${w.tasks.length}${w.expected ? ` <small>(${w.rate}%)</small>` : ''}</b>${prBar(w.regular, w.expected)}</div>
       <div class="pr-mini"><span>🇬🇧 ${esc(t('navEnglish'))}</span><b>${w.english} / ${englishGoal(c)} min</b>${prBar(w.english, englishGoal(c))}</div>
-      <div class="pr-chips"><span class="neg">⚠️ −${w.lost}</span><span>🎁 ${w.spent}</span><span>🐷 ${signedMoney(w.piggy)}</span></div>
+      <div class="pr-chips"><span class="neg">⚠️ −${w.lost}</span><span>🎁 ${w.spent}</span><span>📝 ${w.homework}</span><span>🐷 ${signedMoney(w.piggy)}</span></div>
     </div>`).join('');
   return `<div class="ps-page pr pr-family">
     <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">🌟</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('prFamilyTitle'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(weekLabel(from, to))}</div></div></div>
@@ -5149,6 +5457,25 @@ function familyReportHtml(from, to) {
   </div>`;
 }
 
+/* ---------- semana da família: todas as crianças juntas, o que foi feito e o que faltou ---------- */
+function familyWeekHtml(from, to) {
+  const blocks = S.children.map(c => {
+    const w = weekData(c, from, to);
+    return `<div class="fw-kid" style="--c:${c.accentColor}">
+      <div class="fw-head">${printAvatar(c)}<div class="fw-name"><b>${esc(c.name)}</b><small>${years(c.age)} · ⭐ ${c.points}</small></div>
+        <div class="fw-chips"><span class="fw-main">✅ ${esc(t('fwDoneOf', { done: w.regular, total: w.expected }))}${w.expected ? ` · ${w.rate}%` : ''}</span><span class="pos">⭐ +${w.earned}</span><span class="neg">⚠️ −${w.lost}</span>${w.homework ? `<span>📝 ${w.homework} ${esc(t('fwPages'))}</span>` : ''}${w.english ? `<span>🇬🇧 ${w.english} min</span>` : ''}${w.spent ? `<span>🎁 ${w.spent}</span>` : ''}</div></div>
+      ${reportGridHtml(c, w, { total: true, cls: 'pr-compact' })}
+      ${w.events.filter(h => h.points < 0 && h.type !== 'reward').length ? `<p class="fw-note">💬 ${w.events.filter(h => h.points < 0 && h.type !== 'reward').map(h => `${fmtDate(h.date)}: ${esc(historyText(h).replace(/^⚠️ /, ''))}`).join(' · ')}</p>` : ''}
+    </div>`;
+  }).join('');
+  return `<div class="ps-page pr pr-fweek">
+    <div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">👨‍👩‍👧‍👦</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('fwKicker'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))}</div></div></div>
+    <p class="pr-legend">✔ ${esc(t('prLegDone'))} · ✗ ${esc(t('prLegMiss'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))} · ${esc(t('fwLegTotal'))}</p>
+    <div class="fw-grid">${blocks}</div>
+    <div class="fw-foot"><b>${esc(t('fwAgreements'))}</b><div class="pr-lines"><span></span><span></span></div></div>
+  </div>`;
+}
+
 /* ---------- quadro de tarefas para pendurar ---------- */
 function taskChartHtml(c, from, to) {
   const names = weekdayNames(true), days = [...Array(7)].map((_, i) => addDays(from, i));
@@ -5157,10 +5484,11 @@ function taskChartHtml(c, from, to) {
   const rows = fixed.map(task => `<tr><td class="pr-tl"><span class="pr-ti">${esc(task.icon)}</span><span class="pr-tn">${esc(taskName(task))}${task.frequency === 'weekly' ? `<small>${esc(t('prOnceWeek'))}</small>` : task.time ? `<small>⏰ ${esc(task.time)}</small>` : ''}</span></td><td class="pts">+${task.points}</td>${days.map(d => task.frequency === 'daily' && !scheduledOn(task, d) ? '<td class="off"></td>' : '<td><span class="pr-cb"></span></td>').join('')}</tr>`).join('');
   const goal = englishGoal(c);
   const enRow = c.age >= 3 ? `<tr class="pr-en"><td class="pr-tl"><span class="pr-ti">🇬🇧</span><span class="pr-tn">${esc(t('prChartEnglish'))}<small>${esc(t('prChartEnglishGoal', { goal }))}</small></span></td><td class="pts">min</td>${days.map(() => '<td><span class="pr-write"></span></td>').join('')}</tr>` : '';
+  const hwRow = c.age >= 5 ? `<tr class="pr-en"><td class="pr-tl"><span class="pr-ti">📝</span><span class="pr-tn">${esc(t('prChartHw'))}<small>${esc(t('prChartHwHint'))}</small></span></td><td class="pts">📄</td>${days.map(() => '<td><span class="pr-write"></span></td>').join('')}</tr>` : '';
   const rewards = S.rewards.slice().sort((a, b) => a.cost - b.cost).slice(0, 8);
   return `<div class="ps-page pr pr-chart ${small ? 'pr-big' : ''}" style="--c:${c.accentColor}">
     ${prHeader(c, t('prChartKicker'), `${esc(t('prWeekOf'))} ${esc(weekLabel(from, to))}`, `<div class="pr-star"><b>⭐ ____</b><small>${esc(t('prChartTotal'))}</small></div>`)}
-    ${fixed.length ? `<table class="pr-grid pr-chartgrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th>${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr></thead><tbody>${rows}${enRow}</tbody></table>` : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`}
+    ${fixed.length ? `<table class="pr-grid pr-chartgrid"><thead><tr><th class="pr-tl">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th>${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr></thead><tbody>${rows}${hwRow}${enRow}</tbody></table>` : `<p class="pr-empty">${esc(t('noTasksForChild'))}</p>`}
     <p class="pr-legend">${esc(t('prChartHow'))} · <span class="pr-off-sw"></span> ${esc(t('prLegOff'))}</p>
     ${extra.length ? `<div class="pr-box good"><h4>➕ ${esc(t('prChartExtras'))}</h4><div class="pr-extras">${extra.map(x => `<span>${esc(x.icon)} ${esc(taskName(x))} <b>+${x.points}</b> <i class="pr-tally"></i></span>`).join('')}</div></div>` : ''}
     ${rewards.length ? `<div class="pr-box rw"><h4>🎁 ${esc(t('prChartRewards'))}</h4><div class="pr-extras">${rewards.map(r => `<span>${esc(r.icon)} ${esc(rewardName(r))} <b>${r.cost} ⭐</b></span>`).join('')}</div></div>` : ''}
@@ -5190,7 +5518,8 @@ function openPrintChooser() {
     body: `<label for="prWeek">${t('prWeek')}</label><select id="prWeek"><option value="0">${esc(t('prThisWeek'))} (${esc(weekLabel(weekBounds(0).from, weekBounds(0).to))})</option><option value="-1">${esc(t('prLastWeek'))} (${esc(weekLabel(weekBounds(-1).from, weekBounds(-1).to))})</option><option value="1">${esc(t('prNextWeek'))} (${esc(weekLabel(weekBounds(1).from, weekBounds(1).to))})</option></select>
       <h4 class="pr-group">📊 ${t('prGroupReports')}</h4>
       <div class="list">
-        ${!isChildMode() ? opt('pr-family', '', icon('👨‍👩‍👧'), t('prOptFamily'), t('prOptFamilyHint')) : ''}
+        ${!isChildMode() ? opt('pr-fweek', '', icon('👨‍👩‍👧‍👦'), t('fwOpt'), t('fwOptHint')) : ''}
+        ${!isChildMode() ? opt('pr-family', '', icon('📚'), t('prOptFamily'), t('prOptFamilyHint')) : ''}
         ${kids.map(c => opt('pr-child', c.id, avatar(c, 'sm'), t('prOptChild', { name: esc(c.name) }), t('prOptChildHint'))).join('')}
       </div>
       <h4 class="pr-group">📋 ${t('prGroupCharts')}</h4>
@@ -5208,6 +5537,7 @@ function openPrintChooser() {
 function chosenWeek() { const v = $('#prWeek'); return weekBounds(v ? int(v.value, 0) : 0); }
 Object.assign(ACTIONS, {
   print: () => openPrintChooser(),
+  'pr-fweek': () => { const { from, to } = chosenWeek(); printDocument(familyWeekHtml(from, to), t('fwOpt')); },
   'pr-family': () => { const { from, to } = chosenWeek(); printDocument(familyReportHtml(from, to) + S.children.map(c => childReportHtml(c, from, to)).join(''), t('prOptFamily')); },
   'pr-child': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenWeek(); printDocument(childReportHtml(c, from, to), t('prOptChild', { name: c.name })); },
   'pr-chart': el => { const c = childById(el.dataset.id); if (!c || !canSeeChild(c.id)) return; const { from, to } = chosenWeek(); printDocument(taskChartHtml(c, from, to), t('prOptChart', { name: c.name })); },
@@ -5225,6 +5555,18 @@ Object.assign(ACTIONS, {
    mas dá para marcar, desfazer, mudar pontos, editar e imprimir daqui.
    ===================================================================== */
 
+function qPickerHtml(cur) {
+  return childPicker(cur, 'q-child').replace(/<\/div>\s*$/, `<button type="button" class="picker ${cur === 'all' ? 'on' : ''}" style="--c:#6c63ff" data-act="q-child" data-id="all"><span class="avatar sm" style="--c:#6c63ff">👨‍👩‍👧‍👦</span><span>${esc(t('fwAll'))}<small>${esc(t('fwAllSub'))}</small></span></button></div>`);
+}
+function quadroAll() {
+  ui.qWeek = ui.qWeek || 0;
+  const { from, to } = weekBounds(ui.qWeek);
+  $('#qPicker').innerHTML = qPickerHtml('all');
+  $('#qBody').innerHTML = `<div class="card q-card fw-screen" style="--c:#6c63ff">
+    <div class="q-tools"><button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="-1" aria-label="‹">←</button>${ui.qWeek ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="0">${esc(t('prThisWeek'))}</button>` : ''}<button type="button" class="btn btn-soft btn-sm" data-act="q-week" data-id="1" aria-label="›">→</button>
+      <button type="button" class="btn btn-primary btn-sm" data-act="q-print-fweek">🖨️ ${t('fwPrintBtn')}</button></div>
+    <div class="fw-wrap">${familyWeekHtml(from, to)}</div></div>`;
+}
 function qChild() {
   const kid = activeChild(); if (kid) return kid;
   if (!childById(ui.qChild)) ui.qChild = S.children[0].id;
@@ -5251,10 +5593,11 @@ const QUADRO_SECTION = {
   id: 'quadro', icon: '📋', nav: 'navChart', tab: 'tabChart', child: true,
   build: () => `<div id="qPicker"></div><div id="qBody"></div>`,
   update() {
+    if (!isChildMode() && ui.qChild === 'all') return quadroAll();
     const c = qChild(), parent = !isChildMode();
     ui.qWeek = ui.qWeek || 0;
     const { from, to } = weekBounds(ui.qWeek), days = [...Array(7)].map((_, i) => addDays(from, i)), names = weekdayNames(true);
-    $('#qPicker').innerHTML = parent ? childPicker(c.id, 'q-child') : '';
+    $('#qPicker').innerHTML = parent ? qPickerHtml(c.id) : '';
     const list = chartTasks(c), fixed = list.filter(x => x.frequency !== 'oneOff'), extra = list.filter(x => x.frequency === 'oneOff');
     const w = weekData(c, from, to), today = dayKey();
     const row = task => {
@@ -5274,6 +5617,8 @@ const QUADRO_SECTION = {
       return `<tr><th class="q-task" scope="row">${parent ? `<button type="button" class="q-name" data-act="task-edit" data-id="${esc(task.id)}" title="${esc(t('edit'))}">` : '<span class="q-name">'}<span class="q-ico">${esc(task.icon)}</span><span><b>${esc(taskName(task))}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span>${parent ? ' <i class="q-pen">✏️</i></button>' : '</span>'}</th>${ptsCell}${cells}</tr>`;
     };
     const head = `<tr><th class="q-task">${esc(t('prTaskCol'))}</th><th>⭐</th>${days.map(d => `<th class="${dayKey(d) === today ? 'q-th-today' : ''}">${esc(names[d.getDay()])}<small>${d.getDate()}</small></th>`).join('')}</tr>`;
+    const showHw = c.age >= 5 || w.homework > 0 || !!homeworkTaskFor(c);
+    const hwRow = showHw ? `<tr class="q-hw"><th class="q-task" scope="row"><button type="button" class="q-name" data-act="hw-open" data-id="${esc(c.id)}"><span class="q-ico">📝</span><span><b>${esc(t('prHwRow'))}</b><small>${esc(t('qHwHint'))}</small></span></button></th><td class="q-pts">${w.homework || ''}</td>${w.days.map(d => `<td>${d.pages ? `<b class="q-pages">${d.pages}</b>` : dayKey(d.d) === today ? `<button type="button" class="q-btn add" data-act="hw-open" data-id="${esc(c.id)}" aria-label="${esc(t('hwSave'))}">+</button>` : ''}</td>`).join('')}</tr>` : '';
     const sums = `<tr class="q-sum"><th class="q-task">⭐ ${esc(t('prDayPoints'))}</th><td></td>${w.days.map(d => `<td>${d.pts ? (d.pts > 0 ? '+' : '') + d.pts : '·'}</td>`).join('')}</tr>`;
     const extras = extra.length ? `<div class="q-extras"><h3>➕ ${esc(t('prChartExtras'))}</h3><div class="list">${extra.map(x => { const n = w.tasks.filter(h => String(h.taskId) === String(x.id)).length; return `<div class="item"><div class="meta"><span class="ico">${esc(x.icon)}</span><div><strong>${esc(taskName(x))}</strong><div class="sub">+${pts(x.points)}${n ? ` · ${t('qTimesWeek', { n })}` : ''}</div></div></div><div class="right">${ui.qWeek === 0 ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-mark" data-id="${esc(x.id)}">✔ ${t('markDone')}</button>` : ''}${parent ? `<button type="button" class="icon-btn" data-act="task-edit" data-id="${esc(x.id)}" aria-label="${esc(t('edit'))}">✏️</button>` : ''}</div></div>`; }).join('')}</div></div>` : '';
     const goal = englishGoal(c), pot = weeklyPotential(c);
@@ -5284,9 +5629,9 @@ const QUADRO_SECTION = {
       <div class="q-stats"><div><b>${w.tasks.length}</b><span>${esc(t('prTasks'))}</span></div><div><b class="pos">+${w.earned}</b><span>${esc(t('prEarned'))}</span></div><div><b>${w.expected ? w.rate + '%' : '—'}</b><span>${esc(t('prOfPlanned'))}</span></div><div><b>${pot}</b><span>${esc(t('qPotential'))}</span></div></div>
       <div class="q-tools">
         ${parent ? `<button type="button" class="btn btn-primary btn-sm" data-act="q-new">+ ${t('newTask')}</button><button type="button" class="btn btn-soft btn-sm" data-act="lib-open" data-id="${esc(c.id)}">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft btn-sm" data-act="tv-open">💰 ${t('valTitleShort')}</button>` : ''}
-        <button type="button" class="btn btn-soft btn-sm" data-act="q-print">🖨️ ${t('qPrintThis')}</button>${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-print-all">🖨️ ${t('qPrintAll')}</button>` : ''}
+        <button type="button" class="btn btn-soft btn-sm" data-act="q-print">🖨️ ${t('qPrintThis')}</button>${parent ? `<button type="button" class="btn btn-soft btn-sm" data-act="q-print-all">🖨️ ${t('qPrintAll')}</button><button type="button" class="btn btn-soft btn-sm" data-act="q-print-fweek">🖨️ ${t('fwOptShort')}</button>` : ''}
       </div>
-      ${fixed.length ? `<div class="q-wrap"><table class="q-grid"><thead>${head}</thead><tbody>${fixed.map(row).join('')}${sums}</tbody></table></div>` : emptyBox(t('noTasksForChild'))}
+      ${fixed.length ? `<div class="q-wrap"><table class="q-grid"><thead>${head}</thead><tbody>${fixed.map(row).join('')}${hwRow}${sums}</tbody></table></div>` : emptyBox(t('noTasksForChild'))}
       <p class="hint">${parent ? t('qHintParent') : t('qHintChild')}</p>
       ${extras}
       <div class="q-foot">
@@ -5348,6 +5693,7 @@ Object.assign(ACTIONS, {
     undoHistory(h.id); commit(); toast(t('undone'));
   },
   'q-print': () => { const c = qChild(); const { from, to } = weekBounds(ui.qWeek || 0); printDocument(taskChartHtml(c, from, to), t('prOptChart', { name: c.name })); },
+  'q-print-fweek': () => { const { from, to } = weekBounds(ui.qWeek || 0); printDocument(familyWeekHtml(from, to), t('fwOpt')); },
   'q-print-all': () => { const { from, to } = weekBounds(ui.qWeek || 0); printDocument(familyTasksHtml() + S.children.map(c => taskChartHtml(c, from, to)).join(''), t('prOptChartAll')); },
   'tv-open': () => openTaskValues(),
   'tv-save': () => {
@@ -5359,6 +5705,140 @@ Object.assign(ACTIONS, {
 Object.assign(CHANGES, {
   'q-pts': el => { const task = taskById(el.dataset.id); const p = int(el.value, 0); if (!task || p < 1) { el.value = task ? task.points : 1; return; } if (task.points !== p) { task.points = p; commit(); toast(t('qPtsSaved', { task: taskName(task), n: p }), 'success'); } },
   'tv-preview': () => tvPreview()
+});
+
+/* =====================================================================
+   Lição de casa: quantas páginas cada criança fez, de qual matéria.
+   As páginas valem pontos e podem marcar junto a tarefa "Fazer a lição".
+   ===================================================================== */
+
+const HW_ICONS = { pt: '📖', math: '➗', science: '🔬', english: '🇬🇧', social: '🌎', reading: '📚', writing: '✍️', other: '📝' };
+function hwWeeks(c, n) {
+  const out = []; const start = weekStart();
+  for (let i = n - 1; i >= 0; i--) { const from = startOfDay(addDays(start, -7 * i)), to = addDays(from, 7); out.push({ from, pages: homeworkPages(c, from, to) }); }
+  return out;
+}
+const HOMEWORK_SECTION = {
+  id: 'licao', icon: '📝', nav: 'navHomework', child: true,
+  build: () => `<div id="hwPicker"></div><div id="hwBody"></div>`,
+  update() {
+    const kids = visibleChildren();
+    if (!kids.some(k => k.id === ui.hwChild)) ui.hwChild = (kids.find(k => k.age >= 5) || kids[0]).id;
+    $('#hwPicker').innerHTML = isChildMode() ? '' : childPicker(ui.hwChild, 'hw-child');
+    const c = childById(ui.hwChild), set = S.homework.settings;
+    const today0 = startOfDay(new Date()), wk0 = startOfDay(weekStart()), m0 = new Date(today0.getFullYear(), today0.getMonth(), 1);
+    const today = homeworkPages(c, today0, addDays(today0, 1)), week = homeworkPages(c, wk0, addDays(wk0, 7)), month = homeworkPages(c, m0, null);
+    const weeks = hwWeeks(c, 8), wmax = Math.max(1, ...weeks.map(w => w.pages));
+    const mine = S.homework.entries.filter(x => x.childId === c.id);
+    const bySub = HW_SUBJECTS.map(s => ({ s, n: mine.filter(x => Date.parse(x.date) >= m0.getTime() && x.subject === s).reduce((a, x) => a + x.pages, 0) })).filter(x => x.n).sort((a, b) => b.n - a.n);
+    const smax = Math.max(1, ...bySub.map(x => x.n));
+    const pend = S.approvals.filter(a => a.status === 'pending' && a.kind === 'homework' && a.childId === c.id);
+    const task = homeworkTaskFor(c);
+    ui.hwSub = HW_SUBJECTS.includes(ui.hwSub) ? ui.hwSub : 'pt';
+    $('#hwBody').innerHTML = `<div class="grid g2">
+      ${card('📝 ' + t('hwLogTitle', { name: esc(c.name) }), `<label>${t('hwPages')}</label>
+        <div class="chips hw-pages" style="margin-bottom:8px">${[1, 2, 3, 4, 5, 6, 8, 10].map(n => `<button type="button" class="chip" data-act="hw-pg" data-id="${n}">${n}</button>`).join('')}</div>
+        <input id="hwPg" type="number" min="1" max="200" inputmode="numeric" placeholder="${esc(t('hwPagesPh'))}">
+        <label class="mt">${t('hwSubject')}</label>
+        <div class="chips">${HW_SUBJECTS.map(s => `<button type="button" class="chip ${ui.hwSub === s ? 'on' : ''}" data-act="hw-sub" data-id="${s}">${HW_ICONS[s]} ${esc(t('hwSub_' + s))}</button>`).join('')}</div>
+        <div class="row2 field"><div><label for="hwDate">${t('date')}</label><input id="hwDate" type="date" value="${dayKey()}" max="${dayKey()}"></div>
+        <div><label for="hwNote">${t('note')}</label><input id="hwNote" maxlength="200" placeholder="${esc(t('hwNotePh'))}"></div></div>
+        <p class="hint" id="hwPreview">${set.pointsPerPage ? t('hwPointsHint', { n: set.pointsPerPage }) : ''}${task && set.autoTask ? ' ' + t('hwTaskHint', { task: esc(taskName(task)), n: task.points }) : ''}</p>
+        ${isChildMode() ? `<p class="hint">${t('enChildHint')}</p>` : ''}
+        <button type="button" class="btn btn-primary btn-block mt" data-act="hw-log">✅ ${t('hwSave')}</button>
+        ${pend.length ? `<div class="notice warn mt">⏳ ${t('hwPending', { n: pend.reduce((s, a) => s + a.pages, 0) })}</div>` : ''}`)}
+      ${card('📈 ' + t('enProgress'), `<div class="grid g3"><div class="mini-kpi"><span>${t('hwToday')}</span><strong>${today} 📄</strong></div><div class="mini-kpi"><span>${t('enThisWeek')}</span><strong>${week} 📄</strong></div><div class="mini-kpi"><span>${t('enThisMonth')}</span><strong>${month} 📄</strong></div></div>
+        <h3 class="mt">${t('hwLast8')}</h3><div class="en-bars">${weeks.map(w => `<div class="en-bar" title="${w.pages}"><span style="height:${Math.max(3, w.pages / wmax * 100)}%;background:${c.progressColor}"></span><small>${w.pages ? w.pages + ' · ' : ''}${fmtDate(w.from)}</small></div>`).join('')}</div>
+        ${bySub.length ? `<h3 class="mt">${t('hwBySubject')}</h3><div class="hw-subs">${bySub.map(x => `<div><span>${HW_ICONS[x.s]} ${esc(t('hwSub_' + x.s))}</span><div class="progress"><span style="width:${x.n / smax * 100}%;background:${c.progressColor}"></span></div><b>${x.n}</b></div>`).join('')}</div>` : ''}`)}
+    </div>
+    ${card('🗂️ ' + t('hwHistory'), mine.length ? `<div class="list">${mine.slice(0, 20).map(x => `<div class="item"><div class="meta"><span class="ico">${HW_ICONS[x.subject] || '📝'}</span><div><strong>${t('hwLabel', { n: x.pages })} · ${esc(t('hwSub_' + x.subject))}</strong><div class="sub">${fmtDate(x.date)}${x.note ? ' · ' + esc(x.note) : ''}</div></div></div><div class="right"><button type="button" class="icon-btn danger parent-only" data-act="hw-del" data-id="${esc(x.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>` : emptyBox(t('hwEmpty')), { cls: 'mt' })}
+    ${card('⚙️ ' + t('hwRules'), `<div class="row2"><div><label for="hwPpp">${t('hwRulePoints')}</label><input id="hwPpp" type="number" min="0" max="100" value="${set.pointsPerPage}"></div>
+      <div><label class="check" style="margin-top:28px"><input type="checkbox" id="hwAuto" ${set.autoTask ? 'checked' : ''}> ${t('hwRuleAuto')}</label></div></div>
+      <p class="hint">${t('hwRuleHint')}</p>
+      <button type="button" class="btn btn-primary" data-act="hw-rules">${t('save')}</button>`, { cls: 'mt parent-only' })}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'quadro') + 1, 0, HOMEWORK_SECTION);
+
+Object.assign(ACTIONS, {
+  'hw-child': el => { ui.hwChild = el.dataset.id; render(); },
+  'hw-pg': el => { $('#hwPg').value = el.dataset.id; $$('#hwBody [data-act="hw-pg"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'hw-sub': el => { ui.hwSub = el.dataset.id; $$('#hwBody [data-act="hw-sub"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'hw-log': () => {
+    const c = childById(ui.hwChild), pages = int($('#hwPg').value, 0);
+    if (!(pages > 0)) return toast(t('hwNeedPages'), 'warn');
+    const dv = $('#hwDate').value;
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(dv) && dv <= dayKey() ? (dv === dayKey() ? isoNow() : keyToDate(dv).toISOString()) : isoNow();
+    const r = logHomework(c.id, pages, ui.hwSub, $('#hwNote').value, date);
+    if (!r.ok) return toast(t('hwNeedPages'), 'warn');
+    commit();
+    if (r.pending) return toast(t('sentForApproval'), 'success');
+    const hid = r.entry.id, rec = S.homework.entries.find(x => x.historyId === hid);
+    toast(t('hwSaved', { name: c.name, n: pages }) + (r.points ? ` (+${pts(r.points)})` : ''), 'success', { label: t('undo'), run: () => { if (rec) deleteHomework(rec.id); commit(); toast(t('undone')); } });
+    celebrate(c, r.fresh, r.points);
+  },
+  'hw-del': async el => { if (!(await askConfirm(t('hwDelConfirm'), { danger: true, okLabel: t('delete') }))) return; if (deleteHomework(el.dataset.id)) { commit(); toast(t('deleted')); } },
+  'hw-rules': () => { S.homework.settings.pointsPerPage = clamp(int($('#hwPpp').value, 2), 0, 100); S.homework.settings.autoTask = $('#hwAuto').checked; commit(); toast(t('saved'), 'success'); },
+  'hw-open': el => { if (el.dataset.id) ui.hwChild = el.dataset.id; showSection('licao'); }
+});
+
+/* =====================================================================
+   Ideias de recompensas com preço sugerido (editável antes de adicionar).
+   Os preços pensam no que cada um consegue juntar:
+   pequenas = 1 a 2 dias, médias = cerca de uma semana, grandes = um mês.
+   ===================================================================== */
+const REWARD_IDEAS = [
+  { tier: 'small', key: 'rw_sticker', icon: '🌟', cost: 20 },
+  { tier: 'small', key: 'rw_song', icon: '🎶', cost: 20 },
+  { tier: 'small', key: 'rw_story', icon: '📖', cost: 30 },
+  { tier: 'small', key: 'rw_bubbles', icon: '🫧', cost: 30 },
+  { tier: 'small', key: 'rw_dessert', icon: '🍮', cost: 40 },
+  { tier: 'small', key: 'rw_screen15', icon: '📺', cost: 50 },
+  { tier: 'medium', key: 'rewardChooseMovie', icon: '🎬', cost: 150, existing: true },
+  { tier: 'medium', key: 'rw_momTime', icon: '💞', cost: 150 },
+  { tier: 'medium', key: 'rw_bake', icon: '🧁', cost: 200 },
+  { tier: 'medium', key: 'rw_picnic', icon: '🧺', cost: 200 },
+  { tier: 'medium', key: 'rw_dinner', icon: '🍕', cost: 250 },
+  { tier: 'medium', key: 'rewardSleepLater', icon: '🌙', cost: 250, existing: true },
+  { tier: 'medium', key: 'rw_friend', icon: '🧑‍🤝‍🧑', cost: 300 },
+  { tier: 'big', key: 'rewardIceCream', icon: '🍦', cost: 300, existing: true },
+  { tier: 'big', key: 'rewardPark', icon: '🌳', cost: 500, existing: true },
+  { tier: 'big', key: 'rw_camp', icon: '⛺', cost: 600 },
+  { tier: 'big', key: 'rw_smallToy', icon: '🎁', cost: 800 },
+  { tier: 'big', key: 'rw_cinema', icon: '🎥', cost: 900 },
+  { tier: 'big', key: 'rw_yesDay', icon: '🎉', cost: 1500 },
+  { tier: 'big', key: 'rewardSpecialToy', icon: '🧸', cost: 2000, existing: true }
+];
+function rewardForIdea(idea) {
+  return S.rewards.find(r => r.nameKey === idea.key) || S.rewards.find(r => !r.nameKey && normName(r.name) === normName(t(idea.key))) || null;
+}
+function openRewardIdeas() {
+  Modal.open({
+    id: 'rwIdeasModal', wide: true, title: '💡 ' + t('rwIdeasTitle'),
+    body: `<p class="hint" style="margin-top:0">${t('rwIdeasIntro')}</p>
+      ${['small', 'medium', 'big'].map(tier => `<h3 class="mt">${t('rwTier_' + tier)}</h3><p class="hint" style="margin:2px 0 8px">${t('rwTierHint_' + tier)}</p><div class="list">${REWARD_IDEAS.filter(x => x.tier === tier).map(x => {
+        const r = rewardForIdea(x);
+        return `<label class="item rw-idea"><div class="meta"><input type="checkbox" data-rw="${x.key}" ${!r && x.tier === 'big' && x.cost >= 1500 ? '' : 'checked'}><span class="ico">${esc(x.icon)}</span><div><strong>${esc(r ? rewardName(r) : t(x.key))}</strong><div class="sub">${r ? `${t('rwHasNow', { n: r.cost })}` : t('rwNew')}</div></div></div><div class="right val-input"><input type="number" min="1" max="99999" inputmode="numeric" value="${x.cost}" data-rwcost="${x.key}"><span>${esc(t('pts'))}</span></div></label>`;
+      }).join('')}</div>`).join('')}
+      <p class="hint mt">${t('rwIdeasHint')}</p>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="rw-ideas-save">${t('rwIdeasSave')}</button>`
+  });
+}
+Object.assign(ACTIONS, {
+  'rw-ideas': () => openRewardIdeas(),
+  'rw-ideas-save': () => {
+    let added = 0, changed = 0;
+    REWARD_IDEAS.forEach(x => {
+      const on = $(`#rwIdeasModal [data-rw="${x.key}"]`), costEl = $(`#rwIdeasModal [data-rwcost="${x.key}"]`);
+      if (!on || !on.checked) return;
+      const cost = Math.max(1, int(costEl.value, x.cost)), r = rewardForIdea(x);
+      if (r) { if (r.cost !== cost) { r.cost = cost; changed++; } return; }
+      let id = Date.now(); while (rewardById(id)) id++;
+      S.rewards.push({ id, name: t(x.key), nameKey: x.key, cost, icon: x.icon }); added++;
+    });
+    S.rewards.sort((a, b) => a.cost - b.cost);
+    Modal.close('rwIdeasModal'); commit(); toast(t('rwIdeasDone', { added, changed }), 'success');
+  }
 });
 
 </script>
