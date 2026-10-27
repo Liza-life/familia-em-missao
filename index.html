@@ -10312,7 +10312,11 @@ const V90_TEXT = {
 "title_premium": "Aprovações e metas",
 "pinLocked": "Muitas tentativas erradas. Tente de novo em {n} s.",
 "pinDefaultWarn": "A senha dos pais ainda é a padrão (1234). As crianças podem descobrir: troque nas Configurações.",
-"pinChangeNow": "Trocar a senha"
+"pinChangeNow": "Trocar a senha",
+"bkNever": "Você ainda não fez nenhum backup.",
+"bkDays": "Último backup há {n} dias.",
+"bkWhy": "Sem sincronização, os dados só existem neste aparelho.",
+"bkNow": "Fazer backup agora"
 },
 "en": {
 "apTitle": "Appearance",
@@ -10462,7 +10466,11 @@ const V90_TEXT = {
 "title_premium": "Approvals and goals",
 "pinLocked": "Too many wrong attempts. Try again in {n} s.",
 "pinDefaultWarn": "The parents password is still the default (1234). The children might guess it: change it in Settings.",
-"pinChangeNow": "Change password"
+"pinChangeNow": "Change password",
+"bkNever": "You haven't made a backup yet.",
+"bkDays": "Last backup {n} days ago.",
+"bkWhy": "Without sync, the data only exists on this device.",
+"bkNow": "Back up now"
 },
 "es": {
 "apTitle": "Apariencia",
@@ -10612,7 +10620,11 @@ const V90_TEXT = {
 "title_premium": "Aprobaciones y metas",
 "pinLocked": "Demasiados intentos incorrectos. Inténtalo de nuevo en {n} s.",
 "pinDefaultWarn": "La contraseña de los padres sigue siendo la predeterminada (1234). Los niños pueden adivinarla: cámbiala en Configuración.",
-"pinChangeNow": "Cambiar contraseña"
+"pinChangeNow": "Cambiar contraseña",
+"bkNever": "Todavía no hiciste ninguna copia de seguridad.",
+"bkDays": "Última copia hace {n} días.",
+"bkWhy": "Sin sincronización, los datos solo existen en este dispositivo.",
+"bkNow": "Hacer copia ahora"
 },
 "it": {
 "apTitle": "Aspetto",
@@ -10762,7 +10774,11 @@ const V90_TEXT = {
 "title_premium": "Approvazioni e obiettivi",
 "pinLocked": "Troppi tentativi sbagliati. Riprova tra {n} s.",
 "pinDefaultWarn": "La password dei genitori è ancora quella predefinita (1234). I bambini potrebbero scoprirla: cambiala nelle Impostazioni.",
-"pinChangeNow": "Cambia password"
+"pinChangeNow": "Cambia password",
+"bkNever": "Non hai ancora fatto nessun backup.",
+"bkDays": "Ultimo backup {n} giorni fa.",
+"bkWhy": "Senza sincronizzazione, i dati esistono solo su questo dispositivo.",
+"bkNow": "Fai il backup ora"
 },
 "de": {
 "apTitle": "Aussehen",
@@ -10912,7 +10928,11 @@ const V90_TEXT = {
 "title_premium": "Freigaben und Ziele",
 "pinLocked": "Zu viele falsche Versuche. Versuche es in {n} s erneut.",
 "pinDefaultWarn": "Das Eltern-Passwort ist noch das Standardpasswort (1234). Die Kinder könnten es erraten: Ändere es in den Einstellungen.",
-"pinChangeNow": "Passwort ändern"
+"pinChangeNow": "Passwort ändern",
+"bkNever": "Du hast noch keine Sicherung gemacht.",
+"bkDays": "Letzte Sicherung vor {n} Tagen.",
+"bkWhy": "Ohne Synchronisierung gibt es die Daten nur auf diesem Gerät.",
+"bkNow": "Jetzt sichern"
 },
 "zh": {
 "apTitle": "外观",
@@ -11062,7 +11082,11 @@ const V90_TEXT = {
 "title_premium": "审批和目标",
 "pinLocked": "错误次数太多。请在 {n} 秒后再试。",
 "pinDefaultWarn": "家长密码仍是默认的 1234，孩子可能会猜到：请在设置中修改。",
-"pinChangeNow": "修改密码"
+"pinChangeNow": "修改密码",
+"bkNever": "你还没有备份过。",
+"bkDays": "上次备份是 {n} 天前。",
+"bkWhy": "没有同步时，数据只保存在这台设备上。",
+"bkNow": "立即备份"
 },
 "zht": {
 "apTitle": "外觀",
@@ -11212,7 +11236,11 @@ const V90_TEXT = {
 "title_premium": "審批和目標",
 "pinLocked": "錯誤次數太多。請在 {n} 秒後再試。",
 "pinDefaultWarn": "家長密碼仍是預設的 1234，孩子可能會猜到：請在設定中修改。",
-"pinChangeNow": "修改密碼"
+"pinChangeNow": "修改密碼",
+"bkNever": "你還沒有備份過。",
+"bkDays": "上次備份是 {n} 天前。",
+"bkWhy": "沒有同步時，資料只儲存在這臺裝置上。",
+"bkNow": "立即備份"
 }
 };
 Object.keys(V90_TEXT).forEach(l => Object.assign(I18N[l], V90_TEXT[l]));
@@ -17670,6 +17698,22 @@ function archiveOld(now = new Date()) {
     u0.call(this);
     const el = $('#dPinWarn'); if (!el) return;
     el.innerHTML = !isChildMode() && S.pinHash === hashPin(DEFAULT_PIN) ? `<div class="notice warn pin-warn"><span>🔒 ${t('pinDefaultWarn')}</span><button type="button" class="btn btn-primary btn-sm" data-act="go" data-id="configuracoes">${t('pinChangeNow')}</button></div>` : '';
+  };
+})();
+/* ---------- lembrete de backup: sem sincronização, os dados só existem neste aparelho ---------- */
+(function () {
+  const KEY = 'familiaMissao.lastBackup';
+  const last = () => { try { return Number(localStorage.getItem(KEY) || 0); } catch (e) { return 0; } };
+  const ex0 = exportData;
+  exportData = function () { ex0(); try { localStorage.setItem(KEY, String(Date.now())); } catch (e) { /* ignora */ } if (typeof render === 'function') render(); };
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), b0 = dash.build, u0 = dash.update;
+  dash.build = () => b0().replace('<div id="dPending"', '<div id="dBackup"></div><div id="dPending"');
+  dash.update = function () {
+    u0.call(this);
+    const el = $('#dBackup'); if (!el) return;
+    const synced = typeof Cloud !== 'undefined' && Cloud.linked && Cloud.linked(), days = last() ? Math.floor((Date.now() - last()) / 864e5) : null;
+    const due = !isChildMode() && !synced && (days === null || days >= 7) && S.history.length > 0;
+    el.innerHTML = due ? `<div class="notice warn pin-warn"><span>💾 ${days === null ? t('bkNever') : t('bkDays', { n: days })} ${t('bkWhy')}</span><button type="button" class="btn btn-primary btn-sm" data-act="export">${t('bkNow')}</button></div>` : '';
   };
 })();
 
