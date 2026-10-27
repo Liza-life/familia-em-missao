@@ -1068,12 +1068,214 @@ span.q-name{cursor:default}
 .rp-col li b{float:right;color:#b42318}
 .rp-foot{font-size:13px;font-weight:700;margin:10px 0 0}
 
+/* ===== v89: provinhas em níveis ===== */
+.tl-box{border:1.5px solid var(--line);border-radius:16px;padding:12px 14px;margin:6px 0 12px;background:linear-gradient(135deg,#fbfaff,#f3f7ff)}
+.tl-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tl-name{font-size:16px;margin-right:8px}
+.tl-stars{color:#f5a524;letter-spacing:2px;font-size:15px}
+.tl-adj{display:flex;gap:6px}
+.tl-steps{display:flex;align-items:center;margin-top:8px}
+.tl-steps span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#eef0f6;font-size:17px;filter:grayscale(1);opacity:.55}
+.tl-steps span.done{filter:none;opacity:1;background:#e7f8ef}
+.tl-steps span.on{filter:none;opacity:1;background:var(--accent-soft);box-shadow:0 0 0 3px var(--primary);transform:scale(1.12)}
+.tl-steps i{flex:1;height:3px;background:#e1e4ee;margin:0 3px;border-radius:2px}
+.tl-log{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tl-res{font-size:12.5px;font-weight:800;padding:4px 9px;border-radius:999px;background:#f2f3fa}
+.tl-res small{font-weight:600}
+.tl-res.up,.tl-res.top{background:#e7f8ef;color:#0f6b45}
+.tl-res.down{background:#fff1e6;color:#9a4b00}
+
+/* ===== equipe e ajuda ===== */
+.team-pill{display:inline-block;font-size:11px;font-weight:800;padding:1px 7px;border-radius:999px;background:#e0f2fe;color:#075985;margin-right:4px}
+.hp-mini{position:absolute;right:52px;bottom:10px;width:34px;height:34px;border-radius:50%;border:1.5px solid #bae6fd;background:#f0f9ff;font-size:16px;cursor:pointer;z-index:2}
+.hp-mini:hover{background:#e0f2fe;transform:scale(1.08)}
+.tm-kids{margin-top:6px}
+.tm-kids .chip{font-size:12px;padding:4px 9px}
+.tm-idea .meta{align-items:flex-start}
+
+/* ===== reunião, desafio ===== */
+.mt-dots{display:flex;gap:6px;justify-content:center;margin-bottom:8px}
+.mt-dots span{width:28px;height:6px;border-radius:3px;background:#e4e6ef}
+.mt-dots span.done{background:#b9b4ff}
+.mt-dots span.on{background:var(--primary)}
+.mt-step{text-align:center;margin-bottom:6px}
+.mt-lead{text-align:center;color:var(--muted);margin:4px 0 12px}
+.mt-kids{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.mt-kid{border:2px solid var(--line);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:6px;background:#fff}
+.mt-kid.hi{border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 25%,transparent);background:linear-gradient(180deg,#fffdf2,#fff)}
+.mt-kid-top{display:flex;align-items:center;gap:8px}
+.mt-kid ul{margin:0;padding-left:18px;font-size:13.5px;flex:1}
+.mt-good label{display:flex;align-items:center;gap:8px}
+.mt-end{text-align:center}
+.mt-end ul{text-align:left;display:inline-block;margin:8px auto;font-size:15px}
+.mt-big{font-size:54px}
+.ch-banner{display:flex;align-items:center;gap:12px;margin-bottom:16px;background:linear-gradient(135deg,#fff7ed,#fef3c7);color:#7c2d12;flex-wrap:wrap}
+.ch-banner .ch-ico{font-size:30px}
+.ch-banner small{display:block;font-weight:800;color:#9a3412}
+.ch-banner b{font-size:15.5px}
+.ch-banner .ch-act{margin-left:auto;display:flex;gap:6px}
+.card .ch-banner{margin-bottom:0}
+.ch-ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.ch-idea{display:flex;align-items:center;gap:8px;text-align:left;padding:10px 12px;border:1.5px solid var(--line);border-radius:14px;background:#fff;font-weight:700;font-size:13.5px}
+.ch-idea span{font-size:22px}
+.ch-idea.on{border-color:var(--primary);background:var(--accent-soft);color:var(--primary)}
+.ch-past{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ch-past span{font-size:12.5px;padding:4px 9px;border-radius:999px;background:#f2f3fa}
+.mt-banner,.pd-banner{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.pd-banner{background:#e7f8ef;color:#0f6b45}
+.mt-banner{background:#f3e8ff;color:#6b21a8}
+
+/* ===== diário ===== */
+.dy-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.dy-tools .actions{display:flex;gap:6px;align-items:center}
+.dy-tools select{padding:6px 8px;border-radius:10px;border:1px solid var(--line)}
+.dy-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.dy-entry{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:16px;background:#fffdf7;border:1px solid #f1e7c9;position:relative}
+.dy-entry.dy-funny{background:#fff8e6}.dy-entry.dy-first{background:#f0f9ff;border-color:#cde8fb}.dy-entry.dy-moment{background:#fff1f5;border-color:#fbd5e0}.dy-entry.dy-proud{background:#f2fbf4;border-color:#cdeed5}.dy-entry.dy-good{background:#f5f3ff;border-color:#ddd6fe}
+.dy-ico{font-size:24px;line-height:1}
+.dy-body{flex:1;min-width:0}
+.dy-body p{margin:4px 0 0;font-size:15px;line-height:1.4;white-space:pre-wrap;word-break:break-word}
+.dy-meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.dy-meta small{width:100%}
+.dy-who{font-size:12px;font-weight:800;padding:2px 8px;border-radius:999px;background:#fff;border:1px solid color-mix(in srgb,var(--c,#999) 45%,#fff)}
+.dy-entry .icon-btn{flex:0 0 auto}
+.dy-cover{display:flex;align-items:center;justify-content:center;min-height:900px;text-align:center}
+.dy-cover-in{border:4px dashed #c4b5fd;border-radius:30px;padding:60px 40px;background:linear-gradient(160deg,#fdf4ff,#eff6ff)}
+.dy-cover-ico{font-size:80px}
+.dy-cover h1{font-size:38px;margin:10px 0}
+.dy-cover h2{font-size:22px;color:#6b21a8}
+.dy-cover-kids{display:flex;gap:18px;justify-content:center;margin:26px 0;flex-wrap:wrap}
+.dy-cover-kids span{display:flex;flex-direction:column;align-items:center;gap:4px}
+.dy-month{margin-bottom:16px;break-inside:avoid-page}
+.dy-month h3{font-size:19px;border-bottom:2px solid #e9d5ff;padding-bottom:4px;margin-bottom:8px;color:#6b21a8}
+.dy-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dy-grid .dy-entry{break-inside:avoid}
+
+/* ===== fechamento do dia ===== */
+.dc-banner{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:11px 14px;border-radius:14px;margin-bottom:14px;background:#eef2ff;color:#312e81}
+.dc-banner.hot{background:linear-gradient(135deg,#312e81,#6d28d9);color:#fff}
+.dc-banner.ok{background:#f0fdf4;color:#166534}
+.dc-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.dc-tab{display:flex;align-items:center;gap:6px;padding:6px 10px 6px 6px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:800;font-size:13px;white-space:nowrap}
+.dc-tab.on{border-color:var(--c,var(--primary));background:color-mix(in srgb,var(--c,#6c63ff) 12%,#fff)}
+.dc-tab.done{opacity:.75}
+.dc-tab.done span:after{content:" ✔";color:var(--success)}
+.dc-kid h4{margin:12px 0 6px;font-size:14.5px}
+.dc-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px}
+.dc-task{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:12px;border:1.5px solid var(--line);cursor:pointer;background:#fff}
+.dc-task input{width:20px;height:20px;accent-color:var(--success);flex:0 0 auto}
+.dc-task.done{background:#f0fdf4;border-color:#bbf7d0;opacity:.8}
+.dc-task.pending{border-color:#fcd34d;background:#fffbeb}
+.dc-task:has(input:checked:not([disabled])){border-color:var(--success);background:#ecfdf3}
+.dc-ti{font-size:20px}
+.dc-tn{flex:1;font-size:13.5px;font-weight:700}
+.dc-tn small{font-weight:600;color:var(--muted)}
+.dc-tn small.wait{color:#a16207}
+.dc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dc-pages .chip{min-width:40px;justify-content:center}
+.dc-moods{display:flex;gap:6px}
+.dc-kidline{display:grid;grid-template-columns:auto 1fr auto auto auto;align-items:center;gap:10px;padding:6px 10px;border-radius:12px;background:#f8f9fc;margin-top:6px;text-align:left}
+@media(max-width:620px){.dc-row{grid-template-columns:1fr}}
+
+/* ===== personagem ===== */
+.avatar.av-g{overflow:visible;position:relative}
+.avatar.av-g img{border-radius:50%}
+.av-hat{position:absolute;top:-.62em;left:50%;transform:translateX(-50%) rotate(-8deg);font-style:normal;font-size:.72em;line-height:1;pointer-events:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.av-pet{position:absolute;right:-.42em;bottom:-.3em;font-style:normal;font-size:.55em;line-height:1;pointer-events:none;background:#fff;border-radius:50%;padding:.08em;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.avatar.fr-dots{border-style:dashed}
+.avatar.fr-double{border-style:double;border-width:6px}
+.avatar.sm.fr-double{border-width:4px}
+.avatar.fr-rainbow{border-color:transparent;background-clip:padding-box;box-shadow:0 0 0 3px #f472b6,0 0 0 6px #facc15,0 0 0 9px #60a5fa}
+.avatar.sm.fr-rainbow{box-shadow:0 0 0 2px #f472b6,0 0 0 4px #60a5fa}
+.avatar.fr-gold{border-color:#f59e0b;box-shadow:0 0 0 3px #fde68a,0 0 14px rgba(245,158,11,.55)}
+.gr-card{margin-bottom:16px}
+.gr-top{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:14px 4px 6px}
+.gr-hero{padding:18px 18px 8px}
+.gr-info{display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px}
+.gr-info b{font-size:17px}
+.gr-h{font-size:14px;margin:12px 0 6px;color:var(--muted)}
+.gr-row{display:flex;flex-wrap:wrap;gap:8px}
+.gr-item{width:62px;height:62px;border-radius:16px;border:2px solid var(--line);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;position:relative}
+.gr-item.on{border-color:var(--primary);background:var(--accent-soft);box-shadow:0 0 0 3px rgba(108,99,255,.2)}
+.gr-item.locked{opacity:.5;cursor:not-allowed;background:#f6f7fb}
+.gr-item.locked .gr-em,.gr-item.locked .gr-sw,.gr-item.locked .gr-fr{filter:grayscale(1)}
+.gr-item small{font-size:10.5px;font-weight:800;color:var(--muted)}
+.gr-em{font-size:28px;line-height:1}
+.gr-sw{width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+.gr-fr{width:30px;height:30px;border-radius:50%;border:3px solid #6c63ff;background:#f1f3ff}
+.gr-fr.fr-dots{border-style:dashed}.gr-fr.fr-double{border-style:double;border-width:6px}.gr-fr.fr-rainbow{border-color:transparent;box-shadow:0 0 0 2px #f472b6,0 0 0 4px #facc15,0 0 0 6px #60a5fa}.gr-fr.fr-gold{border-color:#f59e0b;box-shadow:0 0 8px rgba(245,158,11,.6)}
+.gr-new{margin-left:auto;align-self:flex-start;border:0;border-radius:999px;padding:4px 9px;font-size:11.5px;font-weight:800;background:linear-gradient(135deg,#f472b6,#a855f7);color:#fff;animation:grPulse 1.6s infinite}
+@keyframes grPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+/* ===== dia do pagamento ===== */
+.pd-kids{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.pd-kid{border:2px solid color-mix(in srgb,var(--c) 30%,#fff);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.pd-top{display:flex;align-items:center;gap:10px}
+.pd-top small{display:block}
+.pd-pots{display:flex;gap:6px;flex-wrap:wrap;font-size:13px;font-weight:800}
+.pd-pots span{padding:3px 8px;border-radius:999px;background:#f5f6fb}
+.pd-gain{font-weight:800;color:#0f6b45;background:#e7f8ef;padding:6px 10px;border-radius:12px}
+.pd-ok{font-weight:800;color:#166534}
+.pd-zero{font-size:13px;color:var(--muted)}
+
+/* ===== painel da geladeira ===== */
+.fridge{position:fixed;inset:0;z-index:45;background:linear-gradient(160deg,#fdf4ff,#eef6ff 55%,#f0fdf4);overflow:auto;padding:18px 22px 30px;display:flex;flex-direction:column;gap:14px}
+body.fridge-on{overflow:hidden}
+.fr-head{display:flex;align-items:center;gap:16px}
+.fr-date{font-size:clamp(20px,3vw,32px);font-weight:900}
+.fr-fam{color:var(--muted);font-weight:700}
+.fr-time{margin-left:auto;font-size:clamp(28px,5vw,56px);font-weight:900;color:#4c1d95;font-variant-numeric:tabular-nums}
+.fr-btns{display:flex;gap:8px}
+.fr-btn{width:46px;height:46px;border-radius:50%;border:0;background:#fff;box-shadow:var(--shadow);font-size:20px}
+.fr-strip{display:flex;flex-wrap:wrap;gap:8px}
+.fr-pill{background:#fff;border-radius:999px;padding:8px 14px;font-weight:800;box-shadow:var(--shadow);font-size:clamp(13px,1.6vw,17px)}
+.fr-goal{display:flex;align-items:center;gap:10px}
+.fr-goal i{display:block;width:clamp(80px,14vw,200px);height:12px;border-radius:6px;background:#ede9fe;overflow:hidden}
+.fr-goal i b{display:block;height:100%;background:linear-gradient(90deg,#a78bfa,#6c63ff)}
+.fr-grid{display:grid;gap:14px;flex:1}
+.fr-grid.fr-n1{grid-template-columns:1fr}.fr-grid.fr-n2{grid-template-columns:repeat(2,1fr)}.fr-grid.fr-n3{grid-template-columns:repeat(3,1fr)}.fr-grid.fr-n4{grid-template-columns:repeat(4,1fr)}
+.fr-kid{background:#fff;border-radius:26px;padding:14px;box-shadow:var(--shadow);border-top:8px solid var(--c);display:flex;flex-direction:column;gap:10px;min-width:0}
+.fr-kid-top{display:flex;align-items:center;gap:12px}
+.fr-kid-top h2{font-size:clamp(20px,2.4vw,30px)}
+.fr-kid-top b{font-size:clamp(16px,1.8vw,22px)}
+.fr-prog{position:relative;height:22px;border-radius:11px;background:#f1f2f8;overflow:hidden}
+.fr-prog span{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 60%,#fff),var(--c))}
+.fr-prog em{position:relative;display:block;text-align:center;font-style:normal;font-weight:900;font-size:14px;line-height:22px}
+.fr-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.fr-task{position:relative;border:2.5px solid var(--line);border-radius:18px;background:#fff;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:96px}
+.fr-task:not([disabled]):active{transform:scale(.96)}
+.fr-ti{font-size:clamp(30px,3.6vw,44px);line-height:1}
+.fr-tn{font-size:12px;font-weight:800;text-align:center;line-height:1.15}
+.fr-mark{position:absolute;top:4px;right:6px;font-size:18px;font-weight:900;color:var(--success)}
+.fr-task.done{background:#ecfdf3;border-color:#86efac;opacity:.85}
+.fr-task.pending{background:#fffbeb;border-color:#fcd34d}
+.fr-task.pending .fr-mark{color:#a16207}
+.fr-empty{text-align:center;font-weight:800;color:var(--muted)}
+.fr-routine{border-top:1px dashed var(--line);padding-top:8px}
+.fr-routine div{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.fr-routine span{font-size:24px;filter:grayscale(1);opacity:.4}
+.fr-routine span.ok{filter:none;opacity:1}
+.fr-foot{text-align:center;color:var(--muted);font-weight:700}
+@media(max-width:1100px){.fr-grid.fr-n4{grid-template-columns:repeat(2,1fr)}.fr-grid.fr-n3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.fr-grid.fr-n4,.fr-grid.fr-n3,.fr-grid.fr-n2{grid-template-columns:1fr}.fridge{padding:12px}}
+@media print{.fridge{display:none!important}}
+
+/* impressão do resumo da reunião */
+.mtp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.mtp-kid{border:2px solid color-mix(in srgb,var(--c) 40%,#fff);border-radius:16px;padding:12px}
+.mtp-kid h4{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:17px}
+.mtp-kid .pr-av{width:34px;height:34px;font-size:20px}
+.mtp-good{font-style:italic}
+.mtp-ch{margin-top:16px;border:2px dashed #fdba74;border-radius:16px;padding:12px;background:#fff7ed}
+.child-card .today-line{padding-right:84px}
+.dy-tools .actions{flex-wrap:nowrap}.dy-tools select{width:auto;min-width:90px}
+
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v88 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v89 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -8165,13 +8367,1698 @@ const GWEEK_TEXT = {
 };
 Object.keys(GWEEK_TEXT).forEach(l => Object.assign(I18N[l], GWEEK_TEXT[l]));
 
+/* textos da v89 */
+const V89_TEXT = {
+"pt": {
+"tlLevel": "Nível {n}",
+"tlLevelShort": "nív. {n}",
+"tlName1": "Começando",
+"tlName2": "Explorador",
+"tlName3": "Craque",
+"tlName4": "Mestre",
+"tlName5": "Desafio",
+"tlEasier": "Deixar mais fácil",
+"tlHarder": "Deixar mais difícil",
+"tlRule": "Acertou {up}% ou mais: sobe de nível. Menos de {down}%: volta um nível para não desanimar.",
+"tlRuleTop": "Nível máximo! As provinhas continuam no nível Desafio.",
+"tlRecord": "Registrar acertos",
+"tlRecordTitle": "Acertos de {name} — {subject}",
+"tlRecordHint": "Provinha impressa em {date} · {level}.",
+"tlWillUp": "Vai subir para o nível {n}! 🎉",
+"tlWillDown": "Vai voltar para o nível {n} (mais fácil).",
+"tlWillStay": "Continua no mesmo nível. Na próxima ele chega lá!",
+"tlUpReason": "Subiu para o nível {n} em {subject}",
+"tlTestReason": "Fez a provinha de {subject}",
+"tlUpToast": "{name} subiu para o nível {n} em {subject}!",
+"tlDownToast": "{name} volta para o nível {n} em {subject}. Vamos treinar mais um pouco.",
+"tlTopToast": "{name} gabaritou o nível Desafio em {subject}!",
+"tlStayToast": "{name} acertou {pct}%. Com {up}% sobe de nível!",
+"navFamily": "Nossa família",
+"title_familia": "Nossa família",
+"sub_familia": "Reunião de domingo, desafio da semana e o diário da família.",
+"chTitle": "Desafio da semana",
+"chYes": "Conseguimos!",
+"chNo": "Não deu",
+"chNoConfirm": "Marcar que o desafio não deu certo desta vez?",
+"chNone": "Nenhum desafio agora. Escolham um na reunião de domingo.",
+"chBonusHint": "Se conseguiram, cada criança ganha {n} pontos.",
+"chDoneToast": "Desafio cumprido! Cada um ganhou {n} pontos.",
+"ch_noFight": "Uma semana sem brigas entre irmãos",
+"ch_bed": "Todo mundo arruma a cama todos os dias",
+"ch_read": "A família lê 10 livros juntos",
+"ch_thanks": "Sempre dizer \"por favor\" e \"obrigado\"",
+"ch_veggies": "Comer verdura em todas as refeições",
+"ch_tidy": "Brinquedos guardados antes de dormir, todos os dias",
+"ch_help": "Cada um ajuda um irmão por dia",
+"ch_noScreen": "Um dia inteiro sem telas para a família toda",
+"ch_english": "Aprender uma palavra nova em inglês por dia",
+"ch_early": "Ir para a cama no horário a semana toda",
+"mtTitle": "Reunião de família",
+"mtCardTitle": "Reunião de domingo",
+"mtCardHint": "Uns 10 minutos juntos: comemorar a semana, ver a meta da família, cada um contar uma coisa boa e escolher o desafio da próxima semana.",
+"mtStart": "Começar a reunião",
+"mtLast": "Última reunião: {date}",
+"mtBanner": "Hoje é dia da reunião de família!",
+"mtStep_party": "1. Vamos comemorar",
+"mtStep_goal": "2. Nossa meta",
+"mtStep_good": "3. Uma coisa boa de cada um",
+"mtStep_next": "4. Desafio da próxima semana",
+"mtStep_end": "5. Pronto!",
+"mtPartyLead": "Olha o que cada um fez na semana ({range}). Toque em Destaque para quem brilhou.",
+"mtTasks": "{n} tarefas",
+"mtEarned": "{n} pontos",
+"mtPages": "{n} páginas de lição",
+"mtBooks": "{n} livro(s)",
+"mtHelps": "ajudou {n} vez(es)",
+"mtGood": "{n} elogio(s)",
+"mtHighlight": "Destaque",
+"mtHighlightHint": "Cada destaque ganha {n} pontos quando vocês concluírem a reunião.",
+"mtHighlightNote": "Destaque da semana na reunião de família",
+"mtGoalLead": "Como está a meta da família? Lembrem juntos o que falta.",
+"mtLastChallenge": "E o desafio desta semana, conseguimos?",
+"mtGoodLead": "Cada criança conta uma coisa boa que aconteceu na semana. Você anota aqui.",
+"mtGoodPh": "O que foi bom nesta semana?",
+"mtSaveDiary": "Guardar essas falas no diário da família",
+"mtNextLead": "Escolham juntos o desafio da próxima semana (ou inventem um).",
+"mtOwnChallenge": "Ou escrevam o de vocês",
+"mtOwnPh": "Ex.: Ajudar a mamãe no jantar",
+"mtEndLead": "Reunião feita! Resumo:",
+"mtEndHi": "Destaque: {names} (+{n} pontos)",
+"mtEndPrevYes": "Desafio da semana cumprido!",
+"mtEndPrevNo": "O desafio desta semana não deu, mas vale tentar de novo.",
+"mtEndGood": "{n} coisa(s) boa(s) anotada(s)",
+"mtEndNext": "Próximo desafio: {name}",
+"mtFinish": "Concluir reunião",
+"mtSaved": "Reunião salva. Boa semana para todos!",
+"mtRules": "Pontos da reunião",
+"mtRuleHi": "Pontos para cada destaque",
+"mtRuleCh": "Pontos por criança quando cumprem o desafio",
+"dyTitle": "Diário da família",
+"dyAddTitle": "Anotar no diário",
+"dyKind": "O que é?",
+"dk_funny": "Frase engraçada",
+"dk_first": "Primeira vez",
+"dk_moment": "Momento especial",
+"dk_proud": "Orgulho",
+"dk_good": "Coisa boa da semana",
+"dyWho": "De quem?",
+"dyWhoHint": "Nenhum marcado = da família toda.",
+"dyText": "O que aconteceu?",
+"dyPh_funny": "Ex.: A Hannah disse que o trovão é a nuvem espirrando.",
+"dyPh_first": "Ex.: A Mavie deu os primeiros passinhos sozinha.",
+"dyPh_moment": "Ex.: Piquenique no parque com os avós.",
+"dyPh_proud": "Ex.: O Noah leu um livro inteiro sozinho.",
+"dyPh_good": "Ex.: O Brian ajudou a irmã a guardar os brinquedos.",
+"dySave": "Guardar no diário",
+"dySaved": "Guardado no diário.",
+"dyNeedText": "Escreva o que aconteceu.",
+"dyDelConfirm": "Apagar esta lembrança do diário?",
+"dyAll": "Todos",
+"dyFamily": "Família",
+"dyYear": "Ano",
+"dyPrint": "Imprimir o livrinho",
+"dyMore": "Ver mais {n}",
+"dyEmpty": "O diário ainda está vazio. Anote a primeira lembrança!",
+"dyHint": "Sem fotos: só as frases e os momentos. No fim do ano, imprima o livrinho e guarde.",
+"dyBookTitle": "Nosso livro de lembranças",
+"dyBookCount": "{n} lembrança(s) guardada(s) neste ano",
+"dcTitle": "Fechamento do dia",
+"dcStart": "Fechar o dia",
+"dcBanner": "Em 3 minutos você marca tudo de hoje.",
+"dcBannerEvening": "Hora de marcar o dia de todo mundo.",
+"dcClosedAt": "Dia fechado às {time}.",
+"dcReopen": "Abrir de novo",
+"dcTasksTitle": "Tarefas de hoje",
+"dcPending": "a criança marcou; aprovar",
+"dcAll": "Marcar todas",
+"dcNoTasks": "Nenhuma tarefa para hoje.",
+"dcHwDone": "Já registrou {n} página(s) hoje",
+"dcPagesPh": "Páginas",
+"dcBookPh": "Nome do livro de hoje (se leu)",
+"dcMood": "Como {name} se sentiu hoje?",
+"dcPraise": "Elogio do dia",
+"dcPraisePh": "Ex.: Dividiu o lanche com o irmão",
+"dcDiary": "Uma frase ou momento para o diário",
+"dcDiaryPh": "Algo que {name} disse ou fez hoje…",
+"dcNextKid": "Próximo: {name}",
+"dcEnd": "Fim",
+"dcDoneLead": "Dia de todo mundo marcado. Boa noite!",
+"dcSumTasks": "{n} tarefa(s) marcada(s)",
+"dcSumPages": "{n} página(s) de lição",
+"dcSumBooks": "{n} livro(s)",
+"dcSumMoods": "{n} carinha(s)",
+"dcSumPraise": "{n} elogio(s)",
+"dcSumDiary": "{n} lembrança(s) no diário",
+"dcFinish": "Fechar o dia",
+"dcSaved": "Dia fechado. Bom descanso!",
+"tmButton": "Missões em equipe",
+"tmTitle": "Missões em equipe",
+"tmIntro": "Missões para fazer juntos. Quando uma criança marca, todos da missão ganham os pontos. Escolha quem participa (no mínimo 2).",
+"tmHint": "Dica: misture um grande com uma pequena. Os grandes aprendem a ensinar e as pequenas aprendem com eles.",
+"tmTeam": "Equipe",
+"tmTeamLabel": "Missão em equipe",
+"tmTeamHint": "Quando uma criança marca, vale para todas as crianças desta tarefa.",
+"tmNeedTwo": "Escolha pelo menos 2 crianças.",
+"tmAdded": "\"{task}\" agora é missão em equipe.",
+"tmMatesToo": "Missão em equipe: {names} também ganharam!",
+"tm_livingRoom": "Arrumar a sala juntos",
+"tm_toysLittle": "Ajudar a irmã pequena a guardar os brinquedos",
+"tm_groceries": "Guardar as compras juntos",
+"tm_table": "Pôr a mesa do jantar juntos",
+"tm_puzzle": "Montar um quebra-cabeça juntos",
+"tm_plants": "Regar as plantas juntos",
+"tm_laundry": "Separar as roupas por dono, juntos",
+"tm_car": "Lavar o carro juntos",
+"tm_cookies": "Fazer biscoitos juntos",
+"tm_shoes": "Organizar os sapatos da entrada juntos",
+"hpBtn": "Ajudou o irmão",
+"hpTitle": "{name} ajudou um irmão",
+"hpWho": "Quem foi ajudado?",
+"hpHow": "Como ajudou?",
+"hpHint": "Ganha {n} pontos. Ajudar o irmão também conta na reunião de domingo.",
+"hpSave": "Dar +{n}",
+"hpNeedWho": "Escolha quem foi ajudado.",
+"hpNote": "Ajudou {name}",
+"hpSaved": "{name} ganhou {n} pontos por ajudar!",
+"hp_teach": "Ensinou algo",
+"hp_tidy": "Ajudou a guardar",
+"hp_share": "Dividiu ou emprestou",
+"hp_care": "Cuidou ou consolou",
+"hp_dress": "Ajudou a se vestir",
+"hp_play": "Brincou junto com paciência",
+"hpRulesTitle": "Ajudar o irmão",
+"hpRulePoints": "Pontos por ajuda",
+"hpRulesHint": "Use o botão 🤝 no cartão de cada criança, na tela inicial.",
+"grTitle": "Meu personagem",
+"grNextLevel": "Faltam {n} pontos para o nível {lvl}.",
+"grNextItem": "Próximo presente no nível {lvl}",
+"grCount": "{n} de {total} itens desbloqueados",
+"grType_hat": "Chapéus",
+"grType_pet": "Bichinhos",
+"grType_bg": "Fundos",
+"grType_frame": "Molduras",
+"gr_bg_sky": "Céu",
+"gr_bg_mint": "Menta",
+"gr_bg_peach": "Pêssego",
+"gr_bg_lilac": "Lilás",
+"gr_bg_sun": "Sol",
+"gr_bg_rainbow": "Arco-íris",
+"gr_bg_night": "Noite estrelada",
+"gr_bg_gold": "Ouro",
+"gr_frame_dots": "Pontinhos",
+"gr_frame_double": "Dupla",
+"gr_frame_rainbow": "Arco-íris",
+"gr_frame_gold": "Ouro",
+"grLevel": "Nível {n}",
+"grLocked": "Desbloqueia no nível {n}",
+"grNew": "{n} novo(s)!",
+"grHint": "A cada 100 pontos ganhos a criança sobe de nível e ganha presentes para o personagem. Toque para vestir ou tirar.",
+"pdTitle": "Dia do pagamento",
+"pdOpen": "Abrir o dia do pagamento",
+"pdBanner": "Hoje é dia do pagamento! O pote Guardar rende.",
+"pdIntro": "O que cada um guardou no pote Guardar rende {pct}% (até {cap} por semana). É assim que eles veem que guardar faz o dinheiro crescer.",
+"pdWeekEarned": "Ganhou {v} nesta semana",
+"pdGain": "Rendimento de hoje: +{v}",
+"pdPaidLine": "Já recebeu o rendimento: +{v}",
+"pdNoSave": "Nada no pote Guardar ainda. Guardando, na próxima semana rende!",
+"pdPay": "Pagar o rendimento",
+"pdPaidToast": "Rendimento pago: {v} para {n} criança(s).",
+"pdInterestNote": "Rendimento de {pct}% do pote Guardar",
+"pdInterestShort": "Rendimento",
+"pdCashShort": "Entregue em dinheiro",
+"pdCashOut": "Entregar {v} em dinheiro",
+"pdCashConfirm": "Você vai entregar {v} em dinheiro para {name}? O valor sai do pote Gastar.",
+"pdCashNote": "Entregue em dinheiro no dia do pagamento",
+"pdCashDone": "{name} recebeu {v} em dinheiro.",
+"pdTip": "Conversem sobre o que fazer com o pote Gastar: gastar agora ou juntar mais para algo maior.",
+"pdCardHint": "Dia do pagamento: {day}. O pote Guardar rende {pct}%.",
+"pdOff": "O dia do pagamento está desligado.",
+"pdRules": "Regras do pagamento",
+"pdEnabled": "Usar o dia do pagamento",
+"pdDay": "Dia da semana",
+"pdPct": "Rendimento do pote Guardar",
+"pdCap": "Rendimento máximo por semana (R$)",
+"pdCapHint": "Um limite para o valor não ficar alto demais. Use 0 para não ter limite.",
+"piggySource_interest": "Rendimento",
+"frShort": "Painel",
+"frTitle": "Painel da geladeira",
+"frFull": "Tela cheia",
+"frExit": "Sair do painel",
+"frNoTasks": "Nada para hoje 🎉",
+"frHintParent": "Toque numa tarefa para marcar. Deixe aberto num tablet ou na TV.",
+"frHintChild": "Toque na tarefa quando terminar. Um responsável aprova depois.",
+"pdIntroNoCap": "O que cada um guardou no pote Guardar rende {pct}%. É assim que eles veem que guardar faz o dinheiro crescer."
+},
+"en": {
+"tlLevel": "Level {n}",
+"tlLevelShort": "lvl {n}",
+"tlName1": "Starting out",
+"tlName2": "Explorer",
+"tlName3": "Ace",
+"tlName4": "Master",
+"tlName5": "Challenge",
+"tlEasier": "Make it easier",
+"tlHarder": "Make it harder",
+"tlRule": "{up}% or more correct: moves up a level. Less than {down}%: goes back one level so they don't get discouraged.",
+"tlRuleTop": "Top level! Quizzes stay at the Challenge level.",
+"tlRecord": "Record score",
+"tlRecordTitle": "{name}'s score — {subject}",
+"tlRecordHint": "Quiz printed on {date} · {level}.",
+"tlWillUp": "Moves up to level {n}! 🎉",
+"tlWillDown": "Goes back to level {n} (easier).",
+"tlWillStay": "Stays at the same level. They'll get there next time!",
+"tlUpReason": "Moved up to level {n} in {subject}",
+"tlTestReason": "Did the {subject} quiz",
+"tlUpToast": "{name} moved up to level {n} in {subject}!",
+"tlDownToast": "{name} goes back to level {n} in {subject}. Let's practice a bit more.",
+"tlTopToast": "{name} aced the Challenge level in {subject}!",
+"tlStayToast": "{name} got {pct}% right. With {up}% they move up a level!",
+"navFamily": "Our family",
+"title_familia": "Our family",
+"sub_familia": "Sunday meeting, challenge of the week and the family diary.",
+"chTitle": "Challenge of the week",
+"chYes": "We did it!",
+"chNo": "Not this time",
+"chNoConfirm": "Mark that the challenge didn't work out this time?",
+"chNone": "No challenge right now. Pick one at the Sunday meeting.",
+"chBonusHint": "If you did it, each child earns {n} points.",
+"chDoneToast": "Challenge done! Everyone earned {n} points.",
+"ch_noFight": "A week with no fights between siblings",
+"ch_bed": "Everyone makes their bed every day",
+"ch_read": "The family reads 10 books together",
+"ch_thanks": "Always say \"please\" and \"thank you\"",
+"ch_veggies": "Eat vegetables at every meal",
+"ch_tidy": "Toys put away before bed, every day",
+"ch_help": "Everyone helps a sibling every day",
+"ch_noScreen": "A whole day with no screens for the whole family",
+"ch_english": "Learn a new English word every day",
+"ch_early": "Go to bed on time all week",
+"mtTitle": "Family meeting",
+"mtCardTitle": "Sunday meeting",
+"mtCardHint": "About 10 minutes together: celebrate the week, check the family goal, each one shares something good, and pick next week's challenge.",
+"mtStart": "Start the meeting",
+"mtLast": "Last meeting: {date}",
+"mtBanner": "Today is family meeting day!",
+"mtStep_party": "1. Let's celebrate",
+"mtStep_goal": "2. Our goal",
+"mtStep_good": "3. Something good from each one",
+"mtStep_next": "4. Next week's challenge",
+"mtStep_end": "5. Done!",
+"mtPartyLead": "Look at what everyone did this week ({range}). Tap Highlight for whoever shone.",
+"mtTasks": "{n} tasks",
+"mtEarned": "{n} points",
+"mtPages": "{n} homework pages",
+"mtBooks": "{n} book(s)",
+"mtHelps": "helped {n} time(s)",
+"mtGood": "{n} compliment(s)",
+"mtHighlight": "Highlight",
+"mtHighlightHint": "Each highlight earns {n} points when you finish the meeting.",
+"mtHighlightNote": "Highlight of the week at the family meeting",
+"mtGoalLead": "How is the family goal going? Go over together what's left.",
+"mtLastChallenge": "And this week's challenge, did we do it?",
+"mtGoodLead": "Each child shares something good that happened this week. You write it down here.",
+"mtGoodPh": "What was good this week?",
+"mtSaveDiary": "Save these in the family diary",
+"mtNextLead": "Pick next week's challenge together (or make one up).",
+"mtOwnChallenge": "Or write your own",
+"mtOwnPh": "E.g. Help mom with dinner",
+"mtEndLead": "Meeting done! Summary:",
+"mtEndHi": "Highlight: {names} (+{n} points)",
+"mtEndPrevYes": "This week's challenge was done!",
+"mtEndPrevNo": "This week's challenge didn't work out, but it's worth trying again.",
+"mtEndGood": "{n} good thing(s) written down",
+"mtEndNext": "Next challenge: {name}",
+"mtFinish": "Finish meeting",
+"mtSaved": "Meeting saved. Have a good week, everyone!",
+"mtRules": "Meeting points",
+"mtRuleHi": "Points for each highlight",
+"mtRuleCh": "Points per child when they complete the challenge",
+"dyTitle": "Family diary",
+"dyAddTitle": "Write in the diary",
+"dyKind": "What is it?",
+"dk_funny": "Funny quote",
+"dk_first": "First time",
+"dk_moment": "Special moment",
+"dk_proud": "Proud moment",
+"dk_good": "Good thing of the week",
+"dyWho": "Who is it about?",
+"dyWhoHint": "None selected = the whole family.",
+"dyText": "What happened?",
+"dyPh_funny": "E.g. Hannah said thunder is the cloud sneezing.",
+"dyPh_first": "E.g. Mavie took her first steps on her own.",
+"dyPh_moment": "E.g. Picnic in the park with the grandparents.",
+"dyPh_proud": "E.g. Noah read a whole book by himself.",
+"dyPh_good": "E.g. Brian helped his sister put the toys away.",
+"dySave": "Save in the diary",
+"dySaved": "Saved in the diary.",
+"dyNeedText": "Write what happened.",
+"dyDelConfirm": "Delete this memory from the diary?",
+"dyAll": "Everyone",
+"dyFamily": "Family",
+"dyYear": "Year",
+"dyPrint": "Print the little book",
+"dyMore": "See {n} more",
+"dyEmpty": "The diary is still empty. Write the first memory!",
+"dyHint": "No photos: just the words and the moments. At the end of the year, print the little book and keep it.",
+"dyBookTitle": "Our book of memories",
+"dyBookCount": "{n} memory(ies) saved this year",
+"dcTitle": "End of the day",
+"dcStart": "Close the day",
+"dcBanner": "In 3 minutes you log everything from today.",
+"dcBannerEvening": "Time to log everyone's day.",
+"dcClosedAt": "Day closed at {time}.",
+"dcReopen": "Open again",
+"dcTasksTitle": "Today's tasks",
+"dcPending": "child ticked it; approve",
+"dcAll": "Tick all",
+"dcNoTasks": "No tasks for today.",
+"dcHwDone": "Already logged {n} page(s) today",
+"dcPagesPh": "Pages",
+"dcBookPh": "Today's book title (if they read)",
+"dcMood": "How did {name} feel today?",
+"dcPraise": "Compliment of the day",
+"dcPraisePh": "E.g. Shared their snack with a sibling",
+"dcDiary": "A quote or moment for the diary",
+"dcDiaryPh": "Something {name} said or did today…",
+"dcNextKid": "Next: {name}",
+"dcEnd": "End",
+"dcDoneLead": "Everyone's day is logged. Good night!",
+"dcSumTasks": "{n} task(s) ticked",
+"dcSumPages": "{n} homework page(s)",
+"dcSumBooks": "{n} book(s)",
+"dcSumMoods": "{n} face(s)",
+"dcSumPraise": "{n} compliment(s)",
+"dcSumDiary": "{n} memory(ies) in the diary",
+"dcFinish": "Close the day",
+"dcSaved": "Day closed. Rest well!",
+"tmButton": "Team missions",
+"tmTitle": "Team missions",
+"tmIntro": "Missions to do together. When one child ticks it, everyone on the mission gets the points. Choose who takes part (at least 2).",
+"tmHint": "Tip: pair an older one with a little one. The older ones learn to teach and the little ones learn from them.",
+"tmTeam": "Team",
+"tmTeamLabel": "Team mission",
+"tmTeamHint": "When one child ticks it, it counts for every child on this task.",
+"tmNeedTwo": "Choose at least 2 children.",
+"tmAdded": "\"{task}\" is now a team mission.",
+"tmMatesToo": "Team mission: {names} earned too!",
+"tm_livingRoom": "Tidy the living room together",
+"tm_toysLittle": "Help the little sister put her toys away",
+"tm_groceries": "Put the groceries away together",
+"tm_table": "Set the dinner table together",
+"tm_puzzle": "Do a jigsaw puzzle together",
+"tm_plants": "Water the plants together",
+"tm_laundry": "Sort the clothes by owner, together",
+"tm_car": "Wash the car together",
+"tm_cookies": "Bake cookies together",
+"tm_shoes": "Organize the shoes by the door together",
+"hpBtn": "Helped a sibling",
+"hpTitle": "{name} helped a sibling",
+"hpWho": "Who did they help?",
+"hpHow": "How did they help?",
+"hpHint": "Earns {n} points. Helping a sibling also counts at the Sunday meeting.",
+"hpSave": "Give +{n}",
+"hpNeedWho": "Choose who was helped.",
+"hpNote": "Helped {name}",
+"hpSaved": "{name} earned {n} points for helping!",
+"hp_teach": "Taught something",
+"hp_tidy": "Helped put things away",
+"hp_share": "Shared or lent something",
+"hp_care": "Looked after or comforted",
+"hp_dress": "Helped get dressed",
+"hp_play": "Played together patiently",
+"hpRulesTitle": "Helping a sibling",
+"hpRulePoints": "Points per help",
+"hpRulesHint": "Use the 🤝 button on each child's card on the home screen.",
+"grTitle": "My character",
+"grNextLevel": "{n} points to level {lvl}.",
+"grNextItem": "Next gift at level {lvl}",
+"grCount": "{n} of {total} items unlocked",
+"grType_hat": "Hats",
+"grType_pet": "Pets",
+"grType_bg": "Backgrounds",
+"grType_frame": "Frames",
+"gr_bg_sky": "Sky",
+"gr_bg_mint": "Mint",
+"gr_bg_peach": "Peach",
+"gr_bg_lilac": "Lilac",
+"gr_bg_sun": "Sun",
+"gr_bg_rainbow": "Rainbow",
+"gr_bg_night": "Starry night",
+"gr_bg_gold": "Gold",
+"gr_frame_dots": "Dots",
+"gr_frame_double": "Double",
+"gr_frame_rainbow": "Rainbow",
+"gr_frame_gold": "Gold",
+"grLevel": "Level {n}",
+"grLocked": "Unlocks at level {n}",
+"grNew": "{n} new!",
+"grHint": "Every 100 points earned, the child goes up a level and gets gifts for their character. Tap to put on or take off.",
+"pdTitle": "Payday",
+"pdOpen": "Open payday",
+"pdBanner": "Today is payday! The Save jar earns interest.",
+"pdIntro": "What each child kept in the Save jar earns {pct}% (up to {cap} per week). That's how they see that saving makes money grow.",
+"pdWeekEarned": "Earned {v} this week",
+"pdGain": "Today's interest: +{v}",
+"pdPaidLine": "Interest already received: +{v}",
+"pdNoSave": "Nothing in the Save jar yet. Save some and it grows next week!",
+"pdPay": "Pay the interest",
+"pdPaidToast": "Interest paid: {v} to {n} child(ren).",
+"pdInterestNote": "{pct}% interest on the Save jar",
+"pdInterestShort": "Interest",
+"pdCashShort": "Handed over in cash",
+"pdCashOut": "Hand over {v} in cash",
+"pdCashConfirm": "Are you handing {v} in cash to {name}? The amount comes out of the Spend jar.",
+"pdCashNote": "Handed over in cash on payday",
+"pdCashDone": "{name} received {v} in cash.",
+"pdTip": "Talk about what to do with the Spend jar: spend it now or save up for something bigger.",
+"pdCardHint": "Payday: {day}. The Save jar earns {pct}%.",
+"pdOff": "Payday is turned off.",
+"pdRules": "Payday rules",
+"pdEnabled": "Use payday",
+"pdDay": "Day of the week",
+"pdPct": "Interest on the Save jar",
+"pdCap": "Maximum interest per week (R$)",
+"pdCapHint": "A limit so the amount doesn't get too high. Use 0 for no limit.",
+"piggySource_interest": "Interest",
+"frShort": "Board",
+"frTitle": "Fridge board",
+"frFull": "Full screen",
+"frExit": "Exit the board",
+"frNoTasks": "Nothing for today 🎉",
+"frHintParent": "Tap a task to tick it. Leave it open on a tablet or the TV.",
+"frHintChild": "Tap the task when you finish. A parent approves it later.",
+"pdIntroNoCap": "What each child kept in the Save jar earns {pct}%. That's how they see that saving makes money grow."
+},
+"es": {
+"tlLevel": "Nivel {n}",
+"tlLevelShort": "niv. {n}",
+"tlName1": "Empezando",
+"tlName2": "Explorador",
+"tlName3": "Crack",
+"tlName4": "Maestro",
+"tlName5": "Desafío",
+"tlEasier": "Hacerlo más fácil",
+"tlHarder": "Hacerlo más difícil",
+"tlRule": "Acertó {up}% o más: sube de nivel. Menos de {down}%: baja un nivel para no desanimarse.",
+"tlRuleTop": "¡Nivel máximo! Las pruebas siguen en el nivel Desafío.",
+"tlRecord": "Registrar aciertos",
+"tlRecordTitle": "Aciertos de {name} — {subject}",
+"tlRecordHint": "Prueba impresa el {date} · {level}.",
+"tlWillUp": "¡Sube al nivel {n}! 🎉",
+"tlWillDown": "Vuelve al nivel {n} (más fácil).",
+"tlWillStay": "Sigue en el mismo nivel. ¡La próxima lo logra!",
+"tlUpReason": "Subió al nivel {n} en {subject}",
+"tlTestReason": "Hizo la prueba de {subject}",
+"tlUpToast": "¡{name} subió al nivel {n} en {subject}!",
+"tlDownToast": "{name} vuelve al nivel {n} en {subject}. Vamos a practicar un poco más.",
+"tlTopToast": "¡{name} sacó todo en el nivel Desafío de {subject}!",
+"tlStayToast": "{name} acertó {pct}%. ¡Con {up}% sube de nivel!",
+"navFamily": "Nuestra familia",
+"title_familia": "Nuestra familia",
+"sub_familia": "Reunión del domingo, desafío de la semana y el diario de la familia.",
+"chTitle": "Desafío de la semana",
+"chYes": "¡Lo logramos!",
+"chNo": "Esta vez no",
+"chNoConfirm": "¿Marcar que el desafío no salió esta vez?",
+"chNone": "Ningún desafío por ahora. Elijan uno en la reunión del domingo.",
+"chBonusHint": "Si lo lograron, cada niño gana {n} puntos.",
+"chDoneToast": "¡Desafío cumplido! Cada uno ganó {n} puntos.",
+"ch_noFight": "Una semana sin peleas entre hermanos",
+"ch_bed": "Todos hacen la cama todos los días",
+"ch_read": "La familia lee 10 libros juntos",
+"ch_thanks": "Decir siempre \"por favor\" y \"gracias\"",
+"ch_veggies": "Comer verduras en todas las comidas",
+"ch_tidy": "Juguetes guardados antes de dormir, todos los días",
+"ch_help": "Cada uno ayuda a un hermano cada día",
+"ch_noScreen": "Un día entero sin pantallas para toda la familia",
+"ch_english": "Aprender una palabra nueva en inglés cada día",
+"ch_early": "Ir a la cama a la hora toda la semana",
+"mtTitle": "Reunión familiar",
+"mtCardTitle": "Reunión del domingo",
+"mtCardHint": "Unos 10 minutos juntos: celebrar la semana, ver la meta familiar, que cada uno cuente algo bueno y elegir el desafío de la próxima semana.",
+"mtStart": "Empezar la reunión",
+"mtLast": "Última reunión: {date}",
+"mtBanner": "¡Hoy es día de reunión familiar!",
+"mtStep_party": "1. Vamos a celebrar",
+"mtStep_goal": "2. Nuestra meta",
+"mtStep_good": "3. Algo bueno de cada uno",
+"mtStep_next": "4. Desafío de la próxima semana",
+"mtStep_end": "5. ¡Listo!",
+"mtPartyLead": "Miren lo que hizo cada uno en la semana ({range}). Toquen Destacado para quien brilló.",
+"mtTasks": "{n} tareas",
+"mtEarned": "{n} puntos",
+"mtPages": "{n} páginas de deberes",
+"mtBooks": "{n} libro(s)",
+"mtHelps": "ayudó {n} vez/veces",
+"mtGood": "{n} elogio(s)",
+"mtHighlight": "Destacado",
+"mtHighlightHint": "Cada destacado gana {n} puntos cuando terminen la reunión.",
+"mtHighlightNote": "Destacado de la semana en la reunión familiar",
+"mtGoalLead": "¿Cómo va la meta familiar? Recuerden juntos lo que falta.",
+"mtLastChallenge": "Y el desafío de esta semana, ¿lo logramos?",
+"mtGoodLead": "Cada niño cuenta algo bueno que pasó en la semana. Tú lo anotas aquí.",
+"mtGoodPh": "¿Qué fue bueno esta semana?",
+"mtSaveDiary": "Guardar estas frases en el diario de la familia",
+"mtNextLead": "Elijan juntos el desafío de la próxima semana (o inventen uno).",
+"mtOwnChallenge": "O escriban el suyo",
+"mtOwnPh": "Ej.: Ayudar a mamá con la cena",
+"mtEndLead": "¡Reunión hecha! Resumen:",
+"mtEndHi": "Destacado: {names} (+{n} puntos)",
+"mtEndPrevYes": "¡Desafío de la semana cumplido!",
+"mtEndPrevNo": "El desafío de esta semana no salió, pero vale intentarlo de nuevo.",
+"mtEndGood": "{n} cosa(s) buena(s) anotada(s)",
+"mtEndNext": "Próximo desafío: {name}",
+"mtFinish": "Terminar la reunión",
+"mtSaved": "Reunión guardada. ¡Buena semana para todos!",
+"mtRules": "Puntos de la reunión",
+"mtRuleHi": "Puntos para cada destacado",
+"mtRuleCh": "Puntos por niño cuando cumplen el desafío",
+"dyTitle": "Diario de la familia",
+"dyAddTitle": "Anotar en el diario",
+"dyKind": "¿Qué es?",
+"dk_funny": "Frase graciosa",
+"dk_first": "Primera vez",
+"dk_moment": "Momento especial",
+"dk_proud": "Orgullo",
+"dk_good": "Algo bueno de la semana",
+"dyWho": "¿De quién?",
+"dyWhoHint": "Ninguno marcado = de toda la familia.",
+"dyText": "¿Qué pasó?",
+"dyPh_funny": "Ej.: Hannah dijo que el trueno es la nube estornudando.",
+"dyPh_first": "Ej.: Mavie dio sus primeros pasitos sola.",
+"dyPh_moment": "Ej.: Picnic en el parque con los abuelos.",
+"dyPh_proud": "Ej.: Noah leyó un libro entero solo.",
+"dyPh_good": "Ej.: Brian ayudó a su hermana a guardar los juguetes.",
+"dySave": "Guardar en el diario",
+"dySaved": "Guardado en el diario.",
+"dyNeedText": "Escribe lo que pasó.",
+"dyDelConfirm": "¿Borrar este recuerdo del diario?",
+"dyAll": "Todos",
+"dyFamily": "Familia",
+"dyYear": "Año",
+"dyPrint": "Imprimir el librito",
+"dyMore": "Ver {n} más",
+"dyEmpty": "El diario todavía está vacío. ¡Anota el primer recuerdo!",
+"dyHint": "Sin fotos: solo las frases y los momentos. A fin de año, imprime el librito y guárdalo.",
+"dyBookTitle": "Nuestro libro de recuerdos",
+"dyBookCount": "{n} recuerdo(s) guardado(s) este año",
+"dcTitle": "Cierre del día",
+"dcStart": "Cerrar el día",
+"dcBanner": "En 3 minutos marcas todo lo de hoy.",
+"dcBannerEvening": "Hora de marcar el día de todos.",
+"dcClosedAt": "Día cerrado a las {time}.",
+"dcReopen": "Abrir de nuevo",
+"dcTasksTitle": "Tareas de hoy",
+"dcPending": "el niño la marcó; aprobar",
+"dcAll": "Marcar todas",
+"dcNoTasks": "Ninguna tarea para hoy.",
+"dcHwDone": "Ya registró {n} página(s) hoy",
+"dcPagesPh": "Páginas",
+"dcBookPh": "Nombre del libro de hoy (si leyó)",
+"dcMood": "¿Cómo se sintió {name} hoy?",
+"dcPraise": "Elogio del día",
+"dcPraisePh": "Ej.: Compartió la merienda con su hermano",
+"dcDiary": "Una frase o momento para el diario",
+"dcDiaryPh": "Algo que {name} dijo o hizo hoy…",
+"dcNextKid": "Siguiente: {name}",
+"dcEnd": "Fin",
+"dcDoneLead": "El día de todos está marcado. ¡Buenas noches!",
+"dcSumTasks": "{n} tarea(s) marcada(s)",
+"dcSumPages": "{n} página(s) de deberes",
+"dcSumBooks": "{n} libro(s)",
+"dcSumMoods": "{n} carita(s)",
+"dcSumPraise": "{n} elogio(s)",
+"dcSumDiary": "{n} recuerdo(s) en el diario",
+"dcFinish": "Cerrar el día",
+"dcSaved": "Día cerrado. ¡Buen descanso!",
+"tmButton": "Misiones en equipo",
+"tmTitle": "Misiones en equipo",
+"tmIntro": "Misiones para hacer juntos. Cuando un niño la marca, todos los de la misión ganan los puntos. Elige quién participa (mínimo 2).",
+"tmHint": "Consejo: junta a un grande con una pequeña. Los grandes aprenden a enseñar y las pequeñas aprenden con ellos.",
+"tmTeam": "Equipo",
+"tmTeamLabel": "Misión en equipo",
+"tmTeamHint": "Cuando un niño la marca, cuenta para todos los niños de esta tarea.",
+"tmNeedTwo": "Elige al menos 2 niños.",
+"tmAdded": "\"{task}\" ahora es misión en equipo.",
+"tmMatesToo": "Misión en equipo: ¡{names} también ganaron!",
+"tm_livingRoom": "Ordenar la sala juntos",
+"tm_toysLittle": "Ayudar a la hermana pequeña a guardar los juguetes",
+"tm_groceries": "Guardar las compras juntos",
+"tm_table": "Poner la mesa de la cena juntos",
+"tm_puzzle": "Armar un rompecabezas juntos",
+"tm_plants": "Regar las plantas juntos",
+"tm_laundry": "Separar la ropa por dueño, juntos",
+"tm_car": "Lavar el coche juntos",
+"tm_cookies": "Hacer galletas juntos",
+"tm_shoes": "Ordenar los zapatos de la entrada juntos",
+"hpBtn": "Ayudó al hermano",
+"hpTitle": "{name} ayudó a un hermano",
+"hpWho": "¿A quién ayudó?",
+"hpHow": "¿Cómo ayudó?",
+"hpHint": "Gana {n} puntos. Ayudar al hermano también cuenta en la reunión del domingo.",
+"hpSave": "Dar +{n}",
+"hpNeedWho": "Elige a quién ayudó.",
+"hpNote": "Ayudó a {name}",
+"hpSaved": "¡{name} ganó {n} puntos por ayudar!",
+"hp_teach": "Enseñó algo",
+"hp_tidy": "Ayudó a guardar",
+"hp_share": "Compartió o prestó",
+"hp_care": "Cuidó o consoló",
+"hp_dress": "Ayudó a vestirse",
+"hp_play": "Jugó juntos con paciencia",
+"hpRulesTitle": "Ayudar al hermano",
+"hpRulePoints": "Puntos por ayuda",
+"hpRulesHint": "Usa el botón 🤝 en la tarjeta de cada niño, en la pantalla de inicio.",
+"grTitle": "Mi personaje",
+"grNextLevel": "Faltan {n} puntos para el nivel {lvl}.",
+"grNextItem": "Próximo regalo en el nivel {lvl}",
+"grCount": "{n} de {total} objetos desbloqueados",
+"grType_hat": "Sombreros",
+"grType_pet": "Mascotas",
+"grType_bg": "Fondos",
+"grType_frame": "Marcos",
+"gr_bg_sky": "Cielo",
+"gr_bg_mint": "Menta",
+"gr_bg_peach": "Durazno",
+"gr_bg_lilac": "Lila",
+"gr_bg_sun": "Sol",
+"gr_bg_rainbow": "Arcoíris",
+"gr_bg_night": "Noche estrellada",
+"gr_bg_gold": "Oro",
+"gr_frame_dots": "Puntitos",
+"gr_frame_double": "Doble",
+"gr_frame_rainbow": "Arcoíris",
+"gr_frame_gold": "Oro",
+"grLevel": "Nivel {n}",
+"grLocked": "Se desbloquea en el nivel {n}",
+"grNew": "¡{n} nuevo(s)!",
+"grHint": "Cada 100 puntos ganados el niño sube de nivel y gana regalos para su personaje. Toca para ponerlo o quitarlo.",
+"pdTitle": "Día de pago",
+"pdOpen": "Abrir el día de pago",
+"pdBanner": "¡Hoy es día de pago! El frasco Ahorrar da intereses.",
+"pdIntro": "Lo que cada uno guardó en el frasco Ahorrar rinde {pct}% (hasta {cap} por semana). Así ven que ahorrar hace crecer el dinero.",
+"pdWeekEarned": "Ganó {v} esta semana",
+"pdGain": "Intereses de hoy: +{v}",
+"pdPaidLine": "Ya recibió los intereses: +{v}",
+"pdNoSave": "Nada en el frasco Ahorrar todavía. ¡Si ahorra, la próxima semana rinde!",
+"pdPay": "Pagar los intereses",
+"pdPaidToast": "Intereses pagados: {v} a {n} niño(s).",
+"pdInterestNote": "Intereses del {pct}% del frasco Ahorrar",
+"pdInterestShort": "Intereses",
+"pdCashShort": "Entregado en efectivo",
+"pdCashOut": "Entregar {v} en efectivo",
+"pdCashConfirm": "¿Vas a entregar {v} en efectivo a {name}? El monto sale del frasco Gastar.",
+"pdCashNote": "Entregado en efectivo el día de pago",
+"pdCashDone": "{name} recibió {v} en efectivo.",
+"pdTip": "Conversen sobre qué hacer con el frasco Gastar: gastarlo ahora o juntar más para algo más grande.",
+"pdCardHint": "Día de pago: {day}. El frasco Ahorrar rinde {pct}%.",
+"pdOff": "El día de pago está desactivado.",
+"pdRules": "Reglas del pago",
+"pdEnabled": "Usar el día de pago",
+"pdDay": "Día de la semana",
+"pdPct": "Intereses del frasco Ahorrar",
+"pdCap": "Intereses máximos por semana (R$)",
+"pdCapHint": "Un límite para que el monto no sea demasiado alto. Usa 0 para no tener límite.",
+"piggySource_interest": "Intereses",
+"frShort": "Panel",
+"frTitle": "Panel de la nevera",
+"frFull": "Pantalla completa",
+"frExit": "Salir del panel",
+"frNoTasks": "Nada para hoy 🎉",
+"frHintParent": "Toca una tarea para marcarla. Déjalo abierto en una tablet o en la TV.",
+"frHintChild": "Toca la tarea cuando termines. Un adulto la aprueba después.",
+"pdIntroNoCap": "Lo que cada uno guardó en el frasco Ahorrar rinde {pct}%. Así ven que ahorrar hace crecer el dinero."
+},
+"it": {
+"tlLevel": "Livello {n}",
+"tlLevelShort": "liv. {n}",
+"tlName1": "Si comincia",
+"tlName2": "Esploratore",
+"tlName3": "Asso",
+"tlName4": "Maestro",
+"tlName5": "Sfida",
+"tlEasier": "Rendere più facile",
+"tlHarder": "Rendere più difficile",
+"tlRule": "Risposte giuste al {up}% o più: sale di livello. Meno del {down}%: torna indietro di un livello per non scoraggiarsi.",
+"tlRuleTop": "Livello massimo! Le verifiche restano al livello Sfida.",
+"tlRecord": "Registra le risposte giuste",
+"tlRecordTitle": "Risposte giuste di {name} — {subject}",
+"tlRecordHint": "Verifica stampata il {date} · {level}.",
+"tlWillUp": "Sale al livello {n}! 🎉",
+"tlWillDown": "Torna al livello {n} (più facile).",
+"tlWillStay": "Resta allo stesso livello. La prossima volta ce la fa!",
+"tlUpReason": "È salito al livello {n} in {subject}",
+"tlTestReason": "Ha fatto la verifica di {subject}",
+"tlUpToast": "{name} è salito al livello {n} in {subject}!",
+"tlDownToast": "{name} torna al livello {n} in {subject}. Esercitiamoci ancora un po'.",
+"tlTopToast": "{name} ha fatto tutto giusto al livello Sfida in {subject}!",
+"tlStayToast": "{name} ha fatto il {pct}% giusto. Con il {up}% sale di livello!",
+"navFamily": "La nostra famiglia",
+"title_familia": "La nostra famiglia",
+"sub_familia": "Riunione della domenica, sfida della settimana e il diario di famiglia.",
+"chTitle": "Sfida della settimana",
+"chYes": "Ce l'abbiamo fatta!",
+"chNo": "Non stavolta",
+"chNoConfirm": "Segnare che la sfida stavolta non è riuscita?",
+"chNone": "Nessuna sfida per ora. Sceglietene una alla riunione della domenica.",
+"chBonusHint": "Se ce l'avete fatta, ogni bambino guadagna {n} punti.",
+"chDoneToast": "Sfida riuscita! Ognuno ha guadagnato {n} punti.",
+"ch_noFight": "Una settimana senza litigi tra fratelli",
+"ch_bed": "Tutti rifanno il letto ogni giorno",
+"ch_read": "La famiglia legge 10 libri insieme",
+"ch_thanks": "Dire sempre \"per favore\" e \"grazie\"",
+"ch_veggies": "Mangiare verdura a ogni pasto",
+"ch_tidy": "Giocattoli in ordine prima di dormire, ogni giorno",
+"ch_help": "Ognuno aiuta un fratello ogni giorno",
+"ch_noScreen": "Un giorno intero senza schermi per tutta la famiglia",
+"ch_english": "Imparare una parola nuova in inglese ogni giorno",
+"ch_early": "Andare a letto in orario tutta la settimana",
+"mtTitle": "Riunione di famiglia",
+"mtCardTitle": "Riunione della domenica",
+"mtCardHint": "Circa 10 minuti insieme: festeggiare la settimana, vedere l'obiettivo di famiglia, ognuno racconta una cosa bella e si sceglie la sfida della settimana dopo.",
+"mtStart": "Inizia la riunione",
+"mtLast": "Ultima riunione: {date}",
+"mtBanner": "Oggi è il giorno della riunione di famiglia!",
+"mtStep_party": "1. Festeggiamo",
+"mtStep_goal": "2. Il nostro obiettivo",
+"mtStep_good": "3. Una cosa bella di ognuno",
+"mtStep_next": "4. Sfida della prossima settimana",
+"mtStep_end": "5. Fatto!",
+"mtPartyLead": "Guardate cosa ha fatto ognuno in settimana ({range}). Toccate In evidenza per chi ha brillato.",
+"mtTasks": "{n} compiti",
+"mtEarned": "{n} punti",
+"mtPages": "{n} pagine di compiti",
+"mtBooks": "{n} libro/i",
+"mtHelps": "ha aiutato {n} volta/e",
+"mtGood": "{n} complimento/i",
+"mtHighlight": "In evidenza",
+"mtHighlightHint": "Ognuno in evidenza guadagna {n} punti quando concludete la riunione.",
+"mtHighlightNote": "In evidenza della settimana alla riunione di famiglia",
+"mtGoalLead": "Come va l'obiettivo di famiglia? Ricordate insieme quanto manca.",
+"mtLastChallenge": "E la sfida di questa settimana, ce l'abbiamo fatta?",
+"mtGoodLead": "Ogni bambino racconta una cosa bella successa in settimana. Tu la scrivi qui.",
+"mtGoodPh": "Cosa è andato bene questa settimana?",
+"mtSaveDiary": "Salva queste frasi nel diario di famiglia",
+"mtNextLead": "Scegliete insieme la sfida della prossima settimana (o inventatene una).",
+"mtOwnChallenge": "Oppure scrivete la vostra",
+"mtOwnPh": "Es.: Aiutare la mamma con la cena",
+"mtEndLead": "Riunione fatta! Riepilogo:",
+"mtEndHi": "In evidenza: {names} (+{n} punti)",
+"mtEndPrevYes": "Sfida della settimana riuscita!",
+"mtEndPrevNo": "La sfida di questa settimana non è riuscita, ma vale la pena riprovare.",
+"mtEndGood": "{n} cosa/e bella/e annotata/e",
+"mtEndNext": "Prossima sfida: {name}",
+"mtFinish": "Concludi la riunione",
+"mtSaved": "Riunione salvata. Buona settimana a tutti!",
+"mtRules": "Punti della riunione",
+"mtRuleHi": "Punti per ognuno in evidenza",
+"mtRuleCh": "Punti per bambino quando la sfida riesce",
+"dyTitle": "Diario di famiglia",
+"dyAddTitle": "Scrivi nel diario",
+"dyKind": "Che cos'è?",
+"dk_funny": "Frase buffa",
+"dk_first": "Prima volta",
+"dk_moment": "Momento speciale",
+"dk_proud": "Orgoglio",
+"dk_good": "Cosa bella della settimana",
+"dyWho": "Di chi?",
+"dyWhoHint": "Nessuno selezionato = di tutta la famiglia.",
+"dyText": "Cosa è successo?",
+"dyPh_funny": "Es.: Hannah ha detto che il tuono è la nuvola che starnutisce.",
+"dyPh_first": "Es.: Mavie ha fatto i primi passi da sola.",
+"dyPh_moment": "Es.: Picnic al parco con i nonni.",
+"dyPh_proud": "Es.: Noah ha letto un libro intero da solo.",
+"dyPh_good": "Es.: Brian ha aiutato la sorella a mettere via i giocattoli.",
+"dySave": "Salva nel diario",
+"dySaved": "Salvato nel diario.",
+"dyNeedText": "Scrivi cosa è successo.",
+"dyDelConfirm": "Cancellare questo ricordo dal diario?",
+"dyAll": "Tutti",
+"dyFamily": "Famiglia",
+"dyYear": "Anno",
+"dyPrint": "Stampa il libretto",
+"dyMore": "Vedi altri {n}",
+"dyEmpty": "Il diario è ancora vuoto. Scrivi il primo ricordo!",
+"dyHint": "Niente foto: solo le frasi e i momenti. A fine anno stampa il libretto e conservalo.",
+"dyBookTitle": "Il nostro libro dei ricordi",
+"dyBookCount": "{n} ricordo/i salvato/i quest'anno",
+"dcTitle": "Chiusura della giornata",
+"dcStart": "Chiudi la giornata",
+"dcBanner": "In 3 minuti segni tutto quello di oggi.",
+"dcBannerEvening": "È ora di segnare la giornata di tutti.",
+"dcClosedAt": "Giornata chiusa alle {time}.",
+"dcReopen": "Riapri",
+"dcTasksTitle": "Compiti di oggi",
+"dcPending": "il bambino l'ha segnato; approva",
+"dcAll": "Segna tutti",
+"dcNoTasks": "Nessun compito per oggi.",
+"dcHwDone": "Ha già registrato {n} pagina/e oggi",
+"dcPagesPh": "Pagine",
+"dcBookPh": "Titolo del libro di oggi (se ha letto)",
+"dcMood": "Come si è sentito/a {name} oggi?",
+"dcPraise": "Complimento del giorno",
+"dcPraisePh": "Es.: Ha diviso la merenda con il fratello",
+"dcDiary": "Una frase o un momento per il diario",
+"dcDiaryPh": "Qualcosa che {name} ha detto o fatto oggi…",
+"dcNextKid": "Avanti: {name}",
+"dcEnd": "Fine",
+"dcDoneLead": "La giornata di tutti è segnata. Buona notte!",
+"dcSumTasks": "{n} compito/i segnato/i",
+"dcSumPages": "{n} pagina/e di compiti",
+"dcSumBooks": "{n} libro/i",
+"dcSumMoods": "{n} faccina/e",
+"dcSumPraise": "{n} complimento/i",
+"dcSumDiary": "{n} ricordo/i nel diario",
+"dcFinish": "Chiudi la giornata",
+"dcSaved": "Giornata chiusa. Buon riposo!",
+"tmButton": "Missioni di squadra",
+"tmTitle": "Missioni di squadra",
+"tmIntro": "Missioni da fare insieme. Quando un bambino la segna, tutti quelli della missione ricevono i punti. Scegli chi partecipa (almeno 2).",
+"tmHint": "Consiglio: metti insieme un grande e una piccola. I grandi imparano a insegnare e le piccole imparano da loro.",
+"tmTeam": "Squadra",
+"tmTeamLabel": "Missione di squadra",
+"tmTeamHint": "Quando un bambino la segna, vale per tutti i bambini di questo compito.",
+"tmNeedTwo": "Scegli almeno 2 bambini.",
+"tmAdded": "\"{task}\" ora è una missione di squadra.",
+"tmMatesToo": "Missione di squadra: anche {names} hanno guadagnato!",
+"tm_livingRoom": "Riordinare il soggiorno insieme",
+"tm_toysLittle": "Aiutare la sorellina a mettere via i giocattoli",
+"tm_groceries": "Mettere via la spesa insieme",
+"tm_table": "Apparecchiare la tavola per cena insieme",
+"tm_puzzle": "Fare un puzzle insieme",
+"tm_plants": "Annaffiare le piante insieme",
+"tm_laundry": "Dividere i vestiti per proprietario, insieme",
+"tm_car": "Lavare la macchina insieme",
+"tm_cookies": "Fare i biscotti insieme",
+"tm_shoes": "Mettere in ordine le scarpe all'ingresso insieme",
+"hpBtn": "Ha aiutato un fratello",
+"hpTitle": "{name} ha aiutato un fratello",
+"hpWho": "Chi è stato aiutato?",
+"hpHow": "Come ha aiutato?",
+"hpHint": "Guadagna {n} punti. Aiutare un fratello conta anche alla riunione della domenica.",
+"hpSave": "Dai +{n}",
+"hpNeedWho": "Scegli chi è stato aiutato.",
+"hpNote": "Ha aiutato {name}",
+"hpSaved": "{name} ha guadagnato {n} punti per aver aiutato!",
+"hp_teach": "Ha insegnato qualcosa",
+"hp_tidy": "Ha aiutato a mettere via",
+"hp_share": "Ha condiviso o prestato",
+"hp_care": "Si è preso cura o ha consolato",
+"hp_dress": "Ha aiutato a vestirsi",
+"hp_play": "Ha giocato insieme con pazienza",
+"hpRulesTitle": "Aiutare un fratello",
+"hpRulePoints": "Punti per aiuto",
+"hpRulesHint": "Usa il pulsante 🤝 sulla scheda di ogni bambino, nella schermata iniziale.",
+"grTitle": "Il mio personaggio",
+"grNextLevel": "Mancano {n} punti al livello {lvl}.",
+"grNextItem": "Prossimo regalo al livello {lvl}",
+"grCount": "{n} di {total} oggetti sbloccati",
+"grType_hat": "Cappelli",
+"grType_pet": "Animaletti",
+"grType_bg": "Sfondi",
+"grType_frame": "Cornici",
+"gr_bg_sky": "Cielo",
+"gr_bg_mint": "Menta",
+"gr_bg_peach": "Pesca",
+"gr_bg_lilac": "Lilla",
+"gr_bg_sun": "Sole",
+"gr_bg_rainbow": "Arcobaleno",
+"gr_bg_night": "Notte stellata",
+"gr_bg_gold": "Oro",
+"gr_frame_dots": "Pallini",
+"gr_frame_double": "Doppia",
+"gr_frame_rainbow": "Arcobaleno",
+"gr_frame_gold": "Oro",
+"grLevel": "Livello {n}",
+"grLocked": "Si sblocca al livello {n}",
+"grNew": "{n} nuovo/i!",
+"grHint": "Ogni 100 punti guadagnati il bambino sale di livello e riceve regali per il suo personaggio. Tocca per metterli o toglierli.",
+"pdTitle": "Giorno di paga",
+"pdOpen": "Apri il giorno di paga",
+"pdBanner": "Oggi è giorno di paga! Il barattolo Risparmiare rende.",
+"pdIntro": "Quello che ognuno ha messo nel barattolo Risparmiare rende il {pct}% (fino a {cap} a settimana). Così vedono che risparmiare fa crescere i soldi.",
+"pdWeekEarned": "Ha guadagnato {v} questa settimana",
+"pdGain": "Interessi di oggi: +{v}",
+"pdPaidLine": "Interessi già ricevuti: +{v}",
+"pdNoSave": "Ancora niente nel barattolo Risparmiare. Risparmiando, la prossima settimana rende!",
+"pdPay": "Paga gli interessi",
+"pdPaidToast": "Interessi pagati: {v} a {n} bambino/i.",
+"pdInterestNote": "Interessi del {pct}% sul barattolo Risparmiare",
+"pdInterestShort": "Interessi",
+"pdCashShort": "Consegnato in contanti",
+"pdCashOut": "Consegna {v} in contanti",
+"pdCashConfirm": "Stai consegnando {v} in contanti a {name}? L'importo esce dal barattolo Spendere.",
+"pdCashNote": "Consegnato in contanti il giorno di paga",
+"pdCashDone": "{name} ha ricevuto {v} in contanti.",
+"pdTip": "Parlate di cosa fare con il barattolo Spendere: spenderlo subito o mettere da parte per qualcosa di più grande.",
+"pdCardHint": "Giorno di paga: {day}. Il barattolo Risparmiare rende il {pct}%.",
+"pdOff": "Il giorno di paga è disattivato.",
+"pdRules": "Regole della paga",
+"pdEnabled": "Usa il giorno di paga",
+"pdDay": "Giorno della settimana",
+"pdPct": "Interessi del barattolo Risparmiare",
+"pdCap": "Interessi massimi a settimana (R$)",
+"pdCapHint": "Un limite perché l'importo non diventi troppo alto. Usa 0 per nessun limite.",
+"piggySource_interest": "Interessi",
+"frShort": "Bacheca",
+"frTitle": "Bacheca del frigo",
+"frFull": "Schermo intero",
+"frExit": "Esci dalla bacheca",
+"frNoTasks": "Niente per oggi 🎉",
+"frHintParent": "Tocca un compito per segnarlo. Lasciala aperta su un tablet o sulla TV.",
+"frHintChild": "Tocca il compito quando hai finito. Un genitore lo approva dopo.",
+"pdIntroNoCap": "Quello che ognuno ha messo nel barattolo Risparmiare rende il {pct}%. Così vedono che risparmiare fa crescere i soldi."
+},
+"de": {
+"tlLevel": "Stufe {n}",
+"tlLevelShort": "St. {n}",
+"tlName1": "Anfänger",
+"tlName2": "Entdecker",
+"tlName3": "Profi",
+"tlName4": "Meister",
+"tlName5": "Herausforderung",
+"tlEasier": "Leichter machen",
+"tlHarder": "Schwerer machen",
+"tlRule": "{up} % oder mehr richtig: eine Stufe höher. Weniger als {down} %: eine Stufe zurück, damit es nicht entmutigt.",
+"tlRuleTop": "Höchste Stufe! Die Tests bleiben auf der Stufe Herausforderung.",
+"tlRecord": "Richtige eintragen",
+"tlRecordTitle": "Richtige von {name} — {subject}",
+"tlRecordHint": "Test gedruckt am {date} · {level}.",
+"tlWillUp": "Steigt auf Stufe {n}! 🎉",
+"tlWillDown": "Geht zurück auf Stufe {n} (leichter).",
+"tlWillStay": "Bleibt auf derselben Stufe. Beim nächsten Mal klappt's!",
+"tlUpReason": "Auf Stufe {n} in {subject} aufgestiegen",
+"tlTestReason": "Hat den Test in {subject} gemacht",
+"tlUpToast": "{name} ist in {subject} auf Stufe {n} aufgestiegen!",
+"tlDownToast": "{name} geht in {subject} zurück auf Stufe {n}. Wir üben noch ein bisschen.",
+"tlTopToast": "{name} hat in {subject} die Stufe Herausforderung fehlerfrei geschafft!",
+"tlStayToast": "{name} hatte {pct} % richtig. Mit {up} % geht es eine Stufe höher!",
+"navFamily": "Unsere Familie",
+"title_familia": "Unsere Familie",
+"sub_familia": "Sonntagstreffen, Herausforderung der Woche und das Familientagebuch.",
+"chTitle": "Herausforderung der Woche",
+"chYes": "Geschafft!",
+"chNo": "Diesmal nicht",
+"chNoConfirm": "Markieren, dass die Herausforderung diesmal nicht geklappt hat?",
+"chNone": "Gerade keine Herausforderung. Wählt eine beim Sonntagstreffen.",
+"chBonusHint": "Wenn ihr es geschafft habt, bekommt jedes Kind {n} Punkte.",
+"chDoneToast": "Herausforderung geschafft! Alle haben {n} Punkte bekommen.",
+"ch_noFight": "Eine Woche ohne Streit unter Geschwistern",
+"ch_bed": "Alle machen jeden Tag ihr Bett",
+"ch_read": "Die Familie liest zusammen 10 Bücher",
+"ch_thanks": "Immer \"bitte\" und \"danke\" sagen",
+"ch_veggies": "Bei jeder Mahlzeit Gemüse essen",
+"ch_tidy": "Jeden Tag vor dem Schlafen die Spielsachen wegräumen",
+"ch_help": "Jeder hilft jeden Tag einem Geschwisterkind",
+"ch_noScreen": "Ein ganzer Tag ohne Bildschirme für die ganze Familie",
+"ch_english": "Jeden Tag ein neues englisches Wort lernen",
+"ch_early": "Die ganze Woche pünktlich ins Bett gehen",
+"mtTitle": "Familientreffen",
+"mtCardTitle": "Sonntagstreffen",
+"mtCardHint": "Etwa 10 Minuten zusammen: die Woche feiern, das Familienziel ansehen, jeder erzählt etwas Schönes und ihr wählt die Herausforderung für nächste Woche.",
+"mtStart": "Treffen beginnen",
+"mtLast": "Letztes Treffen: {date}",
+"mtBanner": "Heute ist Familientreffen!",
+"mtStep_party": "1. Wir feiern",
+"mtStep_goal": "2. Unser Ziel",
+"mtStep_good": "3. Etwas Schönes von jedem",
+"mtStep_next": "4. Herausforderung für nächste Woche",
+"mtStep_end": "5. Fertig!",
+"mtPartyLead": "Schaut, was jeder diese Woche gemacht hat ({range}). Tippt auf Star der Woche für alle, die geglänzt haben.",
+"mtTasks": "{n} Aufgaben",
+"mtEarned": "{n} Punkte",
+"mtPages": "{n} Seiten Hausaufgaben",
+"mtBooks": "{n} Buch/Bücher",
+"mtHelps": "hat {n}-mal geholfen",
+"mtGood": "{n} Lob",
+"mtHighlight": "Star der Woche",
+"mtHighlightHint": "Jeder Star der Woche bekommt {n} Punkte, wenn ihr das Treffen abschließt.",
+"mtHighlightNote": "Star der Woche beim Familientreffen",
+"mtGoalLead": "Wie steht es um das Familienziel? Schaut zusammen, was noch fehlt.",
+"mtLastChallenge": "Und die Herausforderung dieser Woche, haben wir sie geschafft?",
+"mtGoodLead": "Jedes Kind erzählt etwas Schönes aus der Woche. Du schreibst es hier auf.",
+"mtGoodPh": "Was war diese Woche schön?",
+"mtSaveDiary": "Diese Sätze im Familientagebuch speichern",
+"mtNextLead": "Wählt zusammen die Herausforderung für nächste Woche (oder denkt euch eine aus).",
+"mtOwnChallenge": "Oder schreibt eure eigene",
+"mtOwnPh": "Z. B. Mama beim Abendessen helfen",
+"mtEndLead": "Treffen erledigt! Zusammenfassung:",
+"mtEndHi": "Star der Woche: {names} (+{n} Punkte)",
+"mtEndPrevYes": "Herausforderung der Woche geschafft!",
+"mtEndPrevNo": "Die Herausforderung dieser Woche hat nicht geklappt, aber es lohnt sich, es nochmal zu versuchen.",
+"mtEndGood": "{n} schöne Sache(n) aufgeschrieben",
+"mtEndNext": "Nächste Herausforderung: {name}",
+"mtFinish": "Treffen abschließen",
+"mtSaved": "Treffen gespeichert. Allen eine schöne Woche!",
+"mtRules": "Punkte beim Treffen",
+"mtRuleHi": "Punkte für jeden Star der Woche",
+"mtRuleCh": "Punkte pro Kind, wenn die Herausforderung geschafft ist",
+"dyTitle": "Familientagebuch",
+"dyAddTitle": "Ins Tagebuch schreiben",
+"dyKind": "Was ist es?",
+"dk_funny": "Lustiger Spruch",
+"dk_first": "Das erste Mal",
+"dk_moment": "Besonderer Moment",
+"dk_proud": "Stolz",
+"dk_good": "Schönes der Woche",
+"dyWho": "Von wem?",
+"dyWhoHint": "Keiner ausgewählt = die ganze Familie.",
+"dyText": "Was ist passiert?",
+"dyPh_funny": "Z. B. Hannah hat gesagt, Donner ist die Wolke, die niest.",
+"dyPh_first": "Z. B. Mavie hat ihre ersten Schritte allein gemacht.",
+"dyPh_moment": "Z. B. Picknick im Park mit Oma und Opa.",
+"dyPh_proud": "Z. B. Noah hat ein ganzes Buch allein gelesen.",
+"dyPh_good": "Z. B. Brian hat seiner Schwester beim Aufräumen geholfen.",
+"dySave": "Im Tagebuch speichern",
+"dySaved": "Im Tagebuch gespeichert.",
+"dyNeedText": "Schreib auf, was passiert ist.",
+"dyDelConfirm": "Diese Erinnerung aus dem Tagebuch löschen?",
+"dyAll": "Alle",
+"dyFamily": "Familie",
+"dyYear": "Jahr",
+"dyPrint": "Büchlein drucken",
+"dyMore": "{n} weitere ansehen",
+"dyEmpty": "Das Tagebuch ist noch leer. Schreib die erste Erinnerung auf!",
+"dyHint": "Ohne Fotos: nur die Sätze und die Momente. Drucke am Jahresende das Büchlein und bewahre es auf.",
+"dyBookTitle": "Unser Erinnerungsbuch",
+"dyBookCount": "{n} Erinnerung(en) in diesem Jahr gespeichert",
+"dcTitle": "Tagesabschluss",
+"dcStart": "Tag abschließen",
+"dcBanner": "In 3 Minuten trägst du alles von heute ein.",
+"dcBannerEvening": "Zeit, den Tag von allen einzutragen.",
+"dcClosedAt": "Tag abgeschlossen um {time}.",
+"dcReopen": "Nochmal öffnen",
+"dcTasksTitle": "Aufgaben von heute",
+"dcPending": "vom Kind abgehakt; freigeben",
+"dcAll": "Alle abhaken",
+"dcNoTasks": "Heute keine Aufgaben.",
+"dcHwDone": "Heute schon {n} Seite(n) eingetragen",
+"dcPagesPh": "Seiten",
+"dcBookPh": "Titel des Buches von heute (falls gelesen)",
+"dcMood": "Wie hat sich {name} heute gefühlt?",
+"dcPraise": "Lob des Tages",
+"dcPraisePh": "Z. B. Hat den Snack mit dem Geschwisterkind geteilt",
+"dcDiary": "Ein Satz oder Moment fürs Tagebuch",
+"dcDiaryPh": "Etwas, das {name} heute gesagt oder gemacht hat…",
+"dcNextKid": "Weiter: {name}",
+"dcEnd": "Ende",
+"dcDoneLead": "Der Tag von allen ist eingetragen. Gute Nacht!",
+"dcSumTasks": "{n} Aufgabe(n) abgehakt",
+"dcSumPages": "{n} Seite(n) Hausaufgaben",
+"dcSumBooks": "{n} Buch/Bücher",
+"dcSumMoods": "{n} Gesicht(er)",
+"dcSumPraise": "{n} Lob",
+"dcSumDiary": "{n} Erinnerung(en) im Tagebuch",
+"dcFinish": "Tag abschließen",
+"dcSaved": "Tag abgeschlossen. Erholt euch gut!",
+"tmButton": "Team-Missionen",
+"tmTitle": "Team-Missionen",
+"tmIntro": "Missionen, die man zusammen macht. Wenn ein Kind sie abhakt, bekommen alle in der Mission die Punkte. Wähle, wer mitmacht (mindestens 2).",
+"tmHint": "Tipp: Bilde ein Team aus einem Großen und einer Kleinen. Die Großen lernen zu erklären und die Kleinen lernen von ihnen.",
+"tmTeam": "Team",
+"tmTeamLabel": "Team-Mission",
+"tmTeamHint": "Wenn ein Kind sie abhakt, zählt sie für alle Kinder dieser Aufgabe.",
+"tmNeedTwo": "Wähle mindestens 2 Kinder.",
+"tmAdded": "\"{task}\" ist jetzt eine Team-Mission.",
+"tmMatesToo": "Team-Mission: {names} haben auch Punkte bekommen!",
+"tm_livingRoom": "Zusammen das Wohnzimmer aufräumen",
+"tm_toysLittle": "Der kleinen Schwester beim Aufräumen der Spielsachen helfen",
+"tm_groceries": "Zusammen die Einkäufe einräumen",
+"tm_table": "Zusammen den Abendbrottisch decken",
+"tm_puzzle": "Zusammen ein Puzzle machen",
+"tm_plants": "Zusammen die Pflanzen gießen",
+"tm_laundry": "Zusammen die Wäsche nach Besitzer sortieren",
+"tm_car": "Zusammen das Auto waschen",
+"tm_cookies": "Zusammen Kekse backen",
+"tm_shoes": "Zusammen die Schuhe am Eingang ordnen",
+"hpBtn": "Geschwisterkind geholfen",
+"hpTitle": "{name} hat einem Geschwisterkind geholfen",
+"hpWho": "Wem wurde geholfen?",
+"hpHow": "Wie wurde geholfen?",
+"hpHint": "Bringt {n} Punkte. Geschwistern helfen zählt auch beim Sonntagstreffen.",
+"hpSave": "+{n} geben",
+"hpNeedWho": "Wähle, wem geholfen wurde.",
+"hpNote": "Hat {name} geholfen",
+"hpSaved": "{name} hat {n} Punkte fürs Helfen bekommen!",
+"hp_teach": "Etwas beigebracht",
+"hp_tidy": "Beim Aufräumen geholfen",
+"hp_share": "Geteilt oder ausgeliehen",
+"hp_care": "Gekümmert oder getröstet",
+"hp_dress": "Beim Anziehen geholfen",
+"hp_play": "Geduldig zusammen gespielt",
+"hpRulesTitle": "Geschwistern helfen",
+"hpRulePoints": "Punkte pro Hilfe",
+"hpRulesHint": "Nutze den Knopf 🤝 auf der Karte jedes Kindes auf dem Startbildschirm.",
+"grTitle": "Meine Figur",
+"grNextLevel": "Noch {n} Punkte bis Stufe {lvl}.",
+"grNextItem": "Nächstes Geschenk auf Stufe {lvl}",
+"grCount": "{n} von {total} Sachen freigeschaltet",
+"grType_hat": "Hüte",
+"grType_pet": "Tierchen",
+"grType_bg": "Hintergründe",
+"grType_frame": "Rahmen",
+"gr_bg_sky": "Himmel",
+"gr_bg_mint": "Minze",
+"gr_bg_peach": "Pfirsich",
+"gr_bg_lilac": "Flieder",
+"gr_bg_sun": "Sonne",
+"gr_bg_rainbow": "Regenbogen",
+"gr_bg_night": "Sternennacht",
+"gr_bg_gold": "Gold",
+"gr_frame_dots": "Pünktchen",
+"gr_frame_double": "Doppelt",
+"gr_frame_rainbow": "Regenbogen",
+"gr_frame_gold": "Gold",
+"grLevel": "Stufe {n}",
+"grLocked": "Wird auf Stufe {n} freigeschaltet",
+"grNew": "{n} neu!",
+"grHint": "Alle 100 verdienten Punkte steigt das Kind eine Stufe auf und bekommt Geschenke für seine Figur. Tippen zum An- oder Ausziehen.",
+"pdTitle": "Zahltag",
+"pdOpen": "Zahltag öffnen",
+"pdBanner": "Heute ist Zahltag! Das Glas Sparen bringt Zinsen.",
+"pdIntro": "Was jedes Kind im Glas Sparen hat, bringt {pct} % (bis zu {cap} pro Woche). So sehen sie, dass Sparen Geld wachsen lässt.",
+"pdWeekEarned": "Diese Woche {v} verdient",
+"pdGain": "Zinsen heute: +{v}",
+"pdPaidLine": "Zinsen schon erhalten: +{v}",
+"pdNoSave": "Noch nichts im Glas Sparen. Wer spart, bekommt nächste Woche Zinsen!",
+"pdPay": "Zinsen auszahlen",
+"pdPaidToast": "Zinsen ausgezahlt: {v} an {n} Kind(er).",
+"pdInterestNote": "{pct} % Zinsen auf das Glas Sparen",
+"pdInterestShort": "Zinsen",
+"pdCashShort": "Bar ausgezahlt",
+"pdCashOut": "{v} bar auszahlen",
+"pdCashConfirm": "Zahlst du {name} {v} bar aus? Der Betrag kommt aus dem Glas Ausgeben.",
+"pdCashNote": "Am Zahltag bar ausgezahlt",
+"pdCashDone": "{name} hat {v} bar bekommen.",
+"pdTip": "Sprecht darüber, was mit dem Glas Ausgeben passiert: jetzt ausgeben oder für etwas Größeres sparen.",
+"pdCardHint": "Zahltag: {day}. Das Glas Sparen bringt {pct} %.",
+"pdOff": "Der Zahltag ist ausgeschaltet.",
+"pdRules": "Regeln für den Zahltag",
+"pdEnabled": "Zahltag nutzen",
+"pdDay": "Wochentag",
+"pdPct": "Zinsen auf das Glas Sparen",
+"pdCap": "Höchste Zinsen pro Woche (R$)",
+"pdCapHint": "Eine Grenze, damit der Betrag nicht zu hoch wird. 0 = keine Grenze.",
+"piggySource_interest": "Zinsen",
+"frShort": "Tafel",
+"frTitle": "Kühlschranktafel",
+"frFull": "Vollbild",
+"frExit": "Tafel verlassen",
+"frNoTasks": "Heute nichts 🎉",
+"frHintParent": "Tippe auf eine Aufgabe, um sie abzuhaken. Lass die Tafel auf einem Tablet oder Fernseher offen.",
+"frHintChild": "Tippe auf die Aufgabe, wenn du fertig bist. Ein Elternteil gibt sie später frei.",
+"pdIntroNoCap": "Was jedes Kind im Glas Sparen hat, bringt {pct} %. So sehen sie, dass Sparen Geld wachsen lässt."
+},
+"zh": {
+"tlLevel": "第 {n} 级",
+"tlLevelShort": "{n} 级",
+"tlName1": "起步",
+"tlName2": "探索者",
+"tlName3": "高手",
+"tlName4": "大师",
+"tlName5": "挑战",
+"tlEasier": "调简单一点",
+"tlHarder": "调难一点",
+"tlRule": "答对 {up}% 或以上：升一级。低于 {down}%：降一级，免得灰心。",
+"tlRuleTop": "已到最高级！测验会一直保持在挑战级。",
+"tlRecord": "记录答对数",
+"tlRecordTitle": "{name} 的答对数 — {subject}",
+"tlRecordHint": "测验打印于 {date} · {level}。",
+"tlWillUp": "将升到第 {n} 级！🎉",
+"tlWillDown": "将回到第 {n} 级（更简单）。",
+"tlWillStay": "保持同一级。下次一定行！",
+"tlUpReason": "{subject} 升到第 {n} 级",
+"tlTestReason": "完成了 {subject} 测验",
+"tlUpToast": "{name} 的 {subject} 升到第 {n} 级了！",
+"tlDownToast": "{name} 的 {subject} 回到第 {n} 级。我们再多练练。",
+"tlTopToast": "{name} 在 {subject} 挑战级全部答对！",
+"tlStayToast": "{name} 答对了 {pct}%。达到 {up}% 就能升级！",
+"navFamily": "我们的家",
+"title_familia": "我们的家",
+"sub_familia": "周日家庭会议、每周挑战和家庭日记。",
+"chTitle": "每周挑战",
+"chYes": "我们做到了！",
+"chNo": "这次没做到",
+"chNoConfirm": "标记这次挑战没有完成吗？",
+"chNone": "目前没有挑战。在周日家庭会议上选一个吧。",
+"chBonusHint": "如果做到了，每个孩子得 {n} 分。",
+"chDoneToast": "挑战完成！每人得到 {n} 分。",
+"ch_noFight": "一周兄弟姐妹不吵架",
+"ch_bed": "每个人每天都整理床铺",
+"ch_read": "全家一起读 10 本书",
+"ch_thanks": "总是说“请”和“谢谢”",
+"ch_veggies": "每餐都吃蔬菜",
+"ch_tidy": "每天睡前把玩具收好",
+"ch_help": "每人每天帮助一个兄弟姐妹",
+"ch_noScreen": "全家一整天不用屏幕",
+"ch_english": "每天学一个新的英语单词",
+"ch_early": "一整周都按时上床睡觉",
+"mtTitle": "家庭会议",
+"mtCardTitle": "周日家庭会议",
+"mtCardHint": "一起花大约 10 分钟：庆祝这一周、看看家庭目标、每人说一件好事，再选下周的挑战。",
+"mtStart": "开始会议",
+"mtLast": "上次会议：{date}",
+"mtBanner": "今天是家庭会议日！",
+"mtStep_party": "1. 一起庆祝",
+"mtStep_goal": "2. 我们的目标",
+"mtStep_good": "3. 每人一件好事",
+"mtStep_next": "4. 下周挑战",
+"mtStep_end": "5. 完成！",
+"mtPartyLead": "看看每个人这周（{range}）做了什么。给表现突出的人点“本周之星”。",
+"mtTasks": "{n} 项任务",
+"mtEarned": "{n} 分",
+"mtPages": "{n} 页作业",
+"mtBooks": "{n} 本书",
+"mtHelps": "帮忙 {n} 次",
+"mtGood": "{n} 次表扬",
+"mtHighlight": "本周之星",
+"mtHighlightHint": "会议结束时，每位本周之星得 {n} 分。",
+"mtHighlightNote": "家庭会议的本周之星",
+"mtGoalLead": "家庭目标进展如何？一起看看还差多少。",
+"mtLastChallenge": "这周的挑战，我们做到了吗？",
+"mtGoodLead": "每个孩子说一件这周发生的好事，你记在这里。",
+"mtGoodPh": "这周有什么好事？",
+"mtSaveDiary": "把这些话保存到家庭日记",
+"mtNextLead": "一起选下周的挑战（或自己想一个）。",
+"mtOwnChallenge": "或者写你们自己的",
+"mtOwnPh": "例如：帮妈妈准备晚饭",
+"mtEndLead": "会议完成！总结：",
+"mtEndHi": "本周之星：{names}（+{n} 分）",
+"mtEndPrevYes": "本周挑战完成了！",
+"mtEndPrevNo": "这周的挑战没完成，不过值得再试一次。",
+"mtEndGood": "记下了 {n} 件好事",
+"mtEndNext": "下一个挑战：{name}",
+"mtFinish": "结束会议",
+"mtSaved": "会议已保存。祝大家一周愉快！",
+"mtRules": "会议积分",
+"mtRuleHi": "每位本周之星的积分",
+"mtRuleCh": "完成挑战时每个孩子的积分",
+"dyTitle": "家庭日记",
+"dyAddTitle": "写日记",
+"dyKind": "这是什么？",
+"dk_funny": "有趣的话",
+"dk_first": "第一次",
+"dk_moment": "特别时刻",
+"dk_proud": "骄傲时刻",
+"dk_good": "本周好事",
+"dyWho": "关于谁？",
+"dyWhoHint": "都不选 = 全家。",
+"dyText": "发生了什么？",
+"dyPh_funny": "例如：Hannah 说打雷是云在打喷嚏。",
+"dyPh_first": "例如：Mavie 第一次自己走了几步。",
+"dyPh_moment": "例如：和爷爷奶奶在公园野餐。",
+"dyPh_proud": "例如：Noah 自己读完了一整本书。",
+"dyPh_good": "例如：Brian 帮妹妹收拾了玩具。",
+"dySave": "保存到日记",
+"dySaved": "已保存到日记。",
+"dyNeedText": "写下发生了什么。",
+"dyDelConfirm": "从日记中删除这条回忆吗？",
+"dyAll": "全部",
+"dyFamily": "全家",
+"dyYear": "年份",
+"dyPrint": "打印小书",
+"dyMore": "再看 {n} 条",
+"dyEmpty": "日记还是空的。写下第一条回忆吧！",
+"dyHint": "没有照片：只有话语和时刻。年底把小书打印出来留作纪念。",
+"dyBookTitle": "我们的回忆录",
+"dyBookCount": "今年保存了 {n} 条回忆",
+"dcTitle": "每日总结",
+"dcStart": "结束今天",
+"dcBanner": "3 分钟记下今天的一切。",
+"dcBannerEvening": "该记录每个人的今天了。",
+"dcClosedAt": "今天已于 {time} 总结。",
+"dcReopen": "重新打开",
+"dcTasksTitle": "今天的任务",
+"dcPending": "孩子已标记；批准",
+"dcAll": "全部勾选",
+"dcNoTasks": "今天没有任务。",
+"dcHwDone": "今天已记录 {n} 页",
+"dcPagesPh": "页数",
+"dcBookPh": "今天读的书名（如果读了）",
+"dcMood": "{name} 今天心情怎么样？",
+"dcPraise": "今日表扬",
+"dcPraisePh": "例如：和兄弟分享了零食",
+"dcDiary": "写进日记的一句话或一个时刻",
+"dcDiaryPh": "{name} 今天说的或做的事…",
+"dcNextKid": "下一个：{name}",
+"dcEnd": "结束",
+"dcDoneLead": "每个人的今天都记好了。晚安！",
+"dcSumTasks": "勾选了 {n} 项任务",
+"dcSumPages": "{n} 页作业",
+"dcSumBooks": "{n} 本书",
+"dcSumMoods": "{n} 个表情",
+"dcSumPraise": "{n} 次表扬",
+"dcSumDiary": "日记新增 {n} 条",
+"dcFinish": "结束今天",
+"dcSaved": "今天已总结。好好休息！",
+"tmButton": "团队任务",
+"tmTitle": "团队任务",
+"tmIntro": "一起完成的任务。一个孩子勾选后，参与任务的每个人都得分。选择参与的人（至少 2 人）。",
+"tmHint": "小提示：让大孩子和小孩子一组。大的学会教，小的跟着学。",
+"tmTeam": "团队",
+"tmTeamLabel": "团队任务",
+"tmTeamHint": "一个孩子勾选后，这项任务的所有孩子都算完成。",
+"tmNeedTwo": "至少选择 2 个孩子。",
+"tmAdded": "“{task}”现在是团队任务。",
+"tmMatesToo": "团队任务：{names} 也得分了！",
+"tm_livingRoom": "一起整理客厅",
+"tm_toysLittle": "帮小妹妹收拾玩具",
+"tm_groceries": "一起把买的东西放好",
+"tm_table": "一起摆晚餐桌",
+"tm_puzzle": "一起拼拼图",
+"tm_plants": "一起浇花",
+"tm_laundry": "一起按人分好衣服",
+"tm_car": "一起洗车",
+"tm_cookies": "一起做饼干",
+"tm_shoes": "一起整理门口的鞋子",
+"hpBtn": "帮助了兄弟姐妹",
+"hpTitle": "{name} 帮助了兄弟姐妹",
+"hpWho": "帮助了谁？",
+"hpHow": "怎么帮助的？",
+"hpHint": "得 {n} 分。帮助兄弟姐妹也会在周日家庭会议上计算。",
+"hpSave": "给 +{n}",
+"hpNeedWho": "选择被帮助的人。",
+"hpNote": "帮助了 {name}",
+"hpSaved": "{name} 因为帮忙得到 {n} 分！",
+"hp_teach": "教了一样东西",
+"hp_tidy": "帮忙收拾",
+"hp_share": "分享或借东西",
+"hp_care": "照顾或安慰",
+"hp_dress": "帮忙穿衣服",
+"hp_play": "耐心地一起玩",
+"hpRulesTitle": "帮助兄弟姐妹",
+"hpRulePoints": "每次帮助的积分",
+"hpRulesHint": "在首页每个孩子的卡片上使用 🤝 按钮。",
+"grTitle": "我的角色",
+"grNextLevel": "还差 {n} 分到第 {lvl} 级。",
+"grNextItem": "第 {lvl} 级有下一个礼物",
+"grCount": "已解锁 {n}/{total} 件",
+"grType_hat": "帽子",
+"grType_pet": "小宠物",
+"grType_bg": "背景",
+"grType_frame": "相框",
+"gr_bg_sky": "天空",
+"gr_bg_mint": "薄荷",
+"gr_bg_peach": "桃子",
+"gr_bg_lilac": "淡紫",
+"gr_bg_sun": "太阳",
+"gr_bg_rainbow": "彩虹",
+"gr_bg_night": "星空",
+"gr_bg_gold": "金色",
+"gr_frame_dots": "小圆点",
+"gr_frame_double": "双线",
+"gr_frame_rainbow": "彩虹",
+"gr_frame_gold": "金色",
+"grLevel": "第 {n} 级",
+"grLocked": "第 {n} 级解锁",
+"grNew": "{n} 个新的！",
+"grHint": "每获得 100 分，孩子升一级并得到角色礼物。点一下穿上或脱下。",
+"pdTitle": "发薪日",
+"pdOpen": "打开发薪日",
+"pdBanner": "今天是发薪日！储蓄罐有利息。",
+"pdIntro": "每个孩子放在“存”罐里的钱可得 {pct}% 利息（每周最多 {cap}）。这样他们能看到存钱会让钱变多。",
+"pdWeekEarned": "本周赚了 {v}",
+"pdGain": "今天的利息：+{v}",
+"pdPaidLine": "已收到利息：+{v}",
+"pdNoSave": "“存”罐里还没有钱。存一点，下周就有利息！",
+"pdPay": "发放利息",
+"pdPaidToast": "已发放利息：{v}，共 {n} 个孩子。",
+"pdInterestNote": "“存”罐 {pct}% 的利息",
+"pdInterestShort": "利息",
+"pdCashShort": "已发现金",
+"pdCashOut": "发放现金 {v}",
+"pdCashConfirm": "要给 {name} 发放现金 {v} 吗？这笔钱从“花”罐扣除。",
+"pdCashNote": "发薪日发放的现金",
+"pdCashDone": "{name} 收到现金 {v}。",
+"pdTip": "聊聊“花”罐的钱怎么用：现在花，还是攒起来买更大的东西。",
+"pdCardHint": "发薪日：{day}。“存”罐利息 {pct}%。",
+"pdOff": "发薪日已关闭。",
+"pdRules": "发薪规则",
+"pdEnabled": "使用发薪日",
+"pdDay": "星期几",
+"pdPct": "“存”罐利息",
+"pdCap": "每周最高利息（R$）",
+"pdCapHint": "设个上限，免得金额太高。填 0 表示不设上限。",
+"piggySource_interest": "利息",
+"frShort": "看板",
+"frTitle": "冰箱看板",
+"frFull": "全屏",
+"frExit": "退出看板",
+"frNoTasks": "今天没有任务 🎉",
+"frHintParent": "点任务即可勾选。可以在平板或电视上一直开着。",
+"frHintChild": "做完后点一下任务。家长之后会批准。",
+"pdIntroNoCap": "每个孩子放在“存”罐里的钱可得 {pct}% 利息。这样他们能看到存钱会让钱变多。"
+},
+"zht": {
+"tlLevel": "第 {n} 級",
+"tlLevelShort": "{n} 級",
+"tlName1": "起步",
+"tlName2": "探索者",
+"tlName3": "高手",
+"tlName4": "大師",
+"tlName5": "挑戰",
+"tlEasier": "調簡單一點",
+"tlHarder": "調難一點",
+"tlRule": "答對 {up}% 或以上：升一級。低於 {down}%：降一級，免得灰心。",
+"tlRuleTop": "已到最高階！測驗會一直保持在挑戰級。",
+"tlRecord": "記錄答對數",
+"tlRecordTitle": "{name} 的答對數 — {subject}",
+"tlRecordHint": "測驗列印於 {date} · {level}。",
+"tlWillUp": "將升到第 {n} 級！🎉",
+"tlWillDown": "將回到第 {n} 級（更簡單）。",
+"tlWillStay": "保持同一級。下次一定行！",
+"tlUpReason": "{subject} 升到第 {n} 級",
+"tlTestReason": "完成了 {subject} 測驗",
+"tlUpToast": "{name} 的 {subject} 升到第 {n} 級了！",
+"tlDownToast": "{name} 的 {subject} 回到第 {n} 級。我們再多練練。",
+"tlTopToast": "{name} 在 {subject} 挑戰級全部答對！",
+"tlStayToast": "{name} 答對了 {pct}%。達到 {up}% 就能升級！",
+"navFamily": "我們的家",
+"title_familia": "我們的家",
+"sub_familia": "週日家庭會議、每週挑戰和家庭日記。",
+"chTitle": "每週挑戰",
+"chYes": "我們做到了！",
+"chNo": "這次沒做到",
+"chNoConfirm": "標記這次挑戰沒有完成嗎？",
+"chNone": "目前沒有挑戰。在週日家庭會議上選一個吧。",
+"chBonusHint": "如果做到了，每個孩子得 {n} 分。",
+"chDoneToast": "挑戰完成！每人得到 {n} 分。",
+"ch_noFight": "一週兄弟姐妹不吵架",
+"ch_bed": "每個人每天都整理床鋪",
+"ch_read": "全家一起讀 10 本書",
+"ch_thanks": "總是說“請”和“謝謝”",
+"ch_veggies": "每餐都吃蔬菜",
+"ch_tidy": "每天睡前把玩具收好",
+"ch_help": "每人每天幫助一個兄弟姐妹",
+"ch_noScreen": "全家一整天不用螢幕",
+"ch_english": "每天學一個新的英語單詞",
+"ch_early": "一整週都按時上床睡覺",
+"mtTitle": "家庭會議",
+"mtCardTitle": "週日家庭會議",
+"mtCardHint": "一起花大約 10 分鐘：慶祝這一週、看看家庭目標、每人說一件好事，再選下週的挑戰。",
+"mtStart": "開始會議",
+"mtLast": "上次會議：{date}",
+"mtBanner": "今天是家庭會議日！",
+"mtStep_party": "1. 一起慶祝",
+"mtStep_goal": "2. 我們的目標",
+"mtStep_good": "3. 每人一件好事",
+"mtStep_next": "4. 下週挑戰",
+"mtStep_end": "5. 完成！",
+"mtPartyLead": "看看每個人這週（{range}）做了什麼。給表現突出的人點“本週之星”。",
+"mtTasks": "{n} 項任務",
+"mtEarned": "{n} 分",
+"mtPages": "{n} 頁作業",
+"mtBooks": "{n} 本書",
+"mtHelps": "幫忙 {n} 次",
+"mtGood": "{n} 次表揚",
+"mtHighlight": "本週之星",
+"mtHighlightHint": "會議結束時，每位本週之星得 {n} 分。",
+"mtHighlightNote": "家庭會議的本週之星",
+"mtGoalLead": "家庭目標進展如何？一起看看還差多少。",
+"mtLastChallenge": "這週的挑戰，我們做到了嗎？",
+"mtGoodLead": "每個孩子說一件這週發生的好事，你記在這裡。",
+"mtGoodPh": "這週有什麼好事？",
+"mtSaveDiary": "把這些話儲存到家庭日記",
+"mtNextLead": "一起選下週的挑戰（或自己想一個）。",
+"mtOwnChallenge": "或者寫你們自己的",
+"mtOwnPh": "例如：幫媽媽準備晚飯",
+"mtEndLead": "會議完成！總結：",
+"mtEndHi": "本週之星：{names}（+{n} 分）",
+"mtEndPrevYes": "本週挑戰完成了！",
+"mtEndPrevNo": "這週的挑戰沒完成，不過值得再試一次。",
+"mtEndGood": "記下了 {n} 件好事",
+"mtEndNext": "下一個挑戰：{name}",
+"mtFinish": "結束會議",
+"mtSaved": "會議已儲存。祝大家一週愉快！",
+"mtRules": "會議積分",
+"mtRuleHi": "每位本週之星的積分",
+"mtRuleCh": "完成挑戰時每個孩子的積分",
+"dyTitle": "家庭日記",
+"dyAddTitle": "寫日記",
+"dyKind": "這是什麼？",
+"dk_funny": "有趣的話",
+"dk_first": "第一次",
+"dk_moment": "特別時刻",
+"dk_proud": "驕傲時刻",
+"dk_good": "本週好事",
+"dyWho": "關於誰？",
+"dyWhoHint": "都不選 = 全家。",
+"dyText": "發生了什麼？",
+"dyPh_funny": "例如：Hannah 說打雷是雲在打噴嚏。",
+"dyPh_first": "例如：Mavie 第一次自己走了幾步。",
+"dyPh_moment": "例如：和爺爺奶奶在公園野餐。",
+"dyPh_proud": "例如：Noah 自己讀完了一整本書。",
+"dyPh_good": "例如：Brian 幫妹妹收拾了玩具。",
+"dySave": "儲存到日記",
+"dySaved": "已儲存到日記。",
+"dyNeedText": "寫下發生了什麼。",
+"dyDelConfirm": "從日記中刪除這條回憶嗎？",
+"dyAll": "全部",
+"dyFamily": "全家",
+"dyYear": "年份",
+"dyPrint": "列印小書",
+"dyMore": "再看 {n} 條",
+"dyEmpty": "日記還是空的。寫下第一條回憶吧！",
+"dyHint": "沒有照片：只有話語和時刻。年底把小書打印出來留作紀念。",
+"dyBookTitle": "我們的回憶錄",
+"dyBookCount": "今年儲存了 {n} 條回憶",
+"dcTitle": "每日總結",
+"dcStart": "結束今天",
+"dcBanner": "3 分鐘記下今天的一切。",
+"dcBannerEvening": "該記錄每個人的今天了。",
+"dcClosedAt": "今天已於 {time} 總結。",
+"dcReopen": "重新開啟",
+"dcTasksTitle": "今天的任務",
+"dcPending": "孩子已標記；批准",
+"dcAll": "全部勾選",
+"dcNoTasks": "今天沒有任務。",
+"dcHwDone": "今天已記錄 {n} 頁",
+"dcPagesPh": "頁數",
+"dcBookPh": "今天讀的書名（如果讀了）",
+"dcMood": "{name} 今天心情怎麼樣？",
+"dcPraise": "今日表揚",
+"dcPraisePh": "例如：和兄弟分享了零食",
+"dcDiary": "寫進日記的一句話或一個時刻",
+"dcDiaryPh": "{name} 今天說的或做的事…",
+"dcNextKid": "下一個：{name}",
+"dcEnd": "結束",
+"dcDoneLead": "每個人的今天都記好了。晚安！",
+"dcSumTasks": "勾選了 {n} 項任務",
+"dcSumPages": "{n} 頁作業",
+"dcSumBooks": "{n} 本書",
+"dcSumMoods": "{n} 個表情",
+"dcSumPraise": "{n} 次表揚",
+"dcSumDiary": "日記新增 {n} 條",
+"dcFinish": "結束今天",
+"dcSaved": "今天已總結。好好休息！",
+"tmButton": "團隊任務",
+"tmTitle": "團隊任務",
+"tmIntro": "一起完成的任務。一個孩子勾選後，參與任務的每個人都得分。選擇參與的人（至少 2 人）。",
+"tmHint": "小提示：讓大孩子和小孩子一組。大的學會教，小的跟著學。",
+"tmTeam": "團隊",
+"tmTeamLabel": "團隊任務",
+"tmTeamHint": "一個孩子勾選後，這項任務的所有孩子都算完成。",
+"tmNeedTwo": "至少選擇 2 個孩子。",
+"tmAdded": "“{task}”現在是團隊任務。",
+"tmMatesToo": "團隊任務：{names} 也得分了！",
+"tm_livingRoom": "一起整理客廳",
+"tm_toysLittle": "幫小妹妹收拾玩具",
+"tm_groceries": "一起把買的東西放好",
+"tm_table": "一起擺晚餐桌",
+"tm_puzzle": "一起拼拼圖",
+"tm_plants": "一起澆花",
+"tm_laundry": "一起按人分好衣服",
+"tm_car": "一起洗車",
+"tm_cookies": "一起做餅乾",
+"tm_shoes": "一起整理門口的鞋子",
+"hpBtn": "幫助了兄弟姐妹",
+"hpTitle": "{name} 幫助了兄弟姐妹",
+"hpWho": "幫助了誰？",
+"hpHow": "怎麼幫助的？",
+"hpHint": "得 {n} 分。幫助兄弟姐妹也會在週日家庭會議上計算。",
+"hpSave": "給 +{n}",
+"hpNeedWho": "選擇被幫助的人。",
+"hpNote": "幫助了 {name}",
+"hpSaved": "{name} 因為幫忙得到 {n} 分！",
+"hp_teach": "教了一樣東西",
+"hp_tidy": "幫忙收拾",
+"hp_share": "分享或借東西",
+"hp_care": "照顧或安慰",
+"hp_dress": "幫忙穿衣服",
+"hp_play": "耐心地一起玩",
+"hpRulesTitle": "幫助兄弟姐妹",
+"hpRulePoints": "每次幫助的積分",
+"hpRulesHint": "在首頁每個孩子的卡片上使用 🤝 按鈕。",
+"grTitle": "我的角色",
+"grNextLevel": "還差 {n} 分到第 {lvl} 級。",
+"grNextItem": "第 {lvl} 級有下一個禮物",
+"grCount": "已解鎖 {n}/{total} 件",
+"grType_hat": "帽子",
+"grType_pet": "小寵物",
+"grType_bg": "背景",
+"grType_frame": "相框",
+"gr_bg_sky": "天空",
+"gr_bg_mint": "薄荷",
+"gr_bg_peach": "桃子",
+"gr_bg_lilac": "淡紫",
+"gr_bg_sun": "太陽",
+"gr_bg_rainbow": "彩虹",
+"gr_bg_night": "星空",
+"gr_bg_gold": "金色",
+"gr_frame_dots": "小圓點",
+"gr_frame_double": "雙線",
+"gr_frame_rainbow": "彩虹",
+"gr_frame_gold": "金色",
+"grLevel": "第 {n} 級",
+"grLocked": "第 {n} 級解鎖",
+"grNew": "{n} 個新的！",
+"grHint": "每獲得 100 分，孩子升一級並得到角色禮物。點一下穿上或脫下。",
+"pdTitle": "發薪日",
+"pdOpen": "打開發薪日",
+"pdBanner": "今天是發薪日！儲蓄罐有利息。",
+"pdIntro": "每個孩子放在“存”罐裡的錢可得 {pct}% 利息（每週最多 {cap}）。這樣他們能看到存錢會讓錢變多。",
+"pdWeekEarned": "本週賺了 {v}",
+"pdGain": "今天的利息：+{v}",
+"pdPaidLine": "已收到利息：+{v}",
+"pdNoSave": "“存”罐裡還沒有錢。存一點，下週就有利息！",
+"pdPay": "發放利息",
+"pdPaidToast": "已發放利息：{v}，共 {n} 個孩子。",
+"pdInterestNote": "“存”罐 {pct}% 的利息",
+"pdInterestShort": "利息",
+"pdCashShort": "已發現金",
+"pdCashOut": "發放現金 {v}",
+"pdCashConfirm": "要給 {name} 發放現金 {v} 嗎？這筆錢從“花”罐扣除。",
+"pdCashNote": "發薪日發放的現金",
+"pdCashDone": "{name} 收到現金 {v}。",
+"pdTip": "聊聊“花”罐的錢怎麼用：現在花，還是攢起來買更大的東西。",
+"pdCardHint": "發薪日：{day}。“存”罐利息 {pct}%。",
+"pdOff": "發薪日已關閉。",
+"pdRules": "發薪規則",
+"pdEnabled": "使用發薪日",
+"pdDay": "星期幾",
+"pdPct": "“存”罐利息",
+"pdCap": "每週最高利息（R$）",
+"pdCapHint": "設個上限，免得金額太高。填 0 表示不設上限。",
+"piggySource_interest": "利息",
+"frShort": "看板",
+"frTitle": "冰箱看板",
+"frFull": "全屏",
+"frExit": "退出看板",
+"frNoTasks": "今天沒有任務 🎉",
+"frHintParent": "點任務即可勾選。可以在平板或電視上一直開著。",
+"frHintChild": "做完後點一下任務。家長之後會批准。",
+"pdIntroNoCap": "每個孩子放在“存”罐裡的錢可得 {pct}% 利息。這樣他們能看到存錢會讓錢變多。"
+}
+};
+Object.keys(V89_TEXT).forEach(l => Object.assign(I18N[l], V89_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 88;
+const APP_VERSION = 89;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -8349,7 +10236,7 @@ function normalize(raw, defaultKeys) {
       days: parseDays(t.days), time: /^\d{2}:\d{2}$/.test(t.time || '') ? t.time : '',
       approvalRequired: t.approvalRequired === undefined ? false : !!t.approvalRequired, childIds,
       cashPerPoint: t.cashPerPoint === null || t.cashPerPoint === undefined || t.cashPerPoint === '' ? null : Math.max(0, round2(num(t.cashPerPoint))),
-      fixedCash: Math.max(0, round2(num(t.fixedCash, 0))), ...(t.kind === 'game' ? { kind: 'game' } : {})
+      fixedCash: Math.max(0, round2(num(t.fixedCash, 0))), ...(t.kind === 'game' ? { kind: 'game' } : {}), ...(t.team ? { team: true } : {})
     };
   }).filter(t => t.name || t.nameKey);
 
@@ -8388,7 +10275,7 @@ function normalize(raw, defaultKeys) {
     if (!p || typeof p !== 'object') return null;
     const childId = mapChild(p.childId); if (!childId) return null;
     return { id: cleanId(p.id) || `p${i}x${Date.parse(p.date) || 0}`, date: safeIso(p.date), childId, amount: round2(num(p.amount)),
-      note: text(p.note, 120), source: ['manual', 'task', 'behavior'].includes(p.source) ? p.source : 'manual', historyId: p.historyId ? cleanId(p.historyId) : null,
+      note: text(p.note, 120), source: ['manual', 'task', 'behavior', 'interest'].includes(p.source) ? p.source : 'manual', historyId: p.historyId ? cleanId(p.historyId) : null,
       alloc: p.alloc && typeof p.alloc === 'object' ? { spend: round2(num(p.alloc.spend, 0)), save: round2(num(p.alloc.save, 0)), give: round2(num(p.alloc.give, 0)) } : undefined,
       pot: ['spend', 'save', 'give'].includes(p.pot) ? p.pot : undefined };
   }).filter(p => p && p.amount).sort((a, b) => b.date.localeCompare(a.date));
@@ -9299,7 +11186,7 @@ const SECTIONS = [
         <div class="row2"><div><label for="mChild">${t('child')}</label><select id="mChild" data-change="render"></select></div>
         <div><label for="mNote">${t('note')}</label><input id="mNote" maxlength="200" placeholder="${esc(t('notePlaceholder'))}"></div></div>
         <p class="hint" style="margin:10px 0 12px">${t('frequencyHint')}</p><div id="mList" class="list"></div>`)}
-      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft" data-act="tv-open">💰 ${t('valTitleShort')}</button><button type="button" class="btn btn-soft" data-act="pr-chart-all">🖨️ ${t('prChartBtn')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
+      ${card(t('registeredTasks'), '<div id="tList" class="list"></div>', { cls: 'parent-only', head: `<div class="actions"><button type="button" class="btn btn-soft" data-act="lib-open">💡 ${t('libButton')}</button><button type="button" class="btn btn-soft" data-act="team-open">🤝 ${t('tmButton')}</button><button type="button" class="btn btn-soft" data-act="tv-open">💰 ${t('valTitleShort')}</button><button type="button" class="btn btn-soft" data-act="pr-chart-all">🖨️ ${t('prChartBtn')}</button><button type="button" class="btn btn-primary" data-act="task-new">+ ${t('newTask')}</button></div>` })}
     </div>`,
     update() {
       const sel = $('#mChild'); setSelect(sel, childOptions(activeChild() ? activeChild().id : sel.value || S.children[0].id));
@@ -9933,6 +11820,7 @@ function render() {
     ${kid ? `<span class="mode-chip">${avatar(kid, 'sm')}${esc(kid.name)}</span>` : ''}
     <button type="button" class="pill cloud-chip" data-cloud-chip data-act="cloud-open" hidden></button>
     <select class="select-lang" data-change="lang" aria-label="${esc(t('language'))}">${langOptions(S.language)}</select>
+    <button type="button" class="btn btn-soft" data-act="fridge" title="${esc(t('frTitle'))}">📺 ${t('frShort')}</button>
     <button type="button" class="btn btn-soft" data-act="print">🖨️ ${t('print')}</button>
     <button type="button" class="btn btn-primary" data-act="quick">⚡ ${t('quickTask')}</button>
     ${!kid && isUnlocked() ? `<button type="button" class="btn btn-soft" data-act="lock" title="${esc(t('lockNow'))}">🔒</button>` : ''}
@@ -9975,6 +11863,7 @@ function renderMobileChrome(sec, kid) {
   $('#drawerTools').innerHTML = `<label for="drawerLang">${esc(t('language'))}</label><select id="drawerLang" class="select-lang" data-change="lang">${langOptions(S.language)}</select>
     <div class="mode-switch" role="group" aria-label="${esc(t('mode'))}"><button type="button" class="${kid ? '' : 'active'}" data-act="mode-parent">👨‍👩‍👧 ${t('modeParent')}</button><button type="button" class="${kid ? 'active' : ''}" data-act="mode-child">🧒 ${t('modeChild')}</button></div>
     <button type="button" class="btn btn-soft btn-block" data-act="print">🖨️ ${esc(t('print'))}</button>
+    <button type="button" class="btn btn-soft btn-block" data-act="fridge">📺 ${esc(t('frTitle'))}</button>
     ${installAvailable() ? `<button type="button" class="btn btn-primary btn-block" data-act="install">📲 ${esc(t('installBtn'))}</button>` : ''}
     ${!kid && isUnlocked() ? `<button type="button" class="btn btn-ghost btn-block" data-act="lock">🔒 ${esc(t('lockNow'))}</button>` : ''}`;
 }
@@ -10047,7 +11936,7 @@ function openTaskModal(id, presetChild) {
       <div class="field"><label>${t('assignTo')}</label><div class="chips">${S.children.map(c => `<label class="chip ${d.childIds.includes(c.id) ? 'on' : ''}"><input type="checkbox" data-kid="${esc(c.id)}" ${d.childIds.includes(c.id) ? 'checked' : ''}>${esc(c.avatar)} ${esc(c.name)}</label>`).join('')}</div><p class="hint">${t('assignHint')}</p></div>
       <div class="row2 field"><div><label for="tmCpp">${t('cashPerPoint')}</label><input id="tmCpp" type="number" min="0" step="0.01" value="${d.cashPerPoint ?? ''}" placeholder="${S.defaultPointValue.toFixed(2)}" data-change="task-preview"></div><div><label for="tmFixed">${t('fixedExtra')}</label><input id="tmFixed" type="number" min="0" step="0.01" value="${Number(d.fixedCash).toFixed(2)}" data-change="task-preview"></div></div>
       <p class="hint" id="tmPreview"></p><p class="hint tm-sug" id="tmSug"></p>
-      <label class="check"><input type="checkbox" id="tmApproval" ${d.approvalRequired ? 'checked' : ''}> ${t('requireApproval')}</label><p class="hint">${t('requireApprovalHint')}</p>`,
+      <label class="check"><input type="checkbox" id="tmApproval" ${d.approvalRequired ? 'checked' : ''}> ${t('requireApproval')}</label><p class="hint">${t('requireApprovalHint')}</p><label class="check"><input type="checkbox" id="tmTeam" ${d.team ? 'checked' : ''}> 🤝 ${t('tmTeamLabel')}</label><p class="hint">${t('tmTeamHint')}</p>`,
     foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="task-save">${t('save')}</button>`
   });
   $('#tmFreq').value = d.frequency; taskModalSync();
@@ -10066,7 +11955,7 @@ function saveTaskModal() {
   const data = {
     points, icon: text($('#tmIcon').value, 8) || '✅', frequency: $('#tmFreq').value, time: /^\d{2}:\d{2}$/.test($('#tmTime').value) ? $('#tmTime').value : '',
     days: $('#tmFreq').value === 'daily' ? $$('#taskModal [data-day]:checked').map(i => Number(i.dataset.day)) : [],
-    childIds: $$('#taskModal [data-kid]:checked').map(i => i.dataset.kid), approvalRequired: $('#tmApproval').checked,
+    childIds: $$('#taskModal [data-kid]:checked').map(i => i.dataset.kid), approvalRequired: $('#tmApproval').checked, team: !!($('#tmTeam') && $('#tmTeam').checked),
     cashPerPoint: $('#tmCpp').value === '' ? null : Math.max(0, round2(num($('#tmCpp').value, 0))), fixedCash: Math.max(0, round2(num($('#tmFixed').value, 0)))
   };
   if (data.days.length === 7) data.days = [];
@@ -12904,47 +14793,56 @@ const PT_PLURAL = [['casa', 'casas'], ['flor', 'flores'], ['pão', 'pães'], ['a
 const PT_SENTENCES = [['O', 'gato', 'bebe', 'leite.'], ['A', 'menina', 'lê', 'um', 'livro.'], ['Eu', 'gosto', 'de', 'brincar.'], ['O', 'sol', 'está', 'quente.'], ['Meu', 'irmão', 'joga', 'bola.']];
 const PT_PUNCT = [['Você vai à escola amanhã', '?'], ['Que dia lindo', '!'], ['Eu tenho dois irmãos', '.'], ['Qual é o seu nome', '?'], ['Cuidado com o degrau', '!'], ['Hoje choveu muito', '.']];
 
-/* ---------- gerador da provinha ---------- */
-function buildStudyTest(c, subject, topics, seed) {
+/* ---------- gerador da provinha (por nível: 1 = bem fácil … 5 = desafio) ---------- */
+function buildStudyTest(c, subject, topics, seed, level) {
   const rnd = seededRng(seed), R = (a, b) => a + Math.floor(rnd() * (b - a + 1)), names = S.children.map(k => k.name), nm = () => names[R(0, names.length - 1)];
-  const st = futStage(c.age), parts = [];
+  const L = clamp(int(level, 0) || (typeof testLevel === 'function' ? testLevel(c, subject) : 2), 1, 5), parts = [];
+  const by = arr => arr[L - 1], Q = by([3, 4, 4, 5, 6]);
   const mcPart = (title, list, n) => ({ kind: 'mc', title, items: pick(list, Math.min(n, list.length), rnd).map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })) });
-  const big = st === 's4' ? 1 : 0;
+  const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const gen = {
     pt: {
-      vowels: () => ({ kind: 'fill', title: 'Circule as vogais (A, E, I, O, U) de cada palavra.', items: pick(SIM_WORDS, 4, rnd).map(([e, w]) => ({ e, text: w, answer: w.replace(/[^AEIOUÃÁÉÊÍÓÔÕÚ]/g, '').split('').join(' ') })) }),
-      alphabet: () => ({ kind: 'fill', title: 'Que letra vem depois?', items: [...Array(4)].map(() => { const i = R(0, 23), L = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; return { text: `${L[i]} → __`, answer: L[i + 1] }; }) }),
-      syllables: () => ({ kind: 'fill', title: 'Quantas sílabas tem cada palavra?', items: pick(SIM_WORDS, 4, rnd).map(([e, w, n]) => ({ e, text: w, answer: n })) }),
-      rhymes: () => ({ kind: 'mcw', title: 'Circule a palavra que rima.', items: pick(PT_RHYMES, 3, rnd).map(([a, b, bad]) => ({ q: a.toUpperCase(), o: shuffleKeep([b, ...bad], 0, rnd) })) }),
-      plural: () => ({ kind: 'fill', title: 'Escreva o plural (mais de um).', items: pick(PT_PLURAL, 4, rnd).map(([a, b]) => ({ text: `um(a) ${a} → dois/duas ______`, answer: b })) }),
-      opposites: () => ({ kind: 'fill', title: 'Escreva o contrário.', items: pick(PT_OPPOSITES, 4, rnd).map(([a, b]) => ({ text: `${a} ↔ ______`, answer: b })) }),
-      spelling: () => ({ kind: 'mcw', title: 'Circule a palavra escrita do jeito certo.', items: pick(SIM_SPELL, 4, rnd).map(([ok, bad]) => ({ q: '', o: shuffleKeep([ok, bad], 0, rnd) })) }),
-      punctuation: () => ({ kind: 'fill', title: 'Coloque o sinal certo no fim: ( . ) ( ? ) ( ! )', items: pick(PT_PUNCT, 4, rnd).map(([s, p]) => ({ text: `${s} __`, answer: p })) }),
-      sentence: () => ({ kind: 'fill', title: 'Coloque as palavras em ordem e escreva a frase.', items: pick(PT_SENTENCES, 2, rnd).map(w => ({ text: shuffle(w, rnd).join(' / '), answer: w.join(' '), line: true })) }),
-      reading: () => { const tx = pick(SIM_TEXTS[st === 's4' ? 's4' : 's3'], 1, rnd)[0]; return { kind: 'text', title: `Leia o texto: "${tx.title}"`, text: tx.text, q: tx.q.map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })), open: tx.open }; }
+      vowels: () => ({ kind: 'fill', title: 'Circule as vogais (A, E, I, O, U) de cada palavra.', items: pick(SIM_WORDS, Q, rnd).map(([e, w]) => ({ e, text: w, answer: w.replace(/[^AEIOUÃÁÉÊÍÓÔÕÚ]/g, '').split('').join(' ') })) }),
+      alphabet: () => L < 4 ? ({ kind: 'fill', title: 'Que letra vem depois?', items: [...Array(Q)].map(() => { const i = R(0, L === 1 ? 9 : 24); return { text: `${ABC[i]} → __`, answer: ABC[i + 1] }; }) })
+        : ({ kind: 'fill', title: 'Que letra vem antes e depois?', items: [...Array(Q)].map(() => { const i = R(1, 24); return { text: `__ ${ABC[i]} __`, answer: `${ABC[i - 1]} ${ABC[i]} ${ABC[i + 1]}` }; }) }),
+      syllables: () => ({ kind: 'fill', title: 'Quantas sílabas tem cada palavra?', items: pick(L <= 2 ? SIM_WORDS.filter(w => w[2] <= 3) : SIM_WORDS, Q, rnd).map(([e, w, n]) => ({ e, text: w, answer: n })) }),
+      rhymes: () => ({ kind: 'mcw', title: 'Circule a palavra que rima.', items: pick(PT_RHYMES, Math.min(Q, PT_RHYMES.length), rnd).map(([a, b, bad]) => ({ q: a.toUpperCase(), o: shuffleKeep(L <= 2 ? [b, bad[0]] : [b, ...bad], 0, rnd) })) }),
+      plural: () => ({ kind: 'fill', title: 'Escreva o plural (mais de um).', items: pick(L <= 2 ? PT_PLURAL.filter(([a, p]) => p === a + 's') : PT_PLURAL, Q, rnd).map(([a, b]) => ({ text: `um(a) ${a} → dois/duas ______`, answer: b })) }),
+      opposites: () => ({ kind: 'fill', title: 'Escreva o contrário.', items: pick(PT_OPPOSITES, Q, rnd).map(([a, b]) => ({ text: `${a} ↔ ______`, answer: b })) }),
+      spelling: () => ({ kind: 'mcw', title: 'Circule a palavra escrita do jeito certo.', items: pick(SIM_SPELL, Q, rnd).map(([ok, bad]) => ({ q: '', o: shuffleKeep([ok, bad], 0, rnd) })) }),
+      punctuation: () => ({ kind: 'fill', title: 'Coloque o sinal certo no fim: ( . ) ( ? ) ( ! )', items: pick(PT_PUNCT, Math.min(Q, PT_PUNCT.length), rnd).map(([s, p]) => ({ text: `${s} __`, answer: p })) }),
+      sentence: () => ({ kind: 'fill', title: 'Coloque as palavras em ordem e escreva a frase.', items: pick(L <= 2 ? PT_SENTENCES.filter(w => w.length <= 4) : PT_SENTENCES, by([1, 2, 2, 3, 4]), rnd).map(w => ({ text: shuffle(w, rnd).join(' / '), answer: w.join(' '), line: true })) }),
+      reading: () => { const tx = pick(SIM_TEXTS[L >= 4 ? 's4' : 's3'], 1, rnd)[0]; return { kind: 'text', title: `Leia o texto: "${tx.title}"`, text: tx.text, q: tx.q.slice(0, L <= 2 ? 2 : 9).map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })), open: tx.open }; }
     },
     math: {
-      count: () => ({ kind: 'fill', title: 'Conte e escreva quantos tem.', items: [...Array(3)].map(() => { const n = R(2, st === 's2' ? 10 : 6), e = pick(G_EMOJI, 1, rnd)[0]; return { text: e.repeat(n), answer: n }; }) }),
-      compare: () => ({ kind: 'fill', title: 'Escreva > (maior), < (menor) ou = (igual).', items: [...Array(4)].map(() => { const a = R(1, 20 + 80 * big), b = R(1, 20 + 80 * big); return { text: `${a} __ ${b}`, answer: a > b ? '>' : a < b ? '<' : '=' }; }) }),
-      add: () => ({ kind: 'fill', title: 'Faça as contas de mais.', items: [...Array(4)].map(() => { const m = st === 's2' ? 9 : st === 's3' ? 50 : 500, a = R(1, m), b = R(1, m); return { text: `${a} + ${b} =`, answer: a + b }; }) }),
-      sub: () => ({ kind: 'fill', title: 'Faça as contas de menos.', items: [...Array(4)].map(() => { const m = st === 's2' ? 10 : st === 's3' ? 60 : 600, a = R(2, m), b = R(1, a); return { text: `${a} − ${b} =`, answer: a - b }; }) }),
-      evenodd: () => ({ kind: 'fill', title: 'O número é PAR ou ÍMPAR?', items: [...Array(4)].map(() => { const n = R(1, 50); return { text: `${n} → ______`, answer: n % 2 ? 'ímpar' : 'par' }; }) }),
-      sequence: () => ({ kind: 'fill', title: 'Complete a sequência.', items: [...Array(3)].map(() => { const st2 = [1, 2, 5, 10][R(0, 3)], a = R(0, 20); return { text: `${a}, ${a + st2}, ${a + 2 * st2}, __, ${a + 4 * st2}`, answer: a + 3 * st2 }; }) }),
-      shapes: () => mcPart('Formas geométricas.', [['Quantos lados tem um triângulo?', ['3', '4', '5'], 0], ['Quantos lados tem um quadrado?', ['4', '3', '6'], 0], ['Qual forma não tem cantos?', ['Círculo', 'Quadrado', 'Triângulo'], 0], ['Uma bola parece um(a)…', ['esfera', 'cubo', 'pirâmide'], 0], ['Um dado parece um…', ['cubo', 'cone', 'cilindro'], 0]], 3),
-      mult: () => ({ kind: 'fill', title: 'Faça as multiplicações.', items: [...Array(4)].map(() => { const a = R(2, big ? 25 : 10), b = R(2, 9); return { text: `${a} × ${b} =`, answer: a * b }; }) }),
-      times: () => { const n = R(2, 9); return { kind: 'fill', title: `Tabuada do ${n}.`, items: shuffle([...Array(10)].map((_, i) => i + 1), rnd).slice(0, 5).map(k => ({ text: `${n} × ${k} =`, answer: n * k })) }; },
-      money: () => ({ kind: 'fill', title: 'Problemas com dinheiro.', items: [...Array(2)].map(() => { const p = R(2, 9), q = R(2, 5), pay = (Math.ceil(p * q / 10) + 1) * 10; return { text: `${nm()} comprou ${q} picolés de R$ ${p},00 e pagou com R$ ${pay},00. Quanto recebeu de troco?`, answer: `R$ ${pay - p * q},00`, line: true }; }) }),
-      time: () => ({ kind: 'fill', title: 'Horas.', items: [...Array(3)].map(() => { const h = R(6, 18), m = [0, 15, 30, 45][R(0, 3)], d = [30, 45, 60, 90][R(0, 3)], tot = h * 60 + m + d; return { text: `Começou às ${h}h${String(m).padStart(2, '0')} e durou ${d} minutos. Terminou às…`, answer: `${Math.floor(tot / 60)}h${String(tot % 60).padStart(2, '0')}`, line: true }; }) }),
-      div: () => ({ kind: 'fill', title: 'Faça as divisões.', items: [...Array(4)].map(() => { const d = R(2, 9), q = R(2, big ? 30 : 10); return { text: `${d * q} ÷ ${d} =`, answer: q }; }) }),
-      fractions: () => ({ kind: 'fill', title: 'Metade, terço e quarto.', items: [...Array(3)].map(() => { const [nme, k] = [['a metade', 2], ['a terça parte', 3], ['a quarta parte', 4]][R(0, 2)], n = k * R(2, 10); return { text: `Quanto é ${nme} de ${n}?`, answer: n / k }; }) })
+      count: () => ({ kind: 'fill', title: 'Conte e escreva quantos tem.', items: [...Array(by([3, 3, 4, 4, 5]))].map(() => { const n = R(2, by([5, 8, 10, 12, 15])), e = pick(G_EMOJI, 1, rnd)[0]; return { text: e.repeat(n), answer: n }; }) }),
+      compare: () => ({ kind: 'fill', title: 'Escreva > (maior), < (menor) ou = (igual).', items: [...Array(Q)].map(() => { const m = by([10, 20, 50, 100, 1000]), a = R(1, m), b = R(1, m); return { text: `${a} __ ${b}`, answer: a > b ? '>' : a < b ? '<' : '=' }; }) }),
+      add: () => ({ kind: 'fill', title: 'Faça as contas de mais.', items: [...Array(Q)].map(() => { const m = by([5, 10, 20, 100, 500]); if (L === 5 && rnd() < .4) { const a = R(10, 200), b = R(10, 200), d = R(10, 200); return { text: `${a} + ${b} + ${d} =`, answer: a + b + d }; } const a = R(1, m), b = R(1, m); return { text: `${a} + ${b} =`, answer: a + b }; }) }),
+      sub: () => ({ kind: 'fill', title: 'Faça as contas de menos.', items: [...Array(Q)].map(() => { const m = by([5, 10, 20, 100, 1000]), a = R(2, m), b = R(1, a); return { text: `${a} − ${b} =`, answer: a - b }; }) }),
+      evenodd: () => ({ kind: 'fill', title: 'O número é PAR ou ÍMPAR?', items: [...Array(Q)].map(() => { const n = R(1, by([10, 20, 50, 100, 1000])); return { text: `${n} → ______`, answer: n % 2 ? 'ímpar' : 'par' }; }) }),
+      sequence: () => ({ kind: 'fill', title: 'Complete a sequência.', items: [...Array(by([3, 3, 4, 4, 5]))].map(() => { const steps = by([[1], [1, 2], [2, 5, 10], [3, 4, 5, 10], [3, 4, 6, 7, 9, 11]]), sp = steps[R(0, steps.length - 1)], down = L >= 4 && rnd() < .4, a = down ? R(sp * 5, sp * 5 + 40) : R(0, by([5, 10, 20, 40, 80])), s2 = down ? -sp : sp; return { text: `${a}, ${a + s2}, ${a + 2 * s2}, __, ${a + 4 * s2}`, answer: a + 3 * s2 }; }) }),
+      shapes: () => mcPart('Formas geométricas.', [['Quantos lados tem um triângulo?', ['3', '4', '5'], 0], ['Quantos lados tem um quadrado?', ['4', '3', '6'], 0], ['Qual forma não tem cantos?', ['Círculo', 'Quadrado', 'Triângulo'], 0], ['Uma bola parece um(a)…', ['esfera', 'cubo', 'pirâmide'], 0], ['Um dado parece um…', ['cubo', 'cone', 'cilindro'], 0], ['Quantos lados tem um hexágono?', ['6', '5', '8'], 0], ['Quantas faces tem um cubo?', ['6', '4', '8'], 0]].slice(0, L <= 3 ? 5 : 7), by([2, 3, 3, 4, 5])),
+      mult: () => ({ kind: 'fill', title: 'Faça as multiplicações.', items: [...Array(Q)].map(() => { const a = R(2, by([5, 5, 10, 12, 25])), b = R(2, by([3, 5, 9, 9, 12])); return { text: `${a} × ${b} =`, answer: a * b }; }) }),
+      times: () => { const r = by([[2, 3], [2, 5], [2, 7], [3, 9], [6, 12]]), n = R(r[0], r[1]); return { kind: 'fill', title: `Tabuada do ${n}.`, items: shuffle([...Array(10)].map((_, i) => i + 1), rnd).slice(0, Q + 1).map(k => ({ text: `${n} × ${k} =`, answer: n * k })) }; },
+      money: () => ({ kind: 'fill', title: 'Problemas com dinheiro.', items: [...Array(by([1, 2, 2, 3, 3]))].map(() => { const p = R(2, by([5, 5, 9, 9, 15])), q = R(by([1, 1, 2, 2, 3]), by([1, 3, 4, 5, 9])), pay = (Math.ceil(p * q / 10) + (L >= 4 ? R(1, 3) : 1)) * 10; return { text: q === 1 ? `${nm()} comprou um picolé de R$ ${p},00 e pagou com R$ ${pay},00. Quanto recebeu de troco?` : `${nm()} comprou ${q} picolés de R$ ${p},00 e pagou com R$ ${pay},00. Quanto recebeu de troco?`, answer: `R$ ${pay - p * q},00`, line: true }; }) }),
+      time: () => ({ kind: 'fill', title: 'Horas.', items: [...Array(by([2, 3, 3, 4, 4]))].map(() => { const h = R(6, 18), m = L <= 2 ? 0 : [0, 15, 30, 45][R(0, 3)], ds = by([[60], [30, 60], [30, 45, 60], [45, 60, 90], [45, 75, 105, 135]]), d = ds[R(0, ds.length - 1)], tot = h * 60 + m + d; return { text: `Começou às ${h}h${String(m).padStart(2, '0')} e durou ${d} minutos. Terminou às…`, answer: `${Math.floor(tot / 60)}h${String(tot % 60).padStart(2, '0')}`, line: true }; }) }),
+      div: () => ({ kind: 'fill', title: 'Faça as divisões.', items: [...Array(Q)].map(() => { const d = R(2, by([2, 5, 9, 9, 12])), q = R(2, by([5, 5, 10, 15, 30])); return { text: `${d * q} ÷ ${d} =`, answer: q }; }) }),
+      fractions: () => ({ kind: 'fill', title: 'Metade, terço e quarto.', items: [...Array(by([2, 3, 3, 4, 5]))].map(() => { const opts = [['a metade', 2], ['a terça parte', 3], ['a quarta parte', 4], ['a quinta parte', 5], ['a décima parte', 10]].slice(0, by([1, 1, 2, 3, 5])), [nme, k] = opts[R(0, opts.length - 1)], n = k * R(2, by([5, 5, 10, 12, 20])); return { text: `Quanto é ${nme} de ${n}?`, answer: n / k }; }) })
     }
   };
   const list = topics.length ? topics : topicsFor(c, subject).slice(0, 4);
-  if (subject === 'english') return { subject, topics: list, english: buildEnglishTest(englishLevel(c.age) || 1, seed, list) };
+  if (subject === 'english') return { subject, topics: list, level: L, english: buildEnglishTest(enLevelFromTest(L), seed, list) };
   if (subject === 'science' || subject === 'social') {
-    const bank = QBANK[subject]; list.forEach(tp => { if (bank[tp]) parts.push(mcPart(t('tp_' + subject + '_' + tp), bank[tp], st === 's2' || st === 's1' ? 3 : 4)); });
+    const bank = QBANK[subject]; list.forEach(tp => { if (bank[tp]) parts.push(mcPart(t('tp_' + subject + '_' + tp), bank[tp], by([2, 3, 4, 5, 6]))); });
   } else list.forEach(tp => { const f = gen[subject] && gen[subject][tp]; if (f) parts.push(f()); });
-  return { subject, topics: list, parts: parts.slice(0, 6) };
+  return { subject, topics: list, level: L, parts: parts.slice(0, 6) };
+}
+/** Nível da provinha de inglês (1 a 3) a partir do nível 1 a 5. */
+function enLevelFromTest(L) { return L <= 2 ? 1 : L <= 4 ? 2 : 3; }
+/** Quantos itens a provinha tem (para registrar os acertos). */
+function studyTestTotal(test) {
+  if (test.english) return test.english.total;
+  return test.parts.reduce((s, p) => s + (p.kind === 'text' ? p.q.length + 1 : p.items.length), 0);
 }
 function studyTestHtml(c, test, mode) {
   if (test.english) return worksheetHtml(c, test.english, mode === 'key' ? true : false).replace(mode === 'key' ? /^[\s\S]*?(?=<div class="ps-page ws ws-key")/ : /$^/, '');
@@ -13200,6 +15098,802 @@ Object.assign(CHANGES, { 'rule-pts': el => { const r = S.rules.list.find(x => x.
     const rawNotes = Array.isArray(raw.behaviorNotes) ? raw.behaviorNotes : [];
     d.behaviorNotes.forEach(n => { const x = rawNotes.find(y => y && y.id === n.id); if (x) { if (x.warning) n.warning = true; if (x.repaired) n.repaired = true; } });
   };
+})();
+
+/* =====================================================================
+   Provinhas em níveis: cada criança tem um nível (1 a 5) em cada
+   matéria. Começa fácil; acertando 80% ou mais, sobe de nível. Se
+   acertar menos de 40%, desce um (para não desanimar).
+   ===================================================================== */
+
+const TL_NAMES = [null, { icon: '🌱', key: 'tlName1' }, { icon: '🌿', key: 'tlName2' }, { icon: '🌳', key: 'tlName3' }, { icon: '🏅', key: 'tlName4' }, { icon: '🏆', key: 'tlName5' }];
+const TL_UP = 80, TL_DOWN = 40;
+/** Nível inicial: um pouco abaixo da idade, para começar fácil. */
+function tlStart(c) { return c.age <= 5 ? 1 : c.age <= 7 ? 2 : c.age <= 9 ? 3 : 4; }
+function tlRec(c, sub) { return S.testLevels[`${c.id}_${sub}`] || null; }
+function testLevel(c, sub) { const r = tlRec(c, sub); return r ? r.level : tlStart(c); }
+function tlLabel(L) { const n = TL_NAMES[L]; return `${n.icon} ${t('tlLevel', { n: L })} · ${t(n.key)}`; }
+function tlStars(L) { return '★'.repeat(L) + '☆'.repeat(5 - L); }
+/** Registra o resultado e ajusta o nível. Retorna { move, level, pct, bonus }. */
+function recordTestResult(c, sub, score, total, opts = {}) {
+  const key = `${c.id}_${sub}`, from = testLevel(c, sub), pct = total > 0 ? Math.round(score / total * 100) : 0;
+  const lvl = clamp(int(opts.level, 0) || from, 1, 5);
+  let level = lvl, move = 'stay';
+  if (pct >= TL_UP && lvl < 5) { level = lvl + 1; move = 'up'; } else if (pct < TL_DOWN && lvl > 1) { level = lvl - 1; move = 'down'; } else if (pct >= TL_UP) move = 'top';
+  const rec = S.testLevels[key] || (S.testLevels[key] = { level: from, log: [] });
+  rec.level = level;
+  let bonus = 0;
+  if (move === 'up' && S.tlSettings.upBonus) { bonus = S.tlSettings.upBonus; adjustPoints(c.id, bonus, t('tlUpReason', { subject: t('hwSub_' + sub), n: level })); }
+  if (opts.pointsPerTest !== false && S.tlSettings.perTest) { adjustPoints(c.id, S.tlSettings.perTest, t('tlTestReason', { subject: t('hwSub_' + sub) })); bonus += S.tlSettings.perTest; }
+  rec.log.unshift({ id: uid('tl'), date: opts.date || isoNow(), level: lvl, score, total, pct, move });
+  rec.log = rec.log.slice(0, 40);
+  return { move, level, pct, bonus };
+}
+function tlResultToast(c, sub, r) {
+  const subj = t('hwSub_' + sub);
+  if (r.move === 'up') { toast(`🎉 ${t('tlUpToast', { name: c.name, subject: subj, n: r.level })}`, 'success', null, 6000); if (typeof confettiBurst === 'function') confettiBurst(); }
+  else if (r.move === 'down') toast(t('tlDownToast', { name: c.name, subject: subj, n: r.level }), 'warn', null, 6000);
+  else if (r.move === 'top') toast(`🏆 ${t('tlTopToast', { name: c.name, subject: subj })}`, 'success', null, 6000);
+  else toast(t('tlStayToast', { name: c.name, pct: r.pct, up: TL_UP }), 'success', null, 6000);
+}
+
+/* ---------- cartão: nível da matéria escolhida ---------- */
+function tlBoxHtml(c, sub) {
+  const L = testLevel(c, sub), rec = tlRec(c, sub), log = rec ? rec.log.slice(0, 5) : [];
+  const parent = !isChildMode();
+  return `<div class="tl-box">
+    <div class="tl-head"><div><b class="tl-name">${tlLabel(L)}</b><span class="tl-stars" aria-hidden="true">${tlStars(L)}</span></div>
+      ${parent ? `<div class="tl-adj"><button type="button" class="icon-btn" data-act="tl-adj" data-id="-1" ${L <= 1 ? 'disabled' : ''} title="${esc(t('tlEasier'))}" aria-label="${esc(t('tlEasier'))}">▼</button><button type="button" class="icon-btn" data-act="tl-adj" data-id="1" ${L >= 5 ? 'disabled' : ''} title="${esc(t('tlHarder'))}" aria-label="${esc(t('tlHarder'))}">▲</button></div>` : ''}</div>
+    <div class="tl-steps">${[1, 2, 3, 4, 5].map(k => `<span class="${k < L ? 'done' : k === L ? 'on' : ''}">${TL_NAMES[k].icon}</span>`).join('<i></i>')}</div>
+    <p class="hint" style="margin:6px 0 0">${L < 5 ? t('tlRule', { up: TL_UP, down: TL_DOWN }) : t('tlRuleTop')}</p>
+    ${log.length ? `<div class="tl-log">${log.map(x => `<span class="tl-res ${x.move}" title="${esc(fmtDate(x.date))}">${x.move === 'up' ? '⬆️' : x.move === 'down' ? '⬇️' : x.move === 'top' ? '🏆' : '➡️'} ${x.score}/${x.total} <small>${fmtDate(x.date)} · ${t('tlLevelShort', { n: x.level })}</small></span>`).join('')}</div>` : ''}
+  </div>`;
+}
+(function () {
+  const base = studyCardHtml;
+  studyCardHtml = function (c) {
+    const html = base(c), sub = ui.stSub;
+    // caixa do nível antes dos assuntos; botão de registrar os acertos junto com imprimir
+    return html.replace('<div class="st-topics">', tlBoxHtml(c, sub) + '<div class="st-topics">')
+      .replace(`<button type="button" class="btn btn-soft" data-act="st-key"`, `<button type="button" class="btn btn-success" data-act="tl-result" ${S.studyTests[`${c.id}_${sub}`] ? '' : 'disabled'}>✍️ ${t('tlRecord')}</button><button type="button" class="btn btn-soft" data-act="st-key"`);
+  };
+})();
+
+function openTlResult(c, sub) {
+  const last = S.studyTests[`${c.id}_${sub}`]; if (!last) return;
+  const L = last.level || testLevel(c, sub), total = last.total || studyTestTotal(buildStudyTest(c, sub, last.topics, last.seed, L));
+  Modal.open({
+    id: 'tlModal', title: '✍️ ' + t('tlRecordTitle', { name: esc(c.name), subject: esc(t('hwSub_' + sub)) }),
+    body: `<p class="hint" style="margin-top:0">${t('tlRecordHint', { date: fmtDateTime(last.date), level: tlLabel(L) })}</p>
+      <div class="row2"><div><label for="tlScore">${t('enScore')}</label><input id="tlScore" type="number" min="0" max="${total}" inputmode="numeric" autofocus data-change="tl-preview"></div><div><label for="tlTotal">${t('enTotal')}</label><input id="tlTotal" type="number" min="1" value="${total}" data-change="tl-preview"></div></div>
+      <div class="chips mt">${[100, 80, 60, 40].map(p => `<button type="button" class="chip" data-act="tl-quick" data-id="${p}">${p}%</button>`).join('')}</div>
+      <div id="tlPreview" class="notice mt">${t('tlRule', { up: TL_UP, down: TL_DOWN })}</div>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-primary" data-act="tl-save" data-id="${esc(c.id)}">${t('save')}</button>`
+  });
+  ui.tlCtx = { childId: c.id, sub, level: L };
+}
+function tlPreview() {
+  const el = $('#tlPreview'); if (!el) return;
+  const s = int($('#tlScore').value, -1), tot = int($('#tlTotal').value, 0); if (s < 0 || !(tot > 0) || s > tot) { el.textContent = t('tlRule', { up: TL_UP, down: TL_DOWN }); el.className = 'notice mt'; return; }
+  const pct = Math.round(s / tot * 100), L = ui.tlCtx.level;
+  el.className = 'notice mt ' + (pct >= TL_UP ? 'ok' : pct < TL_DOWN ? 'warn' : '');
+  el.textContent = `${pct}% · ` + (pct >= TL_UP ? (L < 5 ? t('tlWillUp', { n: L + 1 }) : t('tlRuleTop')) : pct < TL_DOWN && L > 1 ? t('tlWillDown', { n: L - 1 }) : t('tlWillStay'));
+}
+
+Object.assign(ACTIONS, {
+  'st-print': () => {
+    const c = childById(ui.hwChild), sub = ui.stSub, seed = `${c.id}|${sub}|${Date.now()}`, list = ui.stSel.list, L = testLevel(c, sub);
+    const test = buildStudyTest(c, sub, list, seed, L);
+    S.studyTests[`${c.id}_${sub}`] = { seed, date: isoNow(), topics: list, level: L, total: studyTestTotal(test) }; commit();
+    printDocument(studyTestHtml(c, test, 'sheet'), 'Provinha — ' + c.name);
+  },
+  'st-key': () => { const c = childById(ui.hwChild), sub = ui.stSub, last = S.studyTests[`${c.id}_${sub}`]; if (!last) return; printDocument(studyTestHtml(c, buildStudyTest(c, sub, last.topics, last.seed, last.level), 'key'), t('wsKeyTitle') + ' — ' + c.name); },
+  'tl-result': () => { const c = childById(ui.hwChild); if (c && !isChildMode()) openTlResult(c, ui.stSub); },
+  'tl-quick': el => { const tot = int($('#tlTotal').value, 0); $('#tlScore').value = Math.round(tot * int(el.dataset.id, 0) / 100); tlPreview(); },
+  'tl-save': el => {
+    const c = childById(el.dataset.id), x = ui.tlCtx; if (!c || !x) return;
+    const tot = int($('#tlTotal').value, 0), s = int($('#tlScore').value, -1);
+    if (!(tot > 0) || s < 0 || s > tot) return toast(t('enScoreInvalid'), 'warn');
+    const r = recordTestResult(c, x.sub, s, tot, { level: x.level });
+    delete S.studyTests[`${c.id}_${x.sub}`].total; S.studyTests[`${c.id}_${x.sub}`].scored = true;
+    Modal.close('tlModal'); commit(); tlResultToast(c, x.sub, r);
+  },
+  'tl-adj': el => {
+    if (isChildMode()) return;
+    const c = childById(ui.hwChild), sub = ui.stSub, key = `${c.id}_${sub}`, L = clamp(testLevel(c, sub) + int(el.dataset.id, 0), 1, 5);
+    const rec = S.testLevels[key] || (S.testLevels[key] = { level: L, log: [] }); rec.level = L; commit();
+  },
+  // inglês: a provinha do mês também segue o nível
+  'en-print': () => {
+    const c = childById(ui.enChild), L = testLevel(c, 'english'), level = enLevelFromTest(L), topics = studiedThisMonth(c, 'english');
+    const test = buildEnglishTest(level, `${c.id}|${monthKey()}|${ui.enSeedBump || 0}`, topics);
+    ui.enLastTest = { childId: c.id, total: test.total, level, tl: L };
+    printDocument(worksheetHtml(c, test, !isChildMode()), t('enPrintTest') + ' — ' + c.name);
+  }
+});
+Object.assign(CHANGES, { 'tl-preview': () => tlPreview() });
+(function () {
+  // registrar o resultado do inglês também ajusta o nível
+  const save0 = ACTIONS['en-result-save'];
+  ACTIONS['en-result-save'] = el => {
+    const c = childById(el.dataset.id), n0 = S.english.tests.length;
+    const total = int($('#erTotal') && $('#erTotal').value, 0), score = int($('#erScore') && $('#erScore').value, -1);
+    save0(el);
+    if (c && S.english.tests.length > n0) { const r = recordTestResult(c, 'english', score, total, { pointsPerTest: false, level: ui.enLastTest && ui.enLastTest.childId === c.id ? ui.enLastTest.tl : undefined }); commit(); tlResultToast(c, 'english', r); }
+  };
+  // o modal de resultado do inglês já vem no nível certo
+  const open0 = openResultModal;
+  openResultModal = function (c) { open0(c); const sel = $('#erLevel'); if (sel) { sel.value = String(enLevelFromTest(testLevel(c, 'english'))); sel.dispatchEvent(new Event('change', { bubbles: true })); } };
+  // seção de inglês mostra o nível
+  const en = SECTIONS.find(s => s.id === 'ingles'), up0 = en.update;
+  en.update = function () {
+    up0.call(this); const c = childById(ui.enChild); if (!c) return;
+    const btn = $('#enBody [data-act="en-print"]'); if (btn) btn.closest('.card').querySelector('.card-head').insertAdjacentHTML('afterend', tlBoxHtml(c, 'english').replace(/data-act="tl-adj"/g, 'data-act="tl-adj-en"'));
+  };
+  ACTIONS['tl-adj-en'] = el => { if (isChildMode()) return; const c = childById(ui.enChild), key = `${c.id}_english`, L = clamp(testLevel(c, 'english') + int(el.dataset.id, 0), 1, 5); const rec = S.testLevels[key] || (S.testLevels[key] = { level: L, log: [] }); rec.level = L; commit(); };
+})();
+
+/* ---------- dados ---------- */
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    d.testLevels = {};
+    if (raw.testLevels && typeof raw.testLevels === 'object') Object.entries(raw.testLevels).forEach(([k, v]) => {
+      const m = /^(.+)_(pt|math|english|science|social)$/.exec(k); if (!m || !v || typeof v !== 'object') return; const cid = mapChild(m[1]); if (!cid) return;
+      d.testLevels[`${cid}_${m[2]}`] = { level: clamp(int(v.level, 1), 1, 5), log: (Array.isArray(v.log) ? v.log : []).filter(x => x && typeof x === 'object').map(x => ({ id: cleanId(x.id) || uid('tl'), date: safeIso(x.date), level: clamp(int(x.level, 1), 1, 5), score: Math.max(0, int(x.score, 0)), total: Math.max(1, int(x.total, 1)), pct: clamp(int(x.pct, 0), 0, 100), move: ['up', 'down', 'stay', 'top'].includes(x.move) ? x.move : 'stay' })).slice(0, 40) };
+    });
+    const ts = raw.tlSettings && typeof raw.tlSettings === 'object' ? raw.tlSettings : {};
+    d.tlSettings = { upBonus: clamp(int(ts.upBonus, 30), 0, 500), perTest: clamp(int(ts.perTest, 10), 0, 200) };
+    // provinha impressa guarda nível e total
+    Object.entries(d.studyTests).forEach(([k, v]) => { const r = raw.studyTests && raw.studyTests[k]; if (r) { if (r.level) v.level = clamp(int(r.level, 1), 1, 5); if (r.total) v.total = clamp(int(r.total, 1), 1, 200); if (r.scored) v.scored = true; } });
+  };
+})();
+
+/* =====================================================================
+   "Nossa família": reunião de domingo (guiada), desafio da semana e
+   diário da família (frases, primeiras vezes, momentos), com livrinho
+   para imprimir no fim do ano.
+   ===================================================================== */
+
+const DIARY_KINDS = [{ id: 'funny', icon: '😂' }, { id: 'first', icon: '🌟' }, { id: 'moment', icon: '❤️' }, { id: 'proud', icon: '🏆' }, { id: 'good', icon: '💬' }];
+const CHALLENGE_IDEAS = [
+  { key: 'ch_noFight', icon: '🕊️' }, { key: 'ch_bed', icon: '🛏️' }, { key: 'ch_read', icon: '📚' }, { key: 'ch_thanks', icon: '🙏' }, { key: 'ch_veggies', icon: '🥦' },
+  { key: 'ch_tidy', icon: '🧸' }, { key: 'ch_help', icon: '🤝' }, { key: 'ch_noScreen', icon: '📵' }, { key: 'ch_english', icon: '🇬🇧' }, { key: 'ch_early', icon: '🌙' }
+];
+function diaryKind(id) { return DIARY_KINDS.find(k => k.id === id) || DIARY_KINDS[2]; }
+function addDiary({ day, kind, childIds, text: txt }) {
+  const e = { id: uid('dy'), day: /^\d{4}-\d{2}-\d{2}$/.test(day || '') ? day : dayKey(), kind: diaryKind(kind).id, childIds: (childIds || []).filter(id => childById(id)), text: text(txt, 500) };
+  if (!e.text) return null; S.diary.unshift(e); S.diary.sort((a, b) => b.day.localeCompare(a.day)); return e;
+}
+function challengeName(ch) { return ch.key ? t(ch.key) : ch.text; }
+/** Semana que a reunião comemora: no fim de semana é a atual; nos outros dias, a anterior. */
+function meetingWeek() { const d = new Date().getDay(); return weekBounds(d === 0 || d === 6 || d === 5 ? 0 : -1); }
+function weekStats(c, from, to) {
+  const h = S.history.filter(x => x.childId === c.id && inRange(x.date, from, to));
+  return {
+    tasks: h.filter(x => x.type === 'task').length,
+    earned: h.filter(x => x.points > 0 && x.type !== 'reward').reduce((s, x) => s + x.points, 0),
+    pages: homeworkPages(c, from, to),
+    books: S.reading.books.filter(b => b.childId === c.id && inRange(b.date, from, to)).length,
+    helps: S.behaviorNotes.filter(n => n.childId === c.id && n.type === 'positive' && n.help && inRange(n.date, from, to)).length,
+    good: S.behaviorNotes.filter(n => n.childId === c.id && n.type === 'positive' && inRange(n.date, from, to)).length,
+    bad: S.behaviorNotes.filter(n => n.childId === c.id && n.type === 'negative' && !n.warning && inRange(n.date, from, to)).length
+  };
+}
+
+/* ---------- desafio da semana (painel) ---------- */
+function challengeBanner() {
+  const ch = S.challenge; if (!ch || ch.result) return '';
+  const parent = !isChildMode();
+  return `<div class="notice ch-banner"><span class="ch-ico">${esc(ch.icon)}</span><div><small>🚀 ${t('chTitle')}</small><b>${esc(challengeName(ch))}</b></div>
+    ${parent ? `<div class="ch-act"><button type="button" class="btn btn-success btn-sm" data-act="ch-done" data-id="yes">✔ ${t('chYes')}</button><button type="button" class="btn btn-ghost btn-sm" data-act="ch-done" data-id="no">${t('chNo')}</button></div>` : ''}</div>`;
+}
+function finishChallenge(ok) {
+  const ch = S.challenge; if (!ch) return;
+  ch.result = ok ? 'yes' : 'no'; ch.doneAt = isoNow();
+  if (ok && S.meetingSettings.challengeBonus) S.children.forEach(c => recordBehavior(c.id, 'positive', `🚀 ${t('chTitle')}: ${challengeName(ch)}`, S.meetingSettings.challengeBonus, 0));
+  S.challengePast.unshift({ ...ch }); S.challengePast = S.challengePast.slice(0, 60); S.challenge = null;
+}
+
+/* ---------- reunião de domingo (passo a passo) ---------- */
+const MT_STEPS = ['party', 'goal', 'good', 'next', 'end'];
+function openMeeting() {
+  if (isChildMode()) return;
+  ui.mt = { step: 0, hi: [], good: {}, saveDiary: true, ch: null, prev: null };
+  renderMeeting();
+}
+function renderMeeting() {
+  const m = ui.mt, step = MT_STEPS[m.step], { from, to } = meetingWeek(), kids = S.children;
+  let body = '';
+  if (step === 'party') {
+    const stats = kids.map(c => ({ c, s: weekStats(c, from, to) }));
+    body = `<p class="mt-lead">🎉 ${t('mtPartyLead', { range: esc(weekLabel(from, to)) })}</p><div class="mt-kids">${stats.map(({ c, s }) => `<div class="mt-kid ${m.hi.includes(c.id) ? 'hi' : ''}" style="--c:${c.accentColor}">
+      <div class="mt-kid-top">${avatar(c)}<b>${esc(c.name)}</b></div>
+      <ul><li>✅ ${t('mtTasks', { n: s.tasks })}</li><li>⭐ ${t('mtEarned', { n: s.earned })}</li>${s.pages ? `<li>📝 ${t('mtPages', { n: s.pages })}</li>` : ''}${s.books ? `<li>📚 ${t('mtBooks', { n: s.books })}</li>` : ''}${s.helps ? `<li>🤝 ${t('mtHelps', { n: s.helps })}</li>` : ''}${s.good ? `<li>👍 ${t('mtGood', { n: s.good })}</li>` : ''}</ul>
+      <button type="button" class="btn btn-sm ${m.hi.includes(c.id) ? 'btn-primary' : 'btn-soft'}" data-act="mt-hi" data-id="${esc(c.id)}">🌟 ${t('mtHighlight')}</button></div>`).join('')}</div>
+      <p class="hint">${t('mtHighlightHint', { n: S.meetingSettings.highlightBonus })}</p>`;
+  } else if (step === 'goal') {
+    const ch = S.challenge;
+    body = `<p class="mt-lead">🎯 ${t('mtGoalLead')}</p>${familyGoalCard() || `<p class="hint">${t('fgEmptyHint')}</p>`}
+      ${ch && !ch.result ? `<div class="card mt"><b>🚀 ${t('mtLastChallenge')}</b><p style="margin:6px 0">${esc(ch.icon)} ${esc(challengeName(ch))}</p><div class="actions">${['yes', 'no'].map(v => `<button type="button" class="btn btn-sm ${m.prev === v ? 'btn-primary' : 'btn-soft'}" data-act="mt-prev" data-id="${v}">${v === 'yes' ? '✔ ' + t('chYes') : t('chNo')}</button>`).join('')}</div>${S.meetingSettings.challengeBonus ? `<p class="hint">${t('chBonusHint', { n: S.meetingSettings.challengeBonus })}</p>` : ''}</div>` : ''}`;
+  } else if (step === 'good') {
+    body = `<p class="mt-lead">💬 ${t('mtGoodLead')}</p>${kids.map(c => `<div class="field mt-good"><label for="mtg_${esc(c.id)}">${avatar(c, 'sm')} ${esc(c.name)}</label><textarea id="mtg_${esc(c.id)}" data-mt-good="${esc(c.id)}" maxlength="300" rows="2" placeholder="${esc(t('mtGoodPh'))}">${esc(m.good[c.id] || '')}</textarea></div>`).join('')}
+      <label class="check mt"><input type="checkbox" id="mtDiary" ${m.saveDiary ? 'checked' : ''}> ${t('mtSaveDiary')}</label>`;
+  } else if (step === 'next') {
+    body = `<p class="mt-lead">🚀 ${t('mtNextLead')}</p><div class="ch-ideas">${CHALLENGE_IDEAS.map(x => `<button type="button" class="ch-idea ${m.ch && m.ch.key === x.key ? 'on' : ''}" data-act="mt-ch" data-id="${x.key}"><span>${x.icon}</span>${esc(t(x.key))}</button>`).join('')}</div>
+      <div class="row2 field"><div><label for="mtChText">${t('mtOwnChallenge')}</label><input id="mtChText" maxlength="80" value="${esc(m.ch && !m.ch.key ? m.ch.text : '')}" placeholder="${esc(t('mtOwnPh'))}"></div><div><label for="mtChIcon">${t('icon')}</label><input id="mtChIcon" maxlength="8" value="${esc(m.ch && !m.ch.key ? m.ch.icon : '🚀')}"></div></div>`;
+  } else {
+    const hi = m.hi.map(id => childName(id));
+    body = `<div class="mt-end"><div class="mt-big">👏</div><p class="mt-lead">${t('mtEndLead')}</p><ul>
+      ${hi.length ? `<li>🌟 ${t('mtEndHi', { names: esc(hi.join(', ')), n: S.meetingSettings.highlightBonus })}</li>` : ''}
+      ${m.prev ? `<li>🚀 ${m.prev === 'yes' ? t('mtEndPrevYes') : t('mtEndPrevNo')}</li>` : ''}
+      ${Object.values(m.good).filter(Boolean).length ? `<li>💬 ${t('mtEndGood', { n: Object.values(m.good).filter(Boolean).length })}</li>` : ''}
+      ${m.ch ? `<li>${esc(m.ch.icon)} ${t('mtEndNext', { name: esc(challengeName(m.ch)) })}</li>` : ''}</ul></div>`;
+  }
+  const dots = MT_STEPS.map((s, i) => `<span class="${i === m.step ? 'on' : i < m.step ? 'done' : ''}"></span>`).join('');
+  Modal.open({
+    id: 'mtModal', wide: true, title: '👨‍👩‍👧‍👦 ' + t('mtTitle'),
+    body: `<div class="mt-dots">${dots}</div><h3 class="mt-step">${t('mtStep_' + step)}</h3>${body}`,
+    foot: `${m.step ? `<button type="button" class="btn btn-ghost" data-act="mt-go" data-id="-1">← ${t('back')}</button>` : '<span></span>'}${step === 'end' ? `<button type="button" class="btn btn-soft" data-act="mt-print">🖨️ ${t('print')}</button><button type="button" class="btn btn-primary" data-act="mt-finish">✅ ${t('mtFinish')}</button>` : `<button type="button" class="btn btn-primary" data-act="mt-go" data-id="1">${t('next')} →</button>`}`
+  });
+}
+function mtCollect() {
+  const m = ui.mt; if (!m) return;
+  $$('#mtModal [data-mt-good]').forEach(el => { m.good[el.dataset.mtGood] = text(el.value, 300); });
+  if ($('#mtDiary')) m.saveDiary = $('#mtDiary').checked;
+  if ($('#mtChText')) { const tx = text($('#mtChText').value, 80); if (tx) m.ch = { key: null, text: tx, icon: text($('#mtChIcon').value, 8) || '🚀' }; else if (m.ch && !m.ch.key) m.ch = null; }
+}
+function meetingSummaryHtml(rec) {
+  const { from, to } = meetingWeek();
+  return `<div class="ps-page pr pr-family mt-print"><div class="pr-hero" style="--c:#6c63ff"><span class="pr-av pr-emoji">👨‍👩‍👧‍👦</span><div class="pr-hero-txt"><div class="pr-kicker">${esc(t('mtTitle'))}</div><div class="pr-title">${esc(S.familyName)}</div><div class="pr-sub">${esc(weekLabel(from, to))}</div></div></div>
+    <div class="mtp-grid">${S.children.map(c => { const s = weekStats(c, from, to); return `<div class="mtp-kid" style="--c:${c.accentColor}"><h4>${printAvatar(c)} ${esc(c.name)} ${rec.highlights.includes(c.id) ? '🌟' : ''}</h4><p>✅ ${s.tasks} · ⭐ ${s.earned}${s.pages ? ' · 📝 ' + s.pages : ''}${s.books ? ' · 📚 ' + s.books : ''}</p>${rec.good[c.id] ? `<p class="mtp-good">💬 “${esc(rec.good[c.id])}”</p>` : '<div class="pr-lines"><span></span><span></span></div>'}</div>`; }).join('')}</div>
+    <div class="mtp-ch"><b>🚀 ${esc(t('chTitle'))}</b><p>${rec.challenge ? esc(rec.challenge) : '______________________________________________'}</p></div>
+    <div class="pr-sign" style="margin-top:24px">${S.children.map(c => `<div><span></span>${esc(c.name)}</div>`).join('')}<div><span></span>${esc(t('prSignParent'))}</div></div></div>`;
+}
+function mtRecord() { const m = ui.mt; return { highlights: m.hi.slice(), good: { ...m.good }, challenge: m.ch ? `${m.ch.icon} ${challengeName(m.ch)}` : '' }; }
+
+Object.assign(ACTIONS, {
+  'mt-open': () => openMeeting(),
+  'mt-hi': el => { const m = ui.mt, id = el.dataset.id; m.hi = m.hi.includes(id) ? m.hi.filter(x => x !== id) : [...m.hi, id]; renderMeeting(); },
+  'mt-prev': el => { ui.mt.prev = ui.mt.prev === el.dataset.id ? null : el.dataset.id; renderMeeting(); },
+  'mt-ch': el => { mtCollect(); const x = CHALLENGE_IDEAS.find(i => i.key === el.dataset.id); ui.mt.ch = ui.mt.ch && ui.mt.ch.key === x.key ? null : { key: x.key, text: '', icon: x.icon }; renderMeeting(); },
+  'mt-go': el => { mtCollect(); ui.mt.step = clamp(ui.mt.step + int(el.dataset.id, 0), 0, MT_STEPS.length - 1); renderMeeting(); },
+  'mt-print': () => { mtCollect(); printDocument(meetingSummaryHtml(mtRecord()), t('mtTitle')); },
+  'mt-finish': () => {
+    const m = ui.mt; if (!m) return; mtCollect();
+    const bonus = S.meetingSettings.highlightBonus;
+    m.hi.forEach(id => recordBehavior(id, 'positive', '🌟 ' + t('mtHighlightNote'), bonus, 0));
+    if (m.prev && S.challenge && !S.challenge.result) finishChallenge(m.prev === 'yes');
+    if (m.saveDiary) Object.entries(m.good).forEach(([id, tx]) => { if (tx) addDiary({ day: dayKey(), kind: 'good', childIds: [id], text: tx }); });
+    if (m.ch) { if (S.challenge && !S.challenge.result) { S.challengePast.unshift({ ...S.challenge, result: 'skip' }); } S.challenge = { id: uid('ch'), key: m.ch.key, text: m.ch.key ? '' : m.ch.text, icon: m.ch.icon, start: isoNow(), result: null, doneAt: null }; }
+    S.meetings.unshift({ id: uid('mt'), date: isoNow(), ...mtRecord() }); S.meetings = S.meetings.slice(0, 120);
+    Modal.close('mtModal'); ui.mt = null; commit(); toast('👏 ' + t('mtSaved'), 'success');
+  },
+  'ch-done': async el => { const ok = el.dataset.id === 'yes'; if (!ok && !(await askConfirm(t('chNoConfirm')))) return; finishChallenge(ok); commit(); toast(ok ? '🎉 ' + t('chDoneToast', { n: S.meetingSettings.challengeBonus }) : t('saved'), 'success'); },
+  'ch-new': () => openMeeting()
+});
+
+/* ---------- diário ---------- */
+function diaryEntryHtml(e, manage) {
+  const k = diaryKind(e.kind), who = e.childIds.length ? e.childIds.map(id => { const c = childById(id); return c ? `<span class="dy-who" style="--c:${c.accentColor}">${esc(c.avatar)} ${esc(c.name)}</span>` : ''; }).join('') : `<span class="dy-who">👨‍👩‍👧‍👦 ${t('dyFamily')}</span>`;
+  return `<div class="dy-entry dy-${k.id}"><div class="dy-ico">${k.icon}</div><div class="dy-body"><div class="dy-meta">${who}<small>${esc(fmtDay(e.day))} · ${esc(t('dk_' + k.id))}</small></div><p>${esc(e.text)}</p></div>${manage ? `<button type="button" class="icon-btn danger" data-act="dy-del" data-id="${esc(e.id)}" aria-label="${esc(t('delete'))}">🗑️</button>` : ''}</div>`;
+}
+function fmtDay(day) { return keyToDate(day).toLocaleDateString(locale(), { day: '2-digit', month: 'long', year: 'numeric' }); }
+function diaryBookHtml(year) {
+  const list = S.diary.filter(e => e.day.startsWith(String(year))).slice().sort((a, b) => a.day.localeCompare(b.day));
+  const months = {}; list.forEach(e => { const k = e.day.slice(0, 7); (months[k] = months[k] || []).push(e); });
+  const cover = `<div class="ps-page dy-cover"><div class="dy-cover-in"><div class="dy-cover-ico">📔</div><h1>${esc(t('dyBookTitle'))}</h1><h2>${esc(S.familyName)} · ${year}</h2><div class="dy-cover-kids">${S.children.map(c => `<span>${printAvatar(c)}<b>${esc(c.name)}</b></span>`).join('')}</div><p>${esc(t('dyBookCount', { n: list.length }))}</p></div></div>`;
+  const body = Object.entries(months).map(([k, es]) => `<div class="dy-month"><h3>${esc(monthLabel(keyToDate(k + '-01')))}</h3><div class="dy-grid">${es.map(e => diaryEntryHtml(e, false)).join('')}</div></div>`).join('');
+  return cover + `<div class="ps-page dy-book">${body || `<p class="hint">${esc(t('dyEmpty'))}</p>`}</div>`;
+}
+const FAMILY_SECTION = {
+  id: 'familia', icon: '👨‍👩‍👧‍👦', nav: 'navFamily', child: true,
+  build: () => `<div id="fmBody"></div>`,
+  update() {
+    const parent = !isChildMode(), kids = visibleChildren();
+    ui.dyKind = DIARY_KINDS.some(k => k.id === ui.dyKind) ? ui.dyKind : 'funny';
+    ui.dyWho = (ui.dyWho || []).filter(id => childById(id));
+    const filter = ui.dyFilter && childById(ui.dyFilter) ? ui.dyFilter : '';
+    const list = S.diary.filter(e => !filter || e.childIds.includes(filter) || !e.childIds.length);
+    const years = [...new Set(S.diary.map(e => e.day.slice(0, 4)))].sort().reverse(); if (!years.includes(String(new Date().getFullYear()))) years.unshift(String(new Date().getFullYear()));
+    const last = S.meetings[0], ch = S.challenge, isSun = new Date().getDay() === 0;
+    $('#fmBody').innerHTML = `<div class="grid g2">
+      ${card('📅 ' + t('mtCardTitle'), `<p class="hint" style="margin-top:-6px">${t('mtCardHint')}</p>
+        ${parent ? `<button type="button" class="btn ${isSun ? 'btn-primary' : 'btn-soft'} btn-block" data-act="mt-open">▶️ ${t('mtStart')}</button>` : ''}
+        ${last ? `<p class="hint">${t('mtLast', { date: fmtDateTime(last.date) })}</p>` : ''}
+        <h3 class="mt">🚀 ${t('chTitle')}</h3>${ch ? challengeBanner() : `<p class="hint">${t('chNone')}</p>`}
+        ${S.challengePast.length ? `<div class="ch-past">${S.challengePast.slice(0, 6).map(x => `<span class="${x.result}">${x.result === 'yes' ? '✅' : x.result === 'no' ? '❌' : '⏭️'} ${esc(x.icon)} ${esc(challengeName(x))}</span>`).join('')}</div>` : ''}
+        ${parent ? `<details class="mt"><summary>⚙️ ${t('mtRules')}</summary><div class="row2 mt"><div><label for="mtHiB">${t('mtRuleHi')}</label><input id="mtHiB" type="number" min="0" max="500" value="${S.meetingSettings.highlightBonus}"></div><div><label for="mtChB">${t('mtRuleCh')}</label><input id="mtChB" type="number" min="0" max="500" value="${S.meetingSettings.challengeBonus}"></div></div><button type="button" class="btn btn-primary btn-sm mt" data-act="mt-rules">${t('save')}</button></details>` : ''}`)}
+      ${parent ? card('✍️ ' + t('dyAddTitle'), `<label>${t('dyKind')}</label><div class="chips">${DIARY_KINDS.map(k => `<button type="button" class="chip ${ui.dyKind === k.id ? 'on' : ''}" data-act="dy-kind" data-id="${k.id}">${k.icon} ${esc(t('dk_' + k.id))}</button>`).join('')}</div>
+        <label class="mt">${t('dyWho')}</label><div class="chips">${S.children.map(c => `<button type="button" class="chip ${ui.dyWho.includes(c.id) ? 'on' : ''}" data-act="dy-who" data-id="${esc(c.id)}">${esc(c.avatar)} ${esc(c.name)}</button>`).join('')}</div><p class="hint" style="margin:4px 0 0">${t('dyWhoHint')}</p>
+        <div class="field"><label for="dyText">${t('dyText')}</label><textarea id="dyText" maxlength="500" rows="3" placeholder="${esc(t('dyPh_' + ui.dyKind))}"></textarea></div>
+        <div class="row2"><div><label for="dyDay">${t('date')}</label><input id="dyDay" type="date" value="${dayKey()}" max="${dayKey()}"></div><div style="display:flex;align-items:flex-end"><button type="button" class="btn btn-primary btn-block" data-act="dy-add">${t('dySave')}</button></div></div>`) : ''}
+    </div>
+    ${card('📔 ' + t('dyTitle'), `<div class="dy-tools"><div class="chips"><button type="button" class="chip ${!filter ? 'on' : ''}" data-act="dy-filter" data-id="">👨‍👩‍👧‍👦 ${t('dyAll')}</button>${kids.map(c => `<button type="button" class="chip ${filter === c.id ? 'on' : ''}" data-act="dy-filter" data-id="${esc(c.id)}">${esc(c.avatar)} ${esc(c.name)}</button>`).join('')}</div>
+      <div class="actions"><select id="dyYear" aria-label="${esc(t('dyYear'))}">${years.map(y => `<option>${y}</option>`).join('')}</select><button type="button" class="btn btn-soft btn-sm" data-act="dy-print">🖨️ ${t('dyPrint')}</button></div></div>
+      ${list.length ? `<div class="dy-list">${list.slice(0, ui.dyMore ? 500 : 30).map(e => diaryEntryHtml(e, parent)).join('')}</div>${list.length > 30 && !ui.dyMore ? `<button type="button" class="btn btn-ghost btn-block" data-act="dy-more">${t('dyMore', { n: list.length - 30 })}</button>` : ''}` : emptyBox(t('dyEmpty'))}
+      <p class="hint">${t('dyHint')}</p>`, { cls: 'mt' })}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'album') + 1, 0, FAMILY_SECTION);
+
+Object.assign(ACTIONS, {
+  'dy-kind': el => { ui.dyKind = el.dataset.id; const tx = $('#dyText') && $('#dyText').value; render(); if (tx) $('#dyText').value = tx; },
+  'dy-who': el => { const id = el.dataset.id; ui.dyWho = ui.dyWho.includes(id) ? ui.dyWho.filter(x => x !== id) : [...ui.dyWho, id]; el.classList.toggle('on'); },
+  'dy-filter': el => { ui.dyFilter = el.dataset.id; render(); },
+  'dy-more': () => { ui.dyMore = true; render(); },
+  'dy-add': () => {
+    const tx = text($('#dyText').value, 500); if (!tx) return toast(t('dyNeedText'), 'warn');
+    const dv = $('#dyDay').value; addDiary({ day: /^\d{4}-\d{2}-\d{2}$/.test(dv) && dv <= dayKey() ? dv : dayKey(), kind: ui.dyKind, childIds: ui.dyWho, text: tx });
+    ui.dyWho = []; commit(); toast('📔 ' + t('dySaved'), 'success');
+  },
+  'dy-del': async el => { if (!(await askConfirm(t('dyDelConfirm'), { danger: true, okLabel: t('delete') }))) return; S.diary = S.diary.filter(e => e.id !== el.dataset.id); commit(); toast(t('deleted')); },
+  'dy-print': () => { const y = $('#dyYear') ? $('#dyYear').value : String(new Date().getFullYear()); printDocument(diaryBookHtml(y), t('dyBookTitle') + ' ' + y); },
+  'mt-rules': () => { S.meetingSettings.highlightBonus = clamp(int($('#mtHiB').value, 20), 0, 500); S.meetingSettings.challengeBonus = clamp(int($('#mtChB').value, 20), 0, 500); commit(); toast(t('saved'), 'success'); }
+});
+
+/* ---------- painel: desafio e lembrete da reunião ---------- */
+(function () {
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), b0 = dash.build, u0 = dash.update;
+  dash.build = () => b0().replace('<div id="dGoal"></div>', '<div id="dGoal"></div><div id="dChallenge"></div><div id="dMeeting"></div>');
+  dash.update = function () {
+    u0.call(this);
+    $('#dChallenge').innerHTML = challengeBanner();
+    const last = S.meetings[0], today = new Date(), done = last && dayKey(last.date) === dayKey();
+    $('#dMeeting').innerHTML = !isChildMode() && today.getDay() === 0 && !done ? `<div class="notice mt-banner"><span>👨‍👩‍👧‍👦 ${t('mtBanner')}</span><button type="button" class="btn btn-primary btn-sm" data-act="mt-open">▶️ ${t('mtStart')}</button></div>` : '';
+  };
+})();
+
+/* ---------- dados ---------- */
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    d.diary = (Array.isArray(raw.diary) ? raw.diary : []).map(e => { if (!e || typeof e !== 'object' || !text(e.text, 500) || !/^\d{4}-\d{2}-\d{2}$/.test(e.day)) return null; return { id: cleanId(e.id) || uid('dy'), day: e.day, kind: diaryKind(e.kind).id, childIds: Array.isArray(e.childIds) ? [...new Set(e.childIds.map(mapChild).filter(Boolean))] : [], text: text(e.text, 500) }; }).filter(Boolean).sort((a, b) => b.day.localeCompare(a.day)).slice(0, 5000);
+    const cleanCh = x => { if (!x || typeof x !== 'object') return null; const key = CHALLENGE_IDEAS.some(i => i.key === x.key) ? x.key : null; const tx = text(x.text, 80); if (!key && !tx) return null; return { id: cleanId(x.id) || uid('ch'), key, text: key ? '' : tx, icon: text(x.icon || '🚀', 8) || '🚀', start: safeIso(x.start), result: ['yes', 'no', 'skip'].includes(x.result) ? x.result : null, doneAt: x.doneAt ? safeIso(x.doneAt) : null }; };
+    d.challenge = cleanCh(raw.challenge); if (d.challenge && d.challenge.result) d.challenge = null;
+    d.challengePast = (Array.isArray(raw.challengePast) ? raw.challengePast : []).map(cleanCh).filter(x => x && x.result).slice(0, 60);
+    d.meetings = (Array.isArray(raw.meetings) ? raw.meetings : []).map(x => { if (!x || typeof x !== 'object') return null; const good = {}; if (x.good && typeof x.good === 'object') Object.entries(x.good).forEach(([k, v]) => { const id = mapChild(k); if (id && typeof v === 'string') good[id] = text(v, 300); }); return { id: cleanId(x.id) || uid('mt'), date: safeIso(x.date), highlights: Array.isArray(x.highlights) ? x.highlights.map(mapChild).filter(Boolean) : [], good, challenge: text(x.challenge, 100) }; }).filter(Boolean).slice(0, 120);
+    const ms = raw.meetingSettings && typeof raw.meetingSettings === 'object' ? raw.meetingSettings : {};
+    d.meetingSettings = { highlightBonus: clamp(int(ms.highlightBonus, 20), 0, 500), challengeBonus: clamp(int(ms.challengeBonus, 20), 0, 500) };
+    // marca de "ajudou o irmão" nas observações
+    const rawNotes = Array.isArray(raw.behaviorNotes) ? raw.behaviorNotes : [];
+    d.behaviorNotes.forEach(n => { const x = rawNotes.find(y => y && y.id === n.id); if (x && x.help) n.help = cleanId(x.help) || true; });
+  };
+})();
+
+/* =====================================================================
+   Fechamento do dia: uma tela só, à noite, passando por cada criança
+   (tarefas, lição, livro, carinha, elogio e diário). Feito para quem
+   marca tudo é o responsável, já que as crianças não têm celular.
+   ===================================================================== */
+
+function dcTasks(c) {
+  return tasksForChild(c).filter(x => x.frequency !== 'oneOff').map(x => ({ x, st: taskStatus(x, c) })).filter(({ st }) => st.state !== 'off')
+    .sort((a, b) => (a.st.state === 'done') - (b.st.state === 'done'));
+}
+function dayClosed(day = dayKey()) { return S.dayCloses.find(x => x.id === day) || null; }
+function openDayClose() {
+  if (isChildMode()) return;
+  ui.dc = { i: 0, kids: S.children.map(c => c.id), sum: { tasks: 0, pages: 0, books: 0, praise: 0, diary: 0, moods: 0 } };
+  renderDayClose();
+}
+function renderDayClose() {
+  const d = ui.dc, last = d.i >= d.kids.length;
+  const tabs = `<div class="dc-tabs">${d.kids.map((id, i) => { const c = childById(id); return `<button type="button" class="dc-tab ${i === d.i ? 'on' : i < d.i ? 'done' : ''}" data-act="dc-go" data-id="${i}" style="--c:${c.accentColor}">${avatar(c, 'sm')}<span>${esc(c.name)}</span></button>`; }).join('')}<button type="button" class="dc-tab ${last ? 'on' : ''}" data-act="dc-go" data-id="${d.kids.length}">🌙<span>${t('dcEnd')}</span></button></div>`;
+  let body;
+  if (last) {
+    const s = d.sum;
+    body = `<div class="mt-end"><div class="mt-big">🌙</div><p class="mt-lead">${t('dcDoneLead')}</p><ul>
+      <li>✅ ${t('dcSumTasks', { n: s.tasks })}</li>${s.pages ? `<li>📝 ${t('dcSumPages', { n: s.pages })}</li>` : ''}${s.books ? `<li>📚 ${t('dcSumBooks', { n: s.books })}</li>` : ''}${s.moods ? `<li>😊 ${t('dcSumMoods', { n: s.moods })}</li>` : ''}${s.praise ? `<li>⭐ ${t('dcSumPraise', { n: s.praise })}</li>` : ''}${s.diary ? `<li>📔 ${t('dcSumDiary', { n: s.diary })}</li>` : ''}</ul>
+      ${S.children.map(c => { const p = childToday(c); return `<div class="dc-kidline" style="--c:${c.accentColor}">${avatar(c, 'sm')}<b>${esc(c.name)}</b><span>${p.done}/${p.total}</span><span class="dc-mood">${moodEmoji((moodOf(c, dayKey()) || {}).mood) || '—'}</span><b>${c.points} ⭐</b></div>`; }).join('')}</div>`;
+  } else {
+    const c = childById(d.kids[d.i]), list = dcTasks(c), today = dayKey();
+    const hwToday = S.homework.entries.filter(x => x.childId === c.id && dayKey(x.date) === today).reduce((s, x) => s + x.pages, 0);
+    const bookToday = S.reading.books.find(b => b.childId === c.id && dayKey(b.date) === today);
+    const mood = (moodOf(c, today) || {}).mood || 0;
+    body = `<div class="dc-kid" style="--c:${c.accentColor}">
+      <h4>✅ ${t('dcTasksTitle')}</h4>
+      ${list.length ? `<div class="dc-tasks">${list.map(({ x, st }) => `<label class="dc-task ${st.state}"><input type="checkbox" data-dc-task="${esc(x.id)}" ${st.state === 'done' ? 'checked disabled' : ''}><span class="dc-ti">${esc(x.icon)}</span><span class="dc-tn">${esc(taskName(x))}${x.frequency === 'weekly' ? ` <small>${t('freqWeekly')}</small>` : ''}${st.state === 'pending' ? ` <small class="wait">⏳ ${t('dcPending')}</small>` : ''}</span><b>+${x.points}</b></label>`).join('')}</div>
+        <div class="actions" style="margin-top:6px"><button type="button" class="btn btn-ghost btn-sm" data-act="dc-all">☑️ ${t('dcAll')}</button></div>` : `<p class="hint">${t('dcNoTasks')}</p>`}
+      <div class="dc-row">
+        <div><h4>📝 ${t('navHomework')}</h4>${hwToday ? `<p class="hint">✔ ${t('dcHwDone', { n: hwToday })}</p>` : ''}<div class="chips dc-pages">${[1, 2, 3, 4, 5, 6, 8, 10].map(n => `<button type="button" class="chip" data-act="dc-pages" data-id="${n}">${n}</button>`).join('')}</div>
+          <div class="row2"><input id="dcPages" type="number" min="0" max="200" inputmode="numeric" placeholder="${esc(t('dcPagesPh'))}"><select id="dcSub">${HW_SUBJECTS.map(s => `<option value="${s}">${esc(t('hwSub_' + s))}</option>`).join('')}</select></div></div>
+        <div><h4>📚 ${t('navReading')}</h4>${bookToday ? `<p class="hint">✔ ${esc(bookToday.title)}</p>` : ''}<input id="dcBook" maxlength="100" placeholder="${esc(t('dcBookPh'))}"></div>
+      </div>
+      <h4>💛 ${t('dcMood', { name: esc(c.name) })}</h4><div class="mood-faces dc-moods">${MOODS.map(m => `<button type="button" class="mood-face ${mood === m.v ? 'on' : ''}" data-act="dc-mood" data-id="${m.v}" title="${esc(t('mood_' + m.v))}">${m.e}</button>`).join('')}</div>
+      <div class="dc-row">
+        <div><h4>⭐ ${t('dcPraise')}</h4><input id="dcPraise" maxlength="150" placeholder="${esc(t('dcPraisePh'))}"><div class="chips mt">${[0, 5, 10].map(n => `<button type="button" class="chip ${n === 5 ? 'on' : ''}" data-act="dc-pp" data-id="${n}">+${n}</button>`).join('')}</div></div>
+        <div><h4>📔 ${t('dcDiary')}</h4><textarea id="dcDiary" maxlength="500" rows="2" placeholder="${esc(t('dcDiaryPh', { name: c.name }))}"></textarea></div>
+      </div>
+      <div class="actions"><button type="button" class="btn btn-soft btn-sm" data-act="cq-open" data-id="${esc(c.id)}">⚠️ ${t('cqLose')}</button><button type="button" class="btn btn-soft btn-sm" data-act="help-open" data-id="${esc(c.id)}">🤝 ${t('hpBtn')}</button></div>
+    </div>`;
+    ui.dcMood = mood; ui.dcPP = 5;
+  }
+  Modal.open({
+    id: 'dcModal', wide: true, title: '🌙 ' + t('dcTitle'),
+    body: tabs + body,
+    foot: last ? `<button type="button" class="btn btn-ghost" data-act="dc-go" data-id="${d.kids.length - 1}">← ${t('back')}</button><button type="button" class="btn btn-primary" data-act="dc-finish">✅ ${t('dcFinish')}</button>`
+      : `${d.i ? `<button type="button" class="btn btn-ghost" data-act="dc-go" data-id="${d.i - 1}">← ${t('back')}</button>` : '<span></span>'}<button type="button" class="btn btn-primary" data-act="dc-go" data-id="${d.i + 1}">${d.i + 1 < d.kids.length ? t('dcNextKid', { name: esc(childName(d.kids[d.i + 1])) }) : t('next')} →</button>`
+  });
+}
+/** Salva o que foi preenchido para a criança da tela atual. */
+function dcApply() {
+  const d = ui.dc; if (!d || d.i >= d.kids.length || !$('#dcModal .dc-kid')) return;
+  const c = childById(d.kids[d.i]); if (!c) return;
+  let changed = false;
+  $$('#dcModal [data-dc-task]:checked:not([disabled])').forEach(cb => {
+    const task = taskById(cb.dataset.dcTask); if (!task) return; const st = taskStatus(task, c);
+    if (st.state === 'pending') { approve(st.approval.id); d.sum.tasks++; changed = true; }
+    else if (st.state === 'open' || st.state === 'free') { grantTask(c, task, ''); d.sum.tasks++; changed = true; }
+  });
+  const pages = clamp(int($('#dcPages').value, 0), 0, 200);
+  if (pages) { grantHomework(c, pages, $('#dcSub').value, '', isoNow()); d.sum.pages += pages; changed = true; }
+  const book = text($('#dcBook').value, 100);
+  if (book) { addBook(c, book, 'together', 2); d.sum.books++; changed = true; }
+  const cur = (moodOf(c, dayKey()) || {}).mood || 0;
+  if (ui.dcMood && ui.dcMood !== cur) { setMood(c, dayKey(), ui.dcMood); d.sum.moods++; changed = true; }
+  const praise = text($('#dcPraise').value, 150);
+  if (praise) { recordBehavior(c.id, 'positive', '⭐ ' + praise, ui.dcPP || 0, 0); d.sum.praise++; changed = true; }
+  const di = text($('#dcDiary').value, 500);
+  if (di) { addDiary({ day: dayKey(), kind: 'moment', childIds: [c.id], text: di }); d.sum.diary++; changed = true; }
+  if (changed) commit();
+}
+Object.assign(ACTIONS, {
+  'dc-open': () => openDayClose(),
+  'dc-go': el => { dcApply(); ui.dc.i = clamp(int(el.dataset.id, 0), 0, ui.dc.kids.length); renderDayClose(); },
+  'dc-all': () => $$('#dcModal [data-dc-task]:not([disabled])').forEach(cb => { cb.checked = true; }),
+  'dc-pages': el => { $('#dcPages').value = el.dataset.id; $$('#dcModal [data-act="dc-pages"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'dc-mood': el => { const v = int(el.dataset.id, 0); ui.dcMood = ui.dcMood === v ? 0 : v; $$('#dcModal [data-act="dc-mood"]').forEach(b => b.classList.toggle('on', int(b.dataset.id, 0) === ui.dcMood)); },
+  'dc-pp': el => { ui.dcPP = int(el.dataset.id, 0); $$('#dcModal [data-act="dc-pp"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'dc-finish': () => {
+    const day = dayKey(), ex = dayClosed(day);
+    if (ex) ex.at = isoNow(); else S.dayCloses.unshift({ id: day, day, at: isoNow() });
+    S.dayCloses = S.dayCloses.slice(0, 400);
+    Modal.close('dcModal'); ui.dc = null; commit(); toast('🌙 ' + t('dcSaved'), 'success');
+  }
+});
+(function () {
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), b0 = dash.build, u0 = dash.update;
+  dash.build = () => b0().replace('<div id="dEvents"></div>', '<div id="dClose" class="parent-only"></div><div id="dEvents"></div>');
+  dash.update = function () {
+    u0.call(this);
+    const el = $('#dClose'); if (!el) return;
+    if (isChildMode()) { el.innerHTML = ''; return; }
+    const done = dayClosed(), evening = new Date().getHours() >= 17;
+    el.innerHTML = done ? `<div class="dc-banner ok"><span>🌙 ${t('dcClosedAt', { time: new Date(done.at).toLocaleTimeString(locale(), { hour: '2-digit', minute: '2-digit' }) })}</span><button type="button" class="btn btn-ghost btn-sm" data-act="dc-open">${t('dcReopen')}</button></div>`
+      : `<div class="dc-banner ${evening ? 'hot' : ''}"><span>🌙 <b>${t('dcTitle')}</b> · ${t(evening ? 'dcBannerEvening' : 'dcBanner')}</span><button type="button" class="btn ${evening ? 'btn-primary' : 'btn-soft'} btn-sm" data-act="dc-open">▶️ ${t('dcStart')}</button></div>`;
+  };
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    d.dayCloses = (Array.isArray(raw.dayCloses) ? raw.dayCloses : []).map(x => x && /^\d{4}-\d{2}-\d{2}$/.test(x.day) ? { id: x.day, day: x.day, at: safeIso(x.at) } : null).filter(Boolean).slice(0, 400);
+  };
+})();
+
+/* =====================================================================
+   Trabalho em equipe: missões em dupla/grupo (quando um marca, todos
+   da missão ganham) e o bônus "ajudei meu irmão".
+   ===================================================================== */
+
+const TEAM_IDEAS = [
+  { key: 'tm_livingRoom', icon: '🛋️', points: 15, min: 3 }, { key: 'tm_toysLittle', icon: '🧸', points: 10, min: 1 }, { key: 'tm_groceries', icon: '🛒', points: 15, min: 3 },
+  { key: 'tm_table', icon: '🍽️', points: 10, min: 3 }, { key: 'tm_puzzle', icon: '🧩', points: 10, min: 3 }, { key: 'tm_plants', icon: '🌱', points: 10, min: 2 },
+  { key: 'tm_laundry', icon: '👕', points: 15, min: 3 }, { key: 'tm_car', icon: '🚗', points: 20, min: 5 }, { key: 'tm_cookies', icon: '🍪', points: 15, min: 3 }, { key: 'tm_shoes', icon: '👟', points: 10, min: 2 }
+];
+const HELP_KINDS = [{ key: 'hp_teach', icon: '📖' }, { key: 'hp_tidy', icon: '🧸' }, { key: 'hp_share', icon: '🤲' }, { key: 'hp_care', icon: '🤗' }, { key: 'hp_dress', icon: '👕' }, { key: 'hp_play', icon: '🎲' }];
+
+/* ---------- missão em equipe: marcou para um, vale para todos ---------- */
+(function () {
+  const grant0 = grantTask;
+  grantTask = function (c, task, note, date, approvalId) {
+    const r = grant0(c, task, note, date, approvalId);
+    if (task && task.team && !grantTask._team) {
+      grantTask._team = true;
+      try {
+        const when = date || isoNow(), mates = [];
+        S.children.filter(k => k.id !== c.id && taskForChild(task, k)).forEach(k => {
+          const st = taskStatus(task, k, new Date(when));
+          if (st.state === 'pending') { approve(st.approval.id); mates.push(k.name); }
+          else if (st.state === 'open' || st.state === 'free') { grant0(k, task, note, when); mates.push(k.name); }
+        });
+        r.mates = mates;
+      } finally { grantTask._team = false; }
+    }
+    return r;
+  };
+  const after0 = afterComplete;
+  afterComplete = function (r, c, task) { after0(r, c, task); if (r && r.mates && r.mates.length) toast(`🤝 ${t('tmMatesToo', { names: r.mates.join(', ') })}`, 'success'); };
+  const row0 = missionRow;
+  missionRow = function (c, task, st, opts) { const h = row0(c, task, st, opts); return task.team ? h.replace('<div class="sub">', `<div class="sub"><span class="team-pill">🤝 ${esc(t('tmTeam'))}</span> `) : h; };
+})();
+
+function openTeamIdeas() {
+  Modal.open({
+    id: 'teamModal', wide: true, title: '🤝 ' + t('tmTitle'),
+    body: `<p class="hint" style="margin-top:0">${t('tmIntro')}</p><div class="list">${TEAM_IDEAS.map(x => {
+      const has = S.tasks.find(k => k.nameKey === x.key), kids = S.children.filter(c => c.age >= x.min);
+      return `<div class="item tm-idea"><div class="meta"><span class="ico">${x.icon}</span><div><strong>${esc(t(x.key))}</strong><div class="sub">+${x.points} · ${t('freqWeekly')}${has ? ` · ✔ ${t('libHas')}` : ''}</div>
+        <div class="chips tm-kids">${S.children.map(c => `<label class="chip"><input type="checkbox" data-tm="${x.key}" data-kid="${esc(c.id)}" ${(has ? taskForChild(has, c) : kids.includes(c)) ? 'checked' : ''}>${esc(c.avatar)} ${esc(c.name)}</label>`).join('')}</div></div></div>
+        <div class="right"><button type="button" class="btn ${has ? 'btn-soft' : 'btn-primary'} btn-sm" data-act="team-add" data-id="${x.key}">${has ? t('save') : '+ ' + t('libAdd')}</button></div></div>`;
+    }).join('')}</div><p class="hint">${t('tmHint')}</p>`
+  });
+}
+function openHelp(childId) {
+  const c = childById(childId); if (!c || isChildMode()) return;
+  const sibs = S.children.filter(k => k.id !== c.id);
+  ui.hp = { childId, to: sibs.length === 1 ? sibs[0].id : null, kind: null };
+  Modal.open({
+    id: 'hpModal', title: '🤝 ' + t('hpTitle', { name: esc(c.name) }),
+    body: `<label>${t('hpWho')}</label><div class="chips">${sibs.map(k => `<button type="button" class="chip ${ui.hp.to === k.id ? 'on' : ''}" data-act="hp-to" data-id="${esc(k.id)}">${esc(k.avatar)} ${esc(k.name)}</button>`).join('')}</div>
+      <label class="mt">${t('hpHow')}</label><div class="chips">${HELP_KINDS.map(x => `<button type="button" class="chip" data-act="hp-kind" data-id="${x.key}">${x.icon} ${esc(t(x.key))}</button>`).join('')}</div>
+      <div class="field"><label for="hpNote">${t('cqNote')}</label><input id="hpNote" maxlength="150"></div>
+      <p class="hint">${t('hpHint', { n: S.team.helpPoints })}</p>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('cancel')}</button><button type="button" class="btn btn-success" data-act="hp-save">🤝 ${t('hpSave', { n: S.team.helpPoints })}</button>`
+  });
+}
+Object.assign(ACTIONS, {
+  'team-open': () => openTeamIdeas(),
+  'team-add': el => {
+    const x = TEAM_IDEAS.find(i => i.key === el.dataset.id); if (!x) return;
+    const kids = $$(`#teamModal [data-tm="${x.key}"]:checked`).map(i => i.dataset.kid);
+    if (kids.length < 2) return toast(t('tmNeedTwo'), 'warn');
+    let task = S.tasks.find(k => k.nameKey === x.key);
+    if (task) { task.childIds = kids; task.team = true; }
+    else { let id = Date.now(); while (taskById(id)) id++; S.tasks.push({ id, name: t(x.key), nameKey: x.key, team: true, points: x.points, icon: x.icon, frequency: 'weekly', days: [], time: '', approvalRequired: true, childIds: kids, cashPerPoint: null, fixedCash: 0 }); }
+    commit(); toast(`🤝 ${t('tmAdded', { task: t(x.key) })}`, 'success'); openTeamIdeas();
+  },
+  'help-open': el => openHelp(el.dataset.id),
+  'hp-to': el => { ui.hp.to = el.dataset.id; $$('#hpModal [data-act="hp-to"]').forEach(b => b.classList.toggle('on', b === el)); },
+  'hp-kind': el => { ui.hp.kind = ui.hp.kind === el.dataset.id ? null : el.dataset.id; $$('#hpModal [data-act="hp-kind"]').forEach(b => b.classList.toggle('on', b.dataset.id === ui.hp.kind)); },
+  'hp-save': () => {
+    const h = ui.hp, c = childById(h.childId), to = childById(h.to); if (!c) return;
+    if (!to) return toast(t('hpNeedWho'), 'warn');
+    const k = HELP_KINDS.find(x => x.key === h.kind), extra = text($('#hpNote').value, 150);
+    const desc = `🤝 ${t('hpNote', { name: to.name })}${k ? ': ' + k.icon + ' ' + t(k.key) : ''}${extra ? ' · ' + extra : ''}`;
+    recordBehavior(c.id, 'positive', desc, S.team.helpPoints, 0);
+    const n = S.behaviorNotes[0]; if (n && n.childId === c.id) n.help = to.id;
+    Modal.close('hpModal'); commit(); toast(`🤝 ${t('hpSaved', { name: c.name, n: S.team.helpPoints })}`, 'success');
+  },
+  'team-rules': () => { S.team.helpPoints = clamp(int($('#hpPts').value, 5), 0, 200); commit(); toast(t('saved'), 'success'); }
+});
+(function () {
+  // painel: botão 🤝 ao lado do ⚠️
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), u0 = dash.update;
+  dash.update = function () { u0.call(this); if (isChildMode()) return; $$('#dKids .child-card').forEach(cd => { if (!cd.querySelector('.hp-mini') && S.children.length > 1) cd.insertAdjacentHTML('beforeend', `<button type="button" class="hp-mini" data-act="help-open" data-id="${esc(cd.dataset.id)}" title="${esc(t('hpBtn'))}" aria-label="${esc(t('hpBtn'))}">🤝</button>`); }); };
+  // tarefas: regra dos pontos de ajuda
+  const tk = SECTIONS.find(s => s.id === 'tarefas'), tu0 = tk.update;
+  tk.update = function () { tu0.call(this); if (isChildMode() || $('#hpRules')) return; const host = $('#sec-tarefas'); if (host) host.insertAdjacentHTML('beforeend', card('🤝 ' + t('hpRulesTitle'), `<div class="row2"><div><label for="hpPts">${t('hpRulePoints')}</label><input id="hpPts" type="number" min="0" max="200" value="${S.team.helpPoints}"></div><div style="display:flex;align-items:flex-end"><button type="button" class="btn btn-primary" data-act="team-rules">${t('save')}</button></div></div><p class="hint">${t('hpRulesHint')}</p>`, { id: 'hpRules', cls: 'mt parent-only' })); else { } };
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const tm = raw.team && typeof raw.team === 'object' ? raw.team : {};
+    d.team = { helpPoints: clamp(int(tm.helpPoints, 5), 0, 200) };
+  };
+})();
+
+/* =====================================================================
+   Personagem que evolui: a cada nível (100 pontos ganhos) a criança
+   desbloqueia chapéus, bichinhos, fundos e molduras para o avatar.
+   ===================================================================== */
+
+const GEAR = {
+  bg: [{ id: 'sky', lvl: 1, css: '#dbeafe' }, { id: 'mint', lvl: 1, css: '#d1fae5' }, { id: 'peach', lvl: 2, css: '#ffe4d6' }, { id: 'lilac', lvl: 3, css: '#ede9fe' }, { id: 'sun', lvl: 5, css: '#fef3c7' },
+    { id: 'rainbow', lvl: 9, css: 'linear-gradient(135deg,#fecaca,#fde68a,#bbf7d0,#bfdbfe,#ddd6fe)' }, { id: 'night', lvl: 13, css: 'radial-gradient(circle at 30% 30%,#4c1d95,#1e1b4b)' }, { id: 'gold', lvl: 18, css: 'linear-gradient(135deg,#fde68a,#f59e0b,#fef3c7)' }],
+  hat: [{ id: '🧢', lvl: 2 }, { id: '🎀', lvl: 3 }, { id: '👒', lvl: 4 }, { id: '🎩', lvl: 6 }, { id: '🎓', lvl: 8 }, { id: '🤠', lvl: 10 }, { id: '👑', lvl: 12 }, { id: '🌟', lvl: 15 }],
+  pet: [{ id: '🐣', lvl: 3 }, { id: '🐶', lvl: 5 }, { id: '🐱', lvl: 7 }, { id: '🐰', lvl: 9 }, { id: '🦊', lvl: 11 }, { id: '🐼', lvl: 14 }, { id: '🦄', lvl: 16 }, { id: '🐉', lvl: 20 }],
+  frame: [{ id: 'dots', lvl: 4 }, { id: 'double', lvl: 7 }, { id: 'rainbow', lvl: 11 }, { id: 'gold', lvl: 17 }]
+};
+const GEAR_TYPES = ['hat', 'pet', 'bg', 'frame'];
+function gearOf(c) { return (S.avatarGear && S.avatarGear[c.id]) || null; }
+function gearUnlocked(c) { const L = levelOf(c); return GEAR_TYPES.reduce((n, k) => n + GEAR[k].filter(x => x.lvl <= L).length, 0); }
+function gearNew(c) { const g = gearOf(c), seen = g ? g.seen || 1 : 1, L = levelOf(c); return GEAR_TYPES.reduce((n, k) => n + GEAR[k].filter(x => x.lvl > seen && x.lvl <= L).length, 0); }
+function nextUnlock(c) { const L = levelOf(c); let best = null; GEAR_TYPES.forEach(k => GEAR[k].forEach(x => { if (x.lvl > L && (!best || x.lvl < best.lvl)) best = { ...x, type: k }; })); return best; }
+
+(function () {
+  const avatar0 = avatar;
+  avatar = function (c, size = '') {
+    const html = avatar0(c, size), g = c && gearOf(c);
+    if (!g || !(g.hat || g.pet || g.bg || g.frame)) return html;
+    const bg = g.bg && GEAR.bg.find(x => x.id === g.bg);
+    return html.replace('<span class="avatar ', `<span class="avatar av-g ${g.frame ? 'fr-' + g.frame : ''} `)
+      .replace('style="--c:', `style="${bg ? `background:${bg.css};` : ''}--c:`)
+      .replace(/<\/span>$/, `${g.hat ? `<i class="av-hat" aria-hidden="true">${g.hat}</i>` : ''}${g.pet && size !== 'sm' ? `<i class="av-pet" aria-hidden="true">${g.pet}</i>` : ''}</span>`);
+  };
+})();
+
+function gearCardHtml(c) {
+  const L = levelOf(c), xp = Number(c.xp || 0), into = xp % 100, g = gearOf(c) || {}, nx = nextUnlock(c);
+  const item = (type, x) => {
+    const locked = x.lvl > L, on = g[type] === x.id;
+    const face = type === 'bg' ? `<span class="gr-sw" style="background:${x.css}"></span>` : type === 'frame' ? `<span class="gr-fr fr-${x.id}"></span>` : `<span class="gr-em">${x.id}</span>`;
+    return `<button type="button" class="gr-item ${on ? 'on' : ''} ${locked ? 'locked' : ''}" data-act="gear" data-type="${type}" data-id="${esc(x.id)}" ${locked ? 'disabled' : ''} title="${esc(locked ? t('grLocked', { n: x.lvl }) : (type === 'bg' || type === 'frame') ? t('gr_' + type + '_' + x.id) : t('grLevel', { n: x.lvl }))}">${face}${locked ? `<small>🔒 ${x.lvl}</small>` : ''}</button>`;
+  };
+  return `<div class="card gr-card" style="--c:${c.accentColor}"><div class="card-head"><h2>🧸 ${t('grTitle')}</h2></div>
+    <div class="gr-top"><div class="gr-hero">${avatar(c, 'lg')}</div><div class="gr-info"><b>${esc(c.name)} · ${t('levelShort')} ${L}</b>
+      <div class="progress" style="--accent:${c.progressColor}"><span style="width:${into}%;background:${c.progressColor}"></span></div>
+      <span class="hint">${t('grNextLevel', { n: 100 - into, lvl: L + 1 })}</span>${nx ? `<span class="hint">🎁 ${t('grNextItem', { lvl: nx.lvl })} ${nx.type === 'hat' || nx.type === 'pet' ? nx.id : ''}</span>` : ''}
+      <span class="hint">${t('grCount', { n: gearUnlocked(c), total: GEAR_TYPES.reduce((s, k) => s + GEAR[k].length, 0) })}</span></div></div>
+    ${GEAR_TYPES.map(type => `<h3 class="gr-h">${t('grType_' + type)}</h3><div class="gr-row">${GEAR[type].map(x => item(type, x)).join('')}</div>`).join('')}
+    <p class="hint">${t('grHint')}</p></div>`;
+}
+(function () {
+  const al = SECTIONS.find(s => s.id === 'album'), u0 = al.update;
+  al.update = function () {
+    u0.call(this);
+    const c = childById(ui.alChild); if (!c) return;
+    $('#alBody').insertAdjacentHTML('afterbegin', gearCardHtml(c));
+    const g = S.avatarGear[c.id] || (S.avatarGear[c.id] = { hat: '', pet: '', bg: '', frame: '', seen: 1 });
+    if ((g.seen || 1) < levelOf(c)) { g.seen = levelOf(c); setTimeout(() => commit(), 0); }
+  };
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), du0 = dash.update;
+  dash.update = function () {
+    du0.call(this);
+    $$('#dKids .child-card').forEach(cd => { const c = childById(cd.dataset.id); const n = c ? gearNew(c) : 0; if (n && !cd.querySelector('.gr-new')) cd.querySelector('.child-head').insertAdjacentHTML('beforeend', `<button type="button" class="gr-new" data-act="gear-go" data-id="${esc(c.id)}">🎁 ${t('grNew', { n })}</button>`); });
+  };
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    d.avatarGear = {};
+    const src = raw.avatarGear && typeof raw.avatarGear === 'object' ? raw.avatarGear : {};
+    Object.entries(src).forEach(([k, v]) => { const id = mapChild(k); if (!id || !v || typeof v !== 'object') return; const ok = (type, val) => GEAR[type].some(x => x.id === val) ? val : ''; d.avatarGear[id] = { hat: ok('hat', v.hat), pet: ok('pet', v.pet), bg: ok('bg', v.bg), frame: ok('frame', v.frame), seen: clamp(int(v.seen, 1), 1, 10000) }; });
+  };
+})();
+Object.assign(ACTIONS, {
+  'gear': el => {
+    const c = childById(ui.alChild), type = el.dataset.type, id = el.dataset.id; if (!c || !GEAR[type]) return;
+    const x = GEAR[type].find(i => i.id === id); if (!x || x.lvl > levelOf(c)) return;
+    const g = S.avatarGear[c.id] || (S.avatarGear[c.id] = { hat: '', pet: '', bg: '', frame: '', seen: levelOf(c) });
+    g[type] = g[type] === id ? '' : id; commit();
+  },
+  'gear-go': (el, ev) => { if (ev) ev.stopPropagation(); ui.alChild = el.dataset.id; showSection('album'); }
+});
+
+/* =====================================================================
+   Dia do pagamento: um dia fixo da semana para "receber". O que ficou
+   no pote Guardar rende um bônus (ex.: 10%), para a criança ver que
+   guardar faz o dinheiro crescer. Também dá para entregar o pote Gastar
+   em dinheiro de verdade.
+   ===================================================================== */
+
+function pdDayIdx(d) { return (d + 6) % 7; } // segunda = 0
+function pdPaid(c, wk = weekKey()) { return S.payday.log.find(x => x.childId === c.id && x.week === wk && x.kind === 'interest') || null; }
+function pdInterest(c) { if (!S.pots.enabled || !S.payday.interest) return 0; const save = potBalances(c).save; return round2(Math.min(S.payday.cap || Infinity, save * S.payday.interest / 100)); }
+function pdWeekEarned(c) { const from = weekStart().getTime(); return round2(S.piggyHistory.filter(p => p.childId === c.id && p.amount > 0 && p.source !== 'interest' && Date.parse(p.date) >= from).reduce((s, p) => s + p.amount, 0)); }
+function pdDue() { if (!S.payday.enabled) return false; const d = new Date(); return pdDayIdx(d.getDay()) >= pdDayIdx(S.payday.weekday) && S.children.some(c => !pdPaid(c)); }
+function payInterest(c) {
+  const v = pdInterest(c); if (!(v > 0) || pdPaid(c)) return 0;
+  const real = addPiggy(c, v, '💰 ' + t('pdInterestNote', { pct: S.payday.interest }), 'interest');
+  if (real > 0 && S.piggyHistory[0] && S.piggyHistory[0].childId === c.id) S.piggyHistory[0].alloc = { spend: 0, save: real, give: 0 };
+  S.payday.log.unshift({ id: uid('pd'), date: isoNow(), week: weekKey(), childId: c.id, kind: 'interest', amount: real });
+  S.payday.log = S.payday.log.slice(0, 1000);
+  return real;
+}
+function openPayday() {
+  if (isChildMode()) return;
+  const kids = S.children;
+  Modal.open({
+    id: 'pdModal', wide: true, title: '💰 ' + t('pdTitle'),
+    body: `<p class="hint" style="margin-top:0">${S.payday.cap ? t('pdIntro', { pct: S.payday.interest, cap: money(S.payday.cap) }) : t('pdIntroNoCap', { pct: S.payday.interest })}</p>
+      <div class="pd-kids">${kids.map(c => {
+        const b = S.pots.enabled ? potBalances(c) : { spend: c.piggy, save: 0, give: 0 }, paid = pdPaid(c), v = pdInterest(c);
+        return `<div class="pd-kid" style="--c:${c.accentColor}"><div class="pd-top">${avatar(c)}<div><b>${esc(c.name)}</b><small>${t('pdWeekEarned', { v: money(pdWeekEarned(c)) })}</small></div></div>
+          <div class="pd-pots"><span>🛍️ ${money(b.spend)}</span><span>🏦 ${money(b.save)}</span><span>💝 ${money(b.give)}</span></div>
+          ${paid ? `<div class="pd-ok">✔ ${t('pdPaidLine', { v: money(paid.amount) })}</div>` : v > 0 ? `<div class="pd-gain">📈 ${t('pdGain', { v: money(v) })}</div>` : `<div class="pd-zero">${t('pdNoSave')}</div>`}
+          ${b.spend > 0 ? `<button type="button" class="btn btn-ghost btn-sm" data-act="pd-cash" data-id="${esc(c.id)}">💵 ${t('pdCashOut', { v: money(b.spend) })}</button>` : ''}</div>`;
+      }).join('')}</div>
+      <p class="hint">💡 ${t('pdTip')}</p>`,
+    foot: `<button type="button" class="btn btn-ghost" data-act="close-modal">${t('close')}</button>${kids.some(c => !pdPaid(c) && pdInterest(c) > 0) ? `<button type="button" class="btn btn-primary" data-act="pd-pay">💰 ${t('pdPay')}</button>` : ''}`
+  });
+}
+Object.assign(ACTIONS, {
+  'pd-open': () => openPayday(),
+  'pd-pay': () => {
+    let total = 0, n = 0;
+    S.children.forEach(c => { const v = payInterest(c); if (v > 0) { total += v; n++; } else if (!pdPaid(c)) S.payday.log.unshift({ id: uid('pd'), date: isoNow(), week: weekKey(), childId: c.id, kind: 'interest', amount: 0 }); });
+    commit(); toast(`💰 ${t('pdPaidToast', { v: money(total), n })}`, 'success', null, 6000); openPayday();
+  },
+  'pd-cash': async el => {
+    const c = childById(el.dataset.id); if (!c) return; const v = potBalances(c).spend; if (!(v > 0)) return;
+    if (!(await askConfirm(t('pdCashConfirm', { name: c.name, v: money(v) })))) return;
+    addPiggy.pot = 'spend'; const real = addPiggy(c, -v, '💵 ' + t('pdCashNote'), 'manual');
+    S.payday.log.unshift({ id: uid('pd'), date: isoNow(), week: weekKey(), childId: c.id, kind: 'cash', amount: -real });
+    commit(); toast(t('pdCashDone', { name: c.name, v: money(-real) }), 'success'); openPayday();
+  },
+  'pd-rules': () => {
+    S.payday.enabled = $('#pdOn').checked; S.payday.weekday = clamp(int($('#pdDay').value, 6), 0, 6);
+    S.payday.interest = clamp(int($('#pdPct').value, 10), 0, 50); S.payday.cap = Math.max(0, round2(num($('#pdCap').value, 5)));
+    commit(); toast(t('saved'), 'success');
+  }
+});
+(function () {
+  const sec = SECTIONS.find(s => s.id === 'cofrinho'), u0 = sec.update;
+  sec.update = function () {
+    u0.call(this);
+    const host = $('#sec-cofrinho'); if (!host) return; const old = $('#pdCard'); if (old) old.remove();
+    const names = weekdayNames(false), parent = !isChildMode(), recent = S.payday.log.filter(x => x.amount && canSeeChild(x.childId)).slice(0, 8);
+    host.insertAdjacentHTML('beforeend', card('💰 ' + t('pdTitle'), `<p class="hint" style="margin-top:-6px">${S.payday.enabled ? t('pdCardHint', { day: names[S.payday.weekday], pct: S.payday.interest }) : t('pdOff')}</p>
+      ${parent ? `<button type="button" class="btn ${pdDue() ? 'btn-primary' : 'btn-soft'}" data-act="pd-open">💰 ${t('pdOpen')}</button>` : ''}
+      ${recent.length ? `<div class="list mt">${recent.map(x => { const c = childById(x.childId); return `<div class="item"><div class="meta">${c ? avatar(c, 'sm') : ''}<div><strong>${x.kind === 'interest' ? '📈 ' + t('pdInterestShort') : '💵 ' + t('pdCashShort')}</strong><div class="sub">${esc(childName(x.childId))} · ${fmtDate(x.date)}</div></div></div><div class="right"><span class="pill ${x.amount > 0 ? 'money' : ''}">${signedMoney(x.amount)}</span></div></div>`; }).join('')}</div>` : ''}
+      ${parent ? `<details class="mt"><summary>⚙️ ${t('pdRules')}</summary>
+        <label class="check mt"><input type="checkbox" id="pdOn" ${S.payday.enabled ? 'checked' : ''}> ${t('pdEnabled')}</label>
+        <div class="row2"><div><label for="pdDay">${t('pdDay')}</label><select id="pdDay">${names.map((n, i) => `<option value="${i}" ${S.payday.weekday === i ? 'selected' : ''}>${esc(n)}</option>`).join('')}</select></div>
+        <div><label for="pdPct">${t('pdPct')}</label><select id="pdPct">${[0, 5, 10, 15, 20].map(v => `<option value="${v}" ${S.payday.interest === v ? 'selected' : ''}>${v}%</option>`).join('')}</select></div></div>
+        <div class="field"><label for="pdCap">${t('pdCap')}</label><input id="pdCap" type="number" min="0" step="0.5" value="${S.payday.cap}"><p class="hint">${t('pdCapHint')}</p></div>
+        <button type="button" class="btn btn-primary btn-sm" data-act="pd-rules">${t('save')}</button></details>` : ''}`, { id: 'pdCard', cls: 'mt' }));
+  };
+  const dash = SECTIONS.find(s => s.id === 'dashboard'), b0 = dash.build, du0 = dash.update;
+  dash.build = () => b0().replace('<div id="dMeeting"></div>', '<div id="dMeeting"></div><div id="dPayday"></div>');
+  dash.update = function () { du0.call(this); const el = $('#dPayday'); if (el) el.innerHTML = !isChildMode() && pdDue() ? `<div class="notice pd-banner"><span>💰 ${t('pdBanner')}</span><button type="button" class="btn btn-primary btn-sm" data-act="pd-open">${t('pdOpen')}</button></div>` : ''; };
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const p = raw.payday && typeof raw.payday === 'object' ? raw.payday : {};
+    d.payday = { enabled: p.enabled !== false, weekday: clamp(int(p.weekday, 6), 0, 6), interest: clamp(int(p.interest, 10), 0, 50), cap: p.cap === undefined || p.cap === null || p.cap === '' ? 5 : Math.max(0, round2(num(p.cap, 5))),
+      log: (Array.isArray(p.log) ? p.log : []).map(x => { if (!x || typeof x !== 'object') return null; const childId = mapChild(x.childId); if (!childId || !/^\d{4}-\d{2}-\d{2}$/.test(x.week || '')) return null; return { id: cleanId(x.id) || uid('pd'), date: safeIso(x.date), week: x.week, childId, kind: x.kind === 'cash' ? 'cash' : 'interest', amount: round2(num(x.amount, 0)) }; }).filter(Boolean).slice(0, 1000) };
+  };
+})();
+
+/* =====================================================================
+   Painel da geladeira: tela grande para deixar aberta num tablet ou na
+   TV. Mostra o dia de cada criança com figuras grandes; tocar numa
+   tarefa marca (no modo criança vai para a aprovação, como sempre).
+   ===================================================================== */
+
+let _frTimer = null, _frLock = null;
+function openFridge() {
+  ui.fridge = true; renderFridge();
+  clearInterval(_frTimer); _frTimer = setInterval(() => { if (ui.fridge) renderFridge(); }, 60000);
+  try { if (navigator.wakeLock) navigator.wakeLock.request('screen').then(l => { _frLock = l; }).catch(() => {}); } catch (e) { /* sem wake lock */ }
+  try { const el = document.documentElement; if (el.requestFullscreen && ui.fridgeFull) el.requestFullscreen().catch(() => {}); } catch (e) { /* ignora */ }
+}
+function closeFridge() {
+  ui.fridge = false; clearInterval(_frTimer); const el = $('#fridge'); if (el) el.remove();
+  try { if (_frLock) { _frLock.release(); _frLock = null; } } catch (e) { /* ignora */ }
+  try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) { /* ignora */ }
+  document.body.classList.remove('fridge-on');
+}
+function renderFridge() {
+  let el = $('#fridge');
+  if (!el) { el = document.createElement('div'); el.id = 'fridge'; el.className = 'fridge'; el.setAttribute('role', 'region'); document.body.appendChild(el); }
+  document.body.classList.add('fridge-on');
+  const now = new Date(), kids = visibleChildren(), today = dayKey(), hour = now.getHours();
+  const dateTxt = now.toLocaleDateString(locale(), { weekday: 'long', day: 'numeric', month: 'long' });
+  const time = now.toLocaleTimeString(locale(), { hour: '2-digit', minute: '2-digit' });
+  const evs = typeof eventsOn === 'function' ? eventsOn(today) : [];
+  const p = typeof familyGoalProgress === 'function' ? familyGoalProgress() : null, ch = S.challenge;
+  const kidCol = c => {
+    const list = tasksForChild(c).filter(x => x.frequency !== 'oneOff' && !isGameTask(x)).map(x => ({ x, st: taskStatus(x, c) })).filter(({ st }) => st.state !== 'off');
+    const done = list.filter(({ st }) => st.state === 'done').length, mood = (moodOf(c, today) || {}).mood;
+    const rk = hour < 12 ? 'morning' : hour >= 17 ? 'night' : null, steps = rk && S.routines.kids[c.id] ? S.routines.kids[c.id][rk] : [], rd = rk ? (S.routines.done.find(x => x.id === `${c.id}_${today}_${rk}`) || { steps: [] }) : null;
+    return `<div class="fr-kid" style="--c:${c.accentColor}">
+      <div class="fr-kid-top">${avatar(c, 'lg')}<div><h2>${esc(c.name)}${mood ? ` <span>${moodEmoji(mood)}</span>` : ''}</h2><b>${c.points} ⭐</b></div></div>
+      <div class="fr-prog"><span style="width:${list.length ? done / list.length * 100 : 0}%"></span><em>${done}/${list.length}</em></div>
+      <div class="fr-tasks">${list.map(({ x, st }) => `<button type="button" class="fr-task ${st.state}" ${st.state === 'open' || st.state === 'free' ? `data-act="fr-task" data-child="${esc(c.id)}" data-task="${esc(x.id)}"` : 'disabled'}><span class="fr-ti">${esc(x.icon)}</span><span class="fr-tn">${esc(taskName(x))}</span><span class="fr-mark">${st.state === 'done' ? '✔' : st.state === 'pending' ? '⏳' : ''}</span></button>`).join('') || `<p class="fr-empty">${t('frNoTasks')}</p>`}</div>
+      ${rk && steps.length ? `<div class="fr-routine"><small>${rk === 'morning' ? '🌅 ' + t('rtMorning') : '🌙 ' + t('rtNight')}</small><div>${steps.map(s => `<span class="${rd.steps.includes(s) ? 'ok' : ''}">${ROUTINE_STEPS[s]}</span>`).join('')}</div></div>` : ''}
+    </div>`;
+  };
+  el.innerHTML = `<div class="fr-head"><div><div class="fr-date">${esc(dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1))}</div><div class="fr-fam">${esc(S.familyName)}</div></div><div class="fr-time">${esc(time)}</div>
+      <div class="fr-btns"><button type="button" class="fr-btn" data-act="fr-full" title="${esc(t('frFull'))}" aria-label="${esc(t('frFull'))}">⛶</button><button type="button" class="fr-btn" data-act="fr-close" title="${esc(t('frExit'))}" aria-label="${esc(t('frExit'))}">✕</button></div></div>
+    <div class="fr-strip">
+      ${evs.length ? `<div class="fr-pill">📅 ${evs.map(e => `${e.time ? esc(e.time) + ' ' : ''}${esc(eventLabel(e, today))}`).join(' · ')}</div>` : ''}
+      ${ch && !ch.result ? `<div class="fr-pill">🚀 ${esc(ch.icon)} ${esc(challengeName(ch))}</div>` : ''}
+      ${p ? `<div class="fr-pill fr-goal"><span>${esc(p.g.icon)} ${esc(p.g.name)}</span><i><b style="width:${p.pct}%"></b></i><span>${p.pct}%</span></div>` : ''}
+    </div>
+    <div class="fr-grid fr-n${Math.min(kids.length, 4)}">${kids.map(kidCol).join('')}</div>
+    <div class="fr-foot">${isChildMode() ? t('frHintChild') : t('frHintParent')}</div>`;
+}
+Object.assign(ACTIONS, {
+  'fridge': () => openFridge(),
+  'fr-close': () => closeFridge(),
+  'fr-full': () => { ui.fridgeFull = !document.fullscreenElement; try { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); } catch (e) { /* ignora */ } },
+  'fr-task': el => { ACTIONS.complete(el); }
+});
+(function () {
+  const render0 = render;
+  render = function () { render0(); if (ui.fridge) renderFridge(); };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && ui.fridge && !$('.modal')) closeFridge(); });
 })();
 
 </script>
