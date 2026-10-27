@@ -32,11 +32,11 @@
   --primary:#6c63ff;--primary2:#8b5cf6;--success:#14935e;--danger:#dc3b2f;--warning:#c27c0e;
   --sidebar1:#24243e;--sidebar2:#302b63;--active-menu:rgba(255,255,255,.15);
   --accent:#6c63ff;--accent-soft:#f1efff;--tint:#eef1ff;
-  --shadow:0 10px 30px rgba(43,39,78,.08);--radius:20px;
+  --shadow:0 10px 30px rgba(43,39,78,.08);--radius:20px;--surface2:#f4f5fa;--font:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;--num-font:var(--font);--num-zoom:1;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:linear-gradient(135deg,var(--bg),var(--tint));color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:linear-gradient(135deg,var(--bg),var(--tint));color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 [hidden]{display:none!important}
@@ -1270,12 +1270,99 @@ body.fridge-on{overflow:hidden}
 .child-card .today-line{padding-right:84px}
 .dy-tools .actions{flex-wrap:nowrap}.dy-tools select{width:auto;min-width:90px}
 
+/* ===== aparência ===== */
+html.dark{color-scheme:dark}
+.kpi,.score,.score-badge strong,.mini-kpi strong,.fg-bar b,.fr-time,.fr-kid-top b,.al-top b,.tl-res,.pd-gain,.child-card .score,.q-total,.fr-prog em,.val-kid b,.calc-result,.cal-sum-card strong{font-family:var(--num-font)}
+.kpi,.score,.score-badge strong,.mini-kpi strong,.fr-time{zoom:var(--num-zoom)}
+.ap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ap-seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--surface2);border-radius:14px;padding:4px}
+.ap-seg button{flex:1;border:0;background:transparent;border-radius:10px;padding:8px 10px;font-weight:800;font-size:13px;white-space:nowrap}
+.ap-seg button.on{background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.12);color:var(--primary)}
+.ap-fonts{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.ap-font{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.ap-font b{font-size:20px}
+.ap-font small{font-size:11.5px;font-weight:700}
+.ap-font.on{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 20%,transparent)}
+.ap-themes{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))!important}
+.theme-prev b em{display:block;height:6px;border-radius:3px;margin-top:6px;opacity:.5}
+.ap-preview .card{box-shadow:none;border:1px dashed var(--line)}
+html.dark [style*="background:#eef7ff"]{background:#16324a!important;color:#cfe6ff!important}
+html.dark [style*="background:#fff0ef"]{background:#4a1f1c!important}
+html.dark .modal{background:rgba(0,0,0,.65)}
+@media(max-width:620px){.ap-grid{grid-template-columns:1fr}}
+
+/* ===== arte ===== */
+.ar-prompt{display:flex;align-items:center;gap:12px;padding:16px;border-radius:18px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 14%,var(--card)),var(--card));border:2px dashed color-mix(in srgb,var(--c) 45%,var(--line))}
+.ar-prompt span{font-size:30px}
+.ar-prompt b{font-size:19px;line-height:1.3}
+.ar-sheets{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ar-sheet{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:12px;border-radius:16px;border:1.5px solid var(--line);background:var(--card)}
+.ar-sheet span{font-size:26px}
+.ar-sheet small{color:var(--muted);font-size:12px}
+.ar-sheet:hover,.ar-ori:hover{border-color:var(--primary)}
+.ar-lvl{font-size:15px;margin:14px 0 8px}
+.ar-lvl small{font-weight:600;color:var(--muted);font-size:12px}
+.ar-oris{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.ar-ori{display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 8px;border-radius:18px;border:1.5px solid var(--line);background:var(--card);text-align:center}
+.ar-ori span{font-size:34px;line-height:1}
+.ar-ori b{font-size:13.5px}
+.ar-ori small{font-size:11.5px;color:var(--muted)}
+.ar-ori.done{border-color:#86efac;background:color-mix(in srgb,#22c55e 8%,var(--card))}
+.ar-add{display:grid;grid-template-columns:170px 1fr auto;gap:8px;margin-bottom:12px}
+.ar-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.ar-work{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 10px;border-radius:16px;background:linear-gradient(180deg,var(--surface2),var(--card));border:6px solid color-mix(in srgb,#b7794a 35%,var(--card));text-align:center}
+.ar-wi{font-size:34px}
+.ar-work b{font-size:13.5px;line-height:1.25}
+.ar-work small{color:var(--muted);font-size:11.5px}
+.ar-work .icon-btn{position:absolute;top:4px;right:4px;transform:scale(.8)}
+.ori-prog{display:flex;gap:4px;margin-bottom:12px}
+.ori-prog span{flex:1;height:6px;border-radius:3px;background:var(--surface2)}
+.ori-prog span.done{background:#b9b4ff}.ori-prog span.on{background:var(--primary)}
+.ori-step{text-align:center;padding:10px 6px}
+.ori-num{font-size:44px;font-weight:900;color:var(--primary);font-family:var(--num-font)}
+.ori-num small{font-size:18px;color:var(--muted)}
+.ori-step p{font-size:20px;line-height:1.4;font-weight:600;margin:8px 0 12px}
+.cd-row{width:100%;text-align:left;cursor:pointer;padding:9px 11px;gap:10px;justify-content:flex-start;font:inherit}
+.cd-row[disabled]{cursor:default;opacity:1}
+.cd-row.on{background:color-mix(in srgb,#22c55e 10%,var(--card));border-color:#86efac}
+.cd-box{font-size:18px}
+.cd-more h4{margin:12px 0 6px;font-size:14px}
+@media(max-width:620px){.ar-add{grid-template-columns:1fr}.ar-sheets{grid-template-columns:1fr}}
+
+/* folhas de arte para imprimir */
+.art-sheet{color:#1d1d2b;font-family:var(--font)}
+.art-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:3px solid #c4b5fd;padding-bottom:10px;margin-bottom:14px}
+.art-kicker{font-size:13px;font-weight:800;color:#6d28d9;text-transform:uppercase;letter-spacing:.04em}
+.art-title{font-size:24px;font-weight:900;line-height:1.25;margin-top:2px}
+.art-sub{font-size:13px;color:#555}
+.art-frame{height:820px;border:4px solid #1d1d2b;border-radius:22px;outline:2px dashed #c4b5fd;outline-offset:6px}
+.art-foot{margin-top:16px;font-size:16px;font-weight:700}
+.art-shapes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.art-shape{border:2px solid #ddd;border-radius:16px;padding:10px;height:290px;display:flex;flex-direction:column}
+.art-shape svg{width:180px;height:180px;margin:auto}
+.art-line{font-size:14px;font-weight:700}
+.art-comic{display:grid;gap:12px;height:860px}
+.art-c3{grid-template-rows:repeat(3,1fr)}
+.art-c4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.art-c6{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr)}
+.art-panel{border:3px solid #1d1d2b;border-radius:10px;position:relative}
+.art-panel span{position:absolute;top:6px;left:8px;width:26px;height:26px;border-radius:50%;background:#1d1d2b;color:#fff;font-weight:900;display:grid;place-items:center;font-size:14px}
+.art-mirrors{display:grid;gap:26px;justify-items:center}
+.art-mirror{display:grid;width:min(100%,410px);aspect-ratio:1;border:2px solid #333}
+.art-mirror i{border:1px solid #bbb;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.art-mirror i.mid{border-right:4px dashed #6d28d9}
+.ori-steps{font-size:19px;line-height:1.5;padding-left:28px}
+.ori-steps li{margin-bottom:14px}
+.ori-box{margin-right:8px;color:#6d28d9}
+
+/* tema escuro (gerado) */
+@media screen{html.dark .mode-switch{background:var(--card)}html.dark .btn-soft{background:var(--card)}html.dark .btn-ghost{background:var(--surface2)}html.dark .btn-success{background:#1c4a32}html.dark .btn-danger{background:#4a1f1c}html.dark .icon-btn{background:var(--surface2)}html.dark .icon-btn:hover{background:var(--surface2)}html.dark .card{border:1px solid rgba(255,255,255,.06)}html.dark input,html.dark select,html.dark textarea{background:var(--card)}html.dark .chip{background:var(--card)}html.dark .pill{background:var(--surface2)}html.dark .pill.ok{background:#1c4a32}html.dark .pill.wait{background:#4a3b1c}html.dark .pill.bad{background:#4a1f1c}html.dark .pill.money{background:#1c4a32}html.dark .notice{background:#1c274a;color:#abaae4}html.dark .notice.ok{background:#1c4a32;color:#a0eece}html.dark .notice.warn{background:#4a3b1c;color:#eecfa0}html.dark .item{background:var(--card)}html.dark .item.done{background:var(--surface2);border-color:#317251}html.dark .item.wait{background:var(--surface2);border-color:#725f31}html.dark .ico{background:var(--surface2)}html.dark .progress{background:var(--surface2)}html.dark .avatar{background:var(--surface2)}html.dark .picker{background:var(--card)}html.dark .picker.on{background:color-mix(in srgb,var(--c) 8%,var(--card))}html.dark .modal-box{background:var(--card)}html.dark .x{background:var(--surface2)}html.dark .choice{background:var(--card)}html.dark .choice.on{background:color-mix(in srgb,var(--c) 7%,var(--card))}html.dark .cal-sum-card{background:linear-gradient(135deg,var(--card),var(--surface2))}html.dark .cal-legend-item{background:var(--card)}html.dark .wd{color:#bfbcd2;background:linear-gradient(135deg,var(--surface2),var(--card))}html.dark .day{background:var(--card)}html.dark .day.weekday-0{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#72313c}html.dark .day.weekday-1{background:linear-gradient(145deg,#1c2f4a,var(--surface2));border-color:#314872}html.dark .day.weekday-2{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#31724f}html.dark .day.weekday-3{background:linear-gradient(145deg,#4a3c1c,var(--surface2));border-color:#726131}html.dark .day.weekday-4{background:linear-gradient(145deg,#331c4a,var(--surface2));border-color:#4d3172}html.dark .day.weekday-5{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#72314f}html.dark .day.weekday-6{background:linear-gradient(145deg,#1c3f4a,var(--surface2));border-color:#316672}html.dark .weekday-3 .num{background:linear-gradient(135deg,#4a3d1c,#d97706)}html.dark .day-name{background:rgba(255,255,255,.07);color:var(--text)}html.dark .day-row{background:rgba(255,255,255,.07)}html.dark .day-count{background:rgba(255,255,255,.07)}html.dark .month-message{background:linear-gradient(135deg,#4a3c1c,var(--card));border:1px solid #725e31}html.dark .legend span{background:var(--card)}html.dark .mini-kpi{background:var(--card)}html.dark .bar{background:var(--surface2)}html.dark .tl{background:var(--surface2)}html.dark .level-ring{background:conic-gradient(var(--c) var(--pct),var(--surface2) 0)}html.dark .level-ring span{background:var(--card)}html.dark .note-item{background:var(--card)}html.dark .note-item.unread{background:var(--surface2)}html.dark .theme-card{background:var(--card)}html.dark .theme-prev b{background:var(--surface2)}html.dark .profile-row{background:var(--card)}html.dark .switch span{background:var(--surface2)}html.dark .switch span:before{background:var(--card)}html.dark .steps span{background:var(--surface2)}html.dark body.child-mode{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 6%,var(--card)),color-mix(in srgb,var(--accent) 14%,var(--card)))}html.dark body.child-mode .card{border-color:color-mix(in srgb,var(--accent) 16%,var(--line))}html.dark body.child-mode h2{color:color-mix(in srgb,var(--accent) 80%,var(--text))}html.dark .cloud-chip.ok{background:#1c4a32}@media(max-width:820px){html.dark .mb-mode .avatar{border-color:var(--line)}html.dark .sheet-grip{background:var(--surface2)}}html.dark .pos{color:#a0eecc}html.dark .neg{color:#eea5a0}html.dark .plan-banner{background:#281c4a}html.dark .plan-child{border:1.5px solid var(--line,var(--line))}html.dark .plan-item{background:var(--soft,var(--surface2))}html.dark .plan-item.rm{background:var(--surface2)}html.dark .q-hero{background:color-mix(in srgb,var(--c) 12%,var(--card))}html.dark .q-hero-txt small{color:color-mix(in srgb,var(--c) 75%,var(--text))}html.dark .q-stats div{background:var(--card)}html.dark .q-stats .pos{color:#a0eecc}html.dark .q-grid th,html.dark .q-grid td{border-right:1px solid var(--line)}html.dark .q-grid thead th{background:color-mix(in srgb,var(--c) 14%,var(--card));color:#bfbcd2}html.dark .q-task{background:var(--card)}html.dark .q-grid thead .q-task{background:color-mix(in srgb,var(--c) 14%,var(--card))}html.dark .q-pts b{color:#eecfa0}html.dark .q-btn{background:var(--card)}html.dark .q-btn.open:hover{background:color-mix(in srgb,var(--c) 20%,var(--card))}html.dark .q-btn.wait{background:#4a3b1c}html.dark .q-btn.past{border-color:var(--line)}html.dark .q-btn.fut{border:2px dashed var(--line)}html.dark .q-off{background:repeating-linear-gradient(45deg,var(--surface2) 0 5px,var(--surface2) 5px 10px)}html.dark .q-today{background:color-mix(in srgb,var(--c) 7%,var(--card))}html.dark .q-ok{background:var(--surface2)}html.dark .q-sum th,html.dark .q-sum td{background:var(--surface2)}html.dark .q-en,html.dark .q-rw{background:var(--card)}html.dark .q-rw-list span{background:var(--surface2)}html.dark .q-rw-list span.ok{background:#1c4a32;color:#a0eece}html.dark .val-scale span{background:#4a3d1c;border:1px solid #725e31}html.dark .val-scale b{color:#eecfa0}html.dark .val-input small{color:#a0eece}html.dark .q-hw td,html.dark .q-hw th{background:var(--surface2)}html.dark .q-pages{background:#1c304a;color:#a0b4ee}html.dark .q-btn.add{border:2px dashed #315072;color:#a0b8ee;background:var(--card)}html.dark .g-stats span{background:var(--surface2)}html.dark .g-tile{background:linear-gradient(145deg,var(--card),var(--surface2))}html.dark .g-board{background:var(--card)}html.dark .g-cell{border:1px solid var(--line);background:var(--card);color:#a0b8ee}html.dark .g-cell.fixed{color:var(--text);background:var(--surface2)}html.dark .g-cell.sel{background:#1c264a}html.dark .g-cell.bad{color:#eea0a0;background:#4a1c1c}html.dark .g-key{background:var(--card)}html.dark .g-key.erase{background:var(--surface2)}html.dark .g-card.up{background:var(--card)}html.dark .g-card.ok{background:#1c4a34}html.dark .g-seq-play span{background:var(--surface2)}html.dark .g-seq-play .g-q{background:#4a411c}html.dark .g-opt{background:var(--card)}html.dark .g-feedback.bad{color:#eec2a0}html.dark .g-done{background:linear-gradient(135deg,#1c4a34,var(--card));border:1.5px solid #317249}html.dark .g-sud td.ans{color:#a0b8ee}html.dark .g-blank{color:#a0b8ee}html.dark .g-ans{color:#a0b8ee}html.dark .g-tile.duel{background:linear-gradient(145deg,var(--card),#4a361c)}html.dark .g-players span{background:var(--surface2)}html.dark .g-tcell{background:var(--card)}html.dark .g-tcell.win{background:#1c4a2c}html.dark .g-c4-drop{border:1.5px dashed #315072;background:#1c304a;color:#a0b8ee}html.dark .g-c4-cell{background:var(--card)}html.dark .g-c4-cell.p2{background:radial-gradient(circle at 35% 35%,#4a411c,#eab308)}html.dark .g-piece.p1{background:radial-gradient(circle at 35% 35%,var(--card),var(--surface2))}html.dark .fg-card{background:linear-gradient(135deg,var(--card),#4a361c);border:1.5px solid #725431}html.dark .fg-txt small{color:#eeb7a0}html.dark .fg-bar{background:#4a361c}html.dark .fg-parts span{background:var(--card);border:1.5px solid color-mix(in srgb,var(--c) 40%,var(--line))}html.dark .fg-done{background:linear-gradient(135deg,#1c4a34,var(--card));border-color:#317249}html.dark .mood-face{background:var(--card)}html.dark .ev-banner{background:var(--surface2);color:#e7a3eb}html.dark .day-ev{background:rgba(255,255,255,.07)}html.dark .pot{background:var(--surface2)}html.dark .pot-spend{background:#1c304a}html.dark .pot-save{background:#1c4a34}html.dark .pot-give{background:var(--surface2)}html.dark .pot em{color:#a0eece}html.dark .rd-shelf{background:linear-gradient(var(--card),#4a461c)}html.dark .rt-tap{border:2.5px solid color-mix(in srgb,var(--c) 40%,var(--line));background:var(--card)}html.dark .rt-step.ok .rt-tap{background:#1c4a34}html.dark .rt-say{background:var(--surface2)}html.dark .al-slot{border:2px dashed var(--line);background:var(--surface2)}html.dark .al-slot.has{border:2px solid color-mix(in srgb,var(--c) 50%,var(--line));background:var(--card)}html.dark .mr-up{color:#a0eecc}html.dark .mr-down{color:#eea5a0}html.dark .mr-eq{color:var(--text)}html.dark .mr-bars small{color:var(--text)}html.dark .fu-kid{background:var(--card)}html.dark .fu-count{background:color-mix(in srgb,var(--c) 10%,var(--card))}html.dark .fu-y{background:var(--surface2)}html.dark .fu-y.apply{background:#4a411c}html.dark .fu-y.entry{background:#1c4a2c}html.dark .fu-pillar{background:var(--card)}html.dark .fu-pillar.hi{background:var(--surface2)}html.dark .fu-goal.ok span{color:#a0eece}html.dark .fu-tip{color:#eed9a0;background:#4a411c}html.dark .emoji-btn{background:var(--card)}html.dark .emoji-pop{background:var(--card)}html.dark .emoji-cell{background:var(--surface2)}html.dark .emoji-cell:hover{background:#251c4a}html.dark .st-topic{background:var(--card)}html.dark .st-topic.done{background:var(--surface2);border-color:#317248}html.dark .st-topic.done small{color:#a0eece}html.dark .st-en{background:#1c344a;color:#a0caee}html.dark .cq-kid{border:2px solid color-mix(in srgb,var(--c) 45%,var(--line));background:var(--card)}html.dark .cq-kid:hover{background:#4a361c}html.dark .cq-rule{background:var(--card)}html.dark .cq-rule em{color:#eea5a0}html.dark .cq-rule.on{background:var(--surface2)}html.dark .cq-mini{border:1.5px solid #725431;background:#4a361c}html.dark .cq-mini:hover{background:#4a361c}html.dark .tl-box{background:linear-gradient(135deg,var(--surface2),var(--surface2))}html.dark .tl-steps span{background:var(--surface2)}html.dark .tl-steps span.done{background:#1c4a32}html.dark .tl-steps i{background:var(--surface2)}html.dark .tl-res{background:var(--surface2)}html.dark .tl-res.up,html.dark .tl-res.top{background:#1c4a32;color:#a0eece}html.dark .tl-res.down{background:#4a301c;color:#eec6a0}html.dark .team-pill{background:#1c384a;color:#a0d3ee}html.dark .hp-mini{border:1.5px solid #315c72;background:var(--surface2)}html.dark .hp-mini:hover{background:#1c384a}html.dark .mt-dots span{background:var(--surface2)}html.dark .mt-kid{background:var(--card)}html.dark .mt-kid.hi{background:linear-gradient(180deg,var(--surface2),var(--card))}html.dark .ch-banner{background:linear-gradient(135deg,#4a361c,#4a411c);color:#eeb4a0}html.dark .ch-banner small{color:#eeb3a0}html.dark .ch-idea{background:var(--card)}html.dark .ch-past span{background:var(--surface2)}html.dark .pd-banner{background:#1c4a32;color:#a0eece}html.dark .mt-banner{background:#321c4a;color:#cba1ed}html.dark .dy-entry{background:var(--surface2);border:1px solid #726231}html.dark .dy-entry.dy-funny{background:#4a3d1c}html.dark .dy-entry.dy-first{background:var(--surface2);border-color:#315772}html.dark .dy-entry.dy-moment{background:var(--surface2);border-color:#723144}html.dark .dy-entry.dy-proud{background:var(--surface2);border-color:#317241}html.dark .dy-entry.dy-good{background:var(--surface2);border-color:#3c3172}html.dark .dy-who{background:var(--card);border:1px solid color-mix(in srgb,var(--c,#999) 45%,var(--line))}html.dark .dy-month h3{border-bottom:2px solid #503172;color:#cba1ed}html.dark .dc-banner{background:#1c274a;color:#aeace2}html.dark .dc-banner.ok{background:var(--surface2);color:#a3ebbe}html.dark .dc-tab{background:var(--card)}html.dark .dc-tab.on{background:color-mix(in srgb,var(--c,#6c63ff) 12%,var(--card))}html.dark .dc-task{background:var(--card)}html.dark .dc-task.done{background:var(--surface2);border-color:#317248}html.dark .dc-task.pending{border-color:#726331;background:#4a411c}html.dark .dc-task:has(input:checked:not([disabled])){background:#1c4a2f}html.dark .dc-tn small.wait{color:#eecea0}html.dark .dc-kidline{background:var(--surface2)}html.dark .av-pet{background:var(--card)}html.dark .gr-item{background:var(--card)}html.dark .gr-item.locked{background:var(--surface2)}html.dark .gr-fr{background:var(--surface2)}html.dark .pd-kid{border:2px solid color-mix(in srgb,var(--c) 30%,var(--line))}html.dark .pd-pots span{background:var(--surface2)}html.dark .pd-gain{color:#a0eece;background:#1c4a32}html.dark .pd-ok{color:#a3ebbe}html.dark .ar-ori.done{border-color:#317249}html.dark .cd-row.on{border-color:#317249}html.dark .art-sheet{color:var(--text)}html.dark .art-head{border-bottom:3px solid #3f3172}html.dark .art-kicker{color:#bea0ee}html.dark .art-sub{color:var(--text)}html.dark .art-frame{outline:2px dashed #3f3172}html.dark .art-shape{border:2px solid var(--line)}html.dark .ori-box{color:#bea0ee}}
 </style>
 </head>
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v89 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v90 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -10052,13 +10139,886 @@ const V89_TEXT = {
 };
 Object.keys(V89_TEXT).forEach(l => Object.assign(I18N[l], V89_TEXT[l]));
 
+/* textos da v90 */
+const V90_TEXT = {
+"pt": {
+"apTitle": "Aparência",
+"apHint": "A paleta muda o app inteiro: fundo, cartões, botões e destaques. Escolha também claro ou escuro, a fonte e o jeito dos números.",
+"apMode": "Modo",
+"apLight": "Claro",
+"apDark": "Escuro",
+"apAuto": "Automático",
+"apToggle": "Trocar entre claro e escuro",
+"apSize": "Tamanho do texto",
+"apCustom": "Criar minhas cores",
+"apFont": "Fonte",
+"apFont_inter": "Padrão",
+"apFont_nunito": "Arredondada",
+"apFont_andika": "Escolar (fácil de ler)",
+"apFont_baloo": "Divertida",
+"apFont_lexend": "Moderna",
+"apFont_comic": "Gibi",
+"apFont_serif": "Clássica",
+"apNums": "Estilo dos números",
+"apNums_same": "Igual ao texto",
+"apNums_round": "Redondinhos",
+"apNums_digital": "Digital",
+"apNums_hand": "Escrito à mão",
+"apNums_mono": "Máquina",
+"apNumSize": "Tamanho dos números grandes",
+"apNumSize_100": "Normal",
+"apNumSize_120": "Grande",
+"apNumSize_140": "Enorme",
+"apPreview": "Prévia de como fica",
+"apChip": "Destaque",
+"apReset": "Voltar ao padrão",
+"theme_grape": "Uva",
+"theme_candy": "Algodão-doce",
+"theme_sky": "Céu",
+"theme_mint": "Menta",
+"theme_lemon": "Limão siciliano",
+"theme_coffee": "Chocolate",
+"theme_ruby": "Morango",
+"cdHint": "Toque para marcar o que já consegue fazer ({n} de {total} neste nível).",
+"cdOtherLevels": "Ver habilidades dos outros níveis",
+"cando_c1_body": "Mostra partes do corpo (head, hands, feet)",
+"cando_c1_family": "Fala mommy, daddy, baby",
+"cando_c1_yesno": "Responde yes e no",
+"cando_c1_toys": "Nomeia 3 brinquedos (ball, doll, car)",
+"cando_c2_body": "Nomeia 8 partes do corpo",
+"cando_c2_feelings": "Diz como se sente (happy, sad, angry)",
+"cando_c2_commands": "Segue ordens simples (stand up, sit down, jump)",
+"cando_c2_abc": "Canta o alfabeto em inglês",
+"cando_c2_clothes": "Nomeia 5 roupas",
+"cando_c2_age": "Responde \"How old are you?\"",
+"cando_c3_count100": "Conta até 100 de 10 em 10",
+"cando_c3_days": "Fala os dias da semana",
+"cando_c3_readbook": "Lê sozinho um livrinho em inglês",
+"cando_c3_story": "Reconta uma história simples",
+"cando_c3_describe": "Descreve uma figura (There is a…)",
+"cando_c3_phonics": "Sabe o som das letras (phonics)",
+"cando_c3_dialogue": "Faz um diálogo curto (perguntar e responder)",
+"cando_c3_writeSent": "Escreve uma frase sozinho",
+"cando_c3_homework": "Faz a lição de inglês da escola sozinho",
+"cando_c3_likes": "Diz do que gosta (I like… / I don't like…)",
+"navArt": "Arte",
+"title_arte": "Arte: desenho e dobradura",
+"sub_arte": "Desafio de desenho do dia, folhas para imprimir, dobraduras passo a passo e a galeria.",
+"arTodayTitle": "Desafio de desenho do dia",
+"arOther": "Outro desafio",
+"arPrintFrame": "Folha do desafio",
+"arDidIt": "Fez!",
+"arWeek": "{name} fez {n} arte(s) nesta semana.",
+"arSheets": "Folhas para imprimir",
+"arSheetShapes": "Transforme a forma",
+"arSheetShapesHint": "6 formas para virar desenhos",
+"arSheetComic": "Quadrinhos",
+"arSheetComicHint": "Quadros para contar uma história",
+"arSheetMirror": "Desenho espelhado",
+"arSheetMirrorHint": "Pintar igual dos dois lados (simetria)",
+"arSheetFrameHint": "Moldura com o desafio de hoje",
+"arOriTitle": "Dobraduras passo a passo",
+"arOriHint": "Toque numa dobradura para ver um passo de cada vez. As estrelas mostram a dificuldade.",
+"arOriLvl1": "Fáceis",
+"arOriLvl2": "Médias",
+"arOriLvl3": "Desafio",
+"arOriWithHelp": "com ajuda de um adulto",
+"arSteps": "passos",
+"arListen": "Ouvir",
+"arPaperSquare": "Use papel quadrado (dá para cortar uma folha comum).",
+"arPaperRect": "Use uma folha retangular comum.",
+"arOriHard": "Mais difícil: faça junto com um adulto.",
+"arVideo": "Ver vídeo",
+"arReady": "Pronto!",
+"arGallery": "Galeria de {name}",
+"arTitlePh": "Ex.: Dragão azul, desenho da escola",
+"arAdd": "Guardar",
+"arEmpty": "A galeria ainda está vazia.",
+"arGalleryHint": "Cada arte guardada vale {n} pontos (até {max} por dia). Sem fotos: só o nome e o tipo.",
+"arRules": "Pontos da arte",
+"arRulePoints": "Pontos por arte",
+"arRuleMax": "Máximo de artes com pontos por dia",
+"ark_draw": "Desenho",
+"ark_origami": "Dobradura",
+"ark_paint": "Pintura",
+"ark_clay": "Massinha",
+"ark_craft": "Recorte e colagem",
+"arSaved": "Arte de {name} guardada na galeria!",
+"arNeedTitle": "Dê um nome para a arte.",
+"arDelConfirm": "Tirar esta arte da galeria?",
+"art_taskDraw": "Desenhar por 15 minutos",
+"art_taskOrigami": "Fazer uma dobradura",
+"or_cup": "Copo",
+"or_hat": "Chapéu de papel",
+"or_plane": "Avião",
+"or_dog": "Cara de cachorro",
+"or_cat": "Cara de gato",
+"or_fan": "Leque",
+"or_house": "Casinha",
+"or_boat": "Barquinho",
+"or_heart": "Coração",
+"or_tulip": "Tulipa",
+"or_frog": "Sapo pulador",
+"or_pinwheel": "Catavento",
+"or_crane": "Tsuru (pássaro)",
+"rw_markers": "Canetinhas novas",
+"rw_origamiPaper": "Papel colorido de dobradura",
+"rw_artKit": "Kit de arte (tintas e pincéis)"
+},
+"en": {
+"apTitle": "Appearance",
+"apHint": "The palette changes the whole app: background, cards, buttons and highlights. You can also choose light or dark, the font and the style of the numbers.",
+"apMode": "Mode",
+"apLight": "Light",
+"apDark": "Dark",
+"apAuto": "Automatic",
+"apToggle": "Switch between light and dark",
+"apSize": "Text size",
+"apCustom": "Create my own colors",
+"apFont": "Font",
+"apFont_inter": "Default",
+"apFont_nunito": "Rounded",
+"apFont_andika": "School (easy to read)",
+"apFont_baloo": "Playful",
+"apFont_lexend": "Modern",
+"apFont_comic": "Comic",
+"apFont_serif": "Classic",
+"apNums": "Number style",
+"apNums_same": "Same as text",
+"apNums_round": "Round",
+"apNums_digital": "Digital",
+"apNums_hand": "Handwritten",
+"apNums_mono": "Typewriter",
+"apNumSize": "Size of big numbers",
+"apNumSize_100": "Normal",
+"apNumSize_120": "Large",
+"apNumSize_140": "Huge",
+"apPreview": "Preview of how it looks",
+"apChip": "Highlight",
+"apReset": "Back to default",
+"theme_grape": "Grape",
+"theme_candy": "Cotton candy",
+"theme_sky": "Sky",
+"theme_mint": "Mint",
+"theme_lemon": "Lemon",
+"theme_coffee": "Chocolate",
+"theme_ruby": "Strawberry",
+"cdHint": "Tap to mark what they can already do ({n} of {total} at this level).",
+"cdOtherLevels": "See skills from other levels",
+"cando_c1_body": "Points to body parts (head, hands, feet)",
+"cando_c1_family": "Says mommy, daddy, baby",
+"cando_c1_yesno": "Answers yes and no",
+"cando_c1_toys": "Names 3 toys (ball, doll, car)",
+"cando_c2_body": "Names 8 body parts",
+"cando_c2_feelings": "Says how they feel (happy, sad, angry)",
+"cando_c2_commands": "Follows simple commands (stand up, sit down, jump)",
+"cando_c2_abc": "Sings the alphabet in English",
+"cando_c2_clothes": "Names 5 clothes",
+"cando_c2_age": "Answers \"How old are you?\"",
+"cando_c3_count100": "Counts to 100 in tens",
+"cando_c3_days": "Says the days of the week",
+"cando_c3_readbook": "Reads a little English book alone",
+"cando_c3_story": "Retells a simple story",
+"cando_c3_describe": "Describes a picture (There is a…)",
+"cando_c3_phonics": "Knows the letter sounds (phonics)",
+"cando_c3_dialogue": "Holds a short dialogue (ask and answer)",
+"cando_c3_writeSent": "Writes a sentence alone",
+"cando_c3_homework": "Does their school English homework alone",
+"cando_c3_likes": "Says what they like (I like… / I don't like…)",
+"navArt": "Art",
+"title_arte": "Art: drawing and origami",
+"sub_arte": "Drawing challenge of the day, sheets to print, step-by-step origami and the gallery.",
+"arTodayTitle": "Drawing challenge of the day",
+"arOther": "Another challenge",
+"arPrintFrame": "Challenge sheet",
+"arDidIt": "Done!",
+"arWeek": "{name} made {n} artwork(s) this week.",
+"arSheets": "Sheets to print",
+"arSheetShapes": "Transform the shape",
+"arSheetShapesHint": "6 shapes to turn into drawings",
+"arSheetComic": "Comic strip",
+"arSheetComicHint": "Panels to tell a story",
+"arSheetMirror": "Mirror drawing",
+"arSheetMirrorHint": "Color both sides the same (symmetry)",
+"arSheetFrameHint": "Frame with today's challenge",
+"arOriTitle": "Step-by-step origami",
+"arOriHint": "Tap an origami to see one step at a time. The stars show how hard it is.",
+"arOriLvl1": "Easy",
+"arOriLvl2": "Medium",
+"arOriLvl3": "Challenge",
+"arOriWithHelp": "with an adult's help",
+"arSteps": "steps",
+"arListen": "Listen",
+"arPaperSquare": "Use square paper (you can cut a normal sheet).",
+"arPaperRect": "Use a normal rectangular sheet.",
+"arOriHard": "Harder: do it together with an adult.",
+"arVideo": "Watch a video",
+"arReady": "Done!",
+"arGallery": "{name}'s gallery",
+"arTitlePh": "E.g. Blue dragon, school drawing",
+"arAdd": "Save",
+"arEmpty": "The gallery is still empty.",
+"arGalleryHint": "Each saved artwork is worth {n} points (up to {max} per day). No photos: just the name and the type.",
+"arRules": "Art points",
+"arRulePoints": "Points per artwork",
+"arRuleMax": "Max artworks with points per day",
+"ark_draw": "Drawing",
+"ark_origami": "Origami",
+"ark_paint": "Painting",
+"ark_clay": "Play-dough",
+"ark_craft": "Cut and paste",
+"arSaved": "{name}'s artwork saved in the gallery!",
+"arNeedTitle": "Give the artwork a name.",
+"arDelConfirm": "Remove this artwork from the gallery?",
+"art_taskDraw": "Draw for 15 minutes",
+"art_taskOrigami": "Make an origami",
+"or_cup": "Cup",
+"or_hat": "Paper hat",
+"or_plane": "Airplane",
+"or_dog": "Dog face",
+"or_cat": "Cat face",
+"or_fan": "Fan",
+"or_house": "Little house",
+"or_boat": "Paper boat",
+"or_heart": "Heart",
+"or_tulip": "Tulip",
+"or_frog": "Jumping frog",
+"or_pinwheel": "Pinwheel",
+"or_crane": "Crane (bird)",
+"rw_markers": "New markers",
+"rw_origamiPaper": "Colored origami paper",
+"rw_artKit": "Art kit (paints and brushes)"
+},
+"es": {
+"apTitle": "Apariencia",
+"apHint": "La paleta cambia toda la app: fondo, tarjetas, botones y destacados. Elige también claro u oscuro, la fuente y el estilo de los números.",
+"apMode": "Modo",
+"apLight": "Claro",
+"apDark": "Oscuro",
+"apAuto": "Automático",
+"apToggle": "Cambiar entre claro y oscuro",
+"apSize": "Tamaño del texto",
+"apCustom": "Crear mis colores",
+"apFont": "Fuente",
+"apFont_inter": "Estándar",
+"apFont_nunito": "Redondeada",
+"apFont_andika": "Escolar (fácil de leer)",
+"apFont_baloo": "Divertida",
+"apFont_lexend": "Moderna",
+"apFont_comic": "Cómic",
+"apFont_serif": "Clásica",
+"apNums": "Estilo de los números",
+"apNums_same": "Igual que el texto",
+"apNums_round": "Redonditos",
+"apNums_digital": "Digital",
+"apNums_hand": "Escrito a mano",
+"apNums_mono": "Máquina",
+"apNumSize": "Tamaño de los números grandes",
+"apNumSize_100": "Normal",
+"apNumSize_120": "Grande",
+"apNumSize_140": "Enorme",
+"apPreview": "Vista previa",
+"apChip": "Destacado",
+"apReset": "Volver a lo estándar",
+"theme_grape": "Uva",
+"theme_candy": "Algodón de azúcar",
+"theme_sky": "Cielo",
+"theme_mint": "Menta",
+"theme_lemon": "Limón",
+"theme_coffee": "Chocolate",
+"theme_ruby": "Fresa",
+"cdHint": "Toca para marcar lo que ya sabe hacer ({n} de {total} en este nivel).",
+"cdOtherLevels": "Ver habilidades de otros niveles",
+"cando_c1_body": "Señala partes del cuerpo (head, hands, feet)",
+"cando_c1_family": "Dice mommy, daddy, baby",
+"cando_c1_yesno": "Responde yes y no",
+"cando_c1_toys": "Nombra 3 juguetes (ball, doll, car)",
+"cando_c2_body": "Nombra 8 partes del cuerpo",
+"cando_c2_feelings": "Dice cómo se siente (happy, sad, angry)",
+"cando_c2_commands": "Sigue órdenes simples (stand up, sit down, jump)",
+"cando_c2_abc": "Canta el abecedario en inglés",
+"cando_c2_clothes": "Nombra 5 prendas de ropa",
+"cando_c2_age": "Responde \"How old are you?\"",
+"cando_c3_count100": "Cuenta hasta 100 de 10 en 10",
+"cando_c3_days": "Dice los días de la semana",
+"cando_c3_readbook": "Lee solo un librito en inglés",
+"cando_c3_story": "Vuelve a contar una historia sencilla",
+"cando_c3_describe": "Describe una imagen (There is a…)",
+"cando_c3_phonics": "Sabe el sonido de las letras (phonics)",
+"cando_c3_dialogue": "Hace un diálogo corto (preguntar y responder)",
+"cando_c3_writeSent": "Escribe una frase solo",
+"cando_c3_homework": "Hace solo los deberes de inglés de la escuela",
+"cando_c3_likes": "Dice lo que le gusta (I like… / I don't like…)",
+"navArt": "Arte",
+"title_arte": "Arte: dibujo y papiroflexia",
+"sub_arte": "Desafío de dibujo del día, hojas para imprimir, papiroflexia paso a paso y la galería.",
+"arTodayTitle": "Desafío de dibujo del día",
+"arOther": "Otro desafío",
+"arPrintFrame": "Hoja del desafío",
+"arDidIt": "¡Lo hizo!",
+"arWeek": "{name} hizo {n} obra(s) esta semana.",
+"arSheets": "Hojas para imprimir",
+"arSheetShapes": "Transforma la forma",
+"arSheetShapesHint": "6 formas para convertir en dibujos",
+"arSheetComic": "Historieta",
+"arSheetComicHint": "Viñetas para contar una historia",
+"arSheetMirror": "Dibujo espejo",
+"arSheetMirrorHint": "Pintar igual a los dos lados (simetría)",
+"arSheetFrameHint": "Marco con el desafío de hoy",
+"arOriTitle": "Papiroflexia paso a paso",
+"arOriHint": "Toca una figura para ver un paso a la vez. Las estrellas muestran la dificultad.",
+"arOriLvl1": "Fáciles",
+"arOriLvl2": "Medias",
+"arOriLvl3": "Desafío",
+"arOriWithHelp": "con ayuda de un adulto",
+"arSteps": "pasos",
+"arListen": "Escuchar",
+"arPaperSquare": "Usa papel cuadrado (puedes cortar una hoja común).",
+"arPaperRect": "Usa una hoja rectangular común.",
+"arOriHard": "Más difícil: hazlo junto con un adulto.",
+"arVideo": "Ver video",
+"arReady": "¡Listo!",
+"arGallery": "Galería de {name}",
+"arTitlePh": "Ej.: Dragón azul, dibujo de la escuela",
+"arAdd": "Guardar",
+"arEmpty": "La galería todavía está vacía.",
+"arGalleryHint": "Cada obra guardada vale {n} puntos (hasta {max} por día). Sin fotos: solo el nombre y el tipo.",
+"arRules": "Puntos de arte",
+"arRulePoints": "Puntos por obra",
+"arRuleMax": "Máximo de obras con puntos por día",
+"ark_draw": "Dibujo",
+"ark_origami": "Papiroflexia",
+"ark_paint": "Pintura",
+"ark_clay": "Plastilina",
+"ark_craft": "Recortar y pegar",
+"arSaved": "¡Obra de {name} guardada en la galería!",
+"arNeedTitle": "Ponle un nombre a la obra.",
+"arDelConfirm": "¿Quitar esta obra de la galería?",
+"art_taskDraw": "Dibujar 15 minutos",
+"art_taskOrigami": "Hacer una figura de papel",
+"or_cup": "Vaso",
+"or_hat": "Gorro de papel",
+"or_plane": "Avión",
+"or_dog": "Cara de perro",
+"or_cat": "Cara de gato",
+"or_fan": "Abanico",
+"or_house": "Casita",
+"or_boat": "Barquito",
+"or_heart": "Corazón",
+"or_tulip": "Tulipán",
+"or_frog": "Rana saltarina",
+"or_pinwheel": "Molinillo",
+"or_crane": "Grulla (pájaro)",
+"rw_markers": "Rotuladores nuevos",
+"rw_origamiPaper": "Papel de colores para papiroflexia",
+"rw_artKit": "Kit de arte (pinturas y pinceles)"
+},
+"it": {
+"apTitle": "Aspetto",
+"apHint": "La tavolozza cambia tutta l'app: sfondo, schede, pulsanti ed evidenziazioni. Scegli anche chiaro o scuro, il carattere e lo stile dei numeri.",
+"apMode": "Modalità",
+"apLight": "Chiaro",
+"apDark": "Scuro",
+"apAuto": "Automatico",
+"apToggle": "Passa da chiaro a scuro",
+"apSize": "Dimensione del testo",
+"apCustom": "Crea i miei colori",
+"apFont": "Carattere",
+"apFont_inter": "Standard",
+"apFont_nunito": "Arrotondato",
+"apFont_andika": "Scolastico (facile da leggere)",
+"apFont_baloo": "Divertente",
+"apFont_lexend": "Moderno",
+"apFont_comic": "Fumetto",
+"apFont_serif": "Classico",
+"apNums": "Stile dei numeri",
+"apNums_same": "Come il testo",
+"apNums_round": "Tondi",
+"apNums_digital": "Digitale",
+"apNums_hand": "Scritto a mano",
+"apNums_mono": "Macchina da scrivere",
+"apNumSize": "Dimensione dei numeri grandi",
+"apNumSize_100": "Normale",
+"apNumSize_120": "Grande",
+"apNumSize_140": "Enorme",
+"apPreview": "Anteprima",
+"apChip": "In evidenza",
+"apReset": "Torna allo standard",
+"theme_grape": "Uva",
+"theme_candy": "Zucchero filato",
+"theme_sky": "Cielo",
+"theme_mint": "Menta",
+"theme_lemon": "Limone",
+"theme_coffee": "Cioccolato",
+"theme_ruby": "Fragola",
+"cdHint": "Tocca per segnare cosa sa già fare ({n} di {total} a questo livello).",
+"cdOtherLevels": "Vedi le abilità degli altri livelli",
+"cando_c1_body": "Indica le parti del corpo (head, hands, feet)",
+"cando_c1_family": "Dice mommy, daddy, baby",
+"cando_c1_yesno": "Risponde yes e no",
+"cando_c1_toys": "Nomina 3 giocattoli (ball, doll, car)",
+"cando_c2_body": "Nomina 8 parti del corpo",
+"cando_c2_feelings": "Dice come si sente (happy, sad, angry)",
+"cando_c2_commands": "Segue ordini semplici (stand up, sit down, jump)",
+"cando_c2_abc": "Canta l'alfabeto in inglese",
+"cando_c2_clothes": "Nomina 5 vestiti",
+"cando_c2_age": "Risponde a \"How old are you?\"",
+"cando_c3_count100": "Conta fino a 100 di 10 in 10",
+"cando_c3_days": "Dice i giorni della settimana",
+"cando_c3_readbook": "Legge da solo un libretto in inglese",
+"cando_c3_story": "Riracconta una storia semplice",
+"cando_c3_describe": "Descrive un'immagine (There is a…)",
+"cando_c3_phonics": "Conosce il suono delle lettere (phonics)",
+"cando_c3_dialogue": "Fa un breve dialogo (domandare e rispondere)",
+"cando_c3_writeSent": "Scrive una frase da solo",
+"cando_c3_homework": "Fa da solo i compiti di inglese della scuola",
+"cando_c3_likes": "Dice cosa gli piace (I like… / I don't like…)",
+"navArt": "Arte",
+"title_arte": "Arte: disegno e origami",
+"sub_arte": "Sfida di disegno del giorno, fogli da stampare, origami passo passo e la galleria.",
+"arTodayTitle": "Sfida di disegno del giorno",
+"arOther": "Un'altra sfida",
+"arPrintFrame": "Foglio della sfida",
+"arDidIt": "Fatto!",
+"arWeek": "{name} ha fatto {n} opera/e questa settimana.",
+"arSheets": "Fogli da stampare",
+"arSheetShapes": "Trasforma la forma",
+"arSheetShapesHint": "6 forme da trasformare in disegni",
+"arSheetComic": "Fumetto",
+"arSheetComicHint": "Vignette per raccontare una storia",
+"arSheetMirror": "Disegno a specchio",
+"arSheetMirrorHint": "Colorare uguale dai due lati (simmetria)",
+"arSheetFrameHint": "Cornice con la sfida di oggi",
+"arOriTitle": "Origami passo passo",
+"arOriHint": "Tocca un origami per vedere un passo alla volta. Le stelle indicano la difficoltà.",
+"arOriLvl1": "Facili",
+"arOriLvl2": "Medi",
+"arOriLvl3": "Sfida",
+"arOriWithHelp": "con l'aiuto di un adulto",
+"arSteps": "passi",
+"arListen": "Ascolta",
+"arPaperSquare": "Usa carta quadrata (puoi tagliare un foglio normale).",
+"arPaperRect": "Usa un normale foglio rettangolare.",
+"arOriHard": "Più difficile: fallo insieme a un adulto.",
+"arVideo": "Guarda un video",
+"arReady": "Fatto!",
+"arGallery": "Galleria di {name}",
+"arTitlePh": "Es.: Drago blu, disegno della scuola",
+"arAdd": "Salva",
+"arEmpty": "La galleria è ancora vuota.",
+"arGalleryHint": "Ogni opera salvata vale {n} punti (fino a {max} al giorno). Niente foto: solo il nome e il tipo.",
+"arRules": "Punti dell'arte",
+"arRulePoints": "Punti per opera",
+"arRuleMax": "Massimo di opere con punti al giorno",
+"ark_draw": "Disegno",
+"ark_origami": "Origami",
+"ark_paint": "Pittura",
+"ark_clay": "Plastilina",
+"ark_craft": "Ritaglio e collage",
+"arSaved": "Opera di {name} salvata nella galleria!",
+"arNeedTitle": "Dai un nome all'opera.",
+"arDelConfirm": "Togliere quest'opera dalla galleria?",
+"art_taskDraw": "Disegnare per 15 minuti",
+"art_taskOrigami": "Fare un origami",
+"or_cup": "Bicchiere",
+"or_hat": "Cappello di carta",
+"or_plane": "Aeroplano",
+"or_dog": "Muso di cane",
+"or_cat": "Muso di gatto",
+"or_fan": "Ventaglio",
+"or_house": "Casetta",
+"or_boat": "Barchetta",
+"or_heart": "Cuore",
+"or_tulip": "Tulipano",
+"or_frog": "Rana saltante",
+"or_pinwheel": "Girandola",
+"or_crane": "Gru (uccello)",
+"rw_markers": "Pennarelli nuovi",
+"rw_origamiPaper": "Carta colorata per origami",
+"rw_artKit": "Kit d'arte (colori e pennelli)"
+},
+"de": {
+"apTitle": "Aussehen",
+"apHint": "Die Farbpalette ändert die ganze App: Hintergrund, Karten, Knöpfe und Hervorhebungen. Wähle auch hell oder dunkel, die Schrift und den Stil der Zahlen.",
+"apMode": "Modus",
+"apLight": "Hell",
+"apDark": "Dunkel",
+"apAuto": "Automatisch",
+"apToggle": "Zwischen hell und dunkel wechseln",
+"apSize": "Textgröße",
+"apCustom": "Eigene Farben erstellen",
+"apFont": "Schrift",
+"apFont_inter": "Standard",
+"apFont_nunito": "Abgerundet",
+"apFont_andika": "Schulschrift (leicht lesbar)",
+"apFont_baloo": "Verspielt",
+"apFont_lexend": "Modern",
+"apFont_comic": "Comic",
+"apFont_serif": "Klassisch",
+"apNums": "Stil der Zahlen",
+"apNums_same": "Wie der Text",
+"apNums_round": "Rund",
+"apNums_digital": "Digital",
+"apNums_hand": "Handschrift",
+"apNums_mono": "Schreibmaschine",
+"apNumSize": "Größe der großen Zahlen",
+"apNumSize_100": "Normal",
+"apNumSize_120": "Groß",
+"apNumSize_140": "Riesig",
+"apPreview": "Vorschau",
+"apChip": "Hervorhebung",
+"apReset": "Zurück zum Standard",
+"theme_grape": "Traube",
+"theme_candy": "Zuckerwatte",
+"theme_sky": "Himmel",
+"theme_mint": "Minze",
+"theme_lemon": "Zitrone",
+"theme_coffee": "Schokolade",
+"theme_ruby": "Erdbeere",
+"cdHint": "Tippe, um zu markieren, was schon klappt ({n} von {total} auf dieser Stufe).",
+"cdOtherLevels": "Fähigkeiten der anderen Stufen ansehen",
+"cando_c1_body": "Zeigt Körperteile (head, hands, feet)",
+"cando_c1_family": "Sagt mommy, daddy, baby",
+"cando_c1_yesno": "Antwortet mit yes und no",
+"cando_c1_toys": "Nennt 3 Spielsachen (ball, doll, car)",
+"cando_c2_body": "Nennt 8 Körperteile",
+"cando_c2_feelings": "Sagt, wie es sich fühlt (happy, sad, angry)",
+"cando_c2_commands": "Folgt einfachen Anweisungen (stand up, sit down, jump)",
+"cando_c2_abc": "Singt das Alphabet auf Englisch",
+"cando_c2_clothes": "Nennt 5 Kleidungsstücke",
+"cando_c2_age": "Antwortet auf \"How old are you?\"",
+"cando_c3_count100": "Zählt in Zehnerschritten bis 100",
+"cando_c3_days": "Sagt die Wochentage",
+"cando_c3_readbook": "Liest allein ein kleines englisches Buch",
+"cando_c3_story": "Erzählt eine einfache Geschichte nach",
+"cando_c3_describe": "Beschreibt ein Bild (There is a…)",
+"cando_c3_phonics": "Kennt die Laute der Buchstaben (phonics)",
+"cando_c3_dialogue": "Führt einen kurzen Dialog (fragen und antworten)",
+"cando_c3_writeSent": "Schreibt allein einen Satz",
+"cando_c3_homework": "Macht die Englisch-Hausaufgaben der Schule allein",
+"cando_c3_likes": "Sagt, was es mag (I like… / I don't like…)",
+"navArt": "Kunst",
+"title_arte": "Kunst: Malen und Falten",
+"sub_arte": "Malaufgabe des Tages, Blätter zum Drucken, Origami Schritt für Schritt und die Galerie.",
+"arTodayTitle": "Malaufgabe des Tages",
+"arOther": "Andere Aufgabe",
+"arPrintFrame": "Aufgabenblatt",
+"arDidIt": "Geschafft!",
+"arWeek": "{name} hat diese Woche {n} Kunstwerk(e) gemacht.",
+"arSheets": "Blätter zum Drucken",
+"arSheetShapes": "Verwandle die Form",
+"arSheetShapesHint": "6 Formen, aus denen Bilder werden",
+"arSheetComic": "Comic",
+"arSheetComicHint": "Felder, um eine Geschichte zu erzählen",
+"arSheetMirror": "Spiegelbild",
+"arSheetMirrorHint": "Beide Seiten gleich ausmalen (Symmetrie)",
+"arSheetFrameHint": "Rahmen mit der Aufgabe von heute",
+"arOriTitle": "Origami Schritt für Schritt",
+"arOriHint": "Tippe auf ein Origami, um einen Schritt nach dem anderen zu sehen. Die Sterne zeigen, wie schwer es ist.",
+"arOriLvl1": "Leicht",
+"arOriLvl2": "Mittel",
+"arOriLvl3": "Herausforderung",
+"arOriWithHelp": "mit Hilfe eines Erwachsenen",
+"arSteps": "Schritte",
+"arListen": "Anhören",
+"arPaperSquare": "Nimm quadratisches Papier (du kannst ein normales Blatt zuschneiden).",
+"arPaperRect": "Nimm ein normales rechteckiges Blatt.",
+"arOriHard": "Schwieriger: zusammen mit einem Erwachsenen machen.",
+"arVideo": "Video ansehen",
+"arReady": "Fertig!",
+"arGallery": "Galerie von {name}",
+"arTitlePh": "Z. B. Blauer Drache, Bild aus der Schule",
+"arAdd": "Speichern",
+"arEmpty": "Die Galerie ist noch leer.",
+"arGalleryHint": "Jedes gespeicherte Kunstwerk ist {n} Punkte wert (bis zu {max} pro Tag). Ohne Fotos: nur Name und Art.",
+"arRules": "Kunstpunkte",
+"arRulePoints": "Punkte pro Kunstwerk",
+"arRuleMax": "Max. Kunstwerke mit Punkten pro Tag",
+"ark_draw": "Zeichnung",
+"ark_origami": "Origami",
+"ark_paint": "Malerei",
+"ark_clay": "Knete",
+"ark_craft": "Schneiden und Kleben",
+"arSaved": "Kunstwerk von {name} in der Galerie gespeichert!",
+"arNeedTitle": "Gib dem Kunstwerk einen Namen.",
+"arDelConfirm": "Dieses Kunstwerk aus der Galerie entfernen?",
+"art_taskDraw": "15 Minuten malen",
+"art_taskOrigami": "Ein Origami falten",
+"or_cup": "Becher",
+"or_hat": "Papierhut",
+"or_plane": "Flugzeug",
+"or_dog": "Hundegesicht",
+"or_cat": "Katzengesicht",
+"or_fan": "Fächer",
+"or_house": "Häuschen",
+"or_boat": "Papierboot",
+"or_heart": "Herz",
+"or_tulip": "Tulpe",
+"or_frog": "Springender Frosch",
+"or_pinwheel": "Windrad",
+"or_crane": "Kranich (Vogel)",
+"rw_markers": "Neue Filzstifte",
+"rw_origamiPaper": "Buntes Origami-Papier",
+"rw_artKit": "Mal-Set (Farben und Pinsel)"
+},
+"zh": {
+"apTitle": "外观",
+"apHint": "配色会改变整个应用：背景、卡片、按钮和高亮。还可以选择浅色或深色、字体和数字样式。",
+"apMode": "模式",
+"apLight": "浅色",
+"apDark": "深色",
+"apAuto": "自动",
+"apToggle": "切换浅色和深色",
+"apSize": "文字大小",
+"apCustom": "自定义颜色",
+"apFont": "字体",
+"apFont_inter": "默认",
+"apFont_nunito": "圆润",
+"apFont_andika": "学校体（易读）",
+"apFont_baloo": "活泼",
+"apFont_lexend": "现代",
+"apFont_comic": "漫画",
+"apFont_serif": "经典",
+"apNums": "数字样式",
+"apNums_same": "和文字一样",
+"apNums_round": "圆圆的",
+"apNums_digital": "数码",
+"apNums_hand": "手写",
+"apNums_mono": "打字机",
+"apNumSize": "大数字的大小",
+"apNumSize_100": "正常",
+"apNumSize_120": "大",
+"apNumSize_140": "超大",
+"apPreview": "效果预览",
+"apChip": "高亮",
+"apReset": "恢复默认",
+"theme_grape": "葡萄",
+"theme_candy": "棉花糖",
+"theme_sky": "天空",
+"theme_mint": "薄荷",
+"theme_lemon": "柠檬",
+"theme_coffee": "巧克力",
+"theme_ruby": "草莓",
+"cdHint": "点一下标记已经会做的（本级 {n}/{total}）。",
+"cdOtherLevels": "查看其他等级的能力",
+"cando_c1_body": "能指出身体部位（head、hands、feet）",
+"cando_c1_family": "会说 mommy、daddy、baby",
+"cando_c1_yesno": "会回答 yes 和 no",
+"cando_c1_toys": "能说出 3 种玩具（ball、doll、car）",
+"cando_c2_body": "能说出 8 个身体部位",
+"cando_c2_feelings": "能说出感受（happy、sad、angry）",
+"cando_c2_commands": "能听懂简单指令（stand up、sit down、jump）",
+"cando_c2_abc": "会唱英文字母歌",
+"cando_c2_clothes": "能说出 5 种衣服",
+"cando_c2_age": "会回答 \"How old are you?\"",
+"cando_c3_count100": "能十个十个数到 100",
+"cando_c3_days": "会说一周七天",
+"cando_c3_readbook": "能自己读一本英文小书",
+"cando_c3_story": "能复述一个简单的故事",
+"cando_c3_describe": "能描述一张图（There is a…）",
+"cando_c3_phonics": "知道字母的发音（phonics）",
+"cando_c3_dialogue": "能进行简短对话（问和答）",
+"cando_c3_writeSent": "能自己写一个句子",
+"cando_c3_homework": "能自己完成学校的英语作业",
+"cando_c3_likes": "能说喜欢什么（I like… / I don't like…）",
+"navArt": "美术",
+"title_arte": "美术：画画和折纸",
+"sub_arte": "每日画画挑战、可打印的纸、分步折纸和作品集。",
+"arTodayTitle": "每日画画挑战",
+"arOther": "换一个挑战",
+"arPrintFrame": "挑战纸",
+"arDidIt": "完成了！",
+"arWeek": "{name} 本周完成了 {n} 件作品。",
+"arSheets": "可打印的纸",
+"arSheetShapes": "变变形状",
+"arSheetShapesHint": "把 6 个形状变成画",
+"arSheetComic": "连环画",
+"arSheetComicHint": "用格子讲一个故事",
+"arSheetMirror": "镜像画",
+"arSheetMirrorHint": "两边涂得一样（对称）",
+"arSheetFrameHint": "带今日挑战的画框",
+"arOriTitle": "分步折纸",
+"arOriHint": "点一个折纸，一步一步看。星星表示难度。",
+"arOriLvl1": "简单",
+"arOriLvl2": "中等",
+"arOriLvl3": "挑战",
+"arOriWithHelp": "需要大人帮忙",
+"arSteps": "步",
+"arListen": "听一听",
+"arPaperSquare": "用正方形的纸（可以把普通纸裁成正方形）。",
+"arPaperRect": "用普通长方形的纸。",
+"arOriHard": "比较难：和大人一起做。",
+"arVideo": "看视频",
+"arReady": "完成！",
+"arGallery": "{name} 的作品集",
+"arTitlePh": "例如：蓝色的龙、学校的画",
+"arAdd": "保存",
+"arEmpty": "作品集还是空的。",
+"arGalleryHint": "每件保存的作品得 {n} 分（每天最多 {max} 件）。不用照片：只记名称和类型。",
+"arRules": "美术积分",
+"arRulePoints": "每件作品的积分",
+"arRuleMax": "每天最多计分的作品数",
+"ark_draw": "画画",
+"ark_origami": "折纸",
+"ark_paint": "涂色",
+"ark_clay": "橡皮泥",
+"ark_craft": "剪贴",
+"arSaved": "{name} 的作品已存入作品集！",
+"arNeedTitle": "给作品起个名字。",
+"arDelConfirm": "要从作品集中删除这件作品吗？",
+"art_taskDraw": "画画 15 分钟",
+"art_taskOrigami": "折一个折纸",
+"or_cup": "杯子",
+"or_hat": "纸帽子",
+"or_plane": "纸飞机",
+"or_dog": "小狗脸",
+"or_cat": "小猫脸",
+"or_fan": "扇子",
+"or_house": "小房子",
+"or_boat": "纸船",
+"or_heart": "爱心",
+"or_tulip": "郁金香",
+"or_frog": "跳跳蛙",
+"or_pinwheel": "风车",
+"or_crane": "千纸鹤",
+"rw_markers": "新的彩色笔",
+"rw_origamiPaper": "彩色折纸",
+"rw_artKit": "美术套装（颜料和画笔）"
+},
+"zht": {
+"apTitle": "外觀",
+"apHint": "配色會改變整個應用：背景、卡片、按鈕和高亮。還可以選擇淺色或深色、字型和數字樣式。",
+"apMode": "模式",
+"apLight": "淺色",
+"apDark": "深色",
+"apAuto": "自動",
+"apToggle": "切換淺色和深色",
+"apSize": "文字大小",
+"apCustom": "自定義顏色",
+"apFont": "字型",
+"apFont_inter": "預設",
+"apFont_nunito": "圓潤",
+"apFont_andika": "學校體（易讀）",
+"apFont_baloo": "活潑",
+"apFont_lexend": "現代",
+"apFont_comic": "漫畫",
+"apFont_serif": "經典",
+"apNums": "數字樣式",
+"apNums_same": "和文字一樣",
+"apNums_round": "圓圓的",
+"apNums_digital": "數碼",
+"apNums_hand": "手寫",
+"apNums_mono": "打字機",
+"apNumSize": "大數字的大小",
+"apNumSize_100": "正常",
+"apNumSize_120": "大",
+"apNumSize_140": "超大",
+"apPreview": "效果預覽",
+"apChip": "高亮",
+"apReset": "恢復預設",
+"theme_grape": "葡萄",
+"theme_candy": "棉花糖",
+"theme_sky": "天空",
+"theme_mint": "薄荷",
+"theme_lemon": "檸檬",
+"theme_coffee": "巧克力",
+"theme_ruby": "草莓",
+"cdHint": "點一下標記已經會做的（本級 {n}/{total}）。",
+"cdOtherLevels": "檢視其他等級的能力",
+"cando_c1_body": "能指出身體部位（head、hands、feet）",
+"cando_c1_family": "會說 mommy、daddy、baby",
+"cando_c1_yesno": "會回答 yes 和 no",
+"cando_c1_toys": "能說出 3 種玩具（ball、doll、car）",
+"cando_c2_body": "能說出 8 個身體部位",
+"cando_c2_feelings": "能說出感受（happy、sad、angry）",
+"cando_c2_commands": "能聽懂簡單指令（stand up、sit down、jump）",
+"cando_c2_abc": "會唱英文字母歌",
+"cando_c2_clothes": "能說出 5 種衣服",
+"cando_c2_age": "會回答 \"How old are you?\"",
+"cando_c3_count100": "能十個十個數到 100",
+"cando_c3_days": "會說一週七天",
+"cando_c3_readbook": "能自己讀一本英文小書",
+"cando_c3_story": "能複述一個簡單的故事",
+"cando_c3_describe": "能描述一張圖（There is a…）",
+"cando_c3_phonics": "知道字母的發音（phonics）",
+"cando_c3_dialogue": "能進行簡短對話（問和答）",
+"cando_c3_writeSent": "能自己寫一個句子",
+"cando_c3_homework": "能自己完成學校的英語作業",
+"cando_c3_likes": "能說喜歡什麼（I like… / I don't like…）",
+"navArt": "美術",
+"title_arte": "美術：畫畫和摺紙",
+"sub_arte": "每日畫畫挑戰、可列印的紙、分步摺紙和作品集。",
+"arTodayTitle": "每日畫畫挑戰",
+"arOther": "換一個挑戰",
+"arPrintFrame": "挑戰紙",
+"arDidIt": "完成了！",
+"arWeek": "{name} 本週完成了 {n} 件作品。",
+"arSheets": "可列印的紙",
+"arSheetShapes": "變變形狀",
+"arSheetShapesHint": "把 6 個形狀變成畫",
+"arSheetComic": "連環畫",
+"arSheetComicHint": "用格子講一個故事",
+"arSheetMirror": "映象畫",
+"arSheetMirrorHint": "兩邊塗得一樣（對稱）",
+"arSheetFrameHint": "帶今日挑戰的畫框",
+"arOriTitle": "分步摺紙",
+"arOriHint": "點一個摺紙，一步一步看。星星表示難度。",
+"arOriLvl1": "簡單",
+"arOriLvl2": "中等",
+"arOriLvl3": "挑戰",
+"arOriWithHelp": "需要大人幫忙",
+"arSteps": "步",
+"arListen": "聽一聽",
+"arPaperSquare": "用正方形的紙（可以把普通紙裁成正方形）。",
+"arPaperRect": "用普通長方形的紙。",
+"arOriHard": "比較難：和大人一起做。",
+"arVideo": "看影片",
+"arReady": "完成！",
+"arGallery": "{name} 的作品集",
+"arTitlePh": "例如：藍色的龍、學校的畫",
+"arAdd": "儲存",
+"arEmpty": "作品集還是空的。",
+"arGalleryHint": "每件儲存的作品得 {n} 分（每天最多 {max} 件）。不用照片：只記名稱和型別。",
+"arRules": "美術積分",
+"arRulePoints": "每件作品的積分",
+"arRuleMax": "每天最多計分的作品數",
+"ark_draw": "畫畫",
+"ark_origami": "摺紙",
+"ark_paint": "塗色",
+"ark_clay": "橡皮泥",
+"ark_craft": "剪貼",
+"arSaved": "{name} 的作品已存入作品集！",
+"arNeedTitle": "給作品起個名字。",
+"arDelConfirm": "要從作品集中刪除這件作品嗎？",
+"art_taskDraw": "畫畫 15 分鐘",
+"art_taskOrigami": "折一個摺紙",
+"or_cup": "杯子",
+"or_hat": "紙帽子",
+"or_plane": "紙飛機",
+"or_dog": "小狗臉",
+"or_cat": "小貓臉",
+"or_fan": "扇子",
+"or_house": "小房子",
+"or_boat": "紙船",
+"or_heart": "愛心",
+"or_tulip": "鬱金香",
+"or_frog": "跳跳蛙",
+"or_pinwheel": "風車",
+"or_crane": "千紙鶴",
+"rw_markers": "新的彩色筆",
+"rw_origamiPaper": "彩色摺紙",
+"rw_artKit": "美術套裝（顏料和畫筆）"
+}
+};
+Object.keys(V90_TEXT).forEach(l => Object.assign(I18N[l], V90_TEXT[l]));
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 89;
+const APP_VERSION = 90;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -11467,17 +12427,14 @@ const SECTIONS = [
       ${card(t('childrenProfiles'), '<div id="sKids" class="list"></div>', { head: `<button type="button" class="btn btn-primary" data-act="child-new">+ ${t('addChild')}</button>` })}
     </div>
     ${card('📲 ' + t('installTitle'), '<div id="sInstall"></div>', { cls: 'mt' })}
-    ${card(t('palette'), `<p class="hint" style="margin-top:-6px">${t('paletteHint')}</p><div class="theme-grid" id="sThemes"></div>
-      <div class="grid g2 mt">${['sidebar1', 'sidebar2', 'btn1', 'btn2'].map(k => `<div class="color-row"><label for="sc_${k}">${t('color_' + k)}</label><input id="sc_${k}" type="color"></div>`).join('')}</div>
-      <div class="actions mt"><button type="button" class="btn btn-primary" data-act="theme-custom">${t('applyColors')}</button><button type="button" class="btn btn-soft" data-act="theme-reset">${t('restorePalette')}</button></div>`, { cls: 'mt' })}`,
+    ${card('🎨 ' + t('apTitle'), `<p class="hint" style="margin-top:-6px">${t('apHint')}</p><div id="sAppearance"></div>`, { cls: 'mt' })}`,
     update() {
       if (document.activeElement !== $('#sFamily')) $('#sFamily').value = S.familyName;
       $('#sInstall').innerHTML = installCardHtml();
       if (document.activeElement !== $('#sGoal')) $('#sGoal').value = S.defaultGoal;
       $('#sKids').innerHTML = S.children.map(c => `<div class="profile-row"><div class="meta" style="display:flex;gap:10px;align-items:center">${avatar(c)}<div><strong>${esc(c.name)}</strong><div class="sub">${years(c.age)} · ${pts(c.points)} · ${t('goalLabel')}: ${c.goal}</div></div></div>
         <div class="right"><button type="button" class="icon-btn" data-act="child-edit" data-id="${esc(c.id)}">✏️ ${t('edit')}</button><button type="button" class="icon-btn" data-act="photo" data-id="${esc(c.id)}">📷 ${t('photo')}</button><button type="button" class="icon-btn danger" data-act="child-del" data-id="${esc(c.id)}">🗑️ ${t('delete')}</button></div></div>`).join('');
-      $('#sThemes').innerHTML = Object.entries(PRESET_THEMES).map(([k, p]) => `<button type="button" class="theme-card ${S.theme.name === k ? 'on' : ''}" data-act="theme" data-id="${k}"><div class="theme-prev"><i style="background:linear-gradient(180deg,${p.sidebar1},${p.sidebar2})"></i><b><span style="background:linear-gradient(135deg,${p.btn1},${p.btn2})"></span></b></div><strong>${t('theme_' + k)}</strong></button>`).join('');
-      const p = currentPalette(); ['sidebar1', 'sidebar2', 'btn1', 'btn2'].forEach(k => { $('#sc_' + k).value = p[k]; });
+      if (typeof appearanceHtml === 'function') $('#sAppearance').innerHTML = appearanceHtml();
     }
   }
 ];
@@ -11820,6 +12777,7 @@ function render() {
     ${kid ? `<span class="mode-chip">${avatar(kid, 'sm')}${esc(kid.name)}</span>` : ''}
     <button type="button" class="pill cloud-chip" data-cloud-chip data-act="cloud-open" hidden></button>
     <select class="select-lang" data-change="lang" aria-label="${esc(t('language'))}">${langOptions(S.language)}</select>
+    <button type="button" class="btn btn-soft" data-act="ap-toggle" title="${esc(t('apToggle'))}" aria-label="${esc(t('apToggle'))}">${typeof apIsDark === 'function' && apIsDark() ? '☀️' : '🌙'}</button>
     <button type="button" class="btn btn-soft" data-act="fridge" title="${esc(t('frTitle'))}">📺 ${t('frShort')}</button>
     <button type="button" class="btn btn-soft" data-act="print">🖨️ ${t('print')}</button>
     <button type="button" class="btn btn-primary" data-act="quick">⚡ ${t('quickTask')}</button>
@@ -11863,6 +12821,7 @@ function renderMobileChrome(sec, kid) {
   $('#drawerTools').innerHTML = `<label for="drawerLang">${esc(t('language'))}</label><select id="drawerLang" class="select-lang" data-change="lang">${langOptions(S.language)}</select>
     <div class="mode-switch" role="group" aria-label="${esc(t('mode'))}"><button type="button" class="${kid ? '' : 'active'}" data-act="mode-parent">👨‍👩‍👧 ${t('modeParent')}</button><button type="button" class="${kid ? 'active' : ''}" data-act="mode-child">🧒 ${t('modeChild')}</button></div>
     <button type="button" class="btn btn-soft btn-block" data-act="print">🖨️ ${esc(t('print'))}</button>
+    <button type="button" class="btn btn-soft btn-block" data-act="ap-toggle">${typeof apIsDark === 'function' && apIsDark() ? '☀️ ' + esc(t('apLight')) : '🌙 ' + esc(t('apDark'))}</button>
     <button type="button" class="btn btn-soft btn-block" data-act="fridge">📺 ${esc(t('frTitle'))}</button>
     ${installAvailable() ? `<button type="button" class="btn btn-primary btn-block" data-act="install">📲 ${esc(t('installBtn'))}</button>` : ''}
     ${!kid && isUnlocked() ? `<button type="button" class="btn btn-ghost btn-block" data-act="lock">🔒 ${esc(t('lockNow'))}</button>` : ''}`;
@@ -12042,7 +13001,7 @@ async function deleteChild(id) {
   S.children = S.children.filter(x => x.id !== id);
   ['history', 'piggyHistory', 'approvals', 'goals', 'achievements', 'behaviorNotes', 'privateNotes'].forEach(k => { S[k] = S[k].filter(x => x.childId !== id); });
   S.tasks = S.tasks.filter(task => { if (!task.childIds.length) return true; task.childIds = task.childIds.filter(x => x !== id); return task.childIds.length > 0; });
-  if (S.theme.childId === id) S.theme = { name: 'purple', custom: null, childId: null };
+  if (S.theme.childId === id) S.theme = { ...S.theme, name: 'purple', custom: null, childId: null };
   if (S.mode.childId === id) S.mode = { current: 'parent', childId: S.children[0].id };
   Modal.close('profileModal'); commit(); toast(t('deleted'));
 }
@@ -12239,9 +13198,9 @@ const ACTIONS = {
   'child-del': el => deleteChild(el.dataset.id),
   photo: el => choosePhoto(el.dataset.id),
   'photo-remove': async el => { const c = childById(el.dataset.id); if (!c || !(await askConfirm(t('removePhotoConfirm')))) return; c.photo = ''; commit(); openChildEditor(c.id); },
-  theme: el => { S.theme = { name: el.dataset.id, custom: null, childId: null }; commit(); },
-  'theme-custom': () => { S.theme = { name: 'custom', childId: null, custom: { sidebar1: $('#sc_sidebar1').value, sidebar2: $('#sc_sidebar2').value, btn1: $('#sc_btn1').value, btn2: $('#sc_btn2').value } }; commit(); toast(t('paletteApplied'), 'success'); },
-  'theme-reset': () => { S.theme = { name: 'purple', custom: null, childId: null }; commit(); }
+  theme: el => { S.theme = { ...S.theme, name: el.dataset.id, custom: null, childId: null }; commit(); },
+  'theme-custom': () => { S.theme = { ...S.theme, name: 'custom', childId: null, custom: { sidebar1: $('#sc_sidebar1').value, sidebar2: $('#sc_sidebar2').value, btn1: $('#sc_btn1').value, btn2: $('#sc_btn2').value } }; commit(); toast(t('paletteApplied'), 'success'); },
+  'theme-reset': () => { S.theme = { ...S.theme, name: 'purple', custom: null, childId: null }; commit(); }
 };
 const CHANGES = {
   render: () => render(),
@@ -12252,7 +13211,7 @@ const CHANGES = {
   'task-freq': () => taskModalSync(),
   'task-preview': () => taskModalSync(),
   import: el => importData(el),
-  'theme-child': el => { S.theme = el.checked ? { name: 'child', custom: null, childId: el.dataset.id } : { name: 'purple', custom: null, childId: null }; commit(); if (el.checked) toast(t('childThemeApplied'), 'success'); }
+  'theme-child': el => { S.theme = el.checked ? { ...S.theme, name: 'child', custom: null, childId: el.dataset.id } : { ...S.theme, name: 'purple', custom: null, childId: null }; commit(); if (el.checked) toast(t('childThemeApplied'), 'success'); }
 };
 
 function bindEvents() {
@@ -12686,7 +13645,7 @@ const EN_NUMBERS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven
 const EN_PLURAL_OK = ['star', 'cat', 'dog', 'ball', 'tree', 'flower', 'car', 'book', 'apple', 'duck', 'bird', 'hat'];
 const EN_DRAW_OK = [['apple', ['red', 'green']], ['star', ['yellow', 'blue']], ['ball', ['blue', 'red', 'green']], ['house', ['blue', 'yellow']], ['flower', ['purple', 'red', 'yellow']], ['car', ['red', 'blue', 'green']], ['fish', ['orange', 'blue']], ['tree', ['green']]];
 const EN_LEVELS = { 1: { name: 'Starter', ages: '3–4' }, 2: { name: 'Explorer', ages: '5–6' }, 3: { name: 'Adventurer', ages: '7+' } };
-const EN_CANDO = { 1: ['c1_colors', 'c1_count5', 'c1_animals', 'c1_hello', 'c1_song', 'c1_point'], 2: ['c2_colors', 'c2_count10', 'c2_animals', 'c2_food', 'c2_name', 'c2_letters'], 3: ['c3_count20', 'c3_write', 'c3_read', 'c3_questions', 'c3_sentence', 'c3_spell'] };
+const EN_CANDO = { 1: ['c1_colors', 'c1_count5', 'c1_animals', 'c1_hello', 'c1_song', 'c1_point', 'c1_body', 'c1_family', 'c1_yesno', 'c1_toys'], 2: ['c2_colors', 'c2_count10', 'c2_animals', 'c2_food', 'c2_name', 'c2_letters', 'c2_body', 'c2_feelings', 'c2_commands', 'c2_abc', 'c2_clothes', 'c2_age'], 3: ['c3_count20', 'c3_write', 'c3_read', 'c3_questions', 'c3_sentence', 'c3_spell', 'c3_count100', 'c3_days', 'c3_readbook', 'c3_story', 'c3_describe', 'c3_phonics', 'c3_dialogue', 'c3_writeSent', 'c3_homework', 'c3_likes'] };
 
 /* ---------- números aleatórios com semente (a mesma provinha pode ser reimpressa) ---------- */
 function seededRng(seed) {
@@ -12804,7 +13763,9 @@ const ENGLISH_SECTION = {
     const testStatus = level === 0 ? `<p class="hint">${t('enNoTestYet')}</p>`
       : test ? `<div class="notice ok">✅ ${t('enTestDone', { score: test.score, total: test.total, pct: test.total ? Math.round(test.score / test.total * 100) : 0 })}</div>`
       : today >= day ? `<div class="notice warn">📝 ${t('enTestToday')}</div>` : `<div class="notice">📅 ${t('enTestOn', { day })}</div>`;
-    const cando = level ? EN_CANDO[level].map(k => { const ok = last && last.level === level && last.cando.includes(k); return `<div class="item" style="padding:9px 11px"><div class="meta"><span>${ok ? '✅' : '⬜'}</span><div>${esc(t('cando_' + k))}</div></div></div>`; }).join('') : '';
+    const has = canDoOf(c), parentCd = !isChildMode();
+    const cdRow = k => { const ok = has.includes(k); return `<button type="button" class="item cd-row ${ok ? 'on' : ''}" ${parentCd ? `data-act="cd-toggle" data-id="${k}"` : 'disabled'}><span class="cd-box">${ok ? '✅' : '⬜'}</span><span>${esc(t('cando_' + k))}</span></button>`; };
+    const cando = level ? EN_CANDO[level].map(cdRow).join('') + `<details class="mt cd-more"><summary>${t('cdOtherLevels')}</summary>${[1, 2, 3].filter(l => l !== level).map(l => `<h4>Level ${l} — ${EN_LEVELS[l].name} <small>(${EN_CANDO[l].filter(k => has.includes(k)).length}/${EN_CANDO[l].length})</small></h4><div class="list">${EN_CANDO[l].map(cdRow).join('')}</div>`).join('')}</details>` : '';
     $('#enBody').innerHTML = `<div class="grid g2">
       ${card('⏱️ ' + t('enLogTitle'), `<label>${t('enMinutes')}</label><div class="chips" style="margin-bottom:8px">${[10, 15, 20, 30, 45, 60].map(m => `<button type="button" class="chip" data-act="en-min" data-id="${m}">${m} min</button>`).join('')}</div>
         <input id="enMin" type="number" min="1" max="600" inputmode="numeric" placeholder="${esc(t('enMinutesPh'))}">
@@ -12822,7 +13783,7 @@ const ENGLISH_SECTION = {
     <div class="grid g2 mt">
       ${card('📝 ' + t('enTestTitle'), `${level ? `<p class="hint" style="margin-top:-6px">${t('enLevelIs', { level, name: EN_LEVELS[level].name, ages: EN_LEVELS[level].ages })}</p>` : ''}${testStatus}
         ${level ? `<div class="actions mt"><button type="button" class="btn btn-primary" data-act="en-print">🖨️ ${t('enPrintTest')}</button><button type="button" class="btn btn-soft parent-only" data-act="en-result">✍️ ${t('enAddResult')}</button><button type="button" class="btn btn-ghost parent-only" data-act="en-new-test" title="${esc(t('enNewTest'))}">🔄 ${t('enNewTest')}</button></div><p class="hint">${t('enPrintHint')}</p>` : ''}`)}
-      ${card('✅ ' + t('enCanDoTitle'), level ? `<p class="hint" style="margin-top:-6px">${last && last.level === level ? t('enCanDoFrom', { date: fmtDate(last.date) }) : t('enCanDoEmpty')}</p><div class="list">${cando}</div>` : `<p class="hint">${t('enNoTestYet')}</p>`)}
+      ${card('✅ ' + t('enCanDoTitle'), level ? `<p class="hint" style="margin-top:-6px">${t('cdHint', { n: has.filter(k => EN_CANDO[level].includes(k)).length, total: EN_CANDO[level].length })}</p><div class="list">${cando}</div>` : `<p class="hint">${t('enNoTestYet')}</p>`)}
     </div>
     <div class="grid g2 mt">
       ${card('📚 ' + t('enHistory'), sessions.length ? `<div class="list">${sessions.map(x => `<div class="item"><div class="meta"><span class="ico">📚</span><div><strong>${x.minutes} min · ${esc(t('enAct_' + x.activity))}</strong><div class="sub">${fmtDate(x.date)}${x.note ? ' · ' + esc(x.note) : ''}</div></div></div><div class="right"><button type="button" class="icon-btn danger parent-only" data-act="en-del" data-id="${esc(x.id)}" aria-label="${esc(t('delete'))}">🗑️</button></div></div>`).join('')}</div>` : emptyBox(t('enNoSessions')))}
@@ -12849,7 +13810,7 @@ function openResultModal(c) {
   });
   renderCandoChips(level);
 }
-function renderCandoChips(level) { $('#erCando').innerHTML = EN_CANDO[level].map(k => `<label class="chip"><input type="checkbox" data-cando="${k}">${esc(t('cando_' + k))}</label>`).join(''); }
+function renderCandoChips(level) { const c = childById(ui.enChild), has = c ? canDoOf(c) : []; $('#erCando').innerHTML = EN_CANDO[level].map(k => `<label class="chip ${has.includes(k) ? 'on' : ''}"><input type="checkbox" data-cando="${k}" ${has.includes(k) ? 'checked' : ''}>${esc(t('cando_' + k))}</label>`).join(''); }
 
 Object.assign(ACTIONS, {
   'en-child': el => { ui.enChild = el.dataset.id; render(); },
@@ -12882,6 +13843,7 @@ Object.assign(ACTIONS, {
     const level = clamp(int($('#erLevel').value, 1), 1, 3);
     S.english.tests.unshift({ id: uid('et'), childId: c.id, date, level, score, total, cando: $$('#erCando [data-cando]:checked').map(i => i.dataset.cando), note: text($('#erNote').value, 300) });
     S.english.tests.sort((a, b) => b.date.localeCompare(a.date));
+    S.canDo[c.id] = [...new Set([...canDoOf(c), ...S.english.tests.find(x => x.childId === c.id).cando])];
     const bonus = Math.max(0, int($('#erBonus').value, 0));
     if (bonus) adjustPoints(c.id, bonus, t('enBonusReason'));
     Modal.close('enResultModal'); commit(); toast(t('enResultSaved', { name: c.name }), 'success');
@@ -12895,6 +13857,15 @@ Object.assign(ACTIONS, {
   }
 });
 Object.assign(CHANGES, { 'er-level': el => renderCandoChips(clamp(int(el.value, 1), 1, 3)) });
+
+/* ---------- "O que já consegue fazer": marcar direto ---------- */
+function canDoOf(c) {
+  if (S.canDo[c.id]) return S.canDo[c.id];
+  const last = S.english.tests.find(x => x.childId === c.id); return last ? last.cando.slice() : [];
+}
+Object.assign(ACTIONS, {
+  'cd-toggle': el => { if (isChildMode()) return; const c = childById(ui.enChild), k = el.dataset.id, cur = canDoOf(c); S.canDo[c.id] = cur.includes(k) ? cur.filter(x => x !== k) : [...cur, k]; commit(); }
+});
 
 /* =====================================================================
    Impressão: relatório da semana (por criança e da família),
@@ -15251,6 +16222,172 @@ Object.assign(CHANGES, { 'tl-preview': () => tlPreview() });
 })();
 
 /* =====================================================================
+   Provinhas v90: mais questões e níveis mais puxados. Cada assunto tem
+   vários tipos de exercício; mesmo escolhendo um assunto só, a provinha
+   fica cheia (12 itens no nível 1 até 30 no nível 5).
+   ===================================================================== */
+
+const TH_TARGET = [12, 16, 20, 25, 30], TH_PER = [4, 5, 5, 6, 6];
+const PT_WORDS2 = [['🐱', 'GATO', 'GA-TO'], ['⚽', 'BOLA', 'BO-LA'], ['🦋', 'BORBOLETA', 'BOR-BO-LE-TA'], ['🍌', 'BANANA', 'BA-NA-NA'], ['🏠', 'CASA', 'CA-SA'], ['🐘', 'ELEFANTE', 'E-LE-FAN-TE'], ['🌻', 'GIRASSOL', 'GI-RAS-SOL'], ['🍎', 'MAÇÃ', 'MA-ÇÃ'], ['🚗', 'CARRO', 'CAR-RO'], ['🐢', 'TARTARUGA', 'TAR-TA-RU-GA'], ['📚', 'LIVRO', 'LI-VRO'], ['🦒', 'GIRAFA', 'GI-RA-FA'], ['🍓', 'MORANGO', 'MO-RAN-GO'], ['🐸', 'SAPO', 'SA-PO'], ['☂️', 'GUARDA-CHUVA', 'GUAR-DA-CHU-VA'], ['🦁', 'LEÃO', 'LE-ÃO'], ['🍉', 'MELANCIA', 'ME-LAN-CI-A'], ['✏️', 'LÁPIS', 'LÁ-PIS'], ['🐒', 'MACACO', 'MA-CA-CO'], ['🧸', 'BRINQUEDO', 'BRIN-QUE-DO'], ['🐝', 'ABELHA', 'A-BE-LHA'], ['🚀', 'FOGUETE', 'FO-GUE-TE'], ['🍰', 'BOLO', 'BO-LO'], ['🐧', 'PINGUIM', 'PIN-GUIM']];
+const PT_FILL = [['ca_orro', 'ch', 'cachorro'], ['pei_e', 'x', 'peixe'], ['ca_a', 's', 'casa'], ['a_úcar', 'ç', 'açúcar'], ['pá_aro', 'ss', 'pássaro'], ['ca_o', 'rr', 'carro'], ['_ebola', 'c', 'cebola'], ['ca_ador', 'ç', 'caçador'], ['me_a', 's', 'mesa'], ['bai_o', 'x', 'baixo'], ['fe_ado', 'ch', 'fechado'], ['a_eite', 'z', 'azeite'], ['ma_ã', 'ç', 'maçã'], ['_uva', 'ch', 'chuva'], ['pa_oca', 'ç', 'paçoca'], ['ta_a', 'ç', 'taça'], ['va_oura', 's', 'vassoura'], ['te_ra', 'rr', 'terra']];
+const PT_SENT2 = [['O', 'gato', 'bebe', 'leite.'], ['A', 'menina', 'lê', 'um', 'livro.'], ['Eu', 'gosto', 'de', 'brincar.'], ['O', 'sol', 'está', 'quente.'], ['Meu', 'irmão', 'joga', 'bola.'], ['A', 'Mavie', 'dorme', 'cedo.'],
+  ['Nós', 'fomos', 'ao', 'parque', 'no', 'domingo.'], ['O', 'cachorro', 'correu', 'atrás', 'da', 'bola.'], ['A', 'professora', 'leu', 'uma', 'história', 'linda.'], ['Hoje', 'vamos', 'comer', 'macarrão', 'no', 'jantar.'],
+  ['Quando', 'chove', 'muito,', 'as', 'ruas', 'ficam', 'molhadas.'], ['O', 'Noah', 'ajudou', 'a', 'irmã', 'a', 'guardar', 'os', 'brinquedos.'], ['Depois', 'da', 'escola,', 'eu', 'faço', 'a', 'lição', 'de', 'casa.']];
+const PT_PUNCT2 = [['Você vai à escola amanhã', '?'], ['Que dia lindo', '!'], ['Eu tenho três irmãos', '.'], ['Qual é o seu nome', '?'], ['Cuidado com o degrau', '!'], ['Hoje choveu muito', '.'], ['Onde está o meu sapato', '?'], ['Que susto', '!'], ['O cachorro dormiu no sofá', '.'], ['Quantos anos você tem', '?'], ['Parabéns pelo seu aniversário', '!'], ['A lua apareceu no céu', '.']];
+const PT_PLURAL2 = [['casa', 'casas', 1], ['bola', 'bolas', 1], ['gato', 'gatos', 1], ['flor', 'flores', 2], ['mar', 'mares', 2], ['pão', 'pães', 3], ['mão', 'mãos', 3], ['leão', 'leões', 3], ['animal', 'animais', 3], ['papel', 'papéis', 3], ['anel', 'anéis', 3], ['lápis', 'lápis', 4], ['cidadão', 'cidadãos', 4], ['farol', 'faróis', 4], ['nariz', 'narizes', 4], ['ônibus', 'ônibus', 4]];
+const PT_OPP2 = [['alto', 'baixo'], ['grande', 'pequeno'], ['quente', 'frio'], ['dia', 'noite'], ['feliz', 'triste'], ['cheio', 'vazio'], ['rápido', 'devagar'], ['aberto', 'fechado'], ['claro', 'escuro'], ['forte', 'fraco'], ['longe', 'perto'], ['limpo', 'sujo'], ['novo', 'velho'], ['subir', 'descer'], ['entrar', 'sair'], ['comprar', 'vender'], ['lembrar', 'esquecer'], ['ganhar', 'perder']];
+const PT_RHYME2 = [['gato', 'pato', ['bola', 'casa', 'sol']], ['mão', 'pão', ['flor', 'sol', 'mesa']], ['janela', 'panela', ['carro', 'mesa', 'dedo']], ['bola', 'cola', ['dedo', 'pé', 'lua']], ['anel', 'papel', ['gato', 'lua', 'mar']], ['limão', 'feijão', ['casa', 'rua', 'bolo']], ['dente', 'pente', ['bolo', 'mar', 'pé']], ['cadeira', 'bandeira', ['sapo', 'mesa', 'rio']], ['chapéu', 'céu', ['pato', 'flor', 'mão']], ['sapato', 'rato', ['lua', 'sol', 'bola']]];
+
+function buildHardTest(c, subject, topics, seed, level) {
+  const rnd = seededRng(seed), R = (a, b) => a + Math.floor(rnd() * (b - a + 1)), L = clamp(int(level, 0) || testLevel(c, subject), 1, 5);
+  const by = arr => arr[L - 1], N = TH_PER[L - 1], names = S.children.map(k => k.name), nm = () => names[R(0, names.length - 1)] || 'Ana';
+  const many = (n, f) => [...Array(n)].map(f);
+  const mc = (title, list, n) => ({ kind: 'mc', title, items: pick(list, Math.min(n, list.length), rnd).map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })) });
+  const fill = (title, items, line) => ({ kind: 'fill', title, items: items.map(x => line ? { ...x, line: true } : x) });
+  const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', VOW = /[AEIOUÁÉÍÓÚÂÊÔÃÕ]/g;
+  const add = (m1, m2) => { const a = R(m1, m2), b = R(m1, m2); return [a, b]; };
+  const V = {
+    pt: {
+      vowels: [
+        () => fill('Circule as vogais de cada palavra.', pick(PT_WORDS2, N, rnd).map(([e, w]) => ({ e, text: w, answer: (w.match(VOW) || []).join(' ') }))),
+        () => fill('Complete com a vogal que falta.', pick(PT_WORDS2.filter(w => w[1].length <= (L <= 2 ? 5 : 12)), N, rnd).map(([e, w]) => { const idx = [...w].map((ch, i) => /[AEIOU]/.test(ch) ? i : -1).filter(i => i >= 0); const i = idx[R(0, idx.length - 1)]; return { e, text: w.slice(0, i) + '_' + w.slice(i + 1), answer: w[i] }; })),
+        () => fill('Quantas vogais e quantas consoantes tem a palavra?', pick(PT_WORDS2.filter(w => !w[1].includes('-')), N, rnd).map(([e, w]) => { const v = (w.match(VOW) || []).length; return { e, text: `${w} → vogais: __  consoantes: __`, answer: `${v} e ${w.length - v}` }; }))
+      ],
+      alphabet: [
+        () => fill('Que letra vem depois?', many(N, () => { const i = R(0, 24); return { text: `${ABC[i]} → __`, answer: ABC[i + 1] }; })),
+        () => fill('Que letra vem antes e depois?', many(N, () => { const i = R(1, 24); return { text: `__ ${ABC[i]} __`, answer: `${ABC[i - 1]} e ${ABC[i + 1]}` }; })),
+        () => fill('Escreva as palavras em ordem alfabética.', many(Math.max(2, N - 3), () => { const w = pick(PT_WORDS2, L >= 4 ? 5 : 3, rnd).map(x => x[1]); return { text: w.join(' · '), answer: w.slice().sort((a, b) => a.localeCompare(b, 'pt')).join(', '), line: true }; }))
+      ],
+      syllables: [
+        () => fill('Quantas sílabas tem cada palavra?', pick(PT_WORDS2, N, rnd).map(([e, w, s]) => ({ e, text: w, answer: s.split('-').length }))),
+        () => fill('Separe as sílabas.', pick(PT_WORDS2.filter(w => L >= 3 || w[2].split('-').length <= 3), N, rnd).map(([e, w, s]) => ({ e, text: w, answer: s, line: true }))),
+        () => fill('Junte as sílabas e escreva a palavra.', pick(PT_WORDS2, N, rnd).map(([e, w, s]) => ({ text: shuffle(s.split('-'), rnd).join(' + ') + ' (ordem certa?)', answer: w, line: true })))
+      ],
+      rhymes: [
+        () => ({ kind: 'mcw', title: 'Circule a palavra que rima.', items: pick(PT_RHYME2, N, rnd).map(([a, b, bad]) => ({ q: a.toUpperCase(), o: shuffleKeep([b, ...bad.slice(0, by([1, 2, 2, 3, 3]))], 0, rnd) })) }),
+        () => fill('Escreva uma palavra que rima.', pick(PT_RHYME2, N, rnd).map(([a, b]) => ({ text: `${a} → ______`, answer: `ex.: ${b}` })))
+      ],
+      plural: [
+        () => fill('Escreva o plural (mais de um).', pick(PT_PLURAL2.filter(x => x[2] <= L), N, rnd).map(([a, b]) => ({ text: `um(a) ${a} → dois/duas ______`, answer: b }))),
+        () => fill('Escreva o singular (só um).', pick(PT_PLURAL2.filter(x => x[2] <= Math.max(2, L)), N, rnd).map(([a, b]) => ({ text: `${b} → um(a) ______`, answer: a })))
+      ],
+      opposites: [
+        () => fill('Escreva o contrário.', pick(PT_OPP2.slice(0, L <= 2 ? 10 : 18), N, rnd).map(([a, b]) => ({ text: `${a} ↔ ______`, answer: b }))),
+        () => fill('Reescreva a frase trocando a palavra destacada pelo contrário.', pick(PT_OPP2.slice(0, 10), Math.max(2, N - 2), rnd).map(([a, b]) => ({ text: `${nm()} achou a caixa muito ${a.toUpperCase()}.`, answer: `${b}`, line: true })))
+      ],
+      spelling: [
+        () => ({ kind: 'mcw', title: 'Circule a palavra escrita do jeito certo.', items: pick(SIM_SPELL, N, rnd).map(([ok, bad]) => ({ q: '', o: shuffleKeep([ok, bad], 0, rnd) })) }),
+        () => fill('Complete com a letra certa: ss · ç · ch · x · s · z · rr · c', pick(PT_FILL, N, rnd).map(([w, l, full]) => ({ text: w, answer: full })))
+      ],
+      punctuation: [
+        () => fill('Coloque o sinal certo no fim: ( . ) ( ? ) ( ! )', pick(PT_PUNCT2, N, rnd).map(([s, p]) => ({ text: `${s} __`, answer: p }))),
+        () => fill('Transforme a frase em pergunta.', pick(PT_PUNCT2.filter(x => x[1] === '.'), Math.max(2, N - 3), rnd).map(([s]) => ({ text: s + '.', answer: s + '?', line: true })))
+      ],
+      sentence: [
+        () => fill('Coloque as palavras em ordem e escreva a frase.', pick(PT_SENT2.filter(w => w.length <= by([4, 5, 6, 8, 9])), by([2, 3, 3, 4, 4]), rnd).map(w => ({ text: shuffle(w, rnd).join(' / '), answer: w.join(' '), line: true }))),
+        () => fill('Escreva uma frase com a palavra.', pick(PT_WORDS2, by([2, 2, 3, 4, 4]), rnd).map(([e, w]) => ({ e, text: w.toLowerCase(), answer: '(frase da criança: começa com maiúscula e termina com ponto)', line: true })))
+      ],
+      reading: [
+        () => { const tx = pick(SIM_TEXTS[L >= 3 ? 's4' : 's3'], 1, rnd)[0]; return { kind: 'text', title: `Leia o texto: "${tx.title}"`, text: tx.text, q: tx.q.map(([q, o, a]) => ({ q, o: shuffleKeep(o, a, rnd) })), open: tx.open }; }
+      ]
+    },
+    math: {
+      count: [
+        () => fill('Conte e escreva quantos tem.', many(N, () => { const n = R(by([3, 6, 10, 12, 15]), by([10, 15, 20, 24, 30])), e = pick(G_EMOJI, 1, rnd)[0]; return { text: e.repeat(n), answer: n }; })),
+        () => fill('Quantas dezenas e unidades?', many(N, () => { const n = R(by([10, 11, 20, 100, 100]), by([19, 50, 99, 999, 9999])); return { text: `${n} → ___`, answer: n >= 1000 ? `${Math.floor(n / 1000)} milhar(es), ${Math.floor(n / 100) % 10} centena(s), ${Math.floor(n / 10) % 10} dezena(s), ${n % 10} unidade(s)` : n >= 100 ? `${Math.floor(n / 100)} centena(s), ${Math.floor(n / 10) % 10} dezena(s), ${n % 10} unidade(s)` : `${Math.floor(n / 10)} dezena(s) e ${n % 10} unidade(s)`, line: true }; })),
+        () => fill(`Conte de ${by([2, 2, 5, 10, 25])} em ${by([2, 2, 5, 10, 25])} e complete.`, many(Math.max(3, N - 2), () => { const s = by([2, 2, 5, 10, 25]), a = s * R(0, 10); return { text: `${a}, ${a + s}, __, __, ${a + 4 * s}`, answer: `${a + 2 * s}, ${a + 3 * s}` }; }))
+      ],
+      compare: [
+        () => fill('Escreva > (maior), < (menor) ou = (igual).', many(N, () => { const m = by([20, 100, 1000, 10000, 100000]), a = R(1, m), b = rnd() < .2 ? a : R(1, m); return { text: `${a} __ ${b}`, answer: a > b ? '>' : a < b ? '<' : '=' }; })),
+        () => fill('Compare as contas: > , < ou =', many(N, () => { const m = by([5, 10, 30, 100, 500]), a = R(1, m), b = R(1, m), c2 = R(1, m * 2); return { text: `${a} + ${b} __ ${c2}`, answer: a + b > c2 ? '>' : a + b < c2 ? '<' : '=' }; })),
+        () => fill('Escreva os números do menor para o maior.', many(Math.max(2, N - 3), () => { const m = by([20, 100, 1000, 5000, 100000]), xs = many(by([3, 4, 4, 5, 6]), () => R(1, m)); return { text: xs.join(' · '), answer: xs.slice().sort((a, b) => a - b).join(' < '), line: true }; }))
+      ],
+      add: [
+        () => fill('Faça as contas de mais.', many(N, () => { const [a, b] = add(by([1, 10, 15, 100, 1000]), by([9, 49, 89, 899, 8999])); if (L === 5 && rnd() < .3) { const d = R(100, 999); return { text: `${a} + ${b} + ${d} =`, answer: a + b + d }; } return { text: `${a} + ${b} =`, answer: a + b }; })),
+        () => fill('Descubra o número que falta.', many(N, () => { const [a, b] = add(by([1, 5, 10, 50, 500]), by([9, 30, 80, 500, 5000])); return { text: `${a} + ___ = ${a + b}`, answer: b }; })),
+        () => fill('Resolva o problema.', many(Math.max(2, N - 3), () => { const [a, b] = add(by([2, 10, 20, 100, 1000]), by([9, 40, 90, 900, 9000])), it = pick(['figurinhas', 'bolinhas de gude', 'pontos', 'livros', 'tampinhas'], 1, rnd)[0]; return { text: `${nm()} tinha ${a} ${it} e ganhou mais ${b}. Com quantas ficou?`, answer: a + b, line: true }; }))
+      ],
+      sub: [
+        () => fill('Faça as contas de menos.', many(N, () => { const m = by([10, 50, 100, 1000, 10000]), a = R(Math.floor(m / 3), m), b = R(1, a); return { text: `${a} − ${b} =`, answer: a - b }; })),
+        () => fill('Descubra o número que falta.', many(N, () => { const m = by([10, 40, 100, 1000, 5000]), a = R(Math.floor(m / 2), m), b = R(1, a); return { text: `${a} − ___ = ${a - b}`, answer: b }; })),
+        () => fill('Resolva o problema.', many(Math.max(2, N - 3), () => { const m = by([10, 50, 100, 1000, 10000]), a = R(Math.floor(m / 2), m), b = R(1, a); return { text: `${nm()} tinha ${a} figurinhas e deu ${b} para o irmão. Quantas sobraram?`, answer: a - b, line: true }; }))
+      ],
+      evenodd: [
+        () => fill('O número é PAR ou ÍMPAR?', many(N, () => { const n = R(1, by([20, 100, 1000, 10000, 100000])); return { text: `${n} → ______`, answer: n % 2 ? 'ímpar' : 'par' }; })),
+        () => fill('Escreva o próximo número par e o próximo ímpar.', many(Math.max(3, N - 2), () => { const n = R(1, by([20, 100, 500, 2000, 9999])); const ne = n % 2 ? n + 1 : n + 2, no = n % 2 ? n + 2 : n + 1; return { text: `depois de ${n}: par __ ímpar __`, answer: `${ne} e ${no}` }; }))
+      ],
+      sequence: [
+        () => fill('Complete a sequência.', many(N, () => { const steps = by([[1, 2], [2, 5, 10], [3, 4, 5, 10, 25], [6, 7, 8, 9, 15, 50], [11, 12, 25, 75, 125]]), sp = steps[R(0, steps.length - 1)], down = L >= 3 && rnd() < .4, a = down ? R(sp * 6, sp * 6 + 50) : R(0, by([10, 20, 50, 100, 500])), s2 = down ? -sp : sp; return { text: `${a}, ${a + s2}, ${a + 2 * s2}, __, ${a + 4 * s2}, __`, answer: `${a + 3 * s2} e ${a + 5 * s2}` }; })),
+        () => fill(L >= 4 ? 'Descubra a regra e complete (pode ser × ou +).' : 'Descubra a regra e complete.', many(Math.max(3, N - 2), () => { if (L >= 4 && rnd() < .5) { const k = R(2, 3), a = R(1, 5); return { text: `${a}, ${a * k}, ${a * k * k}, __`, answer: a * k * k * k }; } const s = R(2, 9), a = R(1, 30); return { text: `${a}, ${a + s}, ${a + 2 * s}, __, __`, answer: `${a + 3 * s}, ${a + 4 * s}` }; }))
+      ],
+      shapes: [
+        () => mc('Formas geométricas.', [['Quantos lados tem um triângulo?', ['3', '4', '5'], 0], ['Quantos lados tem um quadrado?', ['4', '3', '6'], 0], ['Qual forma não tem cantos?', ['Círculo', 'Quadrado', 'Triângulo'], 0], ['Uma bola parece um(a)…', ['esfera', 'cubo', 'pirâmide'], 0], ['Um dado parece um…', ['cubo', 'cone', 'cilindro'], 0], ['Quantos lados tem um hexágono?', ['6', '5', '8'], 0], ['Quantas faces tem um cubo?', ['6', '4', '8'], 0], ['Quantos lados tem um pentágono?', ['5', '6', '4'], 0], ['Uma lata de refrigerante parece um…', ['cilindro', 'cone', 'cubo'], 0], ['Quantos vértices (cantos) tem um retângulo?', ['4', '2', '6'], 0]].slice(0, by([5, 6, 8, 10, 10])), N),
+        () => fill(L >= 4 ? 'Calcule o perímetro (contorno) e a área.' : 'Calcule o perímetro (soma dos lados).', many(Math.max(3, N - 2), () => { const a = R(2, by([5, 8, 12, 15, 25])), b = R(2, by([5, 8, 12, 15, 25])); return { text: `Retângulo de ${a} cm por ${b} cm${L >= 4 ? ' → perímetro __ área __' : ' → perímetro __'}`, answer: L >= 4 ? `${2 * (a + b)} cm e ${a * b} cm²` : `${2 * (a + b)} cm`, line: true }; }))
+      ],
+      mult: [
+        () => fill('Faça as multiplicações.', many(N, () => { const a = R(by([1, 2, 2, 11, 12]), by([5, 6, 10, 49, 99])), b = R(2, by([3, 5, 9, 9, 19])); return { text: `${a} × ${b} =`, answer: a * b }; })),
+        () => fill('Descubra o número que falta.', many(N, () => { const a = R(2, by([3, 5, 9, 10, 12])), b = R(2, by([5, 5, 10, 12, 15])); return { text: `${a} × ___ = ${a * b}`, answer: b }; })),
+        () => fill('Resolva o problema.', many(Math.max(2, N - 3), () => { const a = R(2, by([3, 5, 9, 12, 25])), b = R(2, by([4, 6, 9, 15, 30])); return { text: `Cada caixa tem ${b} lápis. Quantos lápis tem em ${a} caixas?`, answer: a * b, line: true }; }))
+      ],
+      times: [
+        () => { const r = by([[2, 3], [2, 5], [3, 9], [6, 10], [7, 12]]), n = R(r[0], r[1]); return fill(`Tabuada do ${n}.`, shuffle([...Array(10)].map((_, i) => i + 1), rnd).slice(0, N + 2).map(k => ({ text: `${n} × ${k} =`, answer: n * k }))); },
+        () => { const r = by([[2, 3], [2, 5], [3, 9], [6, 10], [7, 12]]); return fill('Tabuada misturada.', many(N + 2, () => { const n = R(r[0], r[1]), k = R(1, 10); return rnd() < .5 || L < 3 ? { text: `${n} × ${k} =`, answer: n * k } : { text: `${n * k} ÷ ${n} =`, answer: k }; })); }
+      ],
+      money: [
+        () => fill('Problemas com dinheiro.', many(by([2, 3, 3, 4, 4]), () => { const p = R(2, by([5, 9, 15, 25, 49])), q = R(by([1, 2, 2, 3, 3]), by([2, 3, 5, 8, 12])), pay = (Math.ceil(p * q / 10) + R(1, by([1, 1, 2, 3, 5]))) * 10; return { text: `${nm()} comprou ${q} picolé(s) de R$ ${p},00 e pagou com R$ ${pay},00. Quanto recebeu de troco?`, answer: `R$ ${pay - p * q},00`, line: true }; })),
+        () => fill(L >= 4 ? 'Some os valores (com centavos).' : 'Quanto dinheiro tem?', many(N, () => { if (L >= 4) { const a = R(100, 4999) / 100, b = R(100, 4999) / 100; return { text: `R$ ${a.toFixed(2).replace('.', ',')} + R$ ${b.toFixed(2).replace('.', ',')} =`, answer: `R$ ${(a + b).toFixed(2).replace('.', ',')}` }; } const n10 = R(0, 3), n5 = R(0, 3), n2 = R(0, 4), n1 = R(0, 4); return { text: `${n10}× R$10 + ${n5}× R$5 + ${n2}× R$2 + ${n1}× R$1 =`, answer: `R$ ${n10 * 10 + n5 * 5 + n2 * 2 + n1},00` }; }))
+      ],
+      time: [
+        () => fill('Horas.', many(by([3, 4, 4, 5, 5]), () => { const h = R(6, 18), m = L <= 1 ? 0 : [0, 10, 15, 20, 30, 40, 45, 50][R(0, 7)], ds = by([[30, 60], [30, 45, 60, 90], [25, 45, 75, 90], [35, 50, 85, 105, 125], [47, 75, 95, 135, 165]]), d = ds[R(0, ds.length - 1)], tot = h * 60 + m + d; return { text: `Começou às ${h}h${String(m).padStart(2, '0')} e durou ${d} minutos. Terminou às…`, answer: `${Math.floor(tot / 60)}h${String(tot % 60).padStart(2, '0')}`, line: true }; })),
+        () => fill('Quanto tempo?', many(N, () => { const qs = by([[['1 hora', '60 minutos'], ['meia hora', '30 minutos']], [['1 hora', '60 minutos'], ['meia hora', '30 minutos'], ['1 dia', '24 horas'], ['1 semana', '7 dias']], [['2 horas', '120 minutos'], ['1 semana', '7 dias'], ['1 ano', '12 meses'], ['1 dia', '24 horas'], ['15 minutos', 'um quarto de hora']], [['3 horas', '180 minutos'], ['2 semanas', '14 dias'], ['1 minuto', '60 segundos'], ['1 ano', '365 dias'], ['1 década', '10 anos']], [['2 horas e meia', '150 minutos'], ['3 semanas', '21 dias'], ['5 minutos', '300 segundos'], ['1 século', '100 anos'], ['1 dia', '1.440 minutos']]]); const [a, b] = qs[R(0, qs.length - 1)]; return { text: `${a} = ______`, answer: b }; }))
+      ],
+      div: [
+        () => fill('Faça as divisões.', many(N, () => { const d = R(2, by([2, 5, 9, 9, 12])), q = R(2, by([5, 10, 10, 30, 99])); if (L === 5 && rnd() < .4) { const r = R(1, d - 1); return { text: `${d * q + r} ÷ ${d} = ___ resto ___`, answer: `${q} resto ${r}` }; } return { text: `${d * q} ÷ ${d} =`, answer: q }; })),
+        () => fill('Resolva o problema.', many(Math.max(2, N - 3), () => { const d = R(2, by([2, 4, 6, 9, 12])), q = R(2, by([5, 8, 10, 20, 40])); return { text: `${d * q} balas divididas igualmente entre ${d} crianças. Quantas para cada uma?`, answer: q, line: true }; }))
+      ],
+      fractions: [
+        () => fill('Frações de um número.', many(N, () => { const opts = [['a metade', 2, 1], ['a terça parte', 3, 1], ['a quarta parte', 4, 1], ['a quinta parte', 5, 1], ['a décima parte', 10, 1], ['dois terços', 3, 2], ['três quartos', 4, 3]].slice(0, by([1, 2, 4, 5, 7])), [nme, k, m] = opts[R(0, opts.length - 1)], n = k * R(2, by([5, 10, 12, 20, 25])); return { text: `Quanto é ${nme} de ${n}?`, answer: n / k * m }; })),
+        () => fill(L >= 4 ? 'Some ou subtraia as frações.' : 'Que fração está pintada? (escreva como 1/2, 1/4…)', many(N, () => { if (L >= 4) { const den = R(3, 10), a = R(1, den - 1), b = R(1, den - a); return rnd() < .5 ? { text: `${a}/${den} + ${b}/${den} =`, answer: `${a + b}/${den}` } : { text: `${a + b}/${den} − ${b}/${den} =`, answer: `${a}/${den}` }; } const den = by([2, 4, 4, 8, 8]) === 2 ? R(2, 4) : R(2, 8), num = R(1, den - 1); return { text: '🟦'.repeat(num) + '⬜'.repeat(den - num), answer: `${num}/${den}` }; }))
+      ]
+    }
+  };
+  // ciências e história/geografia: múltipla escolha, verdadeiro ou falso e resposta escrita
+  const bankVariants = (bank, tp, title) => [
+    () => mc(title, bank[tp], N),
+    () => ({ kind: 'mc', title: title + ' — verdadeiro ou falso?', items: pick(bank[tp], N, rnd).map(([q, o, a]) => { const tr = rnd() < .5, ans = tr ? o[a] : o.filter((_, i) => i !== a)[R(0, o.length - 2)]; return { q: `${q.replace(/[?…]+$/, '')} → ${ans}`, o: shuffleKeep(['Verdadeiro', 'Falso'], tr ? 0 : 1, rnd).sort((x, y) => (x.o === 'Verdadeiro' ? -1 : 1)) }; }) }),
+    () => fill(title + ' — responda.', pick(bank[tp], Math.max(2, N - 2), rnd).map(([q, o, a]) => ({ text: q, answer: o[a], line: true })))
+  ];
+  const list = (topics && topics.length ? topics : topicsFor(c, subject).slice(0, 4)).filter(tp => subject === 'english' || (V[subject] && V[subject][tp]) || (QBANK[subject] && QBANK[subject][tp]));
+  if (subject === 'english') return { subject, topics: list, level: L, english: buildEnglishTest(L <= 1 ? 1 : L <= 3 ? 2 : 3, seed, list) };
+  const gens = list.map(tp => {
+    if (subject === 'science' || subject === 'social') return bankVariants(QBANK[subject], tp, t('tp_' + subject + '_' + tp)).slice(0, L <= 1 ? 2 : 3);
+    const v = V[subject][tp]; return L <= 1 ? v.slice(0, Math.max(1, v.length - 1)) : v;
+  });
+  const parts = [], target = TH_TARGET[L - 1], idx = gens.map(() => 0), count = p => p.kind === 'text' ? p.q.length + 1 : p.items.length;
+  let total = 0, guard = 0;
+  while (total < target && parts.length < 10 && guard++ < 40 && gens.length) {
+    const g = gens[guard % gens.length]; const i = idx[guard % gens.length]++;
+    if (i >= g.length * 2) continue;
+    const p = g[i % g.length](); if (!p || !count(p)) continue;
+    parts.push(p); total += count(p);
+  }
+  return { subject, topics: list, level: L, parts };
+}
+// a provinha por matéria passa a usar o gerador novo
+buildStudyTest = function (c, subject, topics, seed, level) { return buildHardTest(c, subject, topics || [], seed, level); };
+// nível inicial um pouco mais alto para quem já está na escola
+tlStart = function (c) { return c.age <= 4 ? 1 : c.age <= 6 ? 2 : c.age <= 8 ? 3 : 4; };
+
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const all = Object.values(EN_CANDO).flat(); d.canDo = {};
+    if (raw.canDo && typeof raw.canDo === 'object') Object.entries(raw.canDo).forEach(([k, v]) => { const id = mapChild(k); if (id && Array.isArray(v)) d.canDo[id] = v.filter(x => all.includes(x)); });
+  };
+})();
+
+/* =====================================================================
    "Nossa família": reunião de domingo (guiada), desafio da semana e
    diário da família (frases, primeiras vezes, momentos), com livrinho
    para imprimir no fim do ano.
@@ -15895,6 +17032,268 @@ Object.assign(ACTIONS, {
   render = function () { render0(); if (ui.fridge) renderFridge(); };
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && ui.fridge && !$('.modal')) closeFridge(); });
 })();
+
+/* =====================================================================
+   Arte: desafio de desenho do dia (por idade), folhas para imprimir
+   (desenho do dia, transforme a forma, quadrinhos, simetria),
+   dobraduras passo a passo em níveis e a galeria do que fizeram.
+   As ideias e os passos ficam em português (como as provinhas).
+   ===================================================================== */
+
+const DRAW_PROMPTS = {
+  s1: ['Desenhe um sol bem amarelo', 'Faça uma chuva de pontinhos azuis', 'Desenhe uma bola colorida', 'Contorne a sua mão e pinte', 'Desenhe a mamãe ou o papai', 'Faça um arco-íris', 'Desenhe uma flor', 'Rabisque com 3 cores diferentes', 'Desenhe um peixinho no mar', 'Desenhe uma casinha', 'Desenhe o seu bichinho preferido', 'Faça muitas bolinhas de todas as cores'],
+  s2: ['Desenhe a sua família', 'Um animal que você gostaria de ter', 'A sua casa dos sonhos', 'Um monstro amigo e bem engraçado', 'O que você comeu hoje', 'Um dia na praia', 'Um carro do futuro', 'Você como super-herói', 'O seu brinquedo favorito', 'Um jardim cheio de insetos', 'Um bolo de aniversário gigante', 'Um dinossauro brincando no parque', 'O fundo do mar', 'Um foguete indo para a Lua', 'Você e seus irmãos brincando'],
+  s3: ['Invente uma criatura e dê um nome para ela', 'Faça uma história em 3 quadrinhos', 'Desenhe um mapa do tesouro do seu quarto', 'A sua cidade no ano 2050', 'Desenhe usando só círculos, quadrados e triângulos', 'Olhe um objeto da casa e desenhe igualzinho', 'Uma cena do último livro que você leu', 'O seu lugar favorito no mundo', 'Um robô que ajuda em casa', 'Uma árvore nas 4 estações', 'O seu melhor amigo em versão desenho animado', 'Uma invenção maluca com instruções', 'A capa de um livro que você escreveria', 'Um país que você quer conhecer', 'A sua família como animais']
+};
+const ORIGAMI = [
+  { id: 'cup', icon: '🥤', lvl: 1, min: 3, paper: 'q', steps: ['Pegue um papel quadrado.', 'Dobre na diagonal, formando um triângulo com a ponta para cima.', 'Dobre a ponta da direita até o meio do lado esquerdo.', 'Dobre a ponta da esquerda até o outro lado, por cima da primeira.', 'Dobre a ponta de cima da frente para baixo e coloque dentro do bolsinho.', 'Vire e dobre a outra ponta de cima para trás.', 'Aperte os lados e abra a boca do copo. Pronto!'] },
+  { id: 'hat', icon: '🎩', lvl: 1, min: 3, paper: 'r', steps: ['Pegue uma folha retangular (pode ser de jornal).', 'Dobre ao meio, de cima para baixo.', 'Dobre ao meio de lado só para marcar e abra de novo.', 'Dobre as duas pontas de cima até a linha do meio, formando um triângulo.', 'Dobre a faixa de baixo para cima. Vire e faça igual do outro lado.', 'Abra por baixo e coloque na cabeça!'] },
+  { id: 'plane', icon: '✈️', lvl: 1, min: 4, paper: 'r', steps: ['Pegue uma folha retangular.', 'Dobre ao meio no comprido e abra de novo.', 'Dobre os dois cantos de cima até a linha do meio.', 'Dobre de novo as laterais até a linha do meio, deixando a ponta fininha.', 'Dobre o avião ao meio, para fora.', 'Dobre cada asa para baixo, alinhando com a parte de baixo do avião.', 'Abra as asas e lance!'] },
+  { id: 'dog', icon: '🐶', lvl: 1, min: 3, paper: 'q', steps: ['Pegue um papel quadrado.', 'Dobre na diagonal, formando um triângulo com a ponta para baixo.', 'Dobre as pontas da direita e da esquerda para baixo: são as orelhas.', 'Dobre a ponta de baixo um pouquinho para cima: é o focinho.', 'Desenhe os olhos e o nariz. Au au!'] },
+  { id: 'cat', icon: '🐱', lvl: 1, min: 3, paper: 'q', steps: ['Pegue um papel quadrado.', 'Dobre na diagonal, formando um triângulo com a ponta para baixo.', 'Dobre as pontas da direita e da esquerda para cima: são as orelhas.', 'Dobre a parte de cima, entre as orelhas, para trás.', 'Desenhe olhos, nariz e bigodes. Miau!'] },
+  { id: 'fan', icon: '🪭', lvl: 1, min: 3, paper: 'r', steps: ['Pegue uma folha retangular e pinte se quiser.', 'Dobre uma faixa fininha na ponta.', 'Vire a folha e dobre outra faixa do mesmo tamanho (como uma sanfona).', 'Continue virando e dobrando até o fim da folha.', 'Junte uma ponta com fita adesiva e abra o leque.'] },
+  { id: 'house', icon: '🏠', lvl: 2, min: 5, paper: 'q', steps: ['Pegue um papel quadrado.', 'Dobre ao meio de cima para baixo.', 'Dobre ao meio de lado só para marcar e abra.', 'Dobre os dois lados até a linha do meio.', 'Abra as abas de cima puxando a ponta para o lado e amassando em forma de triângulo: é o telhado.', 'Faça igual do outro lado.', 'Desenhe porta e janelas.'] },
+  { id: 'boat', icon: '⛵', lvl: 2, min: 5, paper: 'r', steps: ['Faça primeiro o chapéu de papel (passos do chapéu).', 'Abra o chapéu por baixo e junte as pontas, formando um quadrado.', 'Dobre as pontas de baixo para cima, uma de cada lado, formando um triângulo.', 'Abra de novo por baixo e junte as pontas, formando outro quadrado.', 'Segure as pontas de cima e puxe devagar para os lados.', 'Arrume o fundo e coloque o barquinho na água!'] },
+  { id: 'heart', icon: '❤️', lvl: 2, min: 5, paper: 'q', steps: ['Pegue um papel quadrado (vermelho fica lindo).', 'Dobre ao meio e abra. Dobre ao meio para o outro lado e abra: fica uma cruz.', 'Dobre a ponta de cima até o centro.', 'Dobre a ponta de baixo até a borda de cima.', 'Dobre os lados de baixo para cima pela linha do meio, formando um V.', 'Vire e dobre as pontinhas de cima e dos lados para trás para arredondar.', 'Vire de novo: é um coração!'] },
+  { id: 'tulip', icon: '🌷', lvl: 2, min: 5, paper: 'q', steps: ['Pegue um papel quadrado.', 'Dobre na diagonal, formando um triângulo com a ponta para cima.', 'Dobre a ponta da direita para cima, um pouco inclinada, passando do topo.', 'Faça igual com a ponta da esquerda.', 'Vire e dobre os cantinhos dos lados para trás.', 'Para o cabinho, enrole uma tira verde e cole embaixo da flor.'] },
+  { id: 'frog', icon: '🐸', lvl: 3, min: 7, paper: 'r', steps: ['Pegue um cartão ou papel retangular firme.', 'Dobre o canto de cima direito até o lado esquerdo e abra. Repita com o outro canto: fica um X.', 'Dobre para trás na altura do centro do X e abra.', 'Empurre os lados para dentro pelas dobras, formando um triângulo em cima.', 'Dobre as pontas do triângulo para cima: são as patas da frente.', 'Dobre os lados de baixo até o meio.', 'Dobre a parte de baixo para cima e depois metade para baixo, como uma sanfona: é a mola.', 'Vire, desenhe os olhos e aperte a traseira para o sapo pular!'] },
+  { id: 'pinwheel', icon: '🌀', lvl: 3, min: 7, paper: 'q', steps: ['Pegue um papel quadrado e peça ajuda de um adulto com a tesoura.', 'Dobre nas duas diagonais e abra: fica um X.', 'Corte cada linha do X do canto até perto do centro (pare antes do meio).', 'Leve uma ponta de cada triângulo até o centro, pulando uma.', 'Prenda as 4 pontas no centro com um percevejo ou alfinete num palito.', 'Sopre e veja o catavento girar!'] },
+  { id: 'crane', icon: '🕊️', lvl: 3, min: 8, paper: 'q', steps: ['Pegue um papel quadrado (fino é melhor). Peça ajuda de um adulto.', 'Dobre nas duas diagonais e ao meio nos dois sentidos, abrindo sempre.', 'Junte os cantos pelas dobras, formando um quadradinho (base quadrada).', 'Dobre as abas laterais da frente até o meio e a ponta de cima para baixo. Abra essas três dobras.', 'Levante a camada da frente pela dobra de baixo, apertando os lados para dentro (é a pétala). Faça igual atrás.', 'Dobre os lados da frente até o meio para afinar. Faça igual atrás.', 'Dobre as duas pontas de baixo para cima, por dentro: são o pescoço e o rabo.', 'Dobre a ponta do pescoço para baixo para fazer a cabeça.', 'Abra as asas com cuidado. É o tsuru, o pássaro da sorte!'] }
+];
+const ART_KINDS = { draw: '🖍️', origami: '🦢', paint: '🎨', clay: '🧱', craft: '✂️' };
+function drawStage(c) { return c.age <= 4 ? 's1' : c.age <= 6 ? 's2' : 's3'; }
+function drawPrompt(c, bump = 0) { const list = DRAW_PROMPTS[drawStage(c)], rnd = seededRng(`${c.id}|${dayKey()}|${bump}`); return list[Math.floor(rnd() * list.length)]; }
+function artOfWeek(c) { const from = weekStart().getTime(); return S.art.works.filter(w => w.childId === c.id && Date.parse(w.date) >= from).length; }
+function artToday(c) { return S.art.works.filter(w => w.childId === c.id && dayKey(w.date) === dayKey()).length; }
+function addArtwork(c, kind, title, origamiId) {
+  let pts = 0;
+  if (S.art.points && artToday(c) < S.art.maxPerDay) { pts = S.art.points; changePoints(c, pts); c.xp = Number(c.xp || 0) + pts; }
+  const h = pts ? addHistory({ type: 'adjust', childId: c.id, childName: c.name, description: `${ART_KINDS[kind] || '🎨'} ${title}`, points: pts }) : null;
+  S.art.works.unshift({ id: uid('aw'), childId: c.id, date: isoNow(), kind, title: text(title, 100), origami: origamiId || null, historyId: h ? h.id : null });
+  if (pts) checkAchievements(c);
+  return pts;
+}
+
+/* ---------- folhas para imprimir ---------- */
+function artSheetFrame(c, prompt) {
+  return `<div class="ps-page art-sheet"><div class="art-head"><div><div class="art-kicker">🖍️ Desafio de desenho</div><div class="art-title">${esc(prompt)}</div></div><div class="ws-name"><div>Nome: <b>${esc(c.name)}</b></div><div>Data: ____/____/______</div></div></div><div class="art-frame"></div><div class="art-foot">Dê um nome para o seu desenho: ______________________________</div></div>`;
+}
+const ART_SHAPES = [
+  '<circle cx="60" cy="60" r="34"/>', '<path d="M20 95 L60 25 L100 95 Z"/>', '<path d="M15 70 Q35 30 55 70 T95 70"/>', '<path d="M25 80 A35 35 0 0 1 95 80"/>',
+  '<path d="M15 80 L35 40 L55 80 L75 40 L95 80"/>', '<path d="M60 60 m-6 0 a6 6 0 1 1 12 0 a14 14 0 1 1 -26 0 a22 22 0 1 1 42 0 a30 30 0 1 1 -58 0"/>', '<circle cx="42" cy="55" r="7"/><circle cx="78" cy="55" r="7"/>',
+  '<rect x="28" y="28" width="64" height="64" rx="4"/>', '<path d="M30 75 Q20 55 40 50 Q42 30 62 36 Q80 26 88 46 Q104 52 94 72 Z"/>', '<path d="M60 20 L60 100 M20 60 L100 60"/>', '<path d="M30 90 C30 40 90 40 90 90"/>', '<ellipse cx="60" cy="60" rx="44" ry="22"/>'
+];
+function artSheetShapes(c, seed) {
+  const rnd = seededRng(seed), list = shuffle(ART_SHAPES, rnd).slice(0, 6);
+  return `<div class="ps-page art-sheet"><div class="art-head"><div><div class="art-kicker">✨ Transforme a forma</div><div class="art-title">Transforme cada forma em um desenho!</div></div><div class="ws-name"><div>Nome: <b>${esc(c.name)}</b></div></div></div>
+    <div class="art-shapes">${list.map(s => `<div class="art-shape"><svg viewBox="0 0 120 120" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round">${s}</svg><div class="art-line">Virou: ____________</div></div>`).join('')}</div></div>`;
+}
+function artSheetComic(c, panels) {
+  return `<div class="ps-page art-sheet"><div class="art-head"><div><div class="art-kicker">💬 Minha história em quadrinhos</div><div class="art-title">Título: ______________________________</div></div><div class="ws-name"><div>Autor: <b>${esc(c.name)}</b></div></div></div>
+    <div class="art-comic art-c${panels}">${[...Array(panels)].map((_, i) => `<div class="art-panel"><span>${i + 1}</span></div>`).join('')}</div><div class="art-foot">Fim! ✨</div></div>`;
+}
+function artSheetMirror(c, seed) {
+  const rnd = seededRng(seed), n = c.age <= 5 ? 6 : c.age <= 7 ? 8 : 10, half = n / 2, colors = ['#f87171', '#60a5fa', '#34d399', '#fbbf24', '#a78bfa'];
+  const grid = () => { const cells = []; for (let r = 0; r < n; r++) for (let k = 0; k < n; k++) { const left = k < half; const on = left && rnd() < .42; cells.push(`<i style="${on ? `background:${colors[Math.floor(rnd() * (c.age <= 5 ? 2 : 4))]}` : ''}" class="${k === half - 1 ? 'mid' : ''}"></i>`); } return `<div class="art-mirror" style="grid-template-columns:repeat(${n},1fr)">${cells.join('')}</div>`; };
+  return `<div class="ps-page art-sheet"><div class="art-head"><div><div class="art-kicker">🪞 Desenho espelhado</div><div class="art-title">Pinte o lado direito igual ao esquerdo, como num espelho.</div></div><div class="ws-name"><div>Nome: <b>${esc(c.name)}</b></div></div></div>
+    <div class="art-mirrors">${grid()}${c.age >= 6 ? grid() : ''}</div></div>`;
+}
+function origamiSheet(o) {
+  return `<div class="ps-page art-sheet ori-sheet"><div class="art-head"><div><div class="art-kicker">🦢 Dobradura ${'⭐'.repeat(o.lvl)}</div><div class="art-title">${o.icon} ${esc(t('or_' + o.id))}</div><div class="art-sub">Papel ${o.paper === 'q' ? 'quadrado' : 'retangular (folha comum)'}</div></div></div>
+    <ol class="ori-steps">${o.steps.map(s => `<li><span class="ori-box">☐</span>${esc(s)}</li>`).join('')}</ol><div class="art-foot">Consegui fazer! Assinatura: ______________________</div></div>`;
+}
+
+/* ---------- seção ---------- */
+const ART_SECTION = {
+  id: 'arte', icon: '🎨', nav: 'navArt', child: true,
+  build: () => `<div id="arPicker"></div><div id="arBody"></div>`,
+  update() {
+    const kids = visibleChildren(); if (!kids.some(k => k.id === ui.arChild)) ui.arChild = kids[0].id;
+    const c = childById(ui.arChild), parent = !isChildMode();
+    $('#arPicker').innerHTML = parent ? childPicker(c.id, 'ar-child') : '';
+    ui.arBump = ui.arBump || 0;
+    const prompt = drawPrompt(c, ui.arBump), lvlMax = c.age <= 4 ? 1 : c.age <= 6 ? 2 : 3;
+    const works = S.art.works.filter(w => w.childId === c.id);
+    $('#arBody').innerHTML = `<div class="grid g2">
+      ${card('🖍️ ' + t('arTodayTitle'), `<div class="ar-prompt" style="--c:${c.accentColor}"><span>💡</span><b>${esc(prompt)}</b></div>
+        <div class="actions mt"><button type="button" class="btn btn-soft btn-sm" data-act="ar-other">🔄 ${t('arOther')}</button><button type="button" class="btn btn-soft btn-sm" data-act="ar-print-frame">🖨️ ${t('arPrintFrame')}</button>${parent ? `<button type="button" class="btn btn-success btn-sm" data-act="ar-done" data-kind="draw">✔ ${t('arDidIt')}</button>` : ''}</div>
+        <p class="hint">${t('arWeek', { name: esc(c.name), n: artOfWeek(c) })}</p>`)}
+      ${card('🖨️ ' + t('arSheets'), `<div class="ar-sheets">
+        <button type="button" class="ar-sheet" data-act="ar-print" data-id="shapes"><span>✨</span><b>${t('arSheetShapes')}</b><small>${t('arSheetShapesHint')}</small></button>
+        <button type="button" class="ar-sheet" data-act="ar-print" data-id="comic"><span>💬</span><b>${t('arSheetComic')}</b><small>${t('arSheetComicHint')}</small></button>
+        <button type="button" class="ar-sheet" data-act="ar-print" data-id="mirror"><span>🪞</span><b>${t('arSheetMirror')}</b><small>${t('arSheetMirrorHint')}</small></button>
+        <button type="button" class="ar-sheet" data-act="ar-print" data-id="frame"><span>🖼️</span><b>${t('arPrintFrame')}</b><small>${t('arSheetFrameHint')}</small></button></div>`)}
+    </div>
+    ${card('🦢 ' + t('arOriTitle'), `<p class="hint" style="margin-top:-6px">${t('arOriHint', { name: esc(c.name) })}</p>
+      ${[1, 2, 3].map(l => `<h3 class="ar-lvl">${'⭐'.repeat(l)} ${t('arOriLvl' + l)}${l > lvlMax ? ` <small>${t('arOriWithHelp')}</small>` : ''}</h3><div class="ar-oris">${ORIGAMI.filter(o => o.lvl === l).map(o => { const n = works.filter(w => w.origami === o.id).length; return `<button type="button" class="ar-ori ${n ? 'done' : ''}" data-act="ar-ori" data-id="${o.id}"><span>${o.icon}</span><b>${esc(t('or_' + o.id))}</b><small>${o.steps.length} ${t('arSteps')}${n ? ` · ✔ ${n}x` : ''}</small></button>`; }).join('')}</div>`).join('')}`, { cls: 'mt' })}
+    ${card('🖼️ ' + t('arGallery', { name: esc(c.name) }), `${parent ? `<div class="ar-add"><select id="arKind">${Object.entries(ART_KINDS).map(([k, e]) => `<option value="${k}">${e} ${esc(t('ark_' + k))}</option>`).join('')}</select><input id="arTitle" maxlength="100" placeholder="${esc(t('arTitlePh'))}"><button type="button" class="btn btn-primary" data-act="ar-add">+ ${t('arAdd')}</button></div>` : ''}
+      ${works.length ? `<div class="ar-gallery">${works.slice(0, 60).map(w => `<div class="ar-work"><span class="ar-wi">${w.origami ? (ORIGAMI.find(o => o.id === w.origami) || {}).icon || '🦢' : ART_KINDS[w.kind] || '🎨'}</span><b>${esc(w.title)}</b><small>${fmtDate(w.date)}</small>${parent ? `<button type="button" class="icon-btn danger" data-act="ar-del" data-id="${esc(w.id)}" aria-label="${esc(t('delete'))}">🗑️</button>` : ''}</div>`).join('')}</div>` : emptyBox(t('arEmpty'))}
+      <p class="hint">${t('arGalleryHint', { n: S.art.points, max: S.art.maxPerDay })}</p>
+      ${parent ? `<div class="actions mt"><button type="button" class="btn btn-soft btn-sm" data-act="ar-task" data-id="art_taskDraw">+ ${t('libAdd')}: ${t('art_taskDraw')}</button><button type="button" class="btn btn-soft btn-sm" data-act="ar-task" data-id="art_taskOrigami">+ ${t('libAdd')}: ${t('art_taskOrigami')}</button></div>
+      <details class="mt"><summary>⚙️ ${t('arRules')}</summary><div class="row2 mt"><div><label for="arPts">${t('arRulePoints')}</label><input id="arPts" type="number" min="0" max="100" value="${S.art.points}"></div><div><label for="arMax">${t('arRuleMax')}</label><input id="arMax" type="number" min="0" max="10" value="${S.art.maxPerDay}"></div></div><button type="button" class="btn btn-primary btn-sm mt" data-act="ar-rules">${t('save')}</button></details>` : ''}`, { cls: 'mt' })}`;
+  }
+};
+SECTIONS.splice(SECTIONS.findIndex(s => s.id === 'jogos') + 1, 0, ART_SECTION);
+
+function openOrigami(id) {
+  const o = ORIGAMI.find(x => x.id === id); if (!o) return;
+  ui.ori = { id, i: 0 }; renderOrigami();
+}
+function renderOrigami() {
+  const o = ORIGAMI.find(x => x.id === ui.ori.id), i = ui.ori.i, last = i >= o.steps.length - 1, parent = !isChildMode();
+  Modal.open({
+    id: 'oriModal', title: `${o.icon} ${esc(t('or_' + o.id))} ${'⭐'.repeat(o.lvl)}`,
+    body: `<div class="ori-prog">${o.steps.map((_, k) => `<span class="${k < i ? 'done' : k === i ? 'on' : ''}"></span>`).join('')}</div>
+      <div class="ori-step"><div class="ori-num">${i + 1}<small>/${o.steps.length}</small></div><p>${esc(o.steps[i])}</p><button type="button" class="btn btn-soft btn-sm" data-act="ori-say">🔊 ${t('arListen')}</button></div>
+      <p class="hint">📄 ${o.paper === 'q' ? t('arPaperSquare') : t('arPaperRect')}${o.lvl === 3 ? ' · ' + t('arOriHard') : ''}</p>
+      <div class="actions"><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/results?search_query=${encodeURIComponent('como fazer ' + t('or_' + o.id) + ' de origami para crianças')}" target="_blank" rel="noopener">▶️ ${t('arVideo')}</a><button type="button" class="btn btn-ghost btn-sm" data-act="ori-print">🖨️ ${t('print')}</button></div>`,
+    foot: `${i ? `<button type="button" class="btn btn-ghost" data-act="ori-go" data-id="-1">← ${t('back')}</button>` : '<span></span>'}${last ? (parent ? `<button type="button" class="btn btn-success" data-act="ori-done">✔ ${t('arDidIt')}</button>` : `<button type="button" class="btn btn-primary" data-act="close-modal">🎉 ${t('arReady')}</button>`) : `<button type="button" class="btn btn-primary" data-act="ori-go" data-id="1">${t('next')} →</button>`}`
+  });
+}
+Object.assign(ACTIONS, {
+  'ar-child': el => { ui.arChild = el.dataset.id; ui.arBump = 0; render(); },
+  'ar-other': () => { ui.arBump = (ui.arBump || 0) + 1; render(); },
+  'ar-print-frame': () => { const c = childById(ui.arChild); printDocument(artSheetFrame(c, drawPrompt(c, ui.arBump)), t('arTodayTitle')); },
+  'ar-print': el => {
+    const c = childById(ui.arChild), k = el.dataset.id, seed = `${c.id}|${Date.now()}`;
+    const html = k === 'shapes' ? artSheetShapes(c, seed) : k === 'comic' ? artSheetComic(c, c.age <= 5 ? 3 : c.age <= 7 ? 4 : 6) : k === 'mirror' ? artSheetMirror(c, seed) : artSheetFrame(c, drawPrompt(c, ui.arBump));
+    printDocument(html, t('navArt') + ' — ' + c.name);
+  },
+  'ar-done': () => { const c = childById(ui.arChild); const pts = addArtwork(c, 'draw', drawPrompt(c, ui.arBump)); commit(); toast(`🖍️ ${t('arSaved', { name: c.name })}${pts ? ` (+${pts})` : ''}`, 'success'); },
+  'ar-add': () => { const c = childById(ui.arChild), tt = text($('#arTitle').value, 100); if (!tt) return toast(t('arNeedTitle'), 'warn'); const pts = addArtwork(c, $('#arKind').value, tt); commit(); toast(`🖼️ ${t('arSaved', { name: c.name })}${pts ? ` (+${pts})` : ''}`, 'success'); },
+  'ar-del': async el => { if (!(await askConfirm(t('arDelConfirm'), { danger: true, okLabel: t('delete') }))) return; const w = S.art.works.find(x => x.id === el.dataset.id); if (w && w.historyId && S.history.some(h => h.id === w.historyId)) undoHistory(w.historyId); S.art.works = S.art.works.filter(x => x.id !== el.dataset.id); commit(); toast(t('deleted')); },
+  'ar-ori': el => openOrigami(el.dataset.id),
+  'ori-go': el => { const o = ORIGAMI.find(x => x.id === ui.ori.id); ui.ori.i = clamp(ui.ori.i + int(el.dataset.id, 0), 0, o.steps.length - 1); renderOrigami(); },
+  'ori-say': () => { const o = ORIGAMI.find(x => x.id === ui.ori.id); speak(o.steps[ui.ori.i]); },
+  'ori-print': () => { const o = ORIGAMI.find(x => x.id === ui.ori.id); printDocument(origamiSheet(o), t('or_' + o.id)); },
+  'ori-done': () => { const c = childById(ui.arChild), o = ORIGAMI.find(x => x.id === ui.ori.id); const pts = addArtwork(c, 'origami', t('or_' + o.id), o.id); Modal.close('oriModal'); commit(); toast(`🦢 ${t('arSaved', { name: c.name })}${pts ? ` (+${pts})` : ''}`, 'success'); },
+  'ar-task': el => { const c = childById(ui.arChild), key = el.dataset.id; let task = S.tasks.find(x => x.nameKey === key); if (task) { if (!taskForChild(task, c)) task.childIds.push(c.id); } else { let id = Date.now(); while (taskById(id)) id++; S.tasks.push({ id, name: t(key), nameKey: key, points: 10, icon: key === 'art_taskDraw' ? '🖍️' : '🦢', frequency: 'weekly', days: [], time: '', approvalRequired: true, childIds: [c.id], cashPerPoint: null, fixedCash: 0 }); } commit(); toast(t('libAdded', { task: t(key), name: c.name }), 'success'); },
+  'ar-rules': () => { S.art.points = clamp(int($('#arPts').value, 5), 0, 100); S.art.maxPerDay = clamp(int($('#arMax').value, 2), 0, 10); commit(); toast(t('saved'), 'success'); }
+});
+REWARD_IDEAS.push({ tier: 'small', key: 'rw_markers', icon: '🖍️', cost: 60 }, { tier: 'small', key: 'rw_origamiPaper', icon: '🦢', cost: 50 }, { tier: 'medium', key: 'rw_artKit', icon: '🎨', cost: 200 });
+(function () {
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const a = raw.art && typeof raw.art === 'object' ? raw.art : {};
+    d.art = { points: clamp(int(a.points, 5), 0, 100), maxPerDay: clamp(int(a.maxPerDay, 2), 0, 10),
+      works: (Array.isArray(a.works) ? a.works : []).map(w => { if (!w || typeof w !== 'object') return null; const childId = mapChild(w.childId); if (!childId || !text(w.title, 100)) return null; return { id: cleanId(w.id) || uid('aw'), childId, date: safeIso(w.date), kind: ART_KINDS[w.kind] ? w.kind : 'draw', title: text(w.title, 100), origami: ORIGAMI.some(o => o.id === w.origami) ? w.origami : null, historyId: w.historyId ? cleanId(w.historyId) : null }; }).filter(Boolean).slice(0, 3000) };
+  };
+})();
+
+/* =====================================================================
+   Aparência: a paleta muda o app inteiro (fundo, cartões, botões,
+   destaques), modo claro/escuro/automático, fonte, tamanho do texto e
+   estilo/tamanho dos números.
+   ===================================================================== */
+
+Object.assign(PRESET_THEMES, {
+  grape: { sidebar1: '#2e1065', sidebar2: '#5b21b6', btn1: '#a855f7', btn2: '#7c3aed' },
+  candy: { sidebar1: '#4a1d4f', sidebar2: '#8e3a8c', btn1: '#f472b6', btn2: '#c084fc' },
+  sky: { sidebar1: '#0c3b5e', sidebar2: '#1572a1', btn1: '#38bdf8', btn2: '#0284c7' },
+  mint: { sidebar1: '#134e4a', sidebar2: '#0f766e', btn1: '#14b8a6', btn2: '#0d9488' },
+  lemon: { sidebar1: '#4a3b0b', sidebar2: '#8a6d12', btn1: '#eab308', btn2: '#ca8a04' },
+  coffee: { sidebar1: '#3b2a1e', sidebar2: '#6b4a33', btn1: '#b7794a', btn2: '#8b5a3c' },
+  ruby: { sidebar1: '#4c0519', sidebar2: '#9f1239', btn1: '#e11d48', btn2: '#be123c' }
+});
+const AP_FONTS = {
+  inter: { stack: 'Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif' },
+  nunito: { g: 'Nunito:wght@400;600;700;800;900', stack: 'Nunito,"Segoe UI",system-ui,sans-serif' },
+  andika: { g: 'Andika:wght@400;700', stack: 'Andika,"Segoe UI",system-ui,sans-serif' },
+  baloo: { g: 'Baloo+2:wght@400;500;600;700;800', stack: '"Baloo 2","Segoe UI",system-ui,sans-serif' },
+  lexend: { g: 'Lexend:wght@400;500;600;700;800', stack: 'Lexend,"Segoe UI",system-ui,sans-serif' },
+  comic: { g: 'Comic+Neue:wght@400;700', stack: '"Comic Neue","Comic Sans MS","Chalkboard SE",cursive' },
+  serif: { stack: 'Georgia,"Times New Roman",serif' }
+};
+const AP_NUMS = {
+  same: { stack: 'inherit' },
+  round: { g: 'Fredoka:wght@500;600;700', stack: 'Fredoka,"Baloo 2",system-ui,sans-serif' },
+  digital: { g: 'Orbitron:wght@600;800', stack: 'Orbitron,"Courier New",monospace' },
+  hand: { g: 'Patrick+Hand', stack: '"Patrick Hand","Comic Sans MS",cursive' },
+  mono: { g: 'JetBrains+Mono:wght@600;800', stack: '"JetBrains Mono",Consolas,monospace' }
+};
+const AP_SIZES = [90, 100, 110, 120, 135];
+const AP_NUM_SIZES = [100, 120, 140];
+function apLoadFont(spec) {
+  if (!spec || !spec.g) return;
+  const id = 'gf-' + spec.g.split(':')[0].replace(/\W/g, ''); if (document.getElementById(id)) return;
+  const l = document.createElement('link'); l.id = id; l.rel = 'stylesheet'; l.href = `https://fonts.googleapis.com/css2?family=${spec.g}&display=swap`; document.head.appendChild(l);
+}
+function apIsDark() { const m = S.theme.mode; return m === 'dark' || (m === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches); }
+
+(function () {
+  const apply0 = applyTheme;
+  applyTheme = function () {
+    apply0();
+    const th = S.theme, root = document.documentElement, st = root.style, p = currentPalette(), dark = apIsDark();
+    const child = activeChild(), accent = child ? child.accentColor : p.btn1;
+    root.classList.toggle('dark', dark);
+    if (dark) {
+      st.setProperty('--bg', `color-mix(in srgb, ${p.btn1} 9%, #0d0f1c)`); st.setProperty('--tint', `color-mix(in srgb, ${p.btn1} 16%, #11132a)`);
+      st.setProperty('--card', `color-mix(in srgb, ${p.btn1} 7%, #191c2c)`); st.setProperty('--surface2', `color-mix(in srgb, ${p.btn1} 10%, #232739)`);
+      st.setProperty('--text', '#eceef7'); st.setProperty('--muted', '#a2a8bd'); st.setProperty('--line', `color-mix(in srgb, ${p.btn1} 12%, #30354a)`);
+      st.setProperty('--accent-soft', `color-mix(in srgb, ${accent} 24%, #191c2c)`); st.setProperty('--shadow', '0 10px 30px rgba(0,0,0,.35)');
+    } else {
+      st.setProperty('--bg', `color-mix(in srgb, ${p.btn1} 6%, #f6f7fb)`); st.setProperty('--tint', `color-mix(in srgb, ${p.btn1} 14%, #fff)`);
+      st.setProperty('--card', `color-mix(in srgb, ${p.btn1} 2%, #fff)`); st.setProperty('--surface2', `color-mix(in srgb, ${p.btn1} 6%, #f5f6fa)`);
+      st.setProperty('--text', '#22223b'); st.setProperty('--muted', '#6b7280'); st.setProperty('--line', `color-mix(in srgb, ${p.btn1} 10%, #e6e8f0)`);
+      st.setProperty('--accent-soft', `color-mix(in srgb, ${accent} 12%, #fff)`); st.setProperty('--shadow', '0 10px 30px rgba(43,39,78,.08)');
+    }
+    const f = AP_FONTS[th.font] || AP_FONTS.inter, n = AP_NUMS[th.nums] || AP_NUMS.same;
+    apLoadFont(f); apLoadFont(n);
+    st.setProperty('--font', f.stack); st.setProperty('--num-font', n.stack === 'inherit' ? f.stack : n.stack);
+    st.setProperty('--num-zoom', String((th.numSize || 100) / 100));
+    document.body.style.zoom = th.size && th.size !== 100 ? String(th.size / 100) : '';
+    const meta = document.querySelector('meta[name=theme-color]'); if (meta) meta.setAttribute('content', dark ? '#0d0f1c' : p.sidebar1);
+  };
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if (S.theme.mode === 'auto') applyTheme(); }); } catch (e) { /* navegador antigo */ }
+})();
+
+function appearanceHtml() {
+  const th = S.theme, p = currentPalette();
+  const seg = (act, list, cur, label) => `<div class="ap-seg">${list.map(([v, l]) => `<button type="button" class="${String(cur) === String(v) ? 'on' : ''}" data-act="${act}" data-id="${v}">${l}</button>`).join('')}</div>`;
+  return `<div class="ap-grid">
+    <div><label>${t('apMode')}</label>${seg('ap-mode', [['light', '☀️ ' + t('apLight')], ['dark', '🌙 ' + t('apDark')], ['auto', '🌓 ' + t('apAuto')]], th.mode)}</div>
+    <div><label>${t('apSize')}</label>${seg('ap-size', AP_SIZES.map(v => [v, `<span style="font-size:${10 + v / 12}px">A</span> ${v}%`]), th.size || 100)}</div>
+  </div>
+  <label class="mt">${t('palette')}</label>
+  <div class="theme-grid ap-themes">${Object.entries(PRESET_THEMES).map(([k, q]) => `<button type="button" class="theme-card ${th.name === k ? 'on' : ''}" data-act="theme" data-id="${k}"><div class="theme-prev" style="background:color-mix(in srgb,${q.btn1} 10%,${apIsDark() ? '#151827' : '#f7f7fb'})"><i style="background:linear-gradient(180deg,${q.sidebar1},${q.sidebar2})"></i><b><span style="background:linear-gradient(135deg,${q.btn1},${q.btn2})"></span><em style="background:${q.btn1}"></em></b></div><strong>${t('theme_' + k)}</strong></button>`).join('')}</div>
+  <details class="mt" ${ui.apOpen ? 'open' : ''}><summary>🎨 ${t('apCustom')}</summary>
+    <div class="grid g2 mt">${['sidebar1', 'sidebar2', 'btn1', 'btn2'].map(k => `<div class="color-row"><label for="sc_${k}">${t('color_' + k)}</label><input id="sc_${k}" type="color" value="${p[k]}"></div>`).join('')}</div>
+    <div class="actions mt"><button type="button" class="btn btn-primary" data-act="theme-custom">${t('applyColors')}</button><button type="button" class="btn btn-soft" data-act="theme-reset">${t('restorePalette')}</button></div></details>
+  <label class="mt">${t('apFont')}</label>
+  <div class="ap-fonts">${Object.entries(AP_FONTS).map(([k, f]) => { apLoadFont(f); return `<button type="button" class="ap-font ${(th.font || 'inter') === k ? 'on' : ''}" data-act="ap-font" data-id="${k}" style="font-family:${esc(f.stack)}"><b>Aa 123</b><small>${esc(t('apFont_' + k))}</small></button>`; }).join('')}</div>
+  <label class="mt">${t('apNums')}</label>
+  <div class="ap-fonts">${Object.entries(AP_NUMS).map(([k, f]) => { apLoadFont(f); return `<button type="button" class="ap-font ${(th.nums || 'same') === k ? 'on' : ''}" data-act="ap-nums" data-id="${k}"><b style="font-family:${esc(f.stack === 'inherit' ? (AP_FONTS[th.font] || AP_FONTS.inter).stack : f.stack)}">1 2 3 ⭐</b><small>${esc(t('apNums_' + k))}</small></button>`; }).join('')}</div>
+  <div class="mt"><label>${t('apNumSize')}</label>${seg('ap-numsize', AP_NUM_SIZES.map(v => [v, t('apNumSize_' + v)]), th.numSize || 100)}</div>
+  <div class="ap-preview mt"><div class="card"><div class="kpi">1.250 ⭐</div><div class="kpi-label">${t('apPreview')}</div><div class="progress"><span style="width:62%"></span></div><div class="actions mt"><span class="btn btn-primary btn-sm">${t('save')}</span><span class="chip on">⭐ ${t('apChip')}</span><span class="pill ok">✔ ${t('doneToday')}</span></div></div></div>
+  <div class="actions mt"><button type="button" class="btn btn-ghost btn-sm" data-act="ap-reset">↺ ${t('apReset')}</button></div>`;
+}
+['theme-custom', 'theme-reset'].forEach(k => { const f = ACTIONS[k]; ACTIONS[k] = el => { ui.apOpen = true; f(el); }; });
+Object.assign(ACTIONS, {
+  'ap-mode': el => { S.theme.mode = el.dataset.id; commit(); },
+  'ap-size': el => { S.theme.size = int(el.dataset.id, 100); commit(); },
+  'ap-font': el => { S.theme.font = el.dataset.id; commit(); },
+  'ap-nums': el => { S.theme.nums = el.dataset.id; commit(); },
+  'ap-numsize': el => { S.theme.numSize = int(el.dataset.id, 100); commit(); },
+  'ap-reset': () => { Object.assign(S.theme, { name: 'purple', custom: null, childId: null, mode: 'light', font: 'inter', size: 100, nums: 'same', numSize: 100 }); commit(); },
+  'ap-toggle': () => { S.theme.mode = apIsDark() ? 'light' : 'dark'; commit(); }
+});
+(function () {
+  // tema: guardar as opções novas e manter o escolhido ao trocar de paleta
+  const base = normalizeExtras;
+  normalizeExtras = function (raw, d, mapChild) {
+    base(raw, d, mapChild);
+    const th = raw.theme && typeof raw.theme === 'object' ? raw.theme : {};
+    if (typeof raw.theme === 'object' && raw.theme && PRESET_THEMES[raw.theme.name] && d.theme.name === 'purple') d.theme.name = raw.theme.name;
+    d.theme.mode = ['light', 'dark', 'auto'].includes(th.mode) ? th.mode : 'light';
+    d.theme.font = AP_FONTS[th.font] ? th.font : 'inter';
+    d.theme.size = AP_SIZES.includes(int(th.size, 100)) ? int(th.size, 100) : 100;
+    d.theme.nums = AP_NUMS[th.nums] ? th.nums : 'same';
+    d.theme.numSize = AP_NUM_SIZES.includes(int(th.numSize, 100)) ? int(th.numSize, 100) : 100;
+  };
+})();
+
 
 </script>
 <script>
