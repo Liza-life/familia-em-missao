@@ -1918,6 +1918,32 @@ body.simple-mode .nav-head{display:none}
 .dl-albtn{border:2px dashed var(--line);border-radius:16px;background:transparent;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 10px;cursor:pointer;font:inherit;color:inherit}
 .dl-albtn .dl-svg{width:56px;height:90px}.dl-albtn span{font-size:40px}
 @media (max-width:760px){.dl-wrap{grid-template-columns:1fr}.dl-stage{position:static}.dl-big{max-width:240px}.dl-opts{grid-template-columns:repeat(auto-fill,minmax(68px,1fr))}}
+/* ===== v98: folhas para imprimir com modelos e datas comemorativas ===== */
+#arpModal .modal-box.wide{width:min(1020px,100%)}
+.arp-wrap{display:grid;grid-template-columns:304px 1fr;gap:16px;align-items:start}
+.arp-prev{width:300px;height:424px;overflow:hidden;border:1px solid #cbd5e1;border-radius:10px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12);position:sticky;top:0}
+.arp-page{width:190mm;padding:8mm;transform:scale(.37);transform-origin:0 0;color:#1d1d2b;font-family:Inter,"Segoe UI",system-ui,Arial,sans-serif;pointer-events:none;background:#fff}
+.arp-page .ps-page:not(:first-child){display:none}
+.arp-side h4{margin:4px 0 6px;font-size:14px}
+.arp-chips,.arp-vars{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.arp-chips .chip.next{border-color:#f59e0b;box-shadow:0 0 0 2px #fde68a}
+.arp-chips .chip b{font-size:10px;background:#f59e0b;color:#fff;border-radius:999px;padding:1px 6px;margin-left:2px}
+.arp-vars.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr))}
+.arp-v{border:2px solid #e2e8f0;border-radius:12px;background:#fff;color:#1f2937;padding:4px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;font:inherit;font-size:11px;font-weight:700;cursor:pointer;text-align:center}
+.arp-v.on{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 25%,transparent)}
+.arp-thumb{width:58px;height:66px}
+.arp-kitlist{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.arp-kitlist span{background:#f1f5f9;color:#1f2937;border-radius:999px;padding:4px 10px;font-weight:700;font-size:13px}
+.art-big.art-tall{max-height:236mm}
+.art-cardfront{flex:1;display:grid;place-items:center}
+.art-cardsvg{width:100%;height:100%;max-height:105mm}
+.art-cardmsg{font-size:15pt;font-weight:700;text-align:center;margin:3mm 0}
+.art-shapes.n9{grid-template-columns:repeat(3,1fr)}.art-shapes.n9 .art-shape{height:190px}.art-shapes.n9 .art-shape svg{width:120px;height:120px}
+.art-shapes.n4 .art-shape{height:420px}.art-shapes.n4 .art-shape svg{width:260px;height:260px}
+.art-c2{grid-template-rows:1fr 1fr}
+.art-c8{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr)}
+.art-balloon{position:absolute;top:10px;right:10px;width:42%}
+@media (max-width:760px){.arp-wrap{grid-template-columns:1fr}.arp-prev{position:static;margin:0 auto}}
 
 /* tema escuro (gerado) */
 @media screen{html.dark .mode-switch{background:var(--card)}html.dark .btn-soft{background:var(--card)}html.dark .btn-ghost{background:var(--surface2)}html.dark .btn-success{background:#1c4a32}html.dark .btn-danger{background:#4a1f1c}html.dark .icon-btn{background:var(--surface2)}html.dark .icon-btn:hover{background:var(--surface2)}html.dark .card{border:1px solid rgba(255,255,255,.06)}html.dark input,html.dark select,html.dark textarea{background:var(--card)}html.dark .chip{background:var(--card)}html.dark .pill{background:var(--surface2)}html.dark .pill.ok{background:#1c4a32}html.dark .pill.wait{background:#4a3b1c}html.dark .pill.bad{background:#4a1f1c}html.dark .pill.money{background:#1c4a32}html.dark .notice{background:#1c274a;color:#abaae4}html.dark .notice.ok{background:#1c4a32;color:#a0eece}html.dark .notice.warn{background:#4a3b1c;color:#eecfa0}html.dark .item{background:var(--card)}html.dark .item.done{background:var(--surface2);border-color:#317251}html.dark .item.wait{background:var(--surface2);border-color:#725f31}html.dark .ico{background:var(--surface2)}html.dark .progress{background:var(--surface2)}html.dark .avatar{background:var(--surface2)}html.dark .picker{background:var(--card)}html.dark .picker.on{background:color-mix(in srgb,var(--c) 8%,var(--card))}html.dark .modal-box{background:var(--card)}html.dark .x{background:var(--surface2)}html.dark .choice{background:var(--card)}html.dark .choice.on{background:color-mix(in srgb,var(--c) 7%,var(--card))}html.dark .cal-sum-card{background:linear-gradient(135deg,var(--card),var(--surface2))}html.dark .cal-legend-item{background:var(--card)}html.dark .wd{color:#bfbcd2;background:linear-gradient(135deg,var(--surface2),var(--card))}html.dark .day{background:var(--card)}html.dark .day.weekday-0{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#72313c}html.dark .day.weekday-1{background:linear-gradient(145deg,#1c2f4a,var(--surface2));border-color:#314872}html.dark .day.weekday-2{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#31724f}html.dark .day.weekday-3{background:linear-gradient(145deg,#4a3c1c,var(--surface2));border-color:#726131}html.dark .day.weekday-4{background:linear-gradient(145deg,#331c4a,var(--surface2));border-color:#4d3172}html.dark .day.weekday-5{background:linear-gradient(145deg,var(--surface2),var(--surface2));border-color:#72314f}html.dark .day.weekday-6{background:linear-gradient(145deg,#1c3f4a,var(--surface2));border-color:#316672}html.dark .weekday-3 .num{background:linear-gradient(135deg,#4a3d1c,#d97706)}html.dark .day-name{background:rgba(255,255,255,.07);color:var(--text)}html.dark .day-row{background:rgba(255,255,255,.07)}html.dark .day-count{background:rgba(255,255,255,.07)}html.dark .month-message{background:linear-gradient(135deg,#4a3c1c,var(--card));border:1px solid #725e31}html.dark .legend span{background:var(--card)}html.dark .mini-kpi{background:var(--card)}html.dark .bar{background:var(--surface2)}html.dark .tl{background:var(--surface2)}html.dark .level-ring{background:conic-gradient(var(--c) var(--pct),var(--surface2) 0)}html.dark .level-ring span{background:var(--card)}html.dark .note-item{background:var(--card)}html.dark .note-item.unread{background:var(--surface2)}html.dark .theme-card{background:var(--card)}html.dark .theme-prev b{background:var(--surface2)}html.dark .profile-row{background:var(--card)}html.dark .switch span{background:var(--surface2)}html.dark .switch span:before{background:var(--card)}html.dark .steps span{background:var(--surface2)}html.dark body.child-mode{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 6%,var(--card)),color-mix(in srgb,var(--accent) 14%,var(--card)))}html.dark body.child-mode .card{border-color:color-mix(in srgb,var(--accent) 16%,var(--line))}html.dark body.child-mode h2{color:color-mix(in srgb,var(--accent) 80%,var(--text))}html.dark .cloud-chip.ok{background:#1c4a32}@media(max-width:820px){html.dark .mb-mode .avatar{border-color:var(--line)}html.dark .sheet-grip{background:var(--surface2)}}html.dark .pos{color:#a0eecc}html.dark .neg{color:#eea5a0}html.dark .plan-banner{background:#281c4a}html.dark .plan-child{border:1.5px solid var(--line,var(--line))}html.dark .plan-item{background:var(--soft,var(--surface2))}html.dark .plan-item.rm{background:var(--surface2)}html.dark .q-hero{background:color-mix(in srgb,var(--c) 12%,var(--card))}html.dark .q-hero-txt small{color:color-mix(in srgb,var(--c) 75%,var(--text))}html.dark .q-stats div{background:var(--card)}html.dark .q-stats .pos{color:#a0eecc}html.dark .q-grid th,html.dark .q-grid td{border-right:1px solid var(--line)}html.dark .q-grid thead th{background:color-mix(in srgb,var(--c) 14%,var(--card));color:#bfbcd2}html.dark .q-task{background:var(--card)}html.dark .q-grid thead .q-task{background:color-mix(in srgb,var(--c) 14%,var(--card))}html.dark .q-pts b{color:#eecfa0}html.dark .q-btn{background:var(--card)}html.dark .q-btn.open:hover{background:color-mix(in srgb,var(--c) 20%,var(--card))}html.dark .q-btn.wait{background:#4a3b1c}html.dark .q-btn.past{border-color:var(--line)}html.dark .q-btn.fut{border:2px dashed var(--line)}html.dark .q-off{background:repeating-linear-gradient(45deg,var(--surface2) 0 5px,var(--surface2) 5px 10px)}html.dark .q-today{background:color-mix(in srgb,var(--c) 7%,var(--card))}html.dark .q-ok{background:var(--surface2)}html.dark .q-sum th,html.dark .q-sum td{background:var(--surface2)}html.dark .q-en,html.dark .q-rw{background:var(--card)}html.dark .q-rw-list span{background:var(--surface2)}html.dark .q-rw-list span.ok{background:#1c4a32;color:#a0eece}html.dark .val-scale span{background:#4a3d1c;border:1px solid #725e31}html.dark .val-scale b{color:#eecfa0}html.dark .val-input small{color:#a0eece}html.dark .q-hw td,html.dark .q-hw th{background:var(--surface2)}html.dark .q-pages{background:#1c304a;color:#a0b4ee}html.dark .q-btn.add{border:2px dashed #315072;color:#a0b8ee;background:var(--card)}html.dark .g-stats span{background:var(--surface2)}html.dark .g-tile{background:linear-gradient(145deg,var(--card),var(--surface2))}html.dark .g-board{background:var(--card)}html.dark .g-cell{border:1px solid var(--line);background:var(--card);color:#a0b8ee}html.dark .g-cell.fixed{color:var(--text);background:var(--surface2)}html.dark .g-cell.sel{background:#1c264a}html.dark .g-cell.bad{color:#eea0a0;background:#4a1c1c}html.dark .g-key{background:var(--card)}html.dark .g-key.erase{background:var(--surface2)}html.dark .g-card.up{background:var(--card)}html.dark .g-card.ok{background:#1c4a34}html.dark .g-seq-play span{background:var(--surface2)}html.dark .g-seq-play .g-q{background:#4a411c}html.dark .g-opt{background:var(--card)}html.dark .g-feedback.bad{color:#eec2a0}html.dark .g-done{background:linear-gradient(135deg,#1c4a34,var(--card));border:1.5px solid #317249}html.dark .g-sud td.ans{color:#a0b8ee}html.dark .g-blank{color:#a0b8ee}html.dark .g-ans{color:#a0b8ee}html.dark .g-tile.duel{background:linear-gradient(145deg,var(--card),#4a361c)}html.dark .g-players span{background:var(--surface2)}html.dark .g-tcell{background:var(--card)}html.dark .g-tcell.win{background:#1c4a2c}html.dark .g-c4-drop{border:1.5px dashed #315072;background:#1c304a;color:#a0b8ee}html.dark .g-c4-cell:not(.p1):not(.p2){background:var(--card)}html.dark .fg-card{background:linear-gradient(135deg,var(--card),#4a361c);border:1.5px solid #725431}html.dark .fg-txt small{color:#eeb7a0}html.dark .fg-bar{background:#4a361c}html.dark .fg-parts span{background:var(--card);border:1.5px solid color-mix(in srgb,var(--c) 40%,var(--line))}html.dark .fg-done{background:linear-gradient(135deg,#1c4a34,var(--card));border-color:#317249}html.dark .mood-face{background:var(--card)}html.dark .ev-banner{background:var(--surface2);color:#e7a3eb}html.dark .day-ev{background:rgba(255,255,255,.07)}html.dark .pot{background:var(--surface2)}html.dark .pot-spend{background:#1c304a}html.dark .pot-save{background:#1c4a34}html.dark .pot-give{background:var(--surface2)}html.dark .pot em{color:#a0eece}html.dark .rd-shelf{background:linear-gradient(var(--card),#4a461c)}html.dark .rt-tap{border:2.5px solid color-mix(in srgb,var(--c) 40%,var(--line));background:var(--card)}html.dark .rt-step.ok .rt-tap{background:#1c4a34}html.dark .rt-say{background:var(--surface2)}html.dark .al-slot{border:2px dashed var(--line);background:var(--surface2)}html.dark .al-slot.has{border:2px solid color-mix(in srgb,var(--c) 50%,var(--line));background:var(--card)}html.dark .mr-up{color:#a0eecc}html.dark .mr-down{color:#eea5a0}html.dark .mr-eq{color:var(--text)}html.dark .mr-bars small{color:var(--text)}html.dark .fu-kid{background:var(--card)}html.dark .fu-count{background:color-mix(in srgb,var(--c) 10%,var(--card))}html.dark .fu-y{background:var(--surface2)}html.dark .fu-y.apply{background:#4a411c}html.dark .fu-y.entry{background:#1c4a2c}html.dark .fu-pillar{background:var(--card)}html.dark .fu-pillar.hi{background:var(--surface2)}html.dark .fu-goal.ok span{color:#a0eece}html.dark .fu-tip{color:#eed9a0;background:#4a411c}html.dark .emoji-btn{background:var(--card)}html.dark .emoji-pop{background:var(--card)}html.dark .emoji-cell{background:var(--surface2)}html.dark .emoji-cell:hover{background:#251c4a}html.dark .st-topic{background:var(--card)}html.dark .st-topic.done{background:var(--surface2);border-color:#317248}html.dark .st-topic.done small{color:#a0eece}html.dark .st-en{background:#1c344a;color:#a0caee}html.dark .cq-kid{border:2px solid color-mix(in srgb,var(--c) 45%,var(--line));background:var(--card)}html.dark .cq-kid:hover{background:#4a361c}html.dark .cq-rule{background:var(--card)}html.dark .cq-rule em{color:#eea5a0}html.dark .cq-rule.on{background:var(--surface2)}html.dark .cq-mini{border:1.5px solid #725431;background:#4a361c}html.dark .cq-mini:hover{background:#4a361c}html.dark .tl-box{background:linear-gradient(135deg,var(--surface2),var(--surface2))}html.dark .tl-steps span{background:var(--surface2)}html.dark .tl-steps span.done{background:#1c4a32}html.dark .tl-steps i{background:var(--surface2)}html.dark .tl-res{background:var(--surface2)}html.dark .tl-res.up,html.dark .tl-res.top{background:#1c4a32;color:#a0eece}html.dark .tl-res.down{background:#4a301c;color:#eec6a0}html.dark .team-pill{background:#1c384a;color:#a0d3ee}html.dark .hp-mini{border:1.5px solid #315c72;background:var(--surface2)}html.dark .hp-mini:hover{background:#1c384a}html.dark .mt-dots span{background:var(--surface2)}html.dark .mt-kid{background:var(--card)}html.dark .mt-kid.hi{background:linear-gradient(180deg,var(--surface2),var(--card))}html.dark .pd-banner{background:#1c4a32;color:#a0eece}html.dark .mt-banner{background:#321c4a;color:#cba1ed}html.dark .dy-entry{background:var(--surface2);border:1px solid #726231}html.dark .dy-entry.dy-funny{background:#4a3d1c}html.dark .dy-entry.dy-first{background:var(--surface2);border-color:#315772}html.dark .dy-entry.dy-moment{background:var(--surface2);border-color:#723144}html.dark .dy-entry.dy-proud{background:var(--surface2);border-color:#317241}html.dark .dy-entry.dy-good{background:var(--surface2);border-color:#3c3172}html.dark .dy-who{background:var(--card);border:1px solid color-mix(in srgb,var(--c,#999) 45%,var(--line))}html.dark .dy-month h3{border-bottom:2px solid #503172;color:#cba1ed}html.dark .dc-banner{background:#1c274a;color:#aeace2}html.dark .dc-banner.ok{background:var(--surface2);color:#a3ebbe}html.dark .dc-tab{background:var(--card)}html.dark .dc-tab.on{background:color-mix(in srgb,var(--c,#6c63ff) 12%,var(--card))}html.dark .dc-task{background:var(--card)}html.dark .dc-task.done{background:var(--surface2);border-color:#317248}html.dark .dc-task.pending{border-color:#726331;background:#4a411c}html.dark .dc-task:has(input:checked:not([disabled])){background:#1c4a2f}html.dark .dc-tn small.wait{color:#eecea0}html.dark .dc-kidline{background:var(--surface2)}html.dark .av-pet{background:var(--card)}html.dark .gr-item{background:var(--card)}html.dark .gr-item.locked{background:var(--surface2)}html.dark .gr-fr{background:var(--surface2)}html.dark .pd-kid{border:2px solid color-mix(in srgb,var(--c) 30%,var(--line))}html.dark .pd-pots span{background:var(--surface2)}html.dark .pd-gain{color:#a0eece;background:#1c4a32}html.dark .pd-ok{color:#a3ebbe}html.dark .ar-ori.done{border-color:#317249}html.dark .ori-box{color:#bea0ee}html.dark body.family-mode .mode-chip{background:#4a411c;color:#eebda0}html.dark .sm-prog i.wait{background:#4a3d1c}html.dark .sm-task.done{border-color:#317249}html.dark .sm-task.pending{border-color:#726331}html.dark .g-ttt .g-tcell{background:var(--gb-light,var(--card))}html.dark .gl-pre{background:var(--card,var(--card))}html.dark .pet-coins{background:#4a411c;color:#eebda0}html.dark .pet-bubble{background:var(--card);color:var(--text)}html.dark .pet-bubble::after{border-top-color:var(--line)}html.dark .pet-play-info{background:rgba(255,255,255,.07);color:var(--text)}html.dark .pet-act{background:var(--soft,var(--surface2))}html.dark .pet-act.say{background:#1c384a;color:#a0d1ee}html.dark .pet-item{background:var(--card,var(--card))}html.dark .pet-item.on{background:var(--surface2)}html.dark .pet-sp{background:var(--card,var(--card))}html.dark .pet-col{border:3px solid var(--line)}html.dark .bk-cover{color:var(--text)}html.dark .bk-cover.comics{background:linear-gradient(160deg,var(--card),#4a411c)}html.dark .bk-open-pdf{color:var(--text)}html.dark .bk-del{background:rgba(255,255,255,.07)}html.dark .bk-text{background:rgba(255,255,255,.07)}html.dark .bk-cap{background:#4a441c}html.dark .bk-say{background:var(--card)}html.dark .bk-pdf{background:var(--surface2)}html.dark .g-cat{background:var(--card,var(--card))}html.dark .g-cat.on{background:color-mix(in srgb,var(--primary) 12%,var(--card,var(--card)))}html.dark .pz-lv{background:var(--card,var(--card))}html.dark #gBoard select{color:var(--text);background:var(--card);border:1.5px solid #3c5067}html.dark #gBoard select option{color:var(--text);background:var(--card)}html.dark .pet-opt{background:var(--card,var(--card))}html.dark .avatar.av-doll{background:linear-gradient(#1c384a,#4a411c)}}
@@ -1926,7 +1952,7 @@ body.simple-mode .nav-head{display:none}
 <body>
 <noscript>Ative o JavaScript para usar o Família em Missão.</noscript>
 <script>
-/* Família em Missão v97 — arquivo gerado a partir de src/ (não editar à mão) */
+/* Família em Missão v98 — arquivo gerado a partir de src/ (não editar à mão) */
 /* =====================================================================
    Traduções (pt, en, es). Chaves iguais nos três idiomas.
    ===================================================================== */
@@ -17905,13 +17931,1173 @@ const V97_TEXT = {
 };
 Object.keys(V97_TEXT).forEach(l => { if (I18N[l]) Object.assign(I18N[l], V97_TEXT[l]); });
 
+/* textos da v98: folhas para imprimir com modelos e datas comemorativas */
+const V98_TEXT = {
+"pt": {
+"th_livre": "Livre",
+"th_anonovo": "Ano Novo",
+"th_carnaval": "Carnaval",
+"th_pascoa": "Páscoa",
+"th_maes": "Dia das Mães",
+"th_meioambiente": "Dia do Meio Ambiente",
+"th_junina": "Festa Junina",
+"th_amizade": "Dia do Amigo",
+"th_avos": "Dia dos Avós",
+"th_pais": "Dia dos Pais",
+"th_folclore": "Dia do Folclore",
+"th_independencia": "Independência",
+"th_primavera": "Primavera",
+"th_animais": "Dia dos Animais",
+"th_criancas": "Dia das Crianças",
+"th_professor": "Dia do Professor",
+"th_halloween": "Halloween",
+"th_natal": "Natal",
+"th_aniversario": "Aniversário",
+"mk_cat": "Gato",
+"mk_dog": "Cachorro",
+"mk_lion": "Leão",
+"mk_tiger": "Tigre",
+"mk_bear": "Urso",
+"mk_panda": "Panda",
+"mk_bunny": "Coelhinho",
+"mk_fox": "Raposa",
+"mk_owl": "Coruja",
+"mk_frog": "Sapo",
+"mk_mouse": "Ratinho",
+"mk_pig": "Porquinho",
+"mk_cow": "Vaca",
+"mk_monkey": "Macaco",
+"mk_elephant": "Elefante",
+"mk_sheep": "Ovelha",
+"mk_unicorn": "Unicórnio",
+"mk_dragon": "Dragão",
+"mk_chick": "Pintinho",
+"mk_butterfly": "Borboleta",
+"mk_hero": "Super-herói",
+"mk_masquerade": "Baile de carnaval",
+"mk_clown": "Palhaço",
+"mk_pumpkin": "Abóbora",
+"mk_bat": "Morcego",
+"mk_ghost": "Fantasminha",
+"mk_witch": "Bruxa",
+"mk_reindeer": "Rena",
+"mk_santa": "Papai Noel",
+"mk_snowman": "Boneco de neve",
+"mk_saci": "Saci",
+"mk_princess": "Princesa",
+"mk_robot": "Robô",
+"mk_astronaut": "Astronauta",
+"mk_monster": "Monstro",
+"mk_superstar": "Estrela",
+"ds_star": "Estrela",
+"ds_house": "Casinha",
+"ds_fish": "Peixinho",
+"ds_rocket": "Foguete",
+"ds_heart": "Coração",
+"ds_cat": "Gato",
+"ds_tree": "Árvore de Natal",
+"ds_egg": "Ovo de Páscoa",
+"ds_pumpkin": "Abóbora",
+"ds_bell": "Sino",
+"ds_balloon": "Balão",
+"ds_kite": "Pipa",
+"ds_butterfly": "Borboleta",
+"ds_crown": "Coroa",
+"ds_umbrella": "Guarda-chuva",
+"ds_dino": "Dinossauro",
+"ds_ghost": "Fantasminha",
+"ds_gift": "Presente",
+"ds_car": "Carrinho",
+"ds_bunny": "Coelhinho",
+"ds_apple": "Maçã",
+"ds_flag": "Bandeira",
+"px_heart": "Coração",
+"px_mushroom": "Cogumelo",
+"px_fish": "Peixinho",
+"px_house": "Casinha",
+"px_rocket": "Foguete",
+"px_cat": "Gato",
+"px_pumpkin": "Abóbora",
+"px_ghost": "Fantasminha",
+"px_tree": "Árvore de Natal",
+"px_snowman": "Boneco de neve",
+"px_gift": "Presente",
+"px_egg": "Ovo de Páscoa",
+"px_bunny": "Coelhinho",
+"px_cake": "Bolo",
+"px_balloon": "Balão",
+"px_flagbr": "Bandeira do Brasil",
+"px_corn": "Milho",
+"px_flower": "Flor",
+"px_sun": "Sol",
+"px_apple": "Maçã",
+"px_kite": "Pipa",
+"px_star": "Estrela",
+"gd_house": "Casinha",
+"gd_boat": "Barquinho",
+"gd_box": "Caixa 3D",
+"gd_rocket": "Foguete",
+"gd_tree": "Árvore de Natal",
+"gd_star": "Estrela",
+"gd_heart": "Coração",
+"gd_gift": "Presente",
+"gd_pumpkin": "Abóbora",
+"gd_egg": "Ovo de Páscoa",
+"gd_kite": "Pipa",
+"gd_fish": "Peixinho",
+"gd_flag": "Bandeira",
+"gd_lantern": "Balão junino",
+"arv_color_big": "Um desenho grande",
+"arv_color_pair": "Dois desenhos",
+"arv_color_scene": "Cena completa",
+"arv_color_pattern": "Muitos pequenos",
+"arv_card_drawn": "Com desenho pronto",
+"arv_card_blank": "Para desenhar",
+"arv_frame_border": "Moldura decorada",
+"arv_frame_plain": "Moldura simples",
+"arv_mandala_circle": "Redonda",
+"arv_mandala_flower": "Flor",
+"arv_mandala_heart": "Coração",
+"arv_mandala_star": "Estrela",
+"arv_mandala_egg": "Ovo",
+"arv_mandala_snow": "Floco de neve",
+"arv_shapes_few": "4 formas",
+"arv_shapes_six": "6 formas",
+"arv_shapes_many": "9 formas",
+"arv_comic_n": "{n} quadros",
+"arv_mirror_pixels": "Quadradinhos",
+"arv_mirror_half": "Meio desenho",
+"arv_cr_monster": "Monstro",
+"arv_cr_robot": "Robô",
+"arv_cr_alien": "Alienígena",
+"arv_cr_dragon": "Dragão",
+"arv_cr_fairy": "Fada",
+"arv_cr_hero": "Super-herói",
+"arv_pp_blank": "Em branco",
+"arv_pp_animals": "Bichinhos",
+"arv_pp_farm": "Fazenda",
+"arv_pp_jungle": "Selva",
+"arv_pp_natal": "Natal",
+"arv_pp_halloween": "Halloween",
+"arv_pp_pascoa": "Páscoa",
+"arv_pp_fantasy": "Fantasia",
+"arv_iso_iso": "Pontilhado 3D",
+"arv_iso_grid": "Quadriculado",
+"arv_iso_tri": "Triângulos",
+"arv_iso_dots": "Pontinhos",
+"arpTheme": "Data ou tema",
+"arpNext": "próxima",
+"arpModel": "Modelo",
+"arpAny": "Sortear",
+"arpSurprise": "Outra surpresa",
+"arpPrint": "Imprimir",
+"arS_kit": "Kit da data",
+"arSH_kit": "Várias folhas do tema de uma vez",
+"arS_color": "Para colorir",
+"arSH_color": "Desenhos das datas comemorativas",
+"arpKitHint": "Escolha a data: o kit imprime desenho para colorir, máscara, cartão, ligue os pontos, pintura por números e moldura (e mais para os maiores).",
+"arpPrintKit": "Imprimir kit: {theme}"
+},
+"en": {
+"th_livre": "Free",
+"th_anonovo": "New Year",
+"th_carnaval": "Carnival",
+"th_pascoa": "Easter",
+"th_maes": "Mother's Day",
+"th_meioambiente": "Environment Day",
+"th_junina": "June Festival",
+"th_amizade": "Friendship Day",
+"th_avos": "Grandparents' Day",
+"th_pais": "Father's Day",
+"th_folclore": "Folklore Day",
+"th_independencia": "Independence Day",
+"th_primavera": "Spring",
+"th_animais": "Animal Day",
+"th_criancas": "Children's Day",
+"th_professor": "Teacher's Day",
+"th_halloween": "Halloween",
+"th_natal": "Christmas",
+"th_aniversario": "Birthday",
+"mk_cat": "Cat",
+"mk_dog": "Dog",
+"mk_lion": "Lion",
+"mk_tiger": "Tiger",
+"mk_bear": "Bear",
+"mk_panda": "Panda",
+"mk_bunny": "Bunny",
+"mk_fox": "Fox",
+"mk_owl": "Owl",
+"mk_frog": "Frog",
+"mk_mouse": "Mouse",
+"mk_pig": "Piggy",
+"mk_cow": "Cow",
+"mk_monkey": "Monkey",
+"mk_elephant": "Elephant",
+"mk_sheep": "Sheep",
+"mk_unicorn": "Unicorn",
+"mk_dragon": "Dragon",
+"mk_chick": "Chick",
+"mk_butterfly": "Butterfly",
+"mk_hero": "Superhero",
+"mk_masquerade": "Carnival mask",
+"mk_clown": "Clown",
+"mk_pumpkin": "Pumpkin",
+"mk_bat": "Bat",
+"mk_ghost": "Ghost",
+"mk_witch": "Witch",
+"mk_reindeer": "Reindeer",
+"mk_santa": "Santa Claus",
+"mk_snowman": "Snowman",
+"mk_saci": "Saci",
+"mk_princess": "Princess",
+"mk_robot": "Robot",
+"mk_astronaut": "Astronaut",
+"mk_monster": "Monster",
+"mk_superstar": "Star",
+"ds_star": "Star",
+"ds_house": "House",
+"ds_fish": "Fish",
+"ds_rocket": "Rocket",
+"ds_heart": "Heart",
+"ds_cat": "Cat",
+"ds_tree": "Christmas tree",
+"ds_egg": "Easter egg",
+"ds_pumpkin": "Pumpkin",
+"ds_bell": "Bell",
+"ds_balloon": "Balloon",
+"ds_kite": "Kite",
+"ds_butterfly": "Butterfly",
+"ds_crown": "Crown",
+"ds_umbrella": "Umbrella",
+"ds_dino": "Dinosaur",
+"ds_ghost": "Ghost",
+"ds_gift": "Gift",
+"ds_car": "Car",
+"ds_bunny": "Bunny",
+"ds_apple": "Apple",
+"ds_flag": "Flag",
+"px_heart": "Heart",
+"px_mushroom": "Mushroom",
+"px_fish": "Fish",
+"px_house": "House",
+"px_rocket": "Rocket",
+"px_cat": "Cat",
+"px_pumpkin": "Pumpkin",
+"px_ghost": "Ghost",
+"px_tree": "Christmas tree",
+"px_snowman": "Snowman",
+"px_gift": "Gift",
+"px_egg": "Easter egg",
+"px_bunny": "Bunny",
+"px_cake": "Cake",
+"px_balloon": "Balloon",
+"px_flagbr": "Brazilian flag",
+"px_corn": "Corn",
+"px_flower": "Flower",
+"px_sun": "Sun",
+"px_apple": "Apple",
+"px_kite": "Kite",
+"px_star": "Star",
+"gd_house": "House",
+"gd_boat": "Boat",
+"gd_box": "3D box",
+"gd_rocket": "Rocket",
+"gd_tree": "Christmas tree",
+"gd_star": "Star",
+"gd_heart": "Heart",
+"gd_gift": "Gift",
+"gd_pumpkin": "Pumpkin",
+"gd_egg": "Easter egg",
+"gd_kite": "Kite",
+"gd_fish": "Fish",
+"gd_flag": "Flag",
+"gd_lantern": "June lantern",
+"arv_color_big": "One big picture",
+"arv_color_pair": "Two pictures",
+"arv_color_scene": "Full scene",
+"arv_color_pattern": "Lots of small ones",
+"arv_card_drawn": "With a drawing",
+"arv_card_blank": "To draw yourself",
+"arv_frame_border": "Decorated border",
+"arv_frame_plain": "Simple border",
+"arv_mandala_circle": "Round",
+"arv_mandala_flower": "Flower",
+"arv_mandala_heart": "Heart",
+"arv_mandala_star": "Star",
+"arv_mandala_egg": "Egg",
+"arv_mandala_snow": "Snowflake",
+"arv_shapes_few": "4 shapes",
+"arv_shapes_six": "6 shapes",
+"arv_shapes_many": "9 shapes",
+"arv_comic_n": "{n} panels",
+"arv_mirror_pixels": "Little squares",
+"arv_mirror_half": "Half a drawing",
+"arv_cr_monster": "Monster",
+"arv_cr_robot": "Robot",
+"arv_cr_alien": "Alien",
+"arv_cr_dragon": "Dragon",
+"arv_cr_fairy": "Fairy",
+"arv_cr_hero": "Superhero",
+"arv_pp_blank": "Blank",
+"arv_pp_animals": "Animals",
+"arv_pp_farm": "Farm",
+"arv_pp_jungle": "Jungle",
+"arv_pp_natal": "Christmas",
+"arv_pp_halloween": "Halloween",
+"arv_pp_pascoa": "Easter",
+"arv_pp_fantasy": "Fantasy",
+"arv_iso_iso": "3D dots",
+"arv_iso_grid": "Grid",
+"arv_iso_tri": "Triangles",
+"arv_iso_dots": "Dots",
+"arpTheme": "Date or theme",
+"arpNext": "next",
+"arpModel": "Model",
+"arpAny": "Random",
+"arpSurprise": "Another surprise",
+"arpPrint": "Print",
+"arS_kit": "Holiday kit",
+"arSH_kit": "Several themed sheets at once",
+"arS_color": "Coloring page",
+"arSH_color": "Pictures for special dates",
+"arpKitHint": "Pick a date: the kit prints a coloring page, mask, card, dot-to-dot, paint by numbers and a frame (and more for older kids).",
+"arpPrintKit": "Print kit: {theme}"
+},
+"es": {
+"th_livre": "Libre",
+"th_anonovo": "Año Nuevo",
+"th_carnaval": "Carnaval",
+"th_pascoa": "Pascua",
+"th_maes": "Día de la Madre",
+"th_meioambiente": "Día del Medio Ambiente",
+"th_junina": "Fiesta de junio",
+"th_amizade": "Día del Amigo",
+"th_avos": "Día de los Abuelos",
+"th_pais": "Día del Padre",
+"th_folclore": "Día del Folclore",
+"th_independencia": "Independencia",
+"th_primavera": "Primavera",
+"th_animais": "Día de los Animales",
+"th_criancas": "Día del Niño",
+"th_professor": "Día del Maestro",
+"th_halloween": "Halloween",
+"th_natal": "Navidad",
+"th_aniversario": "Cumpleaños",
+"mk_cat": "Gato",
+"mk_dog": "Perro",
+"mk_lion": "León",
+"mk_tiger": "Tigre",
+"mk_bear": "Oso",
+"mk_panda": "Panda",
+"mk_bunny": "Conejito",
+"mk_fox": "Zorro",
+"mk_owl": "Búho",
+"mk_frog": "Rana",
+"mk_mouse": "Ratoncito",
+"mk_pig": "Cerdito",
+"mk_cow": "Vaca",
+"mk_monkey": "Mono",
+"mk_elephant": "Elefante",
+"mk_sheep": "Oveja",
+"mk_unicorn": "Unicornio",
+"mk_dragon": "Dragón",
+"mk_chick": "Pollito",
+"mk_butterfly": "Mariposa",
+"mk_hero": "Superhéroe",
+"mk_masquerade": "Antifaz de carnaval",
+"mk_clown": "Payaso",
+"mk_pumpkin": "Calabaza",
+"mk_bat": "Murciélago",
+"mk_ghost": "Fantasmita",
+"mk_witch": "Bruja",
+"mk_reindeer": "Reno",
+"mk_santa": "Papá Noel",
+"mk_snowman": "Muñeco de nieve",
+"mk_saci": "Saci",
+"mk_princess": "Princesa",
+"mk_robot": "Robot",
+"mk_astronaut": "Astronauta",
+"mk_monster": "Monstruo",
+"mk_superstar": "Estrella",
+"ds_star": "Estrella",
+"ds_house": "Casita",
+"ds_fish": "Pececito",
+"ds_rocket": "Cohete",
+"ds_heart": "Corazón",
+"ds_cat": "Gato",
+"ds_tree": "Árbol de Navidad",
+"ds_egg": "Huevo de Pascua",
+"ds_pumpkin": "Calabaza",
+"ds_bell": "Campana",
+"ds_balloon": "Globo",
+"ds_kite": "Cometa",
+"ds_butterfly": "Mariposa",
+"ds_crown": "Corona",
+"ds_umbrella": "Paraguas",
+"ds_dino": "Dinosaurio",
+"ds_ghost": "Fantasmita",
+"ds_gift": "Regalo",
+"ds_car": "Coche",
+"ds_bunny": "Conejito",
+"ds_apple": "Manzana",
+"ds_flag": "Bandera",
+"px_heart": "Corazón",
+"px_mushroom": "Seta",
+"px_fish": "Pececito",
+"px_house": "Casita",
+"px_rocket": "Cohete",
+"px_cat": "Gato",
+"px_pumpkin": "Calabaza",
+"px_ghost": "Fantasmita",
+"px_tree": "Árbol de Navidad",
+"px_snowman": "Muñeco de nieve",
+"px_gift": "Regalo",
+"px_egg": "Huevo de Pascua",
+"px_bunny": "Conejito",
+"px_cake": "Pastel",
+"px_balloon": "Globo",
+"px_flagbr": "Bandera de Brasil",
+"px_corn": "Maíz",
+"px_flower": "Flor",
+"px_sun": "Sol",
+"px_apple": "Manzana",
+"px_kite": "Cometa",
+"px_star": "Estrella",
+"gd_house": "Casita",
+"gd_boat": "Barquito",
+"gd_box": "Caja 3D",
+"gd_rocket": "Cohete",
+"gd_tree": "Árbol de Navidad",
+"gd_star": "Estrella",
+"gd_heart": "Corazón",
+"gd_gift": "Regalo",
+"gd_pumpkin": "Calabaza",
+"gd_egg": "Huevo de Pascua",
+"gd_kite": "Cometa",
+"gd_fish": "Pececito",
+"gd_flag": "Bandera",
+"gd_lantern": "Farol de junio",
+"arv_color_big": "Un dibujo grande",
+"arv_color_pair": "Dos dibujos",
+"arv_color_scene": "Escena completa",
+"arv_color_pattern": "Muchos pequeños",
+"arv_card_drawn": "Con dibujo",
+"arv_card_blank": "Para dibujar",
+"arv_frame_border": "Marco decorado",
+"arv_frame_plain": "Marco simple",
+"arv_mandala_circle": "Redonda",
+"arv_mandala_flower": "Flor",
+"arv_mandala_heart": "Corazón",
+"arv_mandala_star": "Estrella",
+"arv_mandala_egg": "Huevo",
+"arv_mandala_snow": "Copo de nieve",
+"arv_shapes_few": "4 formas",
+"arv_shapes_six": "6 formas",
+"arv_shapes_many": "9 formas",
+"arv_comic_n": "{n} viñetas",
+"arv_mirror_pixels": "Cuadritos",
+"arv_mirror_half": "Medio dibujo",
+"arv_cr_monster": "Monstruo",
+"arv_cr_robot": "Robot",
+"arv_cr_alien": "Extraterrestre",
+"arv_cr_dragon": "Dragón",
+"arv_cr_fairy": "Hada",
+"arv_cr_hero": "Superhéroe",
+"arv_pp_blank": "En blanco",
+"arv_pp_animals": "Animalitos",
+"arv_pp_farm": "Granja",
+"arv_pp_jungle": "Selva",
+"arv_pp_natal": "Navidad",
+"arv_pp_halloween": "Halloween",
+"arv_pp_pascoa": "Pascua",
+"arv_pp_fantasy": "Fantasía",
+"arv_iso_iso": "Puntos 3D",
+"arv_iso_grid": "Cuadriculado",
+"arv_iso_tri": "Triángulos",
+"arv_iso_dots": "Puntitos",
+"arpTheme": "Fecha o tema",
+"arpNext": "próxima",
+"arpModel": "Modelo",
+"arpAny": "Al azar",
+"arpSurprise": "Otra sorpresa",
+"arpPrint": "Imprimir",
+"arS_kit": "Kit de la fecha",
+"arSH_kit": "Varias hojas del tema a la vez",
+"arS_color": "Para colorear",
+"arSH_color": "Dibujos de fechas especiales",
+"arpKitHint": "Elige la fecha: el kit imprime dibujo para colorear, máscara, tarjeta, une los puntos, pintura por números y marco (y más para los mayores).",
+"arpPrintKit": "Imprimir kit: {theme}"
+},
+"it": {
+"th_livre": "Libero",
+"th_anonovo": "Capodanno",
+"th_carnaval": "Carnevale",
+"th_pascoa": "Pasqua",
+"th_maes": "Festa della mamma",
+"th_meioambiente": "Giornata dell'ambiente",
+"th_junina": "Festa di giugno",
+"th_amizade": "Giornata dell'amicizia",
+"th_avos": "Festa dei nonni",
+"th_pais": "Festa del papà",
+"th_folclore": "Giornata del folclore",
+"th_independencia": "Indipendenza",
+"th_primavera": "Primavera",
+"th_animais": "Giornata degli animali",
+"th_criancas": "Festa dei bambini",
+"th_professor": "Festa degli insegnanti",
+"th_halloween": "Halloween",
+"th_natal": "Natale",
+"th_aniversario": "Compleanno",
+"mk_cat": "Gatto",
+"mk_dog": "Cane",
+"mk_lion": "Leone",
+"mk_tiger": "Tigre",
+"mk_bear": "Orso",
+"mk_panda": "Panda",
+"mk_bunny": "Coniglietto",
+"mk_fox": "Volpe",
+"mk_owl": "Gufo",
+"mk_frog": "Rana",
+"mk_mouse": "Topolino",
+"mk_pig": "Maialino",
+"mk_cow": "Mucca",
+"mk_monkey": "Scimmia",
+"mk_elephant": "Elefante",
+"mk_sheep": "Pecora",
+"mk_unicorn": "Unicorno",
+"mk_dragon": "Drago",
+"mk_chick": "Pulcino",
+"mk_butterfly": "Farfalla",
+"mk_hero": "Supereroe",
+"mk_masquerade": "Maschera di carnevale",
+"mk_clown": "Pagliaccio",
+"mk_pumpkin": "Zucca",
+"mk_bat": "Pipistrello",
+"mk_ghost": "Fantasmino",
+"mk_witch": "Strega",
+"mk_reindeer": "Renna",
+"mk_santa": "Babbo Natale",
+"mk_snowman": "Pupazzo di neve",
+"mk_saci": "Saci",
+"mk_princess": "Principessa",
+"mk_robot": "Robot",
+"mk_astronaut": "Astronauta",
+"mk_monster": "Mostro",
+"mk_superstar": "Stella",
+"ds_star": "Stella",
+"ds_house": "Casetta",
+"ds_fish": "Pesciolino",
+"ds_rocket": "Razzo",
+"ds_heart": "Cuore",
+"ds_cat": "Gatto",
+"ds_tree": "Albero di Natale",
+"ds_egg": "Uovo di Pasqua",
+"ds_pumpkin": "Zucca",
+"ds_bell": "Campana",
+"ds_balloon": "Palloncino",
+"ds_kite": "Aquilone",
+"ds_butterfly": "Farfalla",
+"ds_crown": "Corona",
+"ds_umbrella": "Ombrello",
+"ds_dino": "Dinosauro",
+"ds_ghost": "Fantasmino",
+"ds_gift": "Regalo",
+"ds_car": "Macchina",
+"ds_bunny": "Coniglietto",
+"ds_apple": "Mela",
+"ds_flag": "Bandiera",
+"px_heart": "Cuore",
+"px_mushroom": "Fungo",
+"px_fish": "Pesciolino",
+"px_house": "Casetta",
+"px_rocket": "Razzo",
+"px_cat": "Gatto",
+"px_pumpkin": "Zucca",
+"px_ghost": "Fantasmino",
+"px_tree": "Albero di Natale",
+"px_snowman": "Pupazzo di neve",
+"px_gift": "Regalo",
+"px_egg": "Uovo di Pasqua",
+"px_bunny": "Coniglietto",
+"px_cake": "Torta",
+"px_balloon": "Palloncino",
+"px_flagbr": "Bandiera del Brasile",
+"px_corn": "Mais",
+"px_flower": "Fiore",
+"px_sun": "Sole",
+"px_apple": "Mela",
+"px_kite": "Aquilone",
+"px_star": "Stella",
+"gd_house": "Casetta",
+"gd_boat": "Barchetta",
+"gd_box": "Scatola 3D",
+"gd_rocket": "Razzo",
+"gd_tree": "Albero di Natale",
+"gd_star": "Stella",
+"gd_heart": "Cuore",
+"gd_gift": "Regalo",
+"gd_pumpkin": "Zucca",
+"gd_egg": "Uovo di Pasqua",
+"gd_kite": "Aquilone",
+"gd_fish": "Pesciolino",
+"gd_flag": "Bandiera",
+"gd_lantern": "Lanterna di giugno",
+"arv_color_big": "Un disegno grande",
+"arv_color_pair": "Due disegni",
+"arv_color_scene": "Scena completa",
+"arv_color_pattern": "Tanti piccoli",
+"arv_card_drawn": "Con disegno",
+"arv_card_blank": "Da disegnare",
+"arv_frame_border": "Cornice decorata",
+"arv_frame_plain": "Cornice semplice",
+"arv_mandala_circle": "Rotonda",
+"arv_mandala_flower": "Fiore",
+"arv_mandala_heart": "Cuore",
+"arv_mandala_star": "Stella",
+"arv_mandala_egg": "Uovo",
+"arv_mandala_snow": "Fiocco di neve",
+"arv_shapes_few": "4 forme",
+"arv_shapes_six": "6 forme",
+"arv_shapes_many": "9 forme",
+"arv_comic_n": "{n} vignette",
+"arv_mirror_pixels": "Quadratini",
+"arv_mirror_half": "Mezzo disegno",
+"arv_cr_monster": "Mostro",
+"arv_cr_robot": "Robot",
+"arv_cr_alien": "Alieno",
+"arv_cr_dragon": "Drago",
+"arv_cr_fairy": "Fata",
+"arv_cr_hero": "Supereroe",
+"arv_pp_blank": "Vuoti",
+"arv_pp_animals": "Animaletti",
+"arv_pp_farm": "Fattoria",
+"arv_pp_jungle": "Giungla",
+"arv_pp_natal": "Natale",
+"arv_pp_halloween": "Halloween",
+"arv_pp_pascoa": "Pasqua",
+"arv_pp_fantasy": "Fantasia",
+"arv_iso_iso": "Puntini 3D",
+"arv_iso_grid": "Quadretti",
+"arv_iso_tri": "Triangoli",
+"arv_iso_dots": "Puntini",
+"arpTheme": "Data o tema",
+"arpNext": "prossima",
+"arpModel": "Modello",
+"arpAny": "A caso",
+"arpSurprise": "Un'altra sorpresa",
+"arpPrint": "Stampa",
+"arS_kit": "Kit della festa",
+"arSH_kit": "Tanti fogli del tema insieme",
+"arS_color": "Da colorare",
+"arSH_color": "Disegni delle feste",
+"arpKitHint": "Scegli la festa: il kit stampa disegno da colorare, maschera, biglietto, unisci i puntini, colora coi numeri e cornice (e altro per i più grandi).",
+"arpPrintKit": "Stampa kit: {theme}"
+},
+"de": {
+"th_livre": "Frei",
+"th_anonovo": "Neujahr",
+"th_carnaval": "Karneval",
+"th_pascoa": "Ostern",
+"th_maes": "Muttertag",
+"th_meioambiente": "Umwelttag",
+"th_junina": "Junifest",
+"th_amizade": "Freundschaftstag",
+"th_avos": "Großelterntag",
+"th_pais": "Vatertag",
+"th_folclore": "Folkloretag",
+"th_independencia": "Unabhängigkeitstag",
+"th_primavera": "Frühling",
+"th_animais": "Welttiertag",
+"th_criancas": "Kindertag",
+"th_professor": "Lehrertag",
+"th_halloween": "Halloween",
+"th_natal": "Weihnachten",
+"th_aniversario": "Geburtstag",
+"mk_cat": "Katze",
+"mk_dog": "Hund",
+"mk_lion": "Löwe",
+"mk_tiger": "Tiger",
+"mk_bear": "Bär",
+"mk_panda": "Panda",
+"mk_bunny": "Häschen",
+"mk_fox": "Fuchs",
+"mk_owl": "Eule",
+"mk_frog": "Frosch",
+"mk_mouse": "Maus",
+"mk_pig": "Schwein",
+"mk_cow": "Kuh",
+"mk_monkey": "Affe",
+"mk_elephant": "Elefant",
+"mk_sheep": "Schaf",
+"mk_unicorn": "Einhorn",
+"mk_dragon": "Drache",
+"mk_chick": "Küken",
+"mk_butterfly": "Schmetterling",
+"mk_hero": "Superheld",
+"mk_masquerade": "Karnevalsmaske",
+"mk_clown": "Clown",
+"mk_pumpkin": "Kürbis",
+"mk_bat": "Fledermaus",
+"mk_ghost": "Gespenst",
+"mk_witch": "Hexe",
+"mk_reindeer": "Rentier",
+"mk_santa": "Weihnachtsmann",
+"mk_snowman": "Schneemann",
+"mk_saci": "Saci",
+"mk_princess": "Prinzessin",
+"mk_robot": "Roboter",
+"mk_astronaut": "Astronaut",
+"mk_monster": "Monster",
+"mk_superstar": "Stern",
+"ds_star": "Stern",
+"ds_house": "Häuschen",
+"ds_fish": "Fisch",
+"ds_rocket": "Rakete",
+"ds_heart": "Herz",
+"ds_cat": "Katze",
+"ds_tree": "Weihnachtsbaum",
+"ds_egg": "Osterei",
+"ds_pumpkin": "Kürbis",
+"ds_bell": "Glocke",
+"ds_balloon": "Luftballon",
+"ds_kite": "Drachen",
+"ds_butterfly": "Schmetterling",
+"ds_crown": "Krone",
+"ds_umbrella": "Regenschirm",
+"ds_dino": "Dinosaurier",
+"ds_ghost": "Gespenst",
+"ds_gift": "Geschenk",
+"ds_car": "Auto",
+"ds_bunny": "Häschen",
+"ds_apple": "Apfel",
+"ds_flag": "Fahne",
+"px_heart": "Herz",
+"px_mushroom": "Pilz",
+"px_fish": "Fisch",
+"px_house": "Häuschen",
+"px_rocket": "Rakete",
+"px_cat": "Katze",
+"px_pumpkin": "Kürbis",
+"px_ghost": "Gespenst",
+"px_tree": "Weihnachtsbaum",
+"px_snowman": "Schneemann",
+"px_gift": "Geschenk",
+"px_egg": "Osterei",
+"px_bunny": "Häschen",
+"px_cake": "Kuchen",
+"px_balloon": "Luftballon",
+"px_flagbr": "Brasilianische Flagge",
+"px_corn": "Mais",
+"px_flower": "Blume",
+"px_sun": "Sonne",
+"px_apple": "Apfel",
+"px_kite": "Drachen",
+"px_star": "Stern",
+"gd_house": "Häuschen",
+"gd_boat": "Boot",
+"gd_box": "3D-Kiste",
+"gd_rocket": "Rakete",
+"gd_tree": "Weihnachtsbaum",
+"gd_star": "Stern",
+"gd_heart": "Herz",
+"gd_gift": "Geschenk",
+"gd_pumpkin": "Kürbis",
+"gd_egg": "Osterei",
+"gd_kite": "Drachen",
+"gd_fish": "Fisch",
+"gd_flag": "Fahne",
+"gd_lantern": "Papierlaterne",
+"arv_color_big": "Ein großes Bild",
+"arv_color_pair": "Zwei Bilder",
+"arv_color_scene": "Ganze Szene",
+"arv_color_pattern": "Viele kleine",
+"arv_card_drawn": "Mit Bild",
+"arv_card_blank": "Zum Selbermalen",
+"arv_frame_border": "Verzierter Rahmen",
+"arv_frame_plain": "Einfacher Rahmen",
+"arv_mandala_circle": "Rund",
+"arv_mandala_flower": "Blume",
+"arv_mandala_heart": "Herz",
+"arv_mandala_star": "Stern",
+"arv_mandala_egg": "Ei",
+"arv_mandala_snow": "Schneeflocke",
+"arv_shapes_few": "4 Formen",
+"arv_shapes_six": "6 Formen",
+"arv_shapes_many": "9 Formen",
+"arv_comic_n": "{n} Bilder",
+"arv_mirror_pixels": "Kästchen",
+"arv_mirror_half": "Halbes Bild",
+"arv_cr_monster": "Monster",
+"arv_cr_robot": "Roboter",
+"arv_cr_alien": "Außerirdischer",
+"arv_cr_dragon": "Drache",
+"arv_cr_fairy": "Fee",
+"arv_cr_hero": "Superheld",
+"arv_pp_blank": "Leer",
+"arv_pp_animals": "Tiere",
+"arv_pp_farm": "Bauernhof",
+"arv_pp_jungle": "Dschungel",
+"arv_pp_natal": "Weihnachten",
+"arv_pp_halloween": "Halloween",
+"arv_pp_pascoa": "Ostern",
+"arv_pp_fantasy": "Fantasie",
+"arv_iso_iso": "3D-Punkte",
+"arv_iso_grid": "Kariert",
+"arv_iso_tri": "Dreiecke",
+"arv_iso_dots": "Punkte",
+"arpTheme": "Anlass oder Thema",
+"arpNext": "nächster",
+"arpModel": "Vorlage",
+"arpAny": "Zufall",
+"arpSurprise": "Andere Überraschung",
+"arpPrint": "Drucken",
+"arS_kit": "Festtags-Set",
+"arSH_kit": "Mehrere Blätter zum Thema auf einmal",
+"arS_color": "Ausmalbild",
+"arSH_color": "Bilder zu Festtagen",
+"arpKitHint": "Wähle den Anlass: Das Set druckt Ausmalbild, Maske, Karte, Punkt-zu-Punkt, Malen nach Zahlen und Rahmen (mehr für Größere).",
+"arpPrintKit": "Set drucken: {theme}"
+},
+"zh": {
+"th_livre": "自由",
+"th_anonovo": "新年",
+"th_carnaval": "狂欢节",
+"th_pascoa": "复活节",
+"th_maes": "母亲节",
+"th_meioambiente": "环境日",
+"th_junina": "六月节",
+"th_amizade": "友谊日",
+"th_avos": "祖父母节",
+"th_pais": "父亲节",
+"th_folclore": "民俗日",
+"th_independencia": "独立日",
+"th_primavera": "春天",
+"th_animais": "动物日",
+"th_criancas": "儿童节",
+"th_professor": "教师节",
+"th_halloween": "万圣节",
+"th_natal": "圣诞节",
+"th_aniversario": "生日",
+"mk_cat": "猫",
+"mk_dog": "狗",
+"mk_lion": "狮子",
+"mk_tiger": "老虎",
+"mk_bear": "熊",
+"mk_panda": "熊猫",
+"mk_bunny": "小兔子",
+"mk_fox": "狐狸",
+"mk_owl": "猫头鹰",
+"mk_frog": "青蛙",
+"mk_mouse": "小老鼠",
+"mk_pig": "小猪",
+"mk_cow": "奶牛",
+"mk_monkey": "猴子",
+"mk_elephant": "大象",
+"mk_sheep": "绵羊",
+"mk_unicorn": "独角兽",
+"mk_dragon": "龙",
+"mk_chick": "小鸡",
+"mk_butterfly": "蝴蝶",
+"mk_hero": "超级英雄",
+"mk_masquerade": "狂欢面具",
+"mk_clown": "小丑",
+"mk_pumpkin": "南瓜",
+"mk_bat": "蝙蝠",
+"mk_ghost": "小幽灵",
+"mk_witch": "女巫",
+"mk_reindeer": "驯鹿",
+"mk_santa": "圣诞老人",
+"mk_snowman": "雪人",
+"mk_saci": "萨西",
+"mk_princess": "公主",
+"mk_robot": "机器人",
+"mk_astronaut": "宇航员",
+"mk_monster": "怪兽",
+"mk_superstar": "星星",
+"ds_star": "星星",
+"ds_house": "小房子",
+"ds_fish": "小鱼",
+"ds_rocket": "火箭",
+"ds_heart": "爱心",
+"ds_cat": "猫",
+"ds_tree": "圣诞树",
+"ds_egg": "复活节彩蛋",
+"ds_pumpkin": "南瓜",
+"ds_bell": "铃铛",
+"ds_balloon": "气球",
+"ds_kite": "风筝",
+"ds_butterfly": "蝴蝶",
+"ds_crown": "王冠",
+"ds_umbrella": "雨伞",
+"ds_dino": "恐龙",
+"ds_ghost": "小幽灵",
+"ds_gift": "礼物",
+"ds_car": "小汽车",
+"ds_bunny": "小兔子",
+"ds_apple": "苹果",
+"ds_flag": "旗子",
+"px_heart": "爱心",
+"px_mushroom": "蘑菇",
+"px_fish": "小鱼",
+"px_house": "小房子",
+"px_rocket": "火箭",
+"px_cat": "猫",
+"px_pumpkin": "南瓜",
+"px_ghost": "小幽灵",
+"px_tree": "圣诞树",
+"px_snowman": "雪人",
+"px_gift": "礼物",
+"px_egg": "复活节彩蛋",
+"px_bunny": "小兔子",
+"px_cake": "蛋糕",
+"px_balloon": "气球",
+"px_flagbr": "巴西国旗",
+"px_corn": "玉米",
+"px_flower": "花",
+"px_sun": "太阳",
+"px_apple": "苹果",
+"px_kite": "风筝",
+"px_star": "星星",
+"gd_house": "小房子",
+"gd_boat": "小船",
+"gd_box": "立体盒子",
+"gd_rocket": "火箭",
+"gd_tree": "圣诞树",
+"gd_star": "星星",
+"gd_heart": "爱心",
+"gd_gift": "礼物",
+"gd_pumpkin": "南瓜",
+"gd_egg": "复活节彩蛋",
+"gd_kite": "风筝",
+"gd_fish": "小鱼",
+"gd_flag": "旗子",
+"gd_lantern": "纸灯笼",
+"arv_color_big": "一个大图",
+"arv_color_pair": "两个图",
+"arv_color_scene": "完整场景",
+"arv_color_pattern": "很多小图",
+"arv_card_drawn": "带图案",
+"arv_card_blank": "自己画",
+"arv_frame_border": "装饰边框",
+"arv_frame_plain": "简单边框",
+"arv_mandala_circle": "圆形",
+"arv_mandala_flower": "花朵",
+"arv_mandala_heart": "爱心",
+"arv_mandala_star": "星星",
+"arv_mandala_egg": "蛋",
+"arv_mandala_snow": "雪花",
+"arv_shapes_few": "4 个形状",
+"arv_shapes_six": "6 个形状",
+"arv_shapes_many": "9 个形状",
+"arv_comic_n": "{n} 格",
+"arv_mirror_pixels": "小方格",
+"arv_mirror_half": "半幅画",
+"arv_cr_monster": "怪兽",
+"arv_cr_robot": "机器人",
+"arv_cr_alien": "外星人",
+"arv_cr_dragon": "龙",
+"arv_cr_fairy": "仙子",
+"arv_cr_hero": "超级英雄",
+"arv_pp_blank": "空白",
+"arv_pp_animals": "小动物",
+"arv_pp_farm": "农场",
+"arv_pp_jungle": "丛林",
+"arv_pp_natal": "圣诞",
+"arv_pp_halloween": "万圣节",
+"arv_pp_pascoa": "复活节",
+"arv_pp_fantasy": "奇幻",
+"arv_iso_iso": "立体点阵",
+"arv_iso_grid": "方格纸",
+"arv_iso_tri": "三角格",
+"arv_iso_dots": "点阵",
+"arpTheme": "节日或主题",
+"arpNext": "即将到来",
+"arpModel": "样式",
+"arpAny": "随机",
+"arpSurprise": "换一个",
+"arpPrint": "打印",
+"arS_kit": "节日套装",
+"arSH_kit": "一次打印多张主题页",
+"arS_color": "涂色页",
+"arSH_color": "节日主题图画",
+"arpKitHint": "选择节日：套装会打印涂色页、面具、贺卡、连点画、数字填色和画框（大孩子还有更多）。",
+"arpPrintKit": "打印套装：{theme}"
+},
+"zht": {
+"th_livre": "自由",
+"th_anonovo": "新年",
+"th_carnaval": "狂歡節",
+"th_pascoa": "復活節",
+"th_maes": "母親節",
+"th_meioambiente": "環境日",
+"th_junina": "六月節",
+"th_amizade": "友誼日",
+"th_avos": "祖父母節",
+"th_pais": "父親節",
+"th_folclore": "民俗日",
+"th_independencia": "獨立日",
+"th_primavera": "春天",
+"th_animais": "動物日",
+"th_criancas": "兒童節",
+"th_professor": "教師節",
+"th_halloween": "萬聖節",
+"th_natal": "聖誕節",
+"th_aniversario": "生日",
+"mk_cat": "貓",
+"mk_dog": "狗",
+"mk_lion": "獅子",
+"mk_tiger": "老虎",
+"mk_bear": "熊",
+"mk_panda": "熊貓",
+"mk_bunny": "小兔子",
+"mk_fox": "狐狸",
+"mk_owl": "貓頭鷹",
+"mk_frog": "青蛙",
+"mk_mouse": "小老鼠",
+"mk_pig": "小豬",
+"mk_cow": "奶牛",
+"mk_monkey": "猴子",
+"mk_elephant": "大象",
+"mk_sheep": "綿羊",
+"mk_unicorn": "獨角獸",
+"mk_dragon": "龍",
+"mk_chick": "小雞",
+"mk_butterfly": "蝴蝶",
+"mk_hero": "超級英雄",
+"mk_masquerade": "狂歡面具",
+"mk_clown": "小丑",
+"mk_pumpkin": "南瓜",
+"mk_bat": "蝙蝠",
+"mk_ghost": "小幽靈",
+"mk_witch": "女巫",
+"mk_reindeer": "馴鹿",
+"mk_santa": "聖誕老人",
+"mk_snowman": "雪人",
+"mk_saci": "薩西",
+"mk_princess": "公主",
+"mk_robot": "機器人",
+"mk_astronaut": "宇航員",
+"mk_monster": "怪獸",
+"mk_superstar": "星星",
+"ds_star": "星星",
+"ds_house": "小房子",
+"ds_fish": "小魚",
+"ds_rocket": "火箭",
+"ds_heart": "愛心",
+"ds_cat": "貓",
+"ds_tree": "聖誕樹",
+"ds_egg": "復活節彩蛋",
+"ds_pumpkin": "南瓜",
+"ds_bell": "鈴鐺",
+"ds_balloon": "氣球",
+"ds_kite": "風箏",
+"ds_butterfly": "蝴蝶",
+"ds_crown": "王冠",
+"ds_umbrella": "雨傘",
+"ds_dino": "恐龍",
+"ds_ghost": "小幽靈",
+"ds_gift": "禮物",
+"ds_car": "小汽車",
+"ds_bunny": "小兔子",
+"ds_apple": "蘋果",
+"ds_flag": "旗子",
+"px_heart": "愛心",
+"px_mushroom": "蘑菇",
+"px_fish": "小魚",
+"px_house": "小房子",
+"px_rocket": "火箭",
+"px_cat": "貓",
+"px_pumpkin": "南瓜",
+"px_ghost": "小幽靈",
+"px_tree": "聖誕樹",
+"px_snowman": "雪人",
+"px_gift": "禮物",
+"px_egg": "復活節彩蛋",
+"px_bunny": "小兔子",
+"px_cake": "蛋糕",
+"px_balloon": "氣球",
+"px_flagbr": "巴西國旗",
+"px_corn": "玉米",
+"px_flower": "花",
+"px_sun": "太陽",
+"px_apple": "蘋果",
+"px_kite": "風箏",
+"px_star": "星星",
+"gd_house": "小房子",
+"gd_boat": "小船",
+"gd_box": "立體盒子",
+"gd_rocket": "火箭",
+"gd_tree": "聖誕樹",
+"gd_star": "星星",
+"gd_heart": "愛心",
+"gd_gift": "禮物",
+"gd_pumpkin": "南瓜",
+"gd_egg": "復活節彩蛋",
+"gd_kite": "風箏",
+"gd_fish": "小魚",
+"gd_flag": "旗子",
+"gd_lantern": "紙燈籠",
+"arv_color_big": "一個大圖",
+"arv_color_pair": "兩個圖",
+"arv_color_scene": "完整場景",
+"arv_color_pattern": "很多小圖",
+"arv_card_drawn": "帶圖案",
+"arv_card_blank": "自己畫",
+"arv_frame_border": "裝飾邊框",
+"arv_frame_plain": "簡單邊框",
+"arv_mandala_circle": "圓形",
+"arv_mandala_flower": "花朵",
+"arv_mandala_heart": "愛心",
+"arv_mandala_star": "星星",
+"arv_mandala_egg": "蛋",
+"arv_mandala_snow": "雪花",
+"arv_shapes_few": "4 個形狀",
+"arv_shapes_six": "6 個形狀",
+"arv_shapes_many": "9 個形狀",
+"arv_comic_n": "{n} 格",
+"arv_mirror_pixels": "小方格",
+"arv_mirror_half": "半幅畫",
+"arv_cr_monster": "怪獸",
+"arv_cr_robot": "機器人",
+"arv_cr_alien": "外星人",
+"arv_cr_dragon": "龍",
+"arv_cr_fairy": "仙子",
+"arv_cr_hero": "超級英雄",
+"arv_pp_blank": "空白",
+"arv_pp_animals": "小動物",
+"arv_pp_farm": "農場",
+"arv_pp_jungle": "叢林",
+"arv_pp_natal": "聖誕",
+"arv_pp_halloween": "萬聖節",
+"arv_pp_pascoa": "復活節",
+"arv_pp_fantasy": "奇幻",
+"arv_iso_iso": "立體點陣",
+"arv_iso_grid": "方格紙",
+"arv_iso_tri": "三角格",
+"arv_iso_dots": "點陣",
+"arpTheme": "節日或主題",
+"arpNext": "即將到來",
+"arpModel": "樣式",
+"arpAny": "隨機",
+"arpSurprise": "換一個",
+"arpPrint": "列印",
+"arS_kit": "節日套裝",
+"arSH_kit": "一次列印多張主題頁",
+"arS_color": "塗色頁",
+"arSH_color": "節日主題圖畫",
+"arpKitHint": "選擇節日：套裝會列印塗色頁、面具、賀卡、連點畫、數字填色和畫框（大孩子還有更多）。",
+"arpPrintKit": "列印套裝：{theme}"
+}
+};
+Object.keys(V98_TEXT).forEach(l => { if (I18N[l]) Object.assign(I18N[l], V98_TEXT[l]); });
+
 'use strict';
 /* =====================================================================
    Família em Missão — v70 (versão consolidada)
    Núcleo: utilidades, datas, armazenamento, normalização e migração.
    ===================================================================== */
 
-const APP_VERSION = 97;
+const APP_VERSION = 98;
 const STORE_KEY = 'familiaMissao.v70';
 const LEGACY_KEY = 'familiaMissaoData';
 const LEGACY_NOTES_KEY = 'familiaMissaoPrivateNotesV34';
@@ -28841,6 +30027,464 @@ const ART_SHEETS_NEW = [['dots', '✏️', artSheetDots], ['mandala', '🌸', ar
   };
 })();
 ACTIONS['ar-hard'] = () => { ui.arHard = !ui.arHard; ui.arBump = 0; render(); };
+
+/* =====================================================================
+   Folhas para imprimir (v98): cada folha agora tem vários modelos e
+   pode ser feita no tema de uma data comemorativa (Páscoa, Dia das
+   Mães, Festa Junina, Dia das Crianças, Halloween, Natal...). Ao tocar
+   numa folha abre uma janelinha com a prévia, os temas (as próximas
+   datas aparecem primeiro) e os modelos. Tem também a folha nova de
+   colorir e o "Kit da data", que imprime várias folhas do tema juntas.
+   Os desenhos são originais, em traço para colorir.
+   ===================================================================== */
+
+/* ---------- desenhos em traço (0..100) ---------- */
+const AM = {
+  heart: '<path d="M50 88 C20 66 6 48 10 30 C14 12 38 8 50 28 C62 8 86 12 90 30 C94 48 80 66 50 88Z"/>',
+  star: '<path d="M50 6 L61 38 L95 38 L67 58 L78 92 L50 71 L22 92 L33 58 L5 38 L39 38Z"/>',
+  flower: '<circle cx="50" cy="34" r="9"/>' + [0, 60, 120, 180, 240, 300].map(a => `<ellipse cx="${(50 + 17 * Math.cos(a * Math.PI / 180)).toFixed(1)}" cy="${(34 + 17 * Math.sin(a * Math.PI / 180)).toFixed(1)}" rx="9" ry="7" transform="rotate(${a} ${(50 + 17 * Math.cos(a * Math.PI / 180)).toFixed(1)} ${(34 + 17 * Math.sin(a * Math.PI / 180)).toFixed(1)})"/>`).join('') + '<path d="M50 52 V96 M50 80 Q34 70 28 80 Q38 92 50 86 M50 72 Q66 60 72 70 Q62 82 50 78"/>',
+  sun: '<circle cx="50" cy="50" r="20"/>' + [...Array(12)].map((_, k) => { const a = k * Math.PI / 6; return `<path d="M${(50 + 27 * Math.cos(a)).toFixed(1)} ${(50 + 27 * Math.sin(a)).toFixed(1)} L${(50 + 42 * Math.cos(a)).toFixed(1)} ${(50 + 42 * Math.sin(a)).toFixed(1)}"/>`; }).join('') + '<circle cx="43" cy="46" r="2.5"/><circle cx="57" cy="46" r="2.5"/><path d="M42 56 Q50 63 58 56"/>',
+  balloon: '<ellipse cx="50" cy="38" rx="26" ry="31"/><path d="M46 69 L50 75 L54 69 M50 75 Q42 86 52 94 Q60 98 54 99"/><path d="M38 24 Q42 16 50 14"/>',
+  butterfly: '<path d="M50 28 V82"/><path d="M50 40 C40 16 10 14 12 36 C14 52 34 56 50 50 C34 56 18 66 24 80 C30 92 46 80 50 64 C54 80 70 92 76 80 C82 66 66 56 50 50 C66 56 86 52 88 36 C90 14 60 16 50 40Z"/><path d="M50 28 Q44 18 38 14 M50 28 Q56 18 62 14"/><circle cx="30" cy="34" r="5"/><circle cx="70" cy="34" r="5"/>',
+  gift: '<rect x="16" y="42" width="68" height="50"/><rect x="10" y="30" width="80" height="14"/><path d="M50 30 V92 M50 30 C40 10 22 14 30 24 C34 28 44 28 50 30 C56 28 66 28 70 24 C78 14 60 10 50 30"/>',
+  cake: '<rect x="14" y="58" width="72" height="34" rx="4"/><path d="M14 68 Q23 76 32 68 Q41 76 50 68 Q59 76 68 68 Q77 76 86 68"/><rect x="22" y="44" width="56" height="14" rx="3"/><path d="M36 44 V30 M50 44 V26 M64 44 V30"/><path d="M36 30 q-4 -6 0 -10 q4 4 0 10 M50 26 q-4 -6 0 -10 q4 4 0 10 M64 30 q-4 -6 0 -10 q4 4 0 10"/>',
+  partyhat: '<path d="M28 92 L50 14 L72 92Z"/><path d="M34 72 L66 72 M41 48 L59 48"/><circle cx="50" cy="10" r="5"/><path d="M28 92 Q50 98 72 92"/>',
+  egg: '<path d="M50 6 C26 6 14 46 16 64 C18 84 32 96 50 96 C68 96 82 84 84 64 C86 46 74 6 50 6Z"/><path d="M17 52 L28 44 L39 52 L50 44 L61 52 L72 44 L83 52 M20 74 Q35 66 50 74 Q65 82 80 74"/><circle cx="50" cy="28" r="5"/><circle cx="36" cy="34" r="3"/><circle cx="64" cy="34" r="3"/>',
+  bunny: '<ellipse cx="50" cy="66" rx="28" ry="25"/><ellipse cx="38" cy="24" rx="8" ry="22"/><ellipse cx="62" cy="24" rx="8" ry="22"/><ellipse cx="38" cy="26" rx="3.5" ry="14"/><ellipse cx="62" cy="26" rx="3.5" ry="14"/><circle cx="40" cy="62" r="3"/><circle cx="60" cy="62" r="3"/><path d="M47 70 L53 70 L50 74Z M50 74 V78 M50 78 Q44 82 40 78 M50 78 Q56 82 60 78 M30 72 L14 70 M30 76 L16 80 M70 72 L86 70 M70 76 L84 80"/>',
+  chick: '<circle cx="50" cy="34" r="16"/><path d="M18 60 L26 52 L34 60 L42 52 L50 60 L58 52 L66 60 L74 52 L82 60 C84 84 70 96 50 96 C30 96 16 84 18 60Z"/><circle cx="44" cy="31" r="2"/><circle cx="56" cy="31" r="2"/><path d="M46 38 L50 43 L54 38Z M44 18 q4 -8 8 0 q2 -6 6 -2"/>',
+  carrot: '<path d="M36 32 Q50 24 64 32 L52 94 Q50 97 48 94Z"/><path d="M42 46 l8 2 M45 62 l8 -2 M47 78 l5 1 M50 28 Q42 14 32 12 M50 28 Q50 12 52 4 M50 28 Q58 14 68 12"/>',
+  pumpkin: '<path d="M50 24 C24 18 6 40 10 62 C14 86 34 92 50 86 C66 92 86 86 90 62 C94 40 76 18 50 24Z"/><path d="M50 24 C38 40 38 72 50 86 M50 24 C62 40 62 72 50 86 M30 26 C22 44 24 70 34 88 M70 26 C78 44 76 70 66 88"/><path d="M48 24 Q46 12 54 6 L58 9 Q52 14 54 24"/>',
+  jack: '<path d="M50 24 C24 18 6 40 10 62 C14 86 34 92 50 86 C66 92 86 86 90 62 C94 40 76 18 50 24Z"/><path d="M48 24 Q46 12 54 6 L58 9 Q52 14 54 24"/><path d="M28 46 L40 46 L34 36Z M60 46 L72 46 L66 36Z M46 56 L54 56 L50 50Z M24 64 Q50 84 76 64 L68 70 L62 64 L56 72 L50 66 L44 72 L38 64 L32 70Z"/>',
+  ghost: '<path d="M22 92 L22 44 C22 20 36 8 50 8 C64 8 78 20 78 44 L78 92 L68 84 L59 92 L50 84 L41 92 L32 84Z"/><ellipse cx="40" cy="40" rx="5" ry="7"/><ellipse cx="60" cy="40" rx="5" ry="7"/><ellipse cx="50" cy="60" rx="6" ry="8"/>',
+  bat: '<path d="M50 40 C44 40 42 46 42 50 C30 38 14 38 4 48 C12 50 16 56 16 62 C22 58 30 58 34 64 C38 58 44 58 50 64 C56 58 62 58 66 64 C70 58 78 58 84 62 C84 56 88 50 96 48 C86 38 70 38 58 50 C58 46 56 40 50 40Z"/><path d="M45 41 L44 33 L48 39 M55 41 L56 33 L52 39"/><circle cx="47" cy="47" r="1.5"/><circle cx="53" cy="47" r="1.5"/>',
+  witchhat: '<path d="M8 80 Q50 94 92 80 Q86 72 70 70 L58 12 Q52 6 48 14 L30 70 Q14 72 8 80Z"/><path d="M30 64 Q50 72 70 64 M32 58 Q50 66 68 58"/><rect x="44" y="57" width="12" height="10"/>',
+  xmastree: '<path d="M50 14 L70 38 L60 38 L80 62 L66 62 L88 86 L12 86 L34 62 L20 62 L40 38 L30 38Z"/><rect x="42" y="86" width="16" height="10"/><path d="M50 2 L53 10 L61 10 L55 15 L57 23 L50 18 L43 23 L45 15 L39 10 L47 10Z"/><circle cx="44" cy="48" r="3"/><circle cx="58" cy="68" r="3"/><circle cx="36" cy="76" r="3"/><circle cx="66" cy="78" r="3"/><circle cx="52" cy="56" r="3"/>',
+  bell: '<path d="M50 14 C30 14 24 34 24 52 C24 66 18 72 12 78 L88 78 C82 72 76 66 76 52 C76 34 70 14 50 14Z"/><circle cx="50" cy="86" r="7"/><path d="M44 12 Q50 2 56 12 M30 62 H70"/><path d="M60 14 Q74 4 84 12 Q76 18 64 18"/>',
+  candycane: '<path d="M40 96 L40 34 C40 12 72 12 72 34 L72 44 L62 44 L62 34 C62 24 50 24 50 34 L50 96Z"/><path d="M40 82 L50 74 M40 64 L50 56 M40 46 L50 40 M58 22 L66 30"/>',
+  snowman: '<circle cx="50" cy="30" r="14"/><circle cx="50" cy="70" r="24"/><circle cx="45" cy="27" r="2"/><circle cx="55" cy="27" r="2"/><path d="M49 32 L60 34 L49 35Z"/><circle cx="50" cy="60" r="2"/><circle cx="50" cy="70" r="2"/><circle cx="50" cy="80" r="2"/><path d="M27 62 L10 50 M73 62 L90 50 M38 16 H62 M42 16 V4 H58 V16 M36 42 Q50 48 64 42 L66 48 Q50 54 34 48Z"/>',
+  bonfire: '<path d="M50 8 C62 26 72 36 68 54 C66 62 58 68 50 68 C40 68 32 62 32 50 C32 40 40 34 42 22 C46 30 48 34 52 34 C54 26 52 18 50 8Z"/><path d="M50 40 C56 48 58 54 54 60 C50 64 44 62 44 56 C44 50 48 48 50 40Z"/><path d="M18 70 L82 92 M82 70 L18 92"/><path d="M14 66 L22 72 M86 66 L78 72 M14 96 L22 90 M86 96 L78 90"/>',
+  lantern: '<path d="M50 6 L80 30 L70 76 L30 76 L20 30Z"/><path d="M20 30 L80 30 M36 76 L40 90 L60 90 L64 76 M50 6 L50 76 M36 18 L32 76 M64 18 L68 76 M44 90 L44 98 M56 90 L56 98"/>',
+  bunting: '<path d="M2 16 Q50 34 98 16"/><path d="M8 18 L16 44 L25 22 M31 25 L38 50 L46 28 M54 28 L62 50 L69 25 M75 22 L84 44 L92 18"/><path d="M2 60 Q50 78 98 60"/><path d="M14 64 L22 90 L31 67 M40 69 L48 94 L56 70 M64 68 L72 92 L80 64"/>',
+  corn: '<path d="M50 8 C36 8 34 30 34 50 C34 70 40 84 50 88 C60 84 66 70 66 50 C66 30 64 8 50 8Z"/><path d="M34 50 H66 M35 36 H65 M35 64 H65 M35 24 H65 M42 10 V86 M58 10 V86"/><path d="M50 94 C30 90 18 66 24 44 C30 62 38 74 50 82 M50 94 C70 90 82 66 76 44 C70 62 62 74 50 82"/>',
+  strawhat: '<ellipse cx="50" cy="66" rx="46" ry="14"/><path d="M26 64 C26 30 74 30 74 64"/><path d="M27 56 Q50 64 73 56"/><path d="M34 46 l4 4 M44 42 l4 4 M56 42 l4 4 M64 46 l4 4"/><path d="M60 58 L68 74 L74 62"/>',
+  tie: '<path d="M40 8 L60 8 L56 22 L44 22Z M44 22 L56 22 L66 76 L50 94 L34 76Z"/><path d="M42 44 L60 36 M38 62 L62 50 M40 78 L60 66"/>',
+  mug: '<path d="M20 30 H70 V82 C70 90 64 94 56 94 H34 C26 94 20 90 20 82Z"/><path d="M70 42 C90 40 90 72 70 70"/><path d="M36 22 Q32 14 38 6 M50 22 Q46 14 52 6"/><path d="M33 52 C37 45 45 45 45 53 C45 45 53 45 57 52 C59 60 45 70 45 70 C45 70 31 60 33 52Z"/>',
+  trophy: '<path d="M30 10 H70 V36 C70 52 60 60 50 60 C40 60 30 52 30 36Z"/><path d="M30 18 C10 18 12 42 30 42 M70 18 C90 18 88 42 70 42"/><path d="M44 60 V74 H56 V60 M32 74 H68 V90 H32Z"/><path d="M50 18 L53 26 L61 26 L55 31 L57 39 L50 34 L43 39 L45 31 L39 26 L47 26Z"/>',
+  sacicap: '<path d="M22 74 C20 46 36 22 66 10 C60 26 66 40 78 46 C82 58 80 66 78 74Z"/><path d="M18 72 Q50 84 82 72 L82 86 Q50 98 18 86Z"/><path d="M66 10 C74 6 84 10 86 18 C80 16 74 18 70 22"/>',
+  moon: '<path d="M64 8 C36 12 18 36 22 62 C26 84 48 96 70 90 C52 82 40 64 42 44 C44 26 54 14 64 8Z"/><path d="M78 20 L80 26 L86 28 L80 30 L78 36 L76 30 L70 28 L76 26Z M84 52 L85 56 L89 57 L85 58 L84 62 L83 58 L79 57 L83 56Z"/>',
+  swirl: '<path d="M50 50 m-4 0 a4 4 0 1 1 8 0 a12 12 0 1 1 -20 0 a20 20 0 1 1 36 0 a28 28 0 1 1 -52 0 a36 36 0 1 1 68 0"/>',
+  tree: '<path d="M44 96 L46 64 L54 64 L56 96Z"/><path d="M50 64 C26 70 10 52 20 36 C12 18 34 4 50 14 C66 4 88 18 80 36 C90 52 74 70 50 64Z"/><path d="M50 64 L50 44 M50 52 L40 42 M50 50 L60 40"/>',
+  flagBR: '<rect x="6" y="20" width="88" height="60" rx="2"/><path d="M50 25 L89 50 L50 75 L11 50Z"/><circle cx="50" cy="50" r="15"/><path d="M35 46 Q50 41 65 53"/><path d="M6 20 L6 98"/>',
+  kite: '<path d="M50 4 L80 38 L50 72 L20 38Z"/><path d="M50 4 V72 M20 38 H80 M50 72 Q40 82 50 88 Q60 94 50 100"/><path d="M42 82 l8 -2 l-2 8Z M52 94 l8 -2 l-2 8Z"/>',
+  ball: '<circle cx="50" cy="50" r="40"/><path d="M50 36 L63 45 L58 60 L42 60 L37 45Z M50 36 V12 M63 45 L86 38 M58 60 L72 82 M42 60 L28 82 M37 45 L14 38"/>',
+  teddy: '<circle cx="50" cy="38" r="20"/><circle cx="31" cy="22" r="8"/><circle cx="69" cy="22" r="8"/><ellipse cx="50" cy="76" rx="24" ry="20"/><circle cx="26" cy="70" r="8"/><circle cx="74" cy="70" r="8"/><circle cx="34" cy="94" r="7"/><circle cx="66" cy="94" r="7"/><ellipse cx="50" cy="45" rx="8" ry="6"/><circle cx="43" cy="34" r="2"/><circle cx="57" cy="34" r="2"/><ellipse cx="50" cy="78" rx="12" ry="10"/>',
+  apple: '<path d="M50 30 C38 18 14 24 14 50 C14 76 34 94 50 86 C66 94 86 76 86 50 C86 24 62 18 50 30Z"/><path d="M50 30 Q48 18 54 10 M54 18 C62 8 76 12 76 12 C72 22 60 24 54 18Z"/><path d="M26 44 Q28 34 36 32"/>',
+  book: '<path d="M8 24 C24 18 40 20 50 28 C60 20 76 18 92 24 L92 84 C76 78 60 80 50 88 C40 80 24 78 8 84Z"/><path d="M50 28 V88 M16 36 C26 34 36 34 44 38 M16 48 C26 46 36 46 44 50 M16 60 C26 58 36 58 44 62 M56 38 C64 34 74 34 84 36 M56 50 C64 46 74 46 84 48 M56 62 C64 58 74 58 84 60"/>',
+  pencil: '<path d="M18 88 L24 68 L70 22 L84 36 L38 82Z M24 68 L38 82 M64 28 L78 42 M18 88 L28 84"/>',
+  fireworks: [[30, 34, 16], [70, 30, 14], [52, 66, 18]].map(([x, y, r]) => [...Array(10)].map((_, k) => { const a = k * Math.PI / 5; return `<path d="M${(x + r * 0.35 * Math.cos(a)).toFixed(1)} ${(y + r * 0.35 * Math.sin(a)).toFixed(1)} L${(x + r * Math.cos(a)).toFixed(1)} ${(y + r * Math.sin(a)).toFixed(1)}"/><circle cx="${(x + r * 1.15 * Math.cos(a)).toFixed(1)}" cy="${(y + r * 1.15 * Math.sin(a)).toFixed(1)}" r="1.4"/>`; }).join('')).join('') + '<path d="M52 98 L52 86"/>',
+  clock: '<circle cx="50" cy="56" r="36"/><circle cx="50" cy="56" r="30"/><path d="M50 56 V34 M50 56 L64 64"/>' + [...Array(12)].map((_, k) => { const a = k * Math.PI / 6; return `<path d="M${(50 + 26 * Math.cos(a)).toFixed(1)} ${(56 + 26 * Math.sin(a)).toFixed(1)} L${(50 + 29 * Math.cos(a)).toFixed(1)} ${(56 + 29 * Math.sin(a)).toFixed(1)}"/>`; }).join('') + '<circle cx="26" cy="20" r="9"/><circle cx="74" cy="20" r="9"/>',
+  paw: '<ellipse cx="50" cy="66" rx="20" ry="17"/><ellipse cx="25" cy="44" rx="8" ry="10"/><ellipse cx="41" cy="28" rx="8" ry="11"/><ellipse cx="59" cy="28" rx="8" ry="11"/><ellipse cx="75" cy="44" rx="8" ry="10"/>',
+  fish: '<path d="M10 50 C24 24 56 20 74 44 L94 28 L88 50 L94 72 L74 56 C56 80 24 76 10 50Z"/><circle cx="26" cy="46" r="3"/><path d="M48 34 Q56 50 48 66 M36 60 Q40 64 44 62"/>',
+  cat: '<path d="M20 86 C10 64 14 42 22 34 L20 8 L40 26 C46 24 54 24 60 26 L80 8 L78 34 C86 42 90 64 80 86 C70 96 30 96 20 86Z"/><circle cx="38" cy="56" r="4"/><circle cx="62" cy="56" r="4"/><path d="M46 66 L54 66 L50 71Z M50 71 Q44 78 38 74 M50 71 Q56 78 62 74 M10 62 L32 66 M10 74 L32 70 M90 62 L68 66 M90 74 L68 70"/>',
+  globe: '<circle cx="50" cy="50" r="40"/><path d="M28 24 C38 30 32 40 42 44 C50 48 48 58 40 62 C34 66 36 76 30 82 M64 14 C60 26 68 30 74 36 C80 42 72 50 78 58 C84 64 80 74 74 82"/><path d="M10 50 H90"/>',
+  leaf: '<path d="M12 88 C8 40 44 12 90 10 C88 56 60 90 12 88Z"/><path d="M12 88 L72 28 M34 66 L32 46 M48 52 L46 34 M34 66 L54 68 M48 52 L66 54"/>',
+  smiley: '<circle cx="50" cy="50" r="40"/><circle cx="36" cy="40" r="4"/><circle cx="64" cy="40" r="4"/><path d="M28 58 Q50 80 72 58"/><circle cx="26" cy="56" r="5"/><circle cx="74" cy="56" r="5"/>',
+  hands: '<path d="M50 90 C24 72 10 56 14 38 C18 22 38 18 50 34 C62 18 82 22 86 38 C90 56 76 72 50 90Z"/><path d="M30 40 C36 34 44 38 44 46 M70 40 C64 34 56 38 56 46"/><path d="M22 90 L34 72 M78 90 L66 72"/>',
+  masquerade: '<path d="M8 42 C20 30 38 30 50 40 C62 30 80 30 92 42 C92 62 76 72 64 68 C58 66 54 60 50 60 C46 60 42 66 36 68 C24 72 8 62 8 42Z"/><ellipse cx="30" cy="50" rx="9" ry="6"/><ellipse cx="70" cy="50" rx="9" ry="6"/><path d="M86 38 C90 20 82 8 74 2 C80 16 76 28 84 36 M86 38 C96 26 98 12 96 2 C92 18 90 28 86 38 M14 64 L8 96"/>',
+  drum: '<ellipse cx="50" cy="50" rx="40" ry="40"/><circle cx="50" cy="50" r="31"/>' + [0, 1, 2, 3, 4, 5].map(k => { const a = k * Math.PI / 3; return `<rect x="${(50 + 35 * Math.cos(a) - 4).toFixed(1)}" y="${(50 + 35 * Math.sin(a) - 3).toFixed(1)}" width="8" height="6" rx="2"/>`; }).join('') + '<path d="M40 44 L60 56 M60 44 L40 56"/>',
+  serpentina: '<path d="M10 20 C30 10 30 40 50 30 C70 20 70 50 90 40 M10 62 C30 52 30 82 50 72 C70 62 70 92 90 82"/><circle cx="20" cy="42" r="3"/><circle cx="62" cy="50" r="3"/><circle cx="82" cy="14" r="3"/><circle cx="36" cy="92" r="3"/><path d="M72 64 l5 5 M12 86 l5 -5 M44 8 l4 4 M88 60 l4 -4"/>',
+  crown: '<path d="M14 80 L10 26 L32 50 L50 16 L68 50 L90 26 L86 80Z"/><path d="M14 70 H86"/><circle cx="50" cy="60" r="5"/><circle cx="30" cy="62" r="3.5"/><circle cx="70" cy="62" r="3.5"/><circle cx="10" cy="24" r="4"/><circle cx="50" cy="12" r="4"/><circle cx="90" cy="24" r="4"/>',
+  rocket: '<path d="M50 6 C66 18 70 40 66 66 L34 66 C30 40 34 18 50 6Z"/><circle cx="50" cy="36" r="8"/><path d="M34 52 L20 70 L34 70 M66 52 L80 70 L66 70 M40 66 L42 78 L58 78 L60 66 M44 80 Q50 96 56 80"/>',
+  dino: '<path d="M14 82 C14 64 30 56 44 58 C46 44 50 30 64 26 C78 22 90 30 88 40 C86 48 76 48 72 46 C70 56 70 64 74 74 L74 90 L64 90 L62 78 L46 80 L46 90 L36 90 L34 80 C24 80 18 86 6 84 C10 82 12 82 14 82Z"/><circle cx="76" cy="34" r="2.5"/><path d="M48 58 L52 50 L56 58 M38 60 L42 52 L46 60"/>',
+  house: '<path d="M14 50 L50 16 L86 50"/><path d="M22 44 V92 H78 V44"/><rect x="42" y="62" width="16" height="30"/><rect x="28" y="54" width="10" height="10"/><rect x="62" y="54" width="10" height="10"/><path d="M66 28 V18 H74 V36"/>',
+  car: '<path d="M8 66 V52 L22 50 L34 32 H66 L78 50 L92 54 V66Z"/><circle cx="26" cy="68" r="10"/><circle cx="74" cy="68" r="10"/><path d="M38 36 H50 V50 H28Z M54 36 H64 L72 50 H54Z"/>',
+  umbrella: '<path d="M8 50 C10 20 90 20 92 50 Q83 42 74 50 Q65 42 56 50 Q47 42 38 50 Q29 42 20 50 Q14 44 8 50Z"/><path d="M50 22 V84 Q50 94 40 92 Q34 90 36 84"/><path d="M50 16 V22"/>'
+};
+// datas e temas: ícone, motivos, título da folha de colorir e frases
+const ART_THEMES = {
+  livre: { icon: '🎨', m: ['star', 'heart', 'flower', 'sun', 'balloon', 'butterfly', 'rocket', 'house'], title: 'Meu desenho!', card: 'Um presente para você', msg: 'Fiz este cartão especialmente para você!', draw: 'Desenhe o que você mais gosta' },
+  anonovo: { icon: '🎆', m: ['fireworks', 'clock', 'star', 'balloon'], title: 'Feliz Ano Novo!', card: 'Feliz Ano Novo!', msg: 'Que o ano novo seja cheio de alegria!', draw: 'Desenhe um desejo para o ano novo' },
+  carnaval: { icon: '🎭', m: ['masquerade', 'drum', 'serpentina', 'balloon'], title: 'É Carnaval!', card: 'Feliz Carnaval!', msg: 'Vamos brincar o carnaval juntos!', draw: 'Desenhe a sua fantasia de carnaval' },
+  pascoa: { icon: '🐰', m: ['egg', 'bunny', 'chick', 'carrot', 'flower'], title: 'Feliz Páscoa!', card: 'Feliz Páscoa!', msg: 'Uma Páscoa doce e cheia de carinho!', draw: 'Desenhe a cesta de ovos do coelhinho' },
+  maes: { icon: '💐', m: ['heart', 'flower', 'gift', 'butterfly'], title: 'Feliz Dia das Mães!', card: 'Mamãe, eu te amo!', msg: 'Obrigado por cuidar de mim todos os dias.', draw: 'Desenhe você e a mamãe juntos' },
+  meioambiente: { icon: '🌍', m: ['tree', 'globe', 'leaf', 'flower', 'butterfly'], title: 'Cuide do planeta!', card: 'Dia do Meio Ambiente', msg: 'Vamos cuidar da natureza juntos!', draw: 'Desenhe como cuidar da natureza' },
+  junina: { icon: '🌽', m: ['bonfire', 'lantern', 'corn', 'strawhat', 'bunting'], title: 'Arraiá da família!', card: 'Bora pro arraiá!', msg: 'Vem dançar quadrilha comigo!', draw: 'Desenhe a sua festa junina' },
+  amizade: { icon: '🤝', m: ['smiley', 'hands', 'heart', 'star'], title: 'Viva a amizade!', card: 'Você é meu amigo!', msg: 'Que bom ter você por perto!', draw: 'Desenhe você e seu melhor amigo' },
+  avos: { icon: '👵', m: ['heart', 'mug', 'flower', 'house'], title: 'Feliz Dia dos Avós!', card: 'Vovó e vovô, eu amo vocês!', msg: 'Obrigado pelos abraços e histórias!', draw: 'Desenhe um passeio com seus avós' },
+  pais: { icon: '👔', m: ['tie', 'mug', 'trophy', 'heart'], title: 'Feliz Dia dos Pais!', card: 'Papai, você é o melhor!', msg: 'Obrigado por brincar comigo e cuidar de mim.', draw: 'Desenhe você e o papai fazendo algo legal' },
+  folclore: { icon: '🌀', m: ['sacicap', 'swirl', 'moon', 'tree'], title: 'Dia do Folclore!', card: 'Viva o folclore!', msg: 'Você conhece o Saci, a Iara e o Curupira?', draw: 'Desenhe o seu personagem do folclore preferido' },
+  independencia: { icon: '🇧🇷', m: ['flagBR', 'star', 'balloon', 'heart'], title: 'Viva o Brasil!', card: 'Feliz 7 de Setembro!', msg: 'Viva o nosso Brasil!', draw: 'Desenhe o que você mais gosta no Brasil' },
+  primavera: { icon: '🌷', m: ['flower', 'butterfly', 'sun', 'tree'], title: 'Chegou a primavera!', card: 'Feliz primavera!', msg: 'Que a sua vida seja cheia de flores!', draw: 'Desenhe um jardim florido' },
+  animais: { icon: '🐾', m: ['paw', 'cat', 'fish', 'bunny'], title: 'Dia dos Animais!', card: 'Eu amo os animais!', msg: 'Cuide bem dos bichinhos!', draw: 'Desenhe o seu animal preferido' },
+  criancas: { icon: '🪁', m: ['kite', 'ball', 'teddy', 'balloon', 'car'], title: 'Feliz Dia das Crianças!', card: 'Feliz Dia das Crianças!', msg: 'Brincar é muito bom!', draw: 'Desenhe a sua brincadeira preferida' },
+  professor: { icon: '🍎', m: ['apple', 'book', 'pencil', 'star'], title: 'Feliz Dia do Professor!', card: 'Obrigado, professor(a)!', msg: 'Obrigado por me ensinar tantas coisas!', draw: 'Desenhe a sua escola' },
+  halloween: { icon: '🎃', m: ['jack', 'ghost', 'bat', 'witchhat', 'pumpkin', 'moon'], title: 'Feliz Halloween!', card: 'Doces ou travessuras!', msg: 'Uma noite divertida e assustadora!', draw: 'Desenhe a sua fantasia de Halloween' },
+  natal: { icon: '🎄', m: ['xmastree', 'bell', 'candycane', 'snowman', 'gift', 'star'], title: 'Feliz Natal!', card: 'Feliz Natal!', msg: 'Um Natal cheio de amor e paz!', draw: 'Desenhe a sua árvore de Natal' },
+  aniversario: { icon: '🎂', m: ['cake', 'balloon', 'gift', 'partyhat'], title: 'Feliz Aniversário!', card: 'Parabéns pra você!', msg: 'Muitas felicidades e muitos anos de vida!', draw: 'Desenhe a sua festa de aniversário' }
+};
+/** Páscoa (cálculo de Meeus) */
+function artEaster(y) { const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31), da = ((h + l - 7 * m + 114) % 31) + 1; return new Date(y, mo - 1, da); }
+function artNthSunday(y, mo, n) { const d = new Date(y, mo, 1); const first = (7 - d.getDay()) % 7 + 1; return new Date(y, mo, first + (n - 1) * 7); }
+function artThemeDate(k, y) {
+  const fixed = { anonovo: [0, 1], meioambiente: [5, 5], junina: [5, 24], amizade: [6, 20], avos: [6, 26], folclore: [7, 22], independencia: [8, 7], primavera: [8, 22], animais: [9, 4], criancas: [9, 12], professor: [9, 15], halloween: [9, 31], natal: [11, 25] };
+  if (fixed[k]) return new Date(y, fixed[k][0], fixed[k][1]);
+  if (k === 'pascoa') return artEaster(y);
+  if (k === 'carnaval') { const e = artEaster(y); return new Date(e.getFullYear(), e.getMonth(), e.getDate() - 47); }
+  if (k === 'maes') return artNthSunday(y, 4, 2);
+  if (k === 'pais') return artNthSunday(y, 7, 2);
+  return null;
+}
+/** temas em ordem: livre, depois as próximas datas, aniversário no fim */
+function artThemesOrdered(now = new Date()) {
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const dated = Object.keys(ART_THEMES).map(k => { let d = artThemeDate(k, today.getFullYear()); if (d && d < today) d = artThemeDate(k, today.getFullYear() + 1); return { k, d }; }).filter(x => x.d).sort((a, b) => a.d - b.d);
+  return [{ k: 'livre', d: null }, ...dated, { k: 'aniversario', d: null }];
+}
+function artThemeChipLabel(x) { return `${ART_THEMES[x.k].icon} ${t('th_' + x.k)}${x.d ? ` · ${String(x.d.getDate()).padStart(2, '0')}/${String(x.d.getMonth() + 1).padStart(2, '0')}` : ''}`; }
+function artSvg(inner, vb = '0 0 100 100', sw = 1.6, cls = 'art-big') { return `<svg class="${cls}" viewBox="${vb}" fill="none" stroke="#111" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`; }
+function artPlace(id, x, y, s, rot = 0) { return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${s}) translate(-50 -50)">${AM[id] || ''}</g>`; }
+function artOutlineTitle(txt, y = 16, size = 12) { return `<text x="100" y="${y}" text-anchor="middle" font-size="${size}" font-weight="900" font-family="'Arial Black',Arial,sans-serif" fill="none" stroke="#111" stroke-width=".7" letter-spacing=".5">${esc(txt)}</text>`; }
+
+/* ---------- 🖍️ colorir (nova) ---------- */
+function artSheetColor(c, seed, o = {}) {
+  const th = ART_THEMES[o.theme] || ART_THEMES.livre, rnd = seededRng(seed), m = shuffle(th.m, rnd), v = o.variant || (c.age <= 4 ? 'big' : 'scene');
+  let art = artOutlineTitle(th.title, 18, th.title.length > 18 ? 11 : 13);
+  if (v === 'big') art += artPlace(m[0], 100, 140, 1.45);
+  else if (v === 'pair') art += artPlace(m[0], 58, 120, 0.85) + artPlace(m[1 % m.length], 142, 150, 0.85) + `<path d="M6 232 Q100 218 194 232"/>`;
+  else if (v === 'pattern') { for (let r = 0; r < 5; r++) for (let k = 0; k < 4; k++) art += artPlace(m[(r + k) % m.length], 28 + k * 48, 52 + r * 42, 0.36, (r + k) % 2 ? 12 : -12); }
+  else art += artPlace(m[0], 100, 130, 1.0) + artPlace(m[1 % m.length], 36, 196, 0.5, -10) + artPlace(m[2 % m.length], 164, 196, 0.5, 10) + artPlace(m[3 % m.length], 30, 58, 0.36, -14) + artPlace(m[(4) % m.length], 170, 58, 0.36, 14) + '<path d="M4 234 Q50 224 100 232 Q150 240 196 228"/>';
+  return `<div class="ps-page art-sheet">${artHead(c, '🖍️ Para colorir', th.title)}${artSvg(art, '0 0 200 240', 1.3)}<div class="art-foot">Pinte com muitas cores! ✨</div></div>`;
+}
+
+/* ---------- 🎭 máscaras: muitos modelos ---------- */
+const MK_FACE = 'M50 18 C18 18 10 40 12 58 C14 80 32 92 50 92 C68 92 86 80 88 58 C90 40 82 18 50 18Z';
+const MK_BAND = 'M6 44 C14 30 36 30 50 40 C64 30 86 30 94 44 C96 60 84 68 70 66 C60 64 56 58 50 58 C44 58 40 64 30 66 C16 68 4 60 6 44Z';
+const MK_EYES = '<ellipse cx="34" cy="50" rx="9" ry="6" stroke-dasharray="2 1.5"/><ellipse cx="66" cy="50" rx="9" ry="6" stroke-dasharray="2 1.5"/>';
+const MK_HOLES = '<circle cx="6" cy="52" r="2"/><circle cx="94" cy="52" r="2"/>';
+const whisk = '<path d="M30 70 L12 66 M30 74 L12 78 M70 70 L88 66 M70 74 L88 78"/>';
+const MASKS = {
+  cat: { th: 'animais', d: '<path d="M18 32 L22 4 L42 22 M82 32 L78 4 L58 22 M24 26 L25 12 L35 21 M76 26 L75 12 L65 21"/><path d="M45 64 L55 64 L50 70Z M50 70 Q44 78 38 74 M50 70 Q56 78 62 74"/>' + whisk },
+  dog: { th: 'animais', d: '<path d="M22 26 C4 22 0 52 8 70 C14 78 22 70 22 58 M78 26 C96 22 100 52 92 70 C86 78 78 70 78 58"/><ellipse cx="50" cy="66" rx="9" ry="6"/><path d="M50 72 V78 Q42 84 36 78 M50 78 Q58 84 64 78 M46 82 Q50 92 54 82"/><path d="M58 38 C64 30 80 34 78 46 C76 56 62 58 58 48"/>' },
+  lion: { th: 'animais', d: [...Array(16)].map((_, k) => { const a = k * Math.PI / 8; return `<circle cx="${(50 + 50 * Math.cos(a)).toFixed(1)}" cy="${(55 + 47 * Math.sin(a)).toFixed(1)}" r="10"/>`; }).join('') + '<circle cx="26" cy="22" r="7"/><circle cx="74" cy="22" r="7"/><path d="M44 62 L56 62 L50 68Z M50 68 Q42 78 36 72 M50 68 Q58 78 64 72"/>' + whisk },
+  tiger: { th: 'animais', d: '<circle cx="24" cy="22" r="9"/><circle cx="76" cy="22" r="9"/><path d="M50 18 L50 30 M42 19 L44 30 M58 19 L56 30 M14 48 L24 50 M13 58 L24 58 M86 48 L76 50 M87 58 L76 58 M20 74 L30 70 M80 74 L70 70"/><path d="M45 64 L55 64 L50 70Z M50 70 Q44 78 38 74 M50 70 Q56 78 62 74"/>' + whisk },
+  bear: { th: 'animais', d: '<circle cx="22" cy="22" r="12"/><circle cx="78" cy="22" r="12"/><circle cx="22" cy="22" r="6"/><circle cx="78" cy="22" r="6"/><ellipse cx="50" cy="72" rx="16" ry="12"/><ellipse cx="50" cy="66" rx="6" ry="4"/><path d="M50 70 V76 Q44 80 40 76 M50 76 Q56 80 60 76"/>' },
+  panda: { th: 'animais', d: '<circle cx="22" cy="22" r="12"/><circle cx="78" cy="22" r="12"/><ellipse cx="32" cy="51" rx="15" ry="12" transform="rotate(-20 32 51)"/><ellipse cx="68" cy="51" rx="15" ry="12" transform="rotate(20 68 51)"/><ellipse cx="50" cy="68" rx="6" ry="4"/><path d="M50 72 V76 Q44 80 40 76 M50 76 Q56 80 60 76"/>' },
+  bunny: { th: 'pascoa', d: '<ellipse cx="34" cy="-2" rx="9" ry="24"/><ellipse cx="66" cy="-2" rx="9" ry="24"/><ellipse cx="34" cy="0" rx="4" ry="16"/><ellipse cx="66" cy="0" rx="4" ry="16"/><path d="M46 64 L54 64 L50 69Z M50 69 Q44 76 38 72 M50 69 Q56 76 62 72"/><rect x="46" y="74" width="8" height="7" rx="1"/>' + whisk },
+  fox: { th: 'animais', d: '<path d="M16 36 L14 -2 L40 22 M84 36 L86 -2 L60 22 M20 28 L20 10 L32 22 M80 28 L80 10 L68 22"/><path d="M12 58 L22 62 L16 68 L28 70 L22 78 L40 80 M88 58 L78 62 L84 68 L72 70 L78 78 L60 80"/><ellipse cx="50" cy="74" rx="5" ry="4"/>' },
+  owl: { th: 'animais', d: '<path d="M18 30 L12 4 L32 22 M82 30 L88 4 L68 22"/><circle cx="34" cy="50" r="15"/><circle cx="66" cy="50" r="15"/><path d="M44 62 L56 62 L50 76Z M38 82 l4 4 l4 -4 M48 84 l4 4 l4 -4 M58 82 l4 4 l4 -4"/>' },
+  frog: { th: 'animais', d: '<circle cx="30" cy="26" r="14"/><circle cx="70" cy="26" r="14"/><circle cx="30" cy="26" r="5"/><circle cx="70" cy="26" r="5"/><path d="M22 68 Q50 90 78 68"/><circle cx="44" cy="60" r="1.5"/><circle cx="56" cy="60" r="1.5"/>' },
+  mouse: { th: 'animais', d: '<circle cx="16" cy="22" r="16"/><circle cx="84" cy="22" r="16"/><circle cx="16" cy="22" r="9"/><circle cx="84" cy="22" r="9"/><circle cx="50" cy="66" r="4"/><path d="M50 70 Q44 76 40 72 M50 70 Q56 76 60 72"/>' + whisk },
+  pig: { th: 'animais', d: '<path d="M20 30 L16 4 L40 20Z M80 30 L84 4 L60 20Z"/><ellipse cx="50" cy="68" rx="16" ry="11"/><ellipse cx="44" cy="68" rx="3" ry="4.5"/><ellipse cx="56" cy="68" rx="3" ry="4.5"/><path d="M40 84 Q50 90 60 84"/>' },
+  cow: { th: 'animais', d: '<path d="M22 24 Q12 10 18 0 Q24 14 34 20 M78 24 Q88 10 82 0 Q76 14 66 20"/><path d="M14 36 Q-2 34 2 44 Q8 50 16 44 M86 36 Q102 34 98 44 Q92 50 84 44"/><ellipse cx="50" cy="74" rx="22" ry="14"/><circle cx="42" cy="72" r="3"/><circle cx="58" cy="72" r="3"/><path d="M56 22 C70 20 76 30 70 36 C64 40 58 34 56 22"/>' },
+  monkey: { th: 'animais', d: '<circle cx="10" cy="54" r="12"/><circle cx="90" cy="54" r="12"/><circle cx="10" cy="54" r="6"/><circle cx="90" cy="54" r="6"/><path d="M50 36 C40 28 20 34 22 52 C22 62 30 66 30 66 C28 80 40 88 50 88 C60 88 72 80 70 66 C70 66 78 62 78 52 C80 34 60 28 50 36Z"/><circle cx="46" cy="68" r="1.5"/><circle cx="54" cy="68" r="1.5"/><path d="M40 76 Q50 84 60 76"/>' },
+  elephant: { th: 'animais', d: '<path d="M16 34 C-6 28 -4 74 16 72 M84 34 C106 28 104 74 84 72"/><path d="M44 62 C44 76 46 92 40 100 C38 104 44 106 46 102 C52 92 56 78 56 62"/><path d="M40 70 L44 72 M56 72 L60 70"/>' },
+  sheep: { th: 'animais', d: [...Array(9)].map((_, k) => `<circle cx="${18 + k * 8}" cy="${20 + Math.abs(4 - k) * 2.2}" r="8"/>`).join('') + '<path d="M14 44 Q0 46 4 54 Q10 58 16 52 M86 44 Q100 46 96 54 Q90 58 84 52"/><path d="M45 66 L55 66 L50 71Z M50 71 Q44 77 40 73 M50 71 Q56 77 60 73"/>' },
+  unicorn: { th: 'livre', d: '<path d="M44 20 L50 -14 L56 20Z M45 12 L55 8 M46 4 L54 0"/><path d="M22 28 L22 8 L36 22 M78 28 L78 8 L64 22"/><path d="M66 18 C86 14 96 30 90 46 C98 52 96 66 88 70 M70 20 C80 28 82 36 78 44"/><circle cx="20" cy="40" r="4"/><circle cx="14" cy="32" r="3"/><circle cx="26" cy="32" r="3"/><circle cx="20" cy="26" r="3"/><ellipse cx="44" cy="76" rx="2" ry="3"/><ellipse cx="56" cy="76" rx="2" ry="3"/>' },
+  dragon: { th: 'livre', d: '<path d="M26 22 Q18 6 26 -6 Q30 10 38 18 M74 22 Q82 6 74 -6 Q70 10 62 18"/><path d="M42 20 L46 10 L50 20 L54 10 L58 20"/><circle cx="42" cy="74" r="3"/><circle cx="58" cy="74" r="3"/><path d="M20 64 q4 -4 8 0 q4 -4 8 0 M64 64 q4 -4 8 0 q4 -4 8 0"/><path d="M38 84 L42 90 L46 84 M54 84 L58 90 L62 84"/>' },
+  chick: { th: 'pascoa', d: '<path d="M44 18 Q40 4 48 2 Q50 10 52 6 Q58 0 58 18"/><path d="M40 66 L60 66 L50 78Z M40 66 Q50 60 60 66"/><circle cx="24" cy="68" r="5"/><circle cx="76" cy="68" r="5"/>' },
+  butterfly: { th: 'primavera', base: 'none', d: '<path d="M50 40 C40 10 4 10 6 40 C8 56 26 62 50 56 C26 62 12 74 20 88 C30 98 46 84 50 64 C54 84 70 98 80 88 C88 74 74 62 50 56 C74 62 92 56 94 40 C96 10 60 10 50 40Z"/><path d="M50 40 V80 M50 40 Q44 28 38 22 M50 40 Q56 28 62 22"/><circle cx="20" cy="72" r="4"/><circle cx="80" cy="72" r="4"/>' },
+  hero: { th: 'livre', base: 'band', d: '<path d="M6 44 L-4 36 M94 44 L104 36"/><path d="M50 32 L52 37 L57 37 L53 40 L55 45 L50 42 L45 45 L47 40 L43 37 L48 37Z"/>' },
+  masquerade: { th: 'carnaval', base: 'band', d: '<path d="M88 40 C92 20 84 6 76 0 C82 14 78 26 86 36 M90 42 C100 30 102 14 100 4 C96 20 94 30 90 42 M84 36 C80 20 72 12 66 10 C70 20 74 28 82 38"/><circle cx="50" cy="44" r="3"/><circle cx="20" cy="60" r="2"/><circle cx="80" cy="60" r="2"/>' },
+  clown: { th: 'carnaval', d: '<circle cx="50" cy="66" r="7"/><path d="M28 74 Q50 96 72 74 Q50 86 28 74Z"/><path d="M34 22 L50 -14 L66 22"/><circle cx="50" cy="-16" r="4"/><circle cx="12" cy="30" r="9"/><circle cx="6" cy="42" r="8"/><circle cx="88" cy="30" r="9"/><circle cx="94" cy="42" r="8"/><path d="M28 38 L34 44 L40 38 M60 38 L66 44 L72 38"/>' },
+  pumpkin: { th: 'halloween', base: 'none', holes: '<path d="M24 54 L42 54 L33 40Z M58 54 L76 54 L67 40Z" stroke-dasharray="2 1.5"/>', d: '<path d="M50 16 C20 10 2 34 6 60 C10 88 32 96 50 90 C68 96 90 88 94 60 C98 34 80 10 50 16Z"/><path d="M48 16 Q46 4 56 -2 L60 2 Q52 8 54 16"/><path d="M22 70 Q50 88 78 70 L70 76 L62 70 L56 78 L50 72 L44 78 L38 70 L30 76Z"/><path d="M28 20 C18 40 18 70 30 88 M72 20 C82 40 82 70 70 88"/>' },
+  bat: { th: 'halloween', base: 'none', d: '<path d="M50 34 C42 34 38 38 36 42 C26 30 10 28 0 38 C6 42 8 48 8 56 C16 52 22 54 26 62 C32 56 40 60 44 66 C46 62 48 62 50 62 C52 62 54 62 56 66 C60 60 68 56 74 62 C78 54 84 52 92 56 C92 48 94 42 100 38 C90 28 74 30 64 42 C62 38 58 34 50 34Z"/><path d="M40 36 L38 22 L46 32 M60 36 L62 22 L54 32"/>' },
+  ghost: { th: 'halloween', base: 'none', d: '<path d="M14 100 L14 44 C14 10 32 0 50 0 C68 0 86 10 86 44 L86 100 L74 90 L62 100 L50 90 L38 100 L26 90Z"/><ellipse cx="50" cy="74" rx="7" ry="9"/>' },
+  witch: { th: 'halloween', d: '<path d="M2 26 Q50 36 98 26 Q90 18 72 18 L58 -22 Q52 -26 48 -18 L28 18 Q10 18 2 26Z"/><path d="M28 16 Q50 22 72 16"/><path d="M50 56 L58 72 L48 72"/><circle cx="58" cy="70" r="1.5"/><path d="M38 82 Q50 88 62 82 M12 30 L6 70 M18 32 L14 76 M88 30 L94 70 M82 32 L86 76"/>' },
+  reindeer: { th: 'natal', d: '<path d="M30 22 C24 6 20 0 12 -6 M24 10 L10 8 M28 2 L22 -10 M70 22 C76 6 80 0 88 -6 M76 10 L90 8 M72 2 L78 -10"/><path d="M14 36 Q0 30 2 42 Q8 48 16 44 M86 36 Q100 30 98 42 Q92 48 84 44"/><circle cx="50" cy="68" r="8"/><path d="M40 82 Q50 88 60 82"/>' },
+  santa: { th: 'natal', d: '<path d="M10 34 Q50 22 90 34 Q78 2 50 -2 Q28 -2 20 8 Q8 12 4 22"/><circle cx="4" cy="26" r="7"/><path d="M10 34 Q50 26 90 34 L88 42 Q50 34 12 42Z"/><path d="M16 62 C14 92 34 106 50 106 C66 106 86 92 84 62 C76 70 64 72 50 70 C36 72 24 70 16 62Z"/><path d="M34 66 Q42 60 50 66 Q58 60 66 66 Q58 72 50 68 Q42 72 34 66Z"/><circle cx="50" cy="60" r="4"/>' },
+  snowman: { th: 'natal', d: '<path d="M26 20 H74 M34 20 V-12 H66 V20 M34 12 H66"/><path d="M50 60 L72 64 L50 68Z"/><circle cx="38" cy="78" r="2"/><circle cx="46" cy="82" r="2"/><circle cx="54" cy="82" r="2"/><circle cx="62" cy="78" r="2"/>' },
+  saci: { th: 'folclore', d: '<path d="M14 30 C14 6 34 -14 70 -20 C62 -6 70 8 82 14 C86 22 86 28 86 30 Q50 40 14 30Z"/><path d="M70 -20 C80 -24 92 -18 92 -10 C86 -12 80 -10 76 -6"/><circle cx="50" cy="66" r="3"/><path d="M34 76 Q50 92 66 76"/>' },
+  princess: { th: 'livre', d: '<path d="M26 22 L30 2 L40 16 L50 -4 L60 16 L70 2 L74 22 Q50 14 26 22Z"/><circle cx="50" cy="8" r="3"/><path d="M14 40 C6 56 10 76 4 92 M86 40 C94 56 90 76 96 92 M14 40 C24 22 76 22 86 40"/><path d="M42 76 Q50 82 58 76"/><circle cx="26" cy="68" r="4"/><circle cx="74" cy="68" r="4"/>' },
+  robot: { th: 'livre', base: 'none', holes: '<rect x="24" y="44" width="20" height="12" rx="2" stroke-dasharray="2 1.5"/><rect x="56" y="44" width="20" height="12" rx="2" stroke-dasharray="2 1.5"/>', d: '<rect x="10" y="20" width="80" height="72" rx="10"/><path d="M50 20 V4"/><circle cx="50" cy="0" r="5"/><rect x="0" y="44" width="10" height="20" rx="3"/><rect x="90" y="44" width="10" height="20" rx="3"/><rect x="30" y="70" width="40" height="12" rx="3"/><path d="M38 70 V82 M46 70 V82 M54 70 V82 M62 70 V82"/><circle cx="18" cy="28" r="2"/><circle cx="82" cy="28" r="2"/><circle cx="18" cy="84" r="2"/><circle cx="82" cy="84" r="2"/>' },
+  astronaut: { th: 'livre', base: 'none', d: '<circle cx="50" cy="52" r="46"/><path d="M14 40 Q50 28 86 40 Q90 52 86 64 Q50 76 14 64 Q10 52 14 40Z"/><rect x="40" y="0" width="20" height="8" rx="3"/><path d="M50 0 V-12"/><circle cx="50" cy="-14" r="3"/><path d="M28 86 H72"/>' },
+  monster: { th: 'halloween', d: '<path d="M24 22 Q16 2 26 -10 Q30 8 38 16 M76 22 Q84 2 74 -10 Q70 8 62 16"/><path d="M20 38 Q34 32 46 40 M80 38 Q66 32 54 40"/><path d="M26 72 Q50 84 74 72 M34 74 L38 82 L42 76 M58 76 L62 82 L66 74"/><circle cx="20" cy="74" r="3"/><circle cx="80" cy="60" r="4"/>' },
+  superstar: { th: 'livre', base: 'none', d: '<path d="M50 -10 L63 28 L102 28 L70 50 L82 90 L50 66 L18 90 L30 50 L-2 28 L37 28Z"/>' }
+};
+const MASK_IDS = Object.keys(MASKS);
+function maskInner(id, holes = true) {
+  const M = MASKS[id] || MASKS.cat, base = M.base === 'none' ? '' : `<path d="${M.base === 'band' ? MK_BAND : MK_FACE}"/>`;
+  const eyes = holes ? (M.holes || MK_EYES) : (M.holes ? M.holes.replace(/stroke-dasharray="[^"]*"/g, '') : '<circle cx="34" cy="50" r="4"/><circle cx="66" cy="50" r="4"/>');
+  return base + M.d + eyes + (holes ? MK_HOLES : '');
+}
+function artSheetMask2(c, seed, o = {}) {
+  const pool = MASK_IDS.filter(k => !o.theme || o.theme === 'livre' || MASKS[k].th === o.theme), rnd = seededRng(seed);
+  const id = o.variant && MASKS[o.variant] ? o.variant : (pool.length ? pool : MASK_IDS)[Math.floor(rnd() * (pool.length || MASK_IDS.length))];
+  return `<div class="ps-page art-sheet">${artHead(c, '🎭 Máscara para recortar', `${t('mk_' + id)}: pinte, recorte e prenda um elástico`)}
+    ${artSvg(maskInner(id), '-8 -28 116 136', 1)}
+    <div class="art-foot">✂️ Recorte na linha de fora e nos olhos (tracejado). Peça ajuda a um adulto. Fure as bolinhas dos lados para o elástico.</div></div>`;
+}
+
+/* ---------- 💌 cartão ---------- */
+function artSheetCard2(c, seed, o = {}) {
+  const th = ART_THEMES[o.theme] || ART_THEMES.livre, rnd = seededRng(seed), m = shuffle(th.m, rnd), v = o.variant || 'drawn';
+  const front = v === 'blank' ? `<div class="art-cardart">Frente do cartão: desenhe e escreva o título!</div>`
+    : `<div class="art-cardfront">${artSvg(artOutlineTitle(th.card, 14, th.card.length > 22 ? 8 : 10) + artPlace(m[0], 100, 78, 0.95) + artPlace(m[1 % m.length], 32, 122, 0.32, -12) + artPlace(m[2 % m.length], 168, 122, 0.32, 12), '0 0 200 140', 1.1, 'art-cardsvg')}</div>`;
+  const inside = v === 'blank' ? '' : `<p class="art-cardmsg">${esc(th.msg)}</p>`;
+  return `<div class="ps-page art-sheet art-card"><div class="art-card-grid">
+      <div class="art-card-q flip"><b>Para: __________________</b>${inside}<div class="art-lines">${'<i></i>'.repeat(v === 'blank' ? 6 : 4)}</div><b>Com carinho, ${esc(c.name)}</b></div>
+      <div class="art-card-q flip"><div class="art-cardart">${v === 'blank' ? 'Desenhe aqui algo que a pessoa gosta 💛' : artSvg(artPlace(m[2 % m.length], 50, 50, 0.7), '0 0 100 100', 1.4, 'art-cardsvg')}</div></div>
+      <div class="art-card-q">${front}</div>
+      <div class="art-card-q back"><small>Feito por ${esc(c.name)} · Família em Missão</small></div></div>
+    <div class="art-foot">Dobre ao meio na horizontal e depois ao meio na vertical. Pinte e escreva dentro!</div></div>`;
+}
+
+/* ---------- 🖼️ moldura para desenhar ---------- */
+function artSheetFrame2(c, seed, o = {}) {
+  const th = ART_THEMES[o.theme] || ART_THEMES.livre, m = th.m, v = o.variant || 'border';
+  const prompt = o.theme && o.theme !== 'livre' ? th.draw : drawPrompt(c, ui.arBump);
+  if (v === 'plain' && (!o.theme || o.theme === 'livre')) return artSheetFrame(c, prompt);
+  let b = '<rect x="4" y="4" width="192" height="262" rx="10"/><rect x="22" y="22" width="156" height="226" rx="6"/>';
+  if (v !== 'plain') { const step = 26; let k = 0; for (let x = 13; x <= 187; x += step) { b += artPlace(m[k++ % m.length], x, 13, 0.16) + artPlace(m[k++ % m.length], x, 257, 0.16); } for (let y = 13 + step; y < 257; y += step) { b += artPlace(m[k++ % m.length], 13, y, 0.16) + artPlace(m[k++ % m.length], 187, y, 0.16); } }
+  return `<div class="ps-page art-sheet">${artHead(c, `${th.icon} Desafio de desenho`, prompt)}${artSvg(b, '0 0 200 270', 0.7, 'art-big art-tall')}<div class="art-foot">Dê um nome para o seu desenho: ______________________________</div></div>`;
+}
+
+/* ---------- ✏️ ligue os pontos: mais desenhos ---------- */
+Object.assign(DOT_SHAPES, {
+  tree: [[50, 4], [70, 30], [60, 30], [80, 56], [66, 56], [88, 82], [56, 82], [56, 96], [44, 96], [44, 82], [12, 82], [34, 56], [20, 56], [40, 30], [30, 30]],
+  egg: [...Array(18)].map((_, i) => { const a = i / 18 * Math.PI * 2; return [50 + 34 * Math.sin(a), 52 - (Math.cos(a) > 0 ? 44 : 36) * Math.cos(a)]; }),
+  pumpkin: [[50, 22], [54, 8], [60, 10], [56, 22], [74, 20], [90, 38], [94, 60], [86, 82], [68, 92], [50, 88], [32, 92], [14, 82], [6, 60], [10, 38], [26, 20]],
+  bell: [[50, 8], [62, 14], [72, 30], [74, 52], [80, 68], [90, 78], [60, 78], [58, 90], [42, 90], [40, 78], [10, 78], [20, 68], [26, 52], [28, 30], [38, 14]],
+  balloon: [[50, 4], [70, 10], [80, 30], [76, 52], [62, 68], [54, 72], [58, 80], [42, 80], [46, 72], [38, 68], [24, 52], [20, 30], [30, 10]],
+  kite: [[50, 4], [64, 20], [80, 40], [64, 56], [50, 74], [56, 86], [46, 96], [44, 86], [36, 56], [20, 40], [36, 20]],
+  butterfly: [[50, 30], [40, 10], [16, 8], [8, 26], [18, 44], [38, 50], [20, 62], [18, 82], [34, 88], [50, 68], [66, 88], [82, 82], [80, 62], [62, 50], [82, 44], [92, 26], [84, 8], [60, 10]],
+  crown: [[10, 80], [8, 24], [30, 50], [50, 14], [70, 50], [92, 24], [90, 80]],
+  umbrella: [[8, 50], [16, 30], [32, 18], [50, 14], [68, 18], [84, 30], [92, 50], [74, 46], [56, 50], [54, 84], [46, 92], [36, 88], [42, 84], [46, 86], [48, 50], [26, 46]],
+  dino: [[14, 82], [26, 62], [44, 58], [50, 34], [64, 26], [82, 26], [90, 38], [76, 48], [72, 46], [72, 70], [74, 90], [64, 90], [62, 78], [46, 80], [46, 90], [36, 90], [34, 80], [6, 84]],
+  ghost: [[22, 92], [22, 40], [30, 18], [50, 8], [70, 18], [78, 40], [78, 92], [68, 84], [59, 92], [50, 84], [41, 92], [32, 84]],
+  gift: [[16, 92], [16, 44], [10, 44], [10, 30], [30, 30], [26, 14], [40, 14], [50, 28], [60, 14], [74, 14], [70, 30], [90, 30], [90, 44], [84, 44], [84, 92]],
+  car: [[8, 66], [8, 52], [22, 50], [34, 32], [66, 32], [78, 50], [92, 54], [92, 66], [84, 66], [80, 76], [68, 76], [64, 66], [36, 66], [32, 76], [20, 76], [16, 66]],
+  bunny: [[50, 44], [44, 4], [34, 4], [36, 44], [24, 54], [22, 72], [32, 88], [50, 92], [68, 88], [78, 72], [76, 54], [64, 44], [66, 4], [56, 4]],
+  apple: [[50, 26], [56, 10], [60, 12], [54, 26], [72, 20], [86, 34], [86, 58], [74, 82], [60, 90], [50, 86], [40, 90], [26, 82], [14, 58], [14, 34], [28, 20]],
+  flag: [[6, 20], [94, 20], [94, 80], [6, 80], [6, 98], [4, 98], [4, 20]]
+});
+const DOT_THEME = { tree: 'natal', bell: 'natal', gift: 'natal', egg: 'pascoa', bunny: 'pascoa', pumpkin: 'halloween', ghost: 'halloween', balloon: 'aniversario', kite: 'criancas', car: 'criancas', butterfly: 'primavera', apple: 'professor', flag: 'independencia', fish: 'animais', cat: 'animais', crown: 'livre', umbrella: 'livre', dino: 'livre', star: 'livre', house: 'livre', rocket: 'livre', heart: 'maes' };
+function artSheetDots2(c, seed, o = {}) {
+  const rnd = seededRng(seed), keys = Object.keys(DOT_SHAPES), pool = keys.filter(k => !o.theme || o.theme === 'livre' || DOT_THEME[k] === o.theme);
+  const k = o.variant && DOT_SHAPES[o.variant] ? o.variant : (pool.length ? pool : keys)[Math.floor(rnd() * (pool.length || keys.length))];
+  const n = [10, 18, 30, 45][artDiff(c)], pts = dotsResample(DOT_SHAPES[k], Math.max(n, DOT_SHAPES[k].length));
+  return `<div class="ps-page art-sheet">${artHead(c, '✏️ Ligue os pontos', `Ligue do 1 até o ${pts.length} e descubra o desenho!`)}
+    <svg class="art-big" viewBox="-5 -5 110 110">${pts.map(([x, y], i) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r=".9" fill="#111"/><text x="${(x + 1.4).toFixed(1)}" y="${(y - 1.2).toFixed(1)}" font-size="${pts.length > 30 ? 2.4 : 3}" fill="#333">${i + 1}</text>`).join('')}</svg>
+    <div class="art-foot">O que apareceu? ______________________ · Agora pinte!</div></div>`;
+}
+
+/* ---------- 🌸 mandala: formatos ---------- */
+const MANDALA_SHAPES = { circle: null, heart: AM.heart, star: AM.star, egg: '<path d="M50 6 C26 6 14 46 16 64 C18 84 32 96 50 96 C68 96 82 84 84 64 C86 46 74 6 50 6Z"/>', snow: null, flower: null };
+function artSheetMandala2(c, seed, o = {}) {
+  const v = o.variant || (o.theme === 'natal' ? 'snow' : o.theme === 'pascoa' ? 'egg' : o.theme === 'maes' ? 'heart' : o.theme === 'primavera' ? 'flower' : 'circle');
+  if (v === 'circle' && (!o.theme || o.theme === 'livre')) return artSheetMandala(c, seed);
+  const rnd = seededRng(seed), d = artDiff(c), uid = 'mc' + Math.floor(rnd() * 1e6); let s = '';
+  if (v === 'snow') {
+    for (let k = 0; k < 6; k++) { const a = k * 60; s += `<g transform="rotate(${a} 50 50)"><path d="M50 50 V8 M50 20 L42 12 M50 20 L58 12 M50 32 L40 24 M50 32 L60 24 M50 42 L44 38 M50 42 L56 38"/><circle cx="50" cy="8" r="2.5"/></g>`; }
+    s += '<circle cx="50" cy="50" r="8"/><circle cx="50" cy="50" r="16"/><circle cx="50" cy="50" r="30" stroke-dasharray="1 2"/>';
+  } else if (v === 'flower') {
+    const n = [6, 8, 10, 12][d];
+    for (let r = 3; r >= 1; r--) for (let k = 0; k < n; k++) { const a = (k + (r % 2) / 2) * 360 / n; s += `<ellipse cx="50" cy="${50 - r * 12}" rx="${3 + r * 2}" ry="${r * 7}" transform="rotate(${a} 50 50)"/>`; }
+    s += '<circle cx="50" cy="50" r="8"/><circle cx="50" cy="50" r="4"/>';
+  } else {
+    const rings = [3, 4, 6, 8][d], parts = [6, 8, 10, 12][d];
+    for (let r = 1; r <= rings; r++) { const R = r * (50 / rings), r0 = (r - 1) * (50 / rings), n = parts * (r > rings / 2 ? 2 : 1); s += `<circle cx="50" cy="50" r="${R.toFixed(2)}"/>`; for (let i = 0; i < n; i++) { const a = (i / n) * Math.PI * 2, a2 = ((i + 0.5) / n) * Math.PI * 2; s += `<path d="M${(50 + r0 * Math.cos(a)).toFixed(2)} ${(50 + r0 * Math.sin(a)).toFixed(2)} Q${(50 + R * 1.05 * Math.cos(a2)).toFixed(2)} ${(50 + R * 1.05 * Math.sin(a2)).toFixed(2)} ${(50 + r0 * Math.cos(a + Math.PI * 2 / n)).toFixed(2)} ${(50 + r0 * Math.sin(a + Math.PI * 2 / n)).toFixed(2)}"/>`; } }
+    const shape = MANDALA_SHAPES[v]; if (shape) s = `<defs><clipPath id="${uid}">${shape.replace(/<path /, '<path fill="#000" ')}</clipPath></defs><g clip-path="url(#${uid})">${s}</g>${shape}`;
+  }
+  const th = ART_THEMES[o.theme];
+  return `<div class="ps-page art-sheet">${artHead(c, '🌸 Mandala para colorir', th && o.theme !== 'livre' ? th.title : 'Pinte com calma, usando cores que combinam')}${artSvg(s, '0 0 100 100', 0.4)}</div>`;
+}
+
+/* ---------- 🔢 pintura por números e 👾 pixel art: mais desenhos ---------- */
+PIX_ART.forEach((p, i) => { p.id = p.id || ['heart', 'mushroom', 'fish', 'house', 'rocket', 'cat'][i]; p.th = p.th || ['maes', 'livre', 'animais', 'livre', 'livre', 'animais'][i]; });
+PIX_ART.push(
+  { id: 'pumpkin', th: 'halloween', n: 'Abóbora', p: ['....BB....', '.....B....', '..AAAAAA..', '.AAAAAAAA.', 'AACAAAACAA', 'AAAAAAAAAA', 'AACAAAACAA', 'AAACCCCAAA', '.AAAAAAAA.', '..AAAAAA..'], c: { A: '#f97316', B: '#16a34a', C: '#111827' } },
+  { id: 'ghost', th: 'halloween', n: 'Fantasminha', p: ['...AAAA...', '..AAAAAA..', '.AAAAAAAA.', '.ABBAABBA.', '.ABBAABBA.', '.AAAAAAAA.', '.AAACCAAA.', '.AAAAAAAA.', '.AAAAAAAA.', '.A.AA.AA.A'], c: { A: '#e5e7eb', B: '#111827', C: '#f472b6' } },
+  { id: 'tree', th: 'natal', n: 'Árvore de Natal', p: ['....AA....', '....BB....', '...BBBB...', '..BBCBBB..', '...BBBB...', '..BBBBDB..', '.BCBBBBBB.', 'BBBBBDBBBB', '....EE....', '....EE....'], c: { A: '#facc15', B: '#16a34a', C: '#ef4444', D: '#3b82f6', E: '#92400e' } },
+  { id: 'snowman', th: 'natal', n: 'Boneco de neve', p: ['...AAAA...', '...AAAA...', '..BBBBBB..', '...BCBC...', '...BBDB...', '..EEEEEE..', '.BBBCBBBB.', '.BBBBBBBB.', '.BBBCBBBB.', '..BBBBBB..'], c: { A: '#111827', B: '#f8fafc', C: '#111827', D: '#f97316', E: '#ef4444' } },
+  { id: 'gift', th: 'natal', n: 'Presente', p: ['...B..B...', '....BB....', 'AAAABBAAAA', 'AAAABBAAAA', 'BBBBBBBBBB', 'AAAABBAAAA', 'AAAABBAAAA', 'AAAABBAAAA', 'AAAABBAAAA', 'AAAABBAAAA'], c: { A: '#ef4444', B: '#facc15' } },
+  { id: 'egg', th: 'pascoa', n: 'Ovo de Páscoa', p: ['....AA....', '...AAAA...', '..AAAAAA..', '..BBBBBB..', '.AAAAAAAA.', '.CACACACA.', '.AAAAAAAA.', '.BBBBBBBB.', '..AAAAAA..', '...AAAA...'], c: { A: '#c4b5fd', B: '#f9a8d4', C: '#fde047' } },
+  { id: 'bunny', th: 'pascoa', n: 'Coelhinho', p: ['.AB....BA.', '.AB....BA.', '.AB....BA.', '.AAAAAAAA.', 'AAAAAAAAAA', 'AACAAAACAA', 'AAAABBAAAA', 'AAAAAAAAAA', '.AAAAAAAA.', '..AAAAAA..'], c: { A: '#f8fafc', B: '#f9a8d4', C: '#111827' } },
+  { id: 'cake', th: 'aniversario', n: 'Bolo', p: ['..A..A..A.', '..B..B..B.', '..B..B..B.', '.CCCCCCCCC', '.DDDDDDDDD', '.CCCCCCCCC', '.CCCCCCCCC', '.DDDDDDDDD', '.CCCCCCCCC', 'EEEEEEEEEE'], c: { A: '#f97316', B: '#60a5fa', C: '#f9a8d4', D: '#fef3c7', E: '#a3a3a3' } },
+  { id: 'balloon', th: 'aniversario', n: 'Balão', p: ['...AAAA...', '..AAAAAA..', '.AABAAAAA.', '.ABAAAAAA.', '.AAAAAAAA.', '..AAAAAA..', '...AAAA...', '....AA....', '....C.....', '.....C....'], c: { A: '#ef4444', B: '#fecaca', C: '#6b7280' } },
+  { id: 'flagbr', th: 'independencia', n: 'Bandeira do Brasil', p: ['AAAAAAAAAA', 'AAAABBAAAA', 'AAABBBBAAA', 'AABBCCBBAA', 'ABBCCCCBBA', 'ABBCCCCBBA', 'AABBCCBBAA', 'AAABBBBAAA', 'AAAABBAAAA', 'AAAAAAAAAA'], c: { A: '#16a34a', B: '#facc15', C: '#1d4ed8' } },
+  { id: 'corn', th: 'junina', n: 'Milho', p: ['....AA....', '...AAAA...', '...AAAA...', '...AAAA...', '..BAAAAB..', '..BAAAAB..', '.BBAAAABB.', '.BBBAABBB.', '..BBBBBB..', '....BB....'], c: { A: '#facc15', B: '#16a34a' } },
+  { id: 'flower', th: 'primavera', n: 'Flor', p: ['...AAAA...', '..AAAAAA..', '.AAABBAAA.', '.AABBBBAA.', '.AAABBAAA.', '..AAAAAA..', '....CC....', '.DD.CC....', '..DDCC.DD.', '....CCDD..'], c: { A: '#f472b6', B: '#facc15', C: '#16a34a', D: '#22c55e' } },
+  { id: 'sun', th: 'primavera', n: 'Sol', p: ['A...A...A.', '.A..A..A..', '..BBBBBB..', '.BBBBBBBB.', 'ABBCBBCBBA', '.BBBBBBBB.', '.BBCBBCBB.', '..BBCCBB..', '.A..A..A..', 'A...A...A.'], c: { A: '#f59e0b', B: '#fde047', C: '#92400e' } },
+  { id: 'apple', th: 'professor', n: 'Maçã', p: ['....B.....', '....BCC...', '..AAAAAA..', '.AAAAAAAA.', 'AADAAAAAAA', 'AADAAAAAAA', 'AAAAAAAAAA', '.AAAAAAAA.', '..AAAAAA..', '...AA.AA..'], c: { A: '#dc2626', B: '#92400e', C: '#16a34a', D: '#fecaca' } },
+  { id: 'kite', th: 'criancas', n: 'Pipa', p: ['....AA....', '...ABBA...', '..ABBBBA..', '.ABBBBBBA.', 'CCCCCCCCCC', '.ADDDDDDA.', '..ADDDDA..', '...ADDA...', '....AA....', '.....E.E..'], c: { A: '#111827', B: '#3b82f6', C: '#111827', D: '#facc15', E: '#ef4444' } },
+  { id: 'star', th: 'livre', n: 'Estrela', p: ['....AA....', '....AA....', '...AAAA...', 'AAAAAAAAAA', '.AAAAAAAA.', '..AAAAAA..', '..AAAAAA..', '.AAA..AAA.', '.AA....AA.', 'A........A'], c: { A: '#facc15' } }
+);
+function pixPick(seed, o) { const rnd = seededRng(seed), pool = PIX_ART.filter(p => !o.theme || o.theme === 'livre' || p.th === o.theme); const list = pool.length ? pool : PIX_ART; return (o.variant && PIX_ART.find(p => p.id === o.variant)) || list[Math.floor(rnd() * list.length)]; }
+function artSheetPaintNum2(c, seed, o = {}) {
+  const art = pixPick(seed, o), keys = Object.keys(art.c);
+  const cells = art.p.join('').split('').map(ch => ch === '.' ? '' : String(keys.indexOf(ch) + 1));
+  return `<div class="ps-page art-sheet">${artHead(c, '🔢 Pintura por números', 'Pinte cada quadradinho com a cor do número')}
+    <div class="art-legend">${keys.map((k, i) => `<span><i style="background:${art.c[k]}"></i> ${i + 1}</span>`).join('')}</div>
+    <div class="art-pix" style="--n:10">${cells.map(v => `<i>${v}</i>`).join('')}</div><div class="art-foot">Virou: ______________________</div></div>`;
+}
+function artSheetPixel2(c, seed, o = {}) {
+  const art = pixPick(seed, o), n = [10, 12, 16, 20][artDiff(c)];
+  return `<div class="ps-page art-sheet">${artHead(c, '👾 Pixel art', 'Copie o modelo e depois invente o seu no quadriculado grande')}
+    <div class="art-pixrow"><div class="art-pix model" style="--n:10">${art.p.join('').split('').map(ch => `<i style="${ch === '.' ? '' : `background:${art.c[ch]}`}"></i>`).join('')}</div>
+    <div class="art-pix blank" style="--n:${n}">${'<i></i>'.repeat(n * n)}</div></div></div>`;
+}
+
+/* ---------- 📐 copiar no quadriculado: mais desenhos ---------- */
+const GRID_NAMES = ['house', 'boat', 'box', 'rocket'];
+const GRID_MORE = {
+  tree: { th: 'natal', l: [[4, 0, 7, 3], [7, 3, 5, 3], [5, 3, 8, 6], [8, 6, 0, 6], [0, 6, 3, 3], [3, 3, 1, 3], [1, 3, 4, 0], [3, 6, 3, 8], [3, 8, 5, 8], [5, 8, 5, 6]] },
+  star: { th: 'livre', l: [[4, 0, 5, 3], [5, 3, 8, 3], [8, 3, 6, 5], [6, 5, 7, 8], [7, 8, 4, 6], [4, 6, 1, 8], [1, 8, 2, 5], [2, 5, 0, 3], [0, 3, 3, 3], [3, 3, 4, 0]] },
+  heart: { th: 'maes', l: [[4, 8, 0, 4], [0, 4, 0, 2], [0, 2, 2, 0], [2, 0, 4, 2], [4, 2, 6, 0], [6, 0, 8, 2], [8, 2, 8, 4], [8, 4, 4, 8]] },
+  gift: { th: 'aniversario', l: [[1, 3, 7, 3], [7, 3, 7, 8], [7, 8, 1, 8], [1, 8, 1, 3], [0, 2, 8, 2], [8, 2, 8, 3], [0, 2, 0, 3], [4, 2, 4, 8], [4, 2, 2, 0], [2, 0, 3, 2], [4, 2, 6, 0], [6, 0, 5, 2]] },
+  pumpkin: { th: 'halloween', l: [[2, 2, 6, 2], [6, 2, 8, 4], [8, 4, 8, 6], [8, 6, 6, 8], [6, 8, 2, 8], [2, 8, 0, 6], [0, 6, 0, 4], [0, 4, 2, 2], [4, 2, 4, 0], [4, 0, 5, 0], [2, 4, 3, 5], [6, 4, 5, 5], [2, 6, 6, 6]] },
+  egg: { th: 'pascoa', l: [[4, 0, 6, 2], [6, 2, 7, 5], [7, 5, 6, 7], [6, 7, 4, 8], [4, 8, 2, 7], [2, 7, 1, 5], [1, 5, 2, 2], [2, 2, 4, 0], [1, 4, 3, 3], [3, 3, 5, 4], [5, 4, 7, 3]] },
+  kite: { th: 'criancas', l: [[4, 0, 7, 3], [7, 3, 4, 6], [4, 6, 1, 3], [1, 3, 4, 0], [4, 0, 4, 6], [1, 3, 7, 3], [4, 6, 3, 7], [3, 7, 5, 8]] },
+  fish: { th: 'animais', l: [[0, 4, 3, 1], [3, 1, 6, 4], [6, 4, 3, 7], [3, 7, 0, 4], [6, 4, 8, 2], [8, 2, 8, 6], [8, 6, 6, 4]] },
+  flag: { th: 'independencia', l: [[0, 1, 8, 1], [8, 1, 8, 7], [8, 7, 0, 7], [0, 7, 0, 1], [4, 2, 7, 4], [7, 4, 4, 6], [4, 6, 1, 4], [1, 4, 4, 2]] },
+  lantern: { th: 'junina', l: [[4, 0, 7, 2], [7, 2, 6, 6], [6, 6, 2, 6], [2, 6, 1, 2], [1, 2, 4, 0], [1, 2, 7, 2], [4, 0, 4, 6], [3, 6, 3, 8], [5, 6, 5, 8], [3, 8, 5, 8]] }
+};
+function artSheetGridCopy2(c, seed, o = {}) {
+  const rnd = seededRng(seed), all = { ...Object.fromEntries(GRID_DRAW.map((l, i) => [GRID_NAMES[i], { th: 'livre', l }])), ...GRID_MORE };
+  const pool = Object.keys(all).filter(k => !o.theme || o.theme === 'livre' || all[k].th === o.theme);
+  const k = o.variant && all[o.variant] ? o.variant : (pool.length ? pool : Object.keys(all))[Math.floor(rnd() * (pool.length || Object.keys(all).length))], d = all[k].l;
+  const grid = lines => `<svg class="art-grid" viewBox="-.2 -.2 8.4 8.4">${[...Array(9)].map((_, i) => `<line x1="${i}" y1="0" x2="${i}" y2="8" stroke="#bbb" stroke-width=".03"/><line x1="0" y1="${i}" x2="8" y2="${i}" stroke="#bbb" stroke-width=".03"/>`).join('')}${lines ? d.map(([a, b, x, y]) => `<line x1="${a}" y1="${b}" x2="${x}" y2="${y}" stroke="#111" stroke-width=".12" stroke-linecap="round"/>`).join('') : ''}</svg>`;
+  return `<div class="ps-page art-sheet">${artHead(c, '📐 Copie no quadriculado', 'Conte os quadradinhos e copie o desenho na grade de baixo')}${grid(true)}<div style="height:6mm"></div>${grid(false)}</div>`;
+}
+
+/* ---------- ✨ transforme a forma: quantidade e tema ---------- */
+function artSheetShapes2(c, seed, o = {}) {
+  const rnd = seededRng(seed), n = { few: 4, six: 6, many: 9 }[o.variant || (c.age <= 5 ? 'few' : 'six')] || 6;
+  const th = ART_THEMES[o.theme], list = shuffle(ART_SHAPES, rnd).slice(0, Math.min(n, ART_SHAPES.length));
+  while (list.length < n) list.push(ART_SHAPES[Math.floor(rnd() * ART_SHAPES.length)]);
+  const title = th && o.theme !== 'livre' ? `Transforme cada forma em algo de ${t('th_' + o.theme)}!` : 'Transforme cada forma em um desenho!';
+  return `<div class="ps-page art-sheet">${artHead(c, '✨ Transforme a forma', title)}
+    <div class="art-shapes ${n === 9 ? 'n9' : n === 4 ? 'n4' : ''}">${list.map(s => `<div class="art-shape"><svg viewBox="0 0 120 120" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round">${s}</svg><div class="art-line">Virou: ____________</div></div>`).join('')}</div></div>`;
+}
+
+/* ---------- 💬 quadrinhos: quantidade de quadros e tema ---------- */
+function artSheetComic2(c, seed, o = {}) {
+  const n = int(o.variant, c.age <= 5 ? 3 : c.age <= 7 ? 4 : 6), th = ART_THEMES[o.theme];
+  const balloons = n <= 4 ? '<svg class="art-balloon" viewBox="0 0 60 30" fill="#fff" stroke="#111" stroke-width="1.2"><path d="M8 4 H52 Q58 4 58 10 V18 Q58 24 52 24 H22 L12 30 L14 24 H8 Q2 24 2 18 V10 Q2 4 8 4Z"/></svg>' : '';
+  return `<div class="ps-page art-sheet">${artHead(c, '💬 Minha história em quadrinhos', th && o.theme !== 'livre' ? `Uma história de ${t('th_' + o.theme)}: ______________` : 'Título: ______________________________')}
+    <div class="art-comic art-c${n}">${[...Array(n)].map((_, i) => `<div class="art-panel"><span>${i + 1}</span>${i === 0 ? balloons : ''}</div>`).join('')}</div><div class="art-foot">Fim! ✨ · Autor: ${esc(c.name)}</div></div>`;
+}
+
+/* ---------- 🪞 espelho: quadradinhos ou meio desenho ---------- */
+function artSheetMirror2(c, seed, o = {}) {
+  const v = o.variant || 'pixels';
+  if (v === 'pixels') return artSheetMirror(c, seed);
+  const th = ART_THEMES[o.theme] || ART_THEMES.livre, sym = ['heart', 'butterfly', 'star', 'egg', 'pumpkin', 'ghost', 'xmastree', 'bell', 'balloon', 'flower', 'rocket', 'crown', 'house', 'apple', 'kite'];
+  const pool = th.m.filter(m => sym.includes(m)), rnd = seededRng(seed), id = (pool.length ? pool : sym)[Math.floor(rnd() * (pool.length || sym.length))], uid = 'mr' + Math.floor(rnd() * 1e6);
+  const grid = [...Array(11)].map((_, i) => `<path d="M${i * 10} 0 V100 M0 ${i * 10} H100" stroke="#ccc" stroke-width=".3"/>`).join('');
+  const s = `<g stroke-width="1.4">${AM[id]}</g><rect x="50" y="-2" width="54" height="106" fill="#fff" stroke="none"/>${grid}<path d="M50 -2 V102" stroke="#7c3aed" stroke-width=".8" stroke-dasharray="3 2"/>`;
+  return `<div class="ps-page art-sheet">${artHead(c, '🪞 Complete o desenho', 'Desenhe a outra metade igualzinha, como num espelho. Use os quadradinhos para ajudar!')}${artSvg(s, '-2 -2 104 104', 1)}<div class="art-foot">Depois pinte os dois lados iguais!</div></div>`;
+}
+
+/* ---------- 👹 crie um personagem: monstro, robô, alien, dragão, fada ---------- */
+const CREATURE_ROWS = {
+  monster: { k: '👹 Crie seu monstro', rows: [['Olhos', ['1 olho', '2 olhos', '3 olhos', '5 olhos', 'olho gigante', 'óculos']], ['Corpo', ['redondo', 'comprido', 'quadrado', 'de nuvem', 'de gelatina', 'de pedra']], ['Braços', ['nenhum', '2 braços', '4 braços', 'tentáculos', 'asas', 'garras']], ['Pernas', ['rodinhas', '2 pernas', '6 pernas', 'mola', 'flutua', 'pés de pato']], ['Extra', ['chifres', 'chapéu', 'cauda', 'antenas', 'pintas', 'coroa']], ['Cor', ['verde', 'roxo', 'laranja', 'azul', 'arco-íris', 'você escolhe']]] },
+  robot: { k: '🤖 Crie seu robô', rows: [['Cabeça', ['quadrada', 'redonda', 'de TV', 'de foguete', 'de lâmpada', 'duas cabeças']], ['Olhos', ['luzinhas', 'tela', 'binóculo', '1 olho', 'óculos', 'radar']], ['Corpo', ['caixa', 'barril', 'carro', 'aspirador', 'geladeira', 'triângulo']], ['Braços', ['garras', 'molas', 'ferramentas', 'ímãs', 'escovas', 'pincéis']], ['Pés', ['rodas', 'esteira', 'foguete', 'pernas de aranha', 'patins', 'hélice']], ['Ele faz', ['arruma o quarto', 'cozinha', 'dança', 'joga bola', 'conta histórias', 'rega plantas']]] },
+  alien: { k: '👽 Crie seu alienígena', rows: [['Planeta', ['de gelo', 'de fogo', 'de doce', 'de água', 'gasoso', 'de cristal']], ['Pele', ['escamas', 'pelos', 'brilhante', 'transparente', 'listrada', 'de bolinhas']], ['Olhos', ['3 olhos', 'nas antenas', 'gigantes', '10 olhos', 'nenhum', 'na barriga']], ['Anda com', ['tentáculos', 'pulos', 'nave', 'rodas', 'voando', 'rolando']], ['Come', ['pedras', 'estrelas', 'nuvens', 'meias', 'luz', 'música']], ['Cor', ['verde', 'azul', 'rosa', 'prata', 'dourado', 'você escolhe']]] },
+  dragon: { k: '🐉 Crie seu dragão', rows: [['Solta', ['fogo', 'gelo', 'bolhas', 'confete', 'raios', 'arco-íris']], ['Asas', ['de morcego', 'de borboleta', 'de penas', '4 asas', 'pequeninas', 'sem asas']], ['Cabeça', ['1 cabeça', '2 cabeças', '3 cabeças', 'com chifres', 'com crista', 'com bigode']], ['Corpo', ['de cobra', 'gordinho', 'com espinhos', 'com escamas', 'de pedra', 'de nuvem']], ['Mora', ['vulcão', 'castelo', 'mar', 'floresta', 'nuvens', 'caverna']], ['Cor', ['vermelho', 'verde', 'azul', 'dourado', 'preto', 'você escolhe']]] },
+  fairy: { k: '🧚 Crie sua fada', rows: [['Asas', ['de borboleta', 'de libélula', 'de folha', 'brilhantes', 'de flor', 'de vidro']], ['Cabelo', ['comprido', 'cacheado', 'de flores', 'colorido', 'curtinho', 'com tranças']], ['Roupa', ['de pétalas', 'de folhas', 'de estrelas', 'de gotas', 'de seda', 'de nuvem']], ['Varinha', ['estrela', 'flor', 'lua', 'coração', 'cristal', 'pena']], ['Poder', ['faz flores', 'faz chover', 'fica invisível', 'fala com bichos', 'voa rápido', 'faz luz']], ['Mora', ['cogumelo', 'flor', 'árvore', 'lago', 'arco-íris', 'nuvem']]] },
+  hero: { k: '🦸 Crie seu super-herói', rows: [['Poder', ['voar', 'super força', 'ficar invisível', 'super velocidade', 'controlar água', 'falar com bichos']], ['Roupa', ['capa', 'armadura', 'máscara', 'macacão', 'botas', 'luvas']], ['Símbolo', ['estrela', 'raio', 'coração', 'letra do nome', 'animal', 'planeta']], ['Ajudante', ['cachorro', 'robô', 'irmão', 'pássaro', 'dragão', 'gato']], ['Veículo', ['nave', 'moto', 'skate', 'carro voador', 'patins', 'nuvem']], ['Cor', ['vermelho', 'azul', 'verde', 'roxo', 'amarelo', 'você escolhe']]] }
+};
+function artSheetMonster2(c, seed, o = {}) {
+  const C = CREATURE_ROWS[o.variant] || CREATURE_ROWS.monster;
+  return `<div class="ps-page art-sheet">${artHead(c, C.k, 'Jogue um dado para cada linha e desenhe o que sair!')}
+    <table class="art-table"><tr><th></th>${['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'].map(n => `<th>${n}</th>`).join('')}</tr>${C.rows.map(([h, l]) => `<tr><th>${h}</th>${l.map(x => `<td>${x}</td>`).join('')}</tr>`).join('')}</table>
+    <div class="art-frame short"></div><div class="art-foot">Nome: ______________________ · Ele gosta de: ______________________</div></div>`;
+}
+
+/* ---------- 🧤 fantoches de dedo: em branco ou com bichos/temas ---------- */
+const PUPPET_SETS = { blank: [], animals: ['cat', 'dog', 'lion', 'bear', 'pig', 'frog'], farm: ['cow', 'pig', 'sheep', 'chick', 'dog', 'cat'], jungle: ['lion', 'tiger', 'monkey', 'elephant', 'owl', 'fox'], natal: ['santa', 'reindeer', 'snowman', 'santa', 'reindeer', 'snowman'], halloween: ['pumpkin', 'ghost', 'bat', 'witch', 'monster', 'pumpkin'], pascoa: ['bunny', 'chick', 'bunny', 'chick', 'sheep', 'bunny'], fantasy: ['unicorn', 'dragon', 'princess', 'robot', 'astronaut', 'clown'] };
+function artSheetPuppet2(c, seed, o = {}) {
+  let v = o.variant || 'blank'; if (!o.variant && o.theme && PUPPET_SETS[o.theme]) v = o.theme;
+  const set = PUPPET_SETS[v] || [];
+  return `<div class="ps-page art-sheet">${artHead(c, '🧤 Fantoches de dedo', set.length ? 'Pinte, recorte e cole a aba em volta do dedo' : 'Desenhe um personagem em cada um, recorte e cole a aba')}
+    <div class="art-puppets">${[...Array(6)].map((_, i) => `<svg viewBox="0 0 60 100" fill="none" stroke="#111" stroke-width=".8"><path d="M8 30 C8 6 52 6 52 30 L52 72 L8 72 Z"/>${set[i] ? `<g transform="translate(13 20) scale(.34)">${maskInner(set[i], false)}</g>` : ''}<rect x="8" y="72" width="44" height="14" stroke-dasharray="2 1.5"/><text x="30" y="82" font-size="5" text-anchor="middle" fill="#666" stroke="none">cola aqui</text></svg>`).join('')}</div>
+    <div class="art-foot">Ideias: família, animais, super-heróis inventados, monstrinhos. Depois faça um teatrinho!</div></div>`;
+}
+
+/* ---------- 🧊 papel especial: pontilhado 3D, quadriculado, triângulos, pontinhos ---------- */
+function artSheetIso2(c, seed, o = {}) {
+  const v = o.variant || 'iso';
+  if (v === 'iso') return artSheetIso(c);
+  let s = '', title = '', foot = '';
+  if (v === 'grid') { for (let i = 0; i <= 20; i++) s += `<path d="M${i * 10} 0 V240 " stroke="#bbb" stroke-width=".5"/>`; for (let i = 0; i <= 24; i++) s += `<path d="M0 ${i * 10} H200" stroke="#bbb" stroke-width=".5"/>`; title = 'Papel quadriculado: desenhe castelos, robôs e labirintos'; foot = 'Dica: faça um labirinto e peça para alguém resolver!'; }
+  if (v === 'tri') { for (let r = 0; r < 28; r++) { const y = r * 8.66; s += `<path d="M0 ${y.toFixed(1)} H200" stroke="#ccc" stroke-width=".4"/>`; } for (let k = -30; k < 30; k++) s += `<path d="M${k * 10} 0 L${k * 10 + 140} 242.5 M${k * 10 + 140} 0 L${k * 10} 242.5" stroke="#ccc" stroke-width=".4"/>`; title = 'Papel de triângulos: pinte triângulos e forme desenhos'; foot = 'Desafio: faça uma estrela, um diamante e um peixe!'; }
+  if (v === 'dots') { for (let r = 0; r <= 24; r++) for (let k = 0; k <= 20; k++) s += `<circle cx="${k * 10}" cy="${r * 10}" r=".9" fill="#888" stroke="none"/>`; title = 'Pontinhos: ligue e invente desenhos (ou jogue o jogo dos quadradinhos)'; foot = 'Jogo para 2: cada um liga 2 pontos por vez; quem fechar um quadradinho escreve sua letra!'; }
+  return `<div class="ps-page art-sheet">${artHead(c, '🧊 Papel especial', title)}<svg class="art-iso" viewBox="-3 -3 206 246" fill="none">${s}</svg><div class="art-foot">${foot}</div></div>`;
+}
+
+/* ---------- registro, prévia e janelinha de escolha ---------- */
+/** filtra pelo tema; se o tema não tem nenhum, mostra todos */
+function thf(list, pred) { const f = list.filter(pred); return f.length ? f : list; }
+const ART_PICK = {
+  color: { icon: '🖍️', fn: artSheetColor, vars: () => ['big', 'pair', 'scene', 'pattern'].map(v => [v, t('arv_color_' + v)]) },
+  mask: { icon: '🎭', fn: artSheetMask2, vars: o => thf(MASK_IDS, k => !o.theme || o.theme === 'livre' || MASKS[k].th === o.theme).map(k => [k, t('mk_' + k), artSvg(maskInner(k), '-8 -28 116 136', 2.2, 'arp-thumb')]) },
+  card: { icon: '💌', fn: artSheetCard2, vars: () => [['drawn', t('arv_card_drawn')], ['blank', t('arv_card_blank')]] },
+  frame: { icon: '🖼️', fn: artSheetFrame2, vars: () => [['border', t('arv_frame_border')], ['plain', t('arv_frame_plain')]] },
+  dots: { icon: '✏️', fn: artSheetDots2, vars: o => thf(Object.keys(DOT_SHAPES), k => !o.theme || o.theme === 'livre' || DOT_THEME[k] === o.theme).map(k => [k, t('ds_' + k)]) },
+  mandala: { icon: '🌸', fn: artSheetMandala2, vars: () => ['circle', 'flower', 'heart', 'star', 'egg', 'snow'].map(v => [v, t('arv_mandala_' + v)]) },
+  paintnum: { icon: '🔢', fn: artSheetPaintNum2, vars: o => thf(PIX_ART, p => !o.theme || o.theme === 'livre' || p.th === o.theme).map(p => [p.id, t('px_' + p.id)]) },
+  pixel: { icon: '👾', fn: artSheetPixel2, vars: o => thf(PIX_ART, p => !o.theme || o.theme === 'livre' || p.th === o.theme).map(p => [p.id, t('px_' + p.id)]) },
+  gridcopy: { icon: '📐', fn: artSheetGridCopy2, vars: o => thf([...GRID_NAMES.map(k => [k, 'livre']), ...Object.entries(GRID_MORE).map(([k, v]) => [k, v.th])], ([, th]) => !o.theme || o.theme === 'livre' || th === o.theme).map(([k]) => [k, t('gd_' + k)]) },
+  shapes: { icon: '✨', fn: artSheetShapes2, vars: () => [['few', t('arv_shapes_few')], ['six', t('arv_shapes_six')], ['many', t('arv_shapes_many')]] },
+  comic: { icon: '💬', fn: artSheetComic2, vars: () => ['2', '3', '4', '6', '8'].map(n => [n, t('arv_comic_n', { n })]) },
+  mirror: { icon: '🪞', fn: artSheetMirror2, vars: () => [['pixels', t('arv_mirror_pixels')], ['half', t('arv_mirror_half')]] },
+  monster: { icon: '👹', fn: artSheetMonster2, noTheme: true, vars: () => Object.keys(CREATURE_ROWS).map(k => [k, t('arv_cr_' + k)]) },
+  puppet: { icon: '🧤', fn: artSheetPuppet2, vars: () => Object.keys(PUPPET_SETS).map(k => [k, t('arv_pp_' + k)]) },
+  iso: { icon: '🧊', fn: artSheetIso2, noTheme: true, vars: () => ['iso', 'grid', 'tri', 'dots'].map(k => [k, t('arv_iso_' + k)]) }
+};
+['shapes', 'comic', 'mirror'].forEach(k => { ART_PICK[k].old = true; });
+ART_PICK.frame.old = true;
+// folhas novas também aparecem na lista (colorir e o kit da data)
+ART_SHEETS_NEW.unshift(['kit', '🎉', null], ['color', '🖍️', artSheetColor]);
+function artPickState(k) { const s = ui.arp && ui.arp.k === k ? ui.arp : { k, theme: ui.arTheme || 'livre', variant: '', seed: Date.now() }; ui.arp = s; return s; }
+function artPickHtml(c, s) {
+  const P = ART_PICK[s.k], o = { theme: P.noTheme ? '' : s.theme, variant: s.variant };
+  const vars = P.vars(o), html = P.fn(c, `${c.id}|${s.k}|${s.seed}`, o);
+  const themes = P.noTheme ? '' : `<h4>📅 ${t('arpTheme')}</h4><div class="arp-chips">${artThemesOrdered().map((x, i) => `<button type="button" class="chip ${s.theme === x.k ? 'on' : ''} ${i === 1 ? 'next' : ''}" data-act="arp-theme" data-id="${x.k}">${artThemeChipLabel(x)}${i === 1 ? ` <b>${t('arpNext')}</b>` : ''}</button>`).join('')}</div>`;
+  const models = vars.length ? `<h4>🧩 ${t('arpModel')}</h4><div class="arp-vars ${vars.some(v => v[2]) ? 'thumbs' : ''}"><button type="button" class="chip ${!s.variant ? 'on' : ''}" data-act="arp-var" data-id="">🎲 ${t('arpAny')}</button>${vars.map(([id, label, thumb]) => `<button type="button" class="${thumb ? 'arp-v' : 'chip'} ${s.variant === id ? 'on' : ''}" data-act="arp-var" data-id="${esc(id)}">${thumb || ''}<span>${esc(label)}</span></button>`).join('')}</div>` : '';
+  return `<div class="arp-wrap"><div class="arp-prev"><div class="arp-page" id="printArea-prev">${html}</div></div><div class="arp-side">${themes}${models}</div></div>`;
+}
+function artPickOpen(k) {
+  const c = childById(ui.arChild); if (!c || !ART_PICK[k]) return;
+  const s = artPickState(k);
+  Modal.open({ id: 'arpModal', wide: true, title: `${ART_PICK[k].icon} ${t('arS_' + k) !== 'arS_' + k ? t('arS_' + k) : t(k === 'shapes' ? 'arSheetShapes' : k === 'comic' ? 'arSheetComic' : k === 'mirror' ? 'arSheetMirror' : 'arPrintFrame')}`, body: artPickHtml(c, s),
+    foot: `<button type="button" class="btn btn-soft" data-act="arp-seed">🎲 ${t('arpSurprise')}</button><button type="button" class="btn btn-primary" data-act="arp-print">🖨️ ${t('arpPrint')}</button>` });
+}
+function artPickRefresh() { const s = ui.arp, c = childById(ui.arChild), m = $('#arpModal .modal-body'); if (!s || !c) return; if (m) m.innerHTML = artPickHtml(c, s); else artPickOpen(s.k); }
+/** kit da data: várias folhas do tema numa impressão só */
+function artKitHtml(c, theme) {
+  const seed = `${c.id}|kit|${theme}|${Date.now()}`, o = { theme };
+  const parts = [artSheetColor(c, seed + 'a', o), artSheetMask2(c, seed + 'b', o), artSheetCard2(c, seed + 'c', o), artSheetDots2(c, seed + 'd', o), artSheetPaintNum2(c, seed + 'e', o), artSheetFrame2(c, seed + 'f', o)];
+  if (c.age >= 6) parts.push(artSheetMandala2(c, seed + 'g', o), artSheetMirror2(c, seed + 'h', { theme, variant: 'half' }));
+  return parts.join('');
+}
+function artKitOpen() {
+  const c = childById(ui.arChild); if (!c) return; const cur = ui.arTheme || artThemesOrdered()[1].k;
+  Modal.open({ id: 'arpModal', wide: true, title: `🎉 ${t('arS_kit')}`, body: `<p class="hint">${t('arpKitHint')}</p><div class="arp-chips">${artThemesOrdered().map((x, i) => `<button type="button" class="chip ${cur === x.k ? 'on' : ''}" data-act="arp-kit-theme" data-id="${x.k}">${artThemeChipLabel(x)}${i === 1 ? ` <b>${t('arpNext')}</b>` : ''}</button>`).join('')}</div>
+    <div class="arp-kitlist">${[['color', '🖍️'], ['mask', '🎭'], ['card', '💌'], ['dots', '✏️'], ['paintnum', '🔢'], ['frame', '🖼️'], ...(c.age >= 6 ? [['mandala', '🌸'], ['mirror', '🪞']] : [])].map(([k, i]) => `<span>${i} ${esc(t('arS_' + k) !== 'arS_' + k ? t('arS_' + k) : k === 'frame' ? t('arPrintFrame') : t('arSheetMirror'))}</span>`).join('')}</div>`,
+    foot: `<button type="button" class="btn btn-primary" data-act="arp-kit-print">🖨️ ${t('arpPrintKit', { theme: t('th_' + cur) })}</button>` });
+}
+(function () {
+  const p0 = ACTIONS['ar-print'];
+  ACTIONS['ar-print'] = el => {
+    const k = el.dataset.id;
+    if (k === 'kit') return artKitOpen();
+    if (ART_PICK[k]) { ui.arp = null; return artPickOpen(k); }
+    return p0(el);
+  };
+})();
+Object.assign(ACTIONS, {
+  'arp-theme': el => { if (!ui.arp) return; ui.arp.theme = el.dataset.id; ui.arTheme = el.dataset.id; ui.arp.variant = ''; artPickRefresh(); },
+  'arp-var': el => { if (!ui.arp) return; ui.arp.variant = el.dataset.id; artPickRefresh(); },
+  'arp-seed': () => { if (!ui.arp) return; ui.arp.seed = Date.now(); ui.arp.variant = ''; artPickRefresh(); },
+  'arp-print': () => {
+    const s = ui.arp, c = childById(ui.arChild); if (!s || !c) return; const P = ART_PICK[s.k];
+    const html = P.fn(c, `${c.id}|${s.k}|${s.seed}`, { theme: P.noTheme ? '' : s.theme, variant: s.variant });
+    Modal.close('arpModal'); printDocument(html, t('navArt') + ' — ' + c.name);
+  },
+  'arp-kit-theme': el => { ui.arTheme = el.dataset.id; artKitOpen(); },
+  'arp-kit-print': () => { const c = childById(ui.arChild); if (!c) return; const th = ui.arTheme || artThemesOrdered()[1].k; ui.arTheme = th; const html = artKitHtml(c, th); Modal.close('arpModal'); printDocument(html, `${t('th_' + th)} — ${c.name}`); }
+});
 
 </script>
 <script>
